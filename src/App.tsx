@@ -136,12 +136,12 @@ export default function App() {
     setTreasureDieResult(null);
     setTimeout(() => {
       const faces = [
-        '🟡 +2000 Oro (Cofre de Oro)',
-        '🪵 +2 Madera o Mineral (Suministros)',
-        '🔮 +1 Recurso Valioso',
-        '📜 +1 Carta de Hechizo',
-        '🗡️ +1 Artefacto Menor',
-        '🏆 +1 Artefacto Mayor'
+        '✨ +0.5 Nivel (Héroe principal gana medio nivel de EXP)',
+        '✨ +0.5 Nivel (Héroe principal gana medio nivel de EXP)',
+        '🔍 Buscar(2) Artefactos (Buscar(2) en mazo de Artefactos)',
+        '🔍 Buscar(2) Artefactos (Buscar(2) en mazo de Artefactos)',
+        '🎲 1 Dado Rec. (Lanzar 1 dado de recursos)',
+        '🎲 2 Dados Rec. (Lanzar 2 dados de recursos y elegir uno)'
       ];
       const rollIndex = Math.floor(Math.random() * 6);
       setTreasureDieResult(faces[rollIndex]);
@@ -260,7 +260,7 @@ export default function App() {
   };
 
   const tabs = [
-    { id: 'chat', label: 'Asesor de Sandro', icon: Sparkles, color: 'text-amber-400' },
+    { id: 'chat', label: 'Consulta a Sandro', icon: Sparkles, color: 'text-amber-400' },
     { id: 'rules', label: 'Reglas y FAQs', icon: Library, color: 'text-sky-400' },
     { id: 'scenarios', label: 'Escenarios Rápidos', icon: Compass, color: 'text-rose-400' },
     { id: 'calculator', label: 'Costes Reclutamiento', icon: Coins, color: 'text-yellow-400' },
@@ -274,7 +274,7 @@ export default function App() {
     <div className="min-h-screen text-slate-200 flex flex-col font-sans select-none antialiased" style={{ backgroundImage: 'radial-gradient(circle at center, #1b1311 0%, #0d0a09 100%)', backgroundColor: '#0d0a09' }}>
       
       {/* 1. Header Section */}
-      <header className="bg-slate-900/60 border-b border-slate-800/80 py-4 px-6 sticky top-0 z-40 backdrop-blur-md shrink-0">
+      <header className="bg-slate-900/60 border-b border-slate-800/80 py-4 px-6 shrink-0">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center space-x-4 text-center sm:text-left">
             <div className="relative group shrink-0">
@@ -310,8 +310,8 @@ export default function App() {
       </header>
 
       {/* 2. Navigation Tab System */}
-      <nav className="bg-slate-900/25 border-b border-slate-800/60 py-2 px-4 sticky top-[73px] z-30 backdrop-blur-sm">
-        <div className="max-w-4xl mx-auto flex gap-2 overflow-x-auto p-0.5 scrollbar-thin justify-start sm:justify-center">
+      <nav className="bg-slate-900/30 border-b border-slate-800/60 py-3 px-4 shadow-lg shadow-black/20">
+        <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:flex md:flex-wrap md:justify-center gap-2 p-0.5">
           {tabs.map((tab) => {
             const Icon = tab.icon;
             const isActive = activeTab === tab.id;
@@ -319,14 +319,14 @@ export default function App() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as any)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-150 cursor-pointer shrink-0 ${
+                className={`flex items-center justify-center md:justify-start gap-2.5 px-3.5 py-2.5 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${
                   isActive
-                    ? 'bg-amber-600/90 text-white shadow-md shadow-amber-950/20'
-                    : 'text-slate-400 hover:bg-slate-800/40 hover:text-slate-200'
+                    ? 'bg-amber-600 text-white shadow-md shadow-amber-950/30 ring-1 ring-amber-500/40 transform scale-[1.02]'
+                    : 'text-slate-400 bg-slate-950/40 hover:bg-slate-800/40 hover:text-slate-200 border border-slate-850/60'
                 }`}
               >
-                <Icon className={`w-4 h-4 ${isActive ? 'text-white' : tab.color}`} />
-                <span>{tab.label}</span>
+                <Icon className={`w-4 h-4 shrink-0 transition-transform duration-200 ${isActive ? 'text-white scale-110' : tab.color}`} />
+                <span className="truncate tracking-wide">{tab.label}</span>
               </button>
             );
           })}
@@ -1115,7 +1115,7 @@ export default function App() {
                                 {treasureDieResult.split(' ')[0]}
                               </span>
                               <span className="text-[7px] uppercase tracking-wider font-mono opacity-80 leading-none px-1">
-                                {treasureDieResult.split(' ').slice(1).join(' ')}
+                                {treasureDieResult.split(' ').slice(1, 4).join(' ')}
                               </span>
                             </div>
                           ) : (

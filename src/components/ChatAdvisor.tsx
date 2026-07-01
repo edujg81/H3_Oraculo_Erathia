@@ -23,7 +23,7 @@ export default function ChatAdvisor({
       {
         id: 'welcome',
         role: 'assistant',
-        content: '¡Saludos, noble estratega! Soy Sandro el Sabio, tu fiel consejero para solventar cualquier duda o disputa sobre las reglas tácticas del juego de mesa. ¿Qué conflicto perturba tu sesión de hoy?',
+        content: '¡Saludos, héroe! Soy Sandro el Sabio, consultor del oráculo para solventar cualquier duda o disputa sobre las reglas del juego de mesa Heroes III. ¿Qué conflicto perturba tu sesión de hoy?',
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
       }
     ];
@@ -38,7 +38,7 @@ export default function ChatAdvisor({
   // Recommended prompt chips
   const recommendationChips = [
     { label: 'Dificultad de monstruos por nivel', prompt: '¿Cuántos monstruos de bronce, plata u oro salen en una zona nivel III para dificultad normal e imposible?' },
-    { label: 'Unidades a distancia y trabado', prompt: '¿Cómo funciona el movimiento y ataque de las unidades a distancia y cuáles son sus penalizaciones?' },
+    { label: 'Acción de Unidades a distancia', prompt: '¿Cómo funciona el movimiento y ataque de las unidades a distancia y cuáles son sus penalizaciones?' },
     { label: 'Arpías y la represalia', prompt: '¿Las arpías reciben represalias? ¿Y cómo funciona la habilidad de regenerar daño de los espectros o liches?' },
     { label: 'Combate rápido', prompt: '¿Cuándo se activa un Combate Rápido y qué recompensas de experiencia me otorga si gano?' },
   ];
@@ -121,7 +121,7 @@ export default function ChatAdvisor({
       {
         id: 'welcome',
         role: 'assistant',
-        content: '¡Saludos, estratega! Inciemos de nuevo la consulta. ¿Qué conflicto táctico o duda de preparación de partida resolveremos?',
+        content: '¡Saludos, héroe! Iniciemos de nuevo la consulta. ¿Qué conflicto táctico o duda de preparación de partida resolveremos?',
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
       }
     ]);
@@ -277,7 +277,7 @@ export default function ChatAdvisor({
         >
           <input
             type="text"
-            placeholder={selectedSection ? `Pregúntale a Sandro relacionado con la sección seleccionada...` : "Pregunta sobre reglas, combate rápida, asedios..."}
+            placeholder={selectedSection ? `Pregúntale a Sandro relacionado con la sección seleccionada...` : "Pregunta sobre reglas, combate rápido, asedios..."}
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             disabled={isLoading}

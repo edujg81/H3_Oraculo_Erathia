@@ -26,10 +26,10 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 1, nameBasic: 'Esqueletos', nameElite: 'Esqueletos con Escudo', tier: 'bronce' },
     { level: 2, nameBasic: 'Zombis', nameElite: 'Zombis Voraces', tier: 'bronce' },
     { level: 3, nameBasic: 'Fantasmas', nameElite: 'Espectros', tier: 'bronce' },
-    { level: 4, nameBasic: 'Vampiros', nameElite: 'Señores del Vampiro', tier: 'plata' },
+    { level: 4, nameBasic: 'Vampiros', nameElite: 'Señores Vampiros', tier: 'plata' },
     { level: 5, nameBasic: 'Liches', nameElite: 'Liches de Poder', tier: 'plata' },
     { level: 6, nameBasic: 'Caballeros del Terror', nameElite: 'Caballeros de la Muerte', tier: 'oro' },
-    { level: 7, nameBasic: 'Dragones de Hueso', nameElite: 'Dragones de Fantasma', tier: 'oro' }
+    { level: 7, nameBasic: 'Dragones de Hueso', nameElite: 'Dragones Fantasma', tier: 'oro' }
   ],
   mazmorra: [
     { level: 1, nameBasic: 'Trogloditas', nameElite: 'Trogloditas Infernales', tier: 'bronce' },
@@ -72,7 +72,7 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 2, nameBasic: 'Jinetes de Lobo', nameElite: 'Jinetes de Élite', tier: 'bronce' },
     { level: 3, nameBasic: 'Orcos', nameElite: 'Jefes Orco', tier: 'bronce' },
     { level: 4, nameBasic: 'Ogros', nameElite: 'Ogros Magos', tier: 'plata' },
-    { level: 5, nameBasic: 'Rocs', nameElite: 'Rocs de Fuego', tier: 'plata' },
+    { level: 5, nameBasic: 'Rocs', nameElite: 'Rocs del Trueno', tier: 'plata' },
     { level: 6, nameBasic: 'Cíclopes', nameElite: 'Cíclopes Reyes', tier: 'oro' },
     { level: 7, nameBasic: 'Behemoths', nameElite: 'Behemoths Ancestrales', tier: 'oro' }
   ],
@@ -113,7 +113,7 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 7, nameBasic: 'Dragón de Hada', nameElite: 'Dragón de Hada Antiguo', tier: 'azul' },
     { level: 8, nameBasic: 'Dragón de Óxido', nameElite: 'Dragón de Óxido Voraz', tier: 'azul' },
     { level: 9, nameBasic: 'Dragón de Cristal', nameElite: 'Dragón de Cristal Puro', tier: 'azul' },
-    { level: 10, nameBasic: 'Dragón de Azur', nameElite: 'Dragón de Azur Legendario', tier: 'azul' }
+    { level: 10, nameBasic: 'Dragón Azul', nameElite: 'Dragón Azul Legendario', tier: 'azul' }
   ]
 };
 

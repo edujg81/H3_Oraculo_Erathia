@@ -313,7 +313,7 @@ export default function ScenariosDatabase() {
                       <strong className="text-emerald-400">Garantizar Experiencia:</strong> Gana automáticamente <strong>1 punto de Experiencia (XP)</strong> y descarta el cofre.
                     </li>
                     <li>
-                      <strong className="text-amber-400">Arriesgar con el Dado:</strong> Lanza el <strong>Dado de Tesoro</strong> para determinar una recompensa valiosa (puede ser oro, recursos, hechizos o valiosos artefactos).
+                      <strong className="text-amber-400">Arriesgar con el Dado:</strong> Lanza el <strong>Dado de Tesoro</strong> para determinar una recompensa (como ganar medio nivel de EXP, buscar cartas de Artefacto o lanzar dados de recursos).
                     </li>
                   </ul>
                 </div>
@@ -321,7 +321,7 @@ export default function ScenariosDatabase() {
                 <div className="bg-amber-950/10 border border-amber-900/30 p-3 rounded-xl flex gap-3 text-amber-200">
                   <AlertCircle className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
                   <p className="text-[11px]">
-                    <strong>Consejo Táctico de Sandro:</strong> Al inicio de la partida, la experiencia para subir de nivel a tu héroe principal (desbloquear cartas de habilidad militar) es de vital importancia. A mitad y final del juego, los artefactos mágicos y hechizos raros que otorga el dado suelen dar el golpe de gracia.
+                    <strong>Consejo Táctico de Sandro:</strong> ¡La experiencia extra y la búsqueda selectiva de Artefactos te otorgarán una ventaja colosal! No subestimes una tirada que te permita elegir de entre dos dados de recursos para levantar tus estructuras clave.
                   </p>
                 </div>
               </div>
@@ -338,54 +338,54 @@ export default function ScenariosDatabase() {
                 <div className="p-2 bg-slate-900/60 rounded-lg border border-amber-900/10 flex items-center justify-between text-xs">
                   <span className="font-bold text-amber-500 flex items-center gap-2">
                     <span className="w-5 h-5 rounded bg-slate-950 border border-slate-850 flex items-center justify-center text-[10px]">1</span>
-                    🟡 Cofre de Oro
+                    ✨ +0.5 Nivel EXP
                   </span>
-                  <span className="text-slate-300 text-[10px] text-right">Gana <strong>2000</strong> de Oro</span>
+                  <span className="text-slate-300 text-[10px] text-right">Héroe principal gana medio nivel</span>
                 </div>
 
                 {/* Face 2 */}
-                <div className="p-2 bg-slate-900/60 rounded-lg border border-slate-800 flex items-center justify-between text-xs">
-                  <span className="font-bold text-slate-300 flex items-center gap-2">
+                <div className="p-2 bg-slate-900/60 rounded-lg border border-amber-900/10 flex items-center justify-between text-xs">
+                  <span className="font-bold text-amber-500 flex items-center gap-2">
                     <span className="w-5 h-5 rounded bg-slate-950 border border-slate-850 flex items-center justify-center text-[10px]">2</span>
-                    🪵 Suministros
+                    ✨ +0.5 Nivel EXP
                   </span>
-                  <span className="text-slate-300 text-[10px] text-right"><strong>2 Madera / Mineral</strong></span>
+                  <span className="text-slate-300 text-[10px] text-right">Héroe principal gana medio nivel</span>
                 </div>
 
                 {/* Face 3 */}
                 <div className="p-2 bg-slate-900/60 rounded-lg border border-purple-900/20 flex items-center justify-between text-xs">
                   <span className="font-bold text-purple-400 flex items-center gap-2">
                     <span className="w-5 h-5 rounded bg-slate-950 border border-slate-850 flex items-center justify-center text-[10px]">3</span>
-                    🔮 Valioso
+                    🔍 Buscar(2) Art.
                   </span>
-                  <span className="text-slate-300 text-[10px] text-right"><strong>1 Recurso Valioso</strong></span>
+                  <span className="text-slate-300 text-[10px] text-right">Buscar en mazo de Artefactos</span>
                 </div>
 
                 {/* Face 4 */}
-                <div className="p-2 bg-slate-900/60 rounded-lg border border-blue-900/20 flex items-center justify-between text-xs">
-                  <span className="font-bold text-blue-400 flex items-center gap-2">
+                <div className="p-2 bg-slate-900/60 rounded-lg border border-purple-900/20 flex items-center justify-between text-xs">
+                  <span className="font-bold text-purple-400 flex items-center gap-2">
                     <span className="w-5 h-5 rounded bg-slate-950 border border-slate-850 flex items-center justify-center text-[10px]">4</span>
-                    📜 Hechizo
+                    🔍 Buscar(2) Art.
                   </span>
-                  <span className="text-slate-300 text-[10px] text-right">Roba <strong>1 carta de Hechizo</strong></span>
+                  <span className="text-slate-300 text-[10px] text-right">Buscar en mazo de Artefactos</span>
                 </div>
 
                 {/* Face 5 */}
-                <div className="p-2 bg-slate-900/60 rounded-lg border border-emerald-900/20 flex items-center justify-between text-xs">
-                  <span className="font-bold text-emerald-400 flex items-center gap-2">
+                <div className="p-2 bg-slate-900/60 rounded-lg border border-blue-900/20 flex items-center justify-between text-xs">
+                  <span className="font-bold text-blue-400 flex items-center gap-2">
                     <span className="w-5 h-5 rounded bg-slate-950 border border-slate-850 flex items-center justify-center text-[10px]">5</span>
-                    🗡️ Artefacto Menor
+                    🎲 1 Dado Recursos
                   </span>
-                  <span className="text-slate-300 text-[10px] text-right">Roba <strong>1 Artefacto Menor</strong></span>
+                  <span className="text-slate-300 text-[10px] text-right">Lanzar 1 dado de recursos</span>
                 </div>
 
                 {/* Face 6 */}
-                <div className="p-2 bg-slate-900/60 rounded-lg border border-cyan-900/20 flex items-center justify-between text-xs">
-                  <span className="font-bold text-cyan-400 flex items-center gap-2">
+                <div className="p-2 bg-slate-900/60 rounded-lg border border-emerald-900/20 flex items-center justify-between text-xs">
+                  <span className="font-bold text-emerald-400 flex items-center gap-2">
                     <span className="w-5 h-5 rounded bg-slate-950 border border-slate-850 flex items-center justify-center text-[10px]">6</span>
-                    🏆 Artefacto Mayor
+                    🎲 2 Dados Rec.
                   </span>
-                  <span className="text-slate-300 text-[10px] text-right">Roba <strong>1 Artefacto Mayor</strong></span>
+                  <span className="text-slate-300 text-[10px] text-right">Lanzar 2 y elegir uno</span>
                 </div>
               </div>
             </div>

@@ -357,7 +357,7 @@ export default function RulebookPDF() {
                 <li><strong>Losetas Iniciales (Nivel I):</strong> Alojan las deidades o capitales natales de cada imperio y minas básicas libres y desprotegidas.</li>
                 <li><strong>Losetas Lejanas (Niveles II-III):</strong> Forman el primer cordón exterior. Custodiadas por ejércitos de bronce y plata débiles. Esconden molinos y establos básicos.</li>
                 <li><strong>Losetas Cercanas (Niveles IV-V):</strong> Componen las zonas de combate secundarias. Conllevan tropas robustas de plata y oro, santuarios y mercadillos arcanos.</li>
-                <li><strong>Losetas Centrales (Niveles VI-VII):</strong> Custodiadas por ejércitos de rango oro puros o azur. Albergan la <em>Utopía del Dragón</em> y tumbas raras de gran recompensa.</li>
+                <li><strong>Losetas Centrales (Niveles VI-VII):</strong> Custodiadas por ejércitos de rango oro o azur. Albergan la <em>Utopía del Dragón</em> y tumbas raras de gran recompensa.</li>
               </ul>
             </div>
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-slate-800 space-y-1.5">
@@ -1526,26 +1526,36 @@ export default function RulebookPDF() {
         {/* Section XIV */}
         <section className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
-            XIV. Dados del Juego (Dados de Recursos y Combate)
+            XIV. Dados del Juego (Dados de Recursos, Combate y Tesoro)
           </h3>
           <p className="text-xs text-slate-400">
-            La aleatoriedad controlada y la emoción de las batallas se definen mediante dos dados de seis caras (d6) reglamentarios especiales:
+            La aleatoriedad controlada y la emoción de las batallas se definen mediante tres dados de seis caras (d6) reglamentarios especiales:
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
             <div className="bg-slate-950 p-4 border border-slate-800/80 rounded-xl space-y-1.5">
               <strong className="text-amber-400 block font-mono">🎲 1. Dado de Recursos (Resource Die)</strong>
               <p className="text-slate-300">
                 Dado de 6 caras utilizado al visitar enclaves arcanos del mapa o durante la Fase de Recursos para conseguir producción adicional de fortuna. Las caras representan:
-                <br />• <strong>Cara 1:</strong> +1 de Oro ()
-                <br />• <strong>Cara 2:</strong> +2 de Oro ()
-                <br />• <strong>Cara 3:</strong> +1 de Madera o Mineral ()
-                <br />• <strong>Cara 4:</strong> +2 de Madera o Mineral ()
-                <br />• <strong>Cara 5:</strong> +1 Objeto de Valor (Gemas/Cristales/Azufre) ()
-                <br />• <strong>Cara 6:</strong> Vacío / Fallo (Sin ganancia)
+                <br />• <strong>Cara 1:</strong> +1 de Oro (🟡)
+                <br />• <strong>Cara 2:</strong> +2 de Oro (🟡)
+                <br />• <strong>Cara 3:</strong> +1 de Madera o Mineral (🪵)
+                <br />• <strong>Cara 4:</strong> +2 de Madera o Mineral (🪵)
+                <br />• <strong>Cara 5:</strong> +1 Objeto de Valor (Gemas/Cristales/Azufre) (🔮)
+                <br />• <strong>Cara 6:</strong> Vacío / Fallo (Sin ganancia) (❌)
               </p>
             </div>
             <div className="bg-slate-950 p-4 border border-slate-800/80 rounded-xl space-y-1.5">
-              <strong className="text-amber-400 block font-mono">⚔️ 2. Dado de Combate / Ataque (Combat Die)</strong>
+              <strong className="text-amber-400 block font-mono">🔮 2. Dado de Tesoro (Treasure Die)</strong>
+              <p className="text-slate-300">
+                Dado lanzado de forma opcional al arriesgar con un Cofre de Tesoro o al completar ciertos enclaves del juego físico. Sus caras representan:
+                <br />• <strong>Caras 1 y 2:</strong> El Héroe principal gana medio nivel de experiencia (✨ +0.5 Nivel).
+                <br />• <strong>Caras 3 y 4:</strong> Buscar(2) en el mazo de cartas de Artefacto (🔍 roba dos cartas, quédate con una y devuelve la otra al mazo).
+                <br />• <strong>Cara 5:</strong> Lanzar 1 dado de recursos (🎲).
+                <br />• <strong>Cara 6:</strong> Lanzar 2 dados de recursos y elegir uno de los resultados.
+              </p>
+            </div>
+            <div className="bg-slate-950 p-4 border border-slate-800/80 rounded-xl space-y-1.5">
+              <strong className="text-amber-400 block font-mono">⚔️ 3. Dado de Combate / Ataque (Combat Die)</strong>
               <p className="text-slate-300">
                 Un dado que se lanza de forma obligatoria cuando una unidad realiza un ataque físico en la grilla táctica, o al asestar una represalia. Este dado cuenta únicamente con tres tipos de valores distribuidos de forma equitativa en sus seis caras:
                 <br />• <strong>Dos caras con valor de -1:</strong> Reduce en 1 herida el daño total final infligido (con un mínimo absoluto de 0 heridas).
@@ -1753,7 +1763,7 @@ export default function RulebookPDF() {
                 <p className="text-slate-300">
                   La IA opera con 3 PM y sigue prioridades fijas:
                   <br />• <strong>Prioridad 1:</strong> Interceptar y atacar a cualquier Héroe del jugador en la misma loseta.
-                  <br />• <strong>Prioridad 2:</strong> Capturar o flaggear la mina/asentamiento más cercana.
+                  <br />• <strong>Prioridad 2:</strong> Capturar o señalizar la mina/asentamiento más cercana.
                   <br />• <strong>Prioridad 3:</strong> Marchar directo hacia la capital del jugador humano. Gana combates contra neutrales automáticamente.
                 </p>
               </div>
