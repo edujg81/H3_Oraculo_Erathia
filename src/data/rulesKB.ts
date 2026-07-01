@@ -37,9 +37,9 @@ export const rulesKB: RuleSection[] = [
   },
   {
     id: "dice_mechanics_detailed",
-    title: "4. Dados del Juego: Dados de Recursos y de Combate",
+    title: "4. Dados del Juego: Dados de Recursos, Combate y Tesoro",
     category: "components",
-    content: `El juego incorpora dos tipos de dados de seis caras (d6) especiales reglamentarios para definir la fortuna y las tácticas (no existen dados de asedio específicos en el juego de mesa, todos los asaltos y catapultas se resuelven empleando el dado de combate estándar):
+    content: `El juego incorpora tres tipos de dados de seis caras (d6) especiales reglamentarios para definir la fortuna, las tácticas y las recompensas (no existen dados de asedio específicos en el juego de mesa, todos los asaltos y catapultas se resuelven empleando el dado de combate estándar):
 
 1. DADO DE RECURSOS (Resource Die):
 Se utiliza al explorar ciertos enclaves arcanos o durante la fase de recursos para añadir fortuna. Sus caras son:
@@ -56,7 +56,14 @@ Se lanza obligatoriamente en cada ataque o contraataque (represalia) en la grill
 • Caras con valor de 0: Sin variación (se inflige el daño base de la unidad).
 • Caras con valor de +1: Aumenta el ataque sumando +1 herida al total infligido.
 
-No existen caras que otorguen +2, daño directo ignorando defensa ni represalias extra. Los resultados posibles son estrictamente -1, 0 y +1.`
+No existen caras que otorguen +2, daño directo ignorando defensa ni represalias extra. Los resultados posibles son estrictamente -1, 0 y +1.
+
+3. DADO DE TESORO (Treasure Die - Representado con <treasure>):
+Se utiliza principalmente como botín o recompensa (como al vencer en el Templo del Mar o rescatar a un Náufrago Superviviente). Se lanza para recibir valiosas mejoras para el Héroe o la economía:
+• Caras 1 y 2: Medio Nivel de Experiencia () - El Héroe Principal del jugador gana medio nivel de experiencia de forma inmediata.
+• Caras 3 y 4: Búsqueda de Artefacto (Search 2) () - Roba 2 cartas del mazo de Artefactos, quédate con una de ellas en la mano y descarta la otra.
+• Cara 5: Lanzar Dado de Recursos () - Lanza y resuelve de inmediato 1 Dado de Recursos.
+• Cara 6: Elegir Dado de Recursos () - Lanza 2 Dados de Recursos y elige uno de los dos resultados para resolverlo.`
   },
   {
     id: "special_tokens_mechanics",
@@ -775,67 +782,89 @@ Permite sacrificar cartas de Hechizo o Artefactos menores no deseados de tu mano
     id: "wiki_heroes_specialties",
     title: "32. Tarjetas de Héroes: Características y Especialidades (las 10 Facciones)",
     category: "combat",
-    content: `La wiki oficial de la comunidad detalla exhaustivamente las características iniciales, mazos de salida y especialidades de los Héroes para las 10 facciones asimétricas del juego:
+    content: `La wiki oficial de la comunidad detalla exhaustivamente las características iniciales, habilidades primarias de salida y especialidades de los Héroes oficiales para las 10 facciones asimétricas del juego:
 
 1. CASTILLO (CASTLE):
-• Catherine (Poder): Especialidad "Cruzada" (Crusade). Otorga ventajas ofensivas masivas a los Espadachines/Cruzados y eleva la Moral aliada.
-• Christian (Poder): Especialidad "Balista" (Ballista). Comienza con una Balista en su mazo y duplica su efectividad ofensiva.
-• Adela (Magia): Especialidad "Bendición" (Bless). Maximiza el daño físico de sus tropas de primera línea aplicando bendiciones arcanas baratas.
-• Loynis (Magia): Especialidad "Oración" (Prayer). Aumenta simultáneamente el Ataque, Defensa e Iniciativa de todo su ejército en rondas decisivas.
+• Catherine (Poder - Knight): Habilidad Inicial: Liderazgo (Leadership) | Especialidad: Cruzados (Crusaders). Otorga ventajas ofensivas masivas a los Espadachines y Cruzados de Erathia.
+• Valeska (Poder - Knight): Habilidad Inicial: Arquería (Archery) | Especialidad: Arqueros (Marksmen). Potencia el ataque a distancia de los Arqueros y Ballesteros.
+• Lord Haart (Poder - Knight): Habilidad Inicial: Finanzas (Estates) | Especialidad: Finanzas (Estates). Genera oro adicional pasivo para la metrópolis.
+• Christian (Poder - Knight): Habilidad Inicial: Artillería (Artillery) | Especialidad: Balista (Ballista). Comienza con una Balista en su mazo y duplica su efectividad ofensiva.
+• Adelaide (Magia - Cleric): Habilidad Inicial: Sabiduría (Wisdom) | Especialidad: Anillo Helado (Frost Ring). Capacidad arcana para conjurar un anillo helado que inflige daño y congela a las unidades enemigas adyacentes.
+• Rion (Magia - Cleric): Habilidad Inicial: Sabiduría (Wisdom) | Especialidad: Médico de Campaña (Battlefield Medic). Potencia las curaciones de tus tropas en batalla.
+• Ingham (Magia - Cleric): Habilidad Inicial: Misticismo (Mysticism) | Especialidad: Fanáticos (Zealots). Potencia las capacidades de los Fanáticos en combate.
 
 2. NECRÓPOLIS (NECROPOLIS):
-• Sandro (Magia): Especialidad "Nigromancia" (Necromancy). Convierte una parte de las tropas caídas en combate en Esqueletos permanentes para su mazo de unidades.
-• Thant (Magia): Especialidad "Animar Muertos" (Animate Dead). Capacidad arcana única de revivir regimientos de no-muertos caídos en medio de la batalla táctica.
-• Clavius (Poder): Especialidad "Oro" (Gold). Genera una bonificación pasiva permanente de +1 de Oro en cada Fase de Recursos.
-• Charna (Poder): Especialidad "Fantasmas" (Wights). Mejora sustancialmente las estadísticas defensivas e inmunidades de sus unidades de Fantasmas.
+• Tamika (Poder - Death Knight): Habilidad Inicial: Ataque (Offense) | Especialidad: Caballeros del Pavor (Dread Knights). Potencia las estadísticas de ataque y daño de los Caballeros del Pavor.
+• Moandor (Poder - Death Knight): Habilidad Inicial: Nigromancia (Necromancy) | Especialidad: Liches (Liches). Convierte tropas o eleva el mazo de Liches.
+• Lord Haart (Poder - Death Knight): Habilidad Inicial: Nigromancia (Necromancy) | Especialidad: Caballeros del Pavor (Dread Knights). Incrementa la efectividad de las unidades del Pavor.
+• Sandro (Magia - Necromancer): Habilidad Inicial: Hechicería (Sorcery) | Especialidad: Capa del Rey de los No Muertos (Cloak of the Undead King). Convierte una parte de las tropas caídas en combate en Esqueletos permanentes para su mazo de unidades.
+• Vidomina (Magia - Necromancer): Habilidad Inicial: Nigromancia (Necromancy) | Especialidad: Nigromancia (Necromancy). Aumenta significativamente el reclutamiento de tropas muertas.
+• Septienna (Magia - Necromancer): Habilidad Inicial: Nigromancia (Necromancy) | Especialidad: Oleada de Muerte (Death Ripple). Capacidad arcana única de infligir daño masivo a regimientos vivos en batalla táctica.
 
 3. MURALLAS (RAMPART):
-• Gelu (Poder): Especialidad "Tiradores" (Sharpshooters). Permite mejorar de forma permanente sus unidades de Arqueros o Elfos a Tiradores de élite que ignoran penalizaciones.
-• Kyrre (Poder): Especialidad "Logística" (Logistics). Aumenta los Puntos de Movimiento (PM) iniciales del Héroe en el mapa de aventura cada turno.
-• Gem (Magia): Especialidad "Primeros Auxilios" (First Aid). Comienza con una Tienda de Auxilio gratuita y duplica las heridas curadas de sus tropas aliadas dañadas.
-• Elleshar (Magia): Especialidad "Inteligencia" (Intelligence). Reduce el coste de maná de sus conjuros y acelera de forma drástica la regeneración mágica.
+• Gelu (Poder - Ranger): Habilidad Inicial: Arquería (Archery) | Especialidad: Tiradores (Sharpshooters). Permite mejorar de forma permanente sus unidades de Arqueros o Elfos a Tiradores de élite que ignoran penalizaciones de distancia.
+• Mephala (Poder - Ranger): Habilidad Inicial: Liderazgo (Leadership) | Especialidad: Armadura (Armorer). Otorga a sus unidades aliadas una reducción pasiva de daño que mitiga golpes enemigos.
+• Clancy (Poder - Ranger): Habilidad Inicial: Buscador de Caminos (Pathfinding) | Especialidad: Unicornios (Unicorns). Potencia la agilidad and el ataque de los Unicornios aliados.
+• Ivor (Poder - Ranger): Habilidad Inicial: Ataque (Offense) | Especialidad: Elfos (Elves). Mejora sustancialmente a los Elfos Silvanos y Grandes Elfos.
+• Gem (Magia - Druid): Habilidad Inicial: Primeros Auxilios (First Aid) | Especialidad: Primeros Auxilios (First Aid). Comienza con una Tienda de Auxilio gratuita y duplica las heridas curadas de sus tropas aliadas dañadas.
+• Melodia (Magia - Druid): Habilidad Inicial: Suerte (Luck) | Especialidad: Fortuna (Fortune). Aumenta drásticamente la suerte y la moral de su ejército en momentos críticos.
 
 4. MAZMORRA (DUNGEON):
-• Mutare (Poder): Especialidad "Dragones" (Dragons). Incrementa la Iniciativa y el daño de todas las unidades con la palabra clave Dragón en su ejército.
-• Gunnar (Poder): Especialidad "Logística" (Logistics). Facilita el movimiento subterráneo y añade PM extra al transitar losetas difíciles.
-• Alamar (Magia): Especialidad "Resurrección" (Resurrection). Hechicero de tierra experto capaz de resucitar de forma permanente tropas vivas caídas en combate.
-• Malekith (Magia): Especialidad "Hechicería" (Sorcery). Incrementa en un 50% el daño final provocado por cualquier hechizo de daño directo.
+• Mutare (Poder - Overlord): Habilidad Inicial: Tácticas (Tactics) | Especialidad: Dragones (Dragons). Incrementa la Iniciativa y el daño de todas las unidades con la palabra clave Dragón en su ejército.
+• Lorelei (Poder - Overlord): Habilidad Inicial: Exploración (Scouting) | Especialidad: Harpías (Harpies). Mejora drásticamente el ataque aéreo y movilidad de las Harpías.
+• Alamar (Magia - Warlock): Habilidad Inicial: Sabiduría (Wisdom) | Especialidad: Resurrección (Resurrection). Hechicero de tierra experto capaz de resucitar de forma permanente tropas vivas caídas en combate.
+• Jeddite (Magia - Warlock): Habilidad Inicial: Hechicería (Sorcery) | Especialidad: Brujo Misterioso (Mysterious Warlock). Otorga ventajas en el mazo de hechizos y regeneración de maná.
+• Deemer (Magia - Warlock): Habilidad Inicial: Exploración (Scouting) | Especialidad: Lluvia de Meteoros (Meteor Shower). Comienza con este devastador hechizo destructivo de área de tierra.
+• Sephinroth (Magia - Warlock): Habilidad Inicial: Inteligencia (Intelligence) | Especialidad: Objetos de Valor (Valuables). Genera recursos místicos adicionales pasivos para la facción.
 
 5. TORRE (TOWER):
-• Neela (Poder): Especialidad "Armadura" (Armorer). Otorga a sus unidades aliadas una reducción pasiva de daño que mitiga golpes enemigos.
-• Torosar (Poder): Especialidad "Balista" (Ballista). Sus máquinas de guerra ganan iniciativa y daño por metralla explosiva.
-• Solmyr (Magia): Especialidad "Rayo en Cadena" (Chain Lightning). Comienza el juego con este devastador hechizo de daño a múltiples objetivos.
-• Astral (Magia): Especialidad "Hipnosis" (Hypnotize). Hechicero capaz de tomar el control temporal de una unidad enemiga en la reja táctica.
+• Josephine (Poder - Alchemist): Habilidad Inicial: Hechicería (Sorcery) | Especialidad: Golems (Golems). Potencia la defensa y durabilidad de los Golems aliados.
+• Iona (Poder - Alchemist): Habilidad Inicial: Inteligencia (Intelligence) | Especialidad: Genios (Genies). Incrementa el ataque y la iniciativa de los Genios en combate.
+• Torosar (Poder - Alchemist/Wizard): Habilidad Inicial: Misticismo (Mysticism) | Especialidad: Balista (Ballista). Sus máquinas de guerra ganan iniciativa y daño por metralla explosiva.
+• Solmyr (Magia - Wizard): Habilidad Inicial: Hechicería (Sorcery) | Especialidad: Rayo en Cadena (Chain Lightning). Comienza el juego con este devastador hechizo de daño a múltiples objetivos.
+• Dracon (Magia - Wizard): Habilidad Inicial: Sabiduría (Wisdom) | Especialidad: Encantadores (Enchanters). Mejora o invoca unidades de Encantadores arcanos potentes.
+• Cyra (Magia - Wizard): Habilidad Inicial: Diplomacia (Diplomacy) | Especialidad: Celeridad (Haste). Facilita el paso táctico rápido y la iniciativa máxima para su ejército.
 
 6. INFIERNO (INFERNO):
-• Xeron (Poder): Especialidad "Diablos" (Devils). Potencia las estadísticas de combate de los Diablos y Archidiablos, reduciendo además la Moral del rival.
-• Nymus (Poder): Especialidad "Portales de Fuego" (Fire Gates). Permite teletransportar tropas aliadas por el tablero de batalla ignorando obstáculos físicos.
-• Ayden (Magia): Especialidad "Inteligencia" (Intelligence). Incrementa el límite máximo de cartas de hechizo retenidas en mano y otorga Maná adicional.
-• Fiona (Magia): Especialidad "Sabuesos de Fuego" (Cerberi). Invoca sabuesos del infierno y potencia su ataque de tres cabezas (daño a múltiples casillas).
+• Fiona (Poder - Demoniac): Habilidad Inicial: Exploración (Scouting) | Especialidad: Cerberos (Cerberi). Invoca sabuesos del infierno y potencia su ataque de tres cabezas (daño a múltiples casillas).
+• Rashka (Poder - Demoniac): Habilidad Inicial: Erudito (Scholar) | Especialidad: Efreets (Efreet). Potencia la fuerza de combate y la resistencia al fuego de los Efreets y Sultanes de Efreet.
+• Octavia (Poder - Demoniac): Habilidad Inicial: Erudito (Scholar) | Especialidad: Oro (Gold). Aumenta pasivamente la economía de la metrópolis con ingresos adicionales de Oro.
+• Zydar (Magia - Heretic): Habilidad Inicial: Hechicería (Sorcery) | Especialidad: Hechicería (Sorcery). Maximiza el daño infligido por hechizos de daño directo.
+• Xyron (Magia - Heretic): Habilidad Inicial: Sabiduría (Wisdom) | Especialidad: Infierno (Inferno). Especialista en desatar fuegos mágicos de área de gran calibre.
+• Ash (Magia - Heretic): Habilidad Inicial: Ojo de Águila (Eagle Eye) | Especialidad: Ansia de Sangre (Bloodlust). Añade bufos ofensivos masivos a sus tropas durante el combate.
 
 7. BASTIÓN (STRONGHOLD):
-• Crag Hack (Poder): Especialidad "Ataque" (Offense). Incrementa drásticamente el daño físico infligido por todas sus unidades en ataques cuerpo a cuerpo.
-• Shiva (Poder): Especialidad "Rocs" (Aves de Roc). Mejora las estadísticas de ataque, defensa y velocidad de vuelo de los Rocs y Aves de Fuego.
-• Gundula (Magia): Especialidad "Ataque" (Offense). Magnifica la fuerza física de sus tropas terrestres mediante canalizaciones arcanas de tierra.
-• Terek (Magia): Especialidad "Habilitar Paso" (Haste). Otorga iniciativa máxima a todo su ejército durante la primera ronda de combate táctico.
+• Crag Hack (Poder - Barbarian): Habilidad Inicial: Ataque (Offense) | Especialidad: Ataque (Offense). Incrementa drásticamente el daño físico infligido por todas sus unidades en ataques cuerpo a cuerpo.
+• Shiva (Poder - Barbarian): Habilidad Inicial: Exploración (Scouting) | Especialidad: Pájaros del Trueno (Thunderbirds). Mejora las estadísticas de ataque, defensa y velocidad de vuelo de los Rocs y Aves de Trueno.
+• Yog (Poder - Barbarian): Habilidad Inicial: Ataque (Offense) | Especialidad: Cíclopes (Cyclopes). Potencia el lanzamiento de piedras y la fuerza destructiva de los Cíclopes.
+• Dessa (Magia - Battle Mage): Habilidad Inicial: Logística (Logistics) | Especialidad: Logística (Logistics). Aumenta los Puntos de Movimiento (PM) iniciales del Héroe en el mapa de aventura cada turno de juego.
+• Gundula (Magia - Battle Mage): Habilidad Inicial: Sabiduría (Wisdom) | Especialidad: Ralentizar (Slow). Comienza con el hechizo Ralentizar de Tierra, reduciendo la iniciativa de las filas enemigas de forma eficaz.
 
 8. FORTALEZA (FORTRESS):
-• Tazar (Poder): Especialidad "Armadura" (Armorer). Reduce a la mitad las heridas críticas sufridas por sus tropas en combate y otorga defensas extremas.
-• Bron (Poder): Especialidad "Basiliscos" (Basilisks). Comienza con un basilisco Élite adicional y potencia la probabilidad de petrificación enemiga.
-• Andra (Magia): Especialidad "Sabiduría" (Wisdom). Le permite aprender Hechizos de nivel II y III gastando menos recursos y oro de la metrópolis.
-• Voy (Magia): Especialidad "Navegación" (Navigation). Otorga ventajas de movimiento insuperables al explorar losetas con agua, islas u océanos.
+• Tazar (Poder - Beastmaster): Habilidad Inicial: Armadura (Armorer) | Especialidad: Héroe de Guerra (War Hero). Reduce drásticamente las heridas sufridas por sus tropas en combate táctico y otorga defensas extremas.
+• Bron (Poder - Beastmaster): Habilidad Inicial: Resistencia (Resistance) | Especialidad: Basilisks (Basilisks). Comienza con un basilisco Élite adicional y potencia la probabilidad de petrificación enemiga.
+• Gerwulf (Poder - Beastmaster): Habilidad Inicial: Armadura (Armorer) | Especialidad: Balista (Ballista). Aumenta el daño y la precisión a larga distancia de su Balista aliada.
+• Wystan (Poder - Beastmaster): Habilidad Inicial: Arquería (Archery) | Especialidad: Hombres Lagarto (Lizardmen). Aumenta sustancialmente el ataque de los Hombres Lagarto y Guerreros Lagarto.
+• Adrienne (Magia - Witch): Habilidad Inicial: Sabiduría (Wisdom) | Especialidad: Magia de Fuego (Fire Magic). Desbloquea habilidades ígneas expertas y aumenta el daño por fuego del ejército.
+• Merist (Magia - Witch): Habilidad Inicial: Primeros Auxilios (First Aid) | Especialidad: Piel de Piedra (Stone Skin). Otorga ventajas de protección física y aumenta la armadura de las tropas de apoyo.
 
 9. CONFLUENCIA (CONFLUX):
-• Lacus (Poder): Especialidad "Elementales de Agua" (Water Elementals). Duplica la vitalidad y capacidades curativas de los Elementales de Agua/Hielo.
-• Ignissa (Poder): Especialidad "Elementales de Fuego" (Fire Elementals). Sus tropas aliadas ganan la palabra clave Ataque Ardiente (fuego directo).
-• Ciele (Magia): Especialidad "Flecha de Agua" (Water Arrow). Potencia de forma drástica el daño del proyectil elemental de agua.
-• Grindan (Magia): Especialidad "Ralentizar" (Slow). Comienza con el hechizo Ralentizar de Tierra, reduciendo la iniciativa de las filas enemigas.
+• Monere (Poder - Planeswalker): Habilidad Inicial: Logística (Logistics) | Especialidad: Elementales de Magia (Magic Elementals). Duplica el potencial ofensivo e inmunidades de los Elementales de Magia.
+• Erdamon (Poder - Planeswalker): Habilidad Inicial: Finanzas (Estates) | Especialidad: Elementales de Magma (Magma Elementals). Otorga bonificaciones extremas de defensa a los Elementales de Tierra/Magma.
+• Pasis (Poder - Planeswalker): Habilidad Inicial: Artillería (Artillery) | Especialidad: Elementales (Elementals). Potencia el daño de todas sus invocaciones elementales activas en el tablero.
+• Luna (Magia - Elementalist): Habilidad Inicial: Magia de Fuego Básica (Basic Fire Magic) | Especialidad: Muro de Fuego (Fire Wall). Capacidad inigualable para invocar barreras de fuego que devoran enemigos.
+• Ciele (Magia - Elementalist): Habilidad Inicial: Magia de Agua (Water Magic) | Especialidad: Flecha Mágica (Magic Arrow). Potencia de forma drástica el daño del proyectil elemental común.
+• Grindan (Magia - Elementalist): Habilidad Inicial: Sabiduría (Wisdom) | Especialidad: Ralentizar (Slow). Especialista en inmovilizar y mermar el movimiento enemigo en la reja táctica.
 
 10. BAHÍA (COVE):
-• Jeremy (Poder): Especialidad "Cañón" (Cannon). Empieza la partida con un Cañón pesado de Bahía que inflige daño masivo por ronda.
-• Bidley (Poder): Especialidad "Piratas" (Pirates). Mejora automáticamente sus Corsarios de élite otorgándoles un ataque doble por asalto táctico.
-• Andria (Magia): Especialidad "Marea Alta" (High Tide). Altera las condiciones de la cuadrícula táctica, ralentizando e infligiendo daño constante al enemigo.
-• Anabel (Magia): Especialidad "Piratería" (Piracy). Otorga recursos de Oro adicionales cada vez que derrota enemigos en enclaves de agua o barcos.`
+• Jeremy (Poder - Captain): Habilidad Inicial: Ataque (Offense) | Especialidad: Cañón (Cannon). Empieza la partida con un Cañón pesado de Bahía que inflige daño masivo por ronda.
+• Cassiopeia (Poder - Captain): Habilidad Inicial: Tácticas (Tactics) | Especialidad: Oceanidades (Oceanids). Potencia las estadísticas de combate de las Oceanidades en la línea frontal.
+• Miriam (Poder - Captain): Habilidad Inicial: Logística (Logistics) | Especialidad: Exploración (Scouting). Incrementa los Puntos de Movimiento y revela losetas de mapa adyacentes de forma gratuita.
+• Casmetra (Magia - Navigator): Habilidad Inicial: Sabiduría (Wisdom) | Especialidad: Hechiceras (Sorceresses). Acelera la adquisición y efectividad de las Hechiceras aliadas.
+• Zilare (Magia - Navigator): Habilidad Inicial: Interferencia (Interference) | Especialidad: Olvido (Forgetfulness). Hechicero de apoyo capaz de nublar la mente de arqueros enemigos para impedir sus ataques.
+• Astra (Magia - Navigator): Habilidad Inicial: Suerte (Luck) | Especialidad: Curar (Cure). Especialista en restaurar la vida de regimientos dañados usando magias de agua.
+
+Nota de Campaña: El héroe legendario Tarnum (Poder/Magia) está presente en múltiples facciones (Castillo, Mazmorra, Rampart, Fortress, Stronghold y Conflux) representando sus distintas encarnaciones históricas a través de las campañas oficiales de las expansiones ("Heroes Chronicles").`
   },
   {
     id: "wiki_cities_buildings",

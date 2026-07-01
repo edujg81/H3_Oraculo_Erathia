@@ -17,16 +17,16 @@ const FACTION_LIST = [
 ];
 
 const FACTION_KEYWORDS: Record<string, string[]> = {
-  castillo: ['castillo', 'castle', 'catherine', 'christian', 'adela', 'loynis', 'espadachines', 'cruzados', 'establo', 'piqueros', 'ángeles', 'grial'],
-  necropolis: ['necrópolis', 'necropolis', 'sandro', 'thant', 'clavius', 'charna', 'esqueletos', 'animar muertos', 'fantasmas', 'no-muertos', 'amplificador de nigromancia'],
-  mazmorra: ['mazmorra', 'dungeon', 'mutare', 'gunnar', 'alamar', 'malekith', 'dragón', 'dragones', 'vórtice de maná', 'arcanas', 'subterráneo'],
-  rampart: ['murallas', 'rampart', 'gelu', 'kyrre', 'gem', 'elleshar', 'elfo', 'elfos', 'tiradores', 'tesoro elfo', 'guardabosques'],
-  torre: ['torre', 'tower', 'neela', 'torosar', 'solmyr', 'astral', 'rayo en cadena', 'biblioteca', 'titanes', 'gigantes', 'golem', 'golems', 'hipnosis'],
-  infierno: ['infierno', 'inferno', 'xeron', 'nymus', 'ayden', 'fiona', 'diablos', 'sabuesos', 'cerberos', 'cerberi', 'efreet', 'gog', 'gogs', 'portales de fuego'],
-  stronghold: ['bastión', 'bastion', 'stronghold', 'crag hack', 'shiva', 'gundula', 'terek', 'rocs', 'ogros', 'behemoth', 'behemoths', 'mercado de esclavos', 'orcos', 'goblins', 'fichas de apilamiento', 'stack tokens'],
-  fortaleza: ['fortaleza', 'fortress', 'tazar', 'bron', 'andra', 'voy', 'basiliscos', 'wyverns', 'jaulas de wyverns', 'hidras', 'gnolls', 'hombres lagarto'],
-  confluencia: ['confluencia', 'conflux', 'lacus', 'ignissa', 'ciele', 'grindan', 'elemental', 'elementales', 'altar de los elementos', 'duendes', 'fénix'],
-  cove: ['bahía', 'cove', 'jeremy', 'bidley', 'andria', 'anabel', 'cañón', 'cannon', 'piratas', 'gremio de contrabandistas', 'corsarios', 'marítimas', 'savage seas']
+  castillo: ['castillo', 'castle', 'catherine', 'christian', 'valeska', 'adelaide', 'lord haart', 'rion', 'ingham', 'tarnum', 'espadachines', 'cruzados', 'establo', 'piqueros', 'ángeles', 'grial'],
+  necropolis: ['necrópolis', 'necropolis', 'sandro', 'thant', 'clavius', 'charna', 'tamika', 'moandor', 'lord haart', 'vidomina', 'septienna', 'esqueletos', 'animar muertos', 'fantasmas', 'no-muertos', 'amplificador de nigromancia'],
+  mazmorra: ['mazmorra', 'dungeon', 'mutare', 'gunnar', 'alamar', 'malekith', 'lorelei', 'jeddite', 'deemer', 'sephinroth', 'tarnum', 'dragón', 'dragones', 'vórtice de maná', 'arcanas', 'subterráneo'],
+  rampart: ['murallas', 'rampart', 'gelu', 'kyrre', 'gem', 'elleshar', 'mephala', 'clancy', 'ivor', 'melodia', 'tarnum', 'elfo', 'elfos', 'tiradores', 'tesoro elfo', 'guardabosques'],
+  torre: ['torre', 'tower', 'neela', 'torosar', 'solmyr', 'astral', 'josephine', 'iona', 'dracon', 'cyra', 'rayo en cadena', 'biblioteca', 'titanes', 'gigantes', 'golem', 'golems', 'hipnosis'],
+  infierno: ['infierno', 'inferno', 'xeron', 'nymus', 'ayden', 'fiona', 'rashka', 'octavia', 'zydar', 'xyron', 'ash', 'diablos', 'sabuesos', 'cerberos', 'cerberi', 'efreet', 'gog', 'gogs', 'portales de fuego'],
+  stronghold: ['bastión', 'bastion', 'stronghold', 'crag hack', 'shiva', 'gundula', 'terek', 'yog', 'dessa', 'tarnum', 'rocs', 'ogros', 'behemoth', 'behemoths', 'mercado de esclavos', 'orcos', 'goblins', 'fichas de apilamiento', 'stack tokens'],
+  fortaleza: ['fortaleza', 'fortress', 'tazar', 'bron', 'andra', 'voy', 'gerwulf', 'wystan', 'adrienne', 'merist', 'tarnum', 'basiliscos', 'wyverns', 'jaulas de wyverns', 'hidras', 'gnolls', 'hombres lagarto'],
+  confluencia: ['confluencia', 'conflux', 'lacus', 'ignissa', 'ciele', 'grindan', 'monere', 'erdamon', 'pasis', 'luna', 'tarnum', 'elemental', 'elementales', 'altar de los elementos', 'duendes', 'fénix'],
+  cove: ['bahía', 'cove', 'jeremy', 'bidley', 'andria', 'anabel', 'cassiopeia', 'miriam', 'casmetra', 'zilare', 'astra', 'cañón', 'cannon', 'piratas', 'gremio de contrabandistas', 'corsarios', 'marítimas', 'savage seas']
 };
 
 const getPlayerFactionId = (player: any) => {
