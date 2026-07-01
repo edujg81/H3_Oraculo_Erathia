@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cinzel", "EB Garamond", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Overriding standard slate colors to be a rich, warm medieval dark stone/basalt palette */
+  --color-slate-50: #faf6ed;
+  --color-slate-100: #f4ebd9;
+  --color-slate-200: #ebd8c5;
+  --color-slate-300: #c2b1a2;
+  --color-slate-400: #9e8a79;
+  --color-slate-500: #7c6858;
+  --color-slate-600: #57463a;
+  --color-slate-700: #3d3027;
+  --color-slate-800: #2c241f;
+  --color-slate-900: #1b1613;
+  --color-slate-950: #110e0c;
+
+  /* Overriding standard amber to be classic Heroes III Ornate gold colors */
+  --color-amber-500: #dfb15b;
+  --color-amber-600: #c59b27;
+  --color-amber-700: #a37d1d;
+  --color-amber-800: #7a5a11;
+  --color-amber-900: #533b09;
+  --color-amber-950: #2a1d04;
+}
+
+/* Custom scrollbar matching medieval bronze & gold theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #110e0c;
+}
+::-webkit-scrollbar-thumb {
+  background: #2c241f;
+  border-radius: 4px;
+  border: 1px solid #3d3027;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #dfb15b;
+  border: 1px solid #c59b27;
+}
+
+/* Custom selection styling */
+::selection {
+  background-color: #533b09;
+  color: #dfb15b;
+}
+
+/* Base body style matching the theme */
+body {
+  background-color: #110e0c;
+  color: #ebd8c5;
+}

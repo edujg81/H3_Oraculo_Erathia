@@ -1,0 +1,6 @@
+{
+  "name": "Guía y Chat de Reglas - Heroes III",
+  "description": "Base de conocimiento interactiva con chat inteligente, resumen de preparación, guía de fases de turno, cronómetro de juego y versión exportable para Heroes of Might and Magic III: El Juego de Mesa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
