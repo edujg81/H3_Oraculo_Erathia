@@ -263,7 +263,7 @@ export default function App() {
     { id: 'chat', label: 'Consulta a Sandro', icon: Sparkles, color: 'text-amber-400' },
     { id: 'rules', label: 'Reglas y FAQs', icon: Library, color: 'text-sky-400' },
     { id: 'scenarios', label: 'Escenarios Rápidos', icon: Compass, color: 'text-rose-400' },
-    { id: 'calculator', label: 'Costes Reclutamiento', icon: Coins, color: 'text-yellow-400' },
+    { id: 'calculator', label: 'Visor de Criaturas', icon: Swords, color: 'text-red-400' },
     { id: 'timer_full', label: 'Cronómetro Completo', icon: Hourglass, color: 'text-emerald-400' },
     { id: 'pdf', label: 'Manual Completo / PDF', icon: Printer, color: 'text-purple-400' }
   ];

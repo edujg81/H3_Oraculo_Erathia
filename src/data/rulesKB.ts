@@ -1040,5 +1040,103 @@ GUÍA COMPLETA DE HABILIDADES DEL COMPENDIO (es.homm3bg.wiki):
 • Fortaleza - Jaulas de Wyverns (Wyvern Cages): Permite alistar Wyverns de nivel II de forma anticipada sin tener la vivienda de Plata.
 • Confluencia - Altar de los Elementos (Elemental Altar): Permite transformar recursos sobrantes de Madera/Mineral directamente en Objetos de Valor místicos.
 • Bahía - Gremio de Contrabandistas (Smugglers' Guild): Permite vender artefactos redundantes a cambio de Oro o de valiosos Objetos de Recursos.`
+  },
+  {
+    id: "wiki_units_creatures",
+    title: "35. Guía de Criaturas y Reglas de Combate (es.homm3bg.wiki)",
+    category: "combat",
+    content: `Las criaturas y unidades de combate táctico representan el núcleo del poder militar de tu Héroe. Cada facción de Erathia cuenta con 7 niveles de criaturas divididas en tres Tiers principales (Bronce, Plata, Oro), además de las Criaturas Especiales o Neutrales de Tier Azul.
+
+REGLAS GENERALES DE LAS CRIATURAS EN COMBATE:
+• Anverso y Reverso (Cara de la Carta): Cada carta de criatura es de doble cara. La cara básica ("Pocos" o "Few") representa el regimiento estándar de reclutamiento. La cara de élite ("Manada" o "Pack") representa la tropa mejorada con mayores estadísticas (Ataque, Defensa, Puntos de Vida, Iniciativa) y habilidades devastadoras.
+• Ataque (⚔️): Indica el número de dados de combate o el valor de daño base que la criatura inflige al atacar.
+• Defensa (🛡️): Reduce el daño entrante. Un valor de defensa alto mitiga los ataques físicos directos.
+• Iniciativa (⚡): Determina el orden estricto de activación de las unidades en el tablero de batalla. La criatura con mayor iniciativa actúa primero.
+• Puntos de Vida (❤️): La cantidad de heridas o daños que la unidad puede resistir antes de ser derrotada.
+• Movimiento Táctico: Las unidades del juego de mesa no tienen una estadística numérica de "Movimiento". Se desplazan por el tablero táctico de 4x5 casillas libremente de acuerdo con su tipo de alcance (Cuerpo a cuerpo, A distancia o Volador) respetando las limitaciones generales de obstáculos o zonas de control.
+• Tipo de Alcance: Las unidades se clasifican en Cuerpo a Cuerpo (Melee), A distancia (Ranged - sufren penalización de daño a la mitad si hay enemigos adyacentes) o Voladoras (Flying - ignoran obstáculos y unidades).
+
+COMPENDIO DE CRIATURAS POR FACCIONES:
+
+1. Castillo (Castle): Fuerza militar equilibrada con excelente defensa, moral sagrada y capacidad curativa.
+• Piqueros / Alabarderos (Tier Bronce - Niv. 1): Cuentan con la habilidad "Carga" que incrementa su ataque tras avanzar. Los Alabarderos de élite ganan "Sin Represalia" contra unidades de bronce.
+• Arqueros / Tiradores (Tier Bronce - Niv. 2): Unidad básica a distancia. Al ser mejorada a Tiradores, adquiere "Doble Disparo", pudiendo disparar dos veces por turno.
+• Grifos / Grifos Reales (Tier Bronce - Niv. 3): Unidades voladoras que poseen la habilidad de "Contraataque Infinito", respondiendo a todas las agresiones sin límites por ronda.
+• Espadachines / Cruzados (Tier Plata - Niv. 4): Excelentes defensores con la habilidad "Escudo" que mitiga 1 herida. Los Cruzados atacan dos veces con "Doble Ataque" cuerpo a cuerpo.
+• Monjes / Fanáticos (Tier Plata - Niv. 5): Tiradores sagrados. Su versión de élite anula la penalización de cuerpo a cuerpo.
+• Caballeros / Campeones (Tier Oro - Niv. 6): Caballería pesada con una temible bonificación de "Carga" (+3 Ataque tras desplazarse).
+• Ángeles / Arcángeles (Tier Oro - Niv. 7): Criaturas sagradas voladoras de inmenso poder. Los Arcángeles pueden usar "Resurrección" una vez por combate para revivir tropas aliadas caídas.
+
+2. Necrópolis (Necropolis): El ejército inmortal inmune al pánico, capaz de alzar caídos y debilitar la vitalidad del oponente.
+• Esqueletos / Esqueletos con Escudo (Tier Bronce - Niv. 1): Unidad numerosa con el rasgo "No-muerto" (inmunes a la baja o alta moral).
+• Zombis / Zombis Voraces (Tier Bronce - Niv. 2): Lentifican y debilitan a las unidades adyacentes mediante la plaga "Enfermedad". Los Voraces regeneran vida al activarse.
+• Fantasmas / Espectros (Tier Bronce - Niv. 3): Tropas incorpóreas que drenan maná del héroe enemigo al infligir daño físico.
+• Vampiros / Señores Vampiros (Tier Plata - Niv. 4): Bestias voladoras que atacan "Sin Represalia". Los Señores Vampiros absorben la fuerza vital mediante "Drenaje de Vida".
+• Liches / Liches de Poder (Tier Plata - Niv. 5): Lanzadores de "Nube de Muerte" que causa daño místico en área cruzada de 3x3.
+• Caballeros del Terror / de la Muerte (Tier Oro - Niv. 6): Guerreros espectrales que aplican la "Maldición" (daño mínimo enemigo) y tienen probabilidad de asestar un "Golpe Crítico" doble.
+• Dragones de Hueso / Fantasma (Tier Oro - Niv. 7): Dragones voladores no-muertos. Su versión Élite aplica "Envejecimiento", incrementando el coste de maná de los hechizos del héroe enemigo.
+
+3. Mazmorra (Dungeon): Tácticas subterráneas letales, letalidad sigilosa y el poder inigualable del Dragón Negro.
+• Arpías / Arpías Brujas (Tier Bronce - Niv. 2): Vuelan para atacar y regresan de inmediato a su posición inicial, atacando "Sin Represalia" en su versión élite.
+• Minotauros / Reyes Minotauro (Tier Plata - Niv. 5): Tienen moral alta constante y pueden bloquear ataques físicos enemigos con sus escudos.
+• Dragón Negro (Tier Oro - Niv. 7): 
+  - Lado "Pocos" (Few): Ataque 6, Defensa 3, Vida 8, Iniciativa 11. Coste: 19 Oro y 1 Objeto de Valor. Habilidad pasiva: "Reduce el daño recibido por Hechizos en 2 hasta un mínimo de 0."
+  - Lado "Manada" (Pack / Élite): Ataque 8, Defensa 3, Vida 8, Iniciativa 11. Habilidad pasiva: "Ignora cualquier efecto de Hechizo y el daño de Especialidad."
+  - Carta Neutral de Dragón Negro: Ataque 5, Defensa 2, Vida 7, Iniciativa 9. Coste: 30 Oro. Habilidad: "Ataca 2 espacios en línea. El primer ataque se resuelve normalmente, y el segundo tiene 2 de Ataque."
+  - Carta de Dragón Negro para Utopía (Banco de Criaturas): Ataque 5, Defensa 2, Vida 5, Iniciativa 9. Habilidad pasiva: "Mientras esta unidad esté apilada, obtiene +3 de Ataque."
+  No existe dragón rojo en el juego de mesa.`
+  },
+  {
+    id: "wiki_abilities_detailed",
+    title: "36. Habilidades de las Criaturas de Combate (es.homm3bg.wiki/abilities/)",
+    category: "combat",
+    content: `Las habilidades especiales impresas en las cartas de Criatura de Heroes of Might and Magic III: El Juego de Mesa determinan de forma absoluta el curso táctico de los combates en el tablero de 4x5 casillas. A continuación se desglosan las principales habilidades oficiales referenciadas en el portal de la comunidad (https://es.homm3bg.wiki/abilities/):
+
+1. HABILIDADES DE DESPLAZAMIENTO Y ALCANCE:
+• Volador (Flying): La unidad ignora por completo cualquier obstáculo (como campos de fuerza, ruinas o arenas movedizas) y a otras unidades terrestres al desplazarse por la reja táctica.
+• Tirador / Distancia (Ranged): Permite atacar a cualquier unidad en el tablero de combate sin recibir represalia (contraataque). Si hay una unidad enemiga en una casilla adyacente (cuerpo a cuerpo), el tirador sufre una penalización que reduce su daño a la mitad y está obligado a atacar a ese enemigo adyacente.
+• Volver al Origen (Strike and Return): Tras realizar un ataque cuerpo a cuerpo, la criatura (ej. Arpías) regresa inmediatamente a la casilla exacta desde la que inició su turno sin recibir represalias.
+
+2. HABILIDADES OFENSIVAS MULTIPLICADORAS:
+• Doble Disparo (Double Shot): Al activarse, la unidad a distancia puede realizar dos ataques de disparo independientes en su turno contra el mismo o diferentes objetivos.
+• Doble Ataque (Double Attack): Al activarse, la unidad cuerpo a cuerpo puede realizar dos ataques físicos independientes en su turno de combate.
+• Sin Represalia (No Retaliation): El defensor atacado por esta unidad no puede realizar su contraataque (represalia) obligatorio tras recibir el impacto.
+• Carga (Charge): Si la unidad avanza en línea recta un número mínimo de casillas antes de ejecutar su ataque cuerpo a cuerpo, suma un bono de +1, +2 o +3 al ataque (según su nivel).
+
+3. HABILIDADES MÁGICAS Y DE INMUNIDAD:
+• Inmunidad Mágica Completa (Spell Immunity): La criatura (ej. Dragón Negro) es absolutamente inmune a cualquier tipo de carta de hechizo jugada por los héroes (incluyendo hechizos dañinos enemigos, bendiciones de ataque aliadas, curaciones o resurrecciones ordinarias).
+• Resistencia Mágica (Magic Resistance): Probabilidad fija (ej. Golem o Dragón de Hada) de disipar o devolver hechizos enemigos directamente a su lanzador original.
+
+4. HABILIDADES DE ATAQUE EN ÁREA Y EFECTO:
+• Aliento / Ataque Lineal (Breath Attack): El ataque de la criatura (ej. Dragones) daña tanto a la unidad objetivo como a la criatura que se encuentre inmediatamente posicionada en la casilla detrás del objetivo principal en la línea de ataque.
+• Aliento de Cristal (Crystal Breath): Ataque en abanico que inflige daño a la unidad objetivo y a todas las criaturas adyacentes de la primera línea.
+• Nube de Muerte (Death Cloud): Ataque a distancia (ej. Liches) que detona en una zona de 3x3, infligiendo daño a la unidad principal y a todas las adyacentes (amigas o enemigas, excepto no-muertos).
+
+5. HABILIDADES DE RECUPERACIÓN Y CURACIÓN:
+• Resurrección (Resurrection): Habilidad activada una vez por combate (ej. Arcángeles) que permite revivir y sanar por completo a un regimiento aliado caído de rango Bronce o Plata, devolviéndolo inmediatamente al tablero de batalla táctica.
+• Drenaje de Vida (Life Drain): Al infligir daño en combate cuerpo a cuerpo a una unidad viva, la criatura (ej. Señor Vampiro) se sana a sí misma un número de heridas equivalente al daño causado.
+• Regeneración (Regenerate): Al inicio de su fase de activación, la criatura recupera de forma automática todos sus puntos de vida perdidos (siempre que la unidad no haya sido eliminada por completo del tablero de juego).
+• No-Muerto (Undead): La unidad es inmune de forma pasiva a cualquier efecto que altere la moral (positiva o negativa). No puede recibir curaciones ni resurrecciones mágicas ordinarias que provengan de escuelas como la magia de agua o tierra pura.`
+  },
+  {
+    id: "wiki_units_detailed",
+    title: "37. Catálogo y Guía Completa de Unidades (es.homm3bg.wiki/units/)",
+    category: "combat",
+    content: `El catálogo completo de ejércitos de Heroes of Might and Magic III: El Juego de Mesa abarca todas las facciones asimétricas y tropas neutrales detalladas en la wiki comunitaria (https://es.homm3bg.wiki/units/). Aquí se desglosa el reglamento específico para cada rango y el catálogo de atributos oficiales de las cartas de tropa:
+
+1. CLASIFICACIÓN DE UNIDADES POR TIERS DE RECLUTAMIENTO:
+• Tier Bronce (Rango I - Niveles 1-3): Representan la milicia, arqueros y guardianes básicos. Tienen costes económicos bajos (solo Oro, sin requisitos de recursos especiales) y se reclutan al construir viviendas de bronce con un Fuerte básico en la metrópolis. Suelen tener estadísticas de vida modestas (1 a 3 heridas).
+• Tier Plata (Rango II - Niveles 4-5): Tropas de élite tácticas y criaturas míticas medianas (Cruzados, Licántropos, Wyverns, Liches). Su reclutamiento exige la ampliación de la metrópolis a nivel de Ciudadela y el pago de recursos de construcción (Madera/Mineral) además de Oro.
+• Tier Oro (Rango III - Nivel 6) y Azur (Legendario - Nivel 7): Criaturas colosales definitivas (Ángeles, Diablos, Titanes, Hidras, Dragones Negros). Exigen el máximo nivel urbano (Castillo), la construcción de viviendas sagradas y el pago de inmensas reservas de Oro junto con Objetos de Valor (recursos míticos misticos). Tienen reservas de salud masivas (hasta 8 o 10 heridas).
+
+2. COMPRENSIÓN DE LAS ESTADÍSTICAS OFICIALES SIN MOVIMIENTO:
+• Sin Atributo de Movimiento: Se recalca de forma estricta en las reglas oficiales del juego de mesa que las cartas de unidad NO poseen la estadística física de 'Movimiento' que existe en el juego de ordenador. El desplazamiento por el tablero táctico se rige puramente por el tipo de rango de alcance de la criatura:
+  - Cuerpo a Cuerpo (Melee): Debe desplazarse por casillas terrestres normales hasta entrar en adyacencia con el objetivo para poder atacarlo.
+  - Volador (Flying): Se desplaza a cualquier casilla del tablero ignorando obstáculos intermedios.
+  - A Distancia (Ranged): Dispara a cualquier casilla del tablero desde su posición, sufriendo penalizaciones si es bloqueada por obstáculos o si hay enemigos adyacentes.
+• Ataque (⚔️): Cantidad de dados a tirar o modificador que añade heridas al regimiento defensor.
+• Defensa (🛡️): Mitiga directamente el número de heridas recibidas antes de aplicar daño al medidor de salud.
+• Iniciativa (⚡): Define el orden exacto de colocación en el track cronológico de activación táctica de la ronda.
+• Vida (❤️): Puntos de herida tolerables. Al acumular fichas de daño equivalentes, la unidad es removida inmediatamente del juego de mesa y colocada en la pila de bajas.`
   }
 ];

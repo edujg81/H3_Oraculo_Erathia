@@ -1949,6 +1949,113 @@ export default function RulebookPDF() {
             </table>
           </div>
         </section>
+
+        {/* Section XXI */}
+        <section className="space-y-4 page-break">
+          <div className="border-b-2 border-amber-500/30 pb-2">
+            <h2 className="text-lg font-bold font-serif text-amber-500 tracking-wide uppercase flex items-center justify-between">
+              <span>XXI. Compendio de Criaturas y Unidades de Combate (es.homm3bg.wiki)</span>
+              <span className="text-xs font-mono text-slate-500">Unidades de Erathia</span>
+            </h2>
+            <p className="text-[10px] uppercase font-mono text-slate-400 mt-1">
+              Guía Oficial de Atributos, Rangos (Tiers) y Habilidades Tácticas en el Tablero
+            </p>
+          </div>
+
+          <div className="space-y-3 text-xs leading-relaxed text-slate-300">
+            <p>
+              En el juego de tablero de <strong>Heroes of Might and Magic III</strong>, el combate táctico se resuelve en una cuadrícula hexagonal. Las unidades son representadas por cartas de doble cara: la cara <strong>Básica</strong> ("Unas pocas") y la cara de <strong>Élite</strong> ("Manada" o mejorada). Reclutar y saber utilizar las habilidades de estas criaturas determina el éxito de las campañas.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-slate-950 p-4 border border-slate-800/80 rounded-xl">
+              <div className="space-y-1">
+                <span className="text-amber-400 font-semibold block font-mono">🎯 Atributos Clave de Combate</span>
+                <ul className="list-disc pl-4 space-y-1 text-slate-400 text-[11px]">
+                  <li><strong>Ataque (⚔️):</strong> Número de dados o daño básico infligido.</li>
+                  <li><strong>Defensa (🛡️):</strong> Reduce las heridas directas recibidas por ataques físicos.</li>
+                  <li><strong>Iniciativa (⚡):</strong> Orden de actuación en la ronda de batalla. Actúa el más veloz.</li>
+                  <li><strong>Puntos de Vida (❤️):</strong> Capacidad de daño tolerable antes de retirar la tropa.</li>
+                  <li><strong>Movimiento (👣):</strong> Hexágonos máximos de desplazamiento por activación.</li>
+                </ul>
+              </div>
+              <div className="space-y-1">
+                <span className="text-amber-400 font-semibold block font-mono">🏷️ Clasificación de Rangos (Tiers)</span>
+                <ul className="list-disc pl-4 space-y-1 text-slate-400 text-[11px]">
+                  <li><strong>Bronce (Niveles I - III):</strong> Unidades de infantería básica y tiradores iniciales. Muy numerosas y con costes de reclutamiento bajos en Oro.</li>
+                  <li><strong>Plata (Niveles IV - V):</strong> Criaturas profesionales y guerreros de élite. Requieren madera o mineral y estructuras de metrópolis medias.</li>
+                  <li><strong>Oro (Niveles VI - VII):</strong> Tropas legendarias o campeones de facción (ej. Ángeles o Dragones). Alto coste en Oro y Objetos de Valor místicos.</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3 className="text-xs font-bold text-amber-400 uppercase tracking-wider font-mono pt-2">
+              Tabla Compendio de Criaturas Destacadas por Facción
+            </h3>
+
+            <table className="w-full text-[10px] text-left border-collapse border border-slate-800">
+              <thead>
+                <tr className="bg-slate-950 text-slate-400 uppercase tracking-widest text-[9px] font-mono border-b border-slate-800">
+                  <th className="px-2.5 py-2 border border-slate-800">Criatura / Facción</th>
+                  <th className="px-2.5 py-2 border border-slate-800">Tier / Lvl</th>
+                  <th className="px-2.5 py-2 border border-slate-800">Cara Básica (Stats)</th>
+                  <th className="px-2.5 py-2 border border-slate-800">Cara Élite (Stats)</th>
+                  <th className="px-2.5 py-2 border border-slate-800">Habilidades Singulares</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-900">
+                <tr>
+                  <td className="px-2.5 py-2 font-semibold text-blue-300 border border-slate-800">Piqueros / Alabarderos</td>
+                  <td className="px-2.5 py-2 border border-slate-800">Bronce / Lvl 1</td>
+                  <td className="px-2.5 py-2 border border-slate-800">⚔️1 🛡️1 ⚡3 ❤️1</td>
+                  <td className="px-2.5 py-2 border border-slate-800">⚔️2 🛡️1 ⚡4 ❤️1</td>
+                  <td className="px-2.5 py-2 border border-slate-800"><strong>Carga:</strong> +1 Atk al mover 2+ hexes. Élite tiene <strong>Sin Represalia</strong>.</td>
+                </tr>
+                <tr>
+                  <td className="px-2.5 py-2 font-semibold text-blue-300 border border-slate-800">Ángeles / Arcángeles</td>
+                  <td className="px-2.5 py-2 border border-slate-800">Oro / Lvl 7</td>
+                  <td className="px-2.5 py-2 border border-slate-800">⚔️4 🛡️3 ⚡6 ❤️4</td>
+                  <td className="px-2.5 py-2 border border-slate-800">⚔️5 🛡️4 ⚡7 ❤️4</td>
+                  <td className="px-2.5 py-2 border border-slate-800"><strong>Vuelo.</strong> Élite puede revivir una unidad Bronce o Plata por combate.</td>
+                </tr>
+                <tr>
+                  <td className="px-2.5 py-2 font-semibold text-emerald-300 border border-slate-800">Elfos / Grandes Elfos</td>
+                  <td className="px-2.5 py-2 border border-slate-800">Bronce / Lvl 3</td>
+                  <td className="px-2.5 py-2 border border-slate-800">⚔️1 🛡️0 ⚡4 ❤️1</td>
+                  <td className="px-2.5 py-2 border border-slate-800">⚔️2 🛡️0 ⚡5 ❤️1</td>
+                  <td className="px-2.5 py-2 border border-slate-800"><strong>A distancia.</strong> Élite tiene <strong>Doble Disparo</strong> (ataca dos veces).</td>
+                </tr>
+                <tr>
+                  <td className="px-2.5 py-2 font-semibold text-slate-300 border border-slate-800">Vampiros / S. Vampiro</td>
+                  <td className="px-2.5 py-2 border border-slate-800">Plata / Lvl 4</td>
+                  <td className="px-2.5 py-2 border border-slate-800">⚔️2 🛡️1 ⚡5 ❤️2</td>
+                  <td className="px-2.5 py-2 border border-slate-800">⚔️3 🛡️2 ⚡6 ❤️2</td>
+                  <td className="px-2.5 py-2 border border-slate-800"><strong>No-muerto. Sin Represalia.</strong> Élite tiene <strong>Drenaje de Vida</strong>.</td>
+                </tr>
+                <tr>
+                  <td className="px-2.5 py-2 font-semibold text-purple-300 border border-slate-800">Dragones R. / Dragón Negro</td>
+                  <td className="px-2.5 py-2 border border-slate-800">Oro / Lvl 7</td>
+                  <td className="px-2.5 py-2 border border-slate-800">⚔️4 🛡️3 ⚡6 ❤️4</td>
+                  <td className="px-2.5 py-2 border border-slate-800">⚔️5 🛡️4 ⚡7 ❤️4</td>
+                  <td className="px-2.5 py-2 border border-slate-800"><strong>Vuelo, Aliento Lineal.</strong> Élite es inmune a toda magia del juego.</td>
+                </tr>
+                <tr>
+                  <td className="px-2.5 py-2 font-semibold text-yellow-300 border border-slate-800">Gigantes / Titanes</td>
+                  <td className="px-2.5 py-2 border border-slate-800">Oro / Lvl 7</td>
+                  <td className="px-2.5 py-2 border border-slate-800">⚔️4 🛡️3 ⚡5 ❤️4</td>
+                  <td className="px-2.5 py-2 border border-slate-800">⚔️5 🛡️3 ⚡6 ❤️4</td>
+                  <td className="px-2.5 py-2 border border-slate-800"><strong>Inmune a control mental.</strong> Élite ataca <strong>A distancia</strong>.</td>
+                </tr>
+                <tr>
+                  <td className="px-2.5 py-2 font-semibold text-amber-300 border border-slate-800">Behemoth / Ancestral</td>
+                  <td className="px-2.5 py-2 border border-slate-800">Oro / Lvl 7</td>
+                  <td className="px-2.5 py-2 border border-slate-800">⚔️4 🛡️2 ⚡5 ❤️4</td>
+                  <td className="px-2.5 py-2 border border-slate-800">⚔️5 🛡️2 ⚡6 ❤️4</td>
+                  <td className="px-2.5 py-2 border border-slate-800"><strong>Garras:</strong> Reduce 50% defensa enemiga. Élite la reduce a 0.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
       </div>
     </div>
   );
