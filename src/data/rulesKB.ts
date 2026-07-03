@@ -71,7 +71,7 @@ Se utiliza principalmente como botín o recompensa (como al vencer en el Templo 
     category: "components",
     content: `Para regular diversos efectos atmosféricos, tácticos y limitaciones, el juego de mesa utiliza fichas dedicadas:
 1. Fichas de Tiempo (Time Tokens): Se colocan en el tablero de ronda de escenario o pista de campaña. Actúan como una cuenta atrás fija. Además, limitan las visitas a ciertas localizaciones raras, indicando cuándo se reactivan o cuándo spawnearán ejércitos neutrales en el mapa de aventura.
-2. Cartas de Hechizo en Pergamino (Spell Scroll Cards): Cartas que representan pergaminos arcanos. Contienen un hechizo específico imprimado. Permiten a cualquier héroe lanzar ese hechizo en combate (o mapa) sin necesidad de poseer el "Libro de Hechizos" ni el nivel mágico requerido. Se descartan de forma permanente tras su único uso.
+2. Cartas de Hechizo en Pergamino (Spell Scroll Cards): Cartas que representan pergaminos arcanos. En el juego base contienen un hechizo específico imprimado, permitiendo a cualquier héroe lanzar ese hechizo en combate (o mapa) sin poseer el Libro de Hechizos ni el nivel requerido, descartándose tras su uso. En la expansión de Confluencia, los pergaminos se cargan con dos hechizos boca abajo del mazo, actuando bajo reglas especiales asimétricas de límite, poder más débil y venta (ver sección 20 para más detalles).
 3. Fichas de Arenas Movedizas (Quicksand Spell Tokens): Fichas de obstáculo provisional que se sitúan sobre la reja de combatetactico (4x5) tras conjurar el hechizo homónimo de tierra. Cualquier unidad terrestre que camine hacia esta casilla debe cesar su movimiento de forma fulminante en ella, perdiendo su ataque en ese turno.
 4. Fichas de Ataque (Attack Tokens): Indicadores circulares temporales que se colocan sobre la carta de regimiento para reflejar bufos mágicos de bendición (+1 al ataque) o debuffs (-1 al ataque), alterando directamente los dados de combate rojos tirados.
 5. Fichas de Corrosión (Corrosion Tokens): Representan la destrucción ácida de protecciones o el hechizo "Corrosión". Reducen la estadística de defensa física de la criatura objetivo en -1 o -2 puntos de forma persistente hasta que finalice el combate táctico en curso o la unidad perezca.
@@ -137,7 +137,7 @@ P: ¿Puedo equipar un artefacto en una cuadrícula o ranura de personaje (como c
 R: No. En el juego de mesa no existe el concepto de "equipar" artefactos en ranuras ni de colocarlos en la mesa boca arriba para que tengan efectos pasivos automáticos continuos en cada ronda (salvo que sea una carta expresamente calificada como "Permanente"). Son cartas que se juegan desde la mano, se resuelven y se descartan a tu pila de descartes.
 
 P: ¿Qué ocurre con los Pergaminos de Hechizo (Scrolls)?
-R: Los pergaminos de hechizo se tratan como cartas de un solo uso. Se juegan de tu mano y se descartan de forma permanente del juego tras su uso, no volviendo a la pila de descarte del Héroe.
+R: En el juego base, se tratan como cartas de un solo uso que se descartan permanentemente tras lanzarse. Sin embargo, en la expansión de Confluencia se introducen 20 cartas de pergamino de hechizos con un mazo propio (y 10 barajadas en el mazo de artefactos). Al obtenerse uno, se le colocan 2 hechizos boca abajo encima. El pergamino se puede jugar (usando el poder más débil de sus hechizos, sin contar para el límite de hechizos, ni pudiendo usarse para potenciar otros), o venderse en mercadillos por 2 Oros por cada hechizo restante en él. Se limita a un máximo de 2 pergaminos activos por héroe a la vez (si se obtiene un tercero, se descarta uno de los pergaminos activos). Al agotarse o venderse, las cartas de hechizo se remueven y la carta de pergamino vuelve al mazo de pergaminos.
 
 P: ¿Cómo funciona el bonus inicial de artefacto de la preparación (por dificultad)?
 R: Si la dificultad seleccionada te otorga un artefacto inicial, debes buscarlo en el mazo de artefactos correspondiente y colocarlo directamente en tu mano inicial, no en tu mazo de robo ni en la pila de descarte.
@@ -452,7 +452,17 @@ Mediante la magia correspondiente (Invocación Elemental), un héroe puede conju
 
 3. Daño Elemental Puro (Elemental Damage):
 • El daño de descargas arcanas puras (como Rayo de Hielo o Relámpago) ignora de forma absoluta el valor numérico de Defensa física de la criatura defensora, aplicando de forma directa las heridas al marcador de salud.
-• Inmunidades Innatas: No es reducible excepto mediante inmunidades absolutas especificadas en las cartas de Criatura Élite (por ejemplo, los Dragones Negros son completamente inmunes a toda la magia, los Fénix son inmunes al daño de Fuego, y los Elementales de Tierra ignoran el daño de Implosión o Lentitud).`
+• Inmunidades Innatas: No es reducible excepto mediante inmunidades absolutas especificadas en las cartas de Criatura Élite (por ejemplo, los Dragones Negros son completamente inmunes a toda la magia, los Fénix son inmunes al daño de Fuego, y los Elementales de Tierra ignoran el daño de Implosión o Lentitud).
+
+4. Cartas de Pergamino de Hechizos (Spell Scroll Cards - Expansión Confluencia):
+La expansión de Conflujo trae un conjunto de 20 cartas de pergamino de hechizos. Durante la preparación del juego se barajan 10 de estas cartas en el mazo de artefactos y el resto se deja a un lado como mazo de pergaminos (algunos eventos o lugares pueden hacer uso de ellos más adelante).
+Cuando se obtenga una carta de pergamino de hechizos se coloca junto a la ficha del héroe, luego se roban dos cartas del mazo de hechizos y se colocan boca abajo sobre la carta de pergamino. En adelante se tratarán como una sola carta que se podrá usar como cualquier otro hechizo con las siguientes excepciones:
+• Un hechizo jugado desde un pergamino no cuenta para el límite de hechizos.
+• Solo se puede usar el poder más débil del hechizo (no se pueden potenciar).
+• No se puede usar para potenciar otro hechizo.
+• Se puede vender el pergamino en un mercadillo por 2 Oros por cada hechizo que contenga el pergamino.
+
+Límite en Juego: Solo se pueden tener 2 pergaminos en juego a la vez. Si se consigue un tercero, se roban los nuevos hechizos y se descarta uno de los pergaminos (el nuevo o uno de los anteriores). Cuando se agota un pergamino o se vende, las cartas de hechizos se retiran y la carta de pergamino se coloca en el mazo de pergaminos.`
   },
   {
     id: "ai_rules_compendium",
@@ -867,8 +877,137 @@ Permite sacrificar cartas de Hechizo o Artefactos menores no deseados de tu mano
 Nota de Campaña: El héroe legendario Tarnum (Poder/Magia) está presente en múltiples facciones (Castillo, Mazmorra, Rampart, Fortress, Stronghold y Conflux) representando sus distintas encarnaciones históricas a través de las campañas oficiales de las expansiones ("Heroes Chronicles").`
   },
   {
+    id: "wiki_heroes_abilities",
+    title: "33. Habilidades y Progresión del Héroe (Guía Completa de es.homm3bg.wiki)",
+    category: "combat",
+    content: `Las Habilidades (Ability Cards) representan la progresión, entrenamiento y maestrías del Héroe. Al subir de nivel a un rango de Plata (niveles II, III, V y VII), el Héroe realiza un drafteo del mazo común de habilidades.
+
+MECÁNICA GENERAL DE LAS HABILIDADES:
+• Rango Básico: Es el efecto inicial de la carta. No requiere recursos y se puede usar de forma pasiva o instantánea según se indica.
+• Rango Experto: Para activar el efecto Experto de una carta de habilidad, el jugador debe gastar un marcador o ficha de Experto durante su turno.
+• Limitaciones: Cada héroe tiene su propio pool de habilidades y límites asimétricos según su clase (Poder o Magia).
+
+GUÍA COMPLETA DE HABILIDADES DEL COMPENDIO (es.homm3bg.wiki):
+
+1. Magia de Aire (Air Magic):
+• Básico: Permanente: +1 Poder para hechizos de la Escuela de Aire.
+• Experto: Al lanzar un Hechizo de la Escuela de Aire, puedes descartar esta carta para ganar +3 Poder de forma instantánea.
+
+2. Arquería (Archery):
+• Básico: En curso: Durante esta ronda de combate, tus unidades a distancia ganan +1 Ataque si el objetivo es una unidad no adyacente.
+• Experto: En curso: Hasta el final de la siguiente ronda de combate, tus unidades a distancia ganan +1 Iniciativa y +1 Ataque si el objetivo es una unidad no adyacente.
+
+3. Armadura (Armorer):
+• Básico: Instantáneo: +1 Defensa en esta ronda de combate, luego roba 1 carta.
+• Experto: Instantáneo: +2 Defensa en esta ronda de combate, luego roba 1 carta.
+
+4. Artillería (Artillery):
+• Básico: Instantáneo: Inflige 1 daño a una unidad enemiga con la menor iniciativa.
+• Experto: Instantáneo: Al usar la carta de Balista, resuelve su efecto contra el mismo objetivo 3 veces de forma consecutiva.
+
+5. Balística (Ballistics):
+• Básico: Instantáneo: Juega esta carta durante un asedio. Destruye 1 Muro o Puerta de forma instantánea.
+• Experto: Instantáneo: Juega esta carta durante un asedio. Destruye la Torre de Flechas (Arrow Tower) enemiga.
+
+6. Magias Básicas Elementales (Basic Air / Earth / Fire / Water Magic - Expansión Confluencia):
+• Básico: Permanente: En lugar de buscar en el mazo de Hechizos, busca el primer Hechizo de la Escuela correspondiente en él, colócalo en tu mano y baraja el mazo.
+• Experto: Instantáneo: +3 Poder para un Hechizo de la Escuela elemental correspondiente.
+
+7. Diplomacia (Diplomacy):
+• Básico: Efecto de mapa: Por cada morada (Dwelling) controlada, roba 1 carta de Unidad Neutral correspondiente. Puedes reclutarla pagando su coste en Oro.
+• Experto: Instantáneo: Salta el combate con unidades neutrales en un campo cuya dificultad de campo sea menor o igual al nivel de tu Héroe. Reclama el campo y visítalo de forma gratuita sin combatir (este Héroe no gana Experiencia).
+
+8. Ojo de Águila (Eagle Eye):
+• Básico: Instantáneo: Roba cartas del mazo de Hechizos hasta revelar un Hechizo Básico. Ponlo en tu mano y baraja el resto en el mazo.
+• Experto: Instantáneo: Roba cartas del mazo de Hechizos hasta revelar un Hechizo Experto. Ponlo en tu mano y baraja el resto en el mazo.
+
+9. Magia de Tierra (Earth Magic):
+• Básico: Permanente: +1 Poder para hechizos de la Escuela de Tierra.
+• Experto: Al lanzar un Hechizo de la Escuela de Tierra, puedes descartar esta carta para ganar +3 Poder de forma instantánea.
+
+10. Finanzas (Estates):
+• Básico: Instantáneo: Gana 3 de Oro de forma inmediata.
+• Experto: Instantáneo: Gana 6 de Oro de forma inmediata.
+
+11. Magia de Fuego (Fire Magic):
+• Básico: Permanente: +1 Poder para hechizos de la Escuela de Fuego.
+• Experto: Al lanzar un Hechizo de la Escuela de Fuego, puedes descartar esta carta para ganar +3 Poder de forma instantánea.
+
+12. Primeros Auxilios (First Aid):
+• Básico: Instantáneo: Elimina 1 daño/herida de una de tus unidades.
+• Experto: Instantáneo: Al usar la Tienda de Primeros Auxilios, resuelve su efecto contra el mismo objetivo 3 veces de forma consecutiva.
+
+13. Inteligencia (Intelligence):
+• Básico: Instantáneo: Durante el combate, justo antes de que cualquier unidad se active, puedes jugar una carta de Hechizo (aplica el límite de 1 hechizo por ronda).
+• Experto: Instantáneo: Durante el combate, antes de que cualquier unidad se active, juega una carta de Hechizo. Este hechizo no cuenta para tu límite por ronda.
+
+14. Interferencia (Interference):
+• Básico: Instantáneo: Otorga +1 Defensa. Este efecto puede usarse para reducir el daño directo de hechizos enemigos.
+• Experto: Instantáneo: Otorga +2 Defensa, utilizable para reducir el daño infligido por hechizos enemigos.
+
+15. Liderazgo (Leadership):
+• Básico: Instantáneo: Gana una ficha de Moral Positiva (+1).
+• Experto: Instantáneo: Roba 2 cartas de tu mazo de Poder y Magia, y gana una ficha de Moral Positiva.
+
+16. Aprendizaje (Learning):
+• Básico: Instantáneo: Juega cuando el Héroe esté a punto de subir de nivel. Avanza su nivel de experiencia en medio nivel (0.5) adicional gratis.
+• Experto: Instantáneo: Juega cuando el Héroe esté a punto de subir de nivel. Avanza su nivel de experiencia en un nivel completo adicional, luego retira esta carta de la partida.
+
+17. Logística (Logistics):
+• Básico: En curso: Al final de tu turno, mueve la miniatura de tu Héroe a un campo vacío adyacente en el mapa.
+• Experto: Instantáneo: Tu Héroe gana +1 Punto de Movimiento (PM) de forma inmediata.
+
+18. Suerte (Luck):
+• Básico: En curso: Puedes volver a tirar el dado de Tesoro o el dado de Recursos una vez durante este turno.
+• Experto: En curso: Puedes volver a tirar cualquier dado una vez durante este turno.
+
+19. Misticismo (Mysticism):
+• Básico: Instantáneo: Juega esta carta inmediatamente después de lanzar un hechizo. En lugar de descartar la carta de Hechizo, devuélvela a tu mano de inmediato.
+• Experto: Instantáneo: Juega esta carta inmediatamente después de lanzar un hechizo. En lugar de descartarla, devuelve la carta de Hechizo y todas las demás cartas aliadas jugadas con ella a tu mano.
+
+20. Nigromancia (Necromancy):
+• Básico: Efecto de mapa: Juega después de ganar un combate que no sea Combate Rápido. Puedes reforzar una unidad de Bronce o Plata de tu elección a mitad de su coste en Oro (redondeado hacia abajo).
+• Experto: Efecto de mapa: Juega después de ganar un combate que no sea Combate Rápido. Puedes reforzar cualquier unidad de tu elección por la mitad de su coste en Oro (redondeado hacia abajo).
+
+21. Ofensiva / Ataque (Offense):
+• Básico: Instantáneo: Otorga +1 Ataque a tus unidades en esta ronda, luego roba 1 carta.
+• Experto: Instantáneo: Otorga +2 Ataque a tus unidades en esta ronda, luego roba 1 carta.
+
+22. Buscador de Caminos (Pathfinding):
+• Básico: Efecto de mapa: Este turno, tu Héroe puede moverse a través de campos con Unidades Neutrales y Héroes Enemigos, pero si finaliza su movimiento en ellos, el combate comenzará de forma inmediata.
+• Experto: Efecto de mapa: Tu Héroe puede moverse sobre fronteras amarillas y campos bloqueados, pero no puede terminar su movimiento en ellos.
+
+23. Resistencia (Resistance):
+• Básico: Instantáneo: Juega esta carta inmediatamente después de que el enemigo lance un hechizo. Si se lanzó con 1 de Poder o menos, ignora por completo el efecto del hechizo.
+• Experto: Instantáneo: Juega inmediatamente después de que el enemigo lance un hechizo. Ignora por completo el efecto de la carta de Hechizo enemiga.
+
+24. Erudito / Sabio (Scholar):
+• Básico: Instantáneo: Elige 1 carta de tu pila de descartes y devuélvela directamente a tu mano.
+• Experto: Efecto de mapa: Elimina hasta 2 cartas de Estadística de tu mano o pila de descarte. Coge hasta 2 cartas de Estadística Potenciadas diferentes y ponlas encima de tu pila de descarte, luego retira al Erudito de la partida.
+
+25. Exploración (Scouting):
+• Básico: Instantáneo: Juega antes de realizar una acción de Búsqueda, luego realiza Búsqueda(3) en su lugar.
+• Experto: Instantáneo: Juega antes de realizar una acción de Búsqueda, luego realiza Búsqueda(5) en su lugar.
+
+26. Hechicería (Sorcery):
+• Básico: Instantáneo: +1 Poder al lanzar hechizos en esta ronda, luego roba 1 carta de tu mazo.
+• Experto: Instantáneo: +2 Poder al lanzar hechizos en esta ronda, luego roba 1 carta de tu mazo.
+
+27. Tácticas (Tactics):
+• Básico: Instantáneo: Al inicio del combate, puedes intercambiar la posición de cualesquiera 2 de tus unidades en el tablero de batalla.
+• Experto: Activación: Durante el combate, puedes intercambiar la posición de cualesquiera 2 de tus unidades en tu turno.
+
+28. Magia de Agua (Water Magic):
+• Básico: Permanente: +1 Poder para hechizos de la Escuela de Agua.
+• Experto: Al lanzar un Hechizo de la Escuela de Agua, puedes descartar esta carta para ganar +3 Poder de forma instantánea.
+
+29. Sabiduría (Wisdom):
+• Básico: El coste de compra de hechizos en esta Ciudad se reduce en 2 de Oro. Al comprar hechizos de tu Gremio de Magos, realiza Búsqueda(3) en lugar de Búsqueda(2).
+• Experto: El coste de compra de hechizos en esta Ciudad se reduce en 2 de Oro. Al comprar hechizos de tu Gremio de Magos, realiza Búsqueda(4) en lugar de Búsqueda(2).`
+  },
+  {
     id: "wiki_cities_buildings",
-    title: "33. Desarrollo Urbano: Ciudades y Catálogo de Edificios de Facción",
+    title: "34. Desarrollo Urbano: Ciudades y Catálogo de Edificios de Facción",
     category: "town",
     content: `El desarrollo de la metrópolis es fundamental para sustentar la economía de Erathia. La wiki de la comunidad (https://es.homm3bg.wiki/) describe la planificación y el catálogo completo de estructuras construibles:
 

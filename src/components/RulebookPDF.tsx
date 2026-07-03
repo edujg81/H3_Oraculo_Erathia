@@ -229,6 +229,9 @@ export default function RulebookPDF() {
               <div className="pl-4 text-slate-400 text-[11px]">• Tabla de Dificultad de las Zonas (Ejércitos)</div>
               <div className="pl-4 text-slate-400 text-[11px]">• Tabla General de Conversión de Recursos</div>
             </div>
+            <div>
+              <span className="text-amber-500 font-bold">XX.</span> Guía de Habilidades y Talentos del Héroe (Wiki)
+            </div>
           </div>
         </div>
 
@@ -1776,6 +1779,174 @@ export default function RulebookPDF() {
                 <br />• <strong>Debilitamientos:</strong> Lanza hechizos como "Weakness" solo sobre tropas del jugador a punto de contraatacar.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* Section XX */}
+        <section className="space-y-4 page-break">
+          <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
+            XX. Guía de Habilidades y Talentos del Héroe (es.homm3bg.wiki)
+          </h3>
+          <p className="text-xs text-slate-400">
+            Las Habilidades representan la progresión del Héroe. Al subir de nivel a un rango de Plata (II, III, V y VII), el Héroe draftea de un mazo común. Poseen un efecto <strong>Básico</strong> (pasivo o gratuito) y un efecto <strong>Experto</strong> (requiere gastar una ficha de Experto).
+          </p>
+          <div className="overflow-x-auto">
+            <table className="min-w-full text-[11px] text-slate-300 bg-slate-950 border border-slate-800 rounded-lg">
+              <thead>
+                <tr className="bg-slate-900 text-amber-400 font-mono text-left">
+                  <th className="px-3 py-2 border border-slate-800 font-bold">Habilidad / Origen</th>
+                  <th className="px-3 py-2 border border-slate-800 font-bold">Efecto Rango Básico</th>
+                  <th className="px-3 py-2 border border-slate-800 font-bold">Efecto Rango Experto</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-800 leading-relaxed">
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">1. Magia de Aire (Air Magic)</td>
+                  <td className="px-3 py-2 border border-slate-800">Permanente: +1 Poder para hechizos de la Escuela de Aire.</td>
+                  <td className="px-3 py-2 border border-slate-800">Al lanzar un Hechizo de la Escuela de Aire, puedes descartar esta carta para ganar +3 Poder de forma instantánea.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">2. Arquería (Archery)</td>
+                  <td className="px-3 py-2 border border-slate-800">En curso: Durante esta ronda de combate, tus unidades a distancia ganan +1 Ataque si el objetivo no es adyacente.</td>
+                  <td className="px-3 py-2 border border-slate-800">En curso: Hasta el final de la siguiente ronda, tus unidades a distancia ganan +1 Iniciativa y +1 Ataque si el objetivo no es adyacente.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">3. Armadura (Armorer)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: +1 Defensa en esta ronda, luego roba 1 carta.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: +2 Defensa en esta ronda, luego roba 1 carta.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">4. Artillería (Artillery)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Inflige 1 daño a la unidad enemiga con la menor iniciativa.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Al usar la Balista, resuelve su efecto contra el mismo objetivo 3 veces.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">5. Balística (Ballistics)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega durante un asedio. Destruye 1 sección de Muro o la Puerta de forma instantánea.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega durante un asedio. Destruye la Torre de Flechas (Arrow Tower) aliada/enemiga.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">6. Magias Básicas Elementales (Basic Air/Earth/Fire/Water Magic)</td>
+                  <td className="px-3 py-2 border border-slate-800">Permanente: En lugar de buscar en el mazo de Hechizos, toma el primer Hechizo de la Escuela correspondiente, colócalo en tu mano y baraja.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: +3 Poder para un Hechizo de la Escuela correspondiente.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">7. Diplomacia (Diplomacy)</td>
+                  <td className="px-3 py-2 border border-slate-800">Efecto de mapa: Por cada morada (Dwelling) controlada, roba 1 carta de Unidad Neutral correspondiente. Puedes reclutarla por su coste en Oro.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Salta el combate con unidades neutrales en un campo cuya dificultad sea menor o igual al nivel de tu Héroe. Reclama el campo y visítalo gratis (sin ganar Experiencia).</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">8. Ojo de Águila (Eagle Eye)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Roba cartas del mazo de Hechizos hasta revelar un Hechizo Básico. Ponlo en tu mano y baraja el resto.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Roba cartas del mazo de Hechizos hasta revelar un Hechizo Experto. Ponlo en tu mano y baraja el resto.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">9. Magia de Tierra (Earth Magic)</td>
+                  <td className="px-3 py-2 border border-slate-800">Permanente: +1 Poder para hechizos de la Escuela de Tierra.</td>
+                  <td className="px-3 py-2 border border-slate-800">Al lanzar un Hechizo de la Escuela de Tierra, puedes descartar esta carta para ganar +3 Poder de forma instantánea.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">10. Finanzas (Estates)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Gana 3 de Oro.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Gana 6 de Oro.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">11. Magia de Fuego (Fire Magic)</td>
+                  <td className="px-3 py-2 border border-slate-800">Permanente: +1 Poder para hechizos de la Escuela de Fuego.</td>
+                  <td className="px-3 py-2 border border-slate-800">Al lanzar un Hechizo de la Escuela de Fuego, puedes descartar esta carta para ganar +3 Poder de forma instantánea.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">12. Primeros Auxilios (First Aid)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Elimina 1 daño/herida de una de tus unidades.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Al usar la Tienda de Primeros Auxilios, resuelve su efecto contra el mismo objetivo 3 veces.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">13. Inteligencia (Intelligence)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Durante el combate, justo antes de que cualquier unidad se active, puedes jugar una carta de Hechizo (aplica el límite de 1 por ronda).</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Durante el combate, antes de que cualquier unidad se active, juega una carta de Hechizo. Este hechizo no cuenta para tu límite por ronda.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">14. Interferencia (Interference)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: +1 Defensa. Se puede usar para reducir el daño de hechizos enemigos.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: +2 Defensa. Se puede usar para reducir el daño de hechizos enemigos.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">15. Liderazgo (Leadership)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Gana una ficha de Moral Positiva (+1).</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Roba 2 cartas, y gana una ficha de Moral Positiva.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">16. Aprendizaje (Learning)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega al subir de nivel. Avanza su nivel de experiencia en medio nivel (0.5) adicional gratis.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega al subir de nivel. Avanza la experiencia en 1 nivel completo adicional, luego retira esta carta de la partida.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">17. Logística (Logistics)</td>
+                  <td className="px-3 py-2 border border-slate-800">En curso: Al final de tu turno, mueve el Héroe a un campo vacío adyacente.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Tu Héroe gana +1 Punto de Movimiento (PM) de forma inmediata.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">18. Suerte (Luck)</td>
+                  <td className="px-3 py-2 border border-slate-800">En curso: Puedes volver a tirar el dado de Tesoro o el dado de Recursos una vez este turno.</td>
+                  <td className="px-3 py-2 border border-slate-800">En curso: Puedes volver a tirar cualquier dado una vez este turno.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">19. Misticismo (Mysticism)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega justo después de lanzar un hechizo. En lugar de descartarlo, devuélvelo a tu mano.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega justo después de lanzar un hechizo. Devuelve la carta de Hechizo y todas las demás cartas jugadas con ella a tu mano.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">20. Nigromancia (Necromancy)</td>
+                  <td className="px-3 py-2 border border-slate-800">Efecto de mapa: Juega tras ganar un combate. Refuerza una unidad Bronce o Plata por la mitad de su coste en Oro (redondeado hacia abajo).</td>
+                  <td className="px-3 py-2 border border-slate-800">Efecto de mapa: Juega tras ganar un combate. Refuerza cualquier unidad de tu elección por la mitad de su coste en Oro.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">21. Ofensiva / Ataque (Offense)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: +1 Ataque a tus unidades en esta ronda, luego roba 1 carta.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: +2 Ataque a tus unidades en esta ronda, luego roba 1 carta.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">22. Buscador de Caminos (Pathfinding)</td>
+                  <td className="px-3 py-2 border border-slate-800">Efecto de mapa: Permite mover a través de campos con Unidades Neutrales/Enemigos, pero si finaliza el movimiento en ellos, empieza el combate.</td>
+                  <td className="px-3 py-2 border border-slate-800">Efecto de mapa: Permite mover sobre fronteras amarillas y campos bloqueados, pero no puede terminar el movimiento en ellos.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">23. Resistencia (Resistance)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega tras un hechizo enemigo. Si se lanzó con 1 o menos de Poder, ignora su efecto.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega tras un hechizo enemigo. Ignora por completo el efecto de la carta de Hechizo enemiga.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">24. Erudito / Sabio (Scholar)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Elige 1 carta de tu pila de descartes y devuélvela a tu mano.</td>
+                  <td className="px-3 py-2 border border-slate-800">Efecto de mapa: Elimina hasta 2 cartas de Estadística. Toma hasta 2 cartas de Estadística Potenciadas y ponlas encima de tu pila de descarte, luego retira al Erudito.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">25. Exploración (Scouting)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega antes de una acción de Búsqueda, luego haz Búsqueda(3) en su lugar.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega antes de una acción de Búsqueda, luego haz Búsqueda(5) en su lugar.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">26. Hechicería (Sorcery)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: +1 Poder para hechizos en esta ronda, luego roba 1 carta.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: +2 Poder para hechizos en esta ronda, luego roba 1 carta.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">27. Tácticas (Tactics)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Al inicio del combate, puedes intercambiar la posición de cualesquiera 2 de tus unidades.</td>
+                  <td className="px-3 py-2 border border-slate-800">Activación: Durante el combate, puedes intercambiar la posición de cualesquiera 2 de tus unidades en tu turno.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">28. Magia de Agua (Water Magic)</td>
+                  <td className="px-3 py-2 border border-slate-800">Permanente: +1 Poder para hechizos de la Escuela de Agua.</td>
+                  <td className="px-3 py-2 border border-slate-800">Al lanzar un Hechizo de la Escuela de Agua, puedes descartar esta carta para ganar +3 Poder de forma instantánea.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">29. Sabiduría (Wisdom)</td>
+                  <td className="px-3 py-2 border border-slate-800">El coste de compra de hechizos en esta Ciudad se reduce en 2 de Oro. Al comprar de tu Gremio de Magos, realiza Búsqueda(3) en lugar de Búsqueda(2).</td>
+                  <td className="px-3 py-2 border border-slate-800">El coste de compra de hechizos en esta Ciudad se reduce en 2 de Oro. Al comprar de tu Gremio de Magos, realiza Búsqueda(4) en lugar de Búsqueda(2).</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </section>
       </div>

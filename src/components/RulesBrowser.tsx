@@ -25,7 +25,7 @@ const FACTION_KEYWORDS: Record<string, string[]> = {
   infierno: ['infierno', 'inferno', 'xeron', 'nymus', 'ayden', 'fiona', 'rashka', 'octavia', 'zydar', 'xyron', 'ash', 'diablos', 'sabuesos', 'cerberos', 'cerberi', 'efreet', 'gog', 'gogs', 'portales de fuego'],
   stronghold: ['bastión', 'bastion', 'stronghold', 'crag hack', 'shiva', 'gundula', 'terek', 'yog', 'dessa', 'tarnum', 'rocs', 'ogros', 'behemoth', 'behemoths', 'mercado de esclavos', 'orcos', 'goblins', 'fichas de apilamiento', 'stack tokens'],
   fortaleza: ['fortaleza', 'fortress', 'tazar', 'bron', 'andra', 'voy', 'gerwulf', 'wystan', 'adrienne', 'merist', 'tarnum', 'basiliscos', 'wyverns', 'jaulas de wyverns', 'hidras', 'gnolls', 'hombres lagarto'],
-  confluencia: ['confluencia', 'conflux', 'lacus', 'ignissa', 'ciele', 'grindan', 'monere', 'erdamon', 'pasis', 'luna', 'tarnum', 'elemental', 'elementales', 'altar de los elementos', 'duendes', 'fénix'],
+  confluencia: ['confluencia', 'conflux', 'lacus', 'ignissa', 'ciele', 'grindan', 'monere', 'erdamon', 'pasis', 'luna', 'tarnum', 'elemental', 'elementales', 'altar de los elementos', 'duendes', 'fénix', 'pergamino', 'pergaminos', 'scroll', 'scrolls'],
   cove: ['bahía', 'cove', 'jeremy', 'bidley', 'andria', 'anabel', 'cassiopeia', 'miriam', 'casmetra', 'zilare', 'astra', 'cañón', 'cannon', 'piratas', 'gremio de contrabandistas', 'corsarios', 'marítimas', 'savage seas']
 };
 
