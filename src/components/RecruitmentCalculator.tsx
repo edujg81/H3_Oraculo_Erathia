@@ -15,7 +15,7 @@ interface UnitStats {
 interface BoardGameUnit {
   level: number;
   nameBasic: string;
-  nameElite: string;
+  nameElite?: string;
   tier: 'bronce' | 'plata' | 'oro' | 'azul';
 }
 
@@ -25,30 +25,30 @@ interface FactionsUnitsData {
 
 const FACTION_UNITS: FactionsUnitsData = {
   castillo: [
-    { level: 1, nameBasic: 'Piqueros', nameElite: 'Alabarderos', tier: 'bronce' },
-    { level: 2, nameBasic: 'Arqueros', nameElite: 'Tiradores', tier: 'bronce' },
-    { level: 3, nameBasic: 'Grifos', nameElite: 'Grifos Reales', tier: 'bronce' },
-    { level: 4, nameBasic: 'Espadachines', nameElite: 'Cruzados', tier: 'plata' },
-    { level: 5, nameBasic: 'Monjes', nameElite: 'Fanáticos', tier: 'plata' },
-    { level: 6, nameBasic: 'Caballeros', nameElite: 'Campeones', tier: 'oro' },
-    { level: 7, nameBasic: 'Ángeles', nameElite: 'Arcángeles', tier: 'oro' }
+    { level: 1, nameBasic: 'Alabarderos', nameElite: 'Alabarderos', tier: 'bronce' },
+    { level: 2, nameBasic: 'Arqueros', nameElite: 'Arqueros', tier: 'bronce' },
+    { level: 3, nameBasic: 'Grifos', nameElite: 'Grifos', tier: 'bronce' },
+    { level: 4, nameBasic: 'Cruzados', nameElite: 'Cruzados', tier: 'plata' },
+    { level: 5, nameBasic: 'Fanáticos', nameElite: 'Fanáticos', tier: 'plata' },
+    { level: 6, nameBasic: 'Campeones', nameElite: 'Campeones', tier: 'oro' },
+    { level: 7, nameBasic: 'Arcángeles', nameElite: 'Arcángeles', tier: 'oro' }
   ],
   necropolis: [
-    { level: 1, nameBasic: 'Esqueletos', nameElite: 'Esqueletos con Escudo', tier: 'bronce' },
-    { level: 2, nameBasic: 'Zombis', nameElite: 'Zombis Voraces', tier: 'bronce' },
-    { level: 3, nameBasic: 'Fantasmas', nameElite: 'Espectros', tier: 'bronce' },
-    { level: 4, nameBasic: 'Vampiros', nameElite: 'Señores Vampiros', tier: 'plata' },
-    { level: 5, nameBasic: 'Liches', nameElite: 'Liches de Poder', tier: 'plata' },
-    { level: 6, nameBasic: 'Caballeros del Terror', nameElite: 'Caballeros de la Muerte', tier: 'oro' },
-    { level: 7, nameBasic: 'Dragones de Hueso', nameElite: 'Dragones Fantasma', tier: 'oro' }
+    { level: 1, nameBasic: 'Esqueletos', nameElite: 'Esqueletos', tier: 'bronce' },
+    { level: 2, nameBasic: 'Zombis', nameElite: 'Zombis', tier: 'bronce' },
+    { level: 3, nameBasic: 'Espectros', nameElite: 'Espectros', tier: 'bronce' },
+    { level: 4, nameBasic: 'Vampiros', nameElite: 'Vampiros', tier: 'plata' },
+    { level: 5, nameBasic: 'Liches', nameElite: 'Liches', tier: 'plata' },
+    { level: 6, nameBasic: 'Caballeros del Terror', nameElite: 'Caballeros del Terror', tier: 'oro' },
+    { level: 7, nameBasic: 'Dragones Fantasma', nameElite: 'Dragones Fantasma', tier: 'oro' }
   ],
   mazmorra: [
-    { level: 1, nameBasic: 'Trogloditas', nameElite: 'Trogloditas Infernales', tier: 'bronce' },
-    { level: 2, nameBasic: 'Arpías', nameElite: 'Arpías Brujas', tier: 'bronce' },
-    { level: 3, nameBasic: 'Contempladores', nameElite: 'Ojos Maléficos', tier: 'bronce' },
-    { level: 4, nameBasic: 'Medusas', nameElite: 'Reinas Medusa', tier: 'plata' },
-    { level: 5, nameBasic: 'Minotauros', nameElite: 'Reyes Minotauro', tier: 'plata' },
-    { level: 6, nameBasic: 'Mantícoras', nameElite: 'Quimeras', tier: 'oro' },
+    { level: 1, nameBasic: 'Trogloditas', nameElite: 'Trogloditas', tier: 'bronce' },
+    { level: 2, nameBasic: 'Arpías', nameElite: 'Arpías', tier: 'bronce' },
+    { level: 3, nameBasic: 'Ojos Maléficos', nameElite: 'Ojos Maléficos', tier: 'bronce' },
+    { level: 4, nameBasic: 'Medusas', nameElite: 'Medusas', tier: 'plata' },
+    { level: 5, nameBasic: 'Minotauros', nameElite: 'Minotauros', tier: 'plata' },
+    { level: 6, nameBasic: 'Mantícoras', nameElite: 'Mantícoras', tier: 'oro' },
     { level: 6, nameBasic: 'Mantícoras (Alternativa)', nameElite: 'Mantícoras (Alternativa)', tier: 'oro' },
     { level: 7, nameBasic: 'Dragones Negros', nameElite: 'Dragones Negros', tier: 'oro' }
   ],
@@ -116,105 +116,127 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 7, nameBasic: 'Leviatanes', nameElite: 'Leviatanes Antiguos', tier: 'oro' }
   ],
   neutrales: [
-    { level: 1, nameBasic: 'Pícaros', nameElite: 'Pícaros Emboscadores', tier: 'bronce' },
-    { level: 2, nameBasic: 'Nómadas', nameElite: 'Nómadas del Desierto', tier: 'bronce' },
-    { level: 3, nameBasic: 'Jabalíes', nameElite: 'Colmillos de Hierro', tier: 'bronce' },
-    { level: 4, nameBasic: 'Golems de Oro', nameElite: 'Golems de Diamante', tier: 'plata' },
-    { level: 5, nameBasic: 'Licántropos', nameElite: 'Licántropos Alfas', tier: 'plata' },
-    { level: 6, nameBasic: 'Enanos de Hierro', nameElite: 'Enanos de Hierro', tier: 'oro' },
-    { level: 6, nameBasic: 'Mantícora (Neutral)', nameElite: 'Mantícora (Neutral)', tier: 'oro' },
-    { level: 8, nameBasic: 'Dragón de Hada', nameElite: 'Dragón de Hada Antiguo', tier: 'azul' },
-    { level: 8, nameBasic: 'Dragón de Óxido', nameElite: 'Dragón de Óxido Voraz', tier: 'azul' },
-    { level: 8, nameBasic: 'Dragón de Cristal', nameElite: 'Dragón de Cristal Puro', tier: 'azul' },
-    { level: 8, nameBasic: 'Dragón Azul', nameElite: 'Dragón Azul Legendario', tier: 'azul' },
-    { level: 7, nameBasic: 'Dragón Negro (Neutral)', nameElite: 'Dragón Negro (Neutral)', tier: 'azul' },
-    { level: 7, nameBasic: 'Dragón Negro (Utopía)', nameElite: 'Dragón Negro (Utopía)', tier: 'azul' }
+    { level: 1, nameBasic: 'Pícaros', tier: 'bronce' },
+    { level: 1, nameBasic: 'Alabarderos (Neutral)', tier: 'bronce' },
+    { level: 1, nameBasic: 'Esqueletos (Neutral)', tier: 'bronce' },
+    { level: 2, nameBasic: 'Nómadas', tier: 'bronce' },
+    { level: 2, nameBasic: 'Arqueros (Neutral)', tier: 'bronce' },
+    { level: 2, nameBasic: 'Zombis (Neutral)', tier: 'bronce' },
+    { level: 3, nameBasic: 'Jabalíes', tier: 'bronce' },
+    { level: 3, nameBasic: 'Grifos (Neutral)', tier: 'bronce' },
+    { level: 3, nameBasic: 'Espectros (Neutral)', tier: 'bronce' },
+    { level: 4, nameBasic: 'Golems de Oro', tier: 'plata' },
+    { level: 4, nameBasic: 'Cruzados (Neutral)', tier: 'plata' },
+    { level: 4, nameBasic: 'Vampiros (Neutral)', tier: 'plata' },
+    { level: 5, nameBasic: 'Licántropos', tier: 'plata' },
+    { level: 5, nameBasic: 'Fanáticos (Neutral)', tier: 'plata' },
+    { level: 5, nameBasic: 'Liches (Neutral)', tier: 'plata' },
+    { level: 6, nameBasic: 'Enanos de Hierro', tier: 'oro' },
+    { level: 6, nameBasic: 'Campeones (Neutral)', tier: 'oro' },
+    { level: 6, nameBasic: 'Caballeros del Terror (Neutral)', tier: 'oro' },
+    { level: 6, nameBasic: 'Mantícora (Neutral)', tier: 'oro' },
+    { level: 7, nameBasic: 'Arcángeles (Neutral)', tier: 'oro' },
+    { level: 6, nameBasic: 'Dragones Fantasma (Neutral)', tier: 'oro' },
+    { level: 7, nameBasic: 'Dragones Negros (Neutral)', tier: 'oro' },
+    { level: 8, nameBasic: 'Dragón de Hada', tier: 'azul' },
+    { level: 8, nameBasic: 'Dragón de Óxido', tier: 'azul' },
+    { level: 8, nameBasic: 'Dragón de Cristal', tier: 'azul' },
+    { level: 8, nameBasic: 'Dragón Azul', tier: 'azul' }
+  ],
+  bancos: [
+    { level: 1, nameBasic: 'Esqueletos (Cripta)', tier: 'bronce' },
+    { level: 2, nameBasic: 'Zombis (Cripta)', tier: 'bronce' },
+    { level: 3, nameBasic: 'Grifos (Conservatorio)', tier: 'bronce' },
+    { level: 3, nameBasic: 'Espectros (Cripta)', tier: 'bronce' },
+    { level: 3, nameBasic: 'Espectros (Naufragio)', tier: 'bronce' },
+    { level: 4, nameBasic: 'Vampiros (Cripta)', tier: 'plata' },
+    { level: 7, nameBasic: 'Dragón Negro (Utopía)', tier: 'oro' }
   ]
 };
 
 const BASE_COSTS = {
   bronce: {
-    basic: { gold: 2, materials: 0, valuable: 0 },
-    elite: { gold: 3, materials: 0, valuable: 0 }
+    basic: { gold: 0, materials: 0, valuable: 0 },
+    elite: { gold: 0, materials: 0, valuable: 0 }
   },
   plata: {
-    basic: { gold: 4, materials: 0, valuable: 0 },
-    elite: { gold: 5, materials: 1, valuable: 0 }
+    basic: { gold: 0, materials: 0, valuable: 0 },
+    elite: { gold: 0, materials: 0, valuable: 0 }
   },
   oro: {
-    basic: { gold: 7, materials: 0, valuable: 1 },
-    elite: { gold: 9, materials: 0, valuable: 2 }
+    basic: { gold: 0, materials: 0, valuable: 0 },
+    elite: { gold: 0, materials: 0, valuable: 0 }
   },
   azul: {
-    basic: { gold: 12, materials: 0, valuable: 2 },
-    elite: { gold: 15, materials: 0, valuable: 3 }
+    basic: { gold: 0, materials: 0, valuable: 0 },
+    elite: { gold: 0, materials: 0, valuable: 0 }
   }
 };
 
 const UNIT_DETAILS: {
   [nameBasic: string]: {
     basic: UnitStats;
-    elite: UnitStats;
+    elite?: UnitStats;
   }
 } = {
   // Castillo
-  "Piqueros": {
-    basic: { atk: 1, def: 1, hp: 1, ini: 3, type: 'Melee', abilities: ["Carga: +1 de Ataque al avanzar 2+ hexágonos."] },
-    elite: { atk: 2, def: 1, hp: 1, ini: 4, type: 'Melee', abilities: ["Carga: +1 de Ataque.", "Sin Represalia: Las unidades enemigas de bronce no contraatacan."] }
+  "Alabarderos": {
+    basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'Melee', abilities: [], customCost: { gold: 2, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 1, hp: 2, ini: 5, type: 'Melee', abilities: ["Pasiva: Cuando sea objetivo de cualquier ataque, puedes descartar 1 carta e ignorar el resultado de la tirada del dado de ataque."], customCost: { gold: 3, materials: 0, valuable: 0 } }
   },
   "Arqueros": {
-    basic: { atk: 1, def: 0, hp: 1, ini: 5, type: 'A distancia', abilities: ["A distancia: Penalización cuerpo a cuerpo si hay enemigos adyacentes."] },
-    elite: { atk: 2, def: 0, hp: 1, ini: 6, type: 'A distancia', abilities: ["A distancia.", "Doble Disparo: Realiza dos ataques a distancia por activación contra el mismo o distintos objetivos."] }
+    basic: { atk: 2, def: 0, hp: 2, ini: 4, type: 'A distancia', abilities: [], customCost: { gold: 3, materials: 0, valuable: 0 } },
+    elite: { atk: 2, def: 0, hp: 2, ini: 6, type: 'A distancia', abilities: ["Al Atacar: Si el objetivo no está adyacente, ataca a ese objetivo de nuevo."], customCost: { gold: 5, materials: 0, valuable: 0 } }
   },
   "Grifos": {
-    basic: { atk: 1, def: 1, hp: 2, ini: 4, type: 'Volador', abilities: ["Volador.", "Contraataque Infinito: Puede contraatacar cualquier cantidad de veces por ronda."] },
-    elite: { atk: 2, def: 1, hp: 2, ini: 5, type: 'Volador', abilities: ["Volador.", "Contraataque Infinito."] }
+    basic: { atk: 2, def: 0, hp: 4, ini: 6, type: 'Volador', abilities: ["Contraataque: Esta unidad puede realizar un número ilimitado de contraataques."], customCost: { gold: 4, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 0, hp: 4, ini: 9, type: 'Volador', abilities: ["Contraataque: Esta unidad puede realizar un número ilimitado de contraataques."], customCost: { gold: 6, materials: 0, valuable: 0 } }
   },
-  "Espadachines": {
-    basic: { atk: 2, def: 2, hp: 2, ini: 3, type: 'Melee', abilities: ["Escudo: Reduce el daño recibido en 1."] },
-    elite: { atk: 3, def: 2, hp: 2, ini: 4, type: 'Melee', abilities: ["Escudo: Reduce el daño recibido en 1.", "Doble Golpe: Ataca dos veces en combate cuerpo a cuerpo."] }
+  "Cruzados": {
+    basic: { atk: 3, def: 2, hp: 4, ini: 5, type: 'Melee', abilities: [], customCost: { gold: 6, materials: 0, valuable: 0 } },
+    elite: { atk: 4, def: 2, hp: 4, ini: 6, type: 'Melee', abilities: ["Al Atacar: Puedes volver a tirar cada '0' en el dado de Ataque de esta unidad."], customCost: { gold: 10, materials: 0, valuable: 0 } }
   },
-  "Monjes": {
-    basic: { atk: 2, def: 1, hp: 2, ini: 5, type: 'A distancia', abilities: ["A distancia."] },
-    elite: { atk: 3, def: 1, hp: 2, ini: 6, type: 'A distancia', abilities: ["A distancia.", "Sin Penalización Melee: No sufre penalizaciones en combates cuerpo a cuerpo."] }
+  "Fanáticos": {
+    basic: { atk: 3, def: 1, hp: 5, ini: 5, type: 'A distancia', abilities: [], customCost: { gold: 8, materials: 0, valuable: 0 } },
+    elite: { atk: 4, def: 1, hp: 5, ini: 7, type: 'A distancia', abilities: ["Pasiva: No sufre penalizaciones en combates cuerpo a cuerpo."], customCost: { gold: 12, materials: 0, valuable: 0 } }
   },
-  "Caballeros": {
-    basic: { atk: 3, def: 2, hp: 3, ini: 4, type: 'Melee', abilities: ["Carga Temible: +2 de Ataque al avanzar 2+ hexágonos."] },
-    elite: { atk: 4, def: 2, hp: 3, ini: 5, type: 'Melee', abilities: ["Carga Excepcional: +3 de Ataque.", "Caballería: +1 Punto de Iniciativa."] }
+  "Campeones": {
+    basic: { atk: 5, def: 2, hp: 7, ini: 7, type: 'Melee', abilities: ["Mapa: Si tu héroe está en una casilla con establos, el coste de refuerzo de esta unidad se reduce en 6 Oros."], customCost: { gold: 12, materials: 0, valuable: 0 } },
+    elite: { atk: 6, def: 2, hp: 7, ini: 9, type: 'Melee', abilities: ["Al Atacar: Si el movimiento de esta unidad termina en un espacio distinto al de inicio, puedes volver a tirar un dado de Ataque."], customCost: { gold: 20, materials: 0, valuable: 1 } }
   },
-  "Ángeles": {
-    basic: { atk: 4, def: 3, hp: 4, ini: 6, type: 'Volador', abilities: ["Volador.", "Slayer: +1 de Daño contra no-muertos y demonios."] },
-    elite: { atk: 5, def: 4, hp: 4, ini: 7, type: 'Volador', abilities: ["Volador.", "Resurrección: Revive una unidad aliada caída de Bronce o Plata por completo (una vez por combate)."] }
+  "Arcángeles": {
+    basic: { atk: 6, def: 3, hp: 8, ini: 12, type: 'Volador', abilities: ["Pasiva: Cuando comience el combate, roba 1 carta."], customCost: { gold: 20, materials: 0, valuable: 1 } },
+    elite: { atk: 7, def: 3, hp: 10, ini: 18, type: 'Volador', abilities: ["Pasiva: Una vez por combate. Cancela un ataque que reduzca la vida de otra unidad a 0."], customCost: { gold: 30, materials: 0, valuable: 2 } }
   },
 
   // Necrópolis
   "Esqueletos": {
-    basic: { atk: 1, def: 0, hp: 1, ini: 3, type: 'Melee', abilities: ["No-muerto: Inmune a la baja moral y efectos de mente."] },
-    elite: { atk: 1, def: 1, hp: 1, ini: 4, type: 'Melee', abilities: ["No-muerto.", "Escudo Óseo: Reduce el daño recibido en 1."] }
+    basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'Melee', abilities: ["No-muerto: Inmune a los efectos de moral."], customCost: { gold: 2, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 1, hp: 2, ini: 5, type: 'Melee', abilities: ["No-muerto: Inmune a los efectos de moral."], customCost: { gold: 3, materials: 0, valuable: 0 } }
   },
   "Zombis": {
-    basic: { atk: 1, def: 1, hp: 1, ini: 2, type: 'Melee', abilities: ["No-muerto.", "Enfermedad: El objetivo golpeado reduce su ataque en 1 en su próximo turno."] },
-    elite: { atk: 2, def: 1, hp: 1, ini: 3, type: 'Melee', abilities: ["No-muerto.", "Enfermedad.", "Regeneración: Se cura de forma pasiva 1 herida al inicio de su activación."] }
+    basic: { atk: 2, def: 1, hp: 3, ini: 3, type: 'Melee', abilities: ["No-muerto: Inmune a los efectos de moral.", "Pasiva: Si el atacante resuelve un '+1' en su dado de Ataque, gana +1 en Defensa."], customCost: { gold: 3, materials: 0, valuable: 0 } },
+    elite: { atk: 2, def: 1, hp: 3, ini: 4, type: 'Melee', abilities: ["No-muerto: Inmune a los efectos de moral.", "Pasiva: Si el atacante resuelve un '0' o '+1' en su dado de Ataque, gana +1 en Defensa."], customCost: { gold: 4, materials: 0, valuable: 0 } }
   },
-  "Fantasmas": {
-    basic: { atk: 1, def: 1, hp: 1, ini: 4, type: 'Volador', abilities: ["No-muerto.", "Volador.", "Espantoso: Reduce la iniciativa de enemigos adyacentes de bronce en 1."] },
-    elite: { atk: 2, def: 1, hp: 2, ini: 5, type: 'Volador', abilities: ["No-muerto.", "Volador.", "Espantoso.", "Drena Maná: Al herir a un enemigo, drena 1 punto de Maná de su héroe."] }
+  "Espectros": {
+    basic: { atk: 3, def: 0, hp: 3, ini: 5, type: 'Volador', abilities: ["No-muerto: Inmune a los efectos de moral.", "Activación: Retira hasta 1 Herida de esta unidad."], customCost: { gold: 4, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 0, hp: 5, ini: 7, type: 'Volador', abilities: ["No-muerto: Inmune a los efectos de moral.", "Activación: Retira hasta 1 Herida de esta unidad, luego descarta 1 carta al azar de la mano del enemigo."], customCost: { gold: 6, materials: 0, valuable: 0 } }
   },
   "Vampiros": {
-    basic: { atk: 2, def: 1, hp: 2, ini: 5, type: 'Volador', abilities: ["No-muerto.", "Volador.", "Sin Represalia: Ataca sin provocar contraataques."] },
-    elite: { atk: 3, def: 2, hp: 2, ini: 6, type: 'Volador', abilities: ["No-muerto.", "Volador.", "Sin Represalia.", "Robo de Vida: Cura 1 herida del Vampiro por cada ataque con éxito."] }
+    basic: { atk: 4, def: 1, hp: 4, ini: 6, type: 'Volador', abilities: ["No-muerto: Inmune a los efectos de moral.", "Al Atacar: Ignora los contraataques."], customCost: { gold: 8, materials: 0, valuable: 0 } },
+    elite: { atk: 5, def: 1, hp: 4, ini: 9, type: 'Volador', abilities: ["No-muerto: Inmune a los efectos de moral.", "Al Atacar: Ignora los contraataques. Luego elimina hasta 2 Heridas de esta unidad."], customCost: { gold: 12, materials: 0, valuable: 0 } },
   },
   "Liches": {
-    basic: { atk: 3, def: 1, hp: 2, ini: 4, type: 'A distancia', abilities: ["No-muerto.", "A distancia.", "Nube de Muerte: El ataque inflige daño colateral en cruz."] },
-    elite: { atk: 4, def: 2, hp: 2, ini: 5, type: 'A distancia', abilities: ["No-muerto.", "A distancia.", "Nube de Muerte.", "Sin Penalización Melee: No sufre penalizaciones cuerpo a cuerpo."] }
+    basic: { atk: 3, def: 1, hp: 5, ini: 6, type: 'A distancia', abilities: ["No-muerto: Inmune a los efectos de moral."], customCost: { gold: 8, materials: 0, valuable: 0 } },
+    elite: { atk: 4, def: 1, hp: 5, ini: 7, type: 'A distancia', abilities: ["No-muerto: Inmune a los efectos de moral.", "Al Atacar: Elige una unidad adyacente al objetivo y atácala con 2 de Ataque."], customCost: { gold: 14, materials: 0, valuable: 0 } }
   },
   "Caballeros del Terror": {
-    basic: { atk: 3, def: 2, hp: 3, ini: 4, type: 'Melee', abilities: ["No-muerto.", "Maldición: Al golpear, obliga al objetivo a infligir daño mínimo en su próximo ataque."] },
-    elite: { atk: 4, def: 3, hp: 3, ini: 5, type: 'Melee', abilities: ["No-muerto.", "Maldición.", "Golpe Mortal: 20% de probabilidad de infligir el doble de daño físico."] }
+    basic: { atk: 5, def: 2, hp: 7, ini: 7, type: 'Melee', abilities: ["No-muerto: Inmune a los efectos de moral.", "Al Atacar: En la represalia a este ataque, el enemigo tira 2 dados de Ataque y resuelve el más bajo."], customCost: { gold: 12, materials: 0, valuable: 0 } },
+    elite: { atk: 6, def: 2, hp: 7, ini: 9, type: 'Melee', abilities: ["No-muerto: Inmune a los efectos de moral.", "Al Atacar: Con resultado de '0' o '+1' en el dado de Ataque, aumenta el valor total del ataque en '+1'."], customCost: { gold: 20, materials: 0, valuable: 1 } }
   },
-  "Dragones de Hueso": {
-    basic: { atk: 4, def: 2, hp: 4, ini: 5, type: 'Volador', abilities: ["No-muerto.", "Volador.", "Dread: -1 a la moral de todas las unidades enemigas."] },
-    elite: { atk: 5, def: 3, hp: 4, ini: 6, type: 'Volador', abilities: ["No-muerto.", "Volador.", "Dread.", "Envejecimiento: Reduce permanentemente la HP máxima del objetivo en 1."] }
+  "Dragones Fantasma": {
+    basic: { atk: 6, def: 3, hp: 8, ini: 9, type: 'Volador', abilities: ["No-muerto: Inmune a los efectos de moral.", "Activación: Descarta una ficha de Moral Positiva del enemigo."], customCost: { gold: 19, materials: 0, valuable: 1 } },
+    elite: { atk: 7, def: 3, hp: 9, ini: 14, type: 'Volador', abilities: ["No-muerto: Inmune a los efectos de moral.", "Activación: Descarta una ficha de Moral Positiva del enemigo.", "Al Atacar: Suma +1 al resultado de tu dado de Ataque."], customCost: { gold: 32, materials: 0, valuable: 2 } }
   },
 
   // Mazmorra
@@ -231,7 +253,7 @@ const UNIT_DETAILS: {
     elite: { atk: 2, def: 1, hp: 2, ini: 5, type: 'A distancia', abilities: ["A distancia.", "Sin Penalización Melee."] }
   },
   "Medusas": {
-    basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'A distancia', abilities: ["A distancia.", "Mirada de Piedra: 20% de probabilidad de petrificar al objetivo."] },
+    basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'A distancia', abilities: ["A distancia.", "Mirada de Piedra: En un resultado de +1 en el dado de ataque, petrifica al objetivo."] },
     elite: { atk: 3, def: 2, hp: 2, ini: 5, type: 'A distancia', abilities: ["A distancia.", "Mirada de Piedra.", "Sin Penalización Melee."] }
   },
   "Minotauros": {
@@ -257,8 +279,8 @@ const UNIT_DETAILS: {
     elite: { atk: 2, def: 1, hp: 1, ini: 5, type: 'Melee', abilities: ["Veloz.", "Carga de Centauro: +1 de Ataque al avanzar."] }
   },
   "Enanos": {
-    basic: { atk: 1, def: 2, hp: 1, ini: 3, type: 'Melee', abilities: ["Resistencia: 20% de probabilidad de ignorar hechizos dañinos."] },
-    elite: { atk: 2, def: 2, hp: 2, ini: 4, type: 'Melee', abilities: ["Resistencia mejorada: 40% de probabilidad de ignorar hechizos dañinos."] }
+    basic: { atk: 1, def: 2, hp: 1, ini: 3, type: 'Melee', abilities: ["Resistencia: Al recibir un hechizo dañino, lanza el dado de combate; con +1 lo ignora."] },
+    elite: { atk: 2, def: 2, hp: 2, ini: 4, type: 'Melee', abilities: ["Resistencia mejorada: Al recibir un hechizo dañino, lanza el dado de combate; con 0 o +1 lo ignora."] }
   },
   "Elfos": {
     basic: { atk: 1, def: 0, hp: 1, ini: 4, type: 'A distancia', abilities: ["A distancia."] },
@@ -273,7 +295,7 @@ const UNIT_DETAILS: {
     elite: { atk: 3, def: 3, hp: 2, ini: 4, type: 'Melee', abilities: ["Enredar.", "Defensa Arraigada: +1 Defensa al defender."] }
   },
   "Unicornios": {
-    basic: { atk: 3, def: 2, hp: 3, ini: 4, type: 'Melee', abilities: ["Mirada Cegadora: 20% de probabilidad de cegar al objetivo herido."] },
+    basic: { atk: 3, def: 2, hp: 3, ini: 4, type: 'Melee', abilities: ["Mirada Cegadora: En un resultado de +1 en el dado de ataque, ciega al objetivo herido."] },
     elite: { atk: 4, def: 2, hp: 3, ini: 5, type: 'Melee', abilities: ["Mirada Cegadora.", "Aura de Resistencia: Aliados adyacentes ganan +1 de Defensa."] }
   },
   "Dragones Verdes": {
@@ -360,14 +382,14 @@ const UNIT_DETAILS: {
   },
   "Rocs": {
     basic: { atk: 2, def: 1, hp: 2, ini: 5, type: 'Volador', abilities: ["Volador."] },
-    elite: { atk: 3, def: 2, hp: 2, ini: 6, type: 'Volador', abilities: ["Volador.", "Golpe de Trueno: 20% de probabilidad de paralizar al enemigo con un rayo."] }
+    elite: { atk: 3, def: 2, hp: 2, ini: 6, type: 'Volador', abilities: ["Volador.", "Golpe de Trueno: En un resultado de +1 en el dado de ataque, paraliza al enemigo con un rayo."] }
   },
   "Cíclopes": {
     basic: { atk: 3, def: 2, hp: 3, ini: 4, type: 'A distancia', abilities: ["A distancia.", "Lanzar Rocas: Destruye un muro o puerta de asedio enemiga una vez por combate."] },
     elite: { atk: 4, def: 2, hp: 3, ini: 5, type: 'A distancia', abilities: ["A distancia.", "Lanzar Rocas.", "Doble Daño contra estructuras de asedio."] }
   },
   "Behemoths": {
-    basic: { atk: 4, def: 2, hp: 4, ini: 5, type: 'Melee', abilities: ["Desgarrar: Reduce la defensa del objetivo en un 50% al atacar."] },
+    basic: { atk: 4, def: 2, hp: 4, ini: 5, type: 'Melee', abilities: ["Desgarrar: Al atacar, reduce la defensa del enemigo en 1 (mínimo 0)."] },
     elite: { atk: 5, def: 2, hp: 4, ini: 6, type: 'Melee', abilities: ["Desgarrar Ancestral: Ignora por completo la defensa del enemigo."] }
   },
 
@@ -385,11 +407,11 @@ const UNIT_DETAILS: {
     elite: { atk: 2, def: 1, hp: 1, ini: 5, type: 'Volador', abilities: ["Volador.", "Disipar.", "Debilidad: Reduce el ataque enemigo en 1 de forma permanente."] }
   },
   "Basiliscos": {
-    basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'Melee', abilities: ["Mirada Petrificante: 20% de probabilidad de petrificar al objetivo."] },
+    basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'Melee', abilities: ["Mirada Petrificante: En un resultado de +1 en el dado de ataque, petrifica al objetivo."] },
     elite: { atk: 3, def: 2, hp: 2, ini: 5, type: 'Melee', abilities: ["Mirada Petrificante.", "Piel de Piedra Escamosa: +1 Defensa."] }
   },
   "Gorgonas": {
-    basic: { atk: 2, def: 2, hp: 2, ini: 4, type: 'Melee', abilities: ["Mirada de la Muerte: Probabilidad de derrotar a un soldado extra de bronce/plata."] },
+    basic: { atk: 2, def: 2, hp: 2, ini: 4, type: 'Melee', abilities: ["Mirada de la Muerte: En un resultado de +1 en el dado de ataque, derrota a un soldado enemigo adicional de bronce/plata."] },
     elite: { atk: 3, def: 2, hp: 3, ini: 5, type: 'Melee', abilities: ["Mirada de la Muerte.", "Cuerpo de Hierro: +1 HP."] }
   },
   "Wyverns": {
@@ -427,7 +449,7 @@ const UNIT_DETAILS: {
     elite: { atk: 4, def: 2, hp: 3, ini: 6, type: 'Melee', abilities: ["Ataque en Abanico.", "Sin Represalia.", "Inmune a toda magia de nivel 1."] }
   },
   "Fénix": {
-    basic: { atk: 4, def: 3, hp: 4, ini: 6, type: 'Volador', abilities: ["Volador.", "Aliento Flamígero.", "Renacimiento: 50% de probabilidad de revivir con 1 HP una vez por combate al morir."] },
+    basic: { atk: 4, def: 3, hp: 4, ini: 6, type: 'Volador', abilities: ["Volador.", "Aliento Flamígero.", "Renacimiento: Al morir, lanza el dado de combate; con un resultado de 0 o +1, revive con 1 HP (una vez por combate)."] },
     elite: { atk: 5, def: 4, hp: 4, ini: 7, type: 'Volador', abilities: ["Volador.", "Aliento Flamígero.", "Renacimiento Divino: Revive automáticamente al 100% de HP una vez por combate."] }
   },
 
@@ -463,57 +485,106 @@ const UNIT_DETAILS: {
 
   // Neutrales
   "Pícaros": {
-    basic: { atk: 1, def: 0, hp: 1, ini: 4, type: 'Melee', abilities: ["Sin Represalia."] },
-    elite: { atk: 1, def: 1, hp: 1, ini: 5, type: 'Melee', abilities: ["Sin Represalia.", "Robo de Recursos: Al derrotar un enemigo, otorga 1 recurso común aleatorio."] }
+    basic: { atk: 1, def: 0, hp: 1, ini: 4, type: 'Melee', abilities: ["Sin Represalia."] }
+  },
+  "Alabarderos (Neutral)": {
+    basic: { atk: 2, def: 0, hp: 4, ini: 4, type: 'Melee', abilities: ["Pasiva: Trata a las unidades aliadas adyacentes como si tuviesen una ficha de Defensa."], customCost: { gold: 4, materials: 0, valuable: 0 } }
+  },
+  "Esqueletos (Neutral)": {
+    basic: { atk: 2, def: 0, hp: 3, ini: 4, type: 'Melee', abilities: ["No-muerto: Inmune a los efectos de moral.", "Pasiva: Cuando son derrotados, si controlas un Héroe Nigromante, inmediatamente Refuerzas 1 de tus unidades Bronce."], customCost: { gold: 3, materials: 0, valuable: 0 } }
   },
   "Nómadas": {
-    basic: { atk: 1, def: 1, hp: 1, ini: 4, type: 'Melee', abilities: ["Veloz: Ignora ciertas restricciones."] },
-    elite: { atk: 2, def: 1, hp: 1, ini: 5, type: 'Melee', abilities: ["Veloz.", "Buscador de Caminos: Ignora penalizaciones de movimiento por desierto."] }
+    basic: { atk: 1, def: 1, hp: 1, ini: 4, type: 'Melee', abilities: ["Veloz: Ignora ciertas restricciones."] }
+  },
+  "Arqueros (Neutral)": {
+    basic: { atk: 2, def: 0, hp: 3, ini: 5, type: 'A distancia', abilities: ["Al Atacar: Si el objetivo no está adyacente, ataca a ese objetivo de nuevo."], customCost: { gold: 7, materials: 0, valuable: 0 } }
+  },
+  "Zombis (Neutral)": {
+    basic: { atk: 2, def: 0, hp: 4, ini: 3, type: 'Melee', abilities: ["No-muerto: Inmune a los efectos de moral.", "Pasiva: Si el atacante resuelve un '0' o '+1' en su dado de Ataque, gana +1 en Defensa."], customCost: { gold: 5, materials: 0, valuable: 0 } }
   },
   "Jabalíes": {
-    basic: { atk: 1, def: 1, hp: 1, ini: 3, type: 'Melee', abilities: ["Carga: +1 de Ataque tras avanzar."] },
-    elite: { atk: 2, def: 1, hp: 1, ini: 4, type: 'Melee', abilities: ["Carga de Jabalí: +2 de Ataque tras avanzar."] }
+    basic: { atk: 1, def: 1, hp: 1, ini: 3, type: 'Melee', abilities: ["Carga: +1 de Ataque tras avanzar."] }
+  },
+  "Grifos (Neutral)": {
+    basic: { atk: 3, def: 0, hp: 4, ini: 8, type: 'Volador', abilities: ["Contraataque: Esta unidad puede realizar un número ilimitado de contraataques."], customCost: { gold: 7, materials: 0, valuable: 0 } }
+  },
+  "Espectros (Neutral)": {
+    basic: { atk: 2, def: 0, hp: 4, ini: 7, type: 'Volador', abilities: ["No-muerto: Inmune a los efectos de moral.", "Activación: Retira hasta 2 Heridas de esta unidad."], customCost: { gold: 7, materials: 0, valuable: 0 } }
   },
   "Golems de Oro": {
-    basic: { atk: 2, def: 2, hp: 2, ini: 3, type: 'Melee', abilities: ["Constructo.", "Resistencia de Oro: Reduce el daño de hechizos enemigos en 2."] },
-    elite: { atk: 3, def: 2, hp: 2, ini: 4, type: 'Melee', abilities: ["Constructo.", "Resistencia de Diamante: Inmune a hechizos dañinos de nivel 1-3."] }
+    basic: { atk: 2, def: 2, hp: 2, ini: 3, type: 'Melee', abilities: ["Constructo.", "Resistencia de Oro: Reduce el daño de hechizos enemigos en 2."] }
+  },
+  "Cruzados (Neutral)": {
+    basic: { atk: 3, def: 2, hp: 4, ini: 5, type: 'Melee', abilities: ["Pasiva: Durante cualquier ataque, tira 2 dados de Ataque y escoge el resultado más alto."], customCost: { gold: 11, materials: 0, valuable: 0 } }
+  },
+  "Vampiros (Neutral)": {
+    basic: { atk: 3, def: 0, hp: 5, ini: 8, type: 'Volador', abilities: ["No-muerto: Inmune a los efectos de moral.", "Al Atacar: Ignora los contraataques. Luego elimina hasta 2 Heridas de esta unidad."], customCost: { gold: 9, materials: 0, valuable: 0 } }
   },
   "Licántropos": {
-    basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'Melee', abilities: ["Infección: Enemigo herido se convierte en Licántropo si es derrotado."] },
-    elite: { atk: 3, def: 1, hp: 2, ini: 5, type: 'Melee', abilities: ["Infección.", "Regeneración Lunar: Se cura de forma pasiva 1 herida al activarse."] }
+    basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'Melee', abilities: ["Infección: Enemigo herido se convierte en Licántropo si es derrotado."] }
+  },
+  "Fanáticos (Neutral)": {
+    basic: { atk: 3, def: 0, hp: 5, ini: 5, type: 'A distancia', abilities: ["Pasiva: No sufre penalizaciones en combates cuerpo a cuerpo."], customCost: { gold: 12, materials: 0, valuable: 0 } }
+  },
+  "Liches (Neutral)": {
+    basic: { atk: 3, def: 0, hp: 6, ini: 7, type: 'A distancia', abilities: ["No-muerto: Inmune a los efectos de moral.", "Al Atacar: Elige una unidad adyacente al objetivo y atácala con 2 de Ataque."], customCost: { gold: 12, materials: 0, valuable: 0 } }
   },
   "Enanos de Hierro": {
-    basic: { atk: 2, def: 2, hp: 2, ini: 3, type: 'Melee', abilities: ["Resistencia Enana: 30% de probabilidad de ignorar hechizos."] },
-    elite: { atk: 3, def: 3, hp: 2, ini: 4, type: 'Melee', abilities: ["Resistencia Enana.", "Escudo de Hierro pasivo."] }
+    basic: { atk: 2, def: 2, hp: 2, ini: 3, type: 'Melee', abilities: ["Resistencia Enana: Al recibir un hechizo, lanza el dado de combate; con +1 lo ignora."] }
+  },
+  "Campeones (Neutral)": {
+    basic: { atk: 4, def: 2, hp: 6, ini: 8, type: 'Melee', abilities: ["Al Atacar: Lanza 2 dados de Ataque y aplica ambos resultados.", "Pasiva: Vuelve a tirar todos los dados '-1' de esta unidad."], customCost: { gold: 18, materials: 0, valuable: 0 } }
+  },
+  "Caballeros del Terror (Neutral)": {
+    basic: { atk: 5, def: 1, hp: 7, ini: 7, type: 'Melee', abilities: ["No-muerto: Inmune a los efectos de moral.", "Pasiva: Cuando es objetivo de un Contraataque, gana +1 en Defensa."], customCost: { gold: 18, materials: 0, valuable: 0 } }
   },
   "Mantícora (Neutral)": {
-    basic: { atk: 4, def: 1, hp: 7, ini: 8, type: 'Volador', abilities: ["Pasiva: En los resultados 0 o +1 del dado de ataque del enemigo, gana +1 Defensa."], customCost: { gold: 18, materials: 0, valuable: 0 } },
-    elite: { atk: 4, def: 1, hp: 7, ini: 8, type: 'Volador', abilities: ["Pasiva: En los resultados 0 o +1 del dado de ataque del enemigo, gana +1 Defensa."], customCost: { gold: 18, materials: 0, valuable: 0 } }
+    basic: { atk: 4, def: 1, hp: 7, ini: 8, type: 'Volador', abilities: ["Pasiva: En los resultados 0 o +1 del dado de ataque del enemigo, gana +1 Defensa."], customCost: { gold: 18, materials: 0, valuable: 0 } }
   },
-  "Dragón de Hada": {
-    basic: { atk: 3, def: 3, hp: 3, ini: 6, type: 'Volador', abilities: ["Volador.", "Espejo Mágico: 50% de probabilidad de devolver hechizos enemigos al lanzador."] },
-    elite: { atk: 4, def: 3, hp: 3, ini: 7, type: 'Volador', abilities: ["Volador.", "Espejo Mágico.", "Lanza Hechizo aleatorio de nivel 1-3 una vez por ronda."] }
+  "Arcángeles (Neutral)": {
+    basic: { atk: 5, def: 2, hp: 7, ini: 10, type: 'Volador', abilities: ["Al Atacar: esta unidad obtiene +2 de Ataque contra Archidiablos."], customCost: { gold: 29, materials: 0, valuable: 0 } }
   },
-  "Dragón de Óxido": {
-    basic: { atk: 4, def: 3, hp: 4, ini: 5, type: 'Volador', abilities: ["Volador.", "Aliento Ácido: Reduce permanentemente la defensa del objetivo herido en 2."] },
-    elite: { atk: 5, def: 3, hp: 4, ini: 6, type: 'Volador', abilities: ["Volador.", "Aliento Ácido.", "Corrosión Extrema: +2 de Daño físico adicional."] }
-  },
-  "Dragón de Cristal": {
-    basic: { atk: 4, def: 4, hp: 4, ini: 5, type: 'Melee', abilities: ["Inmune a toda magia.", "Generador de Gema: Añade +1 Gema a la reserva al final del combate."] },
-    elite: { atk: 5, def: 4, hp: 4, ini: 6, type: 'Melee', abilities: ["Inmune a toda magia.", "Generador de Gema.", "Aliento de Cristal: Ataque doble en abanico."] }
-  },
-  "Dragón Azul": {
-    basic: { atk: 5, def: 4, hp: 5, ini: 7, type: 'Volador', abilities: ["Volador.", "Pánico: Unidades enemigas adyacentes de bronce/plata no pueden activar su turno."] },
-    elite: { atk: 6, def: 5, hp: 5, ini: 8, type: 'Volador', abilities: ["Volador.", "Pánico.", "Aliento Gélido: Congela al objetivo (pierde su próxima activación)."] }
+  "Dragones Fantasma (Neutral)": {
+    basic: { atk: 5, def: 2, hp: 6, ini: 9, type: 'Volador', abilities: ["No-muerto: Inmune a los efectos de moral.", "Al Atacar: Después del ataque, tira un dado de Ataque; si el resultado es '0', el objetivo debe alejarse 1 casilla."], customCost: { gold: 28, materials: 0, valuable: 0 } }
   },
   "Dragón Negro (Neutral)": {
-    basic: { atk: 5, def: 2, hp: 7, ini: 9, type: 'Volador', abilities: ["Al Atacar: Ataca 2 espacios en línea. El primer ataque se resuelve normalmente, y el segundo tiene 2 de Ataque."], customCost: { gold: 30, materials: 0, valuable: 0 } },
-    elite: { atk: 5, def: 2, hp: 7, ini: 9, type: 'Volador', abilities: ["Al Atacar: Ataca 2 espacios en línea. El primer ataque se resuelve normalmente, y el segundo tiene 2 de Ataque."], customCost: { gold: 30, materials: 0, valuable: 0 } }
+    basic: { atk: 5, def: 2, hp: 7, ini: 9, type: 'Volador', abilities: ["Al Atacar: Ataca 2 espacios en línea. El primer ataque se resuelve normalmente, y el segundo tiene 2 de Ataque."], customCost: { gold: 30, materials: 0, valuable: 0 } }
+  },
+  "Dragón de Hada": {
+    basic: { atk: 3, def: 3, hp: 3, ini: 6, type: 'Volador', abilities: ["Volador.", "Espejo Mágico: Al recibir un hechizo, lanza el dado de combate; con un resultado de 0 o +1, devuelve el hechizo al héroe enemigo."] }
+  },
+  "Dragón de Óxido": {
+    basic: { atk: 4, def: 3, hp: 4, ini: 5, type: 'Volador', abilities: ["Volador.", "Aliento Ácido: Reduce permanentemente la defensa del objetivo herido en 2."] }
+  },
+  "Dragón de Cristal": {
+    basic: { atk: 4, def: 4, hp: 4, ini: 5, type: 'Melee', abilities: ["Inmune a toda magia.", "Generador de Gema: Añade +1 Gema a la reserva al final del combate."] }
+  },
+  "Dragón Azul": {
+    basic: { atk: 5, def: 4, hp: 5, ini: 7, type: 'Volador', abilities: ["Volador.", "Pánico: Unidades enemigas adyacentes de bronce/plata no pueden activar su turno."] }
+  },
+
+  // Banco de Criaturas
+  "Esqueletos (Cripta)": {
+    basic: { atk: 1, def: 0, hp: 2, ini: 4, type: 'Melee', abilities: ["No-muerto: Inmune a los efectos de moral.", "Pasiva: Una vez por Combate. Cuando su vida baja a 0, ponla a 1 en su lugar."] }
+  },
+  "Zombis (Cripta)": {
+    basic: { atk: 1, def: 0, hp: 2, ini: 3, type: 'Melee', abilities: ["No-muerto: Inmune a los efectos de moral.", "Pasiva: Si el atacante resuelve un '+1' en su dado de Ataque, gana +1 en Defensa."] }
+  },
+  "Grifos (Conservatorio)": {
+    basic: { atk: 3, def: 0, hp: 4, ini: 8, type: 'Volador', abilities: ["Pasiva: Esta unidad puede realizar un número ilimitado de contraataques."] }
+  },
+  "Espectros (Cripta)": {
+    basic: { atk: 2, def: 0, hp: 3, ini: 5, type: 'Volador', abilities: ["No-muerto: Inmune a los efectos de moral.", "Pasiva: Siempre que esta unidad ataque, el enemigo debe descartar 1 carta de su mano (si es posible)."] }
+  },
+  "Espectros (Naufragio)": {
+    basic: { atk: 2, def: 0, hp: 3, ini: 5, type: 'Volador', abilities: ["No-muerto: Inmune a los efectos de moral.", "Pasiva: Siempre que esta unidad ataque, el enemigo debe descartar 1 carta de su mano (si es posible)."] }
+  },
+  "Vampiros (Cripta)": {
+    basic: { atk: 2, def: 0, hp: 3, ini: 6, type: 'Volador', abilities: ["No-muerto: Inmune a los efectos de moral.", "Al Atacar: Después del ataque, elimina todas las Heridas de esta unidad."] }
   },
   "Dragón Negro (Utopía)": {
-    basic: { atk: 5, def: 2, hp: 5, ini: 9, type: 'Volador', abilities: ["Pasiva: Mientras esta unidad esté apilada, obtiene +3 de Ataque."], customCost: { gold: 0, materials: 0, valuable: 0 } },
-    elite: { atk: 5, def: 2, hp: 5, ini: 9, type: 'Volador', abilities: ["Pasiva: Mientras esta unidad esté apilada, obtiene +3 de Ataque."], customCost: { gold: 0, materials: 0, valuable: 0 } }
-  }
+    basic: { atk: 5, def: 2, hp: 5, ini: 9, type: 'Volador', abilities: ["Pasiva: Mientras esta unidad esté apilada, obtiene +3 de Ataque."] }
+  },
 };
 
 const FACTION_THEMES: {
@@ -613,6 +684,14 @@ const FACTION_THEMES: {
     glow: 'shadow-amber-500/15',
     bgGradient: 'radial-gradient(circle at top, #451a03 0%, #1c1917 100%)',
     badge: 'bg-stone-950/85 border-amber-900/60 text-amber-200'
+  },
+  bancos: {
+    primary: 'from-amber-950 to-stone-950',
+    border: 'border-yellow-700/60',
+    text: 'text-yellow-400',
+    glow: 'shadow-yellow-500/10',
+    bgGradient: 'radial-gradient(circle at top, #3b2314 0%, #0d0d0e 100%)',
+    badge: 'bg-stone-900/80 border-yellow-850 text-yellow-400'
   }
 };
 
@@ -628,12 +707,13 @@ export default function RecruitmentCalculator() {
     { id: 'mazmorra', name: 'Mazmorra (Dungeon)' },
     { id: 'rampart', name: 'Murallas (Rampart)' },
     { id: 'torre', name: 'Torre (Tower)' },
-    { id: 'infierno', name: 'Infierno (Inferno)' },
+    { id: 'infierno', name: 'Inferno (Inferno)' },
     { id: 'stronghold', name: 'Bastión (Stronghold)' },
     { id: 'fortaleza', name: 'Fortaleza (Fortress)' },
     { id: 'confluencia', name: 'Confluencia (Conflux)' },
     { id: 'cove', name: 'Bahía (Cove)' },
-    { id: 'neutrales', name: 'Neutrales (Neutrals)' }
+    { id: 'neutrales', name: 'Neutrales (Neutrals)' },
+    { id: 'bancos', name: 'Banco de Criaturas' }
   ];
 
   // Auto-adjust selected tier when faction changes
@@ -642,6 +722,19 @@ export default function RecruitmentCalculator() {
       setSelectedTier('bronce');
     }
   }, [selectedFaction, selectedTier]);
+
+  // If we change faction and the current tier has no units for it,
+  // let's auto-switch to first tier that has units.
+  useEffect(() => {
+    const unitsInThisTier = (FACTION_UNITS[selectedFaction] || []).filter(u => u.tier === selectedTier);
+    if (unitsInThisTier.length === 0) {
+      const validTiers: ('bronce' | 'plata' | 'oro' | 'azul')[] = ['bronce', 'plata', 'oro', 'azul'];
+      const firstValidTier = validTiers.find(t => (FACTION_UNITS[selectedFaction] || []).some(u => u.tier === t));
+      if (firstValidTier) {
+        setSelectedTier(firstValidTier);
+      }
+    }
+  }, [selectedFaction]);
 
   // Retrieve available units for current faction and tier
   const availableUnits = (FACTION_UNITS[selectedFaction] || []).filter(u => u.tier === selectedTier);
@@ -659,8 +752,11 @@ export default function RecruitmentCalculator() {
   }, [selectedFaction, selectedTier, availableUnits, selectedUnit]);
 
   // Get current stats & cost
+  const isSingleSided = selectedFaction === 'neutrales' || selectedFaction === 'bancos';
+  const effectiveUpgraded = isSingleSided ? false : isUpgraded;
+
   const stats: UnitStats | null = selectedUnit
-    ? (UNIT_DETAILS[selectedUnit.nameBasic]?.[isUpgraded ? 'elite' : 'basic'] || {
+    ? (UNIT_DETAILS[selectedUnit.nameBasic]?.[effectiveUpgraded ? 'elite' : 'basic'] || {
         atk: selectedUnit.level,
         def: 1,
         hp: Math.ceil(selectedUnit.level / 2),
@@ -672,7 +768,7 @@ export default function RecruitmentCalculator() {
 
   const currentCostSpecs = (stats && stats.customCost)
     ? stats.customCost
-    : (BASE_COSTS[selectedTier]?.[isUpgraded ? 'elite' : 'basic'] || { gold: 0, materials: 0, valuable: 0 });
+    : (BASE_COSTS[selectedTier]?.[effectiveUpgraded ? 'elite' : 'basic'] || { gold: 0, materials: 0, valuable: 0 });
   const theme = FACTION_THEMES[selectedFaction] || FACTION_THEMES.neutrales;
 
   return (
@@ -797,29 +893,33 @@ export default function RecruitmentCalculator() {
           {/* Face of the card toggle */}
           <div className="space-y-1.5 pt-1">
             <label className="text-[10px] uppercase font-mono tracking-wider text-slate-500 block">Cara de la Carta (Cantidad):</label>
-            <div className="grid grid-cols-2 gap-2">
+            <div className={isSingleSided ? "grid grid-cols-1 gap-2" : "grid grid-cols-2 gap-2"}>
               <button
                 onClick={() => setIsUpgraded(false)}
                 className={`py-2 text-xs rounded-lg border text-center cursor-pointer transition font-medium flex flex-col items-center justify-center gap-0.5 ${
-                  !isUpgraded
+                  !effectiveUpgraded
                     ? 'border-amber-500 bg-slate-900 text-slate-200 font-bold shadow-inner'
                     : 'bg-slate-950 border-slate-900 text-slate-500 hover:text-slate-350'
                 }`}
               >
                 <span className="text-sm">🛡️ "Unas pocas"</span>
-                <span className="text-[9px] opacity-75 font-mono uppercase tracking-wider">Lado Básico</span>
+                <span className="text-[9px] opacity-75 font-mono uppercase tracking-wider">
+                  {isSingleSided ? 'Lado Único (Básico)' : 'Lado Básico'}
+                </span>
               </button>
-              <button
-                onClick={() => setIsUpgraded(true)}
-                className={`py-2 text-xs rounded-lg border text-center cursor-pointer transition font-medium flex flex-col items-center justify-center gap-0.5 ${
-                  isUpgraded
-                    ? 'border-amber-500 bg-amber-500/10 text-amber-300 font-bold shadow-md'
-                    : 'bg-slate-950 border-slate-900 text-slate-500 hover:text-slate-350'
-                }`}
-              >
-                <span className="text-sm">⚡ "Manada"</span>
-                <span className="text-[9px] opacity-75 font-mono uppercase tracking-wider">Lado Élite</span>
-              </button>
+              {!isSingleSided && (
+                <button
+                  onClick={() => setIsUpgraded(true)}
+                  className={`py-2 text-xs rounded-lg border text-center cursor-pointer transition font-medium flex flex-col items-center justify-center gap-0.5 ${
+                    effectiveUpgraded
+                      ? 'border-amber-500 bg-amber-500/10 text-amber-300 font-bold shadow-md'
+                      : 'bg-slate-950 border-slate-900 text-slate-500 hover:text-slate-350'
+                  }`}
+                >
+                  <span className="text-sm">⚡ "Manada"</span>
+                  <span className="text-[9px] opacity-75 font-mono uppercase tracking-wider">Lado Élite</span>
+                </button>
+              )}
             </div>
           </div>
         </div>
@@ -829,7 +929,7 @@ export default function RecruitmentCalculator() {
           <AnimatePresence mode="wait">
             {selectedUnit && stats && (
               <motion.div
-                key={`${selectedUnit.nameBasic}-${isUpgraded}`}
+                key={`${selectedUnit.nameBasic}-${effectiveUpgraded}`}
                 initial={{ opacity: 0, y: 10, scale: 0.98 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -10, scale: 0.98 }}
@@ -837,7 +937,7 @@ export default function RecruitmentCalculator() {
                 className="w-full rounded-2xl p-5 border relative overflow-hidden flex flex-col justify-between min-h-[460px] shadow-2xl"
                 style={{
                   background: theme.bgGradient,
-                  borderColor: isUpgraded ? '#d97706' : '#475569'
+                  borderColor: effectiveUpgraded ? '#d97706' : '#475569'
                 }}
               >
                 {/* Visual Faction Emblem Background watermark */}
@@ -850,7 +950,7 @@ export default function RecruitmentCalculator() {
                   <div>
                     <div className="flex items-center gap-2">
                       <span className={`text-[9px] font-mono font-bold uppercase px-2 py-0.5 rounded-md border ${theme.badge}`}>
-                        {selectedFaction}
+                        {selectedFaction === 'bancos' ? 'Banco de Criaturas' : selectedFaction}
                       </span>
                       <span className={`text-[9px] font-mono font-bold uppercase px-2 py-0.5 rounded-md border ${
                         selectedTier === 'bronce' ? 'bg-amber-950/40 text-amber-500 border-amber-900/30'
@@ -862,18 +962,20 @@ export default function RecruitmentCalculator() {
                       </span>
                     </div>
                     <h3 className="text-2xl font-serif font-extrabold text-white mt-1 tracking-wide uppercase drop-shadow-md">
-                      {isUpgraded ? selectedUnit.nameElite : selectedUnit.nameBasic}
+                      {effectiveUpgraded ? selectedUnit.nameElite : selectedUnit.nameBasic}
                     </h3>
                   </div>
 
-                  <button
-                    onClick={() => setIsUpgraded(!isUpgraded)}
-                    className="p-1.5 bg-slate-950/60 hover:bg-slate-950 border border-slate-800 rounded-lg text-slate-400 hover:text-amber-400 transition cursor-pointer flex items-center gap-1.5 text-[10px] font-mono uppercase"
-                    title="Voltear carta"
-                  >
-                    <RefreshCw className="w-3.5 h-3.5" />
-                    Voltear
-                  </button>
+                  {!isSingleSided && (
+                    <button
+                      onClick={() => setIsUpgraded(!isUpgraded)}
+                      className="p-1.5 bg-slate-950/60 hover:bg-slate-950 border border-slate-800 rounded-lg text-slate-400 hover:text-amber-400 transition cursor-pointer flex items-center gap-1.5 text-[10px] font-mono uppercase"
+                      title="Voltear carta"
+                    >
+                      <RefreshCw className="w-3.5 h-3.5" />
+                      Voltear
+                    </button>
+                  )}
                 </div>
 
                 {/* Central Body: Stats Grid */}
@@ -974,13 +1076,24 @@ export default function RecruitmentCalculator() {
                           🔮 {currentCostSpecs.valuable} Valioso
                         </span>
                       )}
+                      {(currentCostSpecs.gold + currentCostSpecs.materials + currentCostSpecs.valuable) < 1 && (
+                        <span className="text-[9px] text-slate-400 font-mono block">
+                          Sin Coste
+                        </span>
+                      )}
                     </div>
                   </div>
 
                   <div className="text-[10px] text-slate-400 leading-relaxed font-mono text-left sm:text-right">
-                    <span>Alistado en Ciudad</span>
+                    <span>
+                      {selectedFaction === 'neutrales' ? 'Mercenario / Mapa'
+                        : selectedFaction === 'bancos' ? 'Banco de Criaturas'
+                        : 'Alistado en Ciudad'}
+                    </span>
                     <span className="block text-[8px] text-slate-500">
-                      Requiere vivienda de {selectedTier.toUpperCase()} construida
+                      {selectedFaction === 'neutrales' ? 'No requiere vivienda de ciudad'
+                        : selectedFaction === 'bancos' ? 'Defensores de criptas, utopías o conservatorios'
+                        : `Requiere vivienda de ${selectedTier.toUpperCase()} construida`}
                     </span>
                   </div>
                 </div>
@@ -999,10 +1112,10 @@ export default function RecruitmentCalculator() {
             • <strong>Cara de la Carta:</strong> Al jugar la cara "Unas pocas" (basic), la unidad posee menores estadísticas. Puedes mejorarla en cualquier momento a "Manada" (elite) pagando la diferencia de coste en tu ciudad correspondiente.
           </p>
           <p>
-            • <strong>Iniciativa y Activación:</strong> Durante la fase de combate, las criaturas se activan en orden descendente de su iniciativa (⚡). En caso de empate, el atacante original tiene prioridad de golpe.
+            • <strong>Iniciativa y Activación:</strong> Durante la fase de combate, las criaturas se activan en orden descendente de su iniciativa (⚡). En caso de empate, el atacante original tiene prioridad de golpe (alternativamente).
           </p>
           <p>
-            • <strong>Contraataque y Represalia:</strong> Cada unidad puede contraatacar de forma automática una vez por ronda al ser golpeada en cuerpo a cuerpo, a menos que el atacante posea el rasgo místico de <strong>Sin Represalia</strong>.
+            • <strong>Contraataque y Represalia:</strong> Cada unidad puede contraatacar de forma automática una vez por ronda al ser golpeada en cuerpo a cuerpo, a menos que el atacante posea el rasgo de <strong>Sin Represalia</strong>.
           </p>
         </div>
       </div>
