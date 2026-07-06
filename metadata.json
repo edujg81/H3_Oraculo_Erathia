@@ -1,6 +1,6 @@
 {
   "name": "Heroes III - Oráculo de Erathia",
-  "description": "Base de conocimiento interactiva con chat inteligente, resumen de preparación, guía de fases de turno, cronómetro de juego y versión exportable para Heroes of Might and Magic III: El Juego de Mesa.",
+  "description": "Base de conocimiento interactiva con chat inteligente, reglas, cronómetro de juego y apoyo para Heroes of Might and Magic III: El Juego de Mesa.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

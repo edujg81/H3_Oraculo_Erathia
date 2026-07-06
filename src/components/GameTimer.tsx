@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Player } from '../types';
-import { Play, Pause, RotateCcw, UserPlus, Trash, Hourglass, HelpCircle, Users } from 'lucide-react';
+import { 
+  Play, Pause, RotateCcw, UserPlus, Trash, Hourglass, 
+  HelpCircle, Users, Clock, Calendar, ShieldAlert, Plus, ChevronRight
+} from 'lucide-react';
 
 interface GameTimerProps {
   round: number;
@@ -71,274 +74,330 @@ export default function GameTimer({
   const isLowTime = turnSeconds < 15 && turnLimit > 0;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-1">
-      {/* 1. Timers Left Box */}
-      <div className="md:col-span-2 space-y-6">
-        <div className="bg-slate-900 border border-amber-900/30 rounded-xl p-5 shadow-xl space-y-6">
-          <div className="flex items-center justify-between border-b border-slate-800 pb-3">
-            <h3 className="font-serif text-amber-200 text-lg flex items-center gap-2">
-              <Hourglass className="w-5 h-5 text-amber-500" /> Panel de Cronómetros Oficial
-            </h3>
-            <span className="text-[10px] font-mono bg-slate-950 px-2 py-0.5 rounded text-amber-500 border border-amber-900/30">
-              Mesa de Control
+    <div className="space-y-6">
+      
+      {/* 1. Sleek Top Dashboard Summary bar */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        
+        {/* Round Counter Banner */}
+        <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 flex items-center justify-between shadow-lg">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
+              <Calendar className="w-5 h-5 text-amber-500" />
+            </div>
+            <div>
+              <span className="text-[10px] font-mono text-slate-500 uppercase tracking-wider block">Ronda Activa</span>
+              <span className="text-xl font-serif font-bold text-amber-200">Ronda {round}</span>
+            </div>
+          </div>
+          
+          <div className="flex items-center gap-1.5 bg-slate-950 p-1.5 rounded-xl border border-slate-800">
+            <button 
+              type="button"
+              onClick={() => round > 1 && setRound(round - 1)}
+              className="w-8 h-8 flex items-center justify-center bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white rounded-lg cursor-pointer font-mono font-bold transition-all text-sm border border-slate-800"
+              title="Ronda anterior"
+            >
+              -
+            </button>
+            <button 
+              type="button"
+              onClick={() => setRound(round + 1)}
+              className="w-8 h-8 flex items-center justify-center bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white rounded-lg cursor-pointer font-mono font-bold transition-all text-sm border border-slate-800"
+              title="Siguiente ronda"
+            >
+              +
+            </button>
+          </div>
+        </div>
+
+        {/* Dynamic Round Phase Description */}
+        <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 flex items-center gap-3 shadow-lg md:col-span-1">
+          <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${
+            roundType === 'Recursos' ? 'bg-emerald-500/10 border border-emerald-500/20' : 'bg-cyan-500/10 border border-cyan-500/20'
+          }`}>
+            <span className={`w-2.5 h-2.5 rounded-full ${roundType === 'Recursos' ? 'bg-emerald-500 animate-pulse' : 'bg-cyan-400'}`} />
+          </div>
+          <div>
+            <span className="text-[10px] font-mono text-slate-500 uppercase tracking-wider block">Tipo de Fase</span>
+            <span className={`text-sm font-semibold block ${roundType === 'Recursos' ? 'text-emerald-400' : 'text-cyan-400'}`}>
+              {roundType === 'Recursos' ? 'Recursos (Cobro de Ingresos)' : 'Astrológica (Evento de Turno)'}
+            </span>
+            <span className="text-[9px] text-slate-400 block leading-tight mt-0.5 max-w-[200px]">
+              {roundType === 'Recursos' 
+                ? '¡Cobro de minas y ciudad! (Excepto Ronda 1).' 
+                : 'Se roba y anuncia una carta astrológica.'}
             </span>
           </div>
+        </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {/* Turn Countdown Timer */}
-            <div className="bg-slate-950 p-5 rounded-xl border border-slate-800/80 flex flex-col justify-between items-center text-center space-y-3">
+        {/* Compact Session Timer */}
+        <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 flex items-center justify-between shadow-lg">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-center">
+              <Clock className={`w-5 h-5 text-slate-400 ${isTotalRunning ? 'animate-pulse text-amber-500' : ''}`} />
+            </div>
+            <div>
+              <span className="text-[10px] font-mono text-slate-500 uppercase tracking-wider block">Tiempo Total</span>
+              <span className="text-lg font-mono font-bold text-slate-100">{formatTime(totalSeconds)}</span>
+            </div>
+          </div>
+
+          <div className="flex gap-1.5">
+            <button
+              type="button"
+              onClick={() => setIsTotalRunning(!isTotalRunning)}
+              className={`p-2 rounded-xl text-[10px] font-mono font-bold cursor-pointer transition border ${
+                isTotalRunning 
+                  ? 'bg-amber-500/10 border-amber-500/30 text-amber-400 hover:bg-amber-500/20' 
+                  : 'bg-slate-950 border-slate-800 text-slate-400 hover:text-slate-200'
+              }`}
+            >
+              {isTotalRunning ? 'Pausar' : 'Iniciar'}
+            </button>
+            <button
+              type="button"
+              onClick={() => { setTotalSeconds(0); setIsTotalRunning(false); }}
+              className="px-2 bg-slate-950 border border-slate-800 rounded-xl text-[10px] font-mono text-slate-500 hover:text-red-400 cursor-pointer transition"
+              title="Resetear cronómetro de sesión"
+            >
+              Rst
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      {/* 2. Main Double-Column Bento Grid Layout */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        {/* Left Column: Official Game Clock (col-span-7) */}
+        <div className="lg:col-span-7 space-y-6">
+          <div className="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 shadow-xl space-y-6 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl pointer-events-none" />
+            
+            <div className="flex items-center justify-between border-b border-slate-800/80 pb-4">
               <div>
-                <p className="text-[11px] font-mono text-slate-500 uppercase tracking-widest flex items-center justify-center gap-1.5">
-                  <Hourglass className={`w-3.5 h-3.5 text-amber-500 ${isTurnRunning ? 'animate-spin' : ''}`} />
-                  Temporizador de Turno
-                </p>
-                <div className={`mt-2 font-mono text-4xl font-bold tracking-wider ${isLowTime ? 'text-red-500 animate-pulse' : 'text-amber-400'}`}>
+                <h3 className="font-serif text-amber-200 text-lg font-bold">Temporizador del Turno Activo</h3>
+                <p className="text-[10px] text-slate-400 font-mono uppercase tracking-wider mt-0.5">Control de Rondas y Penalizaciones</p>
+              </div>
+              <span className="text-[9px] font-mono bg-slate-950 px-2 py-0.5 rounded border border-slate-800 text-amber-500">
+                CRONÓMETRO OFICIAL
+              </span>
+            </div>
+
+            {/* Giant Active Clock Display */}
+            <div className="bg-slate-950/60 border border-slate-850 rounded-2xl p-6 flex flex-col items-center justify-center text-center space-y-4">
+              <div className="space-y-1">
+                <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest block">Tiempo del Jugador Actual</span>
+                <div className={`font-mono text-5xl sm:text-6xl font-extrabold tracking-widest leading-none ${
+                  isLowTime ? 'text-red-500 animate-pulse' : 'text-amber-400'
+                }`}>
                   {formatTime(turnSeconds)}
                 </div>
-                <p className="text-xs text-slate-400 mt-1">
-                  Turno de: <span className="font-semibold text-white">{players[activePlayerIndex]?.name || 'Nadie'}</span>
-                </p>
+              </div>
+
+              {/* Active Player Tag */}
+              <div className="px-4 py-1.5 rounded-full bg-slate-900 border border-slate-800 flex items-center gap-2">
+                <span className={`w-2 h-2 rounded-full ${isTurnRunning ? 'bg-green-500 animate-ping' : 'bg-amber-500'}`} />
+                <span className="text-xs text-slate-300 font-mono">
+                  Turno de: <strong className="text-white font-serif">{players[activePlayerIndex]?.name || 'Nadie'}</strong>
+                </span>
               </div>
 
               {/* Turn Limit select presets */}
-              <div className="flex flex-wrap gap-1.5 justify-center my-1 select-none">
-                {[30, 60, 120, 180, 300].map((sec) => (
-                  <button
-                    key={sec}
-                    type="button"
-                    onClick={() => handleSetTurnLimit(sec)}
-                    className={`text-[10px] px-2 py-1 rounded border cursor-pointer font-mono ${
-                      turnLimit === sec 
-                        ? 'border-amber-500 bg-amber-500/10 text-amber-400 font-bold' 
-                        : 'border-slate-800 text-slate-400 hover:bg-slate-800/50'
-                    }`}
-                  >
-                    {sec < 60 ? `${sec}s` : `${sec / 60}m`}
-                  </button>
-                ))}
-              </div>
-
-              {/* Controls */}
-              <div className="flex gap-2 w-full">
-                <button
-                  type="button"
-                  onClick={() => setIsTurnRunning(!isTurnRunning)}
-                  className={`flex-1 py-1.5 rounded text-xs font-semibold cursor-pointer transition ${
-                    isTurnRunning ? 'bg-amber-700 text-white hover:bg-amber-800' : 'bg-emerald-700 text-white hover:bg-emerald-800'
-                  }`}
-                >
-                  {isTurnRunning ? 'Pausar' : 'Iniciar'}
-                </button>
-                <button
-                  type="button"
-                  onClick={handleResetTurnTimer}
-                  className="flex-1 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs rounded cursor-pointer transition"
-                >
-                  Reiniciar
-                </button>
-                <button
-                  type="button"
-                  onClick={handleNextTurn}
-                  className="flex-1 py-1.5 bg-amber-950/60 hover:bg-amber-900 border border-amber-800/80 text-amber-200 text-xs rounded cursor-pointer transition font-medium"
-                >
-                  Turno ➔
-                </button>
-              </div>
-            </div>
-
-            {/* Total Stopwatch Timer */}
-            <div className="bg-slate-950 p-5 rounded-xl border border-slate-800/80 flex flex-col justify-between items-center text-center space-y-4">
-              <div>
-                <p className="text-[11px] font-mono text-slate-500 uppercase tracking-widest">
-                  ⏱ Tiempo Total de Partida
-                </p>
-                <div className="mt-2 font-mono text-4xl font-bold tracking-wider text-slate-200">
-                  {formatTime(totalSeconds)}
-                </div>
-                <p className="text-xs text-slate-500 mt-1">Duración acumulada de la sesión</p>
-              </div>
-
-              <div className="flex gap-2 w-full">
-                <button
-                  type="button"
-                  onClick={() => setIsTotalRunning(!isTotalRunning)}
-                  className={`flex-1 py-2 rounded text-xs font-semibold cursor-pointer transition ${
-                    isTotalRunning ? 'bg-amber-700 text-white hover:bg-amber-800' : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-                  }`}
-                >
-                  {isTotalRunning ? 'Pausar Reloj' : 'Iniciar Reloj'}
-                </button>
-                <button
-                  type="button"
-                  onClick={() => { setTotalSeconds(0); setIsTotalRunning(false); }}
-                  className="px-3 bg-slate-900 hover:bg-slate-800 text-slate-400 border border-slate-800 rounded text-xs cursor-pointer transition"
-                >
-                  Rst
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Round and Phase Management */}
-          <div className="bg-slate-950 border border-slate-800 rounded-xl p-4">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <div>
-                <p className="text-xs text-slate-500 font-mono">Contador de Rondas:</p>
-                <div className="flex items-center gap-3 mt-1">
-                  <button 
-                    type="button"
-                    onClick={() => round > 1 && setRound(round - 1)}
-                    className="w-8 h-8 flex items-center justify-center bg-slate-850 hover:bg-slate-800 text-slate-400 rounded-lg cursor-pointer font-mono transition"
-                  >
-                    -
-                  </button>
-                  <span className="font-serif text-xl sm:text-2xl font-bold text-amber-200 w-24 text-center">
-                    Ronda {round}
-                  </span>
-                  <button 
-                    type="button"
-                    onClick={() => setRound(round + 1)}
-                    className="w-8 h-8 flex items-center justify-center bg-slate-850 hover:bg-slate-800 text-slate-400 rounded-lg cursor-pointer font-mono transition"
-                  >
-                    +
-                  </button>
+              <div className="w-full space-y-2 pt-2">
+                <span className="text-[9px] text-slate-500 font-mono uppercase tracking-wider block">Modificar límite de turno:</span>
+                <div className="flex flex-wrap gap-1.5 justify-center select-none">
+                  {[30, 60, 120, 180, 300].map((sec) => (
+                    <button
+                      key={sec}
+                      type="button"
+                      onClick={() => handleSetTurnLimit(sec)}
+                      className={`text-[10px] px-2.5 py-1 rounded-lg border cursor-pointer font-mono transition-all ${
+                        turnLimit === sec 
+                          ? 'border-amber-500 bg-amber-500/15 text-amber-400 font-bold' 
+                          : 'border-slate-800 text-slate-400 hover:bg-slate-800/40 hover:text-slate-300'
+                      }`}
+                    >
+                      {sec < 60 ? `${sec}s` : `${sec / 60}m`}
+                    </button>
+                  ))}
                 </div>
               </div>
-
-              {/* Status and instructions depending on type */}
-              <div className="bg-slate-900 border border-amber-955/20 rounded-lg p-3 flex-1 w-full sm:max-w-xs">
-                <div className="flex items-center gap-2">
-                  <span className={`w-2.5 h-2.5 rounded-full ${roundType === 'Recursos' ? 'bg-emerald-500 animate-pulse' : 'bg-sky-500'}`}></span>
-                  <strong className="text-xs text-amber-100">{roundType === 'Recursos' ? 'Ronda de Recursos (Impares)' : 'Ronda Astrológica (Pares)'}</strong>
-                </div>
-                <p className="text-[11px] text-slate-400 mt-1.5 leading-relaxed">
-                  {roundType === 'Recursos'
-                    ? '¡Gana recursos según tu producción! (Excepción: en la ronda 1 inicial no se cobra).'
-                    : 'Roba y lee el anuncio de una carta Astrológica del mazo (p. ej. Semana de la Riqueza, Mes de la Peste).'}
-                </p>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      {/* 2. Turn Management & Player List */}
-      <div className="space-y-6">
-        <div className="bg-slate-900 border border-amber-900/30 rounded-xl p-4 shadow-xl space-y-4">
-          <h3 className="font-serif text-amber-200 text-base mb-3 border-b border-slate-800 pb-2 flex justify-between items-center">
-            <span className="flex items-center gap-2"><Users className="w-4 h-4 text-amber-500" /> Especificar Participantes</span>
-            <span className="text-[10px] text-amber-500 font-mono">Partida Oficial</span>
-          </h3>
-
-          {/* Quick Presets for Player Count */}
-          <div className="space-y-1.5">
-            <label className="text-[10px] text-slate-400 font-mono block uppercase tracking-wider font-semibold">Configuración rápida de jugadores:</label>
-            <div className="grid grid-cols-6 gap-1">
-              {[1, 2, 3, 4, 5, 6].map(num => (
-                <button
-                  key={num}
-                  type="button"
-                  onClick={() => handleSetPlayerCount(num)}
-                  className={`py-1 text-xs font-mono rounded-md border text-center transition cursor-pointer font-bold ${
-                    players.length === num
-                      ? 'border-amber-500 bg-amber-950/40 text-amber-300'
-                      : 'bg-slate-950 border-slate-850 text-slate-500 hover:text-slate-300'
-                  }`}
-                >
-                  {num}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="space-y-2 max-h-[220px] overflow-y-auto pr-1">
-            <label className="text-[10px] text-slate-400 font-mono block uppercase tracking-wider font-semibold">Orden de Juego Actual:</label>
-            {players.map((player, idx) => {
-              const isActive = activePlayerIndex === idx;
-              return (
-                <div
-                  key={player.id}
-                  onClick={() => setActivePlayerIndex(idx)}
-                  className={`flex items-center justify-between p-2.5 rounded-lg border transition duration-200 cursor-pointer select-none ${player.color} ${
-                    isActive 
-                      ? 'ring-1 ring-amber-500/80 shadow-md scale-[1.01]' 
-                      : 'border-slate-850 opacity-80 hover:opacity-100'
-                  }`}
-                >
-                  <div className="flex items-center gap-2.5 truncate">
-                    <div className="w-5 h-5 rounded-full bg-slate-950 border border-slate-800 flex items-center justify-center font-mono text-[9px] text-amber-500 font-bold">
-                      {idx + 1}
-                    </div>
-                    <div>
-                      <p className="text-xs font-semibold">{player.name}</p>
-                      {isActive && (
-                        <span className="text-[9px] text-amber-400/90 font-mono flex items-center gap-1">
-                          ● Turno Activo
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleDeletePlayer(player.id);
-                    }}
-                    className="p-1 text-slate-500 hover:text-red-400 rounded hover:bg-slate-850 cursor-pointer transition"
-                    title="Eliminar participante"
-                  >
-                    <Trash className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* New player form */}
-          <form onSubmit={handleAddPlayer} className="space-y-2 bg-slate-950/40 p-3 rounded-xl border border-slate-800/60">
-            <span className="text-[10px] text-slate-400 font-mono block uppercase tracking-wider font-semibold">Agregar Jugador Personalizado:</span>
-            <div className="flex gap-1">
-              <input
-                type="text"
-                placeholder="Nombre (ej. Sandro o Jugador 3)"
-                value={newPlayerName}
-                onChange={(e) => setNewPlayerName(e.target.value)}
-                className="flex-1 bg-slate-950 border border-slate-850 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 placeholder-slate-600 focus:outline-none focus:ring-1 focus:ring-amber-500 focus:border-amber-500"
-              />
-            </div>
-            <div className="flex items-center gap-1.5">
-              <select
-                value={selectedFaction}
-                onChange={(e) => setSelectedFaction(e.target.value)}
-                className="flex-1 bg-slate-950 border border-slate-850 rounded-lg px-2 py-1.5 text-xs text-slate-300 focus:outline-none focus:ring-1 focus:ring-amber-500"
-              >
-                {FACTIONS.map(f => (
-                  <option key={f.id} value={f.id} className="bg-slate-950 text-slate-200">
-                    {f.name}
-                  </option>
-                ))}
-              </select>
+            {/* Clock Control Buttons */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               <button
-                type="submit"
-                className="px-3 py-1.5 bg-amber-600/90 hover:bg-amber-600 text-white rounded-lg text-xs font-semibold cursor-pointer transition whitespace-nowrap"
+                type="button"
+                onClick={() => setIsTurnRunning(!isTurnRunning)}
+                className={`py-3 px-4 rounded-xl text-xs font-bold cursor-pointer transition-all flex items-center justify-center gap-2 shadow-md ${
+                  isTurnRunning 
+                    ? 'bg-amber-700 hover:bg-amber-800 text-white hover:shadow-amber-950/20' 
+                    : 'bg-emerald-600 hover:bg-emerald-700 text-white hover:shadow-emerald-950/20'
+                }`}
               >
-                + Añadir
+                {isTurnRunning ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+                {isTurnRunning ? 'Pausar Turno' : 'Iniciar Turno'}
+              </button>
+
+              <button
+                type="button"
+                onClick={handleResetTurnTimer}
+                className="py-3 px-4 bg-slate-800 hover:bg-slate-705 border border-slate-700/60 text-slate-300 text-xs font-semibold rounded-xl cursor-pointer transition flex items-center justify-center gap-2"
+              >
+                <RotateCcw className="w-4 h-4" />
+                Reiniciar
+              </button>
+
+              <button
+                type="button"
+                onClick={handleNextTurn}
+                className="col-span-2 sm:col-span-1 py-3 px-4 bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold rounded-xl cursor-pointer transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-amber-900/20 font-mono"
+              >
+                <span>Siguiente Turno</span>
+                <ChevronRight className="w-4 h-4" />
               </button>
             </div>
-          </form>
+
+            {/* Warning Message for Low Time */}
+            {isLowTime && (
+              <div className="bg-red-950/20 border border-red-900/30 p-3 rounded-xl flex items-center gap-2 text-red-300 text-[11px] animate-pulse">
+                <ShieldAlert className="w-4 h-4 shrink-0 text-red-500" />
+                <span>¡Quedan menos de 15 segundos! El turno del jugador está a punto de expirar.</span>
+              </div>
+            )}
+          </div>
         </div>
 
-        {/* Quick Rule Grounding Box */}
-        <div className="bg-slate-900/60 border border-slate-800 p-4 rounded-xl space-y-2 leading-relaxed">
-          <h4 className="text-xs uppercase font-mono text-slate-400 tracking-wider flex items-center gap-1.5">
-            <HelpCircle className="w-4 h-4 text-amber-500" /> Ayuda Rápida de Rondas
-          </h4>
-          <p className="text-[11px] text-slate-400">
-            Recuerda que en <strong>Heroes III de Mesa</strong>, la primera ronda no da producción. Los recursos se cobran al inicio de las rondas de recursos (impares, p. ej. Ronda 3, 5, etc.). Las rondas astrológicas traen un anuncio astrológico que afecta a todos.
+        {/* Right Column: Player & Faction Management (col-span-5) */}
+        <div className="lg:col-span-5 space-y-6">
+          <div className="bg-slate-900/90 border border-slate-800 rounded-3xl p-5 shadow-xl space-y-4">
+            
+            <div className="flex items-center justify-between border-b border-slate-800/80 pb-3">
+              <div>
+                <h3 className="font-serif text-amber-200 text-base font-bold flex items-center gap-2">
+                  <Users className="w-4 h-4 text-amber-500" /> Lista de Jugadores
+                </h3>
+              </div>
+              <span className="text-[9px] text-amber-500 font-mono uppercase tracking-wider">Mesa de Juego</span>
+            </div>
+
+            {/* Quick Presets for Player Count */}
+            <div className="space-y-2 bg-slate-950/40 p-3 rounded-xl border border-slate-850">
+              <label className="text-[10px] text-slate-400 font-mono block uppercase tracking-wider font-semibold">Configuración Rápida de Jugadores:</label>
+              <div className="grid grid-cols-6 gap-1">
+                {[1, 2, 3, 4, 5, 6].map(num => (
+                  <button
+                    key={num}
+                    type="button"
+                    onClick={() => handleSetPlayerCount(num)}
+                    className={`py-1 text-xs font-mono rounded-lg border text-center transition cursor-pointer font-bold ${
+                      players.length === num
+                        ? 'border-amber-500 bg-amber-950/40 text-amber-300'
+                        : 'bg-slate-950 border-slate-850 text-slate-500 hover:text-slate-300'
+                    }`}
+                  >
+                    {num}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Scrollable Player List */}
+            <div className="space-y-2 max-h-[220px] overflow-y-auto pr-1">
+              {players.map((player, idx) => {
+                const isActive = activePlayerIndex === idx;
+                return (
+                  <div
+                    key={player.id}
+                    onClick={() => setActivePlayerIndex(idx)}
+                    className={`flex items-center justify-between p-2.5 rounded-xl border transition-all duration-200 cursor-pointer select-none ${player.color} ${
+                      isActive 
+                        ? 'ring-1 ring-amber-500/80 shadow-md scale-[1.01] border-amber-500' 
+                        : 'border-slate-800/60 opacity-80 hover:opacity-100'
+                    }`}
+                  >
+                    <div className="flex items-center gap-3 truncate">
+                      <div className="w-5 h-5 rounded-full bg-slate-950 border border-slate-800 flex items-center justify-center font-mono text-[9px] text-amber-500 font-bold shrink-0">
+                        {idx + 1}
+                      </div>
+                      <div>
+                        <p className="text-xs font-semibold">{player.name}</p>
+                        {isActive && (
+                          <span className="text-[9px] text-amber-400 font-mono flex items-center gap-1.5 mt-0.5">
+                            <span className="w-1.5 h-1.5 bg-amber-400 rounded-full animate-ping" />
+                            Turno Activo
+                          </span>
+                        )}
+                      </div>
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleDeletePlayer(player.id);
+                      }}
+                      className="p-1 text-slate-500 hover:text-red-400 rounded-lg hover:bg-slate-800 cursor-pointer transition shrink-0"
+                      title="Eliminar participante"
+                    >
+                      <Trash className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Custom Player Adder */}
+            <form onSubmit={handleAddPlayer} className="space-y-2 bg-slate-950/60 p-3 rounded-2xl border border-slate-850">
+              <span className="text-[10px] text-slate-400 font-mono block uppercase tracking-wider font-semibold">Añadir Jugador Personalizado:</span>
+              <div className="flex gap-2">
+                <input
+                  type="text"
+                  placeholder="Nombre de jugador..."
+                  value={newPlayerName}
+                  onChange={(e) => setNewPlayerName(e.target.value)}
+                  className="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-3 py-1.5 text-xs text-slate-200 placeholder-slate-600 focus:outline-none focus:ring-1 focus:ring-amber-500 focus:border-amber-500"
+                />
+              </div>
+              <div className="flex items-center gap-2">
+                <select
+                  value={selectedFaction}
+                  onChange={(e) => setSelectedFaction(e.target.value)}
+                  className="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-2.5 py-1.5 text-xs text-slate-300 focus:outline-none focus:ring-1 focus:ring-amber-500"
+                >
+                  {FACTIONS.map(f => (
+                    <option key={f.id} value={f.id} className="bg-slate-950 text-slate-200">
+                      {f.name}
+                    </option>
+                  ))}
+                </select>
+                <button
+                  type="submit"
+                  className="px-4 py-1.5 bg-amber-600/90 hover:bg-amber-600 text-white rounded-xl text-xs font-semibold cursor-pointer transition whitespace-nowrap flex items-center gap-1"
+                >
+                  <Plus className="w-3.5 h-3.5" /> Añadir
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+      {/* 3. Bottom Helper Guidelines Box */}
+      <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-4 flex gap-3 text-xs text-slate-400 leading-relaxed shadow-md">
+        <HelpCircle className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
+        <div>
+          <p className="font-semibold text-slate-300">Reglas Oficiales de Rondas (Juego de Mesa):</p>
+          <p className="text-[11px] mt-0.5">
+            Las <strong>rondas de recursos (impares)</strong> activan la generación de oro, madera y mineral en tus minas y tu ciudad (Nota: la primera ronda inicial no genera producción). Las <strong>rondas astrológicas (pares)</strong> alteran temporalmente las condiciones del mapa o del combate a través de una carta de evento astrológico.
           </p>
         </div>
       </div>
+
     </div>
   );
 }
