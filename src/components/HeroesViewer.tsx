@@ -595,7 +595,7 @@ export default function HeroesViewer() {
                                 <h5 className={`text-[10px] font-bold ${isUnlocked ? 'text-slate-100' : 'text-slate-500'}`}>
                                   {card.name}
                                 </h5>
-                                <p className={`text-[9px] mt-0.5 leading-normal ${isUnlocked ? 'text-slate-350' : 'text-slate-500'}`}>
+                                <p className={`whitespace-pre-line text-[9px] mt-0.5 leading-normal ${isUnlocked ? 'text-slate-350' : 'text-slate-500'}`}>
                                   {card.effect}
                                 </p>
                               </div>

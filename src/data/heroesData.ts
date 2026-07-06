@@ -50,7 +50,7 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Cruzados',
         cards: [
-          { level: 1, name: 'Cruzados I', effect: 'Instantáneo: Tu unidad seleccionada gana +1 de Ataque o +1 de Defensa. El efecto se duplica para Cruzados.' },
+          { level: 1, name: 'Cruzados I', effect: 'Instantáneo: Tu unidad seleccionada gana +1 de Ataque\n— O —\nInstantáneo: Tu unidad seleccionada gana +1 de Defensa.\n______\nEl efecto se duplica para Cruzados.' },
           { level: 4, name: 'Cruzados IV', effect: 'Contínuo: Para este Combate, la Vida de tu unidad seleccionada aumenta en 1. El efecto se duplica para Cruzados.' },
           { level: 6, name: 'Cruzados VI', effect: 'Contínuo: Para este Combate, la Iniciativa de tu unidad seleccionada aumenta en 1. El efecto se duplica para Cruzados.' }
         ]
@@ -59,21 +59,21 @@ export const FACTION_HEROES: FactionHeroesData = {
       quote: '¡Por Erathia y por la corona! No daremos ni un paso atrás frente a las huestes de la oscuridad.'
     },
     {
-      name: 'Adela',
+      name: 'Adelaide',
       type: 'Magia',
       className: 'Clérigo (Cleric)',
-      stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
+      stats: { atk: 1, def: 0, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Sabiduría (Wisdom)',
-        normal: 'Te permite aprender y memorizar 1 hechizo extra de tu mazo de magia.',
-        expert: 'Gasta 1 Corona para robar 2 cartas de hechizo adicionales de tu mazo y descartar 1 de ellas.'
+        normal: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(3) en lugar de Buscar(2).',
+        expert: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(4) en lugar de Buscar(3).'
       },
       specialty: {
         name: 'Especialidad: Bendición de Fuerza',
         cards: [
-          { level: 1, name: 'Celo Purificador', effect: 'Tus tropas bendecidas con el hechizo "Bendición" ganan +1 extra al daño físico infligido.' },
-          { level: 4, name: 'Aura Pacífica', effect: 'Las unidades enemigas de nivel bronce que comiencen su turno adyacentes a tus clérigos sufren -1 al Ataque.' },
-          { level: 6, name: 'Sinfonía Celestial', effect: 'Lanzar cualquier hechizo de la esfera de Agua o Luz otorga a todas tus tropas +1 Iniciativa en esa ronda.' }
+          { level: 1, name: 'Anillo Helado I', effect: 'Instantáneo: Descarta 1 carta. Apunta a una casilla en el tablero de Combate. Todas las unidades adyacentes a esta casilla sufren 1 Herida.' },
+          { level: 4, name: 'Anillo Helado IV', effect: 'Instantáneo: Elige 1 Hechizo o carta de Especialidad de tu pila de descarte y devuélvela a tu mano.' },
+          { level: 6, name: 'Anillo Helado VI', effect: 'Instantáneo: Descarta 2 cartas. Apunta a una casilla en el tablero de Combate. Todas las unidades adyacentes a esta casilla sufren 2 Heridas.' }
         ]
       },
       lore: 'Una clérigo sumamente compasiva bendecida con un carisma celestial que calma incluso las voluntades más belicosas y propaga la armonía mística.',
@@ -85,16 +85,16 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Caballero (Knight)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Puntería (Archery)',
-        normal: 'Tus unidades aliadas de ataque a distancia infligen +1 de daño físico.',
-        expert: 'Gasta 1 Corona para que tus arqueros ignoren la cobertura y penalizaciones de distancia en esta ronda.'
+        name: 'Tiro con Arco (Archery)',
+        normal: 'Continuo: Durante esta ronda de combate, tus unidades a distancia obtienen +1 Ataque si el objetivo es una unidad no adyacente .Tus unidades aliadas de ataque a distancia infligen +1 de daño físico.',
+        expert: 'Continuo: Hasta el final de la siguiente ronda de combate, tus unidades de ataque a distancia obtienen +1 de Iniciativa y +1 Ataque si el objetivo es una unidad no adyacente.'
       },
       specialty: {
-        name: 'Especialidad: Arqueros de Élite',
+        name: 'Especialidad: Tiradores',
         cards: [
-          { level: 1, name: 'Salva Cerrada', effect: 'Tus Arqueros y Ballesteros añaden +1 carta de Ataque gratis a su mano inicial de combate.' },
-          { level: 4, name: 'Fuego de Cobertura', effect: 'Una vez por combate, cuando una unidad enemiga cargue hacia una de tus tropas, tus Arqueros realizan un ataque inmediato gratuito.' },
-          { level: 6, name: 'Flechas de Plata', effect: 'Los disparos a distancia de tus tropas infligen daño de penetración, ignorando 1 punto de defensa física de la unidad enemiga.' }
+          { level: 1, name: 'Tiradores I', effect: 'Continuo: Para este combate, la Vida de la unidad seleccionada se incrementa en 1.\nEl efecto se duplica para la unidad de Tiradores.' },
+          { level: 4, name: 'Tiradores IV', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa\nEl efecto se duplica para la unidad de Tiradores.' },
+          { level: 6, name: 'Tiradores VI', effect: 'Activación: Activa una de tus unidades a distancia, incluso si esa unidad ya ha sido activada.\n— O —\nInstantáneo: Roba 2 cartas.\n______\nEl efecto se duplica para la unidad de Tiradores.' }
         ]
       },
       lore: 'Una oficial militar altamente disciplinada que comanda la infantería a distancia de los ejércitos de Erathia, célebre por su precisión táctica milimétrica.',
@@ -104,41 +104,43 @@ export const FACTION_HEROES: FactionHeroesData = {
       name: 'Ingham',
       type: 'Magia',
       className: 'Clérigo (Cleric)',
-      stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
+      stats: { atk: 1, def: 0, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Misticismo (Mysticism)',
-        normal: 'Gana 1 punto de Maná extra al inicio de tu turno.',
-        expert: 'Gana 1 punto de Maná extra al inicio de tu turno. Una vez por combate, puedes gastar 1 Corona para recuperar 2 puntos de Maná.'
+        normal: 'Instantáneo: Juega esta carta inmediatamente después de lanzar un hechizo. En lugar de descartar la carta de Hechizo, vuelve a tu mano.',
+        expert: 'Instantáneo: Juega esta carta inmediatamente después de lanzar un hechizo. En lugar de descartar la carta de Hechizo y todas las demás cartas jugadas junto con ella, llévalas de vuelta a tu mano.'
       },
       specialty: {
-        name: 'Especialidad: Monjes de Élite',
+        name: 'Especialidad: Fanáticos',
         cards: [
-          { level: 1, name: 'Devoción Sagrada I', effect: 'Instantáneo: Tu unidad seleccionada gana +1 de Ataque o +1 de Defensa. El efecto se duplica para Monjes o Fanáticos.' },
-          { level: 4, name: 'Fervor Divino IV', effect: 'Contínuo: Para este Combate, la Vida de tu unidad seleccionada aumenta en 1. El efecto se duplica para Monjes o Fanáticos.' },
-          { level: 6, name: 'Luz Redentora VI', effect: 'Contínuo: Para este Combate, la Iniciativa de tu unidad seleccionada aumenta en 1. El efecto se duplica para Monjes o Fanáticos.' }
+          { level: 1, name: 'Fanáticos I', effect: 'Instantáneo: Tu unidad seleccionada gana +1 de Ataque o +1 de Defensa. El efecto se duplica para Fanáticos.' },
+          { level: 4, name: 'Fanáticos IV', effect: 'Contínuo: Para este Combate, la Vida de tu unidad seleccionada aumenta en 1. El efecto se duplica para Fanáticos.' },
+          { level: 6, name: 'Fanáticos VI', effect: 'Contínuo: Para este Combate, tu unidad seleccionada ignora la Defensa de sus objetivos.\n— O —\nInstantáneo: Roba 1 carta.' }
         ]
       },
-      lore: 'Un clérigo devoto cuyo fervor y misticismo inspiran a los Monjes de la orden sagrada de Erathia, canalizando oraciones que vigorizan y protegen a las huestes celestiales.'
+      lore: 'Un clérigo devoto cuyo fervor y misticismo inspiran a los Monjes de la orden sagrada de Erathia, canalizando oraciones que vigorizan y protegen a las huestes celestiales.',
+      quote: 'La fe es nuestro escudo más impenetrable, y la devoción es la espada que rasgará las tinieblas.'
     },
     {
       name: 'Rion',
       type: 'Magia',
       className: 'Clérigo (Cleric)',
-      stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
+      stats: { atk: 1, def: 0, power: 2, knowledge: 2 },
       initialSkill: {
-        name: 'Primeros Auxilios (First Aid)',
-        normal: 'Al final de un combate, sana 1 herida a una de tus unidades sobrevivientes.',
-        expert: 'Al final de un combate, sana hasta 2 heridas repartidas entre tus unidades sobrevivientes o revive una unidad de nivel bronce destruida.'
+        name: 'Sabiduría (Wisdom)',
+        normal: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(3) en lugar de Buscar(2).',
+        expert: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(4) en lugar de Buscar(3).'
       },
       specialty: {
-        name: 'Especialidad: Tienda de Primeros Auxilios',
+        name: 'Especialidad: Médico de Campo de Batalla',
         cards: [
-          { level: 1, name: 'Soporte Médico I', effect: 'Tu Tienda de Auxilio sana 1 herida adicional al final de cada ronda de combate.' },
-          { level: 4, name: 'Vendaje Veloz IV', effect: 'Una vez por combate, cuando una unidad aliada sufra heridas, la Tienda de Auxilio sana inmediatamente 1 herida de forma reactiva.' },
-          { level: 6, name: 'Milagro del Campo VI', effect: 'La Tienda de Auxilio puede revivir una unidad de nivel bronce que haya sido derrotada en este combate al final de la ronda con 1 de Vida.' }
+          { level: 1, name: 'Médico de Campo de Batalla I', effect: 'Instantáneo: Retira 1 Herida de una de tus unidades, luego roba 1 carta.' },
+          { level: 4, name: 'Médico de Campo de Batalla IV', effect: 'Instantáneo: Retira 1 Herida o Parálisis de una de tus unidades, luego roba 1 carta.' },
+          { level: 6, name: 'Médico de Campo de Batalla VI', effect: 'Instantáneo: Retira hasta 2 Heridas o Parálisis de una de tus unidades, luego roba 2 cartas y descarta 1 carta de tu mano.' }
         ]
       },
-      lore: 'Un clérigo sabio experto en el tratamiento de heridas en plena batalla y en la gestión de tiendas de campaña médicas, logrando sanar heridas fatales y levantar regimientos caídos.'
+      lore: 'Un clérigo sabio experto en el tratamiento de heridas en plena batalla y en la gestión de tiendas de campaña médicas, logrando sanar heridas fatales y levantar regimientos caídos.',
+      quote: 'Ningún soldado de Erathia caerá mientras yo tenga aliento para invocar la luz de la sanación.'
     },
     {
       name: 'Lord Haart',
@@ -146,19 +148,20 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Caballero (Knight)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Logística (Logistics)',
-        normal: 'Tu héroe obtiene +1 Punto de Movimiento (PM) verde en el mapa.',
-        expert: 'Tu héroe obtiene +1 Punto de Movimiento (PM) verde en el mapa. Además, ignora los penalizadores de terreno difícil en la exploración.'
+        name: 'Finanzas (States)',
+        normal: 'Instantáneo: Gana 3 de Oro.',
+        expert: 'Instantáneo: Gana 6 de Oro.'
       },
       specialty: {
-        name: 'Especialidad: Finanzas del Reino',
+        name: 'Especialidad: Finanzas',
         cards: [
-          { level: 1, name: 'Tributo de Tierras I', effect: 'Al inicio de tu Fase de Recursos, obtienes +1 de Oro extra.' },
-          { level: 4, name: 'Comercio Favorable IV', effect: 'Puedes intercambiar recursos con el mercado con una tasa mejorada de 1:1 para un recurso en tu turno.' },
-          { level: 6, name: 'Inversión del Reino VI', effect: 'Inmediatamente ganas 5 de Oro o puedes construir un edificio en tu ciudad pagando 2 de Oro menos.' }
+          { level: 1, name: 'Finanzas I', effect: 'Instantáneo: Gana 2 de Oro.' },
+          { level: 4, name: 'Finanzas IV', effect: 'Instantáneo: Gana 3 de Oro.' },
+          { level: 6, name: 'Finanzas VI', effect: 'Instantáneo: Gana 5 de Oro.' }
         ]
       },
-      lore: 'Un caballero noble de gran abolengo célebre por su pericia en la administración y finanzas feudales, así como por su letal maestría táctica en campaña militar.'
+      lore: 'Un caballero noble de gran abolengo célebre por su pericia en la administración y finanzas feudales, así como por su letal maestría táctica en campaña militar.',
+      quote: 'Una campaña se gana tanto con una contabilidad impecable en el campamento como con un acero afilado en el campo de batalla.'
     },
     {
       name: 'Tarnum',
@@ -166,19 +169,20 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Caballero (Knight)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Ofensiva (Offense)',
-        normal: 'Tus unidades de combate cuerpo a cuerpo infligen +1 de daño físico.',
-        expert: 'Tus unidades de combate cuerpo a cuerpo infligen +2 de daño físico en su primer ataque del combate.'
+        name: 'Artillería (Artillery)',
+        normal: 'Instantáneo: Inflige 1 Herida a la unidad enemiga con menor Iniciativa.',
+        expert: 'Instantáneo: Al usar la carta Ballesta, resuelve su efecto contra el mismo objetivo 3 veces.'
       },
       specialty: {
-        name: 'Especialidad: Héroe de Leyenda',
+        name: 'Especialidad: Balística',
         cards: [
-          { level: 1, name: 'Voluntad del Héroe I', effect: 'Tus unidades aliadas son inmunes a los efectos de Moral Negativa.' },
-          { level: 4, name: 'Fuerza Indomable IV', effect: 'En tu turno de combate, tu unidad seleccionada gana +2 de Ataque y +1 de Iniciativa.' },
-          { level: 6, name: 'Casta de Campeón VI', effect: 'Gana +1 carta de Ataque y +1 carta de Defensa al inicio de cualquier combate.' }
+          { level: 1, name: 'Balística I', effect: 'Mapa: Paga 5 Oros para obtener una Ballesta.\n— O —\nInstantáneo: Activa tu Ballesta (si tienes una).' },
+          { level: 4, name: 'Balística IV', effect: 'Continuo: Puedes jugar esta carta al inicio del Combate. Para este Combate, obtienes una Ballesta adicional, incluso si ya tienes una. Descarta la Ballesta después de este Combate\n— O —\nInstantáneo: Roba 1 carta.' },
+          { level: 6, name: 'Balística VI', effect: 'Instantáneo: Elige 2 unidades enemigas. Cada una de estas unidades sufre 2 Heridas.' }
         ]
       },
-      lore: 'El Héroe Inmortal que ha luchado durante eones bajo diferentes formas para redimir sus pecados pasados, liderando con valor y carisma inquebrantable a las tropas de la corona.'
+      lore: 'El Héroe Inmortal que ha luchado durante eones bajo diferentes formas para redimir sus pecados pasados, liderando con valor y carisma inquebrantable a las tropas de la corona.',
+      quote: 'Los Ancestros me han condenado a vivir para siempre, pero lucharé cada segundo para demostrar que soy digno de su redención.'
     }
   ],
   necropolis: [
@@ -186,58 +190,60 @@ export const FACTION_HEROES: FactionHeroesData = {
       name: 'Lord Haart',
       type: 'Poder',
       className: 'Caballero de la Muerte (Death Knight)',
-      stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
+      stats: { atk: 1, def: 2, power: 2, knowledge: 1 },
       initialSkill: {
         name: 'Nigromancia (Necromancy)',
-        normal: 'Tras ganar un combate contra tropas vivas, añade 1 unidad de Esqueletos básica a tu reserva de forma gratuita.',
-        expert: 'Gasta 1 Corona al final del combate para añadir 2 unidades de Esqueletos básicas o 1 Esqueleto Mejorado.'
+        normal: 'Mapa: Juega después de ganar un combate que no sea un combate rápido. Puedes reforzar una unidad Bronce o Plata de tu elección por la mitad del coste de Oro (redondeado hacia abajo).',
+        expert: 'Mapa: Juega después de ganar un combate que no sea un combate rápido. Puedes reforzar cualquier unidad de tu elección por la mitad del coste de Oro (redondeado hacia abajo).'
       },
       specialty: {
         name: 'Especialidad: Caballeros del Terror',
         cards: [
-          { level: 1, name: 'Armadura del Pavor I', effect: 'Tus Caballeros del Terror y Caballeros Negros ganan +1 de Defensa física y +1 de HP.' },
-          { level: 4, name: 'Golpe Letal IV', effect: 'Tus Caballeros del Terror tienen un 50% de probabilidad de infligir daño duplicado al atacar.' },
-          { level: 6, name: 'Presencia Aterradora VI', effect: 'Al inicio de la ronda de combate, reduce la moral de la unidad enemiga seleccionada en -1.' }
+          { level: 1, name: 'Caballeros del Terror I', effect: 'Instantáneo: Reduce el Daño del contraataque enemigo en 1.\nEste efecto se duplica para la unidad Caballeros del Terror.' },
+          { level: 4, name: 'Caballeros del Terror IV', effect: 'Continuo: Para este combate, cuando un enemigo realice un contraataque contra esta unidad, lanza 2 dados de Ataque y resuelve el resultado más bajo.' },
+          { level: 6, name: 'Caballeros del Terror VI', effect: 'Instantáneo: Reduce el Daño del contraataque enemigo en 2.\nEste efecto se duplica para la unidad Caballeros del Terror.' }
         ]
       },
-      lore: 'El otrora noble caballero de Erathia que fue asesinado y alzado de entre los muertos como un temible oficial no-muerto al servicio de Deyja, comandando con frialdad a los jinetes espectrales.'
+      lore: 'El otrora noble caballero de Erathia que fue asesinado y alzado de entre los muertos como un temible oficial no-muerto al servicio de Deyja, comandando con frialdad a los jinetes espectrales.',
+      quote: 'Mi espada una vez sirvió a la vida, pero en la inmortalidad del sepulcro he encontrado un propósito mucho más absoluto.'
     },
     {
       name: 'Moandor',
       type: 'Poder',
       className: 'Caballero de la Muerte (Death Knight)',
-      stats: { atk: 1, def: 2, power: 1, knowledge: 2 },
+      stats: { atk: 1, def: 2, power: 2, knowledge: 1 },
       initialSkill: {
         name: 'Nigromancia (Necromancy)',
-        normal: 'Tras ganar un combate contra tropas vivas, añade 1 unidad de Esqueletos básica a tu reserva de forma gratuita.',
-        expert: 'Gasta 1 Corona al final del combate para añadir 2 unidades de Esqueletos básicas o 1 Esqueleto Mejorado.'
+        normal: 'Mapa: Juega después de ganar un combate que no sea un combate rápido. Puedes reforzar una unidad Bronce o Plata de tu elección por la mitad del coste de Oro (redondeado hacia abajo).',
+        expert: 'Mapa: Juega después de ganar un combate que no sea un combate rápido. Puedes reforzar cualquier unidad de tu elección por la mitad del coste de Oro (redondeado hacia abajo).'
       },
       specialty: {
         name: 'Especialidad: Liches',
         cards: [
-          { level: 1, name: 'Nube de Muerte I', effect: 'Tus Liches y Archiliches ganan +1 de Ataque y sus disparos de área afectan a un objetivo secundario.' },
-          { level: 4, name: 'Pacto de Hueso IV', effect: 'Una vez por combate, cuando tus Liches destruyan a una unidad de bronce, invoca inmediatamente una tropa de Esqueletos básica.' },
-          { level: 6, name: 'Mirada del Sepulcro VI', effect: 'Tus Liches ignoran cualquier obstáculo de cobertura física al disparar sus nubes de muerte.' }
+          { level: 1, name: 'Liches I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad Liches.' },
+          { level: 4, name: 'Liches IV', effect: 'Continuo: Para este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad Liches.' },
+          { level: 6, name: 'Liches VI', effect: 'Continuo: En este combate, tu unidad de Liches inflige daño elemental.\nInstantáneo: +2 Ataque.' }
         ]
       },
-      lore: 'Un caballero de la muerte cuya obsesión por la lichería le llevó a fundirse con las energías del sepulcro, convirtiéndose en el protector absoluto de las órdenes de magos esqueléticos.'
+      lore: 'Un caballero de la muerte cuya obsesión por la lichería le llevó a fundirse con las energías del sepulcro, convirtiéndose en el protector absoluto de las órdenes de magos esqueléticos.',
+      quote: 'La carne es un ropaje efímero y débil. El hueso y el alma inmortal son las únicas verdades que perduran.'
     },
     {
       name: 'Sandro',
       type: 'Magia',
       className: 'Nigromante (Necromancer)',
-      stats: { atk: 1, def: 0, power: 3, knowledge: 2 },
+      stats: { atk: 1, def: 0, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Brujería (Sorcery)',
-        normal: 'Tus hechizos destructivos causan +1 de daño místico adicional.',
-        expert: 'Tus hechizos destructivos causan +2 de daño místico adicional. Además, reduce el coste de maná de tu primer hechizo en 1 (mínimo 1).'
+        normal: 'Instantáneo: +1 Potencia\nLuego, roba 1 carta.',
+        expert: 'Instantáneo: +2 Potencia\nLuego, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Capa del Rey No Muerto',
         cards: [
-          { level: 1, name: 'Poder del Manto I', effect: 'Tu habilidad de Nigromancia te permite levantar Zombis en lugar de Esqueletos.' },
-          { level: 4, name: 'Cosecha de Almas IV', effect: 'Tu habilidad de Nigromancia te permite levantar Liches en lugar de Esqueletos si descartas 1 carta de Conocimiento.' },
-          { level: 6, name: 'Legión de Sombras VI', effect: 'Una vez por combate, puedes gastar 3 de Maná para revivir una unidad destruida de nivel bronce o plata como tropas no-muertas con HP completo.' }
+          { level: 1, name: 'Capa del Rey No Muerto I', effect: 'Coloca esta carta sobre la carta de Unidad Manada de Esqueletos; esto reemplaza las estadísticas de la carta. Cuando la Vida de la carta Capa del Rey No Muerto llegue a 0, descarta esta carta.\n- Horda de Esqueletos -\nAT: 3 - DF: 1 - PS: 2 - INI: 6' },
+          { level: 4, name: 'Capa del Rey No Muerto IV', effect: 'Coloca esta carta sobre la carta de Unidad Manada de Zombis; esto reemplaza las estadísticas de la carta. Cuando la Vida de la carta Capa del Rey No Muerto llegue a 0, descarta esta carta.\n- Horda de Zombis -\nAT: 4 - DF: 1 - PS: 3 - INI: 5' },
+          { level: 6, name: 'Capa del Rey No Muerto VI', effect: 'Coloca esta carta sobre la carta de Unidad de Esqueletos; esto reemplaza las estadísticas de la carta. Cuando la Vida de la carta Capa del Rey No Muerto llegue a 0, descarta esta carta.\n- Legión de Esqueletos -\nAT: 4 - DF: 1 - PS: 2 - INI: 6' }
         ]
       },
       lore: 'El nigromante más astuto y manipulador de Antagarich, quien mediante engaños logró reunir las piezas de la Capa del Rey No Muerto para someter continentes enteros bajo su yugo marchito.',
@@ -247,61 +253,64 @@ export const FACTION_HEROES: FactionHeroesData = {
       name: 'Septienna',
       type: 'Magia',
       className: 'Nigromante (Necromancer)',
-      stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
+      stats: { atk: 1, def: 0, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Nigromancia (Necromancy)',
-        normal: 'Tras ganar un combate contra tropas vivas, añade 1 unidad de Esqueletos básica a tu reserva de forma gratuita.',
-        expert: 'Gasta 1 Corona al final del combate para añadir 2 unidades de Esqueletos básicas o 1 Esqueleto Mejorado.'
+        normal: 'Mapa: Juega después de ganar un combate que no sea un combate rápido. Puedes reforzar una unidad Bronce o Plata de tu elección por la mitad del coste de Oro (redondeado hacia abajo).',
+        expert: 'Mapa: Juega después de ganar un combate que no sea un combate rápido. Puedes reforzar cualquier unidad de tu elección por la mitad del coste de Oro (redondeado hacia abajo).'
       },
       specialty: {
         name: 'Especialidad: Onda de Muerte',
         cards: [
-          { level: 1, name: 'Onda Drenadora I', effect: 'Tu hechizo "Onda de Muerte" inflige +1 de daño místico adicional a todas las unidades vivas enemigas.' },
-          { level: 4, name: 'Sifón de Vida IV', effect: 'Cada vez que lances Onda de Muerte, tu unidad aliada con menos vida recupera un HP por cada tropa enemiga dañada.' },
-          { level: 6, name: 'Aniquilación Marchita VI', effect: 'Una vez por combate, puedes lanzar un hechizo de Onda de Muerte de nivel experto de forma gratuita consumiendo solo 1 punto de Maná.' }
+          { level: 1, name: 'Onda de Muerte I', effect: 'Activación: Las unidades enemigas Bronce sufren 1 Herida.\n— O —\nInstantáneo: +1 Potencia' },
+          { level: 4, name: 'Onda de Muerte IV', effect: 'Activación: Las unidades enemigas Bronce sufren 1 Herida.\n— O —\nInstantáneo: +1 Potencia' },
+          { level: 6, name: 'Onda de Muerte VI', effect: 'Activación: Las unidades enemigas Oro y Azul sufren 2 Heridas.\n— O —\nInstantáneo: +2 Potencia' }
         ]
       },
-      lore: 'Una nigromante implacable experta en canalizar la energía de la muerte directamente desde las almas de sus oponentes, marchitando regimientos enteros con su onda espectral.'
+      lore: 'Una nigromante implacable experta en canalizar la energía de la muerte directamente desde las almas de sus oponentes, marchitando regimientos enteros con su onda espectral.',
+      quote: 'Vuestro aliento vital no se perderá; simplemente alimentará el resurgir de mi imperio eterno.'
     },
     {
       name: 'Tamika',
       type: 'Poder',
       className: 'Caballero de la Muerte (Death Knight)',
-      stats: { atk: 3, def: 1, power: 1, knowledge: 1 },
+      stats: { atk: 1, def: 2, power: 2, knowledge: 1 },
       initialSkill: {
         name: 'Ofensiva (Offense)',
-        normal: 'Tus unidades de combate cuerpo a cuerpo infligen +1 de daño físico.',
-        expert: 'Tus unidades de combate cuerpo a cuerpo infligen +2 de daño físico en su primer ataque del combate.'
+        normal: 'Instantáneo: +1 Ataque\nLuego, roba 1 carta.',
+        expert: 'Instantáneo: +2 Ataque\nLuego, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Caballeros del Terror',
         cards: [
-          { level: 1, name: 'Carga Espectral I', effect: 'Tus Caballeros del Terror obtienen +1 de Iniciativa y +1 de movimiento táctico.' },
-          { level: 4, name: 'Filo de Tumba IV', effect: 'Tus Caballeros del Terror infligen +1 daño físico adicional por cada herida que tenga la tropa enemiga.' },
-          { level: 6, name: 'Hueste de Pavor VI', effect: 'Una vez por combate, puedes reactivar inmediatamente a una unidad de Caballeros del Terror destruida con 2 HP.' }
+          { level: 1, name: 'Caballeros del Terror I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEste efecto se duplica para la unidad Caballeros del Terror.' },
+          { level: 4, name: 'Caballeros del Terror IV', effect: 'Continuo: Para este combate, la Vida de la unidad seleccionada aumenta en 1.\nEste efecto se duplica para la unidad Caballeros del Terror.' },
+          { level: 6, name: 'Caballeros del Terror VI', effect: 'Continuo: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEste efecto se duplica para la unidad Caballeros del Terror.' }
         ]
       },
-      lore: 'Una letal general de Deyja que adiestra a los jinetes negros con una disciplina sanguinaria, convirtiéndolos en la vanguardia más temida de las tierras baldías.'
+      lore: 'Una letal general de Deyja que adiestra a los jinetes negros con una disciplina sanguinaria, convirtiéndolos en la vanguardia más temida de las tierras baldías.',
+      quote: 'El miedo es un veneno lento, pero los cascos de mis caballeros negros son rápidos y letales.'
     },
     {
       name: 'Vidomina',
       type: 'Magia',
       className: 'Nigromante (Necromancer)',
-      stats: { atk: 1, def: 1, power: 3, knowledge: 1 },
+      stats: { atk: 1, def: 0, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Nigromancia (Necromancy)',
-        normal: 'Tras ganar un combate contra tropas vivas, añade 1 unidad de Esqueletos básica a tu reserva de forma gratuita.',
-        expert: 'Gasta 1 Corona al final del combate para añadir 2 unidades de Esqueletos básicas o 1 Esqueleto Mejorado.'
+        normal: 'Mapa: Juega después de ganar un combate que no sea un combate rápido. Puedes reforzar una unidad Bronce o Plata de tu elección por la mitad del coste de Oro (redondeado hacia abajo).',
+        expert: 'Mapa: Juega después de ganar un combate que no sea un combate rápido. Puedes reforzar cualquier unidad de tu elección por la mitad del coste de Oro (redondeado hacia abajo).'
       },
       specialty: {
         name: 'Especialidad: Nigromancia',
         cards: [
-          { level: 1, name: 'Cosecha de Almas I', effect: 'Tu Nigromancia se activa incluso al derrotar tropas no-vivas (constructos o elementales).' },
-          { level: 4, name: 'Alzar el Batallón IV', effect: 'Al final de cualquier combate victorioso, puedes gastar 1 de Oro para añadir un Esqueleto Mejorado gratis a tu ejército.' },
-          { level: 6, name: 'Trance Cadavérico VI', effect: 'Una vez por combate, cuando una unidad aliada no-muerta sea destruida, puedes robar 1 carta de hechizo o ganar 1 de Maná gratis.' }
+          { level: 1, name: 'Nigromancia I', effect: 'Mapa: Juega después de ganar un combate que no sea un combate rápido. Puedes reforzar una unidad Bronce o Plata de tu elección por la mitad del coste de Oro (redondeado hacia abajo).' },
+          { level: 4, name: 'Nigromancia IV', effect: 'Coloca esta carta sobre la carta de Unidad Manada de Esqueletos; esto reemplaza las estadísticas de la carta. Cuando la Vida llegue a 0, descarta esta carta.\n- Horda de Esqueletos -\nAT: 3 - DF: 1 - PS: 2 - INI: 6' },
+          { level: 6, name: 'Nigromancia VI', effect: 'Mapa: Juega después de ganar un combate que no sea un combate rápido. Puedes reforzar cualquier unidad de tu elección por la mitad del coste de Oro (redondeado hacia abajo).' }
         ]
       },
-      lore: 'Una joven nigromante prodigiosa dotada de un talento espantoso para absorber la energía espiritual de los moribundos, multiplicando las filas de no-muertos.'
+      lore: 'Una joven nigromante prodigiosa dotada de un talento espantoso para absorber la energía espiritual de los moribundos, multiplicando las filas de no-muertos.',
+      quote: 'Puedo escuchar el susurro de vuestra fuerza vital extinguiéndose... y el glorioso crujido de vuestro alzamiento.'
     }
   ],
   mazmorra: [
@@ -312,8 +321,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 1, def: 1, power: 3, knowledge: 1 },
       initialSkill: {
         name: 'Sabiduría (Wisdom)',
-        normal: 'Te permite aprender y memorizar 1 hechizo extra de tu mazo de magia.',
-        expert: 'Gasta 1 Corona para robar 2 cartas de hechizo adicionales de tu mazo y descartar 1 de ellas.'
+        normal: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(3) en lugar de Buscar(2).',
+        expert: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(4) en lugar de Buscar(3).'
       },
       specialty: {
         name: 'Especialidad: Resurrección',
@@ -352,8 +361,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Brujería (Sorcery)',
-        normal: 'Tus hechizos destructivos causan +1 de daño místico adicional.',
-        expert: 'Tus hechizos destructivos causan +2 de daño místico adicional. Además, puedes re-lanzar un dado de magia fallido una vez por combate.'
+        normal: 'Instantáneo: +1 Potencia\nLuego, roba 1 carta.',
+        expert: 'Instantáneo: +2 Potencia\nLuego, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Hechicería Misteriosa',
@@ -431,9 +440,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Cacique (Overlord)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Patrimonio (Estates)',
-        normal: 'Obtienes +1 de Oro al inicio de tu turno.',
-        expert: 'Obtienes +2 de Oro al inicio de tu turno. Además, reduce el coste de reclutar héroes secundarios en 1 de Oro.'
+        name: 'Finanzas (States)',
+        normal: 'Instantáneo: Gana 3 de Oro.',
+        expert: 'Instantáneo: Gana 6 de Oro.'
       },
       specialty: {
         name: 'Especialidad: Dragones',
@@ -474,8 +483,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 3, def: 1, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Tiro con Arco (Archery)',
-        normal: 'Tus unidades aliadas de ataque a distancia infligen +1 de daño físico.',
-        expert: 'Gasta 1 Corona para que tus arqueros ignoren la cobertura y penalizaciones de distancia en esta ronda.'
+        normal: 'Continuo: Durante esta ronda de combate, tus unidades a distancia obtienen +1 Ataque si el objetivo es una unidad no adyacente .Tus unidades aliadas de ataque a distancia infligen +1 de daño físico.',
+        expert: 'Continuo: Hasta el final de la siguiente ronda de combate, tus unidades de ataque a distancia obtienen +1 de Iniciativa y +1 Ataque si el objetivo es una unidad no adyacente.'
       },
       specialty: {
         name: 'Especialidad: Tiradores de Élite',
@@ -515,8 +524,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Ofensiva (Offence)',
-        normal: 'Tus unidades de combate cuerpo a cuerpo infligen +1 de daño físico.',
-        expert: 'Tus unidades de combate cuerpo a cuerpo infligen +2 de daño físico en su primer ataque del combate.'
+        normal: 'Instantáneo: +1 Ataque\nLuego, roba 1 carta.',
+        expert: 'Instantáneo: +2 Ataque\nLuego, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Elfos',
@@ -617,8 +626,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 1, def: 0, power: 3, knowledge: 2 },
       initialSkill: {
         name: 'Sabiduría (Wisdom)',
-        normal: 'Te permite aprender y memorizar 1 hechizo extra de tu mazo de magia.',
-        expert: 'Gasta 1 Corona para robar 2 cartas de hechizo adicionales de tu mazo y descartar 1 de ellas.'
+        normal: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(3) en lugar de Buscar(2).',
+        expert: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(4) en lugar de Buscar(3).'
       },
       specialty: {
         name: 'Especialidad: Encantadores',
@@ -657,8 +666,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 2, def: 1, power: 1, knowledge: 2 },
       initialSkill: {
         name: 'Brujería (Sorcery)',
-        normal: 'Tus hechizos destructivos causan +1 de daño místico adicional.',
-        expert: 'Tus hechizos destructivos causan +2 de daño místico adicional. Además, reduce el coste de maná de tu primer hechizo en 1 (mínimo 1).'
+        normal: 'Instantáneo: +1 Potencia\nLuego, roba 1 carta.',
+        expert: 'Instantáneo: +2 Potencia\nLuego, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Golems',
@@ -677,8 +686,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 0, def: 0, power: 4, knowledge: 2 },
       initialSkill: {
         name: 'Brujería (Sorcery)',
-        normal: 'Tus hechizos destructivos causan +1 de daño místico adicional.',
-        expert: 'Tus hechizos destructivos causan +2 de daño místico adicional. Además, reduce el coste de maná de tu primer hechizo en 1 (mínimo 1).'
+        normal: 'Instantáneo: +1 Potencia\nLuego, roba 1 carta.',
+        expert: 'Instantáneo: +2 Potencia\nLuego, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Relámpago en Cadena',
@@ -698,8 +707,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Misticismo (Mysticism)',
-        normal: 'Recuperas 1 punto de Maná extra al inicio de cada ronda de la partida.',
-        expert: 'Gasta 1 Corona para recuperar inmediatamente 3 puntos de Maná durante el combate.'
+        normal: 'Instantáneo: Juega esta carta inmediatamente después de lanzar un hechizo. En lugar de descartar la carta de Hechizo, vuelve a tu mano.',
+        expert: 'Instantáneo: Juega esta carta inmediatamente después de lanzar un hechizo. En lugar de descartar la carta de Hechizo y todas las demás cartas jugadas junto con ella, llévalas de vuelta a tu mano.'
       },
       specialty: {
         name: 'Especialidad: Balística',
@@ -801,8 +810,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Sabiduría (Wisdom)',
-        normal: 'Te permite aprender y memorizar 1 hechizo extra de tu mazo de magia.',
-        expert: 'Gasta 1 Corona para robar 2 cartas de hechizo adicionales de tu mazo y descartar 1 de ellas.'
+        normal: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(3) en lugar de Buscar(2).',
+        expert: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(4) en lugar de Buscar(3).'
       },
       specialty: {
         name: 'Especialidad: Infierno',
@@ -821,8 +830,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Brujería (Sorcery)',
-        normal: 'Tus hechizos destructivos causan +1 de daño místico adicional.',
-        expert: 'Tus hechizos destructivos causan +2 de daño místico adicional. Además, reduce el coste de maná de tu primer hechizo en 1 (mínimo 1).'
+        normal: 'Instantáneo: +1 Potencia\nLuego, roba 1 carta.',
+        expert: 'Instantáneo: +2 Potencia\nLuego, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Brujería',
@@ -843,8 +852,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 3, def: 1, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Ofensiva (Offense)',
-        normal: 'Tus tropas de combate cuerpo a cuerpo ganan +1 al daño físico.',
-        expert: 'Gasta 1 Corona para que tus tropas cuerpo a cuerpo inflijan +2 de daño en su siguiente ataque.'
+        normal: 'Instantáneo: +1 Ataque\nLuego, roba 1 carta.',
+        expert: 'Instantáneo: +2 Ataque\nLuego, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Ofensiva',
@@ -885,8 +894,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 2, def: 1, power: 2, knowledge: 1 },
       initialSkill: {
         name: 'Sabiduría (Wisdom)',
-        normal: 'Te permite aprender y memorizar 1 hechizo extra de tu mazo de magia.',
-        expert: 'Gasta 1 Corona para robar 2 cartas de hechizo adicionales de tu mazo y descartar 1 de ellas.'
+        normal: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(3) en lugar de Buscar(2).',
+        expert: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(4) en lugar de Buscar(3).'
       },
       specialty: {
         name: 'Especialidad: Ralentizar',
@@ -925,8 +934,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 3, def: 1, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Ofensiva (Offense)',
-        normal: 'Tus tropas de combate cuerpo a cuerpo ganan +1 al daño físico.',
-        expert: 'Gasta 1 Corona para que tus tropas cuerpo a cuerpo inflijan +2 de daño en su siguiente ataque.'
+        normal: 'Instantáneo: +1 Ataque\nLuego, roba 1 carta.',
+        expert: 'Instantáneo: +2 Ataque\nLuego, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Ofensiva',
@@ -945,8 +954,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Ofensiva (Offense)',
-        normal: 'Tus tropas de combate cuerpo a cuerpo ganan +1 al daño físico.',
-        expert: 'Gasta 1 Corona para que tus tropas cuerpo a cuerpo inflijan +2 de daño en su siguiente ataque.'
+        normal: 'Instantáneo: +1 Ataque\nLuego, roba 1 carta.',
+        expert: 'Instantáneo: +2 Ataque\nLuego, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Cíclopes',
@@ -967,8 +976,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Sabiduría (Wisdom)',
-        normal: 'Te permite aprender y memorizar 1 hechizo extra de tu mazo de magia.',
-        expert: 'Gasta 1 Corona para robar 2 cartas de hechizo adicionales de tu mazo y descartar 1 de ellas.'
+        normal: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(3) en lugar de Buscar(2).',
+        expert: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(4) en lugar de Buscar(3).'
       },
       specialty: {
         name: 'Especialidad: Magia de Fuego',
@@ -1088,9 +1097,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Señor de las Bestias (Beastmaster)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Arquería (Archery)',
-        normal: 'Tus unidades de ataque a distancia infligen +1 de daño físico.',
-        expert: 'Tus unidades de ataque a distancia infligen +2 de daño físico si el objetivo está a más de 3 casillas.'
+        name: 'Tiro con Arco (Archery)',
+        normal: 'Continuo: Durante esta ronda de combate, tus unidades a distancia obtienen +1 Ataque si el objetivo es una unidad no adyacente .Tus unidades aliadas de ataque a distancia infligen +1 de daño físico.',
+        expert: 'Continuo: Hasta el final de la siguiente ronda de combate, tus unidades de ataque a distancia obtienen +1 de Iniciativa y +1 Ataque si el objetivo es una unidad no adyacente.'
       },
       specialty: {
         name: 'Especialidad: Hombres Lagarto',
@@ -1130,9 +1139,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Viajero (Planeswalker)',
       stats: { atk: 1, def: 3, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Patrimonio (Estates)',
-        normal: 'Generas +1 de Oro al inicio de cada Fase de Recursos de forma pasiva.',
-        expert: 'Generas +1 de Oro y +1 recurso de Madera o Piedra extra al inicio de tu Fase de Recursos.'
+        name: 'Finanzas (States)',
+        normal: 'Instantáneo: Gana 3 de Oro.',
+        expert: 'Instantáneo: Gana 6 de Oro.'
       },
       specialty: {
         name: 'Especialidad: Elementales de Magma',
@@ -1191,8 +1200,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Artillería (Artillery)',
-        normal: 'Tu Balista aliada causa +1 de daño físico e ignora la defensa del rival.',
-        expert: 'Gasta 1 de Oro al inicio del combate para que tu Balista aliada ataque dos veces por ronda en esta batalla.'
+        normal: 'Instantáneo: Inflige 1 Herida a la unidad enemiga con menor Iniciativa.',
+        expert: 'Instantáneo: Al usar la carta Ballesta, resuelve su efecto contra el mismo objetivo 3 veces.'
       },
       specialty: {
         name: 'Especialidad: Elementales',
@@ -1211,8 +1220,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Sabiduría (Wisdom)',
-        normal: 'Te permite aprender y memorizar 1 hechizo extra de tu mazo de magia.',
-        expert: 'Gasta 1 Corona para robar 2 cartas de hechizo adicionales de tu mazo y descartar 1 de ellas.'
+        normal: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(3) en lugar de Buscar(2).',
+        expert: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(4) en lugar de Buscar(3).'
       },
       specialty: {
         name: 'Especialidad: Encantadores',
@@ -1253,8 +1262,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Sabiduría (Wisdom)',
-        normal: 'Te permite aprender y memorizar 1 hechizo extra de tu mazo de magia.',
-        expert: 'Gasta 1 Corona para robar 2 cartas de hechizo adicionales de tu mazo y descartar 1 de ellas.'
+        normal: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(3) en lugar de Buscar(2).',
+        expert: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(4) en lugar de Buscar(3).'
       },
       specialty: {
         name: 'Especialidad: Hechiceras',
@@ -1293,8 +1302,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Ofensiva (Offense)',
-        normal: 'Tus unidades de combate cuerpo a cuerpo ganan +1 al daño físico.',
-        expert: 'Tus unidades de combate cuerpo a cuerpo infligen +2 de daño físico en su primer ataque del combate.'
+        normal: 'Instantáneo: +1 Ataque\nLuego, roba 1 carta.',
+        expert: 'Instantáneo: +2 Ataque\nLuego, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Cañón',
