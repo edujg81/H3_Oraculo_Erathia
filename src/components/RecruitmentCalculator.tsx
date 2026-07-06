@@ -825,6 +825,78 @@ export default function RecruitmentCalculator() {
   const currentCostSpecs = (stats && stats.customCost)
     ? stats.customCost
     : (BASE_COSTS[selectedTier]?.[effectiveUpgraded ? 'elite' : 'basic'] || { gold: 0, materials: 0, valuable: 0 });
+
+  // Helper to map units to images
+  const getUnitImage = (unitName: string, factionId: string, level: number): string | null => {
+    if (factionId === 'cove') {
+      return null;
+    }
+
+    let baseName = unitName;
+    if (unitName.includes('(')) {
+      baseName = unitName.split('(')[0].trim();
+    }
+
+    // Check if the base name belongs to any faction unit
+    for (const [fac, units] of Object.entries(FACTION_UNITS)) {
+      if (fac === 'neutrales' || fac === 'bancos') continue;
+      const found = units.find(u => u.nameBasic === baseName || (u.nameElite && u.nameElite === baseName));
+      if (found) {
+        return getFactionImageFilename(fac, found.level);
+      }
+    }
+
+    // Handle pure neutral units
+    const pureNeutralsMap: { [key: string]: string } = {
+      'Pícaros': 'neutral_5.gif',
+      'Nómadas': 'neutral_8.gif',
+      'Jabalíes': 'neutral_6.gif',
+      'Golems de Oro': 'neutral_1.gif',
+      'Licántropos': '',
+      'Enanos de Hierro': '',
+      'Dragón de Hada': 'neutral_12.gif',
+      'Dragón de Óxido': 'neutral_13.gif',
+      'Dragón de Cristal': 'neutral_14.gif',
+      'Dragón Azul': 'neutral_15.gif'
+    };
+
+    if (pureNeutralsMap[unitName]) {
+      return pureNeutralsMap[unitName];
+    }
+
+    if (factionId === 'neutrales') {
+      const idx = (level % 15) + 1;
+      return `neutral_${idx}.gif`;
+    }
+
+    return getFactionImageFilename(factionId, level);
+  };
+
+  const getFactionImageFilename = (factionId: string, level: number): string | null => {
+    const mapping: { [key: string]: string } = {
+      castillo: 'castillo',
+      necropolis: 'necropolis',
+      mazmorra: 'dungeon',
+      rampart: 'rampart',
+      torre: 'tower',
+      infierno: 'inferno',
+      stronghold: 'bastion',
+      fortaleza: 'fortaleza',
+      confluencia: 'conflux',
+    };
+
+    const prefix = mapping[factionId];
+    if (!prefix) return null;
+    
+    const lvl = Math.min(Math.max(level, 1), 7);
+    return `${prefix}_${lvl}.gif`;
+  };
+
+  const imageFilename = selectedUnit ? getUnitImage(selectedUnit.nameBasic, selectedFaction, selectedUnit.level) : null;
+  const imageUrl = imageFilename 
+    ? new URL(`../assets/images/units/${imageFilename}`, import.meta.url).href 
+    : null;
+
   const theme = FACTION_THEMES[selectedFaction] || FACTION_THEMES.neutrales;
 
   return (
@@ -1032,6 +1104,43 @@ export default function RecruitmentCalculator() {
                       Voltear
                     </button>
                   )}
+                </div>
+
+                {/* Creature Artwork Image */}
+                <div className={`my-3 relative w-full h-44 rounded-xl overflow-hidden border flex items-center justify-center z-10 group/img shadow-inner transition-all duration-300 ${
+                  effectiveUpgraded 
+                    ? 'bg-slate-950/40 border-amber-500/50 holo-foil-effect shadow-[inset_0_0_20px_rgba(217,119,6,0.25)]' 
+                    : 'bg-slate-950/80 border-slate-800/80'
+                }`}>
+                  {/* Subtle radial gradient background pattern or holo shine */}
+                  {effectiveUpgraded ? (
+                    <div className="holo-foil-shine" />
+                  ) : (
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(30,41,59,0.3)_0%,transparent_70%)]" />
+                  )}
+                  {imageUrl ? (
+                    <img 
+                      src={imageUrl} 
+                      alt={effectiveUpgraded ? selectedUnit.nameElite : selectedUnit.nameBasic} 
+                      className={`w-auto h-[90%] object-contain select-none pointer-events-none transition-transform duration-500 group-hover/img:scale-105 filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] ${
+                        effectiveUpgraded ? 'contrast-[1.05] brightness-[1.03]' : ''
+                      }`}
+                      referrerPolicy="no-referrer"
+                    />
+                  ) : (
+                    <div className="flex flex-col items-center justify-center text-slate-500 text-center p-4">
+                      <span className="text-3xl mb-1 filter drop-shadow">⚓</span>
+                      <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400">Imagen no disponible</span>
+                    </div>
+                  )}
+                  {/* Subtle face badge indicator on artwork */}
+                  <div className={`absolute bottom-2 left-2 z-20 px-2 py-0.5 rounded text-[9px] font-mono uppercase border transition-colors duration-300 ${
+                    effectiveUpgraded 
+                      ? 'bg-amber-950/90 text-amber-300 border-amber-700/50' 
+                      : 'bg-slate-950/85 text-slate-300 border-slate-800'
+                  }`}>
+                    {effectiveUpgraded ? '✨ Cara Élite' : 'Cara Básica'}
+                  </div>
                 </div>
 
                 {/* Central Body: Stats Grid */}

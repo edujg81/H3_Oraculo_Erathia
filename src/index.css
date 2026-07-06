@@ -57,3 +57,51 @@ body {
   background-color: #110e0c;
   color: #ebd8c5;
 }
+
+/* Holographic / Foil Rainbow effect for Elite side cards */
+@keyframes foilPan {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.holo-foil-effect {
+  background: linear-gradient(
+    115deg,
+    rgba(255, 0, 0, 0.18) 0%,
+    rgba(255, 127, 0, 0.18) 12%,
+    rgba(255, 255, 0, 0.18) 25%,
+    rgba(0, 255, 80, 0.18) 38%,
+    rgba(0, 240, 255, 0.18) 50%,
+    rgba(0, 80, 255, 0.18) 63%,
+    rgba(130, 0, 255, 0.18) 75%,
+    rgba(255, 0, 240, 0.18) 88%,
+    rgba(255, 0, 0, 0.18) 100%
+  );
+  background-size: 300% 300%;
+  animation: foilPan 8s ease infinite;
+}
+
+.holo-foil-shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    125deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 60%,
+    transparent 100%
+  );
+  background-size: 200% 200%;
+  animation: foilPan 5s linear infinite;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
