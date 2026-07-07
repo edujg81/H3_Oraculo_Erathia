@@ -7,7 +7,7 @@ import RecruitmentCalculator from './components/RecruitmentCalculator';
 import ScenariosDatabase from './components/ScenariosDatabase';
 import HeroesViewer from './components/HeroesViewer';
 // @ts-ignore
-import oracleLogo from './assets/images/oracle_erathia_logo_1782855282132.jpg';
+import oracleLogo from './assets/images/sandro_oracle_titled_logo_1783458347417.jpg';
 import { RuleSection, Player } from './types';
 import { 
   Sparkles, Library, Timer, Printer, Award, BookOpen, 
@@ -200,7 +200,12 @@ export default function App() {
 
   const handleNextTurn = () => {
     if (players.length > 0) {
-      setActivePlayerIndex((activePlayerIndex + 1) % players.length);
+      const nextIndex = (activePlayerIndex + 1) % players.length;
+      setActivePlayerIndex(nextIndex);
+      // When the index wraps around to 0, all players have played this round, so advance the round.
+      if (nextIndex === 0) {
+        setRound(prev => prev + 1);
+      }
     }
     setTurnSeconds(turnLimit);
     setIsTurnRunning(true);
@@ -263,9 +268,9 @@ export default function App() {
   const tabs = [
     { id: 'chat', label: 'Consulta a Sandro', icon: Sparkles, color: 'text-amber-400' },
     { id: 'rules', label: 'Reglas y FAQs', icon: Library, color: 'text-sky-400' },
-    { id: 'scenarios', label: 'Escenarios Rápidos', icon: Compass, color: 'text-rose-400' },
-    { id: 'calculator', label: 'Visor de Criaturas', icon: Swords, color: 'text-red-400' },
-    { id: 'heroes', label: 'Visor de Héroes', icon: Users, color: 'text-yellow-400' },
+    { id: 'scenarios', label: 'Misiones', icon: Compass, color: 'text-rose-400' },
+    { id: 'units', label: 'Unidades', icon: Swords, color: 'text-red-400' },
+    { id: 'heroes', label: 'Héroes', icon: Users, color: 'text-yellow-400' },
     { id: 'timer_full', label: 'Gestión de Partida', icon: Hourglass, color: 'text-emerald-400' },
     { id: 'pdf', label: 'Manual Completo / PDF', icon: Printer, color: 'text-purple-400' }
   ];
@@ -278,21 +283,21 @@ export default function App() {
       {/* 1. Header Section */}
       <header className="bg-slate-900/60 border-b border-slate-800/80 py-4 px-6 shrink-0">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center space-x-4 text-center sm:text-left">
+          <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-4 text-center sm:text-left">
             <div className="relative group shrink-0">
-              <div className="absolute -inset-1 bg-gradient-to-r from-amber-600 via-amber-500 to-amber-700 rounded-xl blur-md opacity-75 group-hover:opacity-100 transition duration-500"></div>
-              <div className="relative w-14 h-14 bg-slate-950 rounded-xl flex items-center justify-center overflow-hidden border-2 border-amber-500/80 shadow-2xl">
+              <div className="w-40 h-40 sm:w-48 sm:h-48 flex items-center justify-center overflow-hidden">
                 <img 
                   src={oracleLogo} 
                   alt="Heroes III: Oráculo de Erathia Logo" 
-                  className="w-full h-full object-cover transform scale-105 group-hover:scale-115 transition-transform duration-300"
+                  className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-300 mix-blend-screen"
                   referrerPolicy="no-referrer"
                 />
               </div>
             </div>
-            <div>
-              <h1 className="text-lg sm:text-xl font-bold tracking-tight text-amber-500 font-serif">HEROES III: ORÁCULO DE ERATHIA</h1>
-              <p className="text-[10px] text-slate-400 uppercase tracking-widest font-mono">Compañero Digital & Base de Conocimientos Inteligente</p>
+            <div className="-mt-4 sm:mt-0 flex flex-col justify-center">
+              <p className="text-[10px] sm:text-[11px] text-amber-500/70 uppercase tracking-[0.25em] font-mono font-medium max-w-xs sm:max-w-md">
+                Asesor de Partidas & Base de Conocimientos Inteligente para el Juego de Mesa
+              </p>
             </div>
           </div>
           
@@ -373,7 +378,7 @@ export default function App() {
               </div>
             )}
 
-            {activeTab === 'calculator' && (
+            {activeTab === 'units' && (
               <div className="space-y-4">
                 <RecruitmentCalculator />
               </div>

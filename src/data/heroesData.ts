@@ -744,18 +744,18 @@ export const FACTION_HEROES: FactionHeroesData = {
       name: 'Ash',
       type: 'Magia',
       className: 'Hereje (Heretic)',
-      stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
+      stats: { atk: 1, def: 1, power: 2, knowledge: 1 },
       initialSkill: {
         name: 'Ojo de Águila (Eagle Eye)',
-        normal: 'Al inicio de la partida, puedes robar 1 carta adicional de tu mazo de magia de forma gratuita.',
-        expert: 'Gasta 1 Corona para copiar un hechizo que acaba de lanzar tu oponente (lo memorizas de forma temporal durante este combate).'
+        normal: 'Instantáneo: Roba cartas del mazo de hechizos hasta que encuentres una carta de Hechizo Básico. Tómala en tu mano o descártala. Baraja el resto de las cartas y devuélvelas al mazo de hechizos.',
+        expert: 'Instantáneo: Roba cartas del mazo de hechizos hasta que encuentres una carta de Hechizo Experto. Tómala en tu mano o descártala. Baraja el resto de las cartas y devuélvelas al mazo de hechizos.'
       },
       specialty: {
         name: 'Especialidad: Sed de Sangre',
         cards: [
-          { level: 1, name: 'Furia de Combate I', effect: 'Tus unidades de combate cuerpo a cuerpo infligen +1 de daño físico si están bajo los efectos del hechizo Sed de Sangre.' },
-          { level: 4, name: 'Sed de Sangre Masiva IV', effect: 'El coste del hechizo Sed de Sangre se reduce en 1 de Maná (mínimo 1). Además, afecta a todas las unidades en tu zona de despliegue.' },
-          { level: 6, name: 'Frenesí Sanguinario VI', effect: 'Una vez por combate, puedes lanzar el hechizo Sed de Sangre de forma gratuita. La unidad seleccionada gana +1 de Iniciativa y puede atacar dos veces.' }
+          { level: 1, name: 'Sed de Sangre I', effect: 'Instantáneo: Tu unidad terrestre o voladora seleccionada aumenta su Ataque en 2 y su Iniciativa en 1. Coloca un cubo negro sobre esa unidad.' },
+          { level: 4, name: 'Sed de Sangre IV', effect: 'Continuo: Para este combate, tu unidad terrestre o voladora seleccionada aumenta su Ataque en 2 y su Iniciativa en 1. Coloca un cubo negro sobre esa unidad.' },
+          { level: 6, name: 'Sed de Sangre VI', effect: 'Instantáneo: Tu unidad terrestre o voladora seleccionada gana +3 Ataque e ignora los contraataques. Coloca un cubo negro sobre esa unidad.' }
         ]
       },
       lore: 'Una hereje con visiones obsesivas de derramamiento de sangre, experta en transmitir un frenesí despiadado y una sed insaciable de combate a todos sus ejércitos.',
@@ -774,12 +774,13 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Cerberos',
         cards: [
-          { level: 1, name: 'Colmillos de Cerbero', effect: 'Tus unidades de Sabuesos de las Tinieblas y Cerberos ganan +1 de Ataque y +1 de Iniciativa.' },
-          { level: 4, name: 'Ataque de Tres Cabezas', effect: 'Tus Cerberos atacan simultáneamente al objetivo y a dos unidades adyacentes a este sin sufrir represalias.' },
-          { level: 6, name: 'Mordisco de Cérbero', effect: 'Los ataques de tus Cerberos causan la dolencia "Hemorragia", infligiendo 1 daño físico al inicio de la siguiente ronda táctica.' }
+          { level: 1, name: 'Cerberos I', effect: 'Instantáneo: Tu unidad seleccionada gana +1 de Ataque.\n— O —\nInstantáneo: Tu unidad seleccionada gana +1 Defensa.\n______\nEste efecto se duplica para la unidad Cerberos.' },
+          { level: 4, name: 'Cerberos IV', effect: 'Continuo: Para este Combate, la Vida de tu unidad seleccionada aumenta en 1.\nEste efecto se duplica para la unidad Cerberos.' },
+          { level: 6, name: 'Cerberos VI', effect: 'Instantáneo: Tu unidad seleccionada gana +2 de Ataque.\nEste effecto se duplica para la unidad Cerberos.' }
         ]
       },
-      lore: 'Una domadora de bestias infernales que entrena a los temibles sabuesos de tres cabezas para desgarrar las líneas de vanguardia enemigas.'
+      lore: 'Una domadora de bestias infernales que entrena a los temibles sabuesos de tres cabezas para desgarrar las líneas de vanguardia enemigas con feroz precisión.',
+      quote: 'Mis sabuesos no ladran antes de morder. Solo escuchas el crujir de los huesos y el calor de las cenizas.'
     },
     {
       name: 'Octavia',
@@ -788,44 +789,46 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Aprendizaje (Learning)',
-        normal: 'Al inicio de la partida o al subir de nivel, puedes robar 1 carta adicional de tu mazo y luego descartar 1.',
-        expert: 'Gasta 1 Corona para buscar en tu mazo de cartas de habilidad una carta de nivel 1 o 2 y añadirla directamente a tu mano.'
+        normal: 'Instantáneo: Elige 1 carta de tu pila de descarte y añádela a tu mano.',
+        expert: 'Mapa: Retira hasta 2 cartas de Característica de tu mano o pila de descarte. Toma hasta 2 cartas de Característica Mejorada diferentes y colócalas encima de tu pila de descarte. Retira Aprendizaje.'
       },
       specialty: {
-        name: 'Especialidad: Patrimonio',
+        name: 'Especialidad: Finanzas',
         cards: [
-          { level: 1, name: 'Tributo de Almas I', effect: 'Generas +1 de Oro al inicio de cada Fase de Recursos de forma pasiva.' },
-          { level: 4, name: 'Impuesto de Sheogh IV', effect: 'El coste de reclutamiento de tus unidades aliadas de Inferno se reduce en 1 de Oro.' },
-          { level: 6, name: 'Riqueza Imperial VI', effect: 'Una vez por ronda de mapa, puedes gastar 2 de Oro para construir inmediatamente cualquier edificio de tu ciudad sin coste de madera o piedra.' }
+          { level: 1, name: 'Finanzas I', effect: 'Instantáneo: Juega esta carta después de lanzar al menos 1 dado de Recursos para establecer 1 dado de Recursos a "6 Oros".\n— O —\nInstantáneo: Roba 1 carta.' },
+          { level: 4, name: 'Finanzas IV', effect: 'Instantáneo: Tira 1 dado de Recursos y resuelvelo.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Ataque.' },
+          { level: 6, name: 'Finanzas VI', effect: 'Instantáneo: Tira 2 dados de Recursos y resuelve uno de ellos.\n— O —\nInstantáneo: Roba 2 cartas.' }
         ]
       },
-      lore: 'Una calculadora oficial de las legiones de Sheogh experta en la recaudación tributaria y la logística material de la campaña del Caos.'
+      lore: 'Una calculadora oficial de las legiones de Sheogh, experta en la recaudación tributaria de almas y la eficiente administración del tesoro de azufre.',
+      quote: 'Incluso en el Caos hay un balance de cuentas. Vuestras vidas no son más que un tributo que ha vencido su plazo.'
     },
     {
       name: 'Rashka',
       type: 'Poder',
       className: 'Demonio (Demoniac)',
-      stats: { atk: 3, def: 1, power: 1, knowledge: 1 },
+      stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Aprendizaje (Learning)',
-        normal: 'Al inicio de la partida o al subir de nivel, puedes robar 1 carta adicional de tu mazo y luego descartar 1.',
-        expert: 'Gasta 1 Corona para buscar en tu mazo de cartas de habilidad una carta de nivel 1 o 2 y añadirla directamente a tu mano.'
+        normal: 'Instantáneo: Elige 1 carta de tu pila de descarte y añádela a tu mano.',
+        expert: 'Mapa: Retira hasta 2 cartas de Característica de tu mano o pila de descarte. Toma hasta 2 cartas de Característica Mejorada diferentes y colócalas encima de tu pila de descarte. Retira Aprendizaje.'
       },
       specialty: {
         name: 'Especialidad: Efreets',
         cards: [
-          { level: 1, name: 'Escudo de Llamas', effect: 'Tus Efreets y Sultanes de Efreet ganan +1 de Defensa y +1 de Iniciativa.' },
-          { level: 4, name: 'Cuerpo Incandescente', effect: 'El escudo de llamas de tus Efreets devuelve +1 herida física a cualquier atacante cuerpo a cuerpo.' },
-          { level: 6, name: 'Torbellino de Fuego', effect: 'Una vez por combate, un Efreet aliado puede explotar en llamas infligiendo 2 de daño físico a todas las tropas enemigas adyacentes.' }
+          { level: 1, name: 'Efreets I', effect: 'Instantáneo: Tu unidad seleccionada gana +1 de Ataque.\n— O —\nInstantáneo: Tu unidad seleccionada gana +1 Defensa.\n______\nEste efecto se duplica para la unidad Efreets.' },
+          { level: 4, name: 'Efreets IV', effect: 'Continuo: Hasta el final del Combate, cuando tu unidad seleccionada sea atacada por una unidad terrestre o voladora, el atacante sufre 1 Herida.' },
+          { level: 6, name: 'Efreets VI', effect: 'Continuo: Hasta el final del Combate, cuando tu unidad seleccionada sea atacada por una unidad terrestre o voladora, el atacante sufre 1 Herida.\nEste efecto se duplica para la unidad Efreets.' }
         ]
       },
-      lore: 'Un brutal y colérico señor del fuego que somete a los efreets más salvajes a su estricta disciplina militar.'
+      lore: 'Un brutal y colérico demonio que somete a los efreets más salvajes a su estricta disciplina militar, convirtiéndolos en escudos vivientes de fuego.',
+      quote: 'El fuego no obedece a los débiles. Mis efreets os consumirán antes de que podáis implorar clemencia.'
     },
     {
       name: 'Xyron',
       type: 'Magia',
       className: 'Hereje (Heretic)',
-      stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
+      stats: { atk: 1, def: 1, power: 2, knowledge: 1 },
       initialSkill: {
         name: 'Sabiduría (Wisdom)',
         normal: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(3) en lugar de Buscar(2).',
@@ -834,18 +837,19 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Infierno',
         cards: [
-          { level: 1, name: 'Fuego Infernal I', effect: 'Comienzas el juego con el hechizo "Infierno" memorizado de forma gratuita. Causa +1 de daño místico.' },
-          { level: 4, name: 'Llamas Azotadoras IV', effect: 'Tu hechizo "Infierno" inflige +2 de daño místico y aplica un penalizador de -1 a la defensa física del objetivo.' },
-          { level: 6, name: 'Lluvia de Fuego del Foso VI', effect: 'Una vez por combate, puedes lanzar el hechizo "Infierno" pagando 2 de Maná menos (mínimo 1).' }
+          { level: 1, name: 'Infierno I', effect: 'Activación: Descarta 2 cartas. Luego selecciona un espacio. Todas las unidades en este y los espacios adyacentes reciben 1 Herida.' },
+          { level: 4, name: 'Infierno IV', effect: 'Activación: Descarta 1 carta. Luego selecciona un espacio. Todas las unidades en este y los espacios adyacentes reciben 1 Herida.' },
+          { level: 6, name: 'Infierno VI', effect: 'Activación: Selecciona un espacio. Todas las unidades en este y los espacios adyacentes reciben 1 Herida.' }
         ]
       },
-      lore: 'Un conjurador proscrito obsesionado con desatar fuegos eternos, capaz de fundir ejércitos con un devastador hechizo de tormenta de fuego abisal.'
+      lore: 'Un conjurador proscrito obsesionado con desatar fuegos eternos, capaz de fundir ejércitos con la devastación absoluta de su tormenta de fuego abisal.',
+      quote: 'Dejad que las llamas del abismo os abracen. Del polvo venís y en cenizas os fundiré.'
     },
     {
       name: 'Zydar',
       type: 'Magia',
       className: 'Hereje (Heretic)',
-      stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
+      stats: { atk: 1, def: 1, power: 2, knowledge: 1 },
       initialSkill: {
         name: 'Brujería (Sorcery)',
         normal: 'Instantáneo: +1 Potencia\nLuego, roba 1 carta.',
@@ -854,12 +858,13 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Brujería',
         cards: [
-          { level: 1, name: 'Amplificación Arcana I', effect: 'Tus hechizos destructivos que causan daño místico infligen +1 de daño adicional.' },
-          { level: 4, name: 'Canalización de Azufre IV', effect: 'Cada vez que tu héroe lance un hechizo místico de nivel 1 o 2, recupera 1 punto de Maná de forma instantánea.' },
-          { level: 6, name: 'Torrente Destructivo VI', effect: 'Una vez por combate, puedes relanzar un hechizo místico de tu pila de descartes pagando la mitad de su coste de Maná.' }
+          { level: 1, name: 'Brujería I', effect: 'Instantáneo: Juega esta carta después de lanzar un Hechizo, luego roba 1 carta.\n— O —\nInstantáneo: +1 Potencia.' },
+          { level: 4, name: 'Brujería IV', effect: 'Instantáneo: El próximo Hechizo que lances no cuenta para el límite.\n— O —\nInstantáneo: +2 Potencia.' },
+          { level: 6, name: 'Brujería VI', effect: 'Continuo: Hasta el final de la ronda de Combate, después de lanzar un Hechizo, roba 1 carta.\nInstantáneo: +2 Potencia.' }
         ]
       },
-      lore: 'Un refinado y calculador hereje que extrae poder místico directamente del núcleo del caos, amplificando cada conjuro con efectos corrosivos de gran intensidad.'
+      lore: 'Un refinado y calculador hereje que extrae poder místico directamente del núcleo del caos, amplificando cada conjuro con efectos corrosivos de gran intensidad.',
+      quote: 'Vuestra magia se desvanece ante el poder corrosivo del azufre. Contemplad el verdadero arte del tormento.'
     }
   ],
   stronghold: [
@@ -867,7 +872,7 @@ export const FACTION_HEROES: FactionHeroesData = {
       name: 'Crag Hack',
       type: 'Poder',
       className: 'Bárbaro (Barbarian)',
-      stats: { atk: 3, def: 1, power: 1, knowledge: 1 },
+      stats: { atk: 4, def: 0, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Ofensiva (Offense)',
         normal: 'Instantáneo: +1 Ataque\nLuego, roba 1 carta.',
@@ -876,9 +881,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Ofensiva',
         cards: [
-          { level: 1, name: 'Ataque Implacable I', effect: 'Tus tropas de combate cuerpo a cuerpo infligen +1 de daño físico.' },
-          { level: 4, name: 'Ataque Implacable IV', effect: 'Tus tropas cuerpo a cuerpo infligen +2 de daño físico y ganan +1 de Iniciativa.' },
-          { level: 6, name: 'Ataque Implacable VI', effect: 'Una vez por combate, puedes relanzar todos los dados de ataque fallidos de tus unidades cuerpo a cuerpo.' }
+          { level: 1, name: 'Ofensiva I', effect: 'Continuo: Para este combate, tu unidad seleccionada obtiene +1 Ataque.' },
+          { level: 4, name: 'Ofensiva IV', effect: 'Continuo: La unidad seleccionada gana +1 Ataque. Puedes descartar una carta para obtener +1 Ataque adicional.' },
+          { level: 6, name: 'Ofensiva VI', effect: 'Continuo: Para este combate, cada carta que juegues puede otorgar "Instantáneo: +1 Ataque" en lugar de su efecto habitual.' }
         ]
       },
       lore: 'El bárbaro más famoso de Antagarich, un guerrero temerario que confía únicamente en la fuerza de su brazo y el filo de su hacha.',
@@ -888,18 +893,18 @@ export const FACTION_HEROES: FactionHeroesData = {
       name: 'Dessa',
       type: 'Magia',
       className: 'Mago de Batalla (Battle Mage)',
-      stats: { atk: 2, def: 1, power: 1, knowledge: 2 },
+      stats: { atk: 2, def: 1, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Logística (Logistics)',
-        normal: 'Tu héroe obtiene +1 Punto de Movimiento (PM) verde extra en el mapa de exploración.',
-        expert: 'Tu héroe obtiene +1 Punto de Movimiento (PM) verde extra. Además, ignora los penalizadores de fango o desierto en la exploración.'
+        normal: 'Continuo: Al final de tu turno, mueve la miniatura de tu Héroe a un lugar vacío adyacente.',
+        expert: 'Instantáneo: Tu héroe gana +1 Punto de Movimiento.'
       },
       specialty: {
         name: 'Especialidad: Logística',
         cards: [
-          { level: 1, name: 'Paso Veloz I', effect: 'Tu héroe obtiene +1 de movimiento extra en el mapa táctico de combate.' },
-          { level: 4, name: 'Paso Veloz IV', effect: 'El coste de movimiento de tus unidades para cruzar terrenos difíciles se reduce a la mitad.' },
-          { level: 6, name: 'Paso Veloz VI', effect: 'Una vez por ronda de mapa, tu héroe puede teletransportarte inmediatamente a cualquier casilla explorada a 3 de distancia.' }
+          { level: 1, name: 'Logística I', effect: 'Instantáneo: Extiende tu combate contra un ejército neutral durante otra ronda (sin gastar ningún PM).' },
+          { level: 4, name: 'Logística IV', effect: 'Mapa: Tu héroe principal gana 1 PM.\n— O —\nContinuo: Para este combate, la Iniciativa de todas tus unidades aumenta en 1.' },
+          { level: 6, name: 'Logística VI', effect: 'Mapa: Tu héroe principal gana 1 PM y puede moverse a través de campos bloqueados durante este turno.\n— O —\nInstantáneo: Roba 2 cartas.' }
         ]
       },
       lore: 'Un chamán de Krewlod dotado de una sintonía profunda con las corrientes tectónicas, permitiéndole acelerar el avance de sus tropas.',
@@ -909,47 +914,49 @@ export const FACTION_HEROES: FactionHeroesData = {
       name: 'Gundula',
       type: 'Magia',
       className: 'Mago de Batalla (Battle Mage)',
-      stats: { atk: 2, def: 1, power: 2, knowledge: 1 },
+      stats: { atk: 2, def: 1, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Sabiduría (Wisdom)',
         normal: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(3) en lugar de Buscar(2).',
         expert: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(4) en lugar de Buscar(3).'
       },
       specialty: {
-        name: 'Especialidad: Ralentizar',
+        name: 'Especialidad: Lentitud',
         cards: [
-          { level: 1, name: 'Inercia Arcana I', effect: 'Comienzas el juego con el hechizo "Ralentizar" memorizado de forma gratuita. Reduce la iniciativa de 1 unidad enemiga en -1.' },
-          { level: 4, name: 'Inercia Arcana IV', effect: 'Tu hechizo "Ralentizar" ahora reduce la iniciativa de 2 unidades enemigas en -2 y les quita 1 PM táctico.' },
-          { level: 6, name: 'Inercia Arcana VI', effect: 'Una vez por combate, puedes lanzar el hechizo "Ralentizar" de forma masiva afectando a todo el ejército enemigo sin coste de Maná.' }
+          { level: 1, name: 'Lentitud I', effect: 'Continuo: Para este combate, la Iniciativa de la unidad seleccionada se reduce en 2, hasta un mínimo de 1.' },
+          { level: 4, name: 'Lentitud IV', effect: 'Instantáneo: La unidad seleccionada obtiene +1 Ataque.\nEl efecto se duplica si la Iniciativa de la unidad es superior a la Iniciativa de la unidad atacada.' },
+          { level: 6, name: 'Lentitud VI', effect: 'Continuo: Para este combate, la Iniciativa de la unidad seleccionada se reduce en 4, hasta un mínimo de 1.' }
         ]
       },
-      lore: 'Una estratega bárbara de intelecto gélido, famosa por ralentizar el ímpetu de las cargas enemigas antes de desatar la furia de su tribu.'
+      lore: 'Una estratega bárbara de intelecto gélido, famosa por ralentizar el ímpetu de las cargas enemigas y asfixiar su movilidad antes de desatar la furia de su tribu.',
+      quote: 'El pánico nubla la mente y frena los pies. Vuestro ímpetu morirá antes de tocar nuestras filas.'
     },
     {
       name: 'Shiva',
       type: 'Poder',
       className: 'Bárbaro (Barbarian)',
-      stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
+      stats: { atk: 4, def: 0, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Búsqueda (Scouting)',
-        normal: 'Tu héroe obtiene +1 de movimiento extra y revela 1 loseta oculta adyacente al inicio de su turno.',
-        expert: 'Tu héroe obtiene +2 de movimiento extra y revela hasta 2 losetas ocultas adyacentes al inicio de su turno.'
+        name: 'Exploración (Scouting)',
+        normal: 'Instantáneo: Juega esta carta antes de realizar una acción de Buscar, luego realiza Buscar(3) en su lugar.',
+        expert: 'Instantáneo: Juega esta carta antes de realizar una acción de Buscar, luego realiza Buscar(5) en su lugar.'
       },
       specialty: {
         name: 'Especialidad: Aves del Trueno',
         cards: [
-          { level: 1, name: 'Nido de Tormentas I', effect: 'Tus Rocs y Aves del Trueno ganan +1 de Defensa y +1 de Iniciativa.' },
-          { level: 4, name: 'Nido de Tormentas IV', effect: 'Tus Rocs y Aves del Trueno causan +1 daño físico adicional y aplican parálisis temporal al atacar.' },
-          { level: 6, name: 'Nido de Tormentas VI', effect: 'Una vez por combate, tus Aves del Trueno convocan un rayo que inflige 2 de daño místico directo al objetivo.' }
+          { level: 1, name: 'Aves del Trueno I', effect: 'Instantáneo: La unidad seleccionada gana +1 de Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad Aves del Trueno.' },
+          { level: 4, name: 'Aves del Trueno IV', effect: 'Continuo: Para este Combate, tu unidad seleccionada obtiene +1 Vida.\nEl efecto se duplica para la unidad Aves del Trueno..' },
+          { level: 6, name: 'Aves del Trueno VI', effect: 'Continuo: Para este Combate, tu unidad seleccionada obtiene +2 Iniciativa.\nEl efecto se duplica para la unidad Aves del Trueno.' }
         ]
       },
-      lore: 'Una jinete bárbara indómita criada en las cimas escarpadas, capaz de silbar en la frecuencia de las tormentas de montaña.'
+      lore: 'Una jinete bárbara indómita criada en las cimas escarpadas de Krewlod, capaz de silbar en la frecuencia de las tormentas y guiar a las colosales Aves del Trueno.',
+      quote: '¿Escucháis el trueno en las alturas? No es el clima, es el eco de vuestra inminente caída.'
     },
     {
       name: 'Tarnum',
       type: 'Poder',
       className: 'Bárbaro (Barbarian)',
-      stats: { atk: 3, def: 1, power: 1, knowledge: 1 },
+      stats: { atk: 4, def: 0, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Ofensiva (Offense)',
         normal: 'Instantáneo: +1 Ataque\nLuego, roba 1 carta.',
@@ -958,18 +965,19 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Ofensiva',
         cards: [
-          { level: 1, name: 'Furia de Krewlod I', effect: 'Tus unidades cuerpo a cuerpo infligen +1 de daño físico.' },
-          { level: 4, name: 'Furia de Krewlod IV', effect: 'Tus unidades de nivel bronce ganan +1 de Iniciativa y son inmunes al miedo o moral negativa.' },
-          { level: 6, name: 'Furia de Krewlod VI', effect: 'Una vez por combate, cuando una unidad aliada ataque, puedes duplicar su daño físico en esta ronda.' }
+          { level: 1, name: 'Ofensiva I', effect: 'Instantáneo: La unidad seleccionada obtiene +1 Ataque.\n— O —\nInstantáneo: Roba 1 carta.' },
+          { level: 4, name: 'Ofensiva IV', effect: 'Continuo: Para este Combate, tu unidad seleccionada obtiene +1 Ataque.' },
+          { level: 6, name: 'Ofensiva VI', effect: 'Instantáneo: La unidad seleccionada obtiene +3 Ataque.' }
         ]
       },
-      lore: 'El Héroe Inmortal que comenzó sus andanzas como el temido tirano bárbaro de Krewlod, empuñando la espada de la liberación.'
+      lore: 'El legendario Héroe Inmortal que comenzó su eterno camino de redención como el indomable tirano bárbaro de Krewlod, empuñando la espada de la liberación.',
+      quote: 'He vivido mil vidas y luchado en mil guerras. Vuestro acero no puede extinguir un fuego que los propios ancestros encendieron.'
     },
     {
       name: 'Yog',
       type: 'Poder',
       className: 'Bárbaro (Barbarian)',
-      stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
+      stats: { atk: 4, def: 0, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Ofensiva (Offense)',
         normal: 'Instantáneo: +1 Ataque\nLuego, roba 1 carta.',
@@ -978,12 +986,13 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Cíclopes',
         cards: [
-          { level: 1, name: 'Fuerza Monstruosa I', effect: 'Tus Cíclopes obtienen +1 de Ataque a distancia y +1 de Iniciativa.' },
-          { level: 4, name: 'Fuerza Monstruosa IV', effect: 'Los ataques de tus Cíclopes infligen +1 de daño de asedio adicional contra murallas u obstáculos.' },
-          { level: 6, name: 'Fuerza Monstruosa VI', effect: 'Una vez por combate, tus Cíclopes pueden disparar a dos objetivos diferentes en el mismo turno táctico.' }
+          { level: 1, name: 'Cíclopes I', effect: 'Instantáneo: La unidad seleccionada gana +1 de Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad Cíclopes.' },
+          { level: 4, name: 'Cíclopes IV', effect: 'Continuo: Para este Combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad Cíclopes..' },
+          { level: 6, name: 'Cíclopes VI', effect: 'Continuo: Para este Combate, la Vida de unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad Cíclopes.' }
         ]
       },
-      lore: 'Nacido de un genio de Bracada y una bárbara de Krewlod, Yog renunció por completo al uso de la magia para abrazar su herencia de guerrero.'
+      lore: 'Nacido de una madre genio de Bracada y un padre bárbaro de Krewlod, Yog renunció por completo a sus refinados estudios mágicos para abrazar la gloriosa y salvaje senda de la fuerza.',
+      quote: 'Dejad los trucos de magia y los conjuros para los débiles. El rugido de un cíclope y la fuerza bruta deciden el destino del campo de batalla.'
     }
   ],
   fortaleza: [
@@ -1198,8 +1207,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Logística (Logistics)',
-        normal: 'Tu héroe obtiene +1 Punto de Movimiento (PM) verde en el mapa.',
-        expert: 'Tu héroe obtiene +1 de movimiento extra en el mapa y puede ignorar penalizaciones de terreno en un turno.'
+        normal: 'Continuo: Al final de tu turno, mueve la miniatura de tu Héroe a un lugar vacío adyacente.',
+        expert: 'Instantáneo: Tu héroe gana +1 Punto de Movimiento.'
       },
       specialty: {
         name: 'Especialidad: Elementales de Magia',
@@ -1340,8 +1349,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 2, def: 1, power: 1, knowledge: 2 },
       initialSkill: {
         name: 'Logística (Logistics)',
-        normal: 'Tu héroe obtiene +1 Punto de Movimiento (PM) verde en el mapa de exploración.',
-        expert: 'Tu héroe obtiene +1 de movimiento extra en el mapa y puede ignorar penalizaciones de terreno en un turno.'
+        normal: 'Continuo: Al final de tu turno, mueve la miniatura de tu Héroe a un lugar vacío adyacente.',
+        expert: 'Instantáneo: Tu héroe gana +1 Punto de Movimiento.'
       },
       specialty: {
         name: 'Especialidad: Exploración',

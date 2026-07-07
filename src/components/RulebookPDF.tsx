@@ -1,6 +1,6 @@
 import { Printer, ShoppingBag, ShieldAlert, BookOpen, Download } from 'lucide-react';
 // @ts-ignore
-import oracleLogo from '../assets/images/oracle_erathia_logo_1782855282132.jpg';
+import oracleLogo from '../assets/images/sandro_oracle_titled_logo_1783458347417.jpg';
 
 export default function RulebookPDF() {
   const triggerPrint = () => {
@@ -160,25 +160,21 @@ export default function RulebookPDF() {
         {/* Printable cover/header */}
         <div className="text-center space-y-5 pb-8 border-b border-amber-900/10 flex flex-col items-center justify-center pt-4">
           <div className="relative group shrink-0 my-2">
-            <div className="absolute -inset-2 bg-gradient-to-r from-amber-600 via-amber-500 to-amber-700 rounded-2xl blur-lg opacity-75"></div>
-            <div className="relative w-64 h-64 bg-slate-950 rounded-2xl flex items-center justify-center overflow-hidden border-4 border-amber-500 shadow-2xl">
+            <div className="w-80 h-80 flex items-center justify-center overflow-hidden">
               <img 
                 src={oracleLogo} 
                 alt="Heroes III: Oráculo de Erathia Cover Art" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain mix-blend-screen"
                 referrerPolicy="no-referrer"
               />
             </div>
           </div>
           <div className="space-y-2">
-            <h1 className="font-serif text-3xl sm:text-4xl text-amber-400 font-bold tracking-tight">
-              HEROES OF MIGHT AND MAGIC III: EL JUEGO DE MESA
-            </h1>
             <h2 className="text-md uppercase font-mono tracking-widest text-amber-500 font-semibold">
-              Compendio De Reglas Final & Guía Consolidada De Expansiones
+              Compendio De Reglas Completo para Heroes of Might & Magic III: El Juego de Mesa
             </h2>
             <p className="text-neutral-500 text-xs font-mono">
-              Documento de Referencia Oficial en Español • Libre de Redundancias
+              Documento de Referencia en Español
             </p>
           </div>
         </div>
