@@ -1229,7 +1229,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Tarnum',
       type: 'Magia',
-      className: 'Conjuradora (Elementalist)',
+      className: 'Conjurador (Elementalist)',
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Sabiduría (Wisdom)',

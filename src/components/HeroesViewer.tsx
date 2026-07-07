@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Swords, Shield, Zap, Brain, Award, Star, BookOpen, 
-  Sparkles, User, Flame, ShieldAlert, Compass, Quote, Info,
+  Sparkles, User, Flame, HandFist, Compass, Quote, Info,
   Lock, CheckCircle2, Layers, Settings2
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
@@ -251,7 +251,11 @@ export default function HeroesViewer() {
                           <img 
                             src={heroImage}
                             alt={hero.name}
-                            className="w-full h-full object-cover select-none pointer-events-none"
+                            className={`w-full h-full object-cover select-none pointer-events-none ${
+                              hero.name === 'Tarnum' && selectedFaction === 'confluencia'
+                                ? 'scale-[1.35] origin-top'
+                                : ''
+                            }`}
                             referrerPolicy="no-referrer"
                             onError={(e) => {
                               const img = e.target as HTMLImageElement;
@@ -329,7 +333,7 @@ export default function HeroesViewer() {
                     <div className="flex items-start gap-4">
                       {/* Interactive Elegant Portrait */}
                       <div className="relative shrink-0">
-                        <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border-2 bg-slate-950 flex items-center justify-center shadow-xl transition-all duration-300 group ${
+                        <div className={`w-[86px] h-[86px] sm:w-[108px] sm:h-[108px] rounded-2xl overflow-hidden border-2 bg-slate-950 flex items-center justify-center shadow-xl transition-all duration-300 group ${
                           selectedHero.type === 'Poder' 
                             ? 'border-red-600/50 hover:border-red-500 shadow-red-950/20' 
                             : 'border-sky-600/50 hover:border-sky-500 shadow-sky-950/20'
@@ -337,17 +341,21 @@ export default function HeroesViewer() {
                           <img 
                             src={selectedHeroImage}
                             alt={selectedHero.name}
-                            className="w-full h-full object-cover select-none pointer-events-none transition-transform duration-500 group-hover:scale-110"
+                            className={`w-full h-full object-cover select-none pointer-events-none transition-transform duration-500 ${
+                              selectedHero.name === 'Tarnum' && selectedFaction === 'confluencia'
+                                ? 'scale-[1.35] origin-top group-hover:scale-[1.45]'
+                                : 'group-hover:scale-110'
+                            }`}
                             referrerPolicy="no-referrer"
                             onError={(e) => {
                               (e.target as HTMLImageElement).src = `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(selectedHero.name)}&backgroundColor=0f172a,1e293b,334155&fontSize=38&bold=true`;
                             }}
                           />
                         </div>
-                        <div className={`absolute -bottom-1 -right-1 w-5 h-5 rounded-lg border flex items-center justify-center bg-slate-950 shadow-md ${
+                        <div className={`absolute -bottom-1 -right-1 w-6 h-6 rounded-lg border flex items-center justify-center bg-slate-950 shadow-md ${
                           selectedHero.type === 'Poder' ? 'border-red-900/60 text-red-400' : 'border-sky-900/60 text-sky-400'
                         }`}>
-                          {selectedHero.type === 'Poder' ? <Flame className="w-3 h-3" /> : <Sparkles className="w-3 h-3" />}
+                          {selectedHero.type === 'Poder' ? <Flame className="w-3.5 h-3.5" /> : <Sparkles className="w-3.5 h-3.5" />}
                         </div>
                       </div>
 
@@ -377,7 +385,7 @@ export default function HeroesViewer() {
                       <div className={`w-10 h-10 rounded-2xl border flex items-center justify-center bg-slate-950/80 ${
                         selectedHero.type === 'Poder' ? 'border-red-900/50 text-red-400' : 'border-sky-900/50 text-sky-400'
                       }`}>
-                        {selectedHero.type === 'Poder' ? <ShieldAlert className="w-5 h-5" /> : <BookOpen className="w-5 h-5" />}
+                        {selectedHero.type === 'Poder' ? <HandFist className="w-5 h-5" /> : <BookOpen className="w-5 h-5" />}
                       </div>
                     </div>
                   </div>
@@ -428,7 +436,7 @@ export default function HeroesViewer() {
                             {getHandLimit(heroLevel)} cartas
                           </span>
                           <span className="text-[10px] text-slate-400 block leading-tight mt-0.5">
-                            Al inicio de cada ronda se descartan y roban cartas hasta alcanzar el límite
+                            Al inicio de cada ronda
                           </span>
                         </div>
                       </div>
@@ -439,12 +447,12 @@ export default function HeroesViewer() {
                           👑
                         </div>
                         <div>
-                          <span className="text-[10px] uppercase font-mono text-slate-500 block">Fichas de corona disponibles</span>
+                          <span className="text-[10px] uppercase font-mono text-slate-500 block">Coronas disponibles</span>
                           <span className="text-sm font-bold text-slate-200 font-mono">
                             {getCrowns(heroLevel)} {getCrowns(heroLevel) === 1 ? 'Corona' : 'Coronas'}
                           </span>
                           <span className="text-[10px] text-slate-400 block leading-tight mt-0.5">
-                            Para activar Efecto Experto de Habilidades
+                            Activan Efecto Experto de Habilidades
                           </span>
                         </div>
                       </div>
@@ -461,7 +469,7 @@ export default function HeroesViewer() {
                         </span>
                       </div>
                       <p className="text-[10px] text-slate-400 leading-relaxed font-sans">
-                        Al inicio de la partida el mazo inicial del héroe es de <strong className="text-slate-200">9 cartas</strong> {selectedHero.type === 'Magia' ? (
+                        El mazo inicial del héroe es de <strong className="text-slate-200">9 cartas</strong> {selectedHero.type === 'Magia' ? (
                           <span>(<strong>5</strong> de Características, <strong>1</strong> de Habilidad inicial, <strong>1</strong> de Especialidad I y <strong>2</strong> de Hechizo 'Flecha Mágica').</span>
                         ) : (
                           <span>(<strong>6</strong> de Características, <strong>1</strong> de Habilidad inicial, <strong>1</strong> de Especialidad I y <strong>1</strong> de Hechizo 'Flecha Mágica').</span>
@@ -472,7 +480,7 @@ export default function HeroesViewer() {
                     <div className="space-y-2">
                       <div className="flex items-center gap-2 border-b border-slate-800/60 pb-1.5">
                         <Settings2 className="w-4 h-4 text-amber-500 shrink-0" />
-                        <span className="text-[10px] uppercase font-mono tracking-wider text-slate-350 font-bold">Características</span>
+                        <span className="text-[10px] uppercase font-mono tracking-wider text-slate-350 font-bold">Cartas de Características</span>
                       </div>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                       
@@ -481,7 +489,7 @@ export default function HeroesViewer() {
                         <div className="w-8 h-8 rounded-xl bg-red-950/40 border border-red-900/30 flex items-center justify-center mb-1.5">
                           <Swords className="w-4 h-4 text-red-400" />
                         </div>
-                        <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Cartas de Ataque</span>
+                        <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Ataque</span>
                         <span className="text-lg font-mono font-bold text-red-400 mt-0.5">{selectedHero.stats.atk}</span>
                         <div className="mt-1 text-[10px] text-slate-400 leading-tight">
                           Daño Físico: <strong className="text-red-300">+1</strong> (+2 Mejorado)
@@ -493,7 +501,7 @@ export default function HeroesViewer() {
                         <div className="w-8 h-8 rounded-xl bg-emerald-950/40 border border-emerald-900/30 flex items-center justify-center mb-1.5">
                           <Shield className="w-4 h-4 text-emerald-400" />
                         </div>
-                        <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Cartas de Defensa</span>
+                        <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Defensa</span>
                         <span className="text-lg font-mono font-bold text-emerald-400 mt-0.5">{selectedHero.stats.def}</span>
                         <div className="mt-1 text-[10px] text-slate-400 leading-tight">
                           Mitigación: <strong className="text-emerald-300">-1</strong> (-2 Mejorado)
@@ -505,7 +513,7 @@ export default function HeroesViewer() {
                         <div className="w-8 h-8 rounded-xl bg-cyan-950/40 border border-cyan-900/30 flex items-center justify-center mb-1.5">
                           <Zap className="w-4 h-4 text-cyan-400" />
                         </div>
-                        <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Cartas de Poder</span>
+                        <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Poder</span>
                         <span className="text-lg font-mono font-bold text-cyan-400 mt-0.5">{selectedHero.stats.power}</span>
                         <div className="mt-1 text-[10px] text-slate-400 leading-tight">
                           Potencia Magia: <strong className="text-cyan-300">+1</strong> (+2 Mejorado)
@@ -517,7 +525,7 @@ export default function HeroesViewer() {
                         <div className="w-8 h-8 rounded-xl bg-purple-950/40 border border-purple-900/30 flex items-center justify-center mb-1.5">
                           <Brain className="w-4 h-4 text-purple-400" />
                         </div>
-                        <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Cartas de Conocimiento</span>
+                        <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Conocimiento</span>
                         <span className="text-lg font-mono font-bold text-purple-400 mt-0.5">{selectedHero.stats.knowledge}</span>
                         <div className="mt-1 text-[10px] text-slate-400 leading-tight">
                           Recuperar Hechizo (+1 Límite)
