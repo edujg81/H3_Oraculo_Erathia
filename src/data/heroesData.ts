@@ -616,27 +616,28 @@ export const FACTION_HEROES: FactionHeroesData = {
       name: 'Cyra',
       type: 'Magia',
       className: 'Mago (Wizard)',
-      stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
+      stats: { atk: 0, def: 0, power: 2, knowledge: 3 },
       initialSkill: {
         name: 'Diplomacia (Diplomacy)',
-        normal: 'Reduce el coste de reclutamiento de unidades neutrales o de facción en 1 de Oro.',
-        expert: 'Reduce el coste de reclutamiento en 1 de Oro y te permite reclutar 1 unidad neutral directamente de losetas de mapa adyacentes.'
+        normal: 'Mapa: Por cada Vivienda que tengas, roba 1 carta de Unidad Neutral correspondiente. Puedes reclutar una de estas unidades si Pagas su coste de reclutamiento.',
+        expert: 'Instantáneo: Omite el combate con unidades neutrales en un lugar cuya dificultad sea igual al nivel de tu héroe. Visita el lugar. Este héroe no gana experiencia.'
       },
       specialty: {
-        name: 'Especialidad: Prisa',
+        name: 'Especialidad: Celeridad',
         cards: [
-          { level: 1, name: 'Aura de Celeridad I', effect: 'Tu hechizo "Prisa" cuesta 1 punto menos de Maná e inflige +1 de movimiento táctico verde.' },
-          { level: 4, name: 'Viento Conductor IV', effect: 'Toda unidad aliada bajo el efecto de Prisa gana +1 de Iniciativa y ignora el penalizador de terreno difícil.' },
-          { level: 6, name: 'Torbellino Temporal VI', effect: 'Una vez por combate, puedes lanzar un hechizo de Prisa masivo que afecta a todas tus tropas terrestres.' }
+          { level: 1, name: 'Celeridad I', effect: 'Continuo: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 3.' },
+          { level: 4, name: 'Celeridad IV', effect: 'Instantáneo: La unidad seleccionada obtiene +1 Ataque.\nEl efecto se duplica si la unidad atacada tiene mayor Iiniciativa.' },
+          { level: 6, name: 'Celeridad VI', effect: 'Continuo: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 3. Esta unidad gana +1 Defensa contra ataques de unidades con menor Iniciativa.' }
         ]
       },
-      lore: 'Una maga de Bracada dotada de un carisma deslumbrante que convence a monstruos errantes de unirse a su causa, acelerando el paso de sus tropas con magia de aire.'
+      lore: 'Una maga de Bracada dotada de un carisma deslumbrante que convence a monstruos errantes de unirse a su causa, acelerando el paso de sus tropas con magia de aire.',
+      quote: 'El viento sopla a favor de los audaces, y mi voz guiará a las criaturas más reacias a sumarse a nuestra marcha.'
     },
     {
       name: 'Dracon',
       type: 'Magia',
       className: 'Mago (Wizard)',
-      stats: { atk: 1, def: 0, power: 3, knowledge: 2 },
+      stats: { atk: 0, def: 0, power: 2, knowledge: 3 },
       initialSkill: {
         name: 'Sabiduría (Wisdom)',
         normal: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(3) en lugar de Buscar(2).',
@@ -645,38 +646,40 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Encantadores',
         cards: [
-          { level: 1, name: 'Aura Mística I', effect: 'Puedes gastar 1 de Oro para transformar a tus Monjes o Magos en poderosos Encantadores.' },
-          { level: 4, name: 'Conjuro de Encantador IV', effect: 'Tus Encantadores lanzan un hechizo aleatorio de nivel 1 gratuito al inicio de cada ronda de combate.' },
-          { level: 6, name: 'Barrera del Sabio VI', effect: 'Una vez por combate, tus Encantadores son inmunes al primer ataque místico o físico de esta ronda.' }
+          { level: 1, name: 'Encantadores I', effect: 'Instantáneo: Tu unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: Tu unidad seleccionada gana +1 Defensa.\n______\nEste efecto se duplica para Magos y Encantadores.' },
+          { level: 4, name: 'Encantadores IV', effect: 'Mapa: Si tienes una carta de Manada de Magos, descártala. Luego, busca en el mazo de Unidad Neutral Oro la carta Encantadores y añádela a tu mazo de Ejército. Sólo puedes controlar 1 unidad de Encantadores a la vez.\n— O —\nInstantáneo: Roba una carta.' },
+          { level: 6, name: 'Encantadores VI', effect: 'Continuo: Para este combate, la Iniciativa de tu unidad seleccioanda aumenta en 2.\nEste efecto se duplica para Magos y Encantadores.' }
         ]
       },
-      lore: 'Un talentoso mago de Bracada célebre por su obsesión de convertirse en el mayor cazador de dragones de la historia, adiestrando a los Encantadores más poderosos.'
+      lore: 'Un talentoso mago de Bracada célebre por su obsesión de convertirse en el mayor cazador de dragones de la historia, adiestrando a los Encantadores más poderosos.',
+      quote: 'Los dragones creen gobernar el cielo con su aliento de fuego, pero mis encantadores les enseñarán el verdadero peso de la alta magia.'
     },
     {
       name: 'Iona',
       type: 'Poder',
       className: 'Alquimista (Alchemist)',
-      stats: { atk: 2, def: 1, power: 1, knowledge: 2 },
+      stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Inteligencia (Intelligence)',
-        normal: 'Al inicio de la partida, roba 1 carta de Conocimiento extra para tu mano.',
-        expert: 'Tu límite de cartas de Conocimiento en mano aumenta en +1. Una vez por combate, puedes robar 2 cartas de Conocimiento descartando 1.'
+        normal: 'Instantáneo: Durante el combate, antes de que se active cualquier unidad, juega una carta de Hechizo. Solo puedes jugar una carta de Hechizo durante una ronda de combate.',
+        expert: 'Instantáneo: Durante el combate, antes de que se active cualquier unidad, juega una carta de Hechizo. Este Hechizo no cuenta para tu límite de hechizos por ronda de combate.'
       },
       specialty: {
         name: 'Especialidad: Genios',
         cards: [
-          { level: 1, name: 'Viento Planar I', effect: 'Tus Genios y Genios Maestros obtienen +1 de Ataque y +1 de Iniciativa.' },
-          { level: 4, name: 'Deseo de Genio IV', effect: 'Tus Genios pueden lanzar un hechizo benéfico gratuito de nivel 1 sobre un aliado una vez por combate.' },
-          { level: 6, name: 'Tempestad Espiritual VI', effect: 'Una vez por combate, tus Genios infligen +2 de daño místico al golpear a un enemigo vivo.' }
+          { level: 1, name: 'Genios I', effect: 'Continuo: Para este combate, la Vida de tu unidad seleccioanda aumenta en 1.\nEste efecto se duplica para la unidad Genios.' },
+          { level: 4, name: 'Genios IV', effect: 'Instantáneo: Tu unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: Tu unidad seleccionada gana +1 Defensa.\n______\nEste efecto se duplica para la unidad Genios.' },
+          { level: 6, name: 'Genios VI', effect: 'Instantáneo: Tu unidad seleccionada gana +2 Defensa.\nEste efecto se duplica para la unidad Genios.' }
         ]
       },
-      lore: 'Una alquimista experta en la contención de energías elementales que mantiene una estrecha alianza con los Genios de Bracada.'
+      lore: 'Una alquimista experta en la contención de energías elementales que mantiene una estrecha alianza con los Genios de Bracada.',
+      quote: 'Los genios no son simples sirvientes de lámpara; son la encarnación de la tormenta, y yo he aprendido a dirigir su tempestad.'
     },
     {
       name: 'Josephine',
       type: 'Poder',
       className: 'Alquimista (Alchemist)',
-      stats: { atk: 2, def: 1, power: 1, knowledge: 2 },
+      stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Brujería (Sorcery)',
         normal: 'Instantáneo: +1 Potencia\nLuego, roba 1 carta.',
@@ -685,18 +688,19 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Golems',
         cards: [
-          { level: 1, name: 'Golems Reforzados I', effect: 'Tus Golems ganan +1 de Defensa y +2 de HP máximo.' },
-          { level: 4, name: 'Chispa de Animación IV', effect: 'Al inicio del combate, si tienes Golems aliados, ganan +1 de Iniciativa y se mueven 1 casilla extra.' },
-          { level: 6, name: 'Giga Golem VI', effect: 'Una vez por combate, puedes gastar 2 de Oro para revivir inmediatamente una unidad de Golems destruida.' }
+          { level: 1, name: 'Golems I', effect: 'Continuo: Para este combate, la Vida de tu unidad seleccioanda aumenta en 1.\nEste efecto se duplica para la unidad Golems.' },
+          { level: 4, name: 'Golems IV', effect: 'Instantáneo: Tu unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: Tu unidad seleccionada gana +1 Defensa.\n______\nEste efecto se duplica para la unidad Golems.' },
+          { level: 6, name: 'Golems VI', effect: 'Instantáneo: Tu unidad seleccionada gana +2 Ataque.\nEste efecto se duplica para la unidad Golems.' }
         ]
       },
-      lore: 'Una brillante alquimista con una destreza sin parangón para esculpir y animar autómatas de piedra y metal en Bracada, potenciando su resistencia.'
+      lore: 'Una brillante alquimista con una destreza sin parangón para esculpir y animar autómatas de piedra y metal en Bracada, potenciando su resistencia.',
+      quote: 'La carne se cansa, sangra y duda. Mis creaciones de piedra y metal marchan sin descanso, uniendo la voluntad del creador con la eternidad.'
     },
     {
       name: 'Solmyr',
       type: 'Magia',
       className: 'Mago (Wizard)',
-      stats: { atk: 0, def: 0, power: 4, knowledge: 2 },
+      stats: { atk: 0, def: 0, power: 2, knowledge: 3 },
       initialSkill: {
         name: 'Brujería (Sorcery)',
         normal: 'Instantáneo: +1 Potencia\nLuego, roba 1 carta.',
@@ -705,9 +709,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Relámpago en Cadena',
         cards: [
-          { level: 1, name: 'Chispa Conductora I', effect: 'Comienzas la partida con el hechizo "Relámpago en Cadena" ya memorizado. Causa +1 de daño místico.' },
-          { level: 4, name: 'Arco Eléctrico IV', effect: 'Tu Relámpago en Cadena rebota en 1 objetivo adicional sin reducir su potencia.' },
-          { level: 6, name: 'Furia de las Nubes VI', effect: 'Una vez por combate, reduce el coste de tu Relámpago en Cadena en 2 puntos de Maná (mínimo 1).' }
+          { level: 1, name: 'Relámpago en Cadena I', effect: 'Activación: Selecciona una unidad y las otras 2 unidades más cercanas a ella. Asigna 1/1/0 Heridas, comenzando con la primera unidad seleccionada.' },
+          { level: 4, name: 'Relámpago en Cadena IV', effect: 'Instantáneo: Descarta hasta 3 cartas de tu mazo de Poder y Magia y devuelve 1 de ellas a tu mano.' },
+          { level: 6, name: 'Relámpago en Cadena VI', effect: 'Activación: Selecciona una unidad y las otras 2 unidades más cercanas a ella. Asigna 2/1/1 Heridas, comenzando con la primera unidad seleccionada.' }
         ]
       },
       lore: 'Un noble e inmensamente poderoso genio de aire que juró lealtad incondicional al Rey Gavin Magnus de Bracada tras ser liberado de una prisión milenaria.',
@@ -717,7 +721,7 @@ export const FACTION_HEROES: FactionHeroesData = {
       name: 'Torosar',
       type: 'Poder',
       className: 'Alquimista (Alchemist)',
-      stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
+      stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Misticismo (Mysticism)',
         normal: 'Instantáneo: Juega esta carta inmediatamente después de lanzar un hechizo. En lugar de descartar la carta de Hechizo, vuelve a tu mano.',
@@ -726,12 +730,13 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Balística',
         cards: [
-          { level: 1, name: 'Disparo de Alquimista I', effect: 'Tus Golems de Hierro aliados obtienen +1 de Defensa y tu Balista causa +1 de daño físico.' },
-          { level: 4, name: 'Ingeniería Mecánica IV', effect: 'Tu Balista ignora el escudo de defensa física de las unidades enemigas.' },
-          { level: 6, name: 'Bomba de Alquimia VI', effect: 'Una vez por combate, tu Balista puede disparar una bomba que causa 2 de daño físico a todas las tropas adyacentes al objetivo.' }
+          { level: 1, name: 'Balística I', effect: 'Mapa: Paga 5 Oros para obtener una Ballesta.\n— O —\nInstantáneo: Activa tu Ballesta (si tienes una).' },
+          { level: 4, name: 'Balística IV', effect: 'Mapa: Hasta el final de la ronda, obtén una Ballesta adicional durante el Combate. Cuando se juega, esta carta cuenta como una Ballesta.' },
+          { level: 6, name: 'Balística VI', effect: 'Instantáneo: Para este combate, obtén una Ballesta adicional. Ahora puedes activar todas tus Ballestas.\nAl jugarsa, esta carta cuenta como una Ballesta.' }
         ]
       },
-      lore: 'Un pragmático alquimista especializado en ingeniería militar de Bracada, partidario de las máquinas estables antes que los caprichosos conjuros.'
+      lore: 'Un pragmático alquimista especializado en ingeniería militar de Bracada, partidario de las máquinas estables antes que los caprichosos conjuros.',
+      quote: 'Dejad que los magos reciten sus caprichosos silogismos. El ángulo exacto de una balista bien calibrada nunca falla.'
     }
   ],
   infierno: [
