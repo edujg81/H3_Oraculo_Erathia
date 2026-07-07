@@ -263,7 +263,7 @@ export default function GameTimer({
 
             {/* Warning Message for Low Time */}
             {isLowTime && (
-              <div className="bg-red-950/20 border border-red-900/30 p-3 rounded-xl flex items-center gap-2 text-red-300 text-[11px] animate-pulse">
+              <div className="bg-red-950/20 border border-red-900/30 p-3 rounded-xl flex items-center gap-2 text-red-300 text-[12px] animate-pulse">
                 <ShieldAlert className="w-4 h-4 shrink-0 text-red-500" />
                 <span>¡Quedan menos de 15 segundos! El turno del jugador está a punto de expirar.</span>
               </div>
@@ -392,7 +392,7 @@ export default function GameTimer({
         <HelpCircle className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
         <div>
           <p className="font-semibold text-slate-300">Reglas Oficiales de Rondas (Juego de Mesa):</p>
-          <p className="text-[11px] mt-0.5">
+          <p className="text-[12px] mt-0.5">
             Las <strong>rondas de recursos (impares)</strong> activan la generación de oro, madera y mineral en tus minas y tu ciudad (Nota: la primera ronda inicial no genera producción). Las <strong>rondas astrológicas (pares)</strong> alteran temporalmente las condiciones del mapa o del combate a través de una carta de evento astrológico.
           </p>
         </div>

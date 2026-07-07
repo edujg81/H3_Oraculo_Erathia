@@ -196,7 +196,7 @@ export default function RulesBrowser({
       <div className="lg:col-span-1 space-y-4">
         {/* Categories Panel */}
         <div className="bg-slate-900 border border-amber-900/30 rounded-xl p-4 shadow-xl">
-          <h3 className="text-amber-500 font-mono text-xs uppercase tracking-widest mb-3 border-b border-amber-900/20 pb-2">
+          <h3 className="text-amber-500 font-mono text-sm uppercase tracking-widest mb-3 border-b border-amber-900/20 pb-2">
             Categorías
           </h3>
           <div className="space-y-1">

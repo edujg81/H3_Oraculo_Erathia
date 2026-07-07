@@ -271,11 +271,11 @@ export default function ScenariosDatabase() {
                       <span className="text-[10px] uppercase font-mono tracking-wider text-amber-500 font-bold block mb-1">
                         🏆 Condición de Victoria:
                       </span>
-                      <p className="leading-relaxed text-[11px]">{scenario.victoryCondition}</p>
+                      <p className="leading-relaxed text-[12px]">{scenario.victoryCondition}</p>
                     </div>
                   </div>
 
-                  <div className="space-y-1 text-[11px] text-slate-400 pt-2 border-t border-slate-900/80">
+                  <div className="space-y-1 text-[12px] text-slate-400 pt-2 border-t border-slate-900/80">
                     <p><strong>🗺️ Distribución:</strong> {scenario.setup}</p>
                     <p className="mt-1 text-slate-500"><strong>⚠️ Reglas Especiales:</strong> {scenario.specialRules}</p>
                   </div>
@@ -301,14 +301,14 @@ export default function ScenariosDatabase() {
                 </p>
 
                 <div className="bg-slate-950/60 p-4 rounded-xl border border-slate-850 space-y-2">
-                  <h4 className="text-xs font-mono font-bold text-slate-200 uppercase tracking-wide flex items-center gap-1.5">
+                  <h4 className="text-sm font-mono font-bold text-slate-200 uppercase tracking-wide flex items-center gap-1.5">
                     <Star className="w-3.5 h-3.5 text-amber-500" />
                     Elección Fundamental de un Cofre:
                   </h4>
-                  <p className="text-[11px]">
+                  <p className="text-[12px]">
                     Cuando un Héroe detiene su movimiento sobre una loseta que contiene el símbolo de un cofre, el jugador activo debe realizar una elección inmediata e irreversible:
                   </p>
-                  <ul className="list-disc pl-5 text-[11px] space-y-1 text-slate-400 mt-1">
+                  <ul className="list-disc pl-5 text-[12px] space-y-1 text-slate-400 mt-1">
                     <li>
                       <strong className="text-emerald-400">Garantizar Experiencia:</strong> Gana automáticamente <strong>1 punto de Experiencia (XP)</strong> y descarta el cofre.
                     </li>
@@ -320,7 +320,7 @@ export default function ScenariosDatabase() {
 
                 <div className="bg-amber-950/10 border border-amber-900/30 p-3 rounded-xl flex gap-3 text-amber-200">
                   <AlertCircle className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
-                  <p className="text-[11px]">
+                  <p className="text-[12px]">
                     <strong>Consejo Táctico de Sandro:</strong> ¡La experiencia extra y la búsqueda selectiva de Artefactos te otorgarán una ventaja colosal! No subestimes una tirada que te permita elegir de entre dos dados de recursos para levantar tus estructuras clave.
                   </p>
                 </div>
@@ -329,7 +329,7 @@ export default function ScenariosDatabase() {
 
             {/* Right Rewards Table Column (col-span-5) */}
             <div className="md:col-span-5 bg-slate-950/60 p-4 rounded-xl border border-slate-850 space-y-4">
-              <h3 className="text-xs font-mono font-bold text-slate-400 uppercase tracking-widest border-b border-slate-900 pb-2">
+              <h3 className="text-sm font-mono font-bold text-slate-400 uppercase tracking-widest border-b border-slate-900 pb-2">
                 🎲 Recompensas de las 6 Caras
               </h3>
 

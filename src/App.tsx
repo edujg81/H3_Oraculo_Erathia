@@ -433,7 +433,7 @@ export default function App() {
             
             {/* Bento 2: Turn Phases Guide (Always Handy) */}
             <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-5 space-y-4 shadow-xl">
-              <h3 className="text-xs font-bold text-amber-500 uppercase tracking-widest flex items-center border-b border-slate-800/80 pb-2">
+              <h3 className="text-sm font-bold text-amber-500 uppercase tracking-widest flex items-center border-b border-slate-800/80 pb-2">
                 <svg className="w-4 h-4 mr-2 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 </svg>
@@ -474,7 +474,7 @@ export default function App() {
 
             {/* Bento 3: Game Setup Interactive Summary */}
             <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-5 space-y-4 shadow-xl">
-              <h3 className="text-xs font-bold text-amber-500 uppercase tracking-widest flex items-center border-b border-slate-800/80 pb-2">
+              <h3 className="text-sm font-bold text-amber-500 uppercase tracking-widest flex items-center border-b border-slate-800/80 pb-2">
                 <svg className="w-4 h-4 mr-2 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                 </svg>
@@ -510,7 +510,7 @@ export default function App() {
                     <span className="font-semibold text-slate-300">Modo Enfrentamiento (2-3 J.)</span>
                     <span className="text-slate-500">Normal</span>
                   </div>
-                  <ul className="text-[11px] text-slate-400 space-y-1.5 list-disc pl-4.5">
+                  <ul className="text-[12px] text-slate-400 space-y-1.5 list-disc pl-4.5">
                     <li>Recursos: <strong>15 Oro, 3 de Madera, 1 Gemas</strong></li>
                     <li>Mazo inicial de 9 cartas según tu héroe principal</li>
                     <li>Por cada 2 Exp obtenida aumentas un nivel de Héroe</li>
@@ -525,7 +525,7 @@ export default function App() {
                     <span className="font-semibold text-slate-300">Modo Cooperativo (Aliados)</span>
                     <span className="text-sky-400 font-mono">Vs Escenario</span>
                   </div>
-                  <ul className="text-[11px] text-slate-400 space-y-1.5 list-disc pl-4.5">
+                  <ul className="text-[12px] text-slate-400 space-y-1.5 list-disc pl-4.5">
                     <li>Los jugadores nunca se pueden atacar entre sí</li>
                     <li>Puedes donar recursos a tus aliados en tu turno</li>
                     <li>Escenario "Gelea": Colocar cubo en Utopía del Dragón</li>
@@ -540,7 +540,7 @@ export default function App() {
                     <span className="font-semibold text-slate-300">Campaña Solo (1 J.)</span>
                     <span className="text-purple-400 font-mono">Vs Mazo IA</span>
                   </div>
-                  <ul className="text-[11px] text-slate-400 space-y-1.5 list-disc pl-4.5">
+                  <ul className="text-[12px] text-slate-400 space-y-1.5 list-disc pl-4.5">
                     <li>Se habilitan los mazos de control de IA del enemigo</li>
                     <li>La IA mueve e inicia combates siempre tras el usuario</li>
                     <li>No se permite rendirse ni ofrecer sobornos a la IA</li>
@@ -555,7 +555,7 @@ export default function App() {
                     <span className="font-semibold text-slate-300">Modo Alianza (2 vs 2)</span>
                     <span className="text-amber-500 font-mono">Equipos</span>
                   </div>
-                  <ul className="text-[11px] text-slate-400 space-y-1.5 list-disc pl-4.5">
+                  <ul className="text-[12px] text-slate-400 space-y-1.5 list-disc pl-4.5">
                     <li>Envío libre de recursos a tu aliado sin costes</li>
                     <li>Intercambio de artefactos si están adyacentes</li>
                     <li>Ganará el equipo que capture y flaggee el Castillo rival</li>
@@ -566,7 +566,7 @@ export default function App() {
 
             {/* Bento 5: Opciones Avanzadas & Calculadora de Máquinas de Guerra */}
             <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-5 space-y-4 shadow-xl">
-              <h3 className="text-xs font-bold text-amber-500 uppercase tracking-widest flex items-center justify-between border-b border-slate-800/80 pb-2">
+              <h3 className="text-sm font-bold text-amber-500 uppercase tracking-widest flex items-center justify-between border-b border-slate-800/80 pb-2">
                 <span className="flex items-center gap-1.5">
                   <Swords className="w-4 h-4 text-amber-600" />
                   Opciones Avanzadas & Máquinas
@@ -637,7 +637,7 @@ export default function App() {
                     <button
                       key={mach.id}
                       onClick={() => { setSelectedMachine(mach.id as any); setMachineRollResult(''); }}
-                      className={`py-1 rounded border text-center cursor-pointer transition text-[11px] font-medium flex flex-col items-center justify-center ${
+                      className={`py-1 rounded border text-center cursor-pointer transition text-[12px] font-medium flex flex-col items-center justify-center ${
                         selectedMachine === mach.id
                           ? 'border-amber-500 bg-amber-500/10 text-amber-400 font-bold'
                           : 'bg-slate-950 border-slate-850 text-slate-400 hover:text-slate-200'
@@ -651,7 +651,7 @@ export default function App() {
                 </div>
 
                 {/* Machine Description */}
-                <div className="bg-slate-950/80 p-2.5 rounded-lg border border-slate-850 text-[11px] leading-relaxed text-slate-300">
+                <div className="bg-slate-950/80 p-2.5 rounded-lg border border-slate-850 text-[12px] leading-relaxed text-slate-300">
                   {selectedMachine === 'ballista' && (
                     <p><strong>🏹 Balista (Ballista):</strong> Carta permanente. Al inicio de cada ronda de combate, inflige automáticamente <strong>1 herida</strong> de daño físico a la unidad enemiga con menor iniciativa.</p>
                   )}
@@ -778,12 +778,12 @@ export default function App() {
                       </div>
 
                       {/* Text Description */}
-                      <div className="flex-1 text-[11px] text-slate-400 space-y-1">
+                      <div className="flex-1 text-[12px] text-slate-400 space-y-1">
                         <p className="text-[10px] leading-relaxed">
                           Resuelve ataques físicos, contraataques y catapulta de asedios.
                         </p>
                         {combatDieResult !== null && !isRollingCombatDie && (
-                          <div className={`text-[11px] font-medium leading-normal flex items-center gap-1.5 ${
+                          <div className={`text-[12px] font-medium leading-normal flex items-center gap-1.5 ${
                             combatDieResult === 1 ? 'text-emerald-300' : combatDieResult === -1 ? 'text-red-300' : 'text-slate-200'
                           }`}>
                             <span>{combatDieResult === 1 ? '⚡' : combatDieResult === -1 ? '❌' : '🛡️'}</span>
@@ -861,12 +861,12 @@ export default function App() {
                       </div>
 
                       {/* Text Description */}
-                      <div className="flex-1 text-[11px] text-slate-400 space-y-1">
+                      <div className="flex-1 text-[12px] text-slate-400 space-y-1">
                         <p className="text-[10px] leading-relaxed">
                           Tira al explorar el mapa o durante rondas de producción para obtener suministros extra.
                         </p>
                         {resourceDieResult && !isRollingResourceDie && (
-                          <div className="text-[11px] font-medium leading-normal text-amber-300 flex items-center gap-1.5">
+                          <div className="text-[12px] font-medium leading-normal text-amber-300 flex items-center gap-1.5">
                             <span>📦</span>
                             <span>¡Has recolectado {resourceDieResult}!</span>
                           </div>
@@ -936,12 +936,12 @@ export default function App() {
                       </div>
 
                       {/* Text Description */}
-                      <div className="flex-1 text-[11px] text-slate-400 space-y-1">
+                      <div className="flex-1 text-[12px] text-slate-400 space-y-1">
                         <p className="text-[10px] leading-relaxed">
                           Lánzalo para abrir cofres abandonados, ruinas o saquear asentamientos derrotados.
                         </p>
                         {treasureDieResult && !isRollingTreasureDie && (
-                          <div className="text-[11px] font-medium leading-normal text-purple-300 flex items-center gap-1.5">
+                          <div className="text-[12px] font-medium leading-normal text-purple-300 flex items-center gap-1.5">
                             <span>✨</span>
                             <span>¡Recompensa: {treasureDieResult}!</span>
                           </div>
@@ -968,19 +968,21 @@ export default function App() {
       </main>
 
       {/* 4. Atmospheric Footer */}
-      <footer className="mt-8 flex flex-col sm:flex-row items-center justify-between shrink-0 px-6 py-4 bg-slate-900/40 border-t border-slate-800 text-[11px] text-slate-500">
-        <div className="flex items-center space-x-6">
-          <div className="flex items-center">
-            <span className="w-2 h-2 bg-amber-500 rounded-full mr-2"></span> 
-            8 MANUALES OFICIALES INDEXADOS
+      <footer className="mt-8 shrink-0 bg-slate-900/40 border-t border-slate-800 text-[12px] text-slate-500 py-4 px-6">
+        <div className="max-w-7xl mx-auto w-full flex flex-col sm:flex-row items-center justify-between">
+          <div className="flex items-center space-x-6">
+            <div className="flex items-center">
+              <span className="w-2 h-2 bg-amber-500 rounded-full mr-2"></span> 
+              8 MANUALES OFICIALES INDEXADOS
+            </div>
+            <div className="flex items-center">
+              <span className="w-2 h-2 bg-slate-700 rounded-full mr-2"></span> 
+              REGLAS COMPLETA EN ESPAÑOL
+            </div>
           </div>
-          <div className="flex items-center">
-            <span className="w-2 h-2 bg-slate-700 rounded-full mr-2"></span> 
-            REGLAS COMPLETA EN ESPAÑOL
+          <div className="text-slate-600 font-mono mt-2 sm:mt-0">
+            SISTEMA EXPERTO v2.1 // ERATHIA TÁCTIVO OS
           </div>
-        </div>
-        <div className="text-slate-600 font-mono mt-2 sm:mt-0">
-          SISTEMA EXPERTO v2.1 // ERATHIA TÁCTIVO OS
         </div>
       </footer>
     </div>

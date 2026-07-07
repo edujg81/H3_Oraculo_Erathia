@@ -218,16 +218,16 @@ export default function RulebookPDF() {
             </div>
             <div className="space-y-1">
               <div><span className="text-amber-500 font-bold">X.</span> Guía de Expansiones y Elementos Avanzados</div>
-              <div className="pl-4 text-slate-400 text-[11px]">• El Campo de Batalla Dinámico (Obstáculos)</div>
-              <div className="pl-4 text-slate-400 text-[11px]">• Asedio y Sitio de Castillos (Reglas de Catapulta)</div>
-              <div className="pl-4 text-slate-400 text-[11px]">• Mapa Subterráneo e Inframundo (Tránsito Dual)</div>
-              <div className="pl-4 text-slate-400 text-[11px]">• Logística de Barcos, Astilleros y Navegación</div>
-              <div className="pl-4 text-slate-400 text-[11px]">• Monolitos de Tránsito y Teletransporte</div>
+              <div className="pl-4 text-slate-400 text-[12px]">• El Campo de Batalla Dinámico (Obstáculos)</div>
+              <div className="pl-4 text-slate-400 text-[12px]">• Asedio y Sitio de Castillos (Reglas de Catapulta)</div>
+              <div className="pl-4 text-slate-400 text-[12px]">• Mapa Subterráneo e Inframundo (Tránsito Dual)</div>
+              <div className="pl-4 text-slate-400 text-[12px]">• Logística de Barcos, Astilleros y Navegación</div>
+              <div className="pl-4 text-slate-400 text-[12px]">• Monolitos de Tránsito y Teletransporte</div>
             </div>
             <div className="space-y-1">
               <div><span className="text-amber-500 font-bold">XI.</span> Tablas del Reglamento Oficial</div>
-              <div className="pl-4 text-slate-400 text-[11px]">• Tabla de Dificultad de las Zonas (Ejércitos)</div>
-              <div className="pl-4 text-slate-400 text-[11px]">• Tabla General de Conversión de Recursos</div>
+              <div className="pl-4 text-slate-400 text-[12px]">• Tabla de Dificultad de las Zonas (Ejércitos)</div>
+              <div className="pl-4 text-slate-400 text-[12px]">• Tabla General de Conversión de Recursos</div>
             </div>
             <div>
               <span className="text-amber-500 font-bold">XX.</span> Guía de Habilidades y Talentos del Héroe (Wiki)
@@ -254,7 +254,7 @@ export default function RulebookPDF() {
             </div>
             <div className="bg-slate-950/60 p-3 rounded-lg border border-slate-800">
               <strong className="text-amber-400 block h-6 font-mono text-sm border-b border-slate-900 mb-1.5 font-bold">🏰 Las 10 Facciones de Erathia</strong>
-              <p className="leading-relaxed text-slate-300 text-[11px] space-y-1">
+              <p className="leading-relaxed text-slate-300 text-[12px] space-y-1">
                 <span className="text-slate-200 block">• <strong>Castillo (Castle):</strong> Caballería y campeones pesados. Dominio del orden celestial y la moral.</span>
                 <span className="text-slate-200 block">• <strong>Necrópolis (Necropolis):</strong> No-muertos inmunes a la moral entera. Reclutan de las bajas en batalla.</span>
                 <span className="text-slate-200 block">• <strong>Mazmorra (Dungeon):</strong> Dragones negros, harpías y hechicería destructiva letal.</span>
@@ -309,10 +309,10 @@ export default function RulebookPDF() {
 
           <div className="bg-slate-950/60 p-4 rounded-xl border border-slate-800 space-y-2 mt-2">
             <strong className="text-amber-400 block font-mono text-xs font-bold">🔘 Fichas Especiales de Juego y sus Reglamentos Propios</strong>
-            <p className="text-slate-300 text-xs text-[11px] leading-relaxed">
+            <p className="text-slate-300 text-xs text-[12px] leading-relaxed">
               El juego utiliza varios marcadores físicos clave para limitar acciones, modificar dados o registrar efectos de combate avanzados:
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-2 text-[11px] leading-relaxed">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-2 text-[12px] leading-relaxed">
               <div className="border border-slate-900 p-2 rounded bg-slate-950/40">
                 <span className="text-indigo-300 font-bold font-mono block">⏳ Tiempo (Time)</span>
                 Se sitúan sobre la barra de progreso de ronda. Realizan la cuenta atrás del límite de turnos e indican la reposición de mercadillos y neutrales.
@@ -356,7 +356,7 @@ export default function RulebookPDF() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-slate-800 space-y-1.5">
               <strong className="text-amber-400 block font-mono font-bold">🗺️ Losetas Terrestres de Progreso (I-VII)</strong>
-              <ul className="list-disc pl-4 space-y-1 text-slate-300 text-[11px]">
+              <ul className="list-disc pl-4 space-y-1 text-slate-300 text-[12px]">
                 <li><strong>Losetas Iniciales (Nivel I):</strong> Alojan las deidades o capitales natales de cada imperio y minas básicas libres y desprotegidas.</li>
                 <li><strong>Losetas Lejanas (Niveles II-III):</strong> Forman el primer cordón exterior. Custodiadas por ejércitos de bronce y plata débiles. Esconden molinos y establos básicos.</li>
                 <li><strong>Losetas Cercanas (Niveles IV-V):</strong> Componen las zonas de combate secundarias. Conllevan tropas robustas de plata y oro, santuarios y mercadillos arcanos.</li>
@@ -365,7 +365,7 @@ export default function RulebookPDF() {
             </div>
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-slate-800 space-y-1.5">
               <strong className="text-amber-400 block font-mono font-bold">🌋 Losetas Especiales de Entorno</strong>
-              <ul className="list-disc pl-4 space-y-1 text-slate-300 text-[11px]">
+              <ul className="list-disc pl-4 space-y-1 text-slate-300 text-[12px]">
                 <li><strong>Losetas Subterráneas (Cavernas):</strong> Identificadas con reverso oscuro de piedra. Representan el inframundo, el cual es accesible solo mediante las losetas con indicativo de <em>Puerta Subterránea</em>. Permite cruzar muros e ignorar asedios superficiales de forma subterránea.</li>
                 <li><strong>Losetas de Mar (Navegación):</strong> Indicadas con superficies de agua profunda continua. Solo transitables por héroes montados en una miniatura del Barco reclutada en un astillero, o que viajen mediante el hechizo "Caminar sobre el Agua".</li>
                 <li><strong>Fronteras Amarillas Bloqueantes:</strong> Líneas rígidas que no se pueden cruzar por ningún medio físico de movimiento convencional del mapa.</li>
@@ -385,10 +385,10 @@ export default function RulebookPDF() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-slate-800 space-y-2">
               <strong className="text-amber-400 block font-mono font-bold border-b border-slate-900 pb-1">🛑 1. Visitables (1 vez por escenario)</strong>
-              <p className="text-slate-350 text-[11px] leading-relaxed">
+              <p className="text-slate-350 text-[12px] leading-relaxed">
                 Colocan un cubo negro de control neutro tras interactuar. Quedan bloqueadas para este héroe a menos que la partida ordene limpiarlas:
               </p>
-              <ul className="list-disc pl-4 space-y-1 text-slate-300 text-[11px]">
+              <ul className="list-disc pl-4 space-y-1 text-slate-300 text-[12px]">
                 <li><strong>Piedra de Aprendizaje (Learning Stone):</strong> El héroe gana inmediatamente 1 punto de Exp.</li>
                 <li><strong>Templo (Temple):</strong> Otorga una ficha de moral positiva temporal al héroe.</li>
                 <li><strong>Santuario del Gesto Mágico (Magic Shrine):</strong> Permite buscar (2) cartas en el mazo de hechizos pagando su costo correspondiente.</li>
@@ -402,10 +402,10 @@ export default function RulebookPDF() {
 
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-slate-800 space-y-2">
               <strong className="text-amber-400 block font-mono font-bold border-b border-slate-900 pb-1">🔄 2. Revisitables (Múltiples Usos)</strong>
-              <p className="text-slate-350 text-[11px] leading-relaxed">
+              <p className="text-slate-350 text-[12px] leading-relaxed">
                 Permiten interacciones recurrentes moviéndose sobre ellas o pagando 1 PM si el héroe ya ha comenzado su turno posicionado dentro:
               </p>
-              <ul className="list-disc pl-4 space-y-1 text-slate-300 text-[11px]">
+              <ul className="list-disc pl-4 space-y-1 text-slate-300 text-[12px]">
                 <li><strong>Mercadillo (Trading Post):</strong> Te permite intercambiar u ofrecer recursos según la Tabla de Comercio oficial, o destruir una carta innecesaria de tu de mazo activo (exceptuando cartas iniciales o cartas de flechas mágicas) a cambio de 1 de Oro.</li>
                 <li><strong>Santuario (Sanctuary):</strong> Los héroes situados en este hexágono están resguardados y no pueden ser atacados por otros héroes. Un héroe rival puede atravesar este campo solo si no se detiene en él.</li>
                 <li><strong>Establos (Stables):</strong> El héroe que entre ahí gana +1 punto de movimiento (PM) adicional que debe consumir exclusivamente durante este turno de aventura.</li>
@@ -414,10 +414,10 @@ export default function RulebookPDF() {
 
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-slate-800 space-y-2">
               <strong className="text-amber-400 block font-mono font-bold border-b border-slate-900 pb-1">🚩 3. Señalizables (Captura Fija)</strong>
-              <p className="text-slate-350 text-[11px] leading-relaxed">
+              <p className="text-slate-350 text-[12px] leading-relaxed">
                 Se capturan colocando de inmediato un cubo del color de tu facción al pisarlas. Son disputables por otros jugadores:
               </p>
-              <ul className="list-disc pl-4 space-y-1 text-slate-300 text-[11px]">
+              <ul className="list-disc pl-4 space-y-1 text-slate-300 text-[12px]">
                 <li><strong>Minas (Mine - Oro, Mineral, Madera, Cristal, Alquimista):</strong> Incrementan de forma fija la producción correspondiente en tu tablero de ciudad en cada Ronda de Recursos. La primera captura otorga la producción inmediata de la mina de forma gratuita. Los rivales pueden capturarlas sustituyendo el cubo.</li>
                 <li><strong>Asentamiento (Settlement):</strong> Otorga bonificaciones a elegir (ej. expandir ingresos) y entrega un recurso inmediato. Puede habilitar el reclutamiento a distancia a los héroes.</li>
               </ul>
@@ -427,10 +427,10 @@ export default function RulebookPDF() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs pt-1">
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-slate-800 space-y-2">
               <strong className="text-amber-400 block font-mono font-bold border-b border-slate-900 pb-1">🌊 4. Localizaciones de Mar (Expansión Marítima)</strong>
-              <p className="text-slate-350 text-[11px] leading-relaxed">
+              <p className="text-slate-350 text-[12px] leading-relaxed">
                 Localizaciones especiales sobre losetas de mar o costas navegables. El Héroe interactúa usando un Barco:
               </p>
-              <ul className="list-disc pl-4 space-y-1 text-slate-300 text-[11px]">
+              <ul className="list-disc pl-4 space-y-1 text-slate-300 text-[12px]">
                 <li><strong>Templo del Mar (Temple of the Sea):</strong> Combate duro contra Haspides e Hidras de Mar. La victoria otorga +3 Objetos de Valor (Gemas/Cristal) y un Artefacto de nivel Reliquia.</li>
                 <li><strong>Náufrago Superviviente (Shipwreck Survivor):</strong> Otorga de forma gratuita un Artefacto al azar del mazo menor, o 5 monedas de Oro por rescatar su cofre.</li>
                 <li><strong>Boya (Buoy):</strong> Otorga +1 a la Moral de combate de tus regimientos durante la siguiente batalla naval o terrestre.</li>
@@ -441,10 +441,10 @@ export default function RulebookPDF() {
 
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-slate-800 space-y-2">
               <strong className="text-amber-400 block font-mono font-bold border-b border-slate-900 pb-1">🌀 5. Losetas de Mapa Elementales (Expansión Confluencia)</strong>
-              <p className="text-slate-350 text-[11px] leading-relaxed">
+              <p className="text-slate-350 text-[12px] leading-relaxed">
                 Fallas o grietas cósmicas conreversos cian que imponen las leyes de los Planos Elementales:
               </p>
-              <ul className="list-disc pl-4 space-y-1 text-slate-300 text-[11px]">
+              <ul className="list-disc pl-4 space-y-1 text-slate-300 text-[12px]">
                 <li><strong>Grieta de Fuego (Fire Rift):</strong> Duplica de forma fija la potencia y daño de los hechizos de fuego lanzados desde ella. Si la facción del héroe es Confluencia o Inferno, se le conceden +2 PM libres.</li>
                 <li><strong>Grieta de Agua (Water Rift):</strong> Excluye penalizaciones de fango o nieve de movimiento y permite embarcar de forma directa sin agotar el turno.</li>
                 <li><strong>Grieta de Tierra (Earth Rift):</strong> Concede +1 a la Defensa Física de toda criatura aliada que defienda este enclave.</li>
@@ -510,7 +510,7 @@ export default function RulebookPDF() {
               <p className="text-slate-300 text-xs">
                 El manual oficial de Erathia y sus expansiones incluye los siguientes escenarios de juego definitivos totalmente detallados en esta biblioteca técnica:
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs leading-relaxed text-[11px] text-slate-300">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs leading-relaxed text-[12px] text-slate-300">
                 <div className="border border-slate-900 p-2 rounded bg-slate-950/25">
                   <strong>1. "El Fin del Mundo" (The End of the World):</strong> Breve escenario competitivo o cooperativo de 7 rondas. El vencedor es coronado acumulando la mayor riqueza sobre la loseta central VII de Erathia.
                 </div>
@@ -568,7 +568,7 @@ export default function RulebookPDF() {
           </p>
 
           <h4 className="text-sm font-serif text-amber-450 mt-4 border-b border-slate-900 pb-0.5">⚔️ FACCIONES DEL JUEGO BASE (The Restoration of Erathia)</h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-[11px] leading-relaxed">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-[12px] leading-relaxed">
             
             {/* Castle */}
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-blue-900/40 space-y-2">
@@ -686,7 +686,7 @@ export default function RulebookPDF() {
           </div>
 
           <h4 className="text-sm font-serif text-amber-450 mt-4 border-b border-slate-900 pb-0.5">🧩 FACCIONES DE EXPANSIONES (Facciones Adicionales)</h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-[11px] leading-relaxed">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-[12px] leading-relaxed">
 
             {/* Rampart */}
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-emerald-900/40 space-y-2">
@@ -960,7 +960,7 @@ export default function RulebookPDF() {
           </p>
 
           <div className="bg-slate-950 p-4 border border-slate-800 rounded-xl space-y-3">
-            <h4 className="text-xs font-mono text-amber-400 uppercase tracking-widest font-bold">1. Fase de Inicio Global (Al principio de cada Ronda)</h4>
+            <h4 className="text-sm font-mono text-amber-400 uppercase tracking-widest font-bold">1. Fase de Inicio Global (Al principio de cada Ronda)</h4>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs leading-relaxed">
               <div className="border border-slate-800/60 p-2.5 rounded bg-slate-950/40">
                 <span className="text-emerald-400 block font-semibold">🔨 Rondas Impares (Ingresos)</span>
@@ -980,7 +980,7 @@ export default function RulebookPDF() {
           </div>
 
           <div className="space-y-3 text-xs">
-            <h4 className="text-xs font-mono text-amber-400 uppercase tracking-widest font-bold">2. El Turno del Héroe Activo (Fases Progresivas)</h4>
+            <h4 className="text-sm font-mono text-amber-400 uppercase tracking-widest font-bold">2. El Turno del Héroe Activo (Fases Progresivas)</h4>
             <div className="space-y-2">
               <div className="p-3 bg-slate-950/40 border border-slate-800 rounded-lg">
                 <strong className="text-amber-200">A. Fase de Reposición y Suministro:</strong>
@@ -1049,7 +1049,7 @@ export default function RulebookPDF() {
             <div className="bg-slate-950/60 p-3 rounded-lg border border-slate-800 space-y-1.55">
               <strong className="text-amber-400 block font-mono font-bold">⚔️ Logística de Reclutamiento y Ascenso</strong>
               <p className="text-slate-400">Para reclutar fuerzas activas, pague su contravalor de reclutamiento impreso en la carta de unidad:</p>
-              <ul className="list-disc pl-4 space-y-1 text-slate-300 text-[11px]">
+              <ul className="list-disc pl-4 space-y-1 text-slate-300 text-[12px]">
                 <li><strong>Capacidad Máxima de Dwellings:</strong> Solo puede alistar un número de tropas igual o inferior al coeficiente de viviendas activas en su ciudad por turno de reclutamiento.</li>
                 <li><strong>Acción de Población / Upgrade:</strong> Voltee la teja de vivienda y abone la diferencia exacta en Oro para promocionar y mejorar un regimiento básico existente a su versión reforzada (ej. Arcángel a Arcángel Supremo, o Esqueleto a Esqueleto Guerrero).</li>
                 <li><strong>Mina del Reino:</strong> Al adueñarse de un pozo minero adyacente, coloque un cubo de su color de facción. El primer héroe en reclamarlo cobra la producción indicada de forma inmediata y directa.</li>
@@ -1112,13 +1112,13 @@ export default function RulebookPDF() {
 
           {/* War Machines sub-section */}
           <div className="bg-slate-950/60 p-4 rounded-xl border border-amber-900/15 space-y-2 mt-3">
-            <h4 className="font-bold text-amber-400 font-mono flex items-center gap-1.5 text-xs">
+            <h4 className="font-bold text-amber-400 font-mono flex items-center gap-1.5 text-sm">
               <span>⚙️ Artillería y Máquinas de Guerra (War Machines)</span>
             </h4>
-            <p className="text-slate-300 text-[11px] leading-relaxed">
+            <p className="text-slate-300 text-[12px] leading-relaxed">
               Las máquinas de guerra se adquieren en el asentamiento de herrería o mediante especializaciones nativas y no ocupan espacio de la mano de combate de 5 unidades ordinarias; actúan de forma auxiliar o mediante activadores de turno específicos:
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-2 text-[11px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-2 text-[12px]">
               <div className="border border-slate-900 p-2 rounded bg-slate-950/30">
                 <span className="text-amber-400 font-bold block">1. Catapulta (Catapult)</span>
                 Carta permanente obligatoria en Asedios. Se activa automáticamente al inicio de cada ronda de combate. Lanza el dado de combate estándar: <strong>-1</strong> (Fallo), <strong>0</strong> (daña la Puerta central por 1 pt), <strong>+1</strong> (daña un Muro por 1 pt).
@@ -1171,7 +1171,7 @@ export default function RulebookPDF() {
 
             <div className="space-y-1.5 pt-2 border-t border-slate-900">
               <h4 className="font-bold text-amber-400 font-mono">3. Hechizos Estratégicos del Mapa de Aventura</h4>
-              <p className="text-slate-300 text-[11px]">
+              <p className="text-slate-300 text-[12px]">
                 Los magistas pueden gastar sus puntos de movimiento durante su turno de exploración terrestre para lanzar magias de mapa:
                 <br />
                 - <strong>Volar (Fly):</strong> Quema todos sus PM útiles para cruzar montañas o ejércitos sin librar combates intermedios.
@@ -1184,10 +1184,10 @@ export default function RulebookPDF() {
 
             <div className="space-y-1.5 pt-2 border-t border-slate-900">
               <h4 className="font-bold text-amber-400 font-mono">4. Tratado de las Cuatro Escuelas de Magia</h4>
-              <p className="text-slate-300 text-[11px] mb-2">
+              <p className="text-slate-300 text-[12px] mb-2">
                 Cada hechizo pertenece a una escuela elemental. Ser 'Experto' en una de ellas multiplica los daños, rangos y alcances estratégicos:
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-1 text-[11px]">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-1 text-[12px]">
                 <div className="border border-red-950/60 bg-red-950/20 p-2.5 rounded-lg">
                   <span className="text-orange-400 font-bold font-mono flex items-center gap-1">🔥 Magia de Fuego (Fire Magic)</span>
                   <p className="text-slate-300 mt-1">
@@ -1791,7 +1791,7 @@ export default function RulebookPDF() {
             Las Habilidades representan la progresión del Héroe. Al subir de nivel a un rango de Plata (II, III, V y VII), el Héroe draftea de un mazo común. Poseen un efecto <strong>Básico</strong> (pasivo o gratuito) y un efecto <strong>Experto</strong> (requiere gastar una ficha de Experto).
           </p>
           <div className="overflow-x-auto">
-            <table className="min-w-full text-[11px] text-slate-300 bg-slate-950 border border-slate-800 rounded-lg">
+            <table className="min-w-full text-[12px] text-slate-300 bg-slate-950 border border-slate-800 rounded-lg">
               <thead>
                 <tr className="bg-slate-900 text-amber-400 font-mono text-left">
                   <th className="px-3 py-2 border border-slate-800 font-bold">Habilidad / Origen</th>
@@ -1970,7 +1970,7 @@ export default function RulebookPDF() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-slate-950 p-4 border border-slate-800/80 rounded-xl">
               <div className="space-y-1">
                 <span className="text-amber-400 font-semibold block font-mono">🎯 Atributos Clave de Combate</span>
-                <ul className="list-disc pl-4 space-y-1 text-slate-400 text-[11px]">
+                <ul className="list-disc pl-4 space-y-1 text-slate-400 text-[12px]">
                   <li><strong>Ataque (⚔️):</strong> Número de dados o daño básico infligido.</li>
                   <li><strong>Defensa (🛡️):</strong> Reduce las heridas directas recibidas por ataques físicos.</li>
                   <li><strong>Iniciativa (⚡):</strong> Orden de actuación en la ronda de batalla. Actúa el más veloz.</li>
@@ -1980,7 +1980,7 @@ export default function RulebookPDF() {
               </div>
               <div className="space-y-1">
                 <span className="text-amber-400 font-semibold block font-mono">🏷️ Clasificación de Rangos (Tiers)</span>
-                <ul className="list-disc pl-4 space-y-1 text-slate-400 text-[11px]">
+                <ul className="list-disc pl-4 space-y-1 text-slate-400 text-[12px]">
                   <li><strong>Bronce (Niveles I - III):</strong> Unidades de infantería básica y tiradores iniciales. Muy numerosas y con costes de reclutamiento bajos en Oro.</li>
                   <li><strong>Plata (Niveles IV - V):</strong> Criaturas profesionales y guerreros de élite. Requieren madera o mineral y estructuras de metrópolis medias.</li>
                   <li><strong>Oro (Niveles VI - VII):</strong> Tropas legendarias o campeones de facción (ej. Ángeles o Dragones). Alto coste en Oro y Objetos de Valor místicos.</li>
@@ -1988,7 +1988,7 @@ export default function RulebookPDF() {
               </div>
             </div>
 
-            <h3 className="text-xs font-bold text-amber-400 uppercase tracking-wider font-mono pt-2">
+            <h3 className="text-sm font-bold text-amber-400 uppercase tracking-wider font-mono pt-2">
               Tabla Compendio de Criaturas Destacadas por Facción
             </h3>
 

@@ -456,7 +456,7 @@ export default function HeroesViewer() {
                     <div className="space-y-1">
                       <div className="flex items-center gap-2">
                         <Layers className="w-4 h-4 text-amber-500 shrink-0" />
-                        <span className="text-[11px] uppercase font-mono tracking-wider text-slate-200 font-bold">
+                        <span className="text-[12px] uppercase font-mono tracking-wider text-slate-200 font-bold">
                           Mazo Inicial (9 Cartas)
                         </span>
                       </div>
@@ -549,7 +549,7 @@ export default function HeroesViewer() {
                             </span>
                             <span className="text-[10px] font-mono text-slate-500">Uso normal</span>
                           </div>
-                          <p className="text-[11px] text-slate-350 leading-relaxed font-sans">{selectedHero.initialSkill.normal}</p>
+                          <p className="text-[12px] text-slate-350 leading-relaxed font-sans">{selectedHero.initialSkill.normal}</p>
                         </div>
 
                         {/* Expert effect using crowns */}
@@ -562,7 +562,7 @@ export default function HeroesViewer() {
                               Requiere 1 Corona {getCrowns(heroLevel) > 0 ? '(✓ Disponible)' : '(✗ Bloqueado)'}
                             </span>
                           </div>
-                          <p className="text-[11px] text-amber-300 leading-relaxed font-sans">{selectedHero.initialSkill.expert}</p>
+                          <p className="text-[12px] text-amber-300 leading-relaxed font-sans">{selectedHero.initialSkill.expert}</p>
                         </div>
                       </div>
                     </div>
@@ -644,7 +644,7 @@ export default function HeroesViewer() {
                     {selectedHero.quote && (
                       <div className="flex gap-2">
                         <Quote className="w-4 h-4 text-slate-600 shrink-0 mt-0.5" />
-                        <p className="text-[11px] text-slate-350 italic leading-relaxed">
+                        <p className="text-[12px] text-slate-350 italic leading-relaxed">
                           "{selectedHero.quote}"
                         </p>
                       </div>

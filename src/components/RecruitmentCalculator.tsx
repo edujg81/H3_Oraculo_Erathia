@@ -869,6 +869,11 @@ export default function RecruitmentCalculator() {
       baseName = unitName.split('(')[0].trim();
     }
 
+    // Map singular Dragón Negro to plural Dragones Negros to match Dungeon Level 7 unit
+    if (baseName === 'Dragón Negro') {
+      baseName = 'Dragones Negros';
+    }
+
     // Check if the base name belongs to any faction unit
     for (const [fac, units] of Object.entries(FACTION_UNITS)) {
       if (fac === 'neutrales' || fac === 'bancos') continue;
@@ -963,7 +968,7 @@ export default function RecruitmentCalculator() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         {/* Left Column: Configuration Selector (Col Span 5) */}
         <div className="lg:col-span-5 bg-slate-950/40 p-5 rounded-2xl border border-slate-850/60 space-y-4">
-          <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest font-mono flex items-center gap-1.5">
+          <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest font-mono flex items-center gap-1.5">
             <Star className="w-4.5 h-4.5 text-amber-500" />
             1. Selección de Criatura
           </h3>
@@ -1057,7 +1062,7 @@ export default function RecruitmentCalculator() {
                 })}
               </div>
             ) : (
-              <p className="text-[11px] text-red-400 font-mono italic">Selecciona un rango válido.</p>
+              <p className="text-[12px] text-red-400 font-mono italic">Selecciona un rango válido.</p>
             )}
           </div>
 
@@ -1224,7 +1229,7 @@ export default function RecruitmentCalculator() {
                       {stats.type === 'Volador' ? '🦅' : stats.type === 'A distancia' ? '🏹' : '⚔️'}
                     </span>
                     <div>
-                      <span className="font-bold text-slate-200 block text-[11px] font-mono leading-tight">
+                      <span className="font-bold text-slate-200 block text-[12px] font-mono leading-tight">
                         Unidad {stats.type}
                       </span>
                       <span className="text-[10px] text-slate-500 leading-none block">
@@ -1253,7 +1258,7 @@ export default function RecruitmentCalculator() {
                       {stats.abilities.map((ability, idx) => (
                         <div key={idx} className="flex items-start gap-2 text-slate-300">
                           <span className="text-amber-500 font-bold mt-0.5">•</span>
-                          <p className="leading-relaxed text-[11px]">{ability}</p>
+                          <p className="leading-relaxed text-[12px]">{ability}</p>
                         </div>
                       ))}
                     </div>
