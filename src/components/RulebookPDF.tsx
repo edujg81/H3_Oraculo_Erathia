@@ -574,7 +574,7 @@ export default function RulebookPDF() {
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-blue-900/40 space-y-2">
               <div className="flex justify-between items-center border-b border-slate-900 pb-1">
                 <strong className="text-blue-350 block font-serif text-sm">🛡️ 1. CASTILLO (Castle)</strong>
-                <span className="text-[9px] bg-blue-950 text-blue-300 px-1.5 py-0.5 rounded border border-blue-800/40 font-mono">JUEGO BASE</span>
+                <span className="text-[10px] bg-blue-950 text-blue-300 px-1.5 py-0.5 rounded border border-blue-800/40 font-mono">JUEGO BASE</span>
               </div>
               <p className="text-slate-400 text-[10px] leading-relaxed">
                 Acompaña a la Reina Catherine Ironfist en su cruzada militar para reconquistar y purificar el imperio de Erathia asolado por la herejía y los no-muertos:
@@ -613,7 +613,7 @@ export default function RulebookPDF() {
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-purple-900/40 space-y-2">
               <div className="flex justify-between items-center border-b border-slate-900 pb-1">
                 <strong className="text-purple-355 block font-serif text-sm">👁️ 2. MAZMORRA (Dungeon)</strong>
-                <span className="text-[9px] bg-purple-950 text-purple-300 px-1.5 py-0.5 rounded border border-purple-800/40 font-mono">JUEGO BASE</span>
+                <span className="text-[10px] bg-purple-950 text-purple-300 px-1.5 py-0.5 rounded border border-purple-800/40 font-mono">JUEGO BASE</span>
               </div>
               <p className="text-slate-400 text-[10px] leading-relaxed">
                 Explora pasajes oscuros y cuevas subterráneas de Nighon para forjar el imperio definitivo de trogloditas, arpías y dragones negros:
@@ -650,7 +650,7 @@ export default function RulebookPDF() {
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-slate-750 space-y-2">
               <div className="flex justify-between items-center border-b border-slate-900 pb-1">
                 <strong className="text-slate-300 block font-serif text-sm">💀 3. NECRÓPOLIS (Necropolis)</strong>
-                <span className="text-[9px] bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded border border-slate-650 font-mono">JUEGO BASE</span>
+                <span className="text-[10px] bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded border border-slate-650 font-mono">JUEGO BASE</span>
               </div>
               <p className="text-slate-400 text-[10px] leading-relaxed">
                 El siniestro nigromante Sandro planea en Deyja la mayor conspiración de no-muertos mediante la forja de reliquias corruptas:
@@ -692,7 +692,7 @@ export default function RulebookPDF() {
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-emerald-900/40 space-y-2">
               <div className="flex justify-between items-center border-b border-slate-900 pb-1">
                 <strong className="text-emerald-350 block font-serif text-sm">🌿 4. MURALLAS (Rampart)</strong>
-                <span className="text-[9px] bg-emerald-950 text-emerald-300 px-1.5 py-0.5 rounded border border-emerald-800/40 font-mono">EXPANSIÓN</span>
+                <span className="text-[10px] bg-emerald-950 text-emerald-300 px-1.5 py-0.5 rounded border border-emerald-800/40 font-mono">EXPANSIÓN</span>
               </div>
               <p className="text-slate-400 text-[10px] leading-relaxed">
                 Protege el equilibrio natural de los Valles de AvLee aliándote con elfos Rangers, centauros veloces y majestuosos dragones dorados:
@@ -729,7 +729,7 @@ export default function RulebookPDF() {
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-teal-900/40 space-y-2">
               <div className="flex justify-between items-center border-b border-slate-900 pb-1">
                 <strong className="text-teal-350 block font-serif text-sm">🦎 5. FORTALEZA (Fortress)</strong>
-                <span className="text-[9px] bg-teal-950 text-teal-300 px-1.5 py-0.5 rounded border border-teal-800/40 font-mono">EXPANSIÓN</span>
+                <span className="text-[10px] bg-teal-950 text-teal-300 px-1.5 py-0.5 rounded border border-teal-800/40 font-mono">EXPANSIÓN</span>
               </div>
               <p className="text-slate-400 text-[10px] leading-relaxed">
                 Tazar y los comandantes reptiles de Tatalia luchan en la ciénaga por declarar su independencia ante las exacciones de Castillo:
@@ -766,7 +766,7 @@ export default function RulebookPDF() {
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-cyan-900/40 space-y-2">
               <div className="flex justify-between items-center border-b border-slate-900 pb-1">
                 <strong className="text-cyan-350 block font-serif text-sm">⚡ 6. TORRE (Tower)</strong>
-                <span className="text-[9px] bg-cyan-950 text-cyan-300 px-1.5 py-0.5 rounded border border-cyan-800/40 font-mono">EXPANSIÓN</span>
+                <span className="text-[10px] bg-cyan-950 text-cyan-300 px-1.5 py-0.5 rounded border border-cyan-800/40 font-mono">EXPANSIÓN</span>
               </div>
               <p className="text-slate-400 text-[10px] leading-relaxed">
                 Los alquimistas y magos de Bracada ascienden las laderas nevadas para restaurar autómatas golems e ingenios celestes:
@@ -803,7 +803,7 @@ export default function RulebookPDF() {
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-red-900/40 space-y-2">
               <div className="flex justify-between items-center border-b border-slate-900 pb-1">
                 <strong className="text-red-350 block font-serif text-sm">🔥 7. INFIERNO (Inferno)</strong>
-                <span className="text-[9px] bg-red-950 text-red-300 px-1.5 py-0.5 rounded border border-red-800/40 font-mono">EXPANSIÓN</span>
+                <span className="text-[10px] bg-red-950 text-red-300 px-1.5 py-0.5 rounded border border-red-800/40 font-mono">EXPANSIÓN</span>
               </div>
               <p className="text-slate-400 text-[10px] leading-relaxed">
                 Los Kreegans desatan los fuegos abrasadores del Abismo para subyugar las campiñas humanas de Erathia e imponer su reino de terror:
@@ -840,7 +840,7 @@ export default function RulebookPDF() {
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-amber-900/40 space-y-2">
               <div className="flex justify-between items-center border-b border-slate-900 pb-1">
                 <strong className="text-amber-500 block font-serif text-sm">👹 8. BASTIÓN (Stronghold)</strong>
-                <span className="text-[9px] bg-amber-950 text-amber-300 px-1.5 py-0.5 rounded border border-amber-800/40 font-mono">EXPANSIÓN</span>
+                <span className="text-[10px] bg-amber-950 text-amber-300 px-1.5 py-0.5 rounded border border-amber-800/40 font-mono">EXPANSIÓN</span>
               </div>
               <p className="text-slate-400 text-[10px] leading-relaxed">
                 El violento clan bárbaro de Kilgor se bate en contiendas brutales para unificar los clanes de Krewlod bajo un único puño:
@@ -877,7 +877,7 @@ export default function RulebookPDF() {
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-indigo-900/40 space-y-2">
               <div className="flex justify-between items-center border-b border-slate-900 pb-1">
                 <strong className="text-indigo-350 block font-serif text-sm">🌀 9. CONFLUENCIA (Conflux)</strong>
-                <span className="text-[9px] bg-indigo-950 text-indigo-300 px-1.5 py-0.5 rounded border border-indigo-800/40 font-mono">EXPANSIÓN</span>
+                <span className="text-[10px] bg-indigo-950 text-indigo-300 px-1.5 py-0.5 rounded border border-indigo-800/40 font-mono">EXPANSIÓN</span>
               </div>
               <p className="text-slate-400 text-[10px] leading-relaxed">
                 Restaura el delicado equilibrio cósmico de los planos elementales de fuego, tierra, agua y aire ante la codicia mortal:
@@ -914,7 +914,7 @@ export default function RulebookPDF() {
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-sky-900/40 space-y-2">
               <div className="flex justify-between items-center border-b border-slate-900 pb-1">
                 <strong className="text-sky-350 block font-serif text-sm">🏴‍☠️ 10. BAHÍA (Cove)</strong>
-                <span className="text-[9px] bg-sky-950 text-sky-300 px-1.5 py-0.5 rounded border border-sky-800/40 font-mono">EXPANSIÓN</span>
+                <span className="text-[10px] bg-sky-950 text-sky-300 px-1.5 py-0.5 rounded border border-sky-800/40 font-mono">EXPANSIÓN</span>
               </div>
               <p className="text-slate-400 text-[10px] leading-relaxed">
                 Navega y domina las embravecidas aguas de Regna, asalta fortines costeros y capitanea piratas, aves de tormenta y temibles serpentinos:
@@ -1994,7 +1994,7 @@ export default function RulebookPDF() {
 
             <table className="w-full text-[10px] text-left border-collapse border border-slate-800">
               <thead>
-                <tr className="bg-slate-950 text-slate-400 uppercase tracking-widest text-[9px] font-mono border-b border-slate-800">
+                <tr className="bg-slate-950 text-slate-400 uppercase tracking-widest text-[10px] font-mono border-b border-slate-800">
                   <th className="px-2.5 py-2 border border-slate-800">Criatura / Facción</th>
                   <th className="px-2.5 py-2 border border-slate-800">Tier / Lvl</th>
                   <th className="px-2.5 py-2 border border-slate-800">Cara Básica (Stats)</th>

@@ -242,7 +242,7 @@ export default function ScenariosDatabase() {
                 >
                   <div className="space-y-2">
                     <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-900 pb-2">
-                      <span className={`text-[8px] font-mono uppercase font-bold tracking-widest px-2 py-0.5 rounded border ${
+                      <span className={`text-[10px] font-mono uppercase font-bold tracking-widest px-2 py-0.5 rounded border ${
                         scenario.difficulty === 'Fácil' ? 'bg-emerald-950/40 border-emerald-900/30 text-emerald-400'
                         : scenario.difficulty === 'Media' ? 'bg-amber-950/40 border-amber-900/30 text-amber-500'
                         : 'bg-red-950/40 border-red-900/30 text-red-400'
@@ -250,11 +250,11 @@ export default function ScenariosDatabase() {
                         Dificultad: {scenario.difficulty}
                       </span>
 
-                      <span className="text-[8px] font-mono uppercase font-bold tracking-widest px-2 py-0.5 rounded border bg-slate-900 border-slate-850 text-slate-300">
+                      <span className="text-[10px] font-mono uppercase font-bold tracking-widest px-2 py-0.5 rounded border bg-slate-900 border-slate-850 text-slate-300">
                         📦 {scenario.expansion}
                       </span>
 
-                      <div className="flex items-center gap-1.5 text-[9px] text-slate-500 font-mono">
+                      <div className="flex items-center gap-1.5 text-[10px] text-slate-500 font-mono">
                         <Calendar className="w-3 h-3 text-amber-500/80" />
                         <span>{scenario.rounds} Rondas</span>
                       </div>
@@ -268,7 +268,7 @@ export default function ScenariosDatabase() {
                     </p>
 
                     <div className="bg-slate-900/40 p-2.5 rounded-lg border border-slate-850 text-xs text-slate-300">
-                      <span className="text-[9px] uppercase font-mono tracking-wider text-amber-500 font-bold block mb-1">
+                      <span className="text-[10px] uppercase font-mono tracking-wider text-amber-500 font-bold block mb-1">
                         🏆 Condición de Victoria:
                       </span>
                       <p className="leading-relaxed text-[11px]">{scenario.victoryCondition}</p>

@@ -123,7 +123,7 @@ export default function GameTimer({
             <span className={`text-sm font-semibold block ${roundType === 'Recursos' ? 'text-emerald-400' : 'text-cyan-400'}`}>
               {roundType === 'Recursos' ? 'Recursos (Cobro de Ingresos)' : 'Astrológica (Evento de Turno)'}
             </span>
-            <span className="text-[9px] text-slate-400 block leading-tight mt-0.5 max-w-[200px]">
+            <span className="text-[10px] text-slate-400 block leading-tight mt-0.5 max-w-[200px]">
               {roundType === 'Recursos' 
                 ? '¡Cobro de minas y ciudad! (Excepto Ronda 1).' 
                 : 'Se roba y anuncia una carta astrológica.'}
@@ -181,7 +181,7 @@ export default function GameTimer({
                 <h3 className="font-serif text-amber-200 text-lg font-bold">Temporizador del Turno Activo</h3>
                 <p className="text-[10px] text-slate-400 font-mono uppercase tracking-wider mt-0.5">Control de Rondas y Penalizaciones</p>
               </div>
-              <span className="text-[9px] font-mono bg-slate-950 px-2 py-0.5 rounded border border-slate-800 text-amber-500">
+              <span className="text-[10px] font-mono bg-slate-950 px-2 py-0.5 rounded border border-slate-800 text-amber-500">
                 CRONÓMETRO OFICIAL
               </span>
             </div>
@@ -207,7 +207,7 @@ export default function GameTimer({
 
               {/* Turn Limit select presets */}
               <div className="w-full space-y-2 pt-2">
-                <span className="text-[9px] text-slate-500 font-mono uppercase tracking-wider block">Modificar límite de turno:</span>
+                <span className="text-[10px] text-slate-500 font-mono uppercase tracking-wider block">Modificar límite de turno:</span>
                 <div className="flex flex-wrap gap-1.5 justify-center select-none">
                   {[30, 60, 120, 180, 300].map((sec) => (
                     <button
@@ -281,7 +281,7 @@ export default function GameTimer({
                   <Users className="w-4 h-4 text-amber-500" /> Lista de Jugadores
                 </h3>
               </div>
-              <span className="text-[9px] text-amber-500 font-mono uppercase tracking-wider">Mesa de Juego</span>
+              <span className="text-[10px] text-amber-500 font-mono uppercase tracking-wider">Mesa de Juego</span>
             </div>
 
             {/* Quick Presets for Player Count */}
@@ -320,13 +320,13 @@ export default function GameTimer({
                     }`}
                   >
                     <div className="flex items-center gap-3 truncate">
-                      <div className="w-5 h-5 rounded-full bg-slate-950 border border-slate-800 flex items-center justify-center font-mono text-[9px] text-amber-500 font-bold shrink-0">
+                      <div className="w-5 h-5 rounded-full bg-slate-950 border border-slate-800 flex items-center justify-center font-mono text-[10px] text-amber-500 font-bold shrink-0">
                         {idx + 1}
                       </div>
                       <div>
                         <p className="text-xs font-semibold">{player.name}</p>
                         {isActive && (
-                          <span className="text-[9px] text-amber-400 font-mono flex items-center gap-1.5 mt-0.5">
+                          <span className="text-[10px] text-amber-400 font-mono flex items-center gap-1.5 mt-0.5">
                             <span className="w-1.5 h-1.5 bg-amber-400 rounded-full animate-ping" />
                             Turno Activo
                           </span>

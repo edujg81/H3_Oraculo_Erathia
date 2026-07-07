@@ -492,7 +492,7 @@ export default function App() {
                   <button
                     key={mode.id}
                     onClick={() => setPrepMode(mode.id as any)}
-                    className={`text-[9px] font-mono px-2 py-1 rounded-md border cursor-pointer uppercase transition ${
+                    className={`text-[10px] font-mono px-2 py-1 rounded-md border cursor-pointer uppercase transition ${
                       prepMode === mode.id 
                         ? 'border-amber-600 bg-amber-500/10 text-amber-400' 
                         : 'border-slate-800 text-slate-500 hover:text-slate-300'
@@ -571,14 +571,14 @@ export default function App() {
                   <Swords className="w-4 h-4 text-amber-600" />
                   Opciones Avanzadas & Máquinas
                 </span>
-                <span className="text-[9px] font-mono bg-amber-950 text-amber-400 px-1.5 py-0.5 rounded">
+                <span className="text-[10px] font-mono bg-amber-950 text-amber-400 px-1.5 py-0.5 rounded">
                   Reglas Pro
                 </span>
               </h3>
 
               {/* 1. Toggles section */}
               <div className="space-y-2 text-xs">
-                <span className="text-[9px] text-slate-500 font-mono block tracking-wider uppercase font-bold">Activar Reglas Avanzadas</span>
+                <span className="text-[10px] text-slate-500 font-mono block tracking-wider uppercase font-bold">Activar Reglas Avanzadas</span>
                 <div className="grid grid-cols-2 gap-2">
                   <button
                     onClick={() => setFogOfWar(!fogOfWar)}
@@ -587,7 +587,7 @@ export default function App() {
                     }`}
                   >
                     <span className="font-bold text-[10px]">🌫️ Niebla Activa</span>
-                    <span className="text-[8px] text-slate-500 mt-0.5">{fogOfWar ? 'Mapeo Dinámico' : 'Mapa Revelado'}</span>
+                    <span className="text-[10px] text-slate-500 mt-0.5">{fogOfWar ? 'Mapeo Dinámico' : 'Mapa Revelado'}</span>
                   </button>
 
                   <button
@@ -597,7 +597,7 @@ export default function App() {
                     }`}
                   >
                     <span className="font-bold text-[10px]">⚔️ Torneo Pick/Ban</span>
-                    <span className="text-[8px] text-slate-500 mt-0.5">{tournamentPick ? 'Héroe Draft ON' : 'Libre Selección'}</span>
+                    <span className="text-[10px] text-slate-500 mt-0.5">{tournamentPick ? 'Héroe Draft ON' : 'Libre Selección'}</span>
                   </button>
 
                   <button
@@ -607,7 +607,7 @@ export default function App() {
                     }`}
                   >
                     <span className="font-bold text-[10px]">📦 Relevo Suministros</span>
-                    <span className="text-[8px] text-slate-500 mt-0.5">{supplyChain ? 'Transferencia Sencilla' : 'No Habilitado'}</span>
+                    <span className="text-[10px] text-slate-500 mt-0.5">{supplyChain ? 'Transferencia Sencilla' : 'No Habilitado'}</span>
                   </button>
 
                   <button
@@ -617,14 +617,14 @@ export default function App() {
                     }`}
                   >
                     <span className="font-bold text-[10px]">⚡ Daño Elemental</span>
-                    <span className="text-[8px] text-slate-500 mt-0.5">{elementalDamage ? 'Ignora Defensa' : 'Normal'}</span>
+                    <span className="text-[10px] text-slate-500 mt-0.5">{elementalDamage ? 'Ignora Defensa' : 'Normal'}</span>
                   </button>
                 </div>
               </div>
 
               {/* 2. Interactive War Machine Calculator (Including Cove Cannon) */}
               <div className="bg-slate-950/50 p-3 rounded-2xl border border-slate-800/60 space-y-3">
-                <span className="text-[9px] text-slate-500 font-mono block tracking-wider uppercase font-bold">Calculadora de Máquinas de Guerra</span>
+                <span className="text-[10px] text-slate-500 font-mono block tracking-wider uppercase font-bold">Calculadora de Máquinas de Guerra</span>
                 
                 <div className="grid grid-cols-5 gap-1">
                   {[
@@ -645,7 +645,7 @@ export default function App() {
                       title={mach.label}
                     >
                       <span className="text-sm">{mach.icon}</span>
-                      <span className="text-[8px] mt-0.5">{mach.label}</span>
+                      <span className="text-[10px] mt-0.5">{mach.label}</span>
                     </button>
                   ))}
                 </div>
@@ -692,7 +692,7 @@ export default function App() {
                 <div className="flex bg-slate-900/80 p-0.5 rounded-lg border border-slate-800/60">
                   <button
                     onClick={() => setActiveDiceTab('combat')}
-                    className={`flex-1 py-1.5 text-[9px] font-bold uppercase rounded-md transition cursor-pointer text-center ${
+                    className={`flex-1 py-1.5 text-[10px] font-bold uppercase rounded-md transition cursor-pointer text-center ${
                       activeDiceTab === 'combat'
                         ? 'bg-amber-600/20 text-amber-300 font-bold'
                         : 'text-slate-500 hover:text-slate-300'
@@ -702,7 +702,7 @@ export default function App() {
                   </button>
                   <button
                     onClick={() => setActiveDiceTab('resource')}
-                    className={`flex-1 py-1.5 text-[9px] font-bold uppercase rounded-md transition cursor-pointer text-center ${
+                    className={`flex-1 py-1.5 text-[10px] font-bold uppercase rounded-md transition cursor-pointer text-center ${
                       activeDiceTab === 'resource'
                         ? 'bg-amber-600/20 text-amber-300 font-bold'
                         : 'text-slate-500 hover:text-slate-300'
@@ -712,7 +712,7 @@ export default function App() {
                   </button>
                   <button
                     onClick={() => setActiveDiceTab('treasure')}
-                    className={`flex-1 py-1.5 text-[9px] font-bold uppercase rounded-md transition cursor-pointer text-center ${
+                    className={`flex-1 py-1.5 text-[10px] font-bold uppercase rounded-md transition cursor-pointer text-center ${
                       activeDiceTab === 'treasure'
                         ? 'bg-amber-600/20 text-amber-300 font-bold'
                         : 'text-slate-500 hover:text-slate-300'
@@ -726,11 +726,11 @@ export default function App() {
                 {activeDiceTab === 'combat' && (
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                      <span className="text-[9px] text-slate-500 font-mono block tracking-wider uppercase font-bold flex items-center gap-1">
+                      <span className="text-[10px] text-slate-500 font-mono block tracking-wider uppercase font-bold flex items-center gap-1">
                         <Dices className="w-3 h-3 text-amber-500" />
                         Dado de Combate Táctico
                       </span>
-                      <span className="text-[8px] font-mono text-slate-500 bg-slate-900 px-1.5 py-0.5 rounded border border-slate-850">
+                      <span className="text-[10px] font-mono text-slate-500 bg-slate-900 px-1.5 py-0.5 rounded border border-slate-850">
                         Rango [-1, 0, +1]
                       </span>
                     </div>
@@ -764,14 +764,14 @@ export default function App() {
                               <span className="text-2xl font-mono font-extrabold tracking-tighter leading-none">
                                 {combatDieResult >= 0 ? `+${combatDieResult}` : combatDieResult}
                               </span>
-                              <span className="text-[8px] uppercase tracking-widest font-mono opacity-80 mt-0.5 scale-90">
+                              <span className="text-[10px] uppercase tracking-widest font-mono opacity-80 mt-0.5 scale-90">
                                 {combatDieResult === 1 ? 'Crítico' : combatDieResult === -1 ? 'Fallo' : 'Normal'}
                               </span>
                             </div>
                           ) : (
                             <div className="flex flex-col items-center opacity-70 group-hover/die:opacity-100 transition-opacity">
                               <span className="text-xl">⚔️</span>
-                              <span className="text-[7px] uppercase tracking-wider font-mono mt-0.5">Tirar</span>
+                              <span className="text-[10px] uppercase tracking-wider font-mono mt-0.5">Tirar</span>
                             </div>
                           )}
                         </button>
@@ -813,11 +813,11 @@ export default function App() {
                 {activeDiceTab === 'resource' && (
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                      <span className="text-[9px] text-slate-500 font-mono block tracking-wider uppercase font-bold flex items-center gap-1">
+                      <span className="text-[10px] text-slate-500 font-mono block tracking-wider uppercase font-bold flex items-center gap-1">
                         <Dices className="w-3 h-3 text-amber-500" />
                         Dado de Recursos
                       </span>
-                      <span className="text-[8px] font-mono text-slate-500 bg-slate-900 px-1.5 py-0.5 rounded border border-slate-850">
+                      <span className="text-[10px] font-mono text-slate-500 bg-slate-900 px-1.5 py-0.5 rounded border border-slate-850">
                         Producción d6
                       </span>
                     </div>
@@ -847,14 +847,14 @@ export default function App() {
                               <span className="text-2xl font-mono font-extrabold leading-none mb-0.5">
                                 {resourceDieResult.split(' ')[0]}
                               </span>
-                              <span className="text-[7px] uppercase tracking-wider font-mono opacity-80 leading-none">
+                              <span className="text-[10px] uppercase tracking-wider font-mono opacity-80 leading-none">
                                 {resourceDieResult.split(' ').slice(1).join(' ')}
                               </span>
                             </div>
                           ) : (
                             <div className="flex flex-col items-center opacity-70 group-hover/die:opacity-100 transition-opacity">
                               <span className="text-xl">🪵</span>
-                              <span className="text-[7px] uppercase tracking-wider font-mono mt-0.5">Tirar</span>
+                              <span className="text-[10px] uppercase tracking-wider font-mono mt-0.5">Tirar</span>
                             </div>
                           )}
                         </button>
@@ -888,11 +888,11 @@ export default function App() {
                 {activeDiceTab === 'treasure' && (
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                      <span className="text-[9px] text-slate-500 font-mono block tracking-wider uppercase font-bold flex items-center gap-1">
+                      <span className="text-[10px] text-slate-500 font-mono block tracking-wider uppercase font-bold flex items-center gap-1">
                         <Dices className="w-3 h-3 text-amber-500" />
                         Dado de Tesoro
                       </span>
-                      <span className="text-[8px] font-mono text-slate-500 bg-slate-900 px-1.5 py-0.5 rounded border border-slate-850">
+                      <span className="text-[10px] font-mono text-slate-500 bg-slate-900 px-1.5 py-0.5 rounded border border-slate-850">
                         Cofres d6
                       </span>
                     </div>
@@ -922,14 +922,14 @@ export default function App() {
                               <span className="text-2xl font-mono font-extrabold leading-none mb-0.5">
                                 {treasureDieResult.split(' ')[0]}
                               </span>
-                              <span className="text-[7px] uppercase tracking-wider font-mono opacity-80 leading-none px-1">
+                              <span className="text-[10px] uppercase tracking-wider font-mono opacity-80 leading-none px-1">
                                 {treasureDieResult.split(' ').slice(1, 4).join(' ')}
                               </span>
                             </div>
                           ) : (
                             <div className="flex flex-col items-center opacity-70 group-hover/die:opacity-100 transition-opacity">
                               <span className="text-xl">🔮</span>
-                              <span className="text-[7px] uppercase tracking-wider font-mono mt-0.5">Tirar</span>
+                              <span className="text-[10px] uppercase tracking-wider font-mono mt-0.5">Tirar</span>
                             </div>
                           )}
                         </button>

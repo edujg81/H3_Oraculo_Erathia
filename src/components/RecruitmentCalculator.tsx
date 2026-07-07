@@ -116,16 +116,22 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 7, nameBasic: 'Leviatanes', nameElite: 'Leviatanes Antiguos', tier: 'oro' }
   ],
   neutrales: [
+    { level: 1, nameBasic: 'Paisanos', tier: 'bronce' },
     { level: 1, nameBasic: 'Pícaros', tier: 'bronce' },
     { level: 1, nameBasic: 'Alabarderos (Neutral)', tier: 'bronce' },
     { level: 1, nameBasic: 'Esqueletos (Neutral)', tier: 'bronce' },
     { level: 1, nameBasic: 'Trogloditas (Neutral)', tier: 'bronce' },
     { level: 1, nameBasic: 'Gremlins (Neutral)', tier: 'bronce' },
+    { level: 1, nameBasic: 'Hobbits', tier: 'bronce' },
     { level: 2, nameBasic: 'Nómadas', tier: 'bronce' },
     { level: 2, nameBasic: 'Arqueros (Neutral)', tier: 'bronce' },
     { level: 2, nameBasic: 'Zombis (Neutral)', tier: 'bronce' },
     { level: 2, nameBasic: 'Arpías (Neutral)', tier: 'bronce' },
     { level: 2, nameBasic: 'Gárgolas (Neutral)', tier: 'bronce' },
+    { level: 3, nameBasic: 'Trolls', tier: 'bronce' },
+    { level: 3, nameBasic: 'Leprechauns', tier: 'bronce' },
+    { level: 3, nameBasic: 'Sátiros', tier: 'bronce' },
+    { level: 3, nameBasic: 'Golems de Acero', tier: 'bronce' },
     { level: 3, nameBasic: 'Jabalíes', tier: 'bronce' },
     { level: 3, nameBasic: 'Grifos (Neutral)', tier: 'bronce' },
     { level: 3, nameBasic: 'Espectros (Neutral)', tier: 'bronce' },
@@ -136,12 +142,15 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 4, nameBasic: 'Vampiros (Neutral)', tier: 'plata' },
     { level: 4, nameBasic: 'Medusas (Neutral)', tier: 'plata' },
     { level: 4, nameBasic: 'Archimagos (Neutral)', tier: 'plata' },
-    { level: 5, nameBasic: 'Licántropos', tier: 'plata' },
+    { level: 5, nameBasic: 'Momias', tier: 'plata' },
+    { level: 5, nameBasic: 'Encantadores', tier: 'plata' },
+    { level: 5, nameBasic: 'Tiradores', tier: 'plata' },
+    { level: 5, nameBasic: 'Fangarms', tier: 'plata' },
     { level: 5, nameBasic: 'Fanáticos (Neutral)', tier: 'plata' },
     { level: 5, nameBasic: 'Liches (Neutral)', tier: 'plata' },
     { level: 5, nameBasic: 'Minotauros (Neutral)', tier: 'plata' },
     { level: 5, nameBasic: 'Genios (Neutral)', tier: 'plata' },
-    { level: 6, nameBasic: 'Enanos de Hierro', tier: 'oro' },
+    { level: 6, nameBasic: 'Golems de Diamante', tier: 'oro' },
     { level: 6, nameBasic: 'Campeones (Neutral)', tier: 'oro' },
     { level: 6, nameBasic: 'Caballeros del Terror (Neutral)', tier: 'oro' },
     { level: 6, nameBasic: 'Mantícoras (Neutral)', tier: 'oro' },
@@ -498,6 +507,9 @@ const UNIT_DETAILS: {
   },
 
   // Neutrales
+  "Paisanos": {
+    basic: { atk: 1, def: 0, hp: 1, ini: 2, type: 'Melee', abilities: [] }
+  },
   "Pícaros": {
     basic: { atk: 1, def: 0, hp: 1, ini: 4, type: 'Melee', abilities: ["Sin Represalia."] }
   },
@@ -513,6 +525,9 @@ const UNIT_DETAILS: {
   "Gremlins (Neutral)": {
     basic: { atk: 2, def: 0, hp: 2, ini: 5, type: 'A distancia', abilities: [], customCost: { gold: 2, materials: 0, valuable: 0 } }
   },
+  "Hobbits": {
+    basic: { atk: 1, def: 1, hp: 1, ini: 4, type: 'A distancia', abilities: [] }
+  },
   "Nómadas": {
     basic: { atk: 1, def: 1, hp: 1, ini: 4, type: 'Melee', abilities: ["Veloz: Ignora ciertas restricciones."] }
   },
@@ -527,6 +542,18 @@ const UNIT_DETAILS: {
   },
   "Gárgolas (Neutral)": {
     basic: { atk: 2, def: 1, hp: 3, ini: 9, type: 'Volador', abilities: ["Pasiva: Esta unidad ignora los efectos de Parálisis."], customCost: { gold: 4, materials: 0, valuable: 0 } }
+  },
+  "Trolls": {
+    basic: { atk: 1, def: 1, hp: 1, ini: 3, type: 'Melee', abilities: ["Carga: +1 de Ataque tras avanzar."] }
+  },
+  "Leprechauns": {
+    basic: { atk: 1, def: 1, hp: 1, ini: 3, type: 'Melee', abilities: ["Carga: +1 de Ataque tras avanzar."] }
+  },
+  "Sátiros": {
+    basic: { atk: 1, def: 1, hp: 1, ini: 3, type: 'Melee', abilities: ["Carga: +1 de Ataque tras avanzar."] }
+  },
+  "Golems de Acero": {
+    basic: { atk: 1, def: 1, hp: 1, ini: 3, type: 'Melee', abilities: ["Carga: +1 de Ataque tras avanzar."] }
   },
   "Jabalíes": {
     basic: { atk: 1, def: 1, hp: 1, ini: 3, type: 'Melee', abilities: ["Carga: +1 de Ataque tras avanzar."] }
@@ -558,7 +585,16 @@ const UNIT_DETAILS: {
   "Archimagos (Neutral)": {
     basic: { atk: 3, def: 0, hp: 5, ini: 6, type: 'A distancia', abilities: ["Al Atacar: Ignora las penalizaciones de combate. Después del ataque, el enemigo descarta una carta al azar o una carta con Potencia."], customCost: { gold: 11, materials: 0, valuable: 0 } }
   },
-  "Licántropos": {
+  "Momias": {
+    basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'Melee', abilities: ["Infección: Enemigo herido se convierte en Licántropo si es derrotado."] }
+  },
+  "Encantadores": {
+    basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'A distancia', abilities: ["Infección: Enemigo herido se convierte en Licántropo si es derrotado."] }
+  },
+  "Tiradores": {
+    basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'A distancia', abilities: ["Infección: Enemigo herido se convierte en Licántropo si es derrotado."] }
+  },
+  "Fangarms": {
     basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'Melee', abilities: ["Infección: Enemigo herido se convierte en Licántropo si es derrotado."] }
   },
   "Fanáticos (Neutral)": {
@@ -573,7 +609,7 @@ const UNIT_DETAILS: {
   "Genios (Neutral)": {
     basic: { atk: 3, def: 1, hp: 4, ini: 9, type: 'Volador', abilities: ["Al Atacar: Esta unidad obtiene +1 Ataque contra Efreets."], customCost: { gold: 11, materials: 0, valuable: 0 } }
   },
-  "Enanos de Hierro": {
+  "Golems de Diamante": {
     basic: { atk: 2, def: 2, hp: 2, ini: 3, type: 'Melee', abilities: ["Resistencia Enana: Al recibir un hechizo, lanza el dado de combate; con +1 lo ignora."] }
   },
   "Campeones (Neutral)": {
@@ -828,10 +864,6 @@ export default function RecruitmentCalculator() {
 
   // Helper to map units to images
   const getUnitImage = (unitName: string, factionId: string, level: number): string | null => {
-    if (factionId === 'cove') {
-      return null;
-    }
-
     let baseName = unitName;
     if (unitName.includes('(')) {
       baseName = unitName.split('(')[0].trim();
@@ -848,16 +880,25 @@ export default function RecruitmentCalculator() {
 
     // Handle pure neutral units
     const pureNeutralsMap: { [key: string]: string } = {
-      'Pícaros': 'neutral_5.gif',
-      'Nómadas': 'neutral_8.gif',
-      'Jabalíes': 'neutral_6.gif',
       'Golems de Oro': 'neutral_1.gif',
-      'Licántropos': '',
-      'Enanos de Hierro': '',
+      'Golems de Diamante': 'neutral_2.gif',
+      'Paisanos': 'neutral_3.gif',
+      'Hobbits': 'neutral_4.gif',
+      'Pícaros': 'neutral_5.gif',
+      'Jabalíes': 'neutral_6.gif',
+      'Momias': 'neutral_7.gif',
+      'Nómadas': 'neutral_8.gif',
+      'Trolls': 'neutral_9.gif',
+      'Encantadores': 'neutral_10.gif',
+      'Tiradores': 'neutral_11.gif',
       'Dragón de Hada': 'neutral_12.gif',
       'Dragón de Óxido': 'neutral_13.gif',
       'Dragón de Cristal': 'neutral_14.gif',
-      'Dragón Azul': 'neutral_15.gif'
+      'Dragón Azul': 'neutral_15.gif',
+      'Fangarms': 'neutral_16.gif',
+      'Leprechauns': 'neutral_17.gif',
+      'Sátiros': 'neutral_18.gif',
+      'Golems de Acero': 'neutral_19.gif'
     };
 
     if (pureNeutralsMap[unitName]) {
@@ -883,13 +924,15 @@ export default function RecruitmentCalculator() {
       stronghold: 'bastion',
       fortaleza: 'fortaleza',
       confluencia: 'conflux',
+      cove: 'bahia',
     };
 
     const prefix = mapping[factionId];
     if (!prefix) return null;
     
     const lvl = Math.min(Math.max(level, 1), 7);
-    return `${prefix}_${lvl}.gif`;
+    const ext = factionId === 'cove' ? 'png' : 'gif';
+    return `${prefix}_${lvl}.${ext}`;
   };
 
   const imageFilename = selectedUnit ? getUnitImage(selectedUnit.nameBasic, selectedFaction, selectedUnit.level) : null;
@@ -1006,7 +1049,7 @@ export default function RecruitmentCalculator() {
                       }`}
                     >
                       <span className="font-medium text-slate-200">{unit.nameBasic}</span>
-                      <span className="text-[9px] bg-slate-900/90 border border-slate-800 px-1.5 py-0.5 rounded text-slate-400 font-bold">
+                      <span className="text-[10px] bg-slate-900/90 border border-slate-800 px-1.5 py-0.5 rounded text-slate-400 font-bold">
                         Niv. {unit.level}
                       </span>
                     </button>
@@ -1031,7 +1074,7 @@ export default function RecruitmentCalculator() {
                 }`}
               >
                 <span className="text-sm">🛡️ "Unas pocas"</span>
-                <span className="text-[9px] opacity-75 font-mono uppercase tracking-wider">
+                <span className="text-[10px] opacity-75 font-mono uppercase tracking-wider">
                   {isSingleSided ? 'Lado Único (Básico)' : 'Lado Básico'}
                 </span>
               </button>
@@ -1045,7 +1088,7 @@ export default function RecruitmentCalculator() {
                   }`}
                 >
                   <span className="text-sm">⚡ "Manada"</span>
-                  <span className="text-[9px] opacity-75 font-mono uppercase tracking-wider">Lado Élite</span>
+                  <span className="text-[10px] opacity-75 font-mono uppercase tracking-wider">Lado Élite</span>
                 </button>
               )}
             </div>
@@ -1077,10 +1120,10 @@ export default function RecruitmentCalculator() {
                 <div className="flex items-start justify-between border-b border-slate-700/40 pb-3 z-10">
                   <div>
                     <div className="flex items-center gap-2">
-                      <span className={`text-[9px] font-mono font-bold uppercase px-2 py-0.5 rounded-md border ${theme.badge}`}>
+                      <span className={`text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md border ${theme.badge}`}>
                         {selectedFaction === 'bancos' ? 'Banco de Criaturas' : selectedFaction}
                       </span>
-                      <span className={`text-[9px] font-mono font-bold uppercase px-2 py-0.5 rounded-md border ${
+                      <span className={`text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md border ${
                         selectedTier === 'bronce' ? 'bg-amber-950/40 text-amber-500 border-amber-900/30'
                         : selectedTier === 'plata' ? 'bg-slate-800 text-slate-300 border-slate-700'
                         : selectedTier === 'oro' ? 'bg-yellow-950/40 text-yellow-500 border-yellow-900/30'
@@ -1134,7 +1177,7 @@ export default function RecruitmentCalculator() {
                     </div>
                   )}
                   {/* Subtle face badge indicator on artwork */}
-                  <div className={`absolute bottom-2 left-2 z-20 px-2 py-0.5 rounded text-[9px] font-mono uppercase border transition-colors duration-300 ${
+                  <div className={`absolute bottom-2 left-2 z-20 px-2 py-0.5 rounded text-[10px] font-mono uppercase border transition-colors duration-300 ${
                     effectiveUpgraded 
                       ? 'bg-amber-950/90 text-amber-300 border-amber-700/50' 
                       : 'bg-slate-950/85 text-slate-300 border-slate-800'
@@ -1148,28 +1191,28 @@ export default function RecruitmentCalculator() {
                   {/* Atk */}
                   <div className="bg-slate-950/70 border border-slate-800/80 rounded-xl p-2.5 flex flex-col items-center justify-center text-center">
                     <Swords className="w-5 h-5 text-red-400 mb-1" />
-                    <span className="text-[9px] text-slate-400 font-mono uppercase leading-none">Ataque</span>
+                    <span className="text-[10px] text-slate-400 font-mono uppercase leading-none">Ataque</span>
                     <span className="text-xl font-mono font-extrabold text-slate-100 mt-1">{stats.atk}</span>
                   </div>
 
                   {/* Def */}
                   <div className="bg-slate-950/70 border border-slate-800/80 rounded-xl p-2.5 flex flex-col items-center justify-center text-center">
                     <Shield className="w-5 h-5 text-blue-400 mb-1" />
-                    <span className="text-[9px] text-slate-400 font-mono uppercase leading-none">Defensa</span>
+                    <span className="text-[10px] text-slate-400 font-mono uppercase leading-none">Defensa</span>
                     <span className="text-xl font-mono font-extrabold text-slate-100 mt-1">{stats.def}</span>
                   </div>
 
                   {/* HP */}
                   <div className="bg-slate-950/70 border border-slate-800/80 rounded-xl p-2.5 flex flex-col items-center justify-center text-center">
                     <Heart className="w-5 h-5 text-rose-500 mb-1" />
-                    <span className="text-[9px] text-slate-400 font-mono uppercase leading-none">Vida</span>
+                    <span className="text-[10px] text-slate-400 font-mono uppercase leading-none">Vida</span>
                     <span className="text-xl font-mono font-extrabold text-slate-100 mt-1">{stats.hp}</span>
                   </div>
 
                   {/* Initiative */}
                   <div className="bg-slate-950/70 border border-slate-800/80 rounded-xl p-2.5 flex flex-col items-center justify-center text-center">
                     <Zap className="w-5 h-5 text-amber-400 mb-1" />
-                    <span className="text-[9px] text-slate-400 font-mono uppercase leading-none">Iniciativa</span>
+                    <span className="text-[10px] text-slate-400 font-mono uppercase leading-none">Iniciativa</span>
                     <span className="text-xl font-mono font-extrabold text-slate-100 mt-1">{stats.ini}</span>
                   </div>
                 </div>
@@ -1184,7 +1227,7 @@ export default function RecruitmentCalculator() {
                       <span className="font-bold text-slate-200 block text-[11px] font-mono leading-tight">
                         Unidad {stats.type}
                       </span>
-                      <span className="text-[9px] text-slate-500 leading-none block">
+                      <span className="text-[10px] text-slate-500 leading-none block">
                         {stats.type === 'Volador' ? 'Vuela e ignora obstáculos en el tablero'
                           : stats.type === 'A distancia' ? 'Ataca a distancia (Penalizado adyacente)'
                           : 'Ataque cuerpo a cuerpo regular'}
@@ -1224,7 +1267,7 @@ export default function RecruitmentCalculator() {
                 {/* Cost Section & Info Footer */}
                 <div className="border-t border-slate-700/40 pt-3 mt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 z-10">
                   <div className="space-y-1">
-                    <span className="text-[9px] text-slate-400 font-mono block">COSTE DE RECLUTAMIENTO:</span>
+                    <span className="text-[10px] text-slate-400 font-mono block">COSTE DE RECLUTAMIENTO:</span>
                     <div className="flex gap-2 items-center text-xs font-bold font-mono">
                       {currentCostSpecs.gold > 0 && (
                         <span className="bg-amber-950/60 border border-amber-900/40 text-amber-400 px-2.5 py-1 rounded-lg">
@@ -1242,7 +1285,7 @@ export default function RecruitmentCalculator() {
                         </span>
                       )}
                       {(currentCostSpecs.gold + currentCostSpecs.materials + currentCostSpecs.valuable) < 1 && (
-                        <span className="text-[9px] text-slate-400 font-mono block">
+                        <span className="text-[10px] text-slate-400 font-mono block">
                           Sin Coste
                         </span>
                       )}
@@ -1255,7 +1298,7 @@ export default function RecruitmentCalculator() {
                         : selectedFaction === 'bancos' ? 'Banco de Criaturas'
                         : 'Alistado en Ciudad'}
                     </span>
-                    <span className="block text-[8px] text-slate-500">
+                    <span className="block text-[10px] text-slate-500">
                       {selectedFaction === 'neutrales' ? 'No requiere vivienda de ciudad'
                         : selectedFaction === 'bancos' ? 'Defensores de criptas, utopías o conservatorios'
                         : `Requiere vivienda de ${selectedTier.toUpperCase()} construida`}

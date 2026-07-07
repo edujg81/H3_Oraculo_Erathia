@@ -318,7 +318,7 @@ export const FACTION_HEROES: FactionHeroesData = {
       name: 'Alamar',
       type: 'Magia',
       className: 'Brujo (Warlock)',
-      stats: { atk: 1, def: 1, power: 3, knowledge: 1 },
+      stats: { atk: 0, def: 0, power: 3, knowledge: 2 },
       initialSkill: {
         name: 'Sabiduría (Wisdom)',
         normal: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(3) en lugar de Buscar(2).',
@@ -327,38 +327,40 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Resurrección',
         cards: [
-          { level: 1, name: 'Plegaria Subterránea I', effect: 'Tus hechizos de "Resurrección" cuestan 1 punto menos de Maná (mínimo 1).' },
-          { level: 4, name: 'Resurgir de la Roca IV', effect: 'Tu hechizo de Resurrección puede revivir a una unidad de nivel plata de forma permanente con 2 HP.' },
-          { level: 6, name: 'Milagro del Abismo VI', effect: 'Una vez por combate, puedes lanzar un hechizo de Resurrección gratuito que revive a una unidad de nivel bronce con HP completo.' }
+          { level: 1, name: 'Resurrección I', effect: 'Instantáneo: Cancela un ataque que vaya a reducir la Vida de tu unidad * a 0.\n· Potencia 1 - * Bronce\n· Potencia 2 - * Plata\n· Potencia 4 - * Oro' },
+          { level: 4, name: 'Resurrección IV', effect: 'Instantáneo: Cancela un ataque que vaya a reducir la Vida de tu unidad * a 0.\n· Potencia 0 - * Bronce\n· Potencia 1 - * Plata\n· Potencia 3 - * Oro' },
+          { level: 6, name: 'Resurrección VI', effect: 'Instantáneo: Cancela un ataque que vaya a reducir la Vida de tu unidad * a 0.\n· Potencia 0 - * Bronce\n· Potencia 0 - * Plata\n· Potencia 2 - * Oro' }
         ]
       },
-      lore: 'Un erudito brujo de Nighon que dedicó décadas al estudio de la restauración celular y la retención del alma en los cuerpos.'
+      lore: 'Un erudito brujo de Nighon que dedicó décadas al estudio de la restauración celular y la retención del alma en los cuerpos. Cree firmemente que la magia de resurrección no es un milagro divino, sino una ciencia de precisión arcana que doblega las leyes de la muerte.',
+      quote: 'La muerte no es más que una interrupción temporal en el gran diseño de la victoria.'
     },
     {
       name: 'Deemer',
       type: 'Magia',
       className: 'Brujo (Warlock)',
-      stats: { atk: 1, def: 0, power: 3, knowledge: 2 },
+      stats: { atk: 0, def: 0, power: 3, knowledge: 2 },
       initialSkill: {
         name: 'Exploración (Scouting)',
-        normal: 'Puedes revelar 1 loseta de mapa adyacente extra al explorar.',
-        expert: 'Puedes revelar hasta 2 losetas de mapa adyacentes extra y obtener +1 de movimiento táctico verde.'
+        normal: 'Instantáneo: Juega esta carta antes de realizar una acción de Buscar, luego realiza Buscar(3) en su lugar.',
+        expert: 'Instantáneo: Juega esta carta antes de realizar una acción de Buscar, luego realiza Buscar(5) in su lugar.'
       },
       specialty: {
         name: 'Especialidad: Lluvia de Meteoros',
         cards: [
-          { level: 1, name: 'Lluvia Centelleante I', effect: 'Tu hechizo "Lluvia de Meteoros" aumenta su daño en +1 y cuesta 1 de Maná menos.' },
-          { level: 4, name: 'Impacto Profundo IV', effect: 'Tus hechizos destructivos de área aturden a las unidades afectadas si sacas un resultado de +1 en el dado.' },
-          { level: 6, name: 'Tormenta de Piedra VI', effect: 'Una vez por combate, puedes gastar 3 de Maná para lanzar una lluvia de meteoros instantánea de 3 de daño místico.' }
+          { level: 1, name: 'Lluvia de Meteoros I', effect: 'Instantáneo: Selecciona una unidad y 1 unidad adyacente a ella. Inflige * a ambas unidades seleccionadas.\n· Potencia 0 - 1 Herida\n· Potencia 2 - 2 Heridas\n· Potencia 4 - 3 Heridas' },
+          { level: 4, name: 'Lluvia de Meteoros IV', effect: 'Instantáneo: +1 Potencia\n— O —\nInstantáneo: Baraja tu pila de descartes de nuevo en tu mazo, luego roba 1 carta.' },
+          { level: 6, name: 'Lluvia de Meteoros VI', effect: 'Instantáneo: Selecciona una unidad y 2 unidades adyacentes a ella. Inflige * a todas las unidades seleccionadas.\n· Potencia 0 - 1 Herida\n· Potencia 2 - 2 Heridas\n· Potencia 4 - 3 Heridas' }
         ]
       },
-      lore: 'Un brujo de mente inestable obsesionado con la piromancia y la caída de bólidos celestes, famoso por descubrir yacimientos a gran distancia.'
+      lore: 'Un perturbado pero brillante brujo de mente inestable obsesionado con la piromancia y la caída de bólidos celestes. Es temido tanto por sus enemigos como por sus aliados por su tendencia a invocar lluvias de meteoros devastadoras sin importarle las consecuencias.',
+      quote: '¿Habéis visto alguna vez caer una estrella del cielo? Es un espectáculo... abrasador.'
     },
     {
       name: 'Jeddite',
       type: 'Magia',
       className: 'Brujo (Warlock)',
-      stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
+      stats: { atk: 0, def: 0, power: 3, knowledge: 2 },
       initialSkill: {
         name: 'Brujería (Sorcery)',
         normal: 'Instantáneo: +1 Potencia\nLuego, roba 1 carta.',
@@ -367,72 +369,76 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Hechicería Misteriosa',
         cards: [
-          { level: 1, name: 'Canalización Sutil I', effect: 'Ganas 1 punto de Maná cada vez que un hechizo enemigo sea cancelado o resista.' },
-          { level: 4, name: 'Fuerza Secreta IV', effect: 'El coste de tus hechizos de la escuela de Tierra disminuye en 1 punto de Maná (mínimo 1).' },
-          { level: 6, name: 'Hechicería Suprema VI', effect: 'Una vez por combate, puedes duplicar el efecto de un hechizo de nivel 1 que hayas lanzado en esta ronda.' }
+          { level: 1, name: 'Hechicería Misteriosa I', effect: 'Instantáneo: Roba hasta 3 cartas de tu mazo, toma cualquier carta de Hechizo y Especialidad y agrégalas a tu mano. Descarta las cartas restantes.' },
+          { level: 4, name: 'Hechicería Misteriosa IV', effect: 'Instantáneo: Cancela un ataque que vaya a reducir la Vida de tu unidad * a 0.\n· Potencia 0 - * Bronce\n· Potencia 1 - * Plata\n· Potencia 2 - * Oro' },
+          { level: 6, name: 'Hechicería Misteriosa VI', effect: 'Instantáneo: Roba hasta 4 cartas de tu mazo, toma cualquier carta de Hechizo y Especialidad y agrégalas a tu mano. Descarta las cartas restantes.' }
         ]
       },
-      lore: 'Un místico subterráneo de Bracada que huyó a las cuevas de Nighon para estudiar las artes arcanas prohibidas de la hechicería de sangre sin restricciones.'
+      lore: 'Un místico subterráneo originario de Bracada que huyó a las cuevas de Nighon para estudiar las artes arcanas prohibidas de la hechicería de sangre sin las asfixiantes restricciones de los magos de la superficie. Busca desentrañar los secretos más profundos de la manipulación del maná.',
+      quote: 'Las restricciones de la superficie solo limitan el verdadero potencial de la magia pura.'
     },
     {
       name: 'Lorelei',
       type: 'Poder',
       className: 'Cacique (Overlord)',
-      stats: { atk: 3, def: 1, power: 1, knowledge: 1 },
+      stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Exploración (Scouting)',
-        normal: 'Puedes revelar 1 loseta de mapa adyacente extra al explorar.',
-        expert: 'Puedes revelar hasta 2 losetas de mapa adyacentes extra y obtener +1 de movimiento táctico verde.'
+        normal: 'Instantáneo: Juega esta carta antes de realizar una acción de Buscar, luego realiza Buscar(3) en su lugar.',
+        expert: 'Instantáneo: Juega esta carta antes de realizar una acción de Buscar, luego realiza Buscar(5) en su lugar.'
       },
       specialty: {
         name: 'Especialidad: Arpías',
         cards: [
-          { level: 1, name: 'Filo de Garra I', effect: 'Tus unidades de Arpías obtienen +1 de Ataque y +1 de Iniciativa.' },
-          { level: 4, name: 'Ataque Fugaz IV', effect: 'Tus Arpías Brujas pueden atacar y regresar inmediatamente a su casilla de inicio sin sufrir represalias.' },
-          { level: 6, name: 'Torbellino de Plumas VI', effect: 'Al inicio del combate, tus Arpías aturden a una unidad enemiga de nivel bronce o plata durante la primera ronda.' }
+          { level: 1, name: 'Arpías I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEste efecto se duplica para la unidad Arpías.' },
+          { level: 4, name: 'Arpías IV', effect: 'Continuo: Para este combate, la Vida de la unidad seleccionada aumenta en 1.\nEste efecto se duplica para la unidad Arpías.' },
+          { level: 6, name: 'Arpías VI', effect: 'Instantáneo: La unidad seleccionada gana +2 Ataque.\nEste efecto se duplica para la unidad Arpías.' }
         ]
       },
-      lore: 'Una cruel y experimentada comandante de Nighon que adiestra a las arpías subterráneas para convertirlas en garras implacables de asalto.'
+      lore: 'Una cruel, pragmática y experimentada comandante de Nighon que adiestra a las arpías de las profundidades para convertirlas en garras implacables de asalto. Su liderazgo convierte a estas criaturas salvajes en una fuerza militar organizada y letal.',
+      quote: 'Mis arpías huelen vuestra debilidad desde la oscuridad; vuestro fin vendrá desde el aire.'
     },
     {
       name: 'Mutare',
       type: 'Poder',
       className: 'Cacique (Overlord)',
-      stats: { atk: 2, def: 1, power: 1, knowledge: 2 },
+      stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Tácticas (Tactics)',
-        normal: 'Permite recolocar 1 de tus unidades en tu zona de inicio del combate antes de que empiece la primera ronda.',
-        expert: 'Gasta 1 Corona para recolocar hasta 3 unidades de inicio y sumarles +1 a la Iniciativa durante la primera ronda.'
+        normal: 'Instantáneo: Al comienzo del combate, puedes intercambiar la posición de dos de tus unidades.',
+        expert: 'Activación: Durante el combate, puedes intercambiar la posición de dos de tus unidades.'
       },
       specialty: {
         name: 'Especialidad: Dragones',
         cards: [
-          { level: 1, name: 'Aliento de Fuego I', effect: 'Tus unidades de tipo Dragones obtienen +1 de Ataque y +1 de Iniciativa.' },
-          { level: 4, name: 'Escamas de Acero IV', effect: 'Los Dragones aliados reducen en 1 todo daño físico recibido y aumentan su HP máximo en +1.' },
-          { level: 6, name: 'Furia Volcánica VI', effect: 'Una vez por combate, un Dragón aliado puede golpear a su objetivo e infligir daño completo a otra unidad adyacente.' }
+          { level: 1, name: 'Dragones I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEste effecto se duplica para una unidad de Dragones.' },
+          { level: 4, name: 'Dragones IV', effect: 'Continuo: Para este combate, la Vida de la unidad seleccionada aumenta en 1.\nEste efecto se duplica para una unidad de Dragones.' },
+          { level: 6, name: 'Dragones VI', effect: 'Continuo: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEste efecto se duplica para una unidad de Dragones.' }
         ]
       },
-      lore: 'Consumida por el ansia de dominación absoluta, Mutare bebió la sangre de un dragón mitológico para transformarse en una temible señora de dragones.'
+      lore: 'Consumida por un ansia insaciable de dominación absoluta, Mutare bebió la sangre de un dragón mitológico en un ritual arcano para transformarse en una temible y legendaria señora de dragones, gobernando Nighon con puño de hierro y fuego.',
+      quote: 'La sangre de los dragones corre por mis venas. Arrodillaos ante vuestra verdadera reina.'
     },
     {
       name: 'Sephinroth',
       type: 'Magia',
       className: 'Brujo (Warlock)',
-      stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
+      stats: { atk: 0, def: 0, power: 3, knowledge: 2 },
       initialSkill: {
         name: 'Inteligencia (Intelligence)',
-        normal: 'Al inicio de la partida, roba 1 carta de Conocimiento extra para tu mano.',
-        expert: 'Tu límite de cartas de Conocimiento en mano aumenta en +1. Una vez por combate, puedes robar 2 cartas de Conocimiento descartando 1.'
+        normal: 'Instantáneo: Durante el combate, antes de que se active cualquier unidad, juega una carta de Hechizo. Solo puedes jugar una carta de Hechizo durante una ronda de combate.',
+        expert: 'Instantáneo: Durante el combate, antes de que se active cualquier unidad, juega una carta de Hechizo. Este Hechizo no cuenta para tu límite de hechizos por ronda de combate.'
       },
       specialty: {
         name: 'Especialidad: Recursos',
         cards: [
-          { level: 1, name: 'Cristalización I', effect: 'Generas +1 de Cristal al inicio de cada ronda de recursos de manera pasiva.' },
-          { level: 4, name: 'Mercado Negro IV', effect: 'Puedes intercambiar recursos con una tasa favorable de 1:1 en tu turno.' },
-          { level: 6, name: 'Riqueza Mineral VI', effect: 'Inmediatamente ganas 3 de Oro y 1 de Madera o Cristal de la reserva.' }
+          { level: 1, name: 'Recursos I', effect: 'Mapa: Paga 2 Oros para ganar 1 Objeto de Valor.\n— O —\nInstantáneo: Roba 1 carta.' },
+          { level: 4, name: 'Recursos IV', effect: 'Mapa: Ganas 1 Objeto de Valor.\n— O —\nInstantáneo: +2 de Potencia.' },
+          { level: 6, name: 'Recursos VI', effect: 'Mapa: Ganas 2 Objetos de Valor.\n— O —\nInstantáneo: Roba 2 cartas.' }
         ]
       },
-      lore: 'Una bruja misteriosa nacida de la realeza de Bracada que desertó a las profundidades de Nighon, usando sus poderes matemáticos para transmutar rocas en gemas y cristales raros.'
+      lore: 'Una enigmática bruja nacida en la realeza de Bracada que desertó a las profundidades de Nighon. Utiliza sus formidables dotes matemáticas y lógicas para transmutar rocas ordinarias en gemas preciosas y cristales raros, financiando las inmensas campañas bélicas del inframundo.',
+      quote: 'Incluso el caos de la guerra sigue una ecuación matemática perfecta que yo ya he resuelto.'
     },
     {
       name: 'Tarnum',
@@ -447,12 +453,13 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Dragones',
         cards: [
-          { level: 1, name: 'Sangre de Sierpe I', effect: 'Tus unidades de tipo Dragón obtienen +1 de Defensa y +1 de HP.' },
-          { level: 4, name: 'Rugido Ancestral IV', effect: 'Al inicio de la ronda de combate, tus Dragones aturden a una unidad de bronce enemiga.' },
-          { level: 6, name: 'Legado del Caudillo VI', effect: 'Una vez por combate, tu unidad de Dragones realiza un ataque gratis con +2 de Ataque.' }
+          { level: 1, name: 'Dragones I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEste efecto se duplica para una unidad de Dragones.' },
+          { level: 4, name: 'Dragones IV', effect: 'Instantáneo: Elige una fila (línea recta de 5 espacios consecutivos). Cada unidad en esa fila sufre 2 Heridas.' },
+          { level: 6, name: 'Dragones VI', effect: 'Instantáneo: Retira un cubo negro de una unidad de Dragones o colócalo sobre ella (indica si la unidad ha realizado su contraataque o no).\n— O —\nInstantáneo: La unidad seleccionada gana +2 Ataque.' }
         ]
       },
-      lore: 'El héroe inmortal que en una de sus múltiples encarnaciones lideró como Caudillo (Overlord) de Nighon para dominar a los dragones del inframundo.'
+      lore: 'El héroe inmortal condenado por los Ancestros que, en una de sus múltiples reencarnaciones, lideró como un despiadado Caudillo (Overlord) de Nighon. Bajo este manto, unió y dominó a los dragones del inframundo para enfrentarse a su propio y trágico destino.',
+      quote: 'Los Ancestros me niegan el descanso, pero las bestias de las profundidades obedecen mi llamado.'
     }
   ],
   rampart: [
@@ -460,68 +467,70 @@ export const FACTION_HEROES: FactionHeroesData = {
       name: 'Clancy',
       type: 'Poder',
       className: 'Explorador (Ranger)',
-      stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
+      stats: { atk: 1, def: 3, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Logística (Logistics)',
-        normal: 'Tus héroes ganan +1 Punto de Movimiento (PM) al iniciar su turno si están en losetas de camino.',
-        expert: 'Gasta 1 Corona para añadir +2 PM incondicionales al movimiento terrestre del héroe en este turno.'
+        name: 'Orientación (Pathfinding)',
+        normal: 'Mapa: En este turno, tu Héroe puede moverse a través de lugares con Unidades Neutrales y Héroes Enemigos, pero si termina su movimiento en uno de estos lugares, comienza el Combate.',
+        expert: 'Mapa: Tu héroe puede moverse sobre el borde amarillo y los lugares bloqueados, pero no puede finalizar su movimiento sobre ellos.'
       },
       specialty: {
         name: 'Especialidad: Unicornios',
         cards: [
-          { level: 1, name: 'Crines de Luz I', effect: 'Tus Unicornios obtienen +1 de Defensa y +1 de Iniciativa.' },
-          { level: 4, name: 'Halo de Pureza IV', effect: 'Tus Unicornios otorgan inmunidad a hechizos de nivel 1 y 2 a todas las unidades aliadas adyacentes.' },
-          { level: 6, name: 'Carga Radiante VI', effect: 'Una vez por combate, tus Unicornios pueden cargar infligiendo +2 de daño y aplicando ceguera.' }
+          { level: 1, name: 'Crines de Luz I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEste efecto se duplica para la unidad Unicornios.' },
+          { level: 4, name: 'Halo de Pureza IV', effect: 'Continuo: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEste efecto se duplica para la unidad Unicornios.' },
+          { level: 6, name: 'Carga Radiante VI', effect: 'Continuo: Para este combate, la unidad seleccionada reduce cualquier Daño realizado por Hechizos en 1, hasta un mínimo de 0.\nEste efecto se duplica para la unidad Unicornios.' }
         ]
       },
-      lore: 'Un explorador elfo que posee una afinidad mística con los unicornios de AvLee, liderándolos con presteza y elegancia.'
+      lore: 'Un explorador enano que posee una afinidad mística inigualable con los unicornios de AvLee, liderándolos con presteza y elegancia divina en defensa de los claros sagrados.',
+      quote: 'La luz de los unicornios disipará la oscuridad de cualquier invasor que ose profanar el suelo sagrado de AvLee.'
     },
     {
       name: 'Gelu',
       type: 'Poder',
       className: 'Explorador (Ranger)',
-      stats: { atk: 3, def: 1, power: 1, knowledge: 1 },
+      stats: { atk: 1, def: 3, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Tiro con Arco (Archery)',
         normal: 'Continuo: Durante esta ronda de combate, tus unidades a distancia obtienen +1 Ataque si el objetivo es una unidad no adyacente .Tus unidades aliadas de ataque a distancia infligen +1 de daño físico.',
         expert: 'Continuo: Hasta el final de la siguiente ronda de combate, tus unidades de ataque a distancia obtienen +1 de Iniciativa y +1 Ataque si el objetivo es una unidad no adyacente.'
       },
       specialty: {
-        name: 'Especialidad: Tiradores de Élite',
+        name: 'Especialidad: Tiradores',
         cards: [
-          { level: 1, name: 'Entrenamiento del Bosque I', effect: 'Puedes gastar 1 de Oro para transformar a tus Elfos de tu ejército en letales Tiradores de Élite.' },
-          { level: 4, name: 'Disparo Silencioso IV', effect: 'Tus Tiradores de Élite ganan +1 de Iniciativa y sus ataques ignoran cualquier obstáculo físico.' },
-          { level: 6, name: 'Salva Letal VI', effect: 'Una vez por combate, designa un objetivo. Tus Tiradores de Élite disparan dos veces consecutivas sin represalias.' }
+          { level: 1, name: 'Tiradores I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEste efecto se duplica para las unidades Elfos y Tiradores.' },
+          { level: 4, name: 'Tiradores IV', effect: 'Mapa: Si tienes una carta de Unidad Manada de Elfos, descártala. Luego, busca en el mazo de Unidad Neutral Plata la carta Tiradores y añádela a tu mazo de Unidades. Sólo puedes controlar 1 unidad de Tiradores al mismo tiempo.\n— O —\nInstantáneo: Roba una carta.' },
+          { level: 6, name: 'Tiradores VI', effect: 'Continuo: Durante este Combate, la Iniciativa de tu unidad seleccionada se incrementa en 2.\nEste efecto se duplica para las unidades Elfos y Tiradores.' }
         ]
       },
-      lore: 'Un héroe legendario de sangre mestiza, capitán de la Guardia Forestal de AvLee y custodio de la devastadora Espada de Armagedón.',
+      lore: 'Un héroe legendario de sangre mestiza, capitán de la prestigiosa Guardia Forestal de AvLee y custodio designado de la devastadora Espada de Armagedón.',
       quote: 'Nuestras flechas no viajan con el viento, viajan impulsadas por la justicia de los bosques ancestrales.'
     },
     {
       name: 'Gem',
       type: 'Magia',
       className: 'Druida (Druid)',
-      stats: { atk: 1, def: 0, power: 2, knowledge: 3 },
+      stats: { atk: 0, def: 2, power: 1, knowledge: 2 },
       initialSkill: {
         name: 'Primeros Auxilios (First Aid)',
-        normal: 'Al final de un combate, sana 1 herida a una de tus unidades sobrevivientes.',
-        expert: 'Al final de un combate, sana hasta 2 heridas repartidas entre tus unidades sobrevivientes o revive una unidad de nivel bronce destruida.'
+        normal: 'Instantáneo: Retira 1 Herida de una de tus unidades.',
+        expert: 'Instantáneo: Al usar la carta de Primeros Auxilios, resuelve su efecto contra el mismo objetivo 3 veces.'
       },
       specialty: {
         name: 'Especialidad: Primeros Auxilios',
         cards: [
-          { level: 1, name: 'Tienda Druídica I', effect: 'Tu Tienda de Primeros Auxilios recupera +2 HP en lugar de 1 y puede usarse dos veces por ronda.' },
-          { level: 4, name: 'Aura Sanadora IV', effect: 'Al inicio del combate, todas tus unidades de nivel bronce recuperan 1 HP perdido.' },
-          { level: 6, name: 'Rejuvenecer VI', effect: 'Gasta 3 de Maná para revivir una unidad destruida de nivel bronce o plata con 2 HP.' }
+          { level: 1, name: 'Primeros Auxilios I', effect: 'Instantáneo: Coge una carta Tienda de Primeros Auxilios del mazo de Máquinas de Guerra sin coste.\n— O —\nInstantáneo: Si tienes una Tienda de Primeros Auxilios, roba 1 carta.' },
+          { level: 4, name: 'Primeros Auxilios IV', effect: 'Instantáneo: Retira 2 Heridas de una de tus unidades.' },
+          { level: 6, name: 'Primeros Auxilios VI', effect: 'Continuo: Durante este Combate, duplica el efecto de tu Tienda de Primeros Auxilios.' }
         ]
       },
-      lore: 'Una hechicera refugiada de Enroth que abrazó las enseñanzas pacifistas de los druidas en AvLee, sanando las heridas del campo de batalla.'
+      lore: 'Una valiente hechicera refugiada de Enroth que abrazó las enseñanzas pacifistas de los druidas en AvLee, sanando las heridas físicas y espirituales del campo de batalla.',
+      quote: 'El bosque cura a quienes lo protegen con devoción, pero puede reclamar la vida de aquellos que traen el caos consigo.'
     },
     {
       name: 'Ivor',
       type: 'Poder',
       className: 'Explorador (Ranger)',
-      stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
+      stats: { atk: 1, def: 3, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Ofensiva (Offence)',
         normal: 'Instantáneo: +1 Ataque\nLuego, roba 1 carta.',
@@ -530,32 +539,34 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Elfos',
         cards: [
-          { level: 1, name: 'Disparo Veloz I', effect: 'Tus Elfos y Grandes Elfos obtienen +1 de Ataque y +1 de Iniciativa.' },
-          { level: 4, name: 'Flechas de Plata IV', effect: 'Tus Elfos ignoran 1 punto de Defensa física de la unidad enemiga al disparar.' },
-          { level: 6, name: 'Fuego de Cobertura VI', effect: 'Una vez por combate, cuando una unidad enemiga cargue hacia una de tus tropas, tus Elfos realizan un ataque inmediato gratuito.' }
+          { level: 1, name: 'Elfos I', effect: 'Instantáneo: Establece todos los dados de la siguiente tirada de ataque en "0".' },
+          { level: 4, name: 'Elfos IV', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\nEl efecto se duplica para una unidad a distancia.' },
+          { level: 6, name: 'Elfos VI', effect: 'Continuo: Para este combate, la Vida de la unidad seleccionada aumenta en 2.\n— O —\nInstantáneo: En lugar de lanzar los dados, asigna a cada uno de ellos los valores que elijas.' }
         ]
       },
-      lore: 'Un experimentado explorador elfo que comanda las fuerzas de arqueros de AvLee, con un ojo infalible y reflejos felinos.'
+      lore: 'Un curtido y astuto explorador elfo que comanda las huestes de arqueros de AvLee, dotado de un ojo infalible y reflejos felinos inigualables.',
+      quote: 'Antes de que alcances a escuchar el silbido de la cuerda de mi arco, el destino de la batalla ya habrá sido sellado.'
     },
     {
       name: 'Melodia',
       type: 'Magia',
       className: 'Druida (Druid)',
-      stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
+      stats: { atk: 0, def: 2, power: 1, knowledge: 2 },
       initialSkill: {
         name: 'Suerte (Luck)',
-        normal: 'Te permite re-lanzar un dado de ataque una vez por combate.',
-        expert: 'Te permite re-lanzar hasta dos dados de ataque o defensa por combate, y ganas una ficha de Moral Positiva.'
+        normal: 'Continuo: Puedes volver a tirar un dado de Tesoro y un dado de Recursos una vez durante este turno.',
+        expert: 'Continuo: Puedes volver a tirar cualquier dado una vez durante este turno.'
       },
       specialty: {
         name: 'Especialidad: Fortuna',
         cards: [
-          { level: 1, name: 'Aura de Fortuna I', effect: 'Todas tus tropas aliadas ganan inmunidad a la Moral Negativa.' },
-          { level: 4, name: 'Suerte del Destino IV', effect: 'Cada vez que lances un hechizo de Luz o Agua, una unidad aliada obtiene +1 de Iniciativa en esta ronda.' },
-          { level: 6, name: 'Canto Melódico VI', effect: 'Una vez por combate, tu unidad seleccionada causa daño crítico automático en su ataque sin necesidad de lanzar dado.' }
+          { level: 1, name: 'Fortuna I', effect: 'Instantáneo: Ganas Moral Positiva y 1 Oro.' },
+          { level: 4, name: 'Fortuna IV', effect: 'Instantáneo: Tira 2 dados de Recursos y resuelve uno de ellos.\nGana 1 Oro.' },
+          { level: 6, name: 'Fortuna VI', effect: 'Mapa: Durante este turno, el número de dados que tiras y resuelves en ubicaciones aumenta en 1. Gana 1 Oro.' }
         ]
       },
-      lore: 'Una druida cantarína cuyo espíritu está en sintonía con las hadas y los elfos de la fortuna, llenando de entusiasmo místico a las tropas de AvLee.'
+      lore: 'Una druida cantarína y mística cuyo espíritu está en perfecta sintonía con las hadas de la fortuna, infundiendo un entusiasmo mágico e invencible en sus tropas.',
+      quote: 'El destino canta en armonía con la brisa de la espesura; solo quienes tienen el alma limpia pueden escuchar su melodía de victoria.'
     },
     {
       name: 'Mephala',
@@ -564,38 +575,40 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 1, def: 3, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Liderazgo (Leadership)',
-        normal: 'Tus unidades aliadas son inmunes a los efectos de Moral Negativa.',
-        expert: 'Tus unidades aliadas son inmunes a Moral Negativa. Además, gana una ficha de Moral Positiva al inicio de cualquier combate.'
+        normal: 'Instantáneo: Gana una ficha de Moral Positiva.',
+        expert: 'Instantáneo: Roba 2 cartas. Luego, gana una ficha de Moral Positiva.'
       },
       specialty: {
         name: 'Especialidad: Armadura',
         cards: [
-          { level: 1, name: 'Escudo Arbóreo I', effect: 'Tus unidades de tipo Enanos y Dendroides obtienen +1 de Defensa y +1 de HP.' },
-          { level: 4, name: 'Pared de Escudos IV', effect: 'Una vez por combate, designa una unidad. Toda herida física que sufra se reduce a un máximo de 1 daño.' },
-          { level: 6, name: 'Fortaleza Viviente VI', effect: 'Tus tropas de nivel bronce obtienen inmunidad a los ataques mágicos de nivel 1 durante todo el combate.' }
+          { level: 1, name: 'Armadura I', effect: 'Instantáneo: +2 Defensa.' },
+          { level: 4, name: 'Armadura IV', effect: 'Instantáneo: +3 Defensa.' },
+          { level: 6, name: 'Armadura VI', effect: 'Instantáneo: +4 Defensa.' }
         ]
       },
-      lore: 'Una comandante defensiva sumamente fría y analítica, cuyas tácticas de bloqueo y resistencia agotan a los atacantes.'
+      lore: 'Una comandante defensiva sumamente brillante y analítica, cuyas inquebrantables tácticas de bloqueo y desgaste agotan hasta al atacante más fiero.',
+      quote: 'Que ataquen con toda su ira. Nuestras murallas de madera viva y nuestras voluntades de hierro jamás cederán un solo milímetro.'
     },
     {
       name: 'Tarnum',
       type: 'Poder',
       className: 'Explorador (Ranger)',
-      stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
+      stats: { atk: 1, def: 3, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Liderazgo (Leadership)',
-        normal: 'Tus unidades aliadas son inmunes a los efectos de Moral Negativa.',
-        expert: 'Gasta 1 Corona al inicio del combate para añadir una ficha de Moral Positiva a todas tus unidades.'
+        normal: 'Instantáneo: Gana una ficha de Moral Positiva.',
+        expert: 'Instantáneo: Roba 2 cartas. Luego, gana una ficha de Moral Positiva.'
       },
       specialty: {
         name: 'Especialidad: Tiradores de Élite',
         cards: [
-          { level: 1, name: 'Instinto del Bosque I', effect: 'Tus arqueros ganan +1 de Defensa física y sus disparos ignoran la penalización por distancia.' },
-          { level: 4, name: 'Guía de Francotirador IV', effect: 'Tus arqueros aliados obtienen +1 de Iniciativa y se mueven una casilla extra.' },
-          { level: 6, name: 'Salva Implacable VI', effect: 'Una vez por combate, tus arqueros pueden disparar un tiro de penetración gratis infligiendo daño místico.' }
+          { level: 1, name: 'Tiradores I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEste efecto se duplica para las unidades Elfos y Tiradores.' },
+          { level: 4, name: 'Tiradores IV', effect: 'Continuo: Durante este Combate, la Iniciativa de tu unidad seleccionada aumenta en 1.\nEste efecto se duplica para las unidades Elfos y Tiradores.' },
+          { level: 6, name: 'Tiradores VI', effect: 'Instantáneo: Juega esta carta al inicio del Combate. Busca una unidad de Tiradores en el mazo de unidades neutrales (o en su pila de descarte) y añádela a tu ejército para este combate (descártala después)\n— O —\nInstantáneo: Roba una carta.' }
         ]
       },
-      lore: 'El héroe inmortal que en esta encarnación asume el manto de un ágil explorador de AvLee para proteger a los elfos y adiestrar a los mejores tiradores forestales.'
+      lore: 'El legendario Héroe Inmortal que en esta encarnación asume el manto de explorador de AvLee para proteger a los elfos y forjar a los más letales francotiradores forestales.',
+      quote: 'He vivido mil vidas y cometido mil errores, pero defender la pureza y libertad de AvLee es el deber más sagrado que jamás he jurado.'
     }
   ],
   torre: [
@@ -749,9 +762,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Demonio (Demoniac)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Exploración (Pathfinding)',
-        normal: 'Tu héroe obtiene +1 Punto de Movimiento (PM) verde extra en el mapa táctico.',
-        expert: 'Tu héroe obtiene +1 Punto de Movimiento (PM) verde extra en el mapa táctico. Además, ignora los penalizadores de terreno difícil en la exploración.'
+        name: 'Orientación (Pathfinding)',
+        normal: 'Mapa: En este turno, tu Héroe puede moverse a través de lugares con Unidades Neutrales y Héroes Enemigos, pero si termina su movimiento en uno de estos lugares, comienza el Combate.',
+        expert: 'Mapa: Tu héroe puede moverse sobre el borde amarillo y los lugares bloqueados, pero no puede finalizar su movimiento sobre ellos.'
       },
       specialty: {
         name: 'Especialidad: Cerberos',
@@ -1037,8 +1050,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Primeros Auxilios (First Aid)',
-        normal: 'Al final de un combate, recuperas una miniatura de nivel bronce de tu ejército destruida de forma gratuita.',
-        expert: 'Tu tienda de primeros auxilios puede curar 2 HP a cualquier unidad aliada durante el combate una vez por ronda.'
+        normal: 'Instantáneo: Retira 1 Herida de una de tus unidades.',
+        expert: 'Instantáneo: Al usar la carta de Primeros Auxilios, resuelve su efecto contra el mismo objetivo 3 veces.'
       },
       specialty: {
         name: 'Especialidad: Piel de Piedra',
@@ -1242,8 +1255,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Suerte (Luck)',
-        normal: 'Tus unidades tienen probabilidad de obtener +1 daño físico si sacas un resultado positivo de moral.',
-        expert: 'Gasta 1 Corona para que la unidad activa obtenga un golpe crítico automático en su siguiente ataque.'
+        normal: 'Continuo: Puedes volver a tirar un dado de Tesoro y un dado de Recursos una vez durante este turno.',
+        expert: 'Continuo: Puedes volver a tirar cualquier dado una vez durante este turno.'
       },
       specialty: {
         name: 'Especialidad: Curar',
