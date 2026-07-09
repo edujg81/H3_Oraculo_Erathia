@@ -43,9 +43,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Caballero (Knight)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Liderazgo (Leadership)',
+        name: 'Liderazgo',
         normal: 'Instantáneo: Gana una ficha de Moral Positiva.',
-        expert: 'Instantáneo: Roba 2 cartas. Luego, gana una ficha de Moral Positiva.'
+        expert: 'Instantáneo: Roba 2 cartas.\nDespués, gana una ficha de Moral Positiva.'
       },
       specialty: {
         name: 'Especialidad: Cruzados',
@@ -64,9 +64,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Clérigo (Cleric)',
       stats: { atk: 1, def: 0, power: 2, knowledge: 2 },
       initialSkill: {
-        name: 'Sabiduría (Wisdom)',
-        normal: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(3) en lugar de Buscar(2).',
-        expert: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(4) en lugar de Buscar(3).'
+        name: 'Sabiduría',
+        normal: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(3) en vez de buscar(2).',
+        expert: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(4) en vez de buscar(2).'
       },
       specialty: {
         name: 'Especialidad: Bendición de Fuerza',
@@ -85,9 +85,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Caballero (Knight)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Tiro con Arco (Archery)',
-        normal: 'Continuo: Durante esta ronda de combate, tus unidades a distancia obtienen +1 Ataque si el objetivo es una unidad no adyacente .Tus unidades aliadas de ataque a distancia infligen +1 de daño físico.',
-        expert: 'Continuo: Hasta el final de la siguiente ronda de combate, tus unidades de ataque a distancia obtienen +1 de Iniciativa y +1 Ataque si el objetivo es una unidad no adyacente.'
+        name: 'Tiro con arco',
+        normal: 'Continuo: Durante esta ronda de combate, tus unidades a distancia ganan +1 Ataque si el objetivo no es una unidad adyacente.',
+        expert: 'Continuo: Hasta el final de la siguiente ronda de combate, todas tus unidades a distancia ganan +1 Iniciativa y +1 Ataque si el objetivo no es una unidad adyacente.'
       },
       specialty: {
         name: 'Especialidad: Tiradores',
@@ -106,9 +106,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Clérigo (Cleric)',
       stats: { atk: 1, def: 0, power: 2, knowledge: 2 },
       initialSkill: {
-        name: 'Misticismo (Mysticism)',
-        normal: 'Instantáneo: Juega esta carta inmediatamente después de lanzar un hechizo. En lugar de descartar la carta de Hechizo, vuelve a tu mano.',
-        expert: 'Instantáneo: Juega esta carta inmediatamente después de lanzar un hechizo. En lugar de descartar la carta de Hechizo y todas las demás cartas jugadas junto con ella, llévalas de vuelta a tu mano.'
+        name: 'Misticismo',
+        normal: 'Instantáneo: Juega esta carta inmediatamente después de lanzar un hechizo. En vez de descartar la carta de hechizo, devuélvela a tu mano.',
+        expert: 'Instantáneo: Juega esta carta inmediatamente después de lanzar un hechizo. En vez de descartar la carta de Hechizo y el resto de las cartas que juegues con ella, devuélvelas a tu mano.'
       },
       specialty: {
         name: 'Especialidad: Fanáticos',
@@ -127,9 +127,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Clérigo (Cleric)',
       stats: { atk: 1, def: 0, power: 2, knowledge: 2 },
       initialSkill: {
-        name: 'Sabiduría (Wisdom)',
-        normal: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(3) en lugar de Buscar(2).',
-        expert: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(4) en lugar de Buscar(3).'
+        name: 'Sabiduría',
+        normal: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(3) en vez de buscar(2).',
+        expert: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(4) en vez de buscar(2).'
       },
       specialty: {
         name: 'Especialidad: Médico de Campo de Batalla',
@@ -148,9 +148,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Caballero (Knight)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Finanzas (States)',
-        normal: 'Instantáneo: Gana 3 de Oro.',
-        expert: 'Instantáneo: Gana 6 de Oro.'
+        name: 'Patrimonio',
+        normal: 'Instantáneo: Gana 3 Oros.',
+        expert: 'Instantáneo: Gana 6 Oros.'
       },
       specialty: {
         name: 'Especialidad: Finanzas',
@@ -169,9 +169,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Caballero (Knight)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Artillería (Artillery)',
+        name: 'Artillería',
         normal: 'Instantáneo: Inflige 1 Herida a la unidad enemiga con menor Iniciativa.',
-        expert: 'Instantáneo: Al usar la carta Ballesta, resuelve su efecto contra el mismo objetivo 3 veces.'
+        expert: 'Instantáneo: Al utilizar la carta Balista, resuelve su efecto 3 veces contra el mismo objetivo.'
       },
       specialty: {
         name: 'Especialidad: Balista',
@@ -192,9 +192,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Caballero de la Muerte (Death Knight)',
       stats: { atk: 1, def: 2, power: 2, knowledge: 1 },
       initialSkill: {
-        name: 'Nigromancia (Necromancy)',
-        normal: 'Mapa: Juega después de ganar un combate que no sea un combate rápido. Puedes reforzar una unidad Bronce o Plata de tu elección por la mitad del coste de Oro (redondeado hacia abajo).',
-        expert: 'Mapa: Juega después de ganar un combate que no sea un combate rápido. Puedes reforzar cualquier unidad de tu elección por la mitad del coste de Oro (redondeado hacia abajo).'
+        name: 'Nigromancia',
+        normal: 'Mapa: Juégalo después de ganar un combate que no sea un combate rápido. Refuerza una de tus unidades Bronce o Plata por la mitad del coste en Oro (redondeado hacia abajo).',
+        expert: 'Mapa: Juégalo después de ganar un combate que no sea un combate rápido. Refuerza cualquiera de tus unidades por la mitad del coste en Oro (redondeado hacia abajo).'
       },
       specialty: {
         name: 'Especialidad: Caballeros del Terror',
@@ -213,9 +213,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Caballero de la Muerte (Death Knight)',
       stats: { atk: 1, def: 2, power: 2, knowledge: 1 },
       initialSkill: {
-        name: 'Nigromancia (Necromancy)',
-        normal: 'Mapa: Juega después de ganar un combate que no sea un combate rápido. Puedes reforzar una unidad Bronce o Plata de tu elección por la mitad del coste de Oro (redondeado hacia abajo).',
-        expert: 'Mapa: Juega después de ganar un combate que no sea un combate rápido. Puedes reforzar cualquier unidad de tu elección por la mitad del coste de Oro (redondeado hacia abajo).'
+        name: 'Nigromancia',
+        normal: 'Mapa: Juégalo después de ganar un combate que no sea un combate rápido. Refuerza una de tus unidades Bronce o Plata por la mitad del coste en Oro (redondeado hacia abajo).',
+        expert: 'Mapa: Juégalo después de ganar un combate que no sea un combate rápido. Refuerza cualquiera de tus unidades por la mitad del coste en Oro (redondeado hacia abajo).'
       },
       specialty: {
         name: 'Especialidad: Liches',
@@ -234,9 +234,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Nigromante (Necromancer)',
       stats: { atk: 1, def: 0, power: 2, knowledge: 2 },
       initialSkill: {
-        name: 'Brujería (Sorcery)',
-        normal: 'Instantáneo: +1 Potencia\nLuego, roba 1 carta.',
-        expert: 'Instantáneo: +2 Potencia\nLuego, roba 1 carta.'
+        name: 'Hechicería',
+        normal: 'Instantáneo: +1 Potencia\nDespués, roba 1 carta.',
+        expert: 'Instantáneo: +2 Potencia\nDespués, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Capa del Rey No Muerto',
@@ -255,9 +255,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Nigromante (Necromancer)',
       stats: { atk: 1, def: 0, power: 2, knowledge: 2 },
       initialSkill: {
-        name: 'Nigromancia (Necromancy)',
-        normal: 'Mapa: Juega después de ganar un combate que no sea un combate rápido. Puedes reforzar una unidad Bronce o Plata de tu elección por la mitad del coste de Oro (redondeado hacia abajo).',
-        expert: 'Mapa: Juega después de ganar un combate que no sea un combate rápido. Puedes reforzar cualquier unidad de tu elección por la mitad del coste de Oro (redondeado hacia abajo).'
+        name: 'Nigromancia',
+        normal: 'Mapa: Juégalo después de ganar un combate que no sea un combate rápido. Refuerza una de tus unidades Bronce o Plata por la mitad del coste en Oro (redondeado hacia abajo).',
+        expert: 'Mapa: Juégalo después de ganar un combate que no sea un combate rápido. Refuerza cualquiera de tus unidades por la mitad del coste en Oro (redondeado hacia abajo).'
       },
       specialty: {
         name: 'Especialidad: Onda de Muerte',
@@ -276,9 +276,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Caballero de la Muerte (Death Knight)',
       stats: { atk: 1, def: 2, power: 2, knowledge: 1 },
       initialSkill: {
-        name: 'Ofensiva (Offense)',
-        normal: 'Instantáneo: +1 Ataque\nLuego, roba 1 carta.',
-        expert: 'Instantáneo: +2 Ataque\nLuego, roba 1 carta.'
+        name: 'Ofensa',
+        normal: 'Instantáneo: +1 Ataque\nDespués, roba 1 carta.',
+        expert: 'Instantáneo: +2 Ataque\nDespués, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Caballeros del Terror',
@@ -297,9 +297,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Nigromante (Necromancer)',
       stats: { atk: 1, def: 0, power: 2, knowledge: 2 },
       initialSkill: {
-        name: 'Nigromancia (Necromancy)',
-        normal: 'Mapa: Juega después de ganar un combate que no sea un combate rápido. Puedes reforzar una unidad Bronce o Plata de tu elección por la mitad del coste de Oro (redondeado hacia abajo).',
-        expert: 'Mapa: Juega después de ganar un combate que no sea un combate rápido. Puedes reforzar cualquier unidad de tu elección por la mitad del coste de Oro (redondeado hacia abajo).'
+        name: 'Nigromancia',
+        normal: 'Mapa: Juégalo después de ganar un combate que no sea un combate rápido. Refuerza una de tus unidades Bronce o Plata por la mitad del coste en Oro (redondeado hacia abajo).',
+        expert: 'Mapa: Juégalo después de ganar un combate que no sea un combate rápido. Refuerza cualquiera de tus unidades por la mitad del coste en Oro (redondeado hacia abajo).'
       },
       specialty: {
         name: 'Especialidad: Nigromancia',
@@ -320,9 +320,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Brujo (Warlock)',
       stats: { atk: 0, def: 0, power: 3, knowledge: 2 },
       initialSkill: {
-        name: 'Sabiduría (Wisdom)',
-        normal: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(3) en lugar de Buscar(2).',
-        expert: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(4) en lugar de Buscar(3).'
+        name: 'Sabiduría',
+        normal: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(3) en vez de buscar(2).',
+        expert: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(4) en vez de buscar(2).'
       },
       specialty: {
         name: 'Especialidad: Resurrección',
@@ -341,9 +341,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Brujo (Warlock)',
       stats: { atk: 0, def: 0, power: 3, knowledge: 2 },
       initialSkill: {
-        name: 'Exploración (Scouting)',
-        normal: 'Instantáneo: Juega esta carta antes de realizar una acción de Buscar, luego realiza Buscar(3) en su lugar.',
-        expert: 'Instantáneo: Juega esta carta antes de realizar una acción de Buscar, luego realiza Buscar(5) in su lugar.'
+        name: 'Exploración',
+        normal: 'Instantáneo: Juega esta carta cuando vayas a buscar para buscar(3).',
+        expert: 'Instantáneo: Juega esta carta cuando vayas a buscar para buscar(5).'
       },
       specialty: {
         name: 'Especialidad: Lluvia de Meteoros',
@@ -362,9 +362,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Brujo (Warlock)',
       stats: { atk: 0, def: 0, power: 3, knowledge: 2 },
       initialSkill: {
-        name: 'Brujería (Sorcery)',
-        normal: 'Instantáneo: +1 Potencia\nLuego, roba 1 carta.',
-        expert: 'Instantáneo: +2 Potencia\nLuego, roba 1 carta.'
+        name: 'Hechicería',
+        normal: 'Instantáneo: +1 Potencia\nDespués, roba 1 carta.',
+        expert: 'Instantáneo: +2 Potencia\nDespués, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Hechicería Misteriosa',
@@ -383,9 +383,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Cacique (Overlord)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Exploración (Scouting)',
-        normal: 'Instantáneo: Juega esta carta antes de realizar una acción de Buscar, luego realiza Buscar(3) en su lugar.',
-        expert: 'Instantáneo: Juega esta carta antes de realizar una acción de Buscar, luego realiza Buscar(5) en su lugar.'
+        name: 'Exploración',
+        normal: 'Instantáneo: Juega esta carta cuando vayas a buscar para buscar(3).',
+        expert: 'Instantáneo: Juega esta carta cuando vayas a buscar para buscar(5).'
       },
       specialty: {
         name: 'Especialidad: Arpías',
@@ -404,9 +404,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Cacique (Overlord)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Tácticas (Tactics)',
-        normal: 'Instantáneo: Al comienzo del combate, puedes intercambiar la posición de dos de tus unidades.',
-        expert: 'Activación: Durante el combate, puedes intercambiar la posición de dos de tus unidades.'
+        name: 'Táctica',
+        normal: 'Instantáneo: Al comienzo del combate, intercambia la posición de 2 de tus unidades.',
+        expert: 'Activación: Durante el combate, intercambia la posición de 2 de tus unidades.'
       },
       specialty: {
         name: 'Especialidad: Dragones',
@@ -425,9 +425,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Brujo (Warlock)',
       stats: { atk: 0, def: 0, power: 3, knowledge: 2 },
       initialSkill: {
-        name: 'Inteligencia (Intelligence)',
-        normal: 'Instantáneo: Durante el combate, antes de que se active cualquier unidad, juega una carta de Hechizo. Solo puedes jugar una carta de Hechizo durante una ronda de combate.',
-        expert: 'Instantáneo: Durante el combate, antes de que se active cualquier unidad, juega una carta de Hechizo. Este Hechizo no cuenta para tu límite de hechizos por ronda de combate.'
+        name: 'Inteligencia',
+        normal: 'Instantáneo: Al comienzo de la ronda de combate, juega una carta de hechizo.\nDurante la ronda de combate sigues pudiendo jugar solo una carta de hechizo.',
+        expert: 'Instantáneo: Al comienzo de la ronda de combate, juega una carta de hechizo.\nEste hechizo no cuenta para el límite de hechizos por ronda de combate.'
       },
       specialty: {
         name: 'Especialidad: Objetos de Valor',
@@ -446,9 +446,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Cacique (Overlord)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Finanzas (States)',
-        normal: 'Instantáneo: Gana 3 de Oro.',
-        expert: 'Instantáneo: Gana 6 de Oro.'
+        name: 'Patrimonio',
+        normal: 'Instantáneo: Gana 3 Oros.',
+        expert: 'Instantáneo: Gana 6 Oros.'
       },
       specialty: {
         name: 'Especialidad: Dragones',
@@ -469,9 +469,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Explorador (Ranger)',
       stats: { atk: 1, def: 3, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Orientación (Pathfinding)',
-        normal: 'Mapa: En este turno, tu Héroe puede moverse a través de lugares con Unidades Neutrales y Héroes Enemigos, pero si termina su movimiento en uno de estos lugares, comienza el Combate.',
-        expert: 'Mapa: Tu héroe puede moverse sobre el borde amarillo y los lugares bloqueados, pero no puede finalizar su movimiento sobre ellos.'
+        name: 'Orientación',
+        normal: 'Mapa: Este turno, tu héroe puede moverse por zonas con unidades neutrales y héroes enemigos, pero, si acaba en una de estas zonas, empezará el combate.',
+        expert: 'Mapa: Tu héroe puede atravesar bordes amarillos y zonas bloqueadas, pero no puede acabar su movimiento en ellas.'
       },
       specialty: {
         name: 'Especialidad: Unicornios',
@@ -490,9 +490,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Explorador (Ranger)',
       stats: { atk: 1, def: 3, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Tiro con Arco (Archery)',
-        normal: 'Continuo: Durante esta ronda de combate, tus unidades a distancia obtienen +1 Ataque si el objetivo es una unidad no adyacente .Tus unidades aliadas de ataque a distancia infligen +1 de daño físico.',
-        expert: 'Continuo: Hasta el final de la siguiente ronda de combate, tus unidades de ataque a distancia obtienen +1 de Iniciativa y +1 Ataque si el objetivo es una unidad no adyacente.'
+        name: 'Tiro con arco',
+        normal: 'Continuo: Durante esta ronda de combate, tus unidades a distancia ganan +1 Ataque si el objetivo no es una unidad adyacente.',
+        expert: 'Continuo: Hasta el final de la siguiente ronda de combate, todas tus unidades a distancia ganan +1 Iniciativa y +1 Ataque si el objetivo no es una unidad adyacente.'
       },
       specialty: {
         name: 'Especialidad: Tiradores',
@@ -511,9 +511,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Druida (Druid)',
       stats: { atk: 0, def: 2, power: 1, knowledge: 2 },
       initialSkill: {
-        name: 'Primeros Auxilios (First Aid)',
+        name: 'Primeros auxilios',
         normal: 'Instantáneo: Retira 1 Herida de una de tus unidades.',
-        expert: 'Instantáneo: Al usar la carta de Primeros Auxilios, resuelve su efecto contra el mismo objetivo 3 veces.'
+        expert: 'Instantáneo: Cuando utilices la carta Tienda de primeros auxilios, resuelve su efecto 3 veces contra el mismo objetivo.'
       },
       specialty: {
         name: 'Especialidad: Primeros Auxilios',
@@ -532,9 +532,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Explorador (Ranger)',
       stats: { atk: 1, def: 3, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Ofensiva (Offence)',
-        normal: 'Instantáneo: +1 Ataque\nLuego, roba 1 carta.',
-        expert: 'Instantáneo: +2 Ataque\nLuego, roba 1 carta.'
+        name: 'Ofensa',
+        normal: 'Instantáneo: +1 Ataque\nDespués, roba 1 carta.',
+        expert: 'Instantáneo: +2 Ataque\nDespués, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Elfos',
@@ -553,9 +553,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Druida (Druid)',
       stats: { atk: 0, def: 2, power: 1, knowledge: 2 },
       initialSkill: {
-        name: 'Suerte (Luck)',
-        normal: 'Continuo: Puedes volver a tirar un dado de Tesoro y un dado de Recursos una vez durante este turno.',
-        expert: 'Continuo: Puedes volver a tirar cualquier dado una vez durante este turno.'
+        name: 'Suerte',
+        normal: 'Continuo: Puedes volver a lanzar un dado de tesoro y de recurso una vez durante este turno.',
+        expert: 'Continuo: Puedes volver a lanzar tantos dados como quieras una vez durante este turno.'
       },
       specialty: {
         name: 'Especialidad: Fortuna',
@@ -574,9 +574,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Explorador (Ranger)',
       stats: { atk: 1, def: 3, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Liderazgo (Leadership)',
+        name: 'Liderazgo',
         normal: 'Instantáneo: Gana una ficha de Moral Positiva.',
-        expert: 'Instantáneo: Roba 2 cartas. Luego, gana una ficha de Moral Positiva.'
+        expert: 'Instantáneo: Roba 2 cartas.\nDespués, gana una ficha de Moral Positiva.'
       },
       specialty: {
         name: 'Especialidad: Armadura',
@@ -595,9 +595,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Explorador (Ranger)',
       stats: { atk: 1, def: 3, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Liderazgo (Leadership)',
+        name: 'Liderazgo',
         normal: 'Instantáneo: Gana una ficha de Moral Positiva.',
-        expert: 'Instantáneo: Roba 2 cartas. Luego, gana una ficha de Moral Positiva.'
+        expert: 'Instantáneo: Roba 2 cartas.\nDespués, gana una ficha de Moral Positiva.'
       },
       specialty: {
         name: 'Especialidad: Tiradores certeros',
@@ -618,9 +618,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Mago (Wizard)',
       stats: { atk: 0, def: 0, power: 2, knowledge: 3 },
       initialSkill: {
-        name: 'Diplomacia (Diplomacy)',
-        normal: 'Mapa: Por cada Vivienda que tengas, roba 1 carta de Unidad Neutral correspondiente. Puedes reclutar una de estas unidades si Pagas su coste de reclutamiento.',
-        expert: 'Instantáneo: Omite el combate con unidades neutrales en un lugar cuya dificultad sea igual al nivel de tu héroe. Visita el lugar. Este héroe no gana experiencia.'
+        name: 'Diplomacia',
+        normal: 'Mapa: Por cada vivienda que tengas, roba 1 carta de la unidad neutral correspondiente.\nPodrás reclutar una de estas unidades si Pagas su coste de reclutamiento.',
+        expert: 'Instantáneo: Ignora el combate con unidades neutrales en una zona cuya dificultad de la zona sea igual al nivel de tu héroe. Visita la zona. Tu héroe no gana experiencia.'
       },
       specialty: {
         name: 'Especialidad: Celeridad',
@@ -639,9 +639,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Mago (Wizard)',
       stats: { atk: 0, def: 0, power: 2, knowledge: 3 },
       initialSkill: {
-        name: 'Sabiduría (Wisdom)',
-        normal: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(3) en lugar de Buscar(2).',
-        expert: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(4) en lugar de Buscar(3).'
+        name: 'Sabiduría',
+        normal: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(3) en vez de buscar(2).',
+        expert: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(4) en vez de buscar(2).'
       },
       specialty: {
         name: 'Especialidad: Encantadores',
@@ -660,9 +660,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Alquimista (Alchemist)',
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
-        name: 'Inteligencia (Intelligence)',
-        normal: 'Instantáneo: Durante el combate, antes de que se active cualquier unidad, juega una carta de Hechizo. Solo puedes jugar una carta de Hechizo durante una ronda de combate.',
-        expert: 'Instantáneo: Durante el combate, antes de que se active cualquier unidad, juega una carta de Hechizo. Este Hechizo no cuenta para tu límite de hechizos por ronda de combate.'
+        name: 'Inteligencia',
+        normal: 'Instantáneo: Al comienzo de la ronda de combate, juega una carta de hechizo.\nDurante la ronda de combate sigues pudiendo jugar solo una carta de hechizo.',
+        expert: 'Instantáneo: Al comienzo de la ronda de combate, juega una carta de hechizo.\nEste hechizo no cuenta para el límite de hechizos por ronda de combate.'
       },
       specialty: {
         name: 'Especialidad: Genios',
@@ -681,9 +681,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Alquimista (Alchemist)',
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
-        name: 'Brujería (Sorcery)',
-        normal: 'Instantáneo: +1 Potencia\nLuego, roba 1 carta.',
-        expert: 'Instantáneo: +2 Potencia\nLuego, roba 1 carta.'
+        name: 'Hechicería',
+        normal: 'Instantáneo: +1 Potencia\nDespués, roba 1 carta.',
+        expert: 'Instantáneo: +2 Potencia\nDespués, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Golems',
@@ -702,9 +702,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Mago (Wizard)',
       stats: { atk: 0, def: 0, power: 2, knowledge: 3 },
       initialSkill: {
-        name: 'Brujería (Sorcery)',
-        normal: 'Instantáneo: +1 Potencia\nLuego, roba 1 carta.',
-        expert: 'Instantáneo: +2 Potencia\nLuego, roba 1 carta.'
+        name: 'Hechicería',
+        normal: 'Instantáneo: +1 Potencia\nDespués, roba 1 carta.',
+        expert: 'Instantáneo: +2 Potencia\nDespués, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Relámpago en Cadena',
@@ -723,9 +723,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Alquimista (Alchemist)',
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
-        name: 'Misticismo (Mysticism)',
-        normal: 'Instantáneo: Juega esta carta inmediatamente después de lanzar un hechizo. En lugar de descartar la carta de Hechizo, vuelve a tu mano.',
-        expert: 'Instantáneo: Juega esta carta inmediatamente después de lanzar un hechizo. En lugar de descartar la carta de Hechizo y todas las demás cartas jugadas junto con ella, llévalas de vuelta a tu mano.'
+        name: 'Misticismo',
+        normal: 'Instantáneo: Juega esta carta inmediatamente después de lanzar un hechizo. En vez de descartar la carta de hechizo, devuélvela a tu mano.',
+        expert: 'Instantáneo: Juega esta carta inmediatamente después de lanzar un hechizo. En vez de descartar la carta de Hechizo y el resto de las cartas que juegues con ella, devuélvelas a tu mano.'
       },
       specialty: {
         name: 'Especialidad: Balista',
@@ -746,9 +746,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Hereje (Heretic)',
       stats: { atk: 1, def: 1, power: 2, knowledge: 1 },
       initialSkill: {
-        name: 'Ojo de Águila (Eagle Eye)',
-        normal: 'Instantáneo: Roba cartas del mazo de hechizos hasta que encuentres una carta de Hechizo Básico. Tómala en tu mano o descártala. Baraja el resto de las cartas y devuélvelas al mazo de hechizos.',
-        expert: 'Instantáneo: Roba cartas del mazo de hechizos hasta que encuentres una carta de Hechizo Experto. Tómala en tu mano o descártala. Baraja el resto de las cartas y devuélvelas al mazo de hechizos.'
+        name: 'Vista de águila',
+        normal: 'Instantáneo: Roba cartas del mazo de hechizos hasta que encuentres una carta de hechizo básico. Llévatela a la mano o descártala. Devuelve el resto de las cartas al mazo de hechizos y barájalo.',
+        expert: 'Instantáneo: Roba cartas del mazo de hechizos hasta que encuentres una carta de hechizo avanzado. Llévatela a la mano o descártala. Devuelve el resto de las cartas al mazo de hechizos y barájalo.'
       },
       specialty: {
         name: 'Especialidad: Ansia de Sangre',
@@ -767,9 +767,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Demonio (Demoniac)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Orientación (Pathfinding)',
-        normal: 'Mapa: En este turno, tu Héroe puede moverse a través de lugares con Unidades Neutrales y Héroes Enemigos, pero si termina su movimiento en uno de estos lugares, comienza el Combate.',
-        expert: 'Mapa: Tu héroe puede moverse sobre el borde amarillo y los lugares bloqueados, pero no puede finalizar su movimiento sobre ellos.'
+        name: 'Orientación',
+        normal: 'Mapa: Este turno, tu héroe puede moverse por zonas con unidades neutrales y héroes enemigos, pero, si acaba en una de estas zonas, empezará el combate.',
+        expert: 'Mapa: Tu héroe puede atravesar bordes amarillos y zonas bloqueadas, pero no puede acabar su movimiento en ellas.'
       },
       specialty: {
         name: 'Especialidad: Cerberos',
@@ -788,9 +788,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Demonio (Demoniac)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Aprendizaje (Learning)',
-        normal: 'Instantáneo: Elige 1 carta de tu pila de descarte y añádela a tu mano.',
-        expert: 'Mapa: Retira hasta 2 cartas de Característica de tu mano o pila de descarte. Toma hasta 2 cartas de Característica Mejorada diferentes y colócalas encima de tu pila de descarte. Retira Aprendizaje.'
+        name: 'Erudito',
+        normal: 'Instantáneo: Elige 1 carta de tu descarte y añádela a tu mano.',
+        expert: 'Mapa: Retira hasta 2 cartas de característica de tu mano o del descarte. Coge 2 cartas de característica potenciada y colócalas en la parte superior de tu descarte. Retira el Erudito.'
       },
       specialty: {
         name: 'Especialidad: Oro',
@@ -809,9 +809,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Demonio (Demoniac)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Aprendizaje (Learning)',
-        normal: 'Instantáneo: Elige 1 carta de tu pila de descarte y añádela a tu mano.',
-        expert: 'Mapa: Retira hasta 2 cartas de Característica de tu mano o pila de descarte. Toma hasta 2 cartas de Característica Mejorada diferentes y colócalas encima de tu pila de descarte. Retira Aprendizaje.'
+        name: 'Erudito',
+        normal: 'Instantáneo: Elige 1 carta de tu descarte y añádela a tu mano.',
+        expert: 'Mapa: Retira hasta 2 cartas de característica de tu mano o del descarte. Coge 2 cartas de característica potenciada y colócalas en la parte superior de tu descarte. Retira el Erudito.'
       },
       specialty: {
         name: 'Especialidad: Efreets',
@@ -830,9 +830,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Hereje (Heretic)',
       stats: { atk: 1, def: 1, power: 2, knowledge: 1 },
       initialSkill: {
-        name: 'Sabiduría (Wisdom)',
-        normal: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(3) en lugar de Buscar(2).',
-        expert: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(4) en lugar de Buscar(3).'
+        name: 'Sabiduría',
+        normal: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(3) en vez de buscar(2).',
+        expert: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(4) en vez de buscar(2).'
       },
       specialty: {
         name: 'Especialidad: Infierno',
@@ -851,9 +851,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Hereje (Heretic)',
       stats: { atk: 1, def: 1, power: 2, knowledge: 1 },
       initialSkill: {
-        name: 'Brujería (Sorcery)',
-        normal: 'Instantáneo: +1 Potencia\nLuego, roba 1 carta.',
-        expert: 'Instantáneo: +2 Potencia\nLuego, roba 1 carta.'
+        name: 'Hechicería',
+        normal: 'Instantáneo: +1 Potencia\nDespués, roba 1 carta.',
+        expert: 'Instantáneo: +2 Potencia\nDespués, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Brujería',
@@ -874,9 +874,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Bárbaro (Barbarian)',
       stats: { atk: 4, def: 0, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Ofensiva (Offense)',
-        normal: 'Instantáneo: +1 Ataque\nLuego, roba 1 carta.',
-        expert: 'Instantáneo: +2 Ataque\nLuego, roba 1 carta.'
+        name: 'Ofensa',
+        normal: 'Instantáneo: +1 Ataque\nDespués, roba 1 carta.',
+        expert: 'Instantáneo: +2 Ataque\nDespués, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Ofensa',
@@ -895,9 +895,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Mago de Batalla (Battle Mage)',
       stats: { atk: 2, def: 1, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Logística (Logistics)',
-        normal: 'Continuo: Al final de tu turno, mueve la miniatura de tu Héroe a un lugar vacío adyacente.',
-        expert: 'Instantáneo: Tu héroe gana +1 Punto de Movimiento.'
+        name: 'Logística',
+        normal: 'Continuo: Al final de tu turno, mueve la miniatura de tu héroe a una zona vacía adyacente.',
+        expert: 'Instantáneo: Tu héroe gana +1 de movimiento.'
       },
       specialty: {
         name: 'Especialidad: Logística',
@@ -916,9 +916,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Mago de Batalla (Battle Mage)',
       stats: { atk: 2, def: 1, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Sabiduría (Wisdom)',
-        normal: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(3) en lugar de Buscar(2).',
-        expert: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(4) en lugar de Buscar(3).'
+        name: 'Sabiduría',
+        normal: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(3) en vez de buscar(2).',
+        expert: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(4) en vez de buscar(2).'
       },
       specialty: {
         name: 'Especialidad: Lentitud',
@@ -937,9 +937,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Bárbaro (Barbarian)',
       stats: { atk: 4, def: 0, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Exploración (Scouting)',
-        normal: 'Instantáneo: Juega esta carta antes de realizar una acción de Buscar, luego realiza Buscar(3) en su lugar.',
-        expert: 'Instantáneo: Juega esta carta antes de realizar una acción de Buscar, luego realiza Buscar(5) en su lugar.'
+        name: 'Exploración',
+        normal: 'Instantáneo: Juega esta carta cuando vayas a buscar para buscar(3).',
+        expert: 'Instantáneo: Juega esta carta cuando vayas a buscar para buscar(5).'
       },
       specialty: {
         name: 'Especialidad: Aves de Trueno',
@@ -958,9 +958,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Bárbaro (Barbarian)',
       stats: { atk: 4, def: 0, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Ofensiva (Offense)',
-        normal: 'Instantáneo: +1 Ataque\nLuego, roba 1 carta.',
-        expert: 'Instantáneo: +2 Ataque\nLuego, roba 1 carta.'
+        name: 'Ofensa',
+        normal: 'Instantáneo: +1 Ataque\nDespués, roba 1 carta.',
+        expert: 'Instantáneo: +2 Ataque\nDespués, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Ofensa',
@@ -979,9 +979,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Bárbaro (Barbarian)',
       stats: { atk: 4, def: 0, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Ofensiva (Offense)',
-        normal: 'Instantáneo: +1 Ataque\nLuego, roba 1 carta.',
-        expert: 'Instantáneo: +2 Ataque\nLuego, roba 1 carta.'
+        name: 'Ofensa',
+        normal: 'Instantáneo: +1 Ataque\nDespués, roba 1 carta.',
+        expert: 'Instantáneo: +2 Ataque\nDespués, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Cíclopes',
@@ -1002,9 +1002,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Bruja (Witch)',
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
-        name: 'Sabiduría (Wisdom)',
-        normal: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(3) en lugar de Buscar(2).',
-        expert: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(4) en lugar de Buscar(3).'
+        name: 'Sabiduría',
+        normal: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(3) en vez de buscar(2).',
+        expert: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(4) en vez de buscar(2).'
       },
       specialty: {
         name: 'Especialidad: Magia de Fuego',
@@ -1023,9 +1023,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Señor de las Bestias (Beastmaster)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Resistencia (Resistance)',
-        normal: 'Otorga +1 de Defensa mística a tus tropas frente a cualquier daño de hechizo enemigo.',
-        expert: 'Gasta 1 Corona para cancelar por completo un hechizo enemigo de nivel 1 o 2 lanzado en esta ronda.'
+        name: 'Resistencia',
+        normal: 'Instantáneo: Juega esta carta inmediatamente después de que el enemigo lance un hechizo. Si ha lanzado el hechizo con 1 Potencia o menos, ignora el efecto de la carta de hechizo.',
+        expert: 'Instantáneo: Juega esta carta inmediatamente después de que el enemigo lance un hechizo. Ignora el efecto de la carta de hechizo.'
       },
       specialty: {
         name: 'Especialidad: Basiliscos',
@@ -1043,9 +1043,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Señor de las Bestias (Beastmaster)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Armero (Armorer)',
-        normal: 'Tus unidades aliadas de nivel bronce reducen en 1 todo daño físico recibido.',
-        expert: 'Tus unidades aliadas de nivel bronce y plata reducen en 1 todo daño físico recibido.'
+        name: 'Armero',
+        normal: 'Instantáneo: +1 Defensa.\nDespués, roba 1 carta.',
+        expert: 'Instantáneo: +2 Defensa.\nDespués, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Balista',
@@ -1063,9 +1063,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Bruja (Witch)',
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
-        name: 'Primeros Auxilios (First Aid)',
+        name: 'Primeros auxilios',
         normal: 'Instantáneo: Retira 1 Herida de una de tus unidades.',
-        expert: 'Instantáneo: Al usar la carta de Primeros Auxilios, resuelve su efecto contra el mismo objetivo 3 veces.'
+        expert: 'Instantáneo: Cuando utilices la carta Tienda de primeros auxilios, resuelve su efecto 3 veces contra el mismo objetivo.'
       },
       specialty: {
         name: 'Especialidad: Piel de piedra',
@@ -1083,9 +1083,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Señor de las Bestias (Beastmaster)',
       stats: { atk: 1, def: 3, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Armero (Armorer)',
-        normal: 'Tus unidades aliadas de nivel bronce reducen en 1 todo daño físico recibido.',
-        expert: 'Tus unidades aliadas de nivel bronce y plata reducen en 1 todo daño físico recibido.'
+        name: 'Armero',
+        normal: 'Instantáneo: +1 Defensa.\nDespués, roba 1 carta.',
+        expert: 'Instantáneo: +2 Defensa.\nDespués, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Basiliscos',
@@ -1103,9 +1103,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Señor de las Bestias (Beastmaster)',
       stats: { atk: 1, def: 4, power: 1, knowledge: 0 },
       initialSkill: {
-        name: 'Armero (Armorer)',
-        normal: 'Tus unidades aliadas de nivel bronce reducen en 1 todo daño físico recibido.',
-        expert: 'Tus unidades aliadas de nivel bronce y plata reducen en 1 todo daño físico recibido.'
+        name: 'Armero',
+        normal: 'Instantáneo: +1 Defensa.\nDespués, roba 1 carta.',
+        expert: 'Instantáneo: +2 Defensa.\nDespués, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Héroe de Guerra',
@@ -1124,9 +1124,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Señor de las Bestias (Beastmaster)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Tiro con Arco (Archery)',
-        normal: 'Continuo: Durante esta ronda de combate, tus unidades a distancia obtienen +1 Ataque si el objetivo es una unidad no adyacente .Tus unidades aliadas de ataque a distancia infligen +1 de daño físico.',
-        expert: 'Continuo: Hasta el final de la siguiente ronda de combate, tus unidades de ataque a distancia obtienen +1 de Iniciativa y +1 Ataque si el objetivo es una unidad no adyacente.'
+        name: 'Tiro con arco',
+        normal: 'Continuo: Durante esta ronda de combate, tus unidades a distancia ganan +1 Ataque si el objetivo no es una unidad adyacente.',
+        expert: 'Continuo: Hasta el final de la siguiente ronda de combate, todas tus unidades a distancia ganan +1 Iniciativa y +1 Ataque si el objetivo no es una unidad adyacente.'
       },
       specialty: {
         name: 'Especialidad: Hombres Lagarto',
@@ -1146,9 +1146,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Conjuradora (Elementalist)',
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
-        name: 'Magia de Agua (Water Magic)',
-        normal: 'Tus hechizos de la escuela de Agua cuestan 1 punto menos de Maná (mínimo 1).',
-        expert: 'Tus hechizos de Agua cuestan 1 punto menos y curan +1 de HP o infligen +1 de daño adicional.'
+        name: 'Magia de agua',
+        normal: 'Permanente: +1 Potencia para hechizos de la escuela de magia de agua.',
+        expert: 'Instantáneo: Al lanzar un Hechizo de la escuela de agua, puedes descartar esta carta y ganar +3 Potencia.'
       },
       specialty: {
         name: 'Especialidad: Flecha mágica',
@@ -1166,9 +1166,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Viajero (Planeswalker)',
       stats: { atk: 1, def: 3, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Finanzas (States)',
-        normal: 'Instantáneo: Gana 3 de Oro.',
-        expert: 'Instantáneo: Gana 6 de Oro.'
+        name: 'Patrimonio',
+        normal: 'Instantáneo: Gana 3 Oros.',
+        expert: 'Instantáneo: Gana 6 Oros.'
       },
       specialty: {
         name: 'Especialidad: Elementales de magma',
@@ -1186,9 +1186,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Conjuradora (Elementalist)',
       stats: { atk: 1, def: 1, power: 3, knowledge: 1 },
       initialSkill: {
-        name: 'Magia de Fuego (Fire Magic)',
-        normal: 'Tus hechizos de la escuela de Fuego infligen +1 de daño místico y aplican quemaduras.',
-        expert: 'Tus hechizos de Fuego cuestan 1 punto menos de Maná y aumentan su área de efecto táctico.'
+        name: 'Magia básica del fuego',
+        normal: 'Permanente: En lugar de buscar en el mazo de hechizos, encuentra el primer Hechizo de magia de fuego que haya en él y llévate el Hechizo a la mano.\nA continuación, vuelve a barajar el mazo.',
+        expert: 'Instantáneo: +3 Potencia para un Hechizo de magia de fuego.'
       },
       specialty: {
         name: 'Especialidad: Muro de Fuego',
@@ -1206,9 +1206,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Viajero (Planeswalker)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Logística (Logistics)',
-        normal: 'Continuo: Al final de tu turno, mueve la miniatura de tu Héroe a un lugar vacío adyacente.',
-        expert: 'Instantáneo: Tu héroe gana +1 Punto de Movimiento.'
+        name: 'Logística',
+        normal: 'Continuo: Al final de tu turno, mueve la miniatura de tu héroe a una zona vacía adyacente.',
+        expert: 'Instantáneo: Tu héroe gana +1 de movimiento.'
       },
       specialty: {
         name: 'Especialidad: Elementales mágicos',
@@ -1226,9 +1226,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Viajero (Planeswalker)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Artillería (Artillery)',
+        name: 'Artillería',
         normal: 'Instantáneo: Inflige 1 Herida a la unidad enemiga con menor Iniciativa.',
-        expert: 'Instantáneo: Al usar la carta Ballesta, resuelve su efecto contra el mismo objetivo 3 veces.'
+        expert: 'Instantáneo: Al utilizar la carta Balista, resuelve su efecto 3 veces contra el mismo objetivo.'
       },
       specialty: {
         name: 'Especialidad: Elementales',
@@ -1246,9 +1246,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Conjurador (Elementalist)',
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
-        name: 'Sabiduría (Wisdom)',
-        normal: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(3) en lugar de Buscar(2).',
-        expert: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(4) en lugar de Buscar(3).'
+        name: 'Sabiduría',
+        normal: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(3) en vez de buscar(2).',
+        expert: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(4) en vez de buscar(2).'
       },
       specialty: {
         name: 'Especialidad: Encantadores',
@@ -1268,9 +1268,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Navegante (Navigator)',
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
-        name: 'Suerte (Luck)',
-        normal: 'Continuo: Puedes volver a tirar un dado de Tesoro y un dado de Recursos una vez durante este turno.',
-        expert: 'Continuo: Puedes volver a tirar cualquier dado una vez durante este turno.'
+        name: 'Suerte',
+        normal: 'Continuo: Puedes volver a lanzar un dado de tesoro y de recurso una vez durante este turno.',
+        expert: 'Continuo: Puedes volver a lanzar tantos dados como quieras una vez durante este turno.'
       },
       specialty: {
         name: 'Especialidad: Curación',
@@ -1288,16 +1288,16 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Navegante (Navigator)',
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
-        name: 'Sabiduría (Wisdom)',
-        normal: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(3) en lugar de Buscar(2).',
-        expert: 'Instantáneo: El coste de comprar Hechizos en la Ciudad se reduce en 2 Oros. Al comprar Hechizos de tu Gremio de Magos, usa Buscar(4) en lugar de Buscar(3).'
+        name: 'Sabiduría',
+        normal: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(3) en vez de buscar(2).',
+        expert: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(4) en vez de buscar(2).'
       },
       specialty: {
         name: 'Especialidad: Hechiceras',
         cards: [
-          { level: 1, name: 'Canto de Sirena I', effect: 'Tus Hechiceras obtienen +1 de Ataque y +1 de Iniciativa.' },
-          { level: 4, name: 'Canto de Sirena IV', effect: 'Tus Hechiceras reducen la defensa mística de sus objetivos en 1 al atacar.' },
-          { level: 6, name: 'Canto de Sirena VI', effect: 'Una vez por combate, tus Hechiceras pueden aturdir a una unidad enemiga de nivel bronce o plata mediante su ataque mágico.' }
+          { level: 1, name: 'Hechiceras I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad de Hechiceras.' },
+          { level: 4, name: 'Hechiceras IV', effect: 'Continuo: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Hechiceras.' },
+          { level: 6, name: 'Hechiceras VI', effect: 'Instantáneo: La unidad seleccionada gana +2 Ataque.\n— O —\nContinuo: Coloca una ficha de debilidad <<-2>> sobre cualquier unidad durante 2 rondas de combate.' }
         ]
       },
       lore: 'Una de las navegantes más respetadas, experta en coordinar a las hechiceras de Regnan para debilitar la mente del enemigo.'
@@ -1308,16 +1308,16 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Capitán (Captain)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Táctica (Tactics)',
-        normal: 'Permite recolocar 1 de tus unidades en tu zona de inicio del combate antes de que empiece la primera ronda.',
-        expert: 'Gasta 1 Corona para recolocar hasta 3 unidades de inicio y sumarles +1 a la Iniciativa durante la primera ronda.'
+        name: 'Táctica',
+        normal: 'Instantáneo: Al comienzo del combate, intercambia la posición de 2 de tus unidades.',
+        expert: 'Activación: Durante el combate, intercambia la posición de 2 de tus unidades.'
       },
       specialty: {
-        name: 'Especialidad: Oceánidas',
+        name: 'Especialidad: Oceánidos',
         cards: [
-          { level: 1, name: 'Llamado del Océano I', effect: 'Tus Oceánidas obtienen +1 de Ataque y +1 de Iniciativa.' },
-          { level: 4, name: 'Llamado del Océano IV', effect: 'Tus Oceánidas ganan +1 de Defensa y sus ataques cuerpo a cuerpo ignoran las represalias enemigas.' },
-          { level: 6, name: 'Llamado del Océano VI', effect: 'Una vez por combate, tus Oceánidas pueden realizar una carga rápida de movimiento libre que duplica su daño físico en esta ronda.' }
+          { level: 1, name: 'Oceánidos I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad de Oceánidos.' },
+          { level: 4, name: 'Oceánidos IV', effect: 'Continuo: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Oceánidos.' },
+          { level: 6, name: 'Oceánidos VI', effect: 'Continuo: La unidad seleccionada gana +2 Ataque.\nEl efecto se duplica para la unidad de Oceánidos.' }
         ]
       },
       lore: 'Una intrépida capitana pirata que cabalga las olas junto a las veloces ninfas oceánidas, liderando asaltos coordinados en la costa.'
@@ -1328,16 +1328,16 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Capitán (Captain)',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
-        name: 'Ofensiva (Offense)',
-        normal: 'Instantáneo: +1 Ataque\nLuego, roba 1 carta.',
-        expert: 'Instantáneo: +2 Ataque\nLuego, roba 1 carta.'
+        name: 'Ofensa',
+        normal: 'Instantáneo: +1 Ataque\nDespués, roba 1 carta.',
+        expert: 'Instantáneo: +2 Ataque\nDespués, roba 1 carta.'
       },
       specialty: {
         name: 'Especialidad: Cañón',
         cards: [
-          { level: 1, name: 'Puntería de Cañón I', effect: 'Tu Cañón de asalto aliado inflige +1 de daño de asedio y tiene precisión perfecta.' },
-          { level: 4, name: 'Puntería de Cañón IV', effect: 'Tu Cañón puede disparar una segunda vez en la ronda si se descarta 1 carta de Ataque.' },
-          { level: 6, name: 'Puntería de Cañón VI', effect: 'Una vez por combate, el Cañón realiza un disparo explosivo que causa 2 de daño físico a la unidad seleccionada y a todos sus adyacentes.' }
+          { level: 1, name: 'Cañón I', effect: 'Mapa: Paga 7 Oros para ganar un cañón.\n— O —\nInstantáneo: Aplica 1 Herida a una unidad enemiga.' },
+          { level: 4, name: 'Cañón IV', effect: 'Instantáneo: Puedes usar el cañón inmediatamente una vez sin gastar Corona. No cuenta para el límite de rondas del cañón.\n— O —\nInstantáneo: Roba 1 carta.' },
+          { level: 6, name: 'Cañón VI', effect: 'Instantáneo: Puedes usar el cañón inmediatamente una vez sin gastar Corona. No cuenta para el límite de rondas del cañón.\n— O —\nInstantáneo: Roba 2 cartas.' }
         ]
       },
       lore: 'Un artillero legendario de la armada pirata que confía plenamente en la pólvora y el retumbar de los cañones pesados de Regnan.'
@@ -1348,9 +1348,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Capitán (Captain)',
       stats: { atk: 2, def: 1, power: 1, knowledge: 2 },
       initialSkill: {
-        name: 'Logística (Logistics)',
-        normal: 'Continuo: Al final de tu turno, mueve la miniatura de tu Héroe a un lugar vacío adyacente.',
-        expert: 'Instantáneo: Tu héroe gana +1 Punto de Movimiento.'
+        name: 'Logística',
+        normal: 'Continuo: Al final de tu turno, mueve la miniatura de tu héroe a una zona vacía adyacente.',
+        expert: 'Instantáneo: Tu héroe gana +1 de movimiento.'
       },
       specialty: {
         name: 'Especialidad: Exploración',
@@ -1368,16 +1368,16 @@ export const FACTION_HEROES: FactionHeroesData = {
       className: 'Navegante (Navigator)',
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
-        name: 'Interferencia (Interference)',
-        normal: 'Reduce el poder mágico del héroe rival en 1 cuando lanza un hechizo en tu presencia.',
-        expert: 'Reduce el poder mágico del héroe rival en 2. Además, gasta 1 Corona para anular el daño místico extra de un hechizo enemigo.'
+        name: 'Interferencia',
+        normal: 'Instantáneo: +1 Defensa. Este efecto se puede utilizar para reducir el Daño de un Hechizo.',
+        expert: 'Instantáneo: +2 Defensa. Este efecto se puede utilizar para reducir el Daño de un Hechizo.'
       },
       specialty: {
         name: 'Especialidad: Olvido',
         cards: [
-          { level: 1, name: 'Niebla Mental I', effect: 'Comienzas con el hechizo "Olvido" memorizado de forma gratuita. Reduce el rango de ataque de 1 arquero en -1.' },
-          { level: 4, name: 'Niebla Mental IV', effect: 'Tu hechizo "Olvido" afecta a todos los arqueros enemigos en el tablero, impidiéndoles disparar a distancia por 1 ronda.' },
-          { level: 6, name: 'Niebla Mental VI', effect: 'Una vez por combate, puedes silenciar completamente las habilidades especiales de 1 unidad enemiga de plata u oro durante 2 rondas.' }
+          { level: 1, name: 'Olvido I', effect: 'Continuo: Durante su siguiente activación, una unidad a distancia de nivel Bronce o Plata no puede atacar.\n— O —\nInstantáneo: Roba 1 carta.' },
+          { level: 4, name: 'Olvido IV', effect: 'Continuo: Durante su siguiente activación, una unidad a distancia de nivel Bronce, Plata u Oro no puede atacar.\n— O —\nInstantáneo: +2 Potencia.' },
+          { level: 6, name: 'Olvido VI', effect: 'Continuo: Durante su siguiente activación, una unidad Bronce, Plata u Oro no puede atacar.\n— O —\nInstantáneo: +2 Potencia.' }
         ]
       },
       lore: 'Un enigmático navegante que conoce los secretos del hipnotismo de las profundidades, sumiendo la mente de los arqueros rivales en el olvido.'

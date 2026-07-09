@@ -6,6 +6,7 @@ import GameTimer from './components/GameTimer';
 import RecruitmentCalculator from './components/RecruitmentCalculator';
 import ScenariosDatabase from './components/ScenariosDatabase';
 import HeroesViewer from './components/HeroesViewer';
+import SkillsBrowser from './components/SkillsBrowser';
 // @ts-ignore
 import oracleLogo from './assets/images/sandro_oracle_titled_logo_1783458347417.jpg';
 import { RuleSection, Player } from './types';
@@ -28,7 +29,7 @@ const FACTIONS = [
 ];
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'chat' | 'rules' | 'pdf' | 'timer_full' | 'calculator' | 'scenarios' | 'heroes'>('chat');
+  const [activeTab, setActiveTab] = useState<'chat' | 'rules' | 'pdf' | 'timer_full' | 'calculator' | 'scenarios' | 'heroes' | 'units' | 'skills'>('chat');
   const [selectedSection, setSelectedSection] = useState<RuleSection | null>(null);
 
   // Unified Timer and Round State (App-Level for clean sync in Bento Sidebar)
@@ -271,6 +272,7 @@ export default function App() {
     { id: 'scenarios', label: 'Misiones', icon: Compass, color: 'text-rose-400' },
     { id: 'units', label: 'Unidades', icon: Swords, color: 'text-red-400' },
     { id: 'heroes', label: 'Héroes', icon: Users, color: 'text-yellow-400' },
+    { id: 'skills', label: 'Habilidades', icon: Award, color: 'text-amber-500' },
     { id: 'timer_full', label: 'Gestión de Partida', icon: Hourglass, color: 'text-emerald-400' },
     { id: 'pdf', label: 'Manual Completo / PDF', icon: Printer, color: 'text-purple-400' }
   ];
@@ -387,6 +389,12 @@ export default function App() {
             {activeTab === 'heroes' && (
               <div className="space-y-4">
                 <HeroesViewer />
+              </div>
+            )}
+
+            {activeTab === 'skills' && (
+              <div className="space-y-4">
+                <SkillsBrowser />
               </div>
             )}
 
