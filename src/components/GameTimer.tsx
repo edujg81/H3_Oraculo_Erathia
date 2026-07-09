@@ -355,22 +355,20 @@ export default function GameTimer({
             </div>
 
             {/* Custom Player Adder */}
-            <form onSubmit={handleAddPlayer} className="space-y-2 bg-slate-950/60 p-3 rounded-2xl border border-slate-850">
+            <form onSubmit={handleAddPlayer} className="space-y-3 bg-slate-950/60 p-4 rounded-2xl border border-slate-850">
               <span className="text-[10px] text-slate-400 font-mono block uppercase tracking-wider font-semibold">Añadir Jugador Personalizado:</span>
-              <div className="flex gap-2">
+              <div className="space-y-2.5">
                 <input
                   type="text"
                   placeholder="Nombre de jugador..."
                   value={newPlayerName}
                   onChange={(e) => setNewPlayerName(e.target.value)}
-                  className="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-3 py-1.5 text-xs text-slate-200 placeholder-slate-600 focus:outline-none focus:ring-1 focus:ring-amber-500 focus:border-amber-500"
+                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-1.5 text-xs text-slate-200 placeholder-slate-600 focus:outline-none focus:ring-1 focus:ring-amber-500 focus:border-amber-500"
                 />
-              </div>
-              <div className="flex items-center gap-2">
                 <select
                   value={selectedFaction}
                   onChange={(e) => setSelectedFaction(e.target.value)}
-                  className="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-2.5 py-1.5 text-xs text-slate-300 focus:outline-none focus:ring-1 focus:ring-amber-500"
+                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-2.5 py-1.5 text-xs text-slate-300 focus:outline-none focus:ring-1 focus:ring-amber-500"
                 >
                   {FACTIONS.map(f => (
                     <option key={f.id} value={f.id} className="bg-slate-950 text-slate-200">
@@ -380,9 +378,9 @@ export default function GameTimer({
                 </select>
                 <button
                   type="submit"
-                  className="px-4 py-1.5 bg-amber-600/90 hover:bg-amber-600 text-white rounded-xl text-xs font-semibold cursor-pointer transition whitespace-nowrap flex items-center gap-1"
+                  className="w-full py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-xl text-xs font-bold cursor-pointer transition flex items-center justify-center gap-1.5 shadow-md hover:shadow-amber-950/20"
                 >
-                  <Plus className="w-3.5 h-3.5" /> Añadir
+                  <Plus className="w-4 h-4" /> Añadir Jugador
                 </button>
               </div>
             </form>

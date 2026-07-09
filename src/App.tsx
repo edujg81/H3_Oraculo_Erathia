@@ -375,7 +375,6 @@ export default function App() {
               <div className="space-y-4">
                 <RulesBrowser 
                   onSelectSection={handleSelectSectionFromRules} 
-                  players={players} 
                 />
               </div>
             )}
@@ -987,20 +986,45 @@ export default function App() {
       </main>
 
       {/* 4. Atmospheric Footer */}
-      <footer className="mt-8 shrink-0 bg-slate-900/40 border-t border-slate-800 text-[12px] text-slate-500 py-4 px-6">
-        <div className="max-w-7xl mx-auto w-full flex flex-col sm:flex-row items-center justify-between">
-          <div className="flex items-center space-x-6">
-            <div className="flex items-center">
-              <span className="w-2 h-2 bg-amber-500 rounded-full mr-2"></span> 
-              8 MANUALES OFICIALES INDEXADOS
+      <footer className="mt-12 shrink-0 bg-slate-950/60 border-t border-slate-900 text-[11px] text-slate-400 py-6 px-6">
+        <div className="max-w-7xl mx-auto w-full space-y-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 border-b border-slate-900 pb-4">
+            <div className="flex flex-wrap justify-center md:justify-start items-center gap-x-6 gap-y-2">
+              <div className="flex items-center">
+                <span className="w-2 h-2 bg-amber-500 rounded-full mr-2"></span> 
+                <span className="font-mono text-slate-300 font-semibold">10 FACCIONES RECREADAS</span>
+              </div>
+              <div className="flex items-center">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> 
+                <span className="font-mono text-slate-300 font-semibold">32 HABILIDADES INDEXADAS (v2.1)</span>
+              </div>
+              <div className="flex items-center">
+                <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span> 
+                <span className="font-mono text-slate-300 font-semibold">8 MANUALES OFICIALES INDEXADOS</span>
+              </div>
+              <div className="flex items-center">
+                <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span> 
+                <span className="font-mono text-slate-300 font-semibold">SISTEMA CON ALERTA ACÚSTICA</span>
+              </div>
             </div>
-            <div className="flex items-center">
-              <span className="w-2 h-2 bg-slate-700 rounded-full mr-2"></span> 
-              REGLAS COMPLETA EN ESPAÑOL
+            <div className="text-slate-500 font-mono text-[10px] bg-slate-900/80 px-2.5 py-1 rounded-md border border-slate-850">
+              ORÁCULO DE SANDRO // ERATHIA OS v2.3
             </div>
           </div>
-          <div className="text-slate-600 font-mono mt-2 sm:mt-0">
-            SISTEMA EXPERTO v2.1 // ERATHIA TÁCTIVO OS
+          
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-2.5 text-slate-500 font-mono">
+            <div className="text-center sm:text-left leading-relaxed max-w-2xl">
+              <p>
+                Herramienta de consulta y soporte táctico para <strong className="text-slate-400">Heroes of Might & Magic III: The Board Game</strong>. 
+                Optimizado para resoluciones de escritorio y tabletas.
+              </p>
+              <p className="text-[10px] text-slate-600 mt-1">
+                Proyecto creado por y para fans. Todos los derechos del juego original corresponden a Archon Studio y Ubisoft.
+              </p>
+            </div>
+            <div className="text-[10px] text-slate-600 whitespace-nowrap text-center sm:text-right mt-2 sm:mt-0">
+              Hecho con templanza en Erathia &bull; {new Date().getFullYear()}
+            </div>
           </div>
         </div>
       </footer>

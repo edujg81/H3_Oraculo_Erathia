@@ -129,11 +129,11 @@ export default function RulebookPDF() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row gap-2">
+        <div className="flex flex-col sm:flex-row gap-2.5 w-full xl:w-auto">
           <button
             onClick={triggerPrint}
             title="Imprimir directamente desde esta pestaña"
-            className="flex items-center justify-center gap-2 px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 rounded-lg text-xs font-semibold transition active:scale-95 cursor-pointer shadow-md duration-150"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 rounded-lg text-xs font-semibold transition active:scale-95 cursor-pointer shadow-md duration-150"
           >
             <Printer className="w-3.5 h-3.5" />
             <span>Imprimir Copia Directa</span>
@@ -141,10 +141,10 @@ export default function RulebookPDF() {
           <button
             onClick={downloadOfflineHTML}
             title="Descargar archivo HTML listo para imprimir como PDF"
-            className="flex items-center justify-center gap-2 px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-xs font-bold transition active:scale-95 cursor-pointer shadow-md duration-200 shrink-0"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-xs font-bold transition active:scale-95 cursor-pointer shadow-md duration-200"
           >
             <Download className="w-4 h-4" />
-            <span>Descargar HTML Offline / Imprimir PDF</span>
+            <span>Descargar HTML / PDF</span>
           </button>
         </div>
       </div>

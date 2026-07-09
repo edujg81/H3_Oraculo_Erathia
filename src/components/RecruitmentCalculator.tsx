@@ -83,10 +83,10 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 1, nameBasic: 'Goblins', nameElite: 'Goblins', tier: 'bronce' },
     { level: 2, nameBasic: 'Incursores lupinos', nameElite: 'Incursores lupinos', tier: 'bronce' },
     { level: 3, nameBasic: 'Orcos', nameElite: 'Orcos', tier: 'bronce' },
-    { level: 4, nameBasic: 'Ogros', nameElite: 'Ogros Magos', tier: 'plata' },
+    { level: 4, nameBasic: 'Ogros', nameElite: 'Ogros', tier: 'plata' },
     { level: 5, nameBasic: 'Rocs', nameElite: 'Rocs del Trueno', tier: 'plata' },
-    { level: 6, nameBasic: 'Cíclopes', nameElite: 'Cíclopes Reyes', tier: 'oro' },
-    { level: 7, nameBasic: 'Behemoths', nameElite: 'Behemoths Ancestrales', tier: 'oro' }
+    { level: 6, nameBasic: 'Cíclopes', nameElite: 'Cíclopes', tier: 'oro' },
+    { level: 7, nameBasic: 'Behemoths', nameElite: 'Behemoths', tier: 'oro' }
   ],
   fortaleza: [
     { level: 1, nameBasic: 'Gnolls', nameElite: 'Merodeadores Gnoll', tier: 'bronce' },
@@ -101,19 +101,19 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 1, nameBasic: 'Hadas', nameElite: 'Hadas', tier: 'bronce' },
     { level: 2, nameBasic: 'Elementales de la tormenta', nameElite: 'Elementales de la tormenta', tier: 'bronce' },
     { level: 3, nameBasic: 'Elementales de hielo', nameElite: 'Elementales de hielo', tier: 'bronce' },
-    { level: 4, nameBasic: 'Elementales de Fuego', nameElite: 'Elementales de Energía', tier: 'plata' },
-    { level: 5, nameBasic: 'Elementales de Tierra', nameElite: 'Elementales de Magma', tier: 'plata' },
-    { level: 6, nameBasic: 'Elementales Mentales', nameElite: 'Elementales de Magia', tier: 'oro' },
-    { level: 7, nameBasic: 'Fénix', nameElite: 'Fénix Sagrados', tier: 'oro' }
+    { level: 4, nameBasic: 'Elementales de energía', nameElite: 'Elementales de energía', tier: 'plata' },
+    { level: 5, nameBasic: 'Elementales de magma', nameElite: 'Elementales de magma', tier: 'plata' },
+    { level: 6, nameBasic: 'Elementales mágicos', nameElite: 'Elementales mágicos', tier: 'oro' },
+    { level: 7, nameBasic: 'Fénix', nameElite: 'Fénix', tier: 'oro' }
   ],
   cove: [
     { level: 1, nameBasic: 'Oceánidos', nameElite: 'Oceánidos', tier: 'bronce' },
     { level: 2, nameBasic: 'Marineros', nameElite: 'Marineros', tier: 'bronce' },
     { level: 3, nameBasic: 'Lobos de mar', nameElite: 'Lobos de mar', tier: 'bronce' },
-    { level: 4, nameBasic: 'Regentes del Mar', nameElite: 'Regentes del Abismo', tier: 'plata' },
-    { level: 5, nameBasic: 'Aves de Tormenta', nameElite: 'Aves del Abismo', tier: 'plata' },
-    { level: 6, nameBasic: 'Serpientes Marinas', nameElite: 'Haspid', tier: 'oro' },
-    { level: 7, nameBasic: 'Leviatanes', nameElite: 'Leviatanes Antiguos', tier: 'oro' }
+    { level: 4, nameBasic: 'Ayssids', nameElite: 'Ayssids', tier: 'plata' },
+    { level: 5, nameBasic: 'Hechiceras', nameElite: 'Hechiceras', tier: 'plata' },
+    { level: 6, nameBasic: 'Nix', nameElite: 'Nix', tier: 'oro' },
+    { level: 7, nameBasic: 'Háspidos', nameElite: 'Háspidos', tier: 'oro' }
   ],
   neutrales: [
     { level: 1, nameBasic: 'Paisanos', tier: 'bronce' },
@@ -122,20 +122,21 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 1, nameBasic: 'Esqueletos (Neutral)', tier: 'bronce' },
     { level: 1, nameBasic: 'Trogloditas (Neutral)', tier: 'bronce' },
     { level: 1, nameBasic: 'Gremlins (Neutral)', tier: 'bronce' },
-    { level: 1, nameBasic: 'Goblins (Neutral)', tier: 'bronce' },
-    { level: 1, nameBasic: 'Hadas (Neutral)', tier: 'bronce' },
     { level: 1, nameBasic: 'Hobbits', tier: 'bronce' },
+    { level: 1, nameBasic: 'Hadas (Neutral)', tier: 'bronce' },
+    { level: 1, nameBasic: 'Oceánidos (Neutral)', tier: 'bronce' },
+    { level: 1, nameBasic: 'Duende', tier: 'bronce' },
+    { level: 1, nameBasic: 'Goblins (Neutral)', tier: 'bronce' },
     { level: 2, nameBasic: 'Nómadas', tier: 'bronce' },
     { level: 2, nameBasic: 'Arqueros (Neutral)', tier: 'bronce' },
     { level: 2, nameBasic: 'Zombis (Neutral)', tier: 'bronce' },
     { level: 2, nameBasic: 'Arpías (Neutral)', tier: 'bronce' },
     { level: 2, nameBasic: 'Gárgolas (Neutral)', tier: 'bronce' },
-    { level: 2, nameBasic: 'Incursores lupinos (Neutral)', tier: 'bronce' },
     { level: 2, nameBasic: 'Elementales de la tormenta (Neutral)', tier: 'bronce' },
     { level: 2, nameBasic: 'Marineros (Neutral)', tier: 'bronce' },
+    { level: 2, nameBasic: 'Incursores lupinos (Neutral)', tier: 'bronce' },
+    { level: 2, nameBasic: 'Elemental de aire', tier: 'bronce' },
     { level: 3, nameBasic: 'Trolls', tier: 'bronce' },
-    { level: 3, nameBasic: 'Duende', tier: 'bronce' },
-    { level: 3, nameBasic: 'Sátiros', tier: 'bronce' },
     { level: 3, nameBasic: 'Golems de Acero', tier: 'bronce' },
     { level: 3, nameBasic: 'Jabalíes', tier: 'bronce' },
     { level: 3, nameBasic: 'Grifos (Neutral)', tier: 'bronce' },
@@ -145,32 +146,50 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 3, nameBasic: 'Orcos (Neutral)', tier: 'bronce' },
     { level: 3, nameBasic: 'Elementales de hielo (Neutral)', tier: 'bronce' },
     { level: 3, nameBasic: 'Lobos de mar (Neutral)', tier: 'bronce' },
-    { level: 4, nameBasic: 'Golems de Oro', tier: 'plata' },
     { level: 4, nameBasic: 'Cruzados (Neutral)', tier: 'plata' },
     { level: 4, nameBasic: 'Vampiros (Neutral)', tier: 'plata' },
     { level: 4, nameBasic: 'Medusas (Neutral)', tier: 'plata' },
     { level: 4, nameBasic: 'Archimagos (Neutral)', tier: 'plata' },
+    { level: 4, nameBasic: 'Ayssids (Neutral)', tier: 'plata' },
+    { level: 4, nameBasic: 'Sátiros', tier: 'plata' },
+    { level: 4, nameBasic: 'Ogros (Neutral)', tier: 'plata' },
+    { level: 4, nameBasic: 'Elemental de agua', tier: 'plata' },
+    { level: 4, nameBasic: 'Tiradores certeros', tier: 'plata' },
+    { level: 4, nameBasic: 'Elementales de energía (Neutral)', tier: 'plata' },
+    { level: 4, nameBasic: 'Fangarm', tier: 'plata' },
+    { level: 4, nameBasic: 'Gólems de acero', tier: 'plata' },
+    { level: 4, nameBasic: 'Hechiceras (Neutral)', tier: 'plata' },
+    { level: 4, nameBasic: 'Aves de trueno (Neutral)', tier: 'plata' },
+    { level: 4, nameBasic: 'Elemental de fuego', tier: 'plata' },
+    { level: 5, nameBasic: 'Golems de Oro', tier: 'plata' },
     { level: 5, nameBasic: 'Momias', tier: 'plata' },
-    { level: 5, nameBasic: 'Encantadores', tier: 'plata' },
-    { level: 5, nameBasic: 'Tiradores', tier: 'plata' },
     { level: 5, nameBasic: 'Fangarms', tier: 'plata' },
     { level: 5, nameBasic: 'Fanáticos (Neutral)', tier: 'plata' },
     { level: 5, nameBasic: 'Liches (Neutral)', tier: 'plata' },
     { level: 5, nameBasic: 'Minotauros (Neutral)', tier: 'plata' },
     { level: 5, nameBasic: 'Genios (Neutral)', tier: 'plata' },
+    { level: 5, nameBasic: 'Elementales de magma (Neutral)', tier: 'plata' },
     { level: 6, nameBasic: 'Golems de Diamante', tier: 'oro' },
     { level: 6, nameBasic: 'Campeones (Neutral)', tier: 'oro' },
     { level: 6, nameBasic: 'Caballeros del Terror (Neutral)', tier: 'oro' },
     { level: 6, nameBasic: 'Mantícoras (Neutral)', tier: 'oro' },
     { level: 6, nameBasic: 'Nagas (Neutral)', tier: 'oro' },
+    { level: 6, nameBasic: 'Encantadores', tier: 'oro' },
+    { level: 6, nameBasic: 'Elemental de tierra', tier: 'oro' },
+    { level: 6, nameBasic: 'Elementales mágicos (Neutral)', tier: 'oro' },
+    { level: 6, nameBasic: 'Cíclopes (Neutral)', tier: 'oro' },
+    { level: 6, nameBasic: 'Nix (Neutral)', tier: 'oro' },
     { level: 7, nameBasic: 'Arcángeles (Neutral)', tier: 'oro' },
     { level: 7, nameBasic: 'Dragones Fantasma (Neutral)', tier: 'oro' },
     { level: 7, nameBasic: 'Dragones Negros (Neutral)', tier: 'oro' },
+    { level: 7, nameBasic: 'Háspidos (Neutral)', tier: 'oro' },
+    { level: 7, nameBasic: 'Behemoths (Neutral)', tier: 'oro' },
     { level: 8, nameBasic: 'Titanes (Neutral)', tier: 'azul' },
     { level: 8, nameBasic: 'Dragón de Hada', tier: 'azul' },
     { level: 8, nameBasic: 'Dragón de Óxido', tier: 'azul' },
     { level: 8, nameBasic: 'Dragón de Cristal', tier: 'azul' },
-    { level: 8, nameBasic: 'Dragón Azul', tier: 'azul' }
+    { level: 8, nameBasic: 'Dragón Azul', tier: 'azul' },
+    { level: 8, nameBasic: 'Fénix (Neutral)', tier: 'azul' }
   ],
   bancos: [
     { level: 1, nameBasic: 'Esqueletos (Cripta)', tier: 'bronce' },
@@ -411,7 +430,7 @@ const UNIT_DETAILS: {
     basic: { atk: 2, def: 2, hp: 2, ini: 3, type: 'Melee', abilities: ["Piel Gruesa: HP máxima aumentada en 1."] },
     elite: { atk: 3, def: 2, hp: 3, ini: 4, type: 'Melee', abilities: ["Piel Gruesa.", "Ogro Mago: Lanza hechizo de Sed de Sangre a un aliado una vez por combate."] }
   },
-  "Rocs": {
+  "Aves de trueno": {
     basic: { atk: 2, def: 1, hp: 2, ini: 5, type: 'Volador', abilities: ["Volador."] },
     elite: { atk: 3, def: 2, hp: 2, ini: 6, type: 'Volador', abilities: ["Volador.", "Golpe de Trueno: En un resultado de +1 en el dado de ataque, paraliza al enemigo con un rayo."] }
   },
@@ -467,15 +486,15 @@ const UNIT_DETAILS: {
     basic: { atk: 1, def: 1, hp: 1, ini: 4, type: 'A distancia', abilities: ["Inmune a magia de agua."] },
     elite: { atk: 2, def: 1, hp: 1, ini: 5, type: 'A distancia', abilities: ["Inmune a magia de agua.", "Lanza Hechizo Flecha de Hielo una vez por combate."] }
   },
-  "Elementales de Fuego": {
+  "Elementales de energía": {
     basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'Melee', abilities: ["Inmune a magia de fuego."] },
     elite: { atk: 3, def: 1, hp: 2, ini: 5, type: 'Melee', abilities: ["Inmune a magia de fuego.", "Escudo de Fuego: Devuelve 1 de daño cuerpo a cuerpo."] }
   },
-  "Elementales de Tierra": {
+  "Elementales de magma": {
     basic: { atk: 2, def: 2, hp: 2, ini: 3, type: 'Melee', abilities: ["Inmune a magia de tierra.", "Piel de Roca pasiva."] },
     elite: { atk: 3, def: 3, hp: 2, ini: 4, type: 'Melee', abilities: ["Inmune a magia de tierra.", "Cuerpo de Magma: HP máxima aumentada en 1."] }
   },
-  "Elementales Mentales": {
+  "Elementales mágicos": {
     basic: { atk: 3, def: 2, hp: 3, ini: 5, type: 'Melee', abilities: ["Ataque en Abanico: Golpea a 3 enemigos adyacentes.", "Sin Represalia."] },
     elite: { atk: 4, def: 2, hp: 3, ini: 6, type: 'Melee', abilities: ["Ataque en Abanico.", "Sin Represalia.", "Inmune a toda magia de nivel 1."] }
   },
@@ -497,19 +516,19 @@ const UNIT_DETAILS: {
     basic: { atk: 1, def: 0, hp: 1, ini: 4, type: 'A distancia', abilities: ["A distancia."] },
     elite: { atk: 2, def: 0, hp: 1, ini: 5, type: 'A distancia', abilities: ["A distancia.", "Disparo Preciso: Ignora cobertura de muros o estructuras."] }
   },
-  "Regentes del Mar": {
-    basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'Melee', abilities: ["Hechicería: Lanza hechizo de Debilidad una vez por combate."] },
-    elite: { atk: 3, def: 1, hp: 2, ini: 5, type: 'Melee', abilities: ["Hechicería.", "Invocador Marino: Invoca un elemental de agua aliado al morir."] }
+  "Ayssids": {
+    basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'Volador', abilities: ["Hechicería: Lanza hechizo de Debilidad una vez por combate."] },
+    elite: { atk: 3, def: 1, hp: 2, ini: 5, type: 'Volador', abilities: ["Hechicería.", "Invocador Marino: Invoca un elemental de agua aliado al morir."] }
   },
-  "Aves de Tormenta": {
-    basic: { atk: 2, def: 1, hp: 2, ini: 5, type: 'Volador', abilities: ["Volador."] },
-    elite: { atk: 3, def: 2, hp: 2, ini: 6, type: 'Volador', abilities: ["Volador.", "Tormenta de Viento: Ataca e inflige daño a unidades adyacentes de forma colateral."] }
+  "Hechiceras": {
+    basic: { atk: 2, def: 1, hp: 2, ini: 5, type: 'A distancia', abilities: ["Volador."] },
+    elite: { atk: 3, def: 2, hp: 2, ini: 6, type: 'A distancia', abilities: ["Volador.", "Tormenta de Viento: Ataca e inflige daño a unidades adyacentes de forma colateral."] }
   },
-  "Serpientes Marinas": {
+  "Nix": {
     basic: { atk: 3, def: 2, hp: 3, ini: 4, type: 'Melee', abilities: ["Devorar: Gana +1 de Ataque tras derrotar a una unidad enemiga."] },
     elite: { atk: 4, def: 2, hp: 3, ini: 5, type: 'Melee', abilities: ["Devorar.", "Frenesí Sangriento: +2 de Ataque si está dañada."] }
   },
-  "Leviatanes": {
+  "Háspidos": {
     basic: { atk: 4, def: 3, hp: 4, ini: 5, type: 'Melee', abilities: ["Inmune a control mental.", "Embestida Abisal: Ataca empujando al enemigo 1 hexágono."] },
     elite: { atk: 5, def: 3, hp: 4, ini: 6, type: 'Melee', abilities: ["Inmune a control mental.", "Embestida Abisal.", "Regeneración: Se cura de forma pasiva 2 heridas al activarse."] }
   },
@@ -532,9 +551,9 @@ const UNIT_DETAILS: {
   },
   "Gremlins (Neutral)": {
     basic: { atk: 2, def: 0, hp: 2, ini: 5, type: 'A distancia', abilities: [], customCost: { gold: 2, materials: 0, valuable: 0 } }
-  },
-  "Goblins (Neutral)": {
-    basic: { atk: 1, def: 0, hp: 4, ini: 6, type: 'Melee', abilities: [], customCost: { gold: 4, materials: 0, valuable: 0 } }
+  }, 
+  "Hobbits": {
+    basic: { atk: 1, def: 1, hp: 1, ini: 4, type: 'A distancia', abilities: [] }
   },
   "Hadas (Neutral)": {
     basic: { atk: 2, def: 0, hp: 2, ini: 7, type: 'Volador', abilities: ["Al Atacar: Ignora el contraataque."], customCost: { gold: 2, materials: 0, valuable: 0 } }
@@ -542,8 +561,11 @@ const UNIT_DETAILS: {
   "Oceánidos (Neutral)": {
     basic: { atk: 2, def: 0, hp: 3, ini: 6, type: 'Volador', abilities: ["Pasivo: Ignora todos los efectos y Daño de un Hechizo de magia de agua."], customCost: { gold: 3, materials: 0, valuable: 0 } }
   },
-  "Hobbits": {
-    basic: { atk: 1, def: 1, hp: 1, ini: 4, type: 'A distancia', abilities: [] }
+  "Duende": {
+    basic: { atk: 2, def: 0, hp: 3, ini: 5, type: 'Melee', abilities: ["Al Atacar: Lanza 2 dados de ataque y resuelve el resultado mayor."], customCost: { gold: 4, materials: 0, valuable: 0 } }
+  },
+  "Goblins (Neutral)": {
+    basic: { atk: 1, def: 0, hp: 4, ini: 6, type: 'Melee', abilities: [], customCost: { gold: 4, materials: 0, valuable: 0 } }
   },
   "Nómadas": {
     basic: { atk: 1, def: 1, hp: 1, ini: 4, type: 'Melee', abilities: ["Veloz: Ignora ciertas restricciones."] }
@@ -560,22 +582,19 @@ const UNIT_DETAILS: {
   "Gárgolas (Neutral)": {
     basic: { atk: 2, def: 1, hp: 3, ini: 9, type: 'Volador', abilities: ["Pasiva: Esta unidad ignora los efectos de Parálisis."], customCost: { gold: 4, materials: 0, valuable: 0 } }
   },
-  "Incursores lupinos (Neutral)": {
-    basic: { atk: 2, def: 0, hp: 3, ini: 7, type: 'Melee', abilities: ["Al Atacar: Ataca este objetivo otra vez. El segundo ataque se produce después de que el objetivo contraataque (si es posible)."], customCost: { gold: 6, materials: 0, valuable: 0 } }
-  },
   "Elementales de la tormenta (Neutral)": {
     basic: { atk: 2, def: 0, hp: 3, ini: 7, type: 'A distancia', abilities: ["Pasivo: Inmune a la Flecha mágica y a los Hechizos de magia de aire. Esta unidad inflige daño elemental."], customCost: { gold: 5, materials: 0, valuable: 0 } }
   },
   "Marineros (Neutral)": {
     basic: { atk: 2, def: 1, hp: 3, ini: 5, type: 'Melee', abilities: [], customCost: { gold: 5, materials: 0, valuable: 0 } }
   },
+  "Incursores lupinos (Neutral)": {
+    basic: { atk: 2, def: 0, hp: 3, ini: 7, type: 'Melee', abilities: ["Al Atacar: Ataca este objetivo otra vez. El segundo ataque se produce después de que el objetivo contraataque (si es posible)."], customCost: { gold: 6, materials: 0, valuable: 0 } }
+  },
+  "Elemental de aire": {
+    basic: { atk: 2, def: 0, hp: 3, ini: 7, type: 'Melee', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de aire. Esta unidad inflige daño elemental."], customCost: { gold: 7, materials: 0, valuable: 0 } }
+  },
   "Trolls": {
-    basic: { atk: 1, def: 1, hp: 1, ini: 3, type: 'Melee', abilities: ["Carga: +1 de Ataque tras avanzar."] }
-  },
-  "Duende": {
-    basic: { atk: 2, def: 0, hp: 3, ini: 5, type: 'Melee', abilities: ["Al Atacar: Lanza 2 dados de ataque y resuelve el resultado mayor."], customCost: { gold: 4, materials: 0, valuable: 0 } }
-  },
-  "Sátiros": {
     basic: { atk: 1, def: 1, hp: 1, ini: 3, type: 'Melee', abilities: ["Carga: +1 de Ataque tras avanzar."] }
   },
   "Golems de Acero": {
@@ -605,9 +624,6 @@ const UNIT_DETAILS: {
   "Lobos de mar (Neutral)": {
     basic: { atk: 2, def: 0, hp: 4, ini: 6, type: 'A distancia', abilities: ["Pasivo: Ignora la penalización de combate contra unidades adyacentes."], customCost: { gold: 7, materials: 0, valuable: 0 } }
   },
-  "Golems de Oro": {
-    basic: { atk: 2, def: 2, hp: 2, ini: 3, type: 'Melee', abilities: ["Constructo.", "Resistencia de Oro: Reduce el daño de hechizos enemigos en 2."] }
-  },
   "Cruzados (Neutral)": {
     basic: { atk: 3, def: 2, hp: 4, ini: 5, type: 'Melee', abilities: ["Pasiva: Durante cualquier ataque, tira 2 dados de Ataque y escoge el resultado más alto."], customCost: { gold: 11, materials: 0, valuable: 0 } }
   },
@@ -620,16 +636,43 @@ const UNIT_DETAILS: {
   "Archimagos (Neutral)": {
     basic: { atk: 3, def: 0, hp: 5, ini: 6, type: 'A distancia', abilities: ["Al Atacar: Ignora las penalizaciones de combate. Después del ataque, el enemigo descarta una carta al azar o una carta con Potencia."], customCost: { gold: 11, materials: 0, valuable: 0 } }
   },
+  "Ayssids (Neutral)": {
+    basic: { atk: 3, def: 1, hp: 5, ini: 9, type: 'Volador', abilities: ["Al Atacar: Si los puntos de Salud del objetivo se reducen a 0, después de resolver el Contraataque (si corresponde), los Ayssids pueden atacar a otra unidad adyacente."], customCost: { gold: 9, materials: 0, valuable: 0 } }
+  },
+  "Sátiros": {
+    basic: { atk: 3, def: 0, hp: 5, ini: 7, type: 'Melee', abilities: ["Mapa: Una vez por turno. Tira 1 dado de ataque. Con +1, gana Moral positiva."], customCost: { gold: 10, materials: 0, valuable: 0 } }
+  },
+  "Ogros (Neutral)": {
+    basic: { atk: 3, def: 2, hp: 4, ini: 4, type: 'Melee', abilities: ["Alternativo: Coloca una ficha +2 Ataque en la unidad Melé o Voladora que elijas durante 2 rondas de combate."], customCost: { gold: 10, materials: 0, valuable: 0 } }
+  },
+  "Elemental de agua": {
+    basic: { atk: 2, def: 1, hp: 4, ini: 5, type: 'Melee', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de agua. Esta unidad inflige daño elemental."], customCost: { gold: 10, materials: 0, valuable: 0 } }
+  },
+  "Tiradores certeros": {
+    basic: { atk: 3, def: 0, hp: 6, ini: 9, type: 'A distancia', abilities: ["Al Atacar: Ignora las penalizaciones de combate."], customCost: { gold: 10, materials: 0, valuable: 0 } }
+  },
+  "Elementales de energía (Neutral)": {
+    basic: { atk: 3, def: 1, hp: 4, ini: 5, type: 'Volador', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de fuego. Esta unidad inflige daño elemental."], customCost: { gold: 11, materials: 0, valuable: 0 } }
+  },
+  "Fangarm": {
+    basic: { atk: 3, def: 1, hp: 5, ini: 8, type: 'Melee', abilities: ["Pasivo: Ignora todos los efectos de Hechizo y de especialidad distintos de Daño."], customCost: { gold: 11, materials: 0, valuable: 0 } }
+  },
+  "Gólems de acero": {
+    basic: { atk: 3, def: 2, hp: 3, ini: 5, type: 'Melee', abilities: ["Pasivo: Reduce el Daño sufrido por esta unidad de Hechizo o especialidad en 2, hasta un mínimo de 0."], customCost: { gold: 12, materials: 0, valuable: 0 } }
+  },
+  "Hechiceras (Neutral)": {
+    basic: { atk: 3, def: 1, hp: 5, ini: 6, type: 'A distancia', abilities: ["Al Atacar: Después del ataque, coloca una ficha de Debilidad <<-1>> sobre el objetivo durante 2 rondas de combate."], customCost: { gold: 13, materials: 0, valuable: 0 } }
+  },
+  "Aves de trueno (Neutral)": {
+    basic: { atk: 3, def: 0, hp: 6, ini: 9, type: 'Volador', abilities: ["Pasivo: Justo después del ataque de esta unidad y antes de un contraataque, tira 1 daod de ataque; con un <<0>> o <<+1>>, inflige 1 Herida al objetivo."], customCost: { gold: 13, materials: 0, valuable: 0 } }
+  },
+  "Elemental de fuego": {
+    basic: { atk: 3, def: 1, hp: 3, ini: 6, type: 'Melee', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de fuego. Esta unidad inflige daño elemental."], customCost: { gold: 13, materials: 0, valuable: 0 } }
+  },
+  "Golems de Oro": {
+    basic: { atk: 2, def: 2, hp: 2, ini: 3, type: 'Melee', abilities: ["Constructo.", "Resistencia de Oro: Reduce el daño de hechizos enemigos en 2."] }
+  },
   "Momias": {
-    basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'Melee', abilities: ["Infección: Enemigo herido se convierte en Licántropo si es derrotado."] }
-  },
-  "Encantadores": {
-    basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'A distancia', abilities: ["Infección: Enemigo herido se convierte en Licántropo si es derrotado."] }
-  },
-  "Tiradores": {
-    basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'A distancia', abilities: ["Infección: Enemigo herido se convierte en Licántropo si es derrotado."] }
-  },
-  "Fangarms": {
     basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'Melee', abilities: ["Infección: Enemigo herido se convierte en Licántropo si es derrotado."] }
   },
   "Fanáticos (Neutral)": {
@@ -643,6 +686,9 @@ const UNIT_DETAILS: {
   },
   "Genios (Neutral)": {
     basic: { atk: 3, def: 1, hp: 4, ini: 9, type: 'Volador', abilities: ["Al Atacar: Esta unidad obtiene +1 Ataque contra Efreets."], customCost: { gold: 11, materials: 0, valuable: 0 } }
+  },
+  "Elementales de magma (Neutral)": {
+    basic: { atk: 3, def: 2, hp: 4, ini: 4, type: 'Melee', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de tierra. Esta unidad inflige daño elemental."], customCost: { gold: 14, materials: 0, valuable: 0 } }
   },
   "Golems de Diamante": {
     basic: { atk: 2, def: 2, hp: 2, ini: 3, type: 'Melee', abilities: ["Resistencia Enana: Al recibir un hechizo, lanza el dado de combate; con +1 lo ignora."] }
@@ -659,6 +705,21 @@ const UNIT_DETAILS: {
   "Nagas (Neutral)": {
     basic: { atk: 5, def: 1, hp: 6, ini: 6, type: 'Melee', abilities: ["Al Atacar: Ignora los contraataques."], customCost: { gold: 16, materials: 0, valuable: 0 } }
   },
+  "Encantadores": {
+    basic: { atk: 4, def: 1, hp: 5, ini: 8, type: 'A distancia', abilities: ["Activación: Quita hasta 2 Heridas de una unidad amiga. De lo contrario, los encantadores obtienen +1 Ataque."], customCost: { gold: 16, materials: 0, valuable: 0 } }
+  },
+  "Elemental de tierra": {
+    basic: { atk: 3, def: 2, hp: 5, ini: 4, type: 'Melee', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de tierra. Esta unidad inflige daño elemental."], customCost: { gold: 16, materials: 0, valuable: 0 } }
+  },
+  "Elementales mágicos (Neutral)": {
+    basic: { atk: 3, def: 1, hp: 7, ini: 7, type: 'Melee', abilities: ["Pasivo: Inmunes a la Flecha mágica. Esta unidad inflige daño elemental."], customCost: { gold: 19, materials: 0, valuable: 0 } }
+  },
+  "Cíclopes (Neutral)": {
+    basic: { atk: 5, def: 1, hp: 6, ini: 8, type: 'A distancia', abilities: ["Alternativo: Esta unidad puede destruir un muro, puerta o torre de arqueros."], customCost: { gold: 19, materials: 0, valuable: 0 } }
+  },
+  "Nix (Neutral)": {
+    basic: { atk: 5, def: 1, hp: 7, ini: 6, type: 'Melee', abilities: ["Pasivo: Esta unidad no puede recibir más de 5 Heridas de un solo ataque."], customCost: { gold: 20, materials: 0, valuable: 0 } }
+  },
   "Arcángeles (Neutral)": {
     basic: { atk: 5, def: 2, hp: 7, ini: 10, type: 'Volador', abilities: ["Al Atacar: esta unidad obtiene +2 de Ataque contra Archidiablos."], customCost: { gold: 29, materials: 0, valuable: 0 } }
   },
@@ -667,6 +728,12 @@ const UNIT_DETAILS: {
   },
   "Dragón Negro (Neutral)": {
     basic: { atk: 5, def: 2, hp: 7, ini: 9, type: 'Volador', abilities: ["Al Atacar: Ataca 2 espacios en línea. El primer ataque se resuelve normalmente, y el segundo tiene 2 de Ataque."], customCost: { gold: 30, materials: 0, valuable: 0 } }
+  },
+  "Háspidos (Neutral)": {
+    basic: { atk: 5, def: 2, hp: 6, ini: 9, type: 'Melee', abilities: ["Al Atacar: Coloca 1 cubo de facción sobre el objetivo. Cuando se active, retira el cubo para infligir 1 Herida."], customCost: { gold: 25, materials: 0, valuable: 0 } }
+  },
+  "Behemoths (Neutral)": {
+    basic: { atk: 5, def: 1, hp: 8, ini: 9, type: 'Melee', abilities: ["Al Atacar: Disminuye la Defensa del objetivo en 2 (hasta un mínimo de 0). Después del ataque, pon 1 ficha de corrosión en el objetivo."], customCost: { gold: 26, materials: 0, valuable: 0 } }
   },
   "Titanes (Neutral)": {
     basic: { atk: 6, def: 2, hp: 10, ini: 10, type: 'A distancia', abilities: ["Pasiva: Ignora las penalizaciones de combate contra unidades adyacentes.", "Al Atacar: Esta unidad obtiene +2 de Ataque contra Dragones Negros."], customCost: { gold: 39, materials: 0, valuable: 0 } }
@@ -682,6 +749,9 @@ const UNIT_DETAILS: {
   },
   "Dragón Azul": {
     basic: { atk: 5, def: 4, hp: 5, ini: 7, type: 'Volador', abilities: ["Volador.", "Pánico: Unidades enemigas adyacentes de bronce/plata no pueden activar su turno."] }
+  },
+  "Fénix (Neutral)": {
+    basic: { atk: 6, def: 2, hp: 7, ini: 12, type: 'Volador', abilities: ["Pasivo: Una vez por combate. Cuando los PS de esta unidad se reduzcan a 0, ponlos en 1.\nPasivo: Inmunes a los Hechizos de magia de fuego."], customCost: { gold: 32, materials: 0, valuable: 0 } }
   },
 
   // Banco de Criaturas
