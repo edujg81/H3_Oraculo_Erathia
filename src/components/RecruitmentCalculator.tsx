@@ -80,9 +80,9 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 7, nameBasic: 'Diablos', nameElite: 'Archidiablos', tier: 'oro' }
   ],
   stronghold: [
-    { level: 1, nameBasic: 'Goblins', nameElite: 'Hobgoblins', tier: 'bronce' },
-    { level: 2, nameBasic: 'Jinetes de Lobo', nameElite: 'Jinetes de Élite', tier: 'bronce' },
-    { level: 3, nameBasic: 'Orcos', nameElite: 'Jefes Orco', tier: 'bronce' },
+    { level: 1, nameBasic: 'Goblins', nameElite: 'Goblins', tier: 'bronce' },
+    { level: 2, nameBasic: 'Incursores lupinos', nameElite: 'Incursores lupinos', tier: 'bronce' },
+    { level: 3, nameBasic: 'Orcos', nameElite: 'Orcos', tier: 'bronce' },
     { level: 4, nameBasic: 'Ogros', nameElite: 'Ogros Magos', tier: 'plata' },
     { level: 5, nameBasic: 'Rocs', nameElite: 'Rocs del Trueno', tier: 'plata' },
     { level: 6, nameBasic: 'Cíclopes', nameElite: 'Cíclopes Reyes', tier: 'oro' },
@@ -98,18 +98,18 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 7, nameBasic: 'Hidras', nameElite: 'Hidras del Caos', tier: 'oro' }
   ],
   confluencia: [
-    { level: 1, nameBasic: 'Duendes', nameElite: 'Duendes Armados', tier: 'bronce' },
-    { level: 2, nameBasic: 'Elementales de Aire', nameElite: 'Elementales de Tormenta', tier: 'bronce' },
-    { level: 3, nameBasic: 'Elementales de Agua', nameElite: 'Elementales de Hielo', tier: 'bronce' },
+    { level: 1, nameBasic: 'Hadas', nameElite: 'Hadas', tier: 'bronce' },
+    { level: 2, nameBasic: 'Elementales de la tormenta', nameElite: 'Elementales de la tormenta', tier: 'bronce' },
+    { level: 3, nameBasic: 'Elementales de hielo', nameElite: 'Elementales de hielo', tier: 'bronce' },
     { level: 4, nameBasic: 'Elementales de Fuego', nameElite: 'Elementales de Energía', tier: 'plata' },
     { level: 5, nameBasic: 'Elementales de Tierra', nameElite: 'Elementales de Magma', tier: 'plata' },
     { level: 6, nameBasic: 'Elementales Mentales', nameElite: 'Elementales de Magia', tier: 'oro' },
     { level: 7, nameBasic: 'Fénix', nameElite: 'Fénix Sagrados', tier: 'oro' }
   ],
   cove: [
-    { level: 1, nameBasic: 'Ninfas', nameElite: 'Nereidas', tier: 'bronce' },
-    { level: 2, nameBasic: 'Marineros', nameElite: 'Corsarios', tier: 'bronce' },
-    { level: 3, nameBasic: 'Piratas', nameElite: 'Bucaneros', tier: 'bronce' },
+    { level: 1, nameBasic: 'Oceánidos', nameElite: 'Oceánidos', tier: 'bronce' },
+    { level: 2, nameBasic: 'Marineros', nameElite: 'Marineros', tier: 'bronce' },
+    { level: 3, nameBasic: 'Lobos de mar', nameElite: 'Lobos de mar', tier: 'bronce' },
     { level: 4, nameBasic: 'Regentes del Mar', nameElite: 'Regentes del Abismo', tier: 'plata' },
     { level: 5, nameBasic: 'Aves de Tormenta', nameElite: 'Aves del Abismo', tier: 'plata' },
     { level: 6, nameBasic: 'Serpientes Marinas', nameElite: 'Haspid', tier: 'oro' },
@@ -122,14 +122,19 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 1, nameBasic: 'Esqueletos (Neutral)', tier: 'bronce' },
     { level: 1, nameBasic: 'Trogloditas (Neutral)', tier: 'bronce' },
     { level: 1, nameBasic: 'Gremlins (Neutral)', tier: 'bronce' },
+    { level: 1, nameBasic: 'Goblins (Neutral)', tier: 'bronce' },
+    { level: 1, nameBasic: 'Hadas (Neutral)', tier: 'bronce' },
     { level: 1, nameBasic: 'Hobbits', tier: 'bronce' },
     { level: 2, nameBasic: 'Nómadas', tier: 'bronce' },
     { level: 2, nameBasic: 'Arqueros (Neutral)', tier: 'bronce' },
     { level: 2, nameBasic: 'Zombis (Neutral)', tier: 'bronce' },
     { level: 2, nameBasic: 'Arpías (Neutral)', tier: 'bronce' },
     { level: 2, nameBasic: 'Gárgolas (Neutral)', tier: 'bronce' },
+    { level: 2, nameBasic: 'Incursores lupinos (Neutral)', tier: 'bronce' },
+    { level: 2, nameBasic: 'Elementales de la tormenta (Neutral)', tier: 'bronce' },
+    { level: 2, nameBasic: 'Marineros (Neutral)', tier: 'bronce' },
     { level: 3, nameBasic: 'Trolls', tier: 'bronce' },
-    { level: 3, nameBasic: 'Leprechauns', tier: 'bronce' },
+    { level: 3, nameBasic: 'Duende', tier: 'bronce' },
     { level: 3, nameBasic: 'Sátiros', tier: 'bronce' },
     { level: 3, nameBasic: 'Golems de Acero', tier: 'bronce' },
     { level: 3, nameBasic: 'Jabalíes', tier: 'bronce' },
@@ -137,6 +142,9 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 3, nameBasic: 'Espectros (Neutral)', tier: 'bronce' },
     { level: 3, nameBasic: 'Ojos Maléficos (Neutral)', tier: 'bronce' },
     { level: 3, nameBasic: 'Golems de Hierro (Neutral)', tier: 'bronce' },
+    { level: 3, nameBasic: 'Orcos (Neutral)', tier: 'bronce' },
+    { level: 3, nameBasic: 'Elementales de hielo (Neutral)', tier: 'bronce' },
+    { level: 3, nameBasic: 'Lobos de mar (Neutral)', tier: 'bronce' },
     { level: 4, nameBasic: 'Golems de Oro', tier: 'plata' },
     { level: 4, nameBasic: 'Cruzados (Neutral)', tier: 'plata' },
     { level: 4, nameBasic: 'Vampiros (Neutral)', tier: 'plata' },
@@ -391,7 +399,7 @@ const UNIT_DETAILS: {
     basic: { atk: 1, def: 0, hp: 1, ini: 3, type: 'Melee', abilities: ["Frágil."] },
     elite: { atk: 1, def: 0, hp: 1, ini: 4, type: 'Melee', abilities: ["Frágil.", "Frenesí: +1 Ataque si corre en línea recta."] }
   },
-  "Jinetes de Lobo": {
+  "Incursores lupinos": {
     basic: { atk: 1, def: 1, hp: 1, ini: 4, type: 'Melee', abilities: ["Doble Asalto: Ataca dos veces por activación."] },
     elite: { atk: 2, def: 1, hp: 1, ini: 5, type: 'Melee', abilities: ["Doble Asalto."] }
   },
@@ -447,15 +455,15 @@ const UNIT_DETAILS: {
   },
 
   // Confluencia
-  "Duendes": {
+  "Hadas": {
     basic: { atk: 1, def: 0, hp: 1, ini: 3, type: 'Melee', abilities: [] },
     elite: { atk: 1, def: 1, hp: 1, ini: 4, type: 'Melee', abilities: ["Inmune a hechizos de control mental."] }
   },
-  "Elementales de Aire": {
+  "Elementales de la tormenta": {
     basic: { atk: 1, def: 1, hp: 1, ini: 4, type: 'A distancia', abilities: ["Inmune a magia de aire."] },
     elite: { atk: 2, def: 1, hp: 1, ini: 5, type: 'A distancia', abilities: ["Inmune a magia de aire.", "Lanza Hechizo Rayo una vez por combate."] }
   },
-  "Elementales de Agua": {
+  "Elementales de hielo": {
     basic: { atk: 1, def: 1, hp: 1, ini: 4, type: 'A distancia', abilities: ["Inmune a magia de agua."] },
     elite: { atk: 2, def: 1, hp: 1, ini: 5, type: 'A distancia', abilities: ["Inmune a magia de agua.", "Lanza Hechizo Flecha de Hielo una vez por combate."] }
   },
@@ -477,7 +485,7 @@ const UNIT_DETAILS: {
   },
 
   // Bahía
-  "Ninfas": {
+  "Oceánidos": {
     basic: { atk: 1, def: 0, hp: 1, ini: 4, type: 'Volador', abilities: ["Inmune a magia de agua."] },
     elite: { atk: 1, def: 1, hp: 1, ini: 5, type: 'Volador', abilities: ["Inmune a magia de agua.", "Escudo de Náyade: Lanza escudo de agua para absorber 1 de daño."] }
   },
@@ -485,7 +493,7 @@ const UNIT_DETAILS: {
     basic: { atk: 1, def: 1, hp: 1, ini: 3, type: 'Melee', abilities: ["Bonificación Costera: +1 de ataque en losetas de agua."] },
     elite: { atk: 2, def: 1, hp: 1, ini: 4, type: 'Melee', abilities: ["Bonificación Costera.", "Saqueador: Otorga +1 de Oro tras derrotar a una unidad enemiga."] }
   },
-  "Piratas": {
+  "Lobos de mar": {
     basic: { atk: 1, def: 0, hp: 1, ini: 4, type: 'A distancia', abilities: ["A distancia."] },
     elite: { atk: 2, def: 0, hp: 1, ini: 5, type: 'A distancia', abilities: ["A distancia.", "Disparo Preciso: Ignora cobertura de muros o estructuras."] }
   },
@@ -525,6 +533,15 @@ const UNIT_DETAILS: {
   "Gremlins (Neutral)": {
     basic: { atk: 2, def: 0, hp: 2, ini: 5, type: 'A distancia', abilities: [], customCost: { gold: 2, materials: 0, valuable: 0 } }
   },
+  "Goblins (Neutral)": {
+    basic: { atk: 1, def: 0, hp: 4, ini: 6, type: 'Melee', abilities: [], customCost: { gold: 4, materials: 0, valuable: 0 } }
+  },
+  "Hadas (Neutral)": {
+    basic: { atk: 2, def: 0, hp: 2, ini: 7, type: 'Volador', abilities: ["Al Atacar: Ignora el contraataque."], customCost: { gold: 2, materials: 0, valuable: 0 } }
+  },
+  "Oceánidos (Neutral)": {
+    basic: { atk: 2, def: 0, hp: 3, ini: 6, type: 'Volador', abilities: ["Pasivo: Ignora todos los efectos y Daño de un Hechizo de magia de agua."], customCost: { gold: 3, materials: 0, valuable: 0 } }
+  },
   "Hobbits": {
     basic: { atk: 1, def: 1, hp: 1, ini: 4, type: 'A distancia', abilities: [] }
   },
@@ -543,11 +560,20 @@ const UNIT_DETAILS: {
   "Gárgolas (Neutral)": {
     basic: { atk: 2, def: 1, hp: 3, ini: 9, type: 'Volador', abilities: ["Pasiva: Esta unidad ignora los efectos de Parálisis."], customCost: { gold: 4, materials: 0, valuable: 0 } }
   },
+  "Incursores lupinos (Neutral)": {
+    basic: { atk: 2, def: 0, hp: 3, ini: 7, type: 'Melee', abilities: ["Al Atacar: Ataca este objetivo otra vez. El segundo ataque se produce después de que el objetivo contraataque (si es posible)."], customCost: { gold: 6, materials: 0, valuable: 0 } }
+  },
+  "Elementales de la tormenta (Neutral)": {
+    basic: { atk: 2, def: 0, hp: 3, ini: 7, type: 'A distancia', abilities: ["Pasivo: Inmune a la Flecha mágica y a los Hechizos de magia de aire. Esta unidad inflige daño elemental."], customCost: { gold: 5, materials: 0, valuable: 0 } }
+  },
+  "Marineros (Neutral)": {
+    basic: { atk: 2, def: 1, hp: 3, ini: 5, type: 'Melee', abilities: [], customCost: { gold: 5, materials: 0, valuable: 0 } }
+  },
   "Trolls": {
     basic: { atk: 1, def: 1, hp: 1, ini: 3, type: 'Melee', abilities: ["Carga: +1 de Ataque tras avanzar."] }
   },
-  "Leprechauns": {
-    basic: { atk: 1, def: 1, hp: 1, ini: 3, type: 'Melee', abilities: ["Carga: +1 de Ataque tras avanzar."] }
+  "Duende": {
+    basic: { atk: 2, def: 0, hp: 3, ini: 5, type: 'Melee', abilities: ["Al Atacar: Lanza 2 dados de ataque y resuelve el resultado mayor."], customCost: { gold: 4, materials: 0, valuable: 0 } }
   },
   "Sátiros": {
     basic: { atk: 1, def: 1, hp: 1, ini: 3, type: 'Melee', abilities: ["Carga: +1 de Ataque tras avanzar."] }
@@ -569,6 +595,15 @@ const UNIT_DETAILS: {
   },
   "Golems de Hierro (Neutral)": {
     basic: { atk: 2, def: 1, hp: 4, ini: 3, type: 'Melee', abilities: ["Pasiva: Esta unidad reduce cualquier daño provocado por hechizos en 2, hasta un mínimo de 0."], customCost: { gold: 6, materials: 0, valuable: 0 } }
+  },
+  "Orcos (Neutral)": {
+    basic: { atk: 2, def: 1, hp: 4, ini: 4, type: 'A distancia', abilities: [], customCost: { gold: 7, materials: 0, valuable: 0 } }
+  },
+  "Elementales de hielo (Neutral)": {
+    basic: { atk: 2, def: 1, hp: 3, ini: 5, type: 'A distancia', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de agua. Esta unidad inflige daño elemental."], customCost: { gold: 7, materials: 0, valuable: 0 } }
+  },
+  "Lobos de mar (Neutral)": {
+    basic: { atk: 2, def: 0, hp: 4, ini: 6, type: 'A distancia', abilities: ["Pasivo: Ignora la penalización de combate contra unidades adyacentes."], customCost: { gold: 7, materials: 0, valuable: 0 } }
   },
   "Golems de Oro": {
     basic: { atk: 2, def: 2, hp: 2, ini: 3, type: 'Melee', abilities: ["Constructo.", "Resistencia de Oro: Reduce el daño de hechizos enemigos en 2."] }
@@ -901,7 +936,7 @@ export default function RecruitmentCalculator() {
       'Dragón de Cristal': 'neutral_14.gif',
       'Dragón Azul': 'neutral_15.gif',
       'Fangarms': 'neutral_16.gif',
-      'Leprechauns': 'neutral_17.gif',
+      'Duende': 'neutral_17.gif',
       'Sátiros': 'neutral_18.gif',
       'Golems de Acero': 'neutral_19.gif'
     };

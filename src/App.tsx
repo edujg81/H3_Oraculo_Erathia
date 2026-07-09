@@ -7,6 +7,7 @@ import RecruitmentCalculator from './components/RecruitmentCalculator';
 import ScenariosDatabase from './components/ScenariosDatabase';
 import HeroesViewer from './components/HeroesViewer';
 import SkillsBrowser from './components/SkillsBrowser';
+import { playTickSound, playTimeOutSound } from './utils/audio';
 // @ts-ignore
 import oracleLogo from './assets/images/sandro_oracle_titled_logo_1783458347417.jpg';
 import { RuleSection, Player } from './types';
@@ -179,9 +180,14 @@ export default function App() {
         setTurnSeconds(prev => {
           if (prev <= 1) {
             setIsTurnRunning(false);
+            playTimeOutSound();
             return 0;
           }
-          return prev - 1;
+          const nextVal = prev - 1;
+          if (nextVal <= 10) {
+            playTickSound();
+          }
+          return nextVal;
         });
       }, 1000);
     } else {

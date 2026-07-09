@@ -265,7 +265,11 @@ export default function GameTimer({
             {isLowTime && (
               <div className="bg-red-950/20 border border-red-900/30 p-3 rounded-xl flex items-center gap-2 text-red-300 text-[12px] animate-pulse">
                 <ShieldAlert className="w-4 h-4 shrink-0 text-red-500" />
-                <span>¡Quedan menos de 15 segundos! El turno del jugador está a punto de expirar.</span>
+                <span>
+                  {turnSeconds === 0 
+                    ? '¡El tiempo se ha agotado! El turno ha finalizado.' 
+                    : '¡Quedan menos de 15 segundos! El turno del jugador está a punto de expirar.'}
+                </span>
               </div>
             )}
           </div>
