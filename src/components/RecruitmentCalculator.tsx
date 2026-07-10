@@ -84,7 +84,7 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 2, nameBasic: 'Incursores lupinos', nameElite: 'Incursores lupinos', tier: 'bronce' },
     { level: 3, nameBasic: 'Orcos', nameElite: 'Orcos', tier: 'bronce' },
     { level: 4, nameBasic: 'Ogros', nameElite: 'Ogros', tier: 'plata' },
-    { level: 5, nameBasic: 'Rocs', nameElite: 'Rocs del Trueno', tier: 'plata' },
+    { level: 5, nameBasic: 'Aves de trueno', nameElite: 'Aves de Trueno', tier: 'plata' },
     { level: 6, nameBasic: 'Cíclopes', nameElite: 'Cíclopes', tier: 'oro' },
     { level: 7, nameBasic: 'Behemoths', nameElite: 'Behemoths', tier: 'oro' }
   ],
@@ -117,7 +117,6 @@ const FACTION_UNITS: FactionsUnitsData = {
   ],
   neutrales: [
     { level: 1, nameBasic: 'Paisanos', tier: 'bronce' },
-    { level: 1, nameBasic: 'Pícaros', tier: 'bronce' },
     { level: 1, nameBasic: 'Alabarderos (Neutral)', tier: 'bronce' },
     { level: 1, nameBasic: 'Esqueletos (Neutral)', tier: 'bronce' },
     { level: 1, nameBasic: 'Trogloditas (Neutral)', tier: 'bronce' },
@@ -125,8 +124,10 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 1, nameBasic: 'Hobbits', tier: 'bronce' },
     { level: 1, nameBasic: 'Hadas (Neutral)', tier: 'bronce' },
     { level: 1, nameBasic: 'Oceánidos (Neutral)', tier: 'bronce' },
-    { level: 1, nameBasic: 'Duende', tier: 'bronce' },
     { level: 1, nameBasic: 'Goblins (Neutral)', tier: 'bronce' },
+    { level: 2, nameBasic: 'Jabalíes', tier: 'bronce' },
+    { level: 2, nameBasic: 'Pícaros', tier: 'bronce' },
+    { level: 2, nameBasic: 'Duende', tier: 'bronce' },
     { level: 2, nameBasic: 'Nómadas', tier: 'bronce' },
     { level: 2, nameBasic: 'Arqueros (Neutral)', tier: 'bronce' },
     { level: 2, nameBasic: 'Zombis (Neutral)', tier: 'bronce' },
@@ -138,7 +139,6 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 2, nameBasic: 'Elemental de aire', tier: 'bronce' },
     { level: 3, nameBasic: 'Trolls', tier: 'bronce' },
     { level: 3, nameBasic: 'Golems de Acero', tier: 'bronce' },
-    { level: 3, nameBasic: 'Jabalíes', tier: 'bronce' },
     { level: 3, nameBasic: 'Grifos (Neutral)', tier: 'bronce' },
     { level: 3, nameBasic: 'Espectros (Neutral)', tier: 'bronce' },
     { level: 3, nameBasic: 'Ojos Maléficos (Neutral)', tier: 'bronce' },
@@ -415,32 +415,32 @@ const UNIT_DETAILS: {
 
   // Bastión
   "Goblins": {
-    basic: { atk: 1, def: 0, hp: 1, ini: 3, type: 'Melee', abilities: ["Frágil."] },
-    elite: { atk: 1, def: 0, hp: 1, ini: 4, type: 'Melee', abilities: ["Frágil.", "Frenesí: +1 Ataque si corre en línea recta."] }
+    basic: { atk: 1, def: 0, hp: 4, ini: 6, type: 'Melee', abilities: [], customCost: { gold: 1, materials: 0, valuable: 0 } },
+    elite: { atk: 2, def: 0, hp: 4, ini: 7, type: 'Melee', abilities: [], customCost: { gold: 2, materials: 0, valuable: 0 } }
   },
   "Incursores lupinos": {
-    basic: { atk: 1, def: 1, hp: 1, ini: 4, type: 'Melee', abilities: ["Doble Asalto: Ataca dos veces por activación."] },
-    elite: { atk: 2, def: 1, hp: 1, ini: 5, type: 'Melee', abilities: ["Doble Asalto."] }
+    basic: { atk: 2, def: 0, hp: 3, ini: 7, type: 'Melee', abilities: [], customCost: { gold: 3, materials: 0, valuable: 0 } },
+    elite: { atk: 2, def: 0, hp: 4, ini: 8, type: 'Melee', abilities: ["Al Atacar: Ataca este objetivo otra vez. El segundo ataque se produce después de que el objetivo contraataque (si es posible)."], customCost: { gold: 5, materials: 0, valuable: 0 } }
   },
   "Orcos": {
-    basic: { atk: 1, def: 1, hp: 1, ini: 3, type: 'A distancia', abilities: ["A distancia."] },
-    elite: { atk: 2, def: 1, hp: 1, ini: 4, type: 'A distancia', abilities: ["A distancia.", "Furia Orco: Ataca de nuevo si tiene moral positiva."] }
+    basic: { atk: 2, def: 1, hp: 4, ini: 4, type: 'A distancia', abilities: [], customCost: { gold: 4, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 1, hp: 5, ini: 5, type: 'A distancia', abilities: [], customCost: { gold: 7, materials: 0, valuable: 0 } }
   },
   "Ogros": {
-    basic: { atk: 2, def: 2, hp: 2, ini: 3, type: 'Melee', abilities: ["Piel Gruesa: HP máxima aumentada en 1."] },
-    elite: { atk: 3, def: 2, hp: 3, ini: 4, type: 'Melee', abilities: ["Piel Gruesa.", "Ogro Mago: Lanza hechizo de Sed de Sangre a un aliado una vez por combate."] }
+    basic: { atk: 3, def: 2, hp: 4, ini: 4, type: 'Melee', abilities: ["Alternativo: Coloca una ficha +1 Ataque en la unidad Melé o Voladora que elijas durante 2 rondas de combate."], customCost: { gold: 6, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 2, hp: 6, ini: 5, type: 'Melee', abilities: ["Alternativo: Coloca una ficha +2 Ataque en la unidad Melé o Voladora que elijas durante 2 rondas de combate."], customCost: { gold: 8, materials: 0, valuable: 0 } }
   },
   "Aves de trueno": {
-    basic: { atk: 2, def: 1, hp: 2, ini: 5, type: 'Volador', abilities: ["Volador."] },
-    elite: { atk: 3, def: 2, hp: 2, ini: 6, type: 'Volador', abilities: ["Volador.", "Golpe de Trueno: En un resultado de +1 en el dado de ataque, paraliza al enemigo con un rayo."] }
+    basic: { atk: 4, def: 1, hp: 5, ini: 9, type: 'Volador', abilities: [], customCost: { gold: 8, materials: 0, valuable: 0 } },
+    elite: { atk: 4, def: 1, hp: 6, ini: 11, type: 'Volador', abilities: ["Pasivo: Justo después del ataque de esta unidad y antes de un contraataque, tira 1 dado de ataque; con un <<0> o <<+1>>, inflige 1 Herida al objetivo."], customCost: { gold: 14, materials: 0, valuable: 0 } }
   },
   "Cíclopes": {
-    basic: { atk: 3, def: 2, hp: 3, ini: 4, type: 'A distancia', abilities: ["A distancia.", "Lanzar Rocas: Destruye un muro o puerta de asedio enemiga una vez por combate."] },
-    elite: { atk: 4, def: 2, hp: 3, ini: 5, type: 'A distancia', abilities: ["A distancia.", "Lanzar Rocas.", "Doble Daño contra estructuras de asedio."] }
+    basic: { atk: 5, def: 0, hp: 6, ini: 6, type: 'A distancia', abilities: ["Alternativo: Esta unidad puede destruir un muro o la puerta."], customCost: { gold: 13, materials: 0, valuable: 0 } },
+    elite: { atk: 5, def: 1, hp: 7, ini: 8, type: 'A distancia', abilities: ["Alternativo: Esta unidad puede destruir un muro, puerta o torre de arqueros."], customCost: { gold: 17, materials: 0, valuable: 1 } },
   },
   "Behemoths": {
-    basic: { atk: 4, def: 2, hp: 4, ini: 5, type: 'Melee', abilities: ["Desgarrar: Al atacar, reduce la defensa del enemigo en 1 (mínimo 0)."] },
-    elite: { atk: 5, def: 2, hp: 4, ini: 6, type: 'Melee', abilities: ["Desgarrar Ancestral: Ignora por completo la defensa del enemigo."] }
+    basic: { atk: 6, def: 2, hp: 9, ini: 6, type: 'Melee', abilities: ["Al Atacar: Disminuye la Defensa del objetivo en 1 (hasta un mínimo de 0)."], customCost: { gold: 19, materials: 0, valuable: 1 } },
+    elite: { atk: 7, def: 2, hp: 10, ini: 9, type: 'Melee', abilities: ["Al Atacar: Disminuye la Defensa del objetivo en 2 (hasta un mínimo de 0). Después del ataque, pon 1 ficha de corrosión en el objetivo."], customCost: { gold: 29, materials: 0, valuable: 2 } },
   },
 
   // Fortaleza
@@ -505,32 +505,32 @@ const UNIT_DETAILS: {
 
   // Bahía
   "Oceánidos": {
-    basic: { atk: 1, def: 0, hp: 1, ini: 4, type: 'Volador', abilities: ["Inmune a magia de agua."] },
-    elite: { atk: 1, def: 1, hp: 1, ini: 5, type: 'Volador', abilities: ["Inmune a magia de agua.", "Escudo de Náyade: Lanza escudo de agua para absorber 1 de daño."] }
+    basic: { atk: 2, def: 0, hp: 3, ini: 6, type: 'Volador', abilities: [], customCost: { gold: 2, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 0, hp: 3, ini: 8, type: 'Volador', abilities: ["Pasivo: Ignora todos los efectos y Daño de un Hechizo de magia de agua."], customCost: { gold: 3, materials: 0, valuable: 0 } }
   },
   "Marineros": {
-    basic: { atk: 1, def: 1, hp: 1, ini: 3, type: 'Melee', abilities: ["Bonificación Costera: +1 de ataque en losetas de agua."] },
-    elite: { atk: 2, def: 1, hp: 1, ini: 4, type: 'Melee', abilities: ["Bonificación Costera.", "Saqueador: Otorga +1 de Oro tras derrotar a una unidad enemiga."] }
+    basic: { atk: 2, def: 1, hp: 3, ini: 5, type: 'Melee', abilities: [], customCost: { gold: 3, materials: 0, valuable: 0 } },
+    elite: { atk: 2, def: 1, hp: 5, ini: 6, type: 'Melee', abilities: ["Pasivo: Una vez por combate, cuando esta unidad retira una unidad del combate, gana 2 Oros."], customCost: { gold: 5, materials: 0, valuable: 0 } }
   },
   "Lobos de mar": {
-    basic: { atk: 1, def: 0, hp: 1, ini: 4, type: 'A distancia', abilities: ["A distancia."] },
-    elite: { atk: 2, def: 0, hp: 1, ini: 5, type: 'A distancia', abilities: ["A distancia.", "Disparo Preciso: Ignora cobertura de muros o estructuras."] }
+    basic: { atk: 2, def: 0, hp: 4, ini: 6, type: 'A distancia', abilities: ["Pasivo: Ignora la penalización de combate contra unidades adyacentes."], customCost: { gold: 4, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 0, hp: 5, ini: 8, type: 'A distancia', abilities: ["Al Atacar: Ignora los contraataques.\nPasivo: Ignora la penalización de combate contra unidades adyanteces."], customCost: { gold: 6, materials: 0, valuable: 0 } }
   },
   "Ayssids": {
-    basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'Volador', abilities: ["Hechicería: Lanza hechizo de Debilidad una vez por combate."] },
-    elite: { atk: 3, def: 1, hp: 2, ini: 5, type: 'Volador', abilities: ["Hechicería.", "Invocador Marino: Invoca un elemental de agua aliado al morir."] }
+    basic: { atk: 3, def: 1, hp: 5, ini: 9, type: 'Volador', abilities: [], customCost: { gold: 6, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 1, hp: 6, ini: 11, type: 'Volador', abilities: ["Al Atacar: Si los Puntos de salud del objetivo se reducen a 0, después de resolver el Contraataque (si corresponde), los Ayssids pueden atacar a otra unidad adyacente."], customCost: { gold: 10, materials: 0, valuable: 0 } }
   },
   "Hechiceras": {
-    basic: { atk: 2, def: 1, hp: 2, ini: 5, type: 'A distancia', abilities: ["Volador."] },
-    elite: { atk: 3, def: 2, hp: 2, ini: 6, type: 'A distancia', abilities: ["Volador.", "Tormenta de Viento: Ataca e inflige daño a unidades adyacentes de forma colateral."] }
+    basic: { atk: 3, def: 1, hp: 5, ini: 6, type: 'A distancia', abilities: ["Alternativo: Coloca una ficha de debilidad <<-2>> sobre cualquier unidad durante 2 rondas de combate."], customCost: { gold: 8, materials: 0, valuable: 0 } },
+    elite: { atk: 4, def: 1, hp: 6, ini: 7, type: 'A distancia', abilities: ["Al Atacar: Después del ataque, coloca una ficha de Debilidad <<-1>> sobre el objetivo durante 2 rondas de combate."], customCost: { gold: 13, materials: 0, valuable: 0 } }
   },
   "Nix": {
-    basic: { atk: 3, def: 2, hp: 3, ini: 4, type: 'Melee', abilities: ["Devorar: Gana +1 de Ataque tras derrotar a una unidad enemiga."] },
-    elite: { atk: 4, def: 2, hp: 3, ini: 5, type: 'Melee', abilities: ["Devorar.", "Frenesí Sangriento: +2 de Ataque si está dañada."] }
+    basic: { atk: 5, def: 2, hp: 7, ini: 6, type: 'Melee', abilities: [], customCost: { gold: 12, materials: 0, valuable: 0 } },
+    elite: { atk: 6, def: 2, hp: 8, ini: 7, type: 'Melee', abilities: ["Pasivo: Esta unidad no puede recibir más de 4 Heridas de un solo ataque."], customCost: { gold: 20, materials: 0, valuable: 1 } }
   },
   "Háspidos": {
-    basic: { atk: 4, def: 3, hp: 4, ini: 5, type: 'Melee', abilities: ["Inmune a control mental.", "Embestida Abisal: Ataca empujando al enemigo 1 hexágono."] },
-    elite: { atk: 5, def: 3, hp: 4, ini: 6, type: 'Melee', abilities: ["Inmune a control mental.", "Embestida Abisal.", "Regeneración: Se cura de forma pasiva 2 heridas al activarse."] }
+    basic: { atk: 5, def: 3, hp: 8, ini: 9, type: 'Melee', abilities: ["Al Atacar: +2 Ataque si, durante este combate, esta unidad se giró del lado de manada al lado de unos pocos."], customCost: { gold: 18, materials: 0, valuable: 1 } },
+    elite: { atk: 7, def: 3, hp: 8, ini: 12, type: 'Melee', abilities: ["Al Atacar: Coloca 2 cubos de facción sobre el objetivo. Al comienzo de cada una de sus activaciones, retira 1 de ellos para inflgir 1 Herida."], customCost: { gold: 30, materials: 0, valuable: 2 } }
   },
 
   // Neutrales
@@ -795,100 +795,222 @@ const FACTION_THEMES: {
   };
 } = {
   castillo: {
-    primary: 'from-blue-900 to-indigo-950',
-    border: 'border-blue-700/80',
-    text: 'text-blue-300',
-    glow: 'shadow-blue-500/20',
-    bgGradient: 'radial-gradient(circle at top, #1e3a8a 0%, #0f172a 100%)',
-    badge: 'bg-blue-950/80 border-blue-800 text-blue-300'
+    primary: 'from-sky-950 to-slate-950',
+    border: 'border-sky-500/40',
+    text: 'text-sky-400',
+    glow: 'shadow-sky-500/15',
+    bgGradient: 'radial-gradient(circle at top, #0c4a6e 0%, #030712 100%)',
+    badge: 'bg-sky-950/80 border-sky-900 text-sky-400'
   },
   necropolis: {
-    primary: 'from-zinc-900 to-slate-950',
-    border: 'border-emerald-900/60',
-    text: 'text-emerald-400',
-    glow: 'shadow-emerald-500/10',
-    bgGradient: 'radial-gradient(circle at top, #022c22 0%, #090d16 100%)',
-    badge: 'bg-emerald-950/80 border-emerald-900 text-emerald-400'
+    primary: 'from-zinc-950 to-stone-950',
+    border: 'border-zinc-700/50',
+    text: 'text-zinc-400',
+    glow: 'shadow-zinc-500/10',
+    bgGradient: 'radial-gradient(circle at top, #1e1e24 0%, #07070a 100%)',
+    badge: 'bg-zinc-900/80 border-zinc-800 text-zinc-400'
   },
   mazmorra: {
-    primary: 'from-purple-950 to-fuchsia-950',
-    border: 'border-purple-800/70',
-    text: 'text-purple-300',
-    glow: 'shadow-purple-500/20',
-    bgGradient: 'radial-gradient(circle at top, #3b0764 0%, #0f172a 100%)',
-    badge: 'bg-purple-950/80 border-purple-800 text-purple-300'
+    primary: 'from-purple-950 to-stone-950',
+    border: 'border-purple-500/40',
+    text: 'text-purple-400',
+    glow: 'shadow-purple-500/15',
+    bgGradient: 'radial-gradient(circle at top, #581c87 0%, #030712 100%)',
+    badge: 'bg-purple-950/80 border-purple-900 text-purple-400'
   },
   rampart: {
-    primary: 'from-emerald-900 to-teal-950',
-    border: 'border-emerald-800/75',
-    text: 'text-emerald-300',
-    glow: 'shadow-emerald-500/20',
-    bgGradient: 'radial-gradient(circle at top, #064e3b 0%, #022c22 100%)',
-    badge: 'bg-emerald-950/80 border-emerald-900 text-emerald-300'
+    primary: 'from-green-950 to-stone-950',
+    border: 'border-lime-500/30',
+    text: 'text-lime-400',
+    glow: 'shadow-lime-500/15',
+    bgGradient: 'radial-gradient(circle at top, #22c55e 0%, #15803d 40%, #0c0a09 100%)',
+    badge: 'bg-lime-950/80 border-lime-900 text-lime-400'
   },
   torre: {
-    primary: 'from-cyan-900 to-sky-950',
-    border: 'border-cyan-700/80',
-    text: 'text-cyan-300',
-    glow: 'shadow-cyan-500/20',
-    bgGradient: 'radial-gradient(circle at top, #164e63 0%, #083344 100%)',
-    badge: 'bg-cyan-950/80 border-cyan-850 text-cyan-300'
+    primary: 'from-slate-900 to-slate-950',
+    border: 'border-cyan-100/35',
+    text: 'text-cyan-50',
+    glow: 'shadow-cyan-200/20',
+    bgGradient: 'radial-gradient(circle at top, #93c5fd 0%, #1e293b 45%, #020617 100%)',
+    badge: 'bg-slate-900/80 border-slate-700 text-cyan-50'
   },
   infierno: {
-    primary: 'from-red-950 to-amber-950',
-    border: 'border-red-800/80',
-    text: 'text-red-400',
+    primary: 'from-red-950 to-stone-950',
+    border: 'border-red-500/40',
+    text: 'text-red-500',
     glow: 'shadow-red-500/20',
-    bgGradient: 'radial-gradient(circle at top, #7f1d1d 0%, #1c1917 100%)',
+    bgGradient: 'radial-gradient(circle at top, #991b1b 0%, #1c1917 100%)',
     badge: 'bg-red-950/80 border-red-900 text-red-400'
   },
   stronghold: {
-    primary: 'from-amber-900 to-orange-950',
-    border: 'border-amber-800/70',
-    text: 'text-amber-400',
-    glow: 'shadow-amber-500/20',
-    bgGradient: 'radial-gradient(circle at top, #78350f 0%, #1c1917 100%)',
-    badge: 'bg-amber-950/80 border-amber-900 text-amber-400'
+    primary: 'from-amber-950 to-stone-950',
+    border: 'border-amber-600/40',
+    text: 'text-amber-500',
+    glow: 'shadow-amber-500/15',
+    bgGradient: 'radial-gradient(circle at top, #7c2d12 0%, #1c1917 100%)',
+    badge: 'bg-amber-950/80 border-amber-900 text-amber-500'
   },
   fortaleza: {
-    primary: 'from-teal-900 to-emerald-950',
-    border: 'border-teal-800/80',
-    text: 'text-teal-350',
-    glow: 'shadow-teal-500/20',
-    bgGradient: 'radial-gradient(circle at top, #115e59 0%, #042f2e 100%)',
-    badge: 'bg-teal-950/80 border-teal-900 text-teal-350'
+    primary: 'from-[#151c12] to-neutral-950',
+    border: 'border-[#415436]/40',
+    text: 'text-[#94ad82]',
+    glow: 'shadow-[#415436]/15',
+    bgGradient: 'radial-gradient(circle at top, #25331e 0%, #070a05 100%)',
+    badge: 'bg-[#11160e]/80 border-[#25331e] text-[#94ad82]'
   },
   confluencia: {
-    primary: 'from-indigo-900 to-violet-950',
-    border: 'border-indigo-800/80',
-    text: 'text-indigo-300',
-    glow: 'shadow-indigo-500/25',
-    bgGradient: 'radial-gradient(circle at top, #312e81 0%, #0f172a 100%)',
-    badge: 'bg-indigo-950/80 border-indigo-900 text-indigo-300'
+    primary: 'from-pink-950 to-slate-950',
+    border: 'border-pink-500/40',
+    text: 'text-pink-400',
+    glow: 'shadow-pink-500/15',
+    bgGradient: 'radial-gradient(circle at top, #9d174d 0%, #090d16 100%)',
+    badge: 'bg-pink-950/80 border-pink-900 text-pink-400'
   },
   cove: {
-    primary: 'from-sky-900 to-slate-950',
-    border: 'border-sky-800/85',
-    text: 'text-sky-300',
-    glow: 'shadow-sky-500/20',
-    bgGradient: 'radial-gradient(circle at top, #0c4a6e 0%, #082f49 100%)',
-    badge: 'bg-sky-950/80 border-sky-900 text-sky-300'
+    primary: 'from-teal-950 to-slate-950',
+    border: 'border-teal-500/40',
+    text: 'text-teal-400',
+    glow: 'shadow-teal-500/15',
+    bgGradient: 'radial-gradient(circle at top, #115e59 0%, #030712 100%)',
+    badge: 'bg-teal-950/80 border-teal-900 text-teal-400'
   },
   neutrales: {
-    primary: 'from-yellow-950 to-stone-900',
-    border: 'border-yellow-800/80',
-    text: 'text-amber-200',
-    glow: 'shadow-amber-500/15',
-    bgGradient: 'radial-gradient(circle at top, #451a03 0%, #1c1917 100%)',
-    badge: 'bg-stone-950/85 border-amber-900/60 text-amber-200'
+    primary: 'from-yellow-950 to-stone-950',
+    border: 'border-yellow-600/40',
+    text: 'text-yellow-400',
+    glow: 'shadow-yellow-500/15',
+    bgGradient: 'radial-gradient(circle at top, #854d0e 0%, #1c1917 100%)',
+    badge: 'bg-stone-950/85 border-yellow-900/60 text-yellow-400'
   },
   bancos: {
-    primary: 'from-amber-950 to-stone-950',
-    border: 'border-yellow-700/60',
-    text: 'text-yellow-400',
-    glow: 'shadow-yellow-500/10',
-    bgGradient: 'radial-gradient(circle at top, #3b2314 0%, #0d0d0e 100%)',
-    badge: 'bg-stone-900/80 border-yellow-850 text-yellow-400'
+    primary: 'from-emerald-950 to-stone-950',
+    border: 'border-emerald-500/40',
+    text: 'text-emerald-400',
+    glow: 'shadow-emerald-500/15',
+    bgGradient: 'radial-gradient(circle at top, #065f46 0%, #0c0a09 100%)',
+    badge: 'bg-stone-900/80 border-emerald-900 text-emerald-400'
+  }
+};;
+
+const renderFactionWatermark = (factionId: string, className: string = "w-28 h-28"): React.JSX.Element => {
+  switch (factionId) {
+    case 'castillo':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          {/* Majestic castle crest/shield */}
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <path d="M8 11h8M12 7v8M9 15v2h6v-2" />
+          <path d="M7 8V5l5-2 5 2v3" />
+        </svg>
+      );
+    case 'necropolis':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          {/* Gothic Skull / Reaper motif */}
+          <path d="M12 2a6 6 0 0 0-6 6v4a5 5 0 0 0 3 4.5V19a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2.5A5 5 0 0 0 18 12V8a6 6 0 0 0-6-6z" />
+          <circle cx="10" cy="10" r="1" fill="currentColor" />
+          <circle cx="14" cy="10" r="1" fill="currentColor" />
+          <path d="M12 12.5l-0.5 1.5h1z" fill="currentColor" />
+          <path d="M11 18v2M13 18v2" />
+        </svg>
+      );
+    case 'mazmorra':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          {/* Dragon Eye / Wing */}
+          <path d="M2 12s4-8 10-8 10 8 10 8-4 8-10 8-10-8-10-8z" />
+          <circle cx="12" cy="12" r="4.5" />
+          <path d="M12 9.5l-1 2.5 1 2.5 1-2.5z" fill="currentColor" />
+          <path d="M3 12c2-2 4-2 6 0M15 12c2 2 4 2 6 0" />
+        </svg>
+      );
+    case 'rampart':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          {/* Tree of Life / Forest leaf */}
+          <path d="M12 22V12M12 12l4-4M12 14l-4-4" />
+          <path d="M12 2C7 2 5 6 5 10c0 4 3 6 7 7 4-1 7-3 7-7 0-4-2-8-7-8z" />
+          <path d="M12 5a3 3 0 0 0-3 3c0 2 3 4 3 4s3-2 3-4a3 3 0 0 0-3-3z" />
+        </svg>
+      );
+    case 'torre':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          {/* Alchemical magic star / wizard tower */}
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 3l3 6 6 1-4.5 4.5 1 6.5-5.5-3-5.5 3 1-6.5L3 10l6-1z" />
+          <circle cx="12" cy="12" r="2.5" />
+        </svg>
+      );
+    case 'infierno':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          {/* Demonic Flame / Horns */}
+          <path d="M12 2C8.5 2 6 5 6 9c0 4 3.5 7 6 13 2.5-6 6-9 6-13 0-4-2.5-7-6-7z" />
+          <path d="M12 7c-2 0-3 1.5-3 3.5 0 2 1.5 3 3 6.5 1.5-3.5 3-4.5 3-6.5 0-2-1-3.5-3-3.5z" />
+          <path d="M4 10c0-4 3-6 3-6M20 10c0-4-3-6-3-6" />
+        </svg>
+      );
+    case 'stronghold':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          {/* Brute crossed axes / savage emblem */}
+          <path d="M5 19L19 5M19 19L5 5" />
+          <path d="M15 5h4v4l-3-1-1-3zM5 15v4h4l-1-3-3-1z" />
+          <path d="M19 15v4h-4l1-3 3-1zM5 5h4v4l-3-1-1-3z" />
+          <circle cx="12" cy="12" r="2" />
+        </svg>
+      );
+    case 'fortaleza':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          {/* Swamp serpent shield / scales */}
+          <path d="M12 2s7 3 7 9c0 5-4.5 8.5-7 10-2.5-1.5-7-5-7-10 0-6 7-9 7-9z" />
+          <path d="M12 6c-1.5 0-2.5 1-2.5 2s1 1.5 2.5 2.5c1.5 1 2.5 1.5 2.5 3s-1 2.5-2.5 2.5" />
+          <path d="M8 10h8" />
+        </svg>
+      );
+    case 'confluencia':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          {/* Phoenix Rising */}
+          <path d="M12 4a2 2 0 0 1 2 2M12 4a2 2 0 0 0-2 2" />
+          <path d="M12 10C8 8 4 10 3 14c2-1 5-1 7-2M12 10c4-2 8 0 9 4-2-1-5-1-7-2" />
+          <path d="M12 10v9M10 12l2 6 2-6" />
+          <path d="M9 19c3 3 3 3 6 0" />
+        </svg>
+      );
+    case 'cove':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          {/* Pirate Anchor & Sea waves */}
+          <path d="M12 3v14M8 12H6a6 6 0 0 0 12 0h-2" />
+          <circle cx="12" cy="3" r="1.5" />
+          <path d="M6 12l-2 2M18 12l2 2M12 19.5v-2" />
+          <path d="M3 21c3-1.5 3 1.5 6 0s3-1.5 6 0 3-1.5 6 0" />
+        </svg>
+      );
+    case 'bancos':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          {/* Treasure Vault chest / bag of gold */}
+          <rect x="3" y="11" width="18" height="9" rx="2" />
+          <path d="M3 11a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4" />
+          <path d="M12 11v3" />
+          <circle cx="7" cy="15" r="1" />
+          <circle cx="17" cy="15" r="1" />
+        </svg>
+      );
+    case 'neutrales':
+    default:
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          {/* Crossed swords for neutrals */}
+          <path d="M14.5 17.5L3 6M10 17.5L19.5 8" />
+          <path d="M18 6l2 2-2 2-2-2zM6 18l-2 2h2z" />
+          <circle cx="12" cy="12" r="2.5" />
+        </svg>
+      );
   }
 };
 
@@ -990,25 +1112,33 @@ export default function RecruitmentCalculator() {
 
     // Handle pure neutral units
     const pureNeutralsMap: { [key: string]: string } = {
-      'Golems de Oro': 'neutral_1.gif',
-      'Golems de Diamante': 'neutral_2.gif',
-      'Paisanos': 'neutral_3.gif',
-      'Hobbits': 'neutral_4.gif',
-      'Pícaros': 'neutral_5.gif',
-      'Jabalíes': 'neutral_6.gif',
-      'Momias': 'neutral_7.gif',
-      'Nómadas': 'neutral_8.gif',
-      'Trolls': 'neutral_9.gif',
-      'Encantadores': 'neutral_10.gif',
-      'Tiradores': 'neutral_11.gif',
-      'Dragón de Hada': 'neutral_12.gif',
-      'Dragón de Óxido': 'neutral_13.gif',
-      'Dragón de Cristal': 'neutral_14.gif',
-      'Dragón Azul': 'neutral_15.gif',
-      'Fangarms': 'neutral_16.gif',
-      'Duende': 'neutral_17.gif',
-      'Sátiros': 'neutral_18.gif',
-      'Golems de Acero': 'neutral_19.gif'
+      'Golems de Oro': 'Creature_Gold_Golem_5.png',
+      'Golems de Diamante': 'Creature_Diamond_Golem_6.png',
+      'Paisanos': 'Creature_Peasant_1.png',
+      'Hobbits': 'Creature_Halfling_(Factory).png',
+      'Pícaros': 'Creature_Rogue_2.png',
+      'Jabalíes': 'Creature_Boar_2.png',
+      'Momias': 'Creature_Mummy_3.png',
+      'Nómadas': 'Creature_Nomad_3.png',
+      'Trolls': 'Creature_Troll_5.png',
+      'Encantadores': 'Creature_Enchanter_6.png',
+      'Tiradores': 'Creature_Sharpshooter_4.png',
+      'Tiradores certeros': 'Creature_Sharpshooter_4.png',
+      'Dragón de Hada': 'Creature_Faerie_Dragon_7.png',
+      'Dragón de Óxido': 'Creature_Rust_Dragon_8.png',
+      'Dragón de Cristal': 'Creature_Crystal_Dragon_8.png',
+      'Dragón Azul': 'Creature_Azure_Dragon_8.png',
+      'Fangarms': 'Creature_Fangarm_5.png',
+      'Fangarm': 'Creature_Fangarm_5.png',
+      'Duende': 'Creature_Leprechaun_2.png',
+      'Sátiros': 'Creature_Satyr_4.png',
+      'Golems de Acero': 'Creature_Steel_Golem_4.png',
+      'Gólems de acero': 'Creature_Steel_Golem_4.png',
+      'Elemental de aire': 'Creature_Air_Elemental_2.png',
+      'Elemental de agua': 'Creature_Water_Elemental.png',
+      'Elemental de fuego': 'Creature_Fire_Elemental_(HotA).png',
+      'Elemental de tierra': 'Creature_Earth_Elemental.png',
+      'Aves de trueno (Neutral)': 'Creature_Roc.png'
     };
 
     if (pureNeutralsMap[unitName]) {
@@ -1016,8 +1146,7 @@ export default function RecruitmentCalculator() {
     }
 
     if (factionId === 'neutrales') {
-      const idx = (level % 15) + 1;
-      return `neutral_${idx}.gif`;
+      return 'Creature_Peasant_1.png';
     }
 
     return getFactionImageFilename(factionId, level);
@@ -1041,7 +1170,7 @@ export default function RecruitmentCalculator() {
     if (!prefix) return null;
     
     const lvl = Math.min(Math.max(level, 1), 7);
-    const ext = factionId === 'cove' ? 'png' : 'gif';
+    const ext = 'png';
     return `${prefix}_${lvl}.${ext}`;
   };
 
@@ -1091,13 +1220,19 @@ export default function RecruitmentCalculator() {
                       setSelectedFaction(fac.id);
                       setIsUpgraded(false); // reset upgraded face on faction change
                     }}
-                    className={`px-1.5 py-2 text-[10px] rounded-lg border text-center transition cursor-pointer font-medium font-mono truncate ${
+                    className={`px-2 py-2 text-[10px] rounded-lg border flex items-center justify-start gap-1.5 transition cursor-pointer font-medium font-mono truncate ${
                       isSelected
-                        ? 'border-amber-500 bg-amber-500/15 text-amber-300 font-bold shadow-md shadow-amber-950/40'
+                        ? `${FACTION_THEMES[fac.id]?.border || 'border-amber-500'} bg-slate-900/60 ${FACTION_THEMES[fac.id]?.text || 'text-amber-300'} font-bold shadow-lg shadow-black/80`
                         : 'bg-slate-950 border-slate-900 text-slate-400 hover:text-slate-200 hover:border-slate-800'
                     }`}
                   >
-                    {fac.name.split(' (')[0]}
+                    <span 
+                      className={isSelected ? (FACTION_THEMES[fac.id]?.text || 'text-amber-400') : 'text-slate-500'}
+                      style={{ filter: isSelected ? 'drop-shadow(0px 0px 4px currentColor)' : 'none' }}
+                    >
+                      {renderFactionWatermark(fac.id, "w-3.5 h-3.5 shrink-0")}
+                    </span>
+                    <span className="truncate">{fac.name.split(' (')[0]}</span>
                   </button>
                 );
               })}
@@ -1110,11 +1245,12 @@ export default function RecruitmentCalculator() {
             <div className="flex gap-1.5">
               {(['bronce', 'plata', 'oro'] as const).map(t => {
                 const isSelected = selectedTier === t;
+                const starColor = t === 'bronce' ? 'text-[#a0522d] fill-[#a0522d]' : t === 'plata' ? 'text-slate-400 fill-slate-400' : 'text-yellow-500 fill-yellow-500';
                 return (
                   <button
                     key={t}
                     onClick={() => setSelectedTier(t)}
-                    className={`flex-1 py-1.5 text-[10px] uppercase font-bold tracking-wider rounded-lg border text-center cursor-pointer transition ${
+                    className={`flex-1 py-1.5 text-[10px] uppercase font-bold tracking-wider rounded-lg border flex items-center justify-center gap-1 cursor-pointer transition ${
                       isSelected
                         ? t === 'bronce' ? 'border-amber-700 bg-amber-900/10 text-amber-500'
                         : t === 'plata' ? 'border-slate-400 bg-slate-400/10 text-slate-300'
@@ -1122,20 +1258,22 @@ export default function RecruitmentCalculator() {
                         : 'bg-slate-950 border-slate-900 text-slate-500 hover:text-slate-300'
                     }`}
                   >
-                    {t}
+                    <Star className={`w-3 h-3 ${isSelected ? starColor : 'text-slate-600 fill-slate-700/20'}`} />
+                    <span>{t}</span>
                   </button>
                 );
               })}
               {selectedFaction === 'neutrales' && (
                 <button
                   onClick={() => setSelectedTier('azul')}
-                  className={`flex-1 py-1.5 text-[10px] uppercase font-bold tracking-wider rounded-lg border text-center cursor-pointer transition ${
+                  className={`flex-1 py-1.5 text-[10px] uppercase font-bold tracking-wider rounded-lg border flex items-center justify-center gap-1 cursor-pointer transition ${
                     selectedTier === 'azul'
                       ? 'border-cyan-500 bg-cyan-500/15 text-cyan-300 font-bold shadow-md'
                       : 'bg-slate-950 border-slate-900 text-slate-500 hover:text-slate-300'
                   }`}
                 >
-                  azul
+                  <Star className={`w-3 h-3 ${selectedTier === 'azul' ? 'text-cyan-400 fill-cyan-400' : 'text-slate-600 fill-slate-700/20'}`} />
+                  <span>azul</span>
                 </button>
               )}
             </div>
@@ -1223,7 +1361,7 @@ export default function RecruitmentCalculator() {
               >
                 {/* Visual Faction Emblem Background watermark */}
                 <div className="absolute right-0 bottom-0 text-[180px] opacity-5 pointer-events-none font-bold select-none leading-none">
-                  🛡️
+                  {effectiveUpgraded ? '⚡' : '🛡️'}
                 </div>
 
                 {/* Top Card Bar */}
@@ -1233,13 +1371,18 @@ export default function RecruitmentCalculator() {
                       <span className={`text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md border ${theme.badge}`}>
                         {selectedFaction === 'bancos' ? 'Banco de Criaturas' : selectedFaction}
                       </span>
-                      <span className={`text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md border ${
-                        selectedTier === 'bronce' ? 'bg-amber-950/40 text-amber-500 border-amber-900/30'
-                        : selectedTier === 'plata' ? 'bg-slate-800 text-slate-300 border-slate-700'
-                        : selectedTier === 'oro' ? 'bg-yellow-950/40 text-yellow-500 border-yellow-900/30'
-                        : 'bg-cyan-950/40 text-cyan-400 border-cyan-900/30'
+                      <span className={`text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md border flex items-center gap-1 ${
+                        effectiveUpgraded 
+                          ? 'bg-amber-950/40 text-amber-300 border-amber-500/50' 
+                          : 'bg-slate-950/40 text-slate-300 border-slate-700/60'
                       }`}>
-                        Tier {selectedTier} • Nivel {selectedUnit.level}
+                        <Star className={`w-3 h-3 shrink-0 ${
+                          selectedTier === 'bronce' ? 'text-[#a0522d] fill-[#a0522d]'
+                          : selectedTier === 'plata' ? 'text-slate-400 fill-slate-400'
+                          : selectedTier === 'oro' ? 'text-yellow-500 fill-yellow-500'
+                          : 'text-cyan-400 fill-cyan-400'
+                        }`} />
+                        <span>Nivel {selectedUnit.level}</span>
                       </span>
                     </div>
                     <h3 className="text-2xl font-serif font-extrabold text-white mt-1 tracking-wide uppercase drop-shadow-md">
@@ -1271,17 +1414,26 @@ export default function RecruitmentCalculator() {
                   ) : (
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(30,41,59,0.3)_0%,transparent_70%)]" />
                   )}
+
+                  {/* Faction Emblem in Top-Left Corner */}
+                  <div 
+                    className={`absolute top-2 left-2 pointer-events-none z-20 select-none ${theme.text} opacity-60 transition-opacity duration-300 group-hover/img:opacity-85`}
+                    style={{ filter: 'drop-shadow(0px 1px 3px rgba(0,0,0,0.85)) drop-shadow(0px 0px 4px currentColor)' }}
+                  >
+                    {renderFactionWatermark(selectedFaction, "w-24 h-24")}
+                  </div>
+
                   {imageUrl ? (
                     <img 
                       src={imageUrl} 
                       alt={effectiveUpgraded ? selectedUnit.nameElite : selectedUnit.nameBasic} 
-                      className={`w-auto h-[90%] object-contain select-none pointer-events-none transition-transform duration-500 group-hover/img:scale-105 filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] ${
+                      className={`w-auto h-[90%] object-contain select-none pointer-events-none transition-transform duration-500 group-hover/img:scale-105 filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] z-10 relative ${
                         effectiveUpgraded ? 'contrast-[1.05] brightness-[1.03]' : ''
                       }`}
                       referrerPolicy="no-referrer"
                     />
                   ) : (
-                    <div className="flex flex-col items-center justify-center text-slate-500 text-center p-4">
+                    <div className="flex flex-col items-center justify-center text-slate-500 text-center p-4 z-10 relative">
                       <span className="text-3xl mb-1 filter drop-shadow">⚓</span>
                       <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400">Imagen no disponible</span>
                     </div>
@@ -1292,7 +1444,7 @@ export default function RecruitmentCalculator() {
                       ? 'bg-amber-950/90 text-amber-300 border-amber-700/50' 
                       : 'bg-slate-950/85 text-slate-300 border-slate-800'
                   }`}>
-                    {effectiveUpgraded ? '✨ Cara Élite' : 'Cara Básica'}
+                    {effectiveUpgraded ? '# MANADA' : '# UNAS POCAS'}
                   </div>
                 </div>
 

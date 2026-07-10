@@ -451,7 +451,7 @@ export default function SkillsBrowser() {
               Enciclopedia de Habilidades del Juego de Mesa
             </h2>
             <p className="text-xs text-slate-400 leading-relaxed max-w-2xl">
-              Navega por la baraja de habilidades del juego de mesa oficial de <strong>Heroes of Might & Magic III</strong>. Consulta los efectos de las cartas en sus modos <strong>Básico</strong> y <strong>Experto</strong> tal y como están descritos en el reglamento de juego en español, con correcciones para evitar discrepancias con el juego de PC.
+              Navega por la baraja de habilidades del juego de mesa oficial de <strong>Heroes of Might & Magic III</strong>. Consulta los efectos de las cartas en sus modos <strong>Básico</strong> y <strong>Experto</strong> tal y como están descritos en el reglamento de juego en español.
             </p>
           </div>
           <div className="flex items-center gap-2 shrink-0 bg-slate-950/60 border border-slate-800/80 rounded-xl px-3 py-1.5 self-start md:self-auto">
