@@ -40,7 +40,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Catherine',
       type: 'Poder',
-      className: 'Caballero (Knight)',
+      className: 'Caballero',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Liderazgo',
@@ -61,7 +61,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Adelaide',
       type: 'Magia',
-      className: 'Clérigo (Cleric)',
+      className: 'Clérigo',
       stats: { atk: 1, def: 0, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Sabiduría',
@@ -82,7 +82,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Valeska',
       type: 'Poder',
-      className: 'Caballero (Knight)',
+      className: 'Caballero',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Tiro con arco',
@@ -103,7 +103,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Ingham',
       type: 'Magia',
-      className: 'Clérigo (Cleric)',
+      className: 'Clérigo',
       stats: { atk: 1, def: 0, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Misticismo',
@@ -124,7 +124,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Rion',
       type: 'Magia',
-      className: 'Clérigo (Cleric)',
+      className: 'Clérigo',
       stats: { atk: 1, def: 0, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Sabiduría',
@@ -145,7 +145,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Lord Haart',
       type: 'Poder',
-      className: 'Caballero (Knight)',
+      className: 'Caballero',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Patrimonio',
@@ -166,7 +166,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Tarnum',
       type: 'Poder',
-      className: 'Caballero (Knight)',
+      className: 'Caballero',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Artillería',
@@ -189,7 +189,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Lord Haart',
       type: 'Poder',
-      className: 'Caballero de la Muerte (Death Knight)',
+      className: 'Caballero de la Muerte',
       stats: { atk: 1, def: 2, power: 2, knowledge: 1 },
       initialSkill: {
         name: 'Nigromancia',
@@ -210,7 +210,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Moandor',
       type: 'Poder',
-      className: 'Caballero de la Muerte (Death Knight)',
+      className: 'Caballero de la Muerte',
       stats: { atk: 1, def: 2, power: 2, knowledge: 1 },
       initialSkill: {
         name: 'Nigromancia',
@@ -231,7 +231,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Sandro',
       type: 'Magia',
-      className: 'Nigromante (Necromancer)',
+      className: 'Nigromante',
       stats: { atk: 1, def: 0, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Hechicería',
@@ -252,7 +252,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Septienna',
       type: 'Magia',
-      className: 'Nigromante (Necromancer)',
+      className: 'Nigromante',
       stats: { atk: 1, def: 0, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Nigromancia',
@@ -260,11 +260,11 @@ export const FACTION_HEROES: FactionHeroesData = {
         expert: 'Mapa: Juégalo después de ganar un combate que no sea un combate rápido. Refuerza cualquiera de tus unidades por la mitad del coste en Oro (redondeado hacia abajo).'
       },
       specialty: {
-        name: 'Especialidad: Onda de Muerte',
+        name: 'Especialidad: Onda de muerte',
         cards: [
-          { level: 1, name: 'Onda de Muerte I', effect: 'Activación: Las unidades Bronce enemigas sufren 1 Herida.\n— O —\nInstantáneo: +1 Potencia' },
-          { level: 4, name: 'Onda de Muerte IV', effect: 'Activación: Las unidades Plata enemigas sufren 1 Herida.\n— O —\nInstantáneo: +1 Potencia' },
-          { level: 6, name: 'Onda de Muerte VI', effect: 'Activación: Las unidades Oro y Azul enemigas sufren 2 Heridas.\n— O —\nInstantáneo: +2 Potencia' }
+          { level: 1, name: 'Onda de muerte I', effect: 'Activación: Las unidades Bronce enemigas sufren 1 Herida.\n— O —\nInstantáneo: +1 Potencia' },
+          { level: 4, name: 'Onda de muerte IV', effect: 'Activación: Las unidades Plata enemigas sufren 1 Herida.\n— O —\nInstantáneo: +1 Potencia' },
+          { level: 6, name: 'Onda de muerte VI', effect: 'Activación: Las unidades Oro y Azul enemigas sufren 2 Heridas.\n— O —\nInstantáneo: +2 Potencia' }
         ]
       },
       lore: 'Una nigromante implacable experta en canalizar la energía de la muerte directamente desde las almas de sus oponentes, marchitando regimientos enteros con su onda espectral.',
@@ -273,7 +273,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Tamika',
       type: 'Poder',
-      className: 'Caballero de la Muerte (Death Knight)',
+      className: 'Caballero de la Muerte',
       stats: { atk: 1, def: 2, power: 2, knowledge: 1 },
       initialSkill: {
         name: 'Ofensa',
@@ -294,7 +294,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Vidomina',
       type: 'Magia',
-      className: 'Nigromante (Necromancer)',
+      className: 'Nigromante',
       stats: { atk: 1, def: 0, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Nigromancia',
@@ -317,7 +317,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Alamar',
       type: 'Magia',
-      className: 'Brujo (Warlock)',
+      className: 'Brujo',
       stats: { atk: 0, def: 0, power: 3, knowledge: 2 },
       initialSkill: {
         name: 'Sabiduría',
@@ -338,7 +338,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Deemer',
       type: 'Magia',
-      className: 'Brujo (Warlock)',
+      className: 'Brujo',
       stats: { atk: 0, def: 0, power: 3, knowledge: 2 },
       initialSkill: {
         name: 'Exploración',
@@ -359,7 +359,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Jeddite',
       type: 'Magia',
-      className: 'Brujo (Warlock)',
+      className: 'Brujo',
       stats: { atk: 0, def: 0, power: 3, knowledge: 2 },
       initialSkill: {
         name: 'Hechicería',
@@ -380,7 +380,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Lorelei',
       type: 'Poder',
-      className: 'Cacique (Overlord)',
+      className: 'Adalid',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Exploración',
@@ -401,7 +401,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Mutare',
       type: 'Poder',
-      className: 'Cacique (Overlord)',
+      className: 'Adalid',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Táctica',
@@ -422,7 +422,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Sephinroth',
       type: 'Magia',
-      className: 'Brujo (Warlock)',
+      className: 'Brujo',
       stats: { atk: 0, def: 0, power: 3, knowledge: 2 },
       initialSkill: {
         name: 'Inteligencia',
@@ -430,11 +430,11 @@ export const FACTION_HEROES: FactionHeroesData = {
         expert: 'Instantáneo: Al comienzo de la ronda de combate, juega una carta de hechizo.\nEste hechizo no cuenta para el límite de hechizos por ronda de combate.'
       },
       specialty: {
-        name: 'Especialidad: Objetos de Valor',
+        name: 'Especialidad: Objetos de valor',
         cards: [
-          { level: 1, name: 'Objetos de Valor I', effect: 'Mapa: Paga 1 Oro para ganar 1 Objeto de Valor.\n— O —\nInstantáneo: Roba 1 carta.' },
-          { level: 4, name: 'Objetos de Valor IV', effect: 'Mapa: Gana 1 Objeto de Valor.\n— O —\nInstantáneo: +2 Potencia.' },
-          { level: 6, name: 'Objetos de Valor VI', effect: 'Mapa: Gana 2 Objetos de Valor.\n— O —\nInstantáneo: Roba 2 cartas.' }
+          { level: 1, name: 'Objetos de valor I', effect: 'Mapa: Paga 1 Oro para ganar 1 Objeto de Valor.\n— O —\nInstantáneo: Roba 1 carta.' },
+          { level: 4, name: 'Objetos de valor IV', effect: 'Mapa: Gana 1 Objeto de Valor.\n— O —\nInstantáneo: +2 Potencia.' },
+          { level: 6, name: 'Objetos de valor VI', effect: 'Mapa: Gana 2 Objetos de Valor.\n— O —\nInstantáneo: Roba 2 cartas.' }
         ]
       },
       lore: 'Una enigmática bruja nacida en la realeza de Bracada que desertó a las profundidades de Nighon. Utiliza sus formidables dotes matemáticas y lógicas para transmutar rocas ordinarias en gemas preciosas y cristales raros, financiando las inmensas campañas bélicas del inframundo.',
@@ -443,7 +443,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Tarnum',
       type: 'Poder',
-      className: 'Cacique (Overlord)',
+      className: 'Adalid',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Patrimonio',
@@ -466,7 +466,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Clancy',
       type: 'Poder',
-      className: 'Explorador (Ranger)',
+      className: 'Guardabosques',
       stats: { atk: 1, def: 3, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Orientación',
@@ -487,7 +487,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Gelu',
       type: 'Poder',
-      className: 'Explorador (Ranger)',
+      className: 'Guardabosques',
       stats: { atk: 1, def: 3, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Tiro con arco',
@@ -508,7 +508,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Gem',
       type: 'Magia',
-      className: 'Druida (Druid)',
+      className: 'Druida',
       stats: { atk: 0, def: 2, power: 1, knowledge: 2 },
       initialSkill: {
         name: 'Primeros auxilios',
@@ -529,7 +529,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Ivor',
       type: 'Poder',
-      className: 'Explorador (Ranger)',
+      className: 'Guardabosques',
       stats: { atk: 1, def: 3, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Ofensa',
@@ -550,7 +550,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Melodia',
       type: 'Magia',
-      className: 'Druida (Druid)',
+      className: 'Druida',
       stats: { atk: 0, def: 2, power: 1, knowledge: 2 },
       initialSkill: {
         name: 'Suerte',
@@ -571,7 +571,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Mephala',
       type: 'Poder',
-      className: 'Explorador (Ranger)',
+      className: 'Guardabosques',
       stats: { atk: 1, def: 3, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Liderazgo',
@@ -592,7 +592,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Tarnum',
       type: 'Poder',
-      className: 'Explorador (Ranger)',
+      className: 'Guardabosques',
       stats: { atk: 1, def: 3, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Liderazgo',
@@ -615,7 +615,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Cyra',
       type: 'Magia',
-      className: 'Mago (Wizard)',
+      className: 'Hechicero',
       stats: { atk: 0, def: 0, power: 2, knowledge: 3 },
       initialSkill: {
         name: 'Diplomacia',
@@ -636,7 +636,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Dracon',
       type: 'Magia',
-      className: 'Mago (Wizard)',
+      className: 'Hechicero',
       stats: { atk: 0, def: 0, power: 2, knowledge: 3 },
       initialSkill: {
         name: 'Sabiduría',
@@ -657,7 +657,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Iona',
       type: 'Poder',
-      className: 'Alquimista (Alchemist)',
+      className: 'Alquimista',
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Inteligencia',
@@ -678,7 +678,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Josephine',
       type: 'Poder',
-      className: 'Alquimista (Alchemist)',
+      className: 'Alquimista',
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Hechicería',
@@ -699,7 +699,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Solmyr',
       type: 'Magia',
-      className: 'Mago (Wizard)',
+      className: 'Hechicero',
       stats: { atk: 0, def: 0, power: 2, knowledge: 3 },
       initialSkill: {
         name: 'Hechicería',
@@ -720,7 +720,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Torosar',
       type: 'Poder',
-      className: 'Alquimista (Alchemist)',
+      className: 'Alquimista',
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Misticismo',
@@ -743,7 +743,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Ash',
       type: 'Magia',
-      className: 'Hereje (Heretic)',
+      className: 'Hereje',
       stats: { atk: 1, def: 1, power: 2, knowledge: 1 },
       initialSkill: {
         name: 'Vista de águila',
@@ -764,7 +764,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Fiona',
       type: 'Poder',
-      className: 'Demonio (Demoniac)',
+      className: 'Demoníaco',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Orientación',
@@ -785,7 +785,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Octavia',
       type: 'Poder',
-      className: 'Demonio (Demoniac)',
+      className: 'Demoníaco',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Erudito',
@@ -806,7 +806,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Rashka',
       type: 'Poder',
-      className: 'Demonio (Demoniac)',
+      className: 'Demoníaco',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Erudito',
@@ -827,7 +827,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Xyron',
       type: 'Magia',
-      className: 'Hereje (Heretic)',
+      className: 'Hereje',
       stats: { atk: 1, def: 1, power: 2, knowledge: 1 },
       initialSkill: {
         name: 'Sabiduría',
@@ -848,7 +848,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Zydar',
       type: 'Magia',
-      className: 'Hereje (Heretic)',
+      className: 'Hereje',
       stats: { atk: 1, def: 1, power: 2, knowledge: 1 },
       initialSkill: {
         name: 'Hechicería',
@@ -871,7 +871,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Crag Hack',
       type: 'Poder',
-      className: 'Bárbaro (Barbarian)',
+      className: 'Bárbaro',
       stats: { atk: 4, def: 0, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Ofensa',
@@ -892,7 +892,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Dessa',
       type: 'Magia',
-      className: 'Mago de Batalla (Battle Mage)',
+      className: 'Taumaturgo',
       stats: { atk: 2, def: 1, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Logística',
@@ -913,7 +913,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Gundula',
       type: 'Magia',
-      className: 'Mago de Batalla (Battle Mage)',
+      className: 'Taumaturgo',
       stats: { atk: 2, def: 1, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Sabiduría',
@@ -934,7 +934,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Shiva',
       type: 'Poder',
-      className: 'Bárbaro (Barbarian)',
+      className: 'Bárbaro',
       stats: { atk: 4, def: 0, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Exploración',
@@ -955,7 +955,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Tarnum',
       type: 'Poder',
-      className: 'Bárbaro (Barbarian)',
+      className: 'Bárbaro',
       stats: { atk: 4, def: 0, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Ofensa',
@@ -976,7 +976,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Yog',
       type: 'Poder',
-      className: 'Bárbaro (Barbarian)',
+      className: 'Bárbaro',
       stats: { atk: 4, def: 0, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Ofensa',
@@ -999,7 +999,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Adrienne',
       type: 'Magia',
-      className: 'Bruja (Witch)',
+      className: 'Bruja',
       stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Sabiduría',
@@ -1020,7 +1020,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Bron',
       type: 'Poder',
-      className: 'Señor de las Bestias (Beastmaster)',
+      className: 'Amaestrador',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Resistencia',
@@ -1040,8 +1040,8 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Gerwulf',
       type: 'Poder',
-      className: 'Señor de las Bestias (Beastmaster)',
-      stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
+      className: 'Amaestrador',
+      stats: { atk: 0, def: 4, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Armero',
         normal: 'Instantáneo: +1 Defensa.\nDespués, roba 1 carta.',
@@ -1060,8 +1060,8 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Merist',
       type: 'Magia',
-      className: 'Bruja (Witch)',
-      stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
+      className: 'Bruja',
+      stats: { atk: 0, def: 1, power: 2, knowledge: 2 },
       initialSkill: {
         name: 'Primeros auxilios',
         normal: 'Instantáneo: Retira 1 Herida de una de tus unidades.',
@@ -1080,8 +1080,8 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Tarnum',
       type: 'Poder',
-      className: 'Señor de las Bestias (Beastmaster)',
-      stats: { atk: 1, def: 3, power: 1, knowledge: 1 },
+      className: 'Amaestrador',
+      stats: { atk: 0, def: 4, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Armero',
         normal: 'Instantáneo: +1 Defensa.\nDespués, roba 1 carta.',
@@ -1100,7 +1100,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Tazar',
       type: 'Poder',
-      className: 'Señor de las Bestias (Beastmaster)',
+      className: 'Amaestrador',
       stats: { atk: 1, def: 4, power: 1, knowledge: 0 },
       initialSkill: {
         name: 'Armero',
@@ -1121,7 +1121,7 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Wystan',
       type: 'Poder',
-      className: 'Señor de las Bestias (Beastmaster)',
+      className: 'Amaestrador',
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Tiro con arco',
@@ -1143,8 +1143,8 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Ciele',
       type: 'Magia',
-      className: 'Conjuradora (Elementalist)',
-      stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
+      className: 'Elementalista',
+      stats: { atk: 0, def: 0, power: 2, knowledge: 3 },
       initialSkill: {
         name: 'Magia de agua',
         normal: 'Permanente: +1 Potencia para hechizos de la escuela de magia de agua.',
@@ -1163,8 +1163,8 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Erdamon',
       type: 'Poder',
-      className: 'Viajero (Planeswalker)',
-      stats: { atk: 1, def: 3, power: 1, knowledge: 1 },
+      className: 'Caminante de planos',
+      stats: { atk: 3, def: 1, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Patrimonio',
         normal: 'Instantáneo: Gana 3 Oros.',
@@ -1183,19 +1183,19 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Luna',
       type: 'Magia',
-      className: 'Conjuradora (Elementalist)',
-      stats: { atk: 1, def: 1, power: 3, knowledge: 1 },
+      className: 'Elementalista',
+      stats: { atk: 0, def: 0, power: 2, knowledge: 3 },
       initialSkill: {
         name: 'Magia básica del fuego',
         normal: 'Permanente: En lugar de buscar en el mazo de hechizos, encuentra el primer Hechizo de magia de fuego que haya en él y llévate el Hechizo a la mano.\nA continuación, vuelve a barajar el mazo.',
         expert: 'Instantáneo: +3 Potencia para un Hechizo de magia de fuego.'
       },
       specialty: {
-        name: 'Especialidad: Muro de Fuego',
+        name: 'Especialidad: Muro de fuego',
         cards: [
-          { level: 1, name: 'Muro de Fuego I', effect: 'Continuo: Para este Combate, coloca esta carta o una ficha de muro de fuego en un espacio vacío del tablero de combate. Aplica 1 Herida a cualquier unidad que comience su turno aquí o que se detenga aquí, y a cualquier unidad melé o a distancia que lo atraviese.' },
-          { level: 4, name: 'Muro de Fuego IV', effect: 'Instantáneo: Toma una carta de tu pila de descarte y llévatela a la mano.\n— O —\nInstantáneo: +2 Potencia.' },
-          { level: 6, name: 'Muro de Fuego VI', effect: 'Continuo: Para este Combate, coloca esta carta o una ficha de muro de fuego en un espacio vacío del tablero de combate. Aplica 3 Heridas a cualquier unidad que comience su turno aquí o que se detenga aquí, y a cualquier unidad melé o a distancia que lo atraviese.' }
+          { level: 1, name: 'Muro de fuego I', effect: 'Continuo: Para este Combate, coloca esta carta o una ficha de muro de fuego en un espacio vacío del tablero de combate. Aplica 1 Herida a cualquier unidad que comience su turno aquí o que se detenga aquí, y a cualquier unidad melé o a distancia que lo atraviese.' },
+          { level: 4, name: 'Muro de fuego IV', effect: 'Instantáneo: Toma una carta de tu pila de descarte y llévatela a la mano.\n— O —\nInstantáneo: +2 Potencia.' },
+          { level: 6, name: 'Muro de fuego VI', effect: 'Continuo: Para este Combate, coloca esta carta o una ficha de muro de fuego en un espacio vacío del tablero de combate. Aplica 3 Heridas a cualquier unidad que comience su turno aquí o que se detenga aquí, y a cualquier unidad melé o a distancia que lo atraviese.' }
         ]
       },
       lore: 'Una temperamental hechicera que domina las esferas ígneas y los muros incandescentes de Confluencia.'
@@ -1203,8 +1203,8 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Monere',
       type: 'Poder',
-      className: 'Viajero (Planeswalker)',
-      stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
+      className: 'Caminante de planos',
+      stats: { atk: 3, def: 1, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Logística',
         normal: 'Continuo: Al final de tu turno, mueve la miniatura de tu héroe a una zona vacía adyacente.',
@@ -1223,8 +1223,8 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Pasis',
       type: 'Poder',
-      className: 'Viajero (Planeswalker)',
-      stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
+      className: 'Caminante de planos',
+      stats: { atk: 3, def: 1, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Artillería',
         normal: 'Instantáneo: Inflige 1 Herida a la unidad enemiga con menor Iniciativa.',
@@ -1243,8 +1243,8 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Tarnum',
       type: 'Magia',
-      className: 'Conjurador (Elementalist)',
-      stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
+      className: 'Elementalista',
+      stats: { atk: 0, def: 0, power: 2, knowledge: 3 },
       initialSkill: {
         name: 'Sabiduría',
         normal: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(3) en vez de buscar(2).',
@@ -1265,8 +1265,8 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Astra',
       type: 'Magia',
-      className: 'Navegante (Navigator)',
-      stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
+      className: 'Navegador',
+      stats: { atk: 2, def: 0, power: 1, knowledge: 2 },
       initialSkill: {
         name: 'Suerte',
         normal: 'Continuo: Puedes volver a lanzar un dado de tesoro y de recurso una vez durante este turno.',
@@ -1285,8 +1285,8 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Casmetra',
       type: 'Magia',
-      className: 'Navegante (Navigator)',
-      stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
+      className: 'Navegador',
+      stats: { atk: 2, def: 0, power: 1, knowledge: 2 },
       initialSkill: {
         name: 'Sabiduría',
         normal: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(3) en vez de buscar(2).',
@@ -1305,8 +1305,8 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Cassiopeia',
       type: 'Poder',
-      className: 'Capitán (Captain)',
-      stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
+      className: 'Capitán',
+      stats: { atk: 3, def: 0, power: 2, knowledge: 1 },
       initialSkill: {
         name: 'Táctica',
         normal: 'Instantáneo: Al comienzo del combate, intercambia la posición de 2 de tus unidades.',
@@ -1325,8 +1325,8 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Jeremy',
       type: 'Poder',
-      className: 'Capitán (Captain)',
-      stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
+      className: 'Capitán',
+      stats: { atk: 3, def: 0, power: 2, knowledge: 1 },
       initialSkill: {
         name: 'Ofensa',
         normal: 'Instantáneo: +1 Ataque\nDespués, roba 1 carta.',
@@ -1345,8 +1345,8 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Miriam',
       type: 'Poder',
-      className: 'Capitán (Captain)',
-      stats: { atk: 2, def: 1, power: 1, knowledge: 2 },
+      className: 'Capitán',
+      stats: { atk: 3, def: 0, power: 2, knowledge: 1 },
       initialSkill: {
         name: 'Logística',
         normal: 'Continuo: Al final de tu turno, mueve la miniatura de tu héroe a una zona vacía adyacente.',
@@ -1365,8 +1365,8 @@ export const FACTION_HEROES: FactionHeroesData = {
     {
       name: 'Zilare',
       type: 'Magia',
-      className: 'Navegante (Navigator)',
-      stats: { atk: 1, def: 1, power: 2, knowledge: 2 },
+      className: 'Navegador',
+      stats: { atk: 2, def: 0, power: 1, knowledge: 2 },
       initialSkill: {
         name: 'Interferencia',
         normal: 'Instantáneo: +1 Defensa. Este efecto se puede utilizar para reducir el Daño de un Hechizo.',
