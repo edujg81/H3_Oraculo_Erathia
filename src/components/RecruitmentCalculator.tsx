@@ -52,7 +52,7 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 6, nameBasic: 'Mantícoras (Alternativa)', nameElite: 'Mantícoras (Alternativa)', tier: 'oro' },
     { level: 7, nameBasic: 'Dragones Negros', nameElite: 'Dragones Negros', tier: 'oro' }
   ],
-  rampart: [
+  murallas: [
     { level: 1, nameBasic: 'Centauros', nameElite: 'Centauros Líderes', tier: 'bronce' },
     { level: 2, nameBasic: 'Enanos', nameElite: 'Enanos de Batalla', tier: 'bronce' },
     { level: 3, nameBasic: 'Elfos', nameElite: 'Grandes Elfos', tier: 'bronce' },
@@ -70,7 +70,7 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 6, nameBasic: 'Nagas', nameElite: 'Nagas', tier: 'oro' },
     { level: 7, nameBasic: 'Titanes', nameElite: 'Titanes', tier: 'oro' }
   ],
-  infierno: [
+  inferno: [
     { level: 1, nameBasic: 'Diablillos', nameElite: 'Duendecillos', tier: 'bronce' },
     { level: 2, nameBasic: 'Gogs', nameElite: 'Magogs', tier: 'bronce' },
     { level: 3, nameBasic: 'Sabuesos', nameElite: 'Cerberos', tier: 'bronce' },
@@ -79,7 +79,7 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 6, nameBasic: 'Efreet', nameElite: 'Efreet Sultanes', tier: 'oro' },
     { level: 7, nameBasic: 'Diablos', nameElite: 'Archidiablos', tier: 'oro' }
   ],
-  stronghold: [
+  bastion: [
     { level: 1, nameBasic: 'Goblins', nameElite: 'Goblins', tier: 'bronce' },
     { level: 2, nameBasic: 'Incursores lupinos', nameElite: 'Incursores lupinos', tier: 'bronce' },
     { level: 3, nameBasic: 'Orcos', nameElite: 'Orcos', tier: 'bronce' },
@@ -97,16 +97,22 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 6, nameBasic: 'Wyverns', nameElite: 'Wyverns Monarcas', tier: 'oro' },
     { level: 7, nameBasic: 'Hidras', nameElite: 'Hidras del Caos', tier: 'oro' }
   ],
-  confluencia: [
+  conflujo: [
     { level: 1, nameBasic: 'Hadas', nameElite: 'Hadas', tier: 'bronce' },
-    { level: 2, nameBasic: 'Elementales de la tormenta', nameElite: 'Elementales de la tormenta', tier: 'bronce' },
+    { level: 2, nameBasic: 'Elementales de tormenta', nameElite: 'Elementales de tormenta', tier: 'bronce' },
     { level: 3, nameBasic: 'Elementales de hielo', nameElite: 'Elementales de hielo', tier: 'bronce' },
     { level: 4, nameBasic: 'Elementales de energía', nameElite: 'Elementales de energía', tier: 'plata' },
     { level: 5, nameBasic: 'Elementales de magma', nameElite: 'Elementales de magma', tier: 'plata' },
     { level: 6, nameBasic: 'Elementales mágicos', nameElite: 'Elementales mágicos', tier: 'oro' },
     { level: 7, nameBasic: 'Fénix', nameElite: 'Fénix', tier: 'oro' }
   ],
-  cove: [
+  invocaciones: [
+    { level: 2, nameBasic: 'Elementales de aire', nameElite: 'Elementales de aire', tier: 'bronce' },
+    { level: 2, nameBasic: 'Elementales de agua', nameElite: 'Elementales de agua', tier: 'bronce' },
+    { level: 3, nameBasic: 'Elementales de fuego', nameElite: 'Elementales de fuego', tier: 'bronce' },
+    { level: 3, nameBasic: 'Elementales de tierra', nameElite: 'Elementales de tierra', tier: 'bronce' }
+  ],
+  cala: [
     { level: 1, nameBasic: 'Oceánidos', nameElite: 'Oceánidos', tier: 'bronce' },
     { level: 2, nameBasic: 'Marineros', nameElite: 'Marineros', tier: 'bronce' },
     { level: 3, nameBasic: 'Lobos de mar', nameElite: 'Lobos de mar', tier: 'bronce' },
@@ -323,7 +329,7 @@ const UNIT_DETAILS: {
     elite: { atk: 8, def: 3, hp: 8, ini: 15, type: 'Volador', abilities: ["Pasiva: Ignora cualquier efecto de Hechizo y el daño de Especialidad."], customCost: { gold: 33, materials: 0, valuable: 2 } }
   },
 
-  // Rampart (Murallas)
+  // Murallas
   "Centauros": {
     basic: { atk: 1, def: 1, hp: 1, ini: 4, type: 'Melee', abilities: ["Veloz: Gana bonificación al cargar."] },
     elite: { atk: 2, def: 1, hp: 1, ini: 5, type: 'Melee', abilities: ["Veloz.", "Carga de Centauro: +1 de Ataque al avanzar."] }
@@ -383,7 +389,7 @@ const UNIT_DETAILS: {
     elite: { atk: 6, def: 3, hp: 8, ini: 11, type: 'A distancia', abilities: ["Pasiva: Ignora cualquier efecto Continuo y las penalizaciones de combate contra unidades adyacentes."], customCost: { gold: 32, materials: 0, valuable: 2 } }
   },
 
-  // Infierno
+  // Inferno
   "Diablillos": {
     basic: { atk: 1, def: 0, hp: 1, ini: 3, type: 'Melee', abilities: ["Robo de Maná: Al inicio del combate, roba 1 de Maná al héroe enemigo."] },
     elite: { atk: 1, def: 1, hp: 1, ini: 4, type: 'Melee', abilities: ["Robo de Maná de élite: Roba 2 de Maná al héroe enemigo."] }
@@ -473,37 +479,55 @@ const UNIT_DETAILS: {
     elite: { atk: 5, def: 3, hp: 4, ini: 6, type: 'Melee', abilities: ["Ataque en Área Total.", "Sin Represalia.", "Regeneración: Se cura de forma pasiva 1 herida al activarse."] }
   },
 
-  // Confluencia
+  // Conflujo
   "Hadas": {
-    basic: { atk: 1, def: 0, hp: 1, ini: 3, type: 'Melee', abilities: [] },
-    elite: { atk: 1, def: 1, hp: 1, ini: 4, type: 'Melee', abilities: ["Inmune a hechizos de control mental."] }
+    basic: { atk: 2, def: 0, hp: 2, ini: 7, type: 'Melee', abilities: [], customCost: { gold: 2, materials: 0, valuable: 0 } },
+    elite: { atk: 2, def: 0, hp: 4, ini: 9, type: 'Melee', abilities: ["Al Atacar: Ignora los contraataques."], customCost: { gold: 4, materials: 0, valuable: 0 } }
   },
   "Elementales de la tormenta": {
-    basic: { atk: 1, def: 1, hp: 1, ini: 4, type: 'A distancia', abilities: ["Inmune a magia de aire."] },
-    elite: { atk: 2, def: 1, hp: 1, ini: 5, type: 'A distancia', abilities: ["Inmune a magia de aire.", "Lanza Hechizo Rayo una vez por combate."] }
+    basic: { atk: 2, def: 0, hp: 3, ini: 7, type: 'A distancia', abilities: [], customCost: { gold: 3, materials: 0, valuable: 0 } },
+    elite: { atk: 2, def: 0, hp: 5, ini: 8, type: 'A distancia', abilities: ["Al Atacar: Añade +1 Potencia al primer hechizo de magia de aire que lances durante esta activación."], customCost: { gold: 5, materials: 0, valuable: 0 } }
   },
   "Elementales de hielo": {
-    basic: { atk: 1, def: 1, hp: 1, ini: 4, type: 'A distancia', abilities: ["Inmune a magia de agua."] },
-    elite: { atk: 2, def: 1, hp: 1, ini: 5, type: 'A distancia', abilities: ["Inmune a magia de agua.", "Lanza Hechizo Flecha de Hielo una vez por combate."] }
+    basic: { atk: 2, def: 1, hp: 4, ini: 5, type: 'A distancia', abilities: [], customCost: { gold: 4, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 1, hp: 5, ini: 6, type: 'A distancia', abilities: ["Activación: Añade +1 Potencia al primer hechizo de magia de agua que lances durante esta acticación"], customCost: { gold: 7, materials: 0, valuable: 0 } }
   },
   "Elementales de energía": {
-    basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'Melee', abilities: ["Inmune a magia de fuego."] },
-    elite: { atk: 3, def: 1, hp: 2, ini: 5, type: 'Melee', abilities: ["Inmune a magia de fuego.", "Escudo de Fuego: Devuelve 1 de daño cuerpo a cuerpo."] }
+    basic: { atk: 3, def: 1, hp: 5, ini: 5, type: 'Melee', abilities: [], customCost: { gold: 6, materials: 0, valuable: 0 } },
+    elite: { atk: 4, def: 1, hp: 5, ini: 8, type: 'Melee', abilities: ["Activación: +1 Potencia al primer hechizo de magia de fuego quwle"], customCost: { gold: 8, materials: 0, valuable: 0 } }
   },
   "Elementales de magma": {
-    basic: { atk: 2, def: 2, hp: 2, ini: 3, type: 'Melee', abilities: ["Inmune a magia de tierra.", "Piel de Roca pasiva."] },
-    elite: { atk: 3, def: 3, hp: 2, ini: 4, type: 'Melee', abilities: ["Inmune a magia de tierra.", "Cuerpo de Magma: HP máxima aumentada en 1."] }
+    basic: { atk: 4, def: 2, hp: 5, ini: 4, type: 'Melee', abilities: [], customCost: { gold: 9, materials: 0, valuable: 0 } },
+    elite: { atk: 5, def: 2, hp: 5, ini: 6, type: 'Melee', abilities: ["Activación: Añade +1 Potencia al primer hechizo de magia tierra que lances durante esta activación."], customCost: { gold: 13, materials: 0, valuable: 0 } }
   },
   "Elementales mágicos": {
-    basic: { atk: 3, def: 2, hp: 3, ini: 5, type: 'Melee', abilities: ["Ataque en Abanico: Golpea a 3 enemigos adyacentes.", "Sin Represalia."] },
-    elite: { atk: 4, def: 2, hp: 3, ini: 6, type: 'Melee', abilities: ["Ataque en Abanico.", "Sin Represalia.", "Inmune a toda magia de nivel 1."] }
+    basic: { atk: 4, def: 2, hp: 7, ini: 7, type: 'Melee', abilities: ["Al Atacar: Ignora los contraataques.\nAtaca a todas las unidades adyacentes."], customCost: { gold: 13, materials: 0, valuable: 0 } },
+    elite: { atk: 5, def: 2, hp: 7, ini: 9, type: 'Melee', abilities: ["Al Atacar: Ignora los contraataques.\nAtaca todas las unidades enemigas adyacentes.\nPasivo: Ignora cualquier efecto de Hechizo y Daño de especialidad."], customCost: { gold: 19, materials: 0, valuable: 1 } },
   },
   "Fénix": {
-    basic: { atk: 4, def: 3, hp: 4, ini: 6, type: 'Volador', abilities: ["Volador.", "Aliento Flamígero.", "Renacimiento: Al morir, lanza el dado de combate; con un resultado de 0 o +1, revive con 1 HP (una vez por combate)."] },
-    elite: { atk: 5, def: 4, hp: 4, ini: 7, type: 'Volador', abilities: ["Volador.", "Aliento Flamígero.", "Renacimiento Divino: Revive automáticamente al 100% de HP una vez por combate."] }
+    basic: { atk: 6, def: 2, hp: 7, ini: 12, type: 'Volador', abilities: ["Pasivo: Una vez por combate. Cuando los PS de esta unidad se reduzcan a 0, ponlos en 1. Pasivo: Innmunes a los Hechizos de magia de fuego."], customCost: { gold: 21, materials: 0, valuable: 1 } },
+    elite: { atk: 7, def: 2, hp: 8, ini: 18, type: 'Volador', abilities: ["Al Atacar: Ataca 2 espacios en una línea. El primer ataque se resuelve normalmente y el segundo tiene 2 Ataque.\nPasivo: Inmunes a los Hechizos de magia de fuego."], customCost: { gold: 29, materials: 0, valuable: 2 } }
   },
 
-  // Bahía
+  // Invocaciones (Summons)
+  "Elementales de aire": {
+    basic: { atk: 2, def: 0, hp: 4, ini: 8, type: 'Melee', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de aire.\nEsta unidad inflige daño elemental."] },
+    elite: { atk: 3, def: 0, hp: 4, ini: 8, type: 'Melee', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de aire.\nEsta unidad inflige daño elemental."] }
+  },
+  "Elementales de agua": {
+    basic: { atk: 2, def: 0, hp: 5, ini: 6, type: 'Melee', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de agua.\nEsta unidad inflige daño elemental."] },
+    elite: { atk: 3, def: 0, hp: 5, ini: 6, type: 'Melee', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de agua.\nEsta unidad inflige daño elemental."] }
+  },
+  "Elementales de fuego": {
+    basic: { atk: 2, def: 1, hp: 4, ini: 5, type: 'Melee', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de fuego.\nEsta unidad inflige daño elemental."] },
+    elite: { atk: 3, def: 1, hp: 4, ini: 5, type: 'Melee', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de fuego.\nEsta unidad inflige daño elemental."] }
+  },
+  "Elementales de tierra": {
+    basic: { atk: 2, def: 2, hp: 2, ini: 5, type: 'Melee', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de tierra.\nEsta unidad inflige daño elemental."] },
+    elite: { atk: 3, def: 2, hp: 2, ini: 5, type: 'Melee', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de tierra.\nEsta unidad inflige daño elemental."] }
+  },
+
+  // Cala
   "Oceánidos": {
     basic: { atk: 2, def: 0, hp: 3, ini: 6, type: 'Volador', abilities: [], customCost: { gold: 2, materials: 0, valuable: 0 } },
     elite: { atk: 3, def: 0, hp: 3, ini: 8, type: 'Volador', abilities: ["Pasivo: Ignora todos los efectos y Daño de un Hechizo de magia de agua."], customCost: { gold: 3, materials: 0, valuable: 0 } }
@@ -818,7 +842,7 @@ const FACTION_THEMES: {
     bgGradient: 'radial-gradient(circle at top, #581c87 0%, #030712 100%)',
     badge: 'bg-purple-950/80 border-purple-900 text-purple-400'
   },
-  rampart: {
+  murallas: {
     primary: 'from-green-950 to-stone-950',
     border: 'border-lime-500/30',
     text: 'text-lime-400',
@@ -834,7 +858,7 @@ const FACTION_THEMES: {
     bgGradient: 'radial-gradient(circle at top, #93c5fd 0%, #1e293b 45%, #020617 100%)',
     badge: 'bg-slate-900/80 border-slate-700 text-cyan-50'
   },
-  infierno: {
+  inferno: {
     primary: 'from-red-950 to-stone-950',
     border: 'border-red-500/40',
     text: 'text-red-500',
@@ -842,7 +866,7 @@ const FACTION_THEMES: {
     bgGradient: 'radial-gradient(circle at top, #991b1b 0%, #1c1917 100%)',
     badge: 'bg-red-950/80 border-red-900 text-red-400'
   },
-  stronghold: {
+  bastion: {
     primary: 'from-amber-950 to-stone-950',
     border: 'border-amber-600/40',
     text: 'text-amber-500',
@@ -858,7 +882,7 @@ const FACTION_THEMES: {
     bgGradient: 'radial-gradient(circle at top, #25331e 0%, #070a05 100%)',
     badge: 'bg-[#11160e]/80 border-[#25331e] text-[#94ad82]'
   },
-  confluencia: {
+  conflujo: {
     primary: 'from-pink-950 to-slate-950',
     border: 'border-pink-500/40',
     text: 'text-pink-400',
@@ -866,13 +890,21 @@ const FACTION_THEMES: {
     bgGradient: 'radial-gradient(circle at top, #9d174d 0%, #090d16 100%)',
     badge: 'bg-pink-950/80 border-pink-900 text-pink-400'
   },
-  cove: {
+  cala: {
     primary: 'from-teal-950 to-slate-950',
     border: 'border-teal-500/40',
     text: 'text-teal-400',
     glow: 'shadow-teal-500/15',
     bgGradient: 'radial-gradient(circle at top, #115e59 0%, #030712 100%)',
     badge: 'bg-teal-950/80 border-teal-900 text-teal-400'
+  },
+  invocaciones: {
+    primary: 'from-violet-950 to-indigo-950',
+    border: 'border-violet-500/40',
+    text: 'text-violet-400',
+    glow: 'shadow-violet-500/15',
+    bgGradient: 'radial-gradient(circle at top, #5c33a6 0%, #0c0a09 100%)',
+    badge: 'bg-violet-950/80 border-violet-900 text-violet-400'
   },
   neutrales: {
     primary: 'from-yellow-950 to-stone-950',
@@ -924,7 +956,7 @@ const renderFactionWatermark = (factionId: string, className: string = "w-28 h-2
           <path d="M3 12c2-2 4-2 6 0M15 12c2 2 4 2 6 0" />
         </svg>
       );
-    case 'rampart':
+    case 'murallas':
       return (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
           {/* Tree of Life / Forest leaf */}
@@ -942,7 +974,7 @@ const renderFactionWatermark = (factionId: string, className: string = "w-28 h-2
           <circle cx="12" cy="12" r="2.5" />
         </svg>
       );
-    case 'infierno':
+    case 'inferno':
       return (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
           {/* Demonic Flame / Horns */}
@@ -951,7 +983,7 @@ const renderFactionWatermark = (factionId: string, className: string = "w-28 h-2
           <path d="M4 10c0-4 3-6 3-6M20 10c0-4-3-6-3-6" />
         </svg>
       );
-    case 'stronghold':
+    case 'bastion':
       return (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
           {/* Brute crossed axes / savage emblem */}
@@ -970,7 +1002,7 @@ const renderFactionWatermark = (factionId: string, className: string = "w-28 h-2
           <path d="M8 10h8" />
         </svg>
       );
-    case 'confluencia':
+    case 'conflujo':
       return (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
           {/* Phoenix Rising */}
@@ -980,7 +1012,7 @@ const renderFactionWatermark = (factionId: string, className: string = "w-28 h-2
           <path d="M9 19c3 3 3 3 6 0" />
         </svg>
       );
-    case 'cove':
+    case 'cala':
       return (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
           {/* Pirate Anchor & Sea waves */}
@@ -999,6 +1031,17 @@ const renderFactionWatermark = (factionId: string, className: string = "w-28 h-2
           <path d="M12 11v3" />
           <circle cx="7" cy="15" r="1" />
           <circle cx="17" cy="15" r="1" />
+        </svg>
+      );
+    case 'invocaciones':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          {/* Magic portal or vortex / summoning circle */}
+          <circle cx="12" cy="12" r="9" strokeDasharray="4 2" />
+          <circle cx="12" cy="12" r="6" />
+          <path d="M12 2v4M12 18v4M2 12h4M18 12h4" />
+          <path d="M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8" />
+          <circle cx="12" cy="12" r="2" fill="currentColor" />
         </svg>
       );
     case 'neutrales':
@@ -1024,14 +1067,15 @@ export default function RecruitmentCalculator() {
     { id: 'castillo', name: 'Castillo (Castle)' },
     { id: 'necropolis', name: 'Necrópolis (Necropolis)' },
     { id: 'mazmorra', name: 'Mazmorra (Dungeon)' },
-    { id: 'rampart', name: 'Murallas (Rampart)' },
     { id: 'torre', name: 'Torre (Tower)' },
-    { id: 'infierno', name: 'Inferno (Inferno)' },
-    { id: 'stronghold', name: 'Bastión (Stronghold)' },
+    { id: 'murallas', name: 'Murallas (Rampart)' },
     { id: 'fortaleza', name: 'Fortaleza (Fortress)' },
-    { id: 'confluencia', name: 'Confluencia (Conflux)' },
-    { id: 'cove', name: 'Bahía (Cove)' },
+    { id: 'inferno', name: 'Inferno (Inferno)' },
+    { id: 'bastion', name: 'Bastión (Stronghold)' },
+    { id: 'conflujo', name: 'Conflujo (Conflux)' },
+    { id: 'cala', name: 'Cala (Cove)' },
     { id: 'neutrales', name: 'Neutrales (Neutrals)' },
+    { id: 'invocaciones', name: 'Invocaciones' },
     { id: 'bancos', name: 'Banco de Criaturas' }
   ];
 
@@ -1157,13 +1201,14 @@ export default function RecruitmentCalculator() {
       castillo: 'castillo',
       necropolis: 'necropolis',
       mazmorra: 'dungeon',
-      rampart: 'rampart',
+      murallas: 'rampart',
       torre: 'tower',
-      infierno: 'inferno',
-      stronghold: 'bastion',
+      inferno: 'inferno',
+      bastion: 'bastion',
       fortaleza: 'fortaleza',
-      confluencia: 'conflux',
-      cove: 'bahia',
+      conflujo: 'conflux',
+      invocaciones: 'conflux',
+      cala: 'bahia',
     };
 
     const prefix = mapping[factionId];
@@ -1268,11 +1313,11 @@ export default function RecruitmentCalculator() {
                   onClick={() => setSelectedTier('azul')}
                   className={`flex-1 py-1.5 text-[10px] uppercase font-bold tracking-wider rounded-lg border flex items-center justify-center gap-1 cursor-pointer transition ${
                     selectedTier === 'azul'
-                      ? 'border-cyan-500 bg-cyan-500/15 text-cyan-300 font-bold shadow-md'
+                      ? 'border-blue-500 bg-blue-500/15 text-blue-300 font-bold shadow-md'
                       : 'bg-slate-950 border-slate-900 text-slate-500 hover:text-slate-300'
                   }`}
                 >
-                  <Star className={`w-3 h-3 ${selectedTier === 'azul' ? 'text-cyan-400 fill-cyan-400' : 'text-slate-600 fill-slate-700/20'}`} />
+                  <Star className={`w-3 h-3 ${selectedTier === 'azul' ? 'text-blue-500 fill-blue-500' : 'text-slate-600 fill-slate-700/20'}`} />
                   <span>azul</span>
                 </button>
               )}
@@ -1369,9 +1414,9 @@ export default function RecruitmentCalculator() {
                   <div>
                     <div className="flex items-center gap-2">
                       <span className={`text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md border ${theme.badge}`}>
-                        {selectedFaction === 'bancos' ? 'Banco de Criaturas' : selectedFaction}
+                        {factions.find(f => f.id === selectedFaction)?.name.split(' (')[0] || selectedFaction}
                       </span>
-                      <span className={`text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md border flex items-center gap-1 ${
+                      <span className={`text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md border flex items-center gap-1.5 ${
                         effectiveUpgraded 
                           ? 'bg-amber-950/40 text-amber-300 border-amber-500/50' 
                           : 'bg-slate-950/40 text-slate-300 border-slate-700/60'
@@ -1380,7 +1425,7 @@ export default function RecruitmentCalculator() {
                           selectedTier === 'bronce' ? 'text-[#a0522d] fill-[#a0522d]'
                           : selectedTier === 'plata' ? 'text-slate-400 fill-slate-400'
                           : selectedTier === 'oro' ? 'text-yellow-500 fill-yellow-500'
-                          : 'text-cyan-400 fill-cyan-400'
+                          : 'text-blue-500 fill-blue-500'
                         }`} />
                         <span>Nivel {selectedUnit.level}</span>
                       </span>

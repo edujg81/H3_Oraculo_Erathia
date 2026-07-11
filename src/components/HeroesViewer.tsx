@@ -14,40 +14,53 @@ function getHeroBaseFilename(heroName: string, factionId?: string): string {
   // Apply lore-accurate overrides for Tarnum depending on his class/faction representation
   if (filename === 'Tarnum' && factionId) {
     if (factionId === 'castillo') {
-      filename = 'Knight_Tarnum';
+      filename = 'caballero_tarnum';
     } else if (factionId === 'mazmorra') {
-      filename = 'Overlord_Tarnum';
-    } else if (factionId === 'confluencia') {
-      filename = 'Elementalist_Tarnum';
-    } else if (factionId === 'stronghold') {
-      filename = 'Barbarian_Tarnum';
-    } else if (factionId === 'rampart') {
-      filename = 'Ranger_Tarnum';
+      filename = 'adalid_tarnum';
+    } else if (factionId === 'conflujo') {
+      filename = 'elementalista_tarnum';
+    } else if (factionId === 'bastion') {
+      filename = 'barbaro_tarnum';
+    } else if (factionId === 'murallas') {
+      filename = 'guardabosques_tarnum';
     } else if (factionId === 'torre') {
-      filename = 'Wizard_Tarnum';
+      filename = 'hechicero_tarnum';
     } else if (factionId === 'fortaleza') {
-      filename = 'Beastmaster_Tarnum';
+      filename = 'amaestrador_tarnum';
     }
   }
 
   // Live vs Undead Lord Haart portraits
   if (filename === 'Lord_Haart' && factionId === 'necropolis') {
-    filename = 'Death_Knight_Lord_Haart';
+    filename = 'caballero_muerte_Lord_Haart';
   }
 
   return filename;
 }
 
-// Helper to match a hero's detail against actual globbed local assets (e.g. cleric_adela.jpg, iona.jpg, catherine.jpg)
+// Helper to match a hero's detail against actual globbed local assets (e.g. clerigo_adela.jpg, iona.jpg, caballero_catherine.jpg)
 function getHeroPortrait(
   heroPortraits: Record<string, string>,
   heroName: string,
   className: string,
   factionId: string
 ): string | undefined {
-  // Extract English class name from parentheses, e.g. "Caballero (Knight)" -> "knight"
+  // Extract English class name from parentheses if present, e.g. "Caballero (Knight)" -> "knight"
   const match = className.match(/\(([^)]+)\)/);
   const englishClass = match ? match[1].toLowerCase().replace(/\s+/g, '_') : '';
+
+  // Get Spanish class prefix
+  let spanishClass = className
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, '_');
+
+  if (spanishClass === 'caballero_de_la_muerte') {
+    spanishClass = 'caballero_muerte';
+  } else if (spanishClass === 'caminante_de_planos') {
+    spanishClass = 'caminante_planos';
+  }
 
   // Get standardized base name
   const baseName = getHeroBaseFilename(heroName, factionId);
@@ -55,13 +68,17 @@ function getHeroPortrait(
 
   // Candidate filename configurations
   const candidates = [
-    // 1. Prefix class name with lowercase, e.g. "cleric_adela"
+    // 1. Prefix Spanish class name with lowercase, e.g. "alquimista_josephine"
+    spanishClass ? `${spanishClass}_${baseNameLower}` : null,
+    // 2. Prefix English class name if extracted from parentheses
     englishClass ? `${englishClass}_${baseNameLower}` : null,
-    // 2. Just lowercase name, e.g. "adelaide", "catherine"
+    // 3. Just lowercase name, e.g. "adelaide", "catherine"
     baseNameLower,
-    // 3. Just name with original casing, e.g. "Catherine"
+    // 4. Just name with original casing, e.g. "Catherine"
     baseName,
-    // 4. Prefix with original casing, e.g. "Cleric_Adela"
+    // 5. Prefix Spanish class name with original casing baseName
+    spanishClass ? `${spanishClass}_${baseName}` : null,
+    // 6. Prefix English class name with original casing baseName
     englishClass ? `${englishClass}_${baseName}` : null,
   ].filter(Boolean) as string[];
 
@@ -79,6 +96,104 @@ function getHeroPortrait(
   return undefined;
 }
 
+const renderFactionEmblem = (factionId: string, className: string = "w-6 h-6"): React.JSX.Element => {
+  switch (factionId) {
+    case 'castillo':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <path d="M8 11h8M12 7v8M9 15v2h6v-2" />
+          <path d="M7 8V5l5-2 5 2v3" />
+        </svg>
+      );
+    case 'necropolis':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2a6 6 0 0 0-6 6v4a5 5 0 0 0 3 4.5V19a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2.5A5 5 0 0 0 18 12V8a6 6 0 0 0-6-6z" />
+          <circle cx="10" cy="10" r="1" fill="currentColor" />
+          <circle cx="14" cy="10" r="1" fill="currentColor" />
+          <path d="M12 12.5l-0.5 1.5h1z" fill="currentColor" />
+          <path d="M11 18v2M13 18v2" />
+        </svg>
+      );
+    case 'mazmorra':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M2 12s4-8 10-8 10 8 10 8-4 8-10 8-10-8-10-8z" />
+          <circle cx="12" cy="12" r="4.5" />
+          <path d="M12 9.5l-1 2.5 1 2.5 1-2.5z" fill="currentColor" />
+          <path d="M3 12c2-2 4-2 6 0M15 12c2 2 4 2 6 0" />
+        </svg>
+      );
+    case 'murallas':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 22V12M12 12l4-4M12 14l-4-4" />
+          <path d="M12 2C7 2 5 6 5 10c0 4 3 6 7 7 4-1 7-3 7-7 0-4-2-8-7-8z" />
+          <path d="M12 5a3 3 0 0 0-3 3c0 2 3 4 3 4s3-2 3-4a3 3 0 0 0-3-3z" />
+        </svg>
+      );
+    case 'torre':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 3l3 6 6 1-4.5 4.5 1 6.5-5.5-3-5.5 3 1-6.5L3 10l6-1z" />
+          <circle cx="12" cy="12" r="2.5" />
+        </svg>
+      );
+    case 'inferno':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2C8.5 2 6 5 6 9c0 4 3.5 7 6 13 2.5-6 6-9 6-13 0-4-2.5-7-6-7z" />
+          <path d="M12 7c-2 0-3 1.5-3 3.5 0 2 1.5 3 3 6.5 1.5-3.5 3-4.5 3-6.5 0-2-1-3.5-3-3.5z" />
+          <path d="M4 10c0-4 3-6 3-6M20 10c0-4-3-6-3-6" />
+        </svg>
+      );
+    case 'bastion':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M5 19L19 5M19 19L5 5" />
+          <path d="M15 5h4v4l-3-1-1-3zM5 15v4h4l-1-3-3-1z" />
+          <path d="M19 15v4h-4l1-3 3-1zM5 5h4v4l-3-1-1-3z" />
+          <circle cx="12" cy="12" r="2" />
+        </svg>
+      );
+    case 'fortaleza':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2s7 3 7 9c0 5-4.5 8.5-7 10-2.5-1.5-7-5-7-10 0-6 7-9 7-9z" />
+          <path d="M12 6c-1.5 0-2.5 1-2.5 2s1 1.5 2.5 2.5c1.5 1 2.5 1.5 2.5 3s-1 2.5-2.5 2.5" />
+          <path d="M8 10h8" />
+        </svg>
+      );
+    case 'conflujo':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 4a2 2 0 0 1 2 2M12 4a2 2 0 0 0-2 2" />
+          <path d="M12 10C8 8 4 10 3 14c2-1 5-1 7-2M12 10c4-2 8 0 9 4-2-1-5-1-7-2" />
+          <path d="M12 10v9M10 12l2 6 2-6" />
+          <path d="M9 19c3 3 3 3 6 0" />
+        </svg>
+      );
+    case 'cala':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 3v14M8 12H6a6 6 0 0 0 12 0h-2" />
+          <circle cx="12" cy="3" r="1.5" />
+          <path d="M6 12l-2 2M18 12l2 2M12 19.5v-2" />
+          <path d="M3 21c3-1.5 3 1.5 6 0s3-1.5 6 0 3-1.5 6 0" />
+        </svg>
+      );
+    default:
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className={className} strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 8v8M8 12h8" />
+        </svg>
+      );
+  }
+};
+
 export default function HeroesViewer() {
   const [selectedFaction, setSelectedFaction] = useState('castillo');
   const [typeFilter, setTypeFilter] = useState<'Todos' | 'Poder' | 'Magia'>('Todos');
@@ -89,13 +204,13 @@ export default function HeroesViewer() {
     { id: 'castillo', name: 'Castillo (Castle)' },
     { id: 'necropolis', name: 'Necrópolis (Necropolis)' },
     { id: 'mazmorra', name: 'Mazmorra (Dungeon)' },
-    { id: 'rampart', name: 'Murallas (Rampart)' },
     { id: 'torre', name: 'Torre (Tower)' },
-    { id: 'infierno', name: 'Inferno (Inferno)' },
-    { id: 'stronghold', name: 'Bastión (Stronghold)' },
+    { id: 'murallas', name: 'Murallas (Rampart)' },
     { id: 'fortaleza', name: 'Fortaleza (Fortress)' },
-    { id: 'confluencia', name: 'Confluencia (Conflux)' },
-    { id: 'cove', name: 'Bahía (Cove)' }
+    { id: 'inferno', name: 'Inferno (Inferno)' },
+    { id: 'bastion', name: 'Bastión (Stronghold)' },
+    { id: 'conflujo', name: 'Conflujo (Conflux)' },
+    { id: 'cala', name: 'Cala (Cove)' }
   ];
 
   // Retrieve available heroes for current faction and filter
@@ -204,13 +319,17 @@ export default function HeroesViewer() {
                   <button
                     key={f.id}
                     onClick={() => setSelectedFaction(f.id)}
-                    className={`px-3 py-2.5 rounded-xl text-xs font-semibold border text-left cursor-pointer transition flex items-center gap-2 ${
+                    className={`px-3 py-2.5 rounded-xl text-xs font-semibold border text-left cursor-pointer transition flex items-center gap-2.5 group ${
                       isSelected
                         ? `border-amber-500 ${factionTheme.primary} text-amber-200 shadow-md ${factionTheme.glow}`
                         : 'bg-slate-950/50 border-slate-900/60 text-slate-400 hover:text-slate-200 hover:border-slate-800'
                     }`}
                   >
-                    <div className={`w-2.5 h-2.5 rounded-full shrink-0 ${isSelected ? 'bg-amber-500 animate-pulse' : 'bg-slate-700'}`} />
+                    {renderFactionEmblem(f.id, `w-4.5 h-4.5 shrink-0 transition-all duration-300 ${
+                      isSelected 
+                        ? `${factionTheme.text} scale-110 drop-shadow-[0_0_3px_currentColor]` 
+                        : `text-slate-600 group-hover:${factionTheme.text} group-hover:scale-105`
+                    }`)}
                     <span className="truncate">{f.name.split(' ')[0]}</span>
                   </button>
                 );
@@ -316,15 +435,14 @@ export default function HeroesViewer() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -15, scale: 0.98 }}
                 transition={{ duration: 0.25 }}
-                className="w-full rounded-3xl p-6 border relative overflow-hidden flex flex-col justify-between min-h-[580px] shadow-2xl"
+                className={`w-full rounded-3xl p-6 border relative overflow-hidden flex flex-col justify-between min-h-[580px] shadow-2xl transition-all duration-500 ${theme.border}`}
                 style={{
-                  background: theme.bgGradient,
-                  borderColor: selectedHero.type === 'Poder' ? '#b91c1c' : '#0369a1'
+                  background: theme.bgGradient
                 }}
               >
                 {/* Visual Faction Emblem watermark on back */}
-                <div className="absolute right-[-30px] bottom-[-20px] opacity-[0.03] select-none pointer-events-none transform rotate-12">
-                  <User className="w-[320px] h-[320px] text-white" />
+                <div className="absolute right-[-40px] bottom-[-40px] opacity-[0.08] select-none pointer-events-none transform -rotate-12 transition-all duration-700 ease-out">
+                  {renderFactionEmblem(selectedFaction, `w-[360px] h-[360px] ${theme.text}`)}
                 </div>
 
                 <div className="space-y-6">
@@ -362,7 +480,7 @@ export default function HeroesViewer() {
                       <div className="space-y-1">
                         <div className="flex flex-wrap items-center gap-2">
                           <span className={`text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md border ${theme.badge}`}>
-                            {selectedFaction === 'confluencia' ? 'Confluencia' : selectedFaction === 'necropolis' ? 'Necrópolis' : selectedFaction === 'mazmorra' ? 'Mazmorra' : selectedFaction === 'rampart' ? 'Murallas' : selectedFaction.toUpperCase()}
+                            {factions.find(f => f.id === selectedFaction)?.name.split(' ')[0] || selectedFaction.toUpperCase()}
                           </span>
                           <span className={`text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md border flex items-center gap-1 ${
                             selectedHero.type === 'Poder' 
@@ -382,6 +500,10 @@ export default function HeroesViewer() {
                     </div>
 
                     <div className="flex items-center gap-2 self-end sm:self-start shrink-0">
+                      {/* Faction Emblem small badge */}
+                      <div className={`w-10 h-10 rounded-2xl border border-slate-800/80 bg-slate-950/80 flex items-center justify-center ${theme.text} shadow-md`}>
+                        {renderFactionEmblem(selectedFaction, "w-5 h-5")}
+                      </div>
                       <div className={`w-10 h-10 rounded-2xl border flex items-center justify-center bg-slate-950/80 ${
                         selectedHero.type === 'Poder' ? 'border-red-900/50 text-red-400' : 'border-sky-900/50 text-sky-400'
                       }`}>

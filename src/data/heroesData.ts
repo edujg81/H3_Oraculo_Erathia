@@ -462,7 +462,7 @@ export const FACTION_HEROES: FactionHeroesData = {
       quote: 'Los Ancestros me niegan el descanso, pero las bestias de las profundidades obedecen mi llamado.'
     }
   ],
-  rampart: [
+  murallas: [
     {
       name: 'Clancy',
       type: 'Poder',
@@ -739,7 +739,7 @@ export const FACTION_HEROES: FactionHeroesData = {
       quote: 'Dejad que los magos reciten sus caprichosos silogismos. El ángulo exacto de una balista bien calibrada nunca falla.'
     }
   ],
-  infierno: [
+  inferno: [
     {
       name: 'Ash',
       type: 'Magia',
@@ -867,7 +867,7 @@ export const FACTION_HEROES: FactionHeroesData = {
       quote: 'Vuestra magia se desvanece ante el poder corrosivo del azufre. Contemplad el verdadero arte del tormento.'
     }
   ],
-  stronghold: [
+  bastion: [
     {
       name: 'Crag Hack',
       type: 'Poder',
@@ -1139,7 +1139,7 @@ export const FACTION_HEROES: FactionHeroesData = {
       lore: 'Un sigiloso oficial de la Fortaleza que comanda a los mejores batallones de arqueros lagarto de las marismas.'
     }
   ],
-  confluencia: [
+  conflujo: [
     {
       name: 'Ciele',
       type: 'Magia',
@@ -1261,7 +1261,7 @@ export const FACTION_HEROES: FactionHeroesData = {
       lore: 'En su encarnación como Elementalista, Tarnum buscó el dominio de las fuerzas arcanas de los planos para guiar a los Enchanters y redimir sus antiguas faltas.'
     }
   ],
-  cove: [
+  cala: [
     {
       name: 'Astra',
       type: 'Magia',
@@ -1397,93 +1397,93 @@ export const FACTION_THEMES: {
   };
 } = {
   castillo: {
-    primary: 'from-blue-900 to-slate-950',
-    border: 'border-blue-700/85',
-    text: 'text-blue-300',
-    glow: 'shadow-blue-500/20',
-    bgGradient: 'radial-gradient(circle at top, #1e3a8a 0%, #020617 100%)',
-    badge: 'bg-blue-950/80 border-blue-900 text-blue-300',
-    accent: 'bg-blue-500 text-white'
+    primary: 'from-sky-950 to-slate-950',
+    border: 'border-sky-500/40',
+    text: 'text-sky-400',
+    glow: 'shadow-sky-500/15',
+    bgGradient: 'radial-gradient(circle at top, #0c4a6e 0%, #030712 100%)',
+    badge: 'bg-sky-950/80 border-sky-900 text-sky-400',
+    accent: 'bg-sky-500 text-white'
   },
   necropolis: {
-    primary: 'from-stone-900 to-slate-950',
-    border: 'border-slate-800',
-    text: 'text-amber-200',
-    glow: 'shadow-purple-500/10',
-    bgGradient: 'radial-gradient(circle at top, #1c1917 0%, #0c0a09 100%)',
-    badge: 'bg-stone-950/80 border-stone-800 text-amber-200',
-    accent: 'bg-stone-700 text-amber-200'
+    primary: 'from-zinc-950 to-stone-950',
+    border: 'border-zinc-700/50',
+    text: 'text-zinc-400',
+    glow: 'shadow-zinc-500/10',
+    bgGradient: 'radial-gradient(circle at top, #1e1e24 0%, #07070a 100%)',
+    badge: 'bg-zinc-900/80 border-zinc-800 text-zinc-400',
+    accent: 'bg-zinc-700 text-zinc-250'
   },
   mazmorra: {
-    primary: 'from-purple-900 to-slate-950',
-    border: 'border-purple-800/85',
-    text: 'text-purple-350',
-    glow: 'shadow-purple-500/20',
-    bgGradient: 'radial-gradient(circle at top, #3b0764 0%, #03001c 100%)',
-    badge: 'bg-purple-950/80 border-purple-900 text-purple-300',
+    primary: 'from-purple-950 to-stone-950',
+    border: 'border-purple-500/40',
+    text: 'text-purple-400',
+    glow: 'shadow-purple-500/15',
+    bgGradient: 'radial-gradient(circle at top, #581c87 0%, #030712 100%)',
+    badge: 'bg-purple-950/80 border-purple-900 text-purple-400',
     accent: 'bg-purple-600 text-white'
   },
-  rampart: {
-    primary: 'from-emerald-900 to-stone-950',
-    border: 'border-emerald-800/85',
-    text: 'text-emerald-350',
-    glow: 'shadow-emerald-500/20',
-    bgGradient: 'radial-gradient(circle at top, #022c22 0%, #0c0a09 100%)',
-    badge: 'bg-emerald-950/80 border-emerald-900 text-emerald-300',
-    accent: 'bg-emerald-600 text-white'
+  murallas: {
+    primary: 'from-green-950 to-stone-950',
+    border: 'border-lime-500/30',
+    text: 'text-lime-400',
+    glow: 'shadow-lime-500/15',
+    bgGradient: 'radial-gradient(circle at top, #22c55e 0%, #15803d 40%, #0c0a09 100%)',
+    badge: 'bg-lime-950/80 border-lime-900 text-lime-400',
+    accent: 'bg-lime-600 text-white'
   },
   torre: {
-    primary: 'from-cyan-900 to-slate-950',
-    border: 'border-cyan-800/85',
-    text: 'text-cyan-330',
-    glow: 'shadow-cyan-500/20',
-    bgGradient: 'radial-gradient(circle at top, #083344 0%, #020617 100%)',
-    badge: 'bg-cyan-950/80 border-cyan-900 text-cyan-300',
+    primary: 'from-slate-900 to-slate-950',
+    border: 'border-cyan-100/35',
+    text: 'text-cyan-50',
+    glow: 'shadow-cyan-200/20',
+    bgGradient: 'radial-gradient(circle at top, #93c5fd 0%, #1e293b 45%, #020617 100%)',
+    badge: 'bg-slate-900/80 border-slate-700 text-cyan-50',
     accent: 'bg-cyan-500 text-white'
   },
-  infierno: {
+  inferno: {
     primary: 'from-red-950 to-stone-950',
-    border: 'border-red-900/85',
-    text: 'text-red-400',
+    border: 'border-red-500/40',
+    text: 'text-red-500',
     glow: 'shadow-red-500/20',
-    bgGradient: 'radial-gradient(circle at top, #450a0a 0%, #0c0a09 100%)',
+    bgGradient: 'radial-gradient(circle at top, #991b1b 0%, #1c1917 100%)',
     badge: 'bg-red-950/80 border-red-900 text-red-400',
     accent: 'bg-red-600 text-white'
   },
-  stronghold: {
-    primary: 'from-amber-900 to-orange-950',
-    border: 'border-amber-800/75',
-    text: 'text-amber-400',
-    glow: 'shadow-amber-500/20',
-    bgGradient: 'radial-gradient(circle at top, #451a03 0%, #0c0a09 100%)',
-    badge: 'bg-amber-950/80 border-amber-900 text-amber-400',
+  bastion: {
+    primary: 'from-amber-950 to-stone-950',
+    border: 'border-amber-600/40',
+    text: 'text-amber-500',
+    glow: 'shadow-amber-500/15',
+    bgGradient: 'radial-gradient(circle at top, #7c2d12 0%, #1c1917 100%)',
+    badge: 'bg-amber-950/80 border-amber-900 text-amber-500',
     accent: 'bg-amber-600 text-white'
   },
   fortaleza: {
-    primary: 'from-teal-900 to-emerald-950',
-    border: 'border-teal-850',
-    text: 'text-teal-300',
-    glow: 'shadow-teal-500/20',
-    bgGradient: 'radial-gradient(circle at top, #0f4c46 0%, #021a17 100%)',
-    badge: 'bg-teal-950/80 border-teal-900 text-teal-300',
-    accent: 'bg-teal-600 text-white'
+    primary: 'from-[#151c12] to-neutral-950',
+    border: 'border-[#415436]/40',
+    text: 'text-[#94ad82]',
+    glow: 'shadow-[#415436]/15',
+    bgGradient: 'radial-gradient(circle at top, #25331e 0%, #070a05 100%)',
+    badge: 'bg-[#11160e]/80 border-[#25331e] text-[#94ad82]',
+    accent: 'bg-[#415436] text-[#94ad82]'
   },
-  confluencia: {
-    primary: 'from-indigo-900 to-violet-950',
-    border: 'border-indigo-850',
-    text: 'text-indigo-300',
-    glow: 'shadow-indigo-500/25',
-    bgGradient: 'radial-gradient(circle at top, #1e1b4b 0%, #020617 100%)',
-    badge: 'bg-indigo-950/80 border-indigo-900 text-indigo-300',
-    accent: 'bg-indigo-600 text-white'
+  conflujo: {
+    primary: 'from-pink-950 to-slate-950',
+    border: 'border-pink-500/40',
+    text: 'text-pink-400',
+    glow: 'shadow-pink-500/15',
+    bgGradient: 'radial-gradient(circle at top, #9d174d 0%, #090d16 100%)',
+    badge: 'bg-pink-950/80 border-pink-900 text-pink-400',
+    accent: 'bg-pink-600 text-white'
   },
-  cove: {
-    primary: 'from-sky-900 to-slate-950',
-    border: 'border-sky-850',
-    text: 'text-sky-300',
-    glow: 'shadow-sky-500/20',
-    bgGradient: 'radial-gradient(circle at top, #075985 0%, #020617 100%)',
-    badge: 'bg-sky-950/80 border-sky-900 text-sky-300',
-    accent: 'bg-sky-500 text-white'
+  cala: {
+    primary: 'from-teal-950 to-slate-950',
+    border: 'border-teal-500/40',
+    text: 'text-teal-400',
+    glow: 'shadow-teal-500/15',
+    bgGradient: 'radial-gradient(circle at top, #115e59 0%, #030712 100%)',
+    badge: 'bg-teal-950/80 border-teal-900 text-teal-400',
+    accent: 'bg-teal-500 text-white'
   }
 };
