@@ -1147,7 +1147,7 @@ export default function RecruitmentCalculator() {
 
     // Check if the base name belongs to any faction unit
     for (const [fac, units] of Object.entries(FACTION_UNITS)) {
-      if (fac === 'neutrales' || fac === 'bancos') continue;
+      if (fac === 'neutrales' || fac === 'bancos' || fac === 'invocaciones') continue;
       const found = units.find(u => u.nameBasic === baseName || (u.nameElite && u.nameElite === baseName));
       if (found) {
         return getFactionImageFilename(fac, found.level);
@@ -1178,11 +1178,11 @@ export default function RecruitmentCalculator() {
       'Sátiros': 'Creature_Satyr_4.png',
       'Golems de Acero': 'Creature_Steel_Golem_4.png',
       'Gólems de acero': 'Creature_Steel_Golem_4.png',
-      'Elemental de aire': 'Creature_Air_Elemental_2.png',
-      'Elemental de agua': 'Creature_Water_Elemental.png',
-      'Elemental de fuego': 'Creature_Fire_Elemental_(HotA).png',
-      'Elemental de tierra': 'Creature_Earth_Elemental.png',
-      'Aves de trueno (Neutral)': 'Creature_Roc.png'
+      'Elementales de aire': 'Creature_Air_Elemental_2.png',
+      'Elementales de agua': 'Creature_Water_Elemental.png',
+      'Elementales de fuego': 'Creature_Fire_Elemental_(HotA).png',
+      'Elementales de tierra': 'Creature_Earth_Elemental.png',
+      'Aves de trueno (Neutral)': 'bastion_5.png'
     };
 
     if (pureNeutralsMap[unitName]) {
