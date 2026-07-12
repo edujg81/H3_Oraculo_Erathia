@@ -53,13 +53,13 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 7, nameBasic: 'Dragones Negros', nameElite: 'Dragones Negros', tier: 'oro' }
   ],
   murallas: [
-    { level: 1, nameBasic: 'Centauros', nameElite: 'Centauros Líderes', tier: 'bronce' },
-    { level: 2, nameBasic: 'Enanos', nameElite: 'Enanos de Batalla', tier: 'bronce' },
-    { level: 3, nameBasic: 'Elfos', nameElite: 'Grandes Elfos', tier: 'bronce' },
-    { level: 4, nameBasic: 'Pegasos', nameElite: 'Pegasos Plateados', tier: 'plata' },
-    { level: 5, nameBasic: 'Dendroides', nameElite: 'Dendroides Guardianes', tier: 'plata' },
-    { level: 6, nameBasic: 'Unicornios', nameElite: 'Unicornios de Guerra', tier: 'oro' },
-    { level: 7, nameBasic: 'Dragones Verdes', nameElite: 'Dragones Dorados', tier: 'oro' }
+    { level: 1, nameBasic: 'Centauros', nameElite: 'Centauros', tier: 'bronce' },
+    { level: 2, nameBasic: 'Enanos', nameElite: 'Enanos', tier: 'bronce' },
+    { level: 3, nameBasic: 'Elfos', nameElite: 'Elfos', tier: 'bronce' },
+    { level: 4, nameBasic: 'Pegasos', nameElite: 'Pegasos', tier: 'plata' },
+    { level: 5, nameBasic: 'Dendroides', nameElite: 'Dendroides', tier: 'plata' },
+    { level: 6, nameBasic: 'Unicornios', nameElite: 'Unicornios', tier: 'oro' },
+    { level: 7, nameBasic: 'Dragones dorados', nameElite: 'Dragones dorados', tier: 'oro' }
   ],
   torre: [
     { level: 1, nameBasic: 'Gremlins', nameElite: 'Gremlins', tier: 'bronce' },
@@ -329,32 +329,32 @@ const UNIT_DETAILS: {
 
   // Murallas
   "Centauros": {
-    basic: { atk: 1, def: 1, hp: 1, ini: 4, type: 'Melé', abilities: ["Veloz: Gana bonificación al cargar."] },
-    elite: { atk: 2, def: 1, hp: 1, ini: 5, type: 'Melé', abilities: ["Veloz.", "Carga de Centauro: +1 de Ataque al avanzar."] }
+    basic: { atk: 2, def: 0, hp: 3, ini: 6, type: 'Melé', abilities: [], customCost: { gold: 2, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 0, hp: 3, ini: 8, type: 'Melé', abilities: [], customCost: { gold: 3, materials: 0, valuable: 0 } }
   },
   "Enanos": {
-    basic: { atk: 1, def: 2, hp: 1, ini: 3, type: 'Melé', abilities: ["Resistencia: Al recibir un hechizo dañino, lanza el dado de combate; con +1 lo ignora."] },
-    elite: { atk: 2, def: 2, hp: 2, ini: 4, type: 'Melé', abilities: ["Resistencia mejorada: Al recibir un hechizo dañino, lanza el dado de combate; con 0 o +1 lo ignora."] }
+    basic: { atk: 2, def: 1, hp: 3, ini: 3, type: 'Melé', abilities: ["Pasivo: Si esta unidad es objetivo de cualquier carta de hechizo o especialidad, lanza 1 dado de ataque.\nSi sacas un +1, ignora el efecto de la carta."], customCost: { gold: 3, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 1, hp: 3, ini: 5, type: 'Melé', abilities: ["Pasivo: Si esta unidad es objetivo de cualquier carta de hechizo o especialidad, lanza 1 dado de ataque.\nSi sacas un +1, ignora el efecto de la carta."], customCost: { gold: 4, materials: 0, valuable: 0 } }
   },
   "Elfos": {
-    basic: { atk: 1, def: 0, hp: 1, ini: 4, type: 'a Distancia', abilities: ["A distancia."] },
-    elite: { atk: 2, def: 0, hp: 1, ini: 5, type: 'a Distancia', abilities: ["A distancia.", "Doble Disparo: Realiza dos disparos a distancia por ronda."] }
+    basic: { atk: 2, def: 1, hp: 3, ini: 6, type: 'a Distancia', abilities: [], customCost: { gold: 4, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 1, hp: 3, ini: 7, type: 'a Distancia', abilities: ["Al Atacar: Si una unidad objetivo no está adyacente, vuélvela a atacar si sacas un -1 o un 0."], customCost: { gold: 7, materials: 0, valuable: 0 } }
   },
   "Pegasos": {
-    basic: { atk: 2, def: 1, hp: 2, ini: 5, type: 'Voladora', abilities: ["Volador.", "Infracción Mágica: Incrementa en 1 el coste de maná de hechizos enemigos."] },
-    elite: { atk: 3, def: 1, hp: 2, ini: 6, type: 'Voladora', abilities: ["Volador.", "Infracción Mágica.", "+1 Iniciativa de Combate."] }
+    basic: { atk: 3, def: 0, hp: 5, ini: 8, type: 'Voladora', abilities: [], customCost: { gold: 6, materials: 0, valuable: 0 } },
+    elite: { atk: 4, def: 0, hp: 6, ini: 12, type: 'Voladora', abilities: ["Pasivo: El Poder de todos los hechizos enemigos se reduce en 1 (hasta un mínimo de 0)."], customCost: { gold: 10, materials: 0, valuable: 0 } }
   },
   "Dendroides": {
-    basic: { atk: 2, def: 2, hp: 2, ini: 3, type: 'Melé', abilities: ["Enredar: Al atacar cuerpo a cuerpo, impide al objetivo moverse en su próximo turno."] },
-    elite: { atk: 3, def: 3, hp: 2, ini: 4, type: 'Melé', abilities: ["Enredar.", "Defensa Arraigada: +1 Defensa al defender."] }
+    basic: { atk: 4, def: 2, hp: 5, ini: 3, type: 'Melé', abilities: [], customCost: { gold: 8, materials: 0, valuable: 0 } },
+    elite: { atk: 4, def: 2, hp: 6, ini: 4, type: 'Melé', abilities: ["Pasivo: Las unidades enemigas que empiecen su activación adyacentes a esta unidad no pueden moverse."], customCost: { gold: 15, materials: 0, valuable: 0 } }
   },
   "Unicornios": {
-    basic: { atk: 3, def: 2, hp: 3, ini: 4, type: 'Melé', abilities: ["Mirada Cegadora: En un resultado de +1 en el dado de ataque, ciega al objetivo herido."] },
-    elite: { atk: 4, def: 2, hp: 3, ini: 5, type: 'Melé', abilities: ["Mirada Cegadora.", "Aura de Resistencia: Aliados adyacentes ganan +1 de Defensa."] }
+    basic: { atk: 5, def: 1, hp: 8, ini: 7, type: 'Melé', abilities: ["Pasivo: Reduce el Daño de Hechizos sufridos por esta unidad en 1 (hasta un mínimo de 0)."], customCost: { gold: 11, materials: 0, valuable: 0 } },
+    elite: { atk: 6, def: 1, hp: 8, ini: 9, type: 'Melé', abilities: ["Pasivo: Reduce el Daño de Hechizos sufridos por esta unidad y unidades adyacentes aliadas en 1 (hasta un mínimo de 0)."], customCost: { gold: 18, materials: 0, valuable: 1 } }
   },
-  "Dragones Verdes": {
-    basic: { atk: 4, def: 3, hp: 4, ini: 5, type: 'Voladora', abilities: ["Volador.", "Aliento Ácido.", "Inmune a hechizos de nivel 1-3."] },
-    elite: { atk: 5, def: 4, hp: 4, ini: 6, type: 'Voladora', abilities: ["Volador.", "Aliento Ácido.", "Inmune a hechizos de nivel 1-4."] }
+  "Dragones dorados": {
+    basic: { atk: 5, def: 3, hp: 9, ini: 10, type: 'Voladora', abilities: ["Al Atacar: Ataca a 2 espacios en fila. El primer ataque se resuelve de forma normal y el segundo con 2 Ataque."], customCost: { gold: 22, materials: 0, valuable: 1 } },
+    elite: { atk: 6, def: 3, hp: 10, ini: 16, type: 'Voladora', abilities: ["Al Atacar: Ataca a 2 espacios en fila. El primer ataque se resuelve normalmente y el segundo tiene 3 Ataque."], customCost: { gold: 30, materials: 0, valuable: 2 } }
   },
 
   // Torre
@@ -389,32 +389,32 @@ const UNIT_DETAILS: {
 
   // Inferno
   "Familiares": {
-    basic: { atk: 2, def: 1, hp: 2, ini: 5, type: 'Melé', abilities: ["Robo de Maná: Al inicio del combate, roba 1 de Maná al héroe enemigo."] },
-    elite: { atk: 1, def: 1, hp: 1, ini: 4, type: 'Melé', abilities: ["Robo de Maná de élite: Roba 2 de Maná al héroe enemigo."] }
+    basic: { atk: 2, def: 1, hp: 2, ini: 5, type: 'Melé', abilities: [], customCost: { gold: 2, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 1, hp: 2, ini: 7, type: 'Melé', abilities: ["Pasivo: Cuando un enemigo lanza un Hechizo de su mano, debe descartar 1 carta de la mano."], customCost: { gold: 3, materials: 0, valuable: 0 } }
   },
   "Magogs": {
-    basic: { atk: 2, def: 0, hp: 2, ini: 4, type: 'a Distancia', abilities: ["A distancia."] },
-    elite: { atk: 2, def: 0, hp: 1, ini: 5, type: 'a Distancia', abilities: ["A distancia.", "Bolas de Fuego: Su disparo inflige daño en área circular."] }
+    basic: { atk: 2, def: 0, hp: 2, ini: 4, type: 'a Distancia', abilities: [], customCost: { gold: 3, materials: 0, valuable: 0 } },
+    elite: { atk: 2, def: 0, hp: 3, ini: 6, type: 'a Distancia', abilities: ["Al Atacar: Cuando los magogs atacan a un objetivo que no está adyacente a ellos, hacen 1 Herida a una unidad adyacente al objetivo."], customCost: { gold: 5, materials: 0, valuable: 0 } }
   },
   "Cerberos": {
-    basic: { atk: 3, def: 0, hp: 4, ini: 7, type: 'Melé', abilities: ["Ataque Múltiple: Ataca a 3 enemigos adyacentes de forma simultánea."] },
-    elite: { atk: 2, def: 1, hp: 1, ini: 5, type: 'Melé', abilities: ["Ataque Múltiple.", "Sin Represalia."] }
+    basic: { atk: 3, def: 0, hp: 4, ini: 7, type: 'Melé', abilities: [], customCost: { gold: 4, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 1, hp: 5, ini: 8, type: 'Melé', abilities: ["Al Atacar: Ignora contraataques. Además, hace 1 Herida a otra unidad enemiga adyacente a los cerberos."], customCost: { gold: 7, materials: 0, valuable: 0 } }
   },
   "Demonios": {
-    basic: { atk: 3, def: 2, hp: 4, ini: 5, type: 'Melé', abilities: [] },
-    elite: { atk: 3, def: 1, hp: 2, ini: 4, type: 'Melé', abilities: ["Furia Infernal: +1 de Ataque si tiene heridas en su ficha."] }
+    basic: { atk: 3, def: 2, hp: 4, ini: 5, type: 'Melé', abilities: [], customCost: { gold: 6, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 2, hp: 5, ini: 6, type: 'Melé', abilities: [], customCost: { gold: 8, materials: 0, valuable: 0 } }
   },
   "Señores del abismo": {
-    basic: { atk: 4, def: 1, hp: 6, ini: 6, type: 'Melé', abilities: ["Invocador: Al morir un aliado de bronce, invoca una unidad de Demonios en su lugar."] },
-    elite: { atk: 3, def: 2, hp: 2, ini: 5, type: 'Melé', abilities: ["Invocador.", "Azote de Fuego: +1 Daño de Fuego contra enemigos de Murallas."] }
+    basic: { atk: 4, def: 1, hp: 6, ini: 6, type: 'Melé', abilities: [], customCost: { gold: 8, materials: 0, valuable: 0 } },
+    elite: { atk: 5, def: 1, hp: 6, ini: 7, type: 'Melé', abilities: ["Alternativo: Una vez por cada combate en el que hayas perdido una unidad. Invoca o refuerza <<unos pocos>> demonios (en el tablero)."], customCost: { gold: 15, materials: 0, valuable: 0 } }
   },
   "Efrits": {
-    basic: { atk: 5, def: 1, hp: 7, ini: 9, type: 'Voladora', abilities: ["Volador.", "Inmune a Fuego: Inmune a hechizos de la escuela de fuego."] },
-    elite: { atk: 4, def: 2, hp: 3, ini: 6, type: 'Voladora', abilities: ["Volador.", "Inmune a Fuego.", "Escudo de Fuego: Devuelve 1 de daño físico a quien le ataque cuerpo a cuerpo."] }
+    basic: { atk: 5, def: 1, hp: 7, ini: 9, type: 'Voladora', abilities: ["Pasivo: Ignora el Daño del hechizo Flecha mágica."], customCost: { gold: 12, materials: 0, valuable: 0 } },
+    elite: { atk: 6, def: 1, hp: 7, ini: 13, type: 'Voladora', abilities: ["Pasivo: Ignora cualquier Daño de la Flecha mágica y hechizos de la escuela de fuego."], customCost: { gold: 18, materials: 0, valuable: 1 } }
   },
   "Archidiablos": {
-    basic: { atk: 6, def: 3, hp: 8, ini: 11, type: 'Voladora', abilities: ["Volador.", "Sin Represalia."] },
-    elite: { atk: 5, def: 4, hp: 4, ini: 7, type: 'Voladora', abilities: ["Volador.", "Sin Represalia.", "Aura del Abismo: -1 a la Suerte de todas las unidades enemigas."] }
+    basic: { atk: 6, def: 3, hp: 8, ini: 11, type: 'Voladora', abilities: ["Al Atacar: Ignora contraataques."], customCost: { gold: 22, materials: 0, valuable: 1 } },
+    elite: { atk: 7, def: 3, hp: 9, ini: 15, type: 'Voladora', abilities: ["Al Atacar: Ignora contraataques.","Pasivo: Al moverse, los archidiablos se pueden mover a cualquier espacio vacío."], customCost: { gold: 30, materials: 0, valuable: 2 } }
   },
 
   // Bastión
@@ -1331,7 +1331,7 @@ export default function RecruitmentCalculator() {
           <div className="space-y-1.5">
             <label className="text-[10px] uppercase font-mono tracking-wider text-slate-500 block">Tropa / Nivel de Criatura:</label>
             {availableUnits.length > 0 ? (
-              <div className="space-y-1.5">
+              <div className="space-y-1.5 max-h-[160px] overflow-y-auto pr-1 scrollbar-thin">
                 {availableUnits.map(unit => {
                   const isSelected = selectedUnit?.nameBasic === unit.nameBasic;
                   return (
