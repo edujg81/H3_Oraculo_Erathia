@@ -1583,12 +1583,12 @@ export default function RecruitmentCalculator() {
                       )}
                       {currentCostSpecs.materials > 0 && (
                         <span className="bg-slate-950/80 border border-slate-800 text-slate-300 px-2.5 py-1 rounded-lg">
-                          🪵 {currentCostSpecs.materials} Mineral
+                          🪵 {currentCostSpecs.materials} Material
                         </span>
                       )}
                       {currentCostSpecs.valuable > 0 && (
                         <span className="bg-purple-950/60 border border-purple-900/40 text-purple-400 px-2.5 py-1 rounded-lg">
-                          🔮 {currentCostSpecs.valuable} Valioso
+                          🔮 {currentCostSpecs.valuable} Objeto de Valor
                         </span>
                       )}
                       {(currentCostSpecs.gold + currentCostSpecs.materials + currentCostSpecs.valuable) < 1 && (
@@ -1609,7 +1609,7 @@ export default function RecruitmentCalculator() {
                     <span className="block text-[10px] text-slate-500">
                       {selectedFaction === 'neutrales' ? 'No requiere vivienda de ciudad'
                         : selectedFaction === 'bancos' ? 'Defensores de criptas, utopías o conservatorios'
-                        : selectedFaction === 'invocaciones' ? 'Se invoca en combate mediante hechizos (sin coste de reclutamiento o edificios)'
+                        : selectedFaction === 'invocaciones' ? 'Se invoca en combate mediante hechizos (sin edificios)'
                         : `Requiere vivienda de ${selectedTier.toUpperCase()} construida`}
                     </span>
                   </div>
