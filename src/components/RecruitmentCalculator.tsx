@@ -71,13 +71,13 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 7, nameBasic: 'Titanes', nameElite: 'Titanes', tier: 'oro' }
   ],
   inferno: [
-    { level: 1, nameBasic: 'Diablillos', nameElite: 'Duendecillos', tier: 'bronce' },
-    { level: 2, nameBasic: 'Gogs', nameElite: 'Magogs', tier: 'bronce' },
-    { level: 3, nameBasic: 'Sabuesos', nameElite: 'Cerberos', tier: 'bronce' },
-    { level: 4, nameBasic: 'Demonios', nameElite: 'Demonios del Averno', tier: 'plata' },
-    { level: 5, nameBasic: 'Demonios del Abismo', nameElite: 'Señores del Abismo', tier: 'plata' },
-    { level: 6, nameBasic: 'Efreet', nameElite: 'Efreet Sultanes', tier: 'oro' },
-    { level: 7, nameBasic: 'Diablos', nameElite: 'Archidiablos', tier: 'oro' }
+    { level: 1, nameBasic: 'Familiares', nameElite: 'Familiares', tier: 'bronce' },
+    { level: 2, nameBasic: 'Magogs', nameElite: 'Magogs', tier: 'bronce' },
+    { level: 3, nameBasic: 'Cerberos', nameElite: 'Cerberos', tier: 'bronce' },
+    { level: 4, nameBasic: 'Demonios', nameElite: 'Demonios', tier: 'plata' },
+    { level: 5, nameBasic: 'Señores del abismo', nameElite: 'Señores del abismo', tier: 'plata' },
+    { level: 6, nameBasic: 'Efrits', nameElite: 'Efrits', tier: 'oro' },
+    { level: 7, nameBasic: 'Archidiablos', nameElite: 'Archidiablos', tier: 'oro' }
   ],
   bastion: [
     { level: 1, nameBasic: 'Goblins', nameElite: 'Goblins', tier: 'bronce' },
@@ -388,32 +388,32 @@ const UNIT_DETAILS: {
   },
 
   // Inferno
-  "Diablillos": {
-    basic: { atk: 1, def: 0, hp: 1, ini: 3, type: 'Melé', abilities: ["Robo de Maná: Al inicio del combate, roba 1 de Maná al héroe enemigo."] },
+  "Familiares": {
+    basic: { atk: 2, def: 1, hp: 2, ini: 5, type: 'Melé', abilities: ["Robo de Maná: Al inicio del combate, roba 1 de Maná al héroe enemigo."] },
     elite: { atk: 1, def: 1, hp: 1, ini: 4, type: 'Melé', abilities: ["Robo de Maná de élite: Roba 2 de Maná al héroe enemigo."] }
   },
-  "Gogs": {
-    basic: { atk: 1, def: 0, hp: 1, ini: 4, type: 'a Distancia', abilities: ["A distancia."] },
+  "Magogs": {
+    basic: { atk: 2, def: 0, hp: 2, ini: 4, type: 'a Distancia', abilities: ["A distancia."] },
     elite: { atk: 2, def: 0, hp: 1, ini: 5, type: 'a Distancia', abilities: ["A distancia.", "Bolas de Fuego: Su disparo inflige daño en área circular."] }
   },
-  "Sabuesos": {
-    basic: { atk: 1, def: 1, hp: 1, ini: 4, type: 'Melé', abilities: ["Ataque Múltiple: Ataca a 3 enemigos adyacentes de forma simultánea."] },
+  "Cerberos": {
+    basic: { atk: 3, def: 0, hp: 4, ini: 7, type: 'Melé', abilities: ["Ataque Múltiple: Ataca a 3 enemigos adyacentes de forma simultánea."] },
     elite: { atk: 2, def: 1, hp: 1, ini: 5, type: 'Melé', abilities: ["Ataque Múltiple.", "Sin Represalia."] }
   },
   "Demonios": {
-    basic: { atk: 2, def: 1, hp: 2, ini: 3, type: 'Melé', abilities: [] },
+    basic: { atk: 3, def: 2, hp: 4, ini: 5, type: 'Melé', abilities: [] },
     elite: { atk: 3, def: 1, hp: 2, ini: 4, type: 'Melé', abilities: ["Furia Infernal: +1 de Ataque si tiene heridas en su ficha."] }
   },
-  "Demonios del Abismo": {
-    basic: { atk: 2, def: 2, hp: 2, ini: 4, type: 'Melé', abilities: ["Invocador: Al morir un aliado de bronce, invoca una unidad de Demonios en su lugar."] },
+  "Señores del abismo": {
+    basic: { atk: 4, def: 1, hp: 6, ini: 6, type: 'Melé', abilities: ["Invocador: Al morir un aliado de bronce, invoca una unidad de Demonios en su lugar."] },
     elite: { atk: 3, def: 2, hp: 2, ini: 5, type: 'Melé', abilities: ["Invocador.", "Azote de Fuego: +1 Daño de Fuego contra enemigos de Murallas."] }
   },
-  "Efreet": {
-    basic: { atk: 3, def: 2, hp: 3, ini: 5, type: 'Voladora', abilities: ["Volador.", "Inmune a Fuego: Inmune a hechizos de la escuela de fuego."] },
+  "Efrits": {
+    basic: { atk: 5, def: 1, hp: 7, ini: 9, type: 'Voladora', abilities: ["Volador.", "Inmune a Fuego: Inmune a hechizos de la escuela de fuego."] },
     elite: { atk: 4, def: 2, hp: 3, ini: 6, type: 'Voladora', abilities: ["Volador.", "Inmune a Fuego.", "Escudo de Fuego: Devuelve 1 de daño físico a quien le ataque cuerpo a cuerpo."] }
   },
-  "Diablos": {
-    basic: { atk: 4, def: 3, hp: 4, ini: 6, type: 'Voladora', abilities: ["Volador.", "Sin Represalia."] },
+  "Archidiablos": {
+    basic: { atk: 6, def: 3, hp: 8, ini: 11, type: 'Voladora', abilities: ["Volador.", "Sin Represalia."] },
     elite: { atk: 5, def: 4, hp: 4, ini: 7, type: 'Voladora', abilities: ["Volador.", "Sin Represalia.", "Aura del Abismo: -1 a la Suerte de todas las unidades enemigas."] }
   },
 
@@ -1331,7 +1331,7 @@ export default function RecruitmentCalculator() {
           <div className="space-y-1.5">
             <label className="text-[10px] uppercase font-mono tracking-wider text-slate-500 block">Tropa / Nivel de Criatura:</label>
             {availableUnits.length > 0 ? (
-              <div className="space-y-1.5 max-h-[160px] overflow-y-auto pr-1 scrollbar-thin">
+              <div className="space-y-1.5">
                 {availableUnits.map(unit => {
                   const isSelected = selectedUnit?.nameBasic === unit.nameBasic;
                   return (
