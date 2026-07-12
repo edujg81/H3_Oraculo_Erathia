@@ -64,8 +64,8 @@ const FACTION_UNITS: FactionsUnitsData = {
   torre: [
     { level: 1, nameBasic: 'Gremlins', nameElite: 'Gremlins', tier: 'bronce' },
     { level: 2, nameBasic: 'Gárgolas', nameElite: 'Gárgolas', tier: 'bronce' },
-    { level: 3, nameBasic: 'Golems de Hierro', nameElite: 'Golems de Hierro', tier: 'bronce' },
-    { level: 4, nameBasic: 'Archimagos', nameElite: 'Archimagos', tier: 'plata' },
+    { level: 3, nameBasic: 'Gólems de hierro', nameElite: 'Golems de hierro', tier: 'bronce' },
+    { level: 4, nameBasic: 'Magos', nameElite: 'Magos', tier: 'plata' },
     { level: 5, nameBasic: 'Genios', nameElite: 'Genios', tier: 'plata' },
     { level: 6, nameBasic: 'Nagas', nameElite: 'Nagas', tier: 'oro' },
     { level: 7, nameBasic: 'Titanes', nameElite: 'Titanes', tier: 'oro' }
@@ -144,18 +144,17 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 2, nameBasic: 'Incursores lupinos (Neutral)', tier: 'bronce' },
     { level: 2, nameBasic: 'Elemental de aire', tier: 'bronce' },
     { level: 3, nameBasic: 'Trolls', tier: 'bronce' },
-    { level: 3, nameBasic: 'Golems de Acero', tier: 'bronce' },
     { level: 3, nameBasic: 'Grifos (Neutral)', tier: 'bronce' },
     { level: 3, nameBasic: 'Espectros (Neutral)', tier: 'bronce' },
     { level: 3, nameBasic: 'Ojos Maléficos (Neutral)', tier: 'bronce' },
-    { level: 3, nameBasic: 'Golems de Hierro (Neutral)', tier: 'bronce' },
+    { level: 3, nameBasic: 'Gólems de hierro (Neutral)', tier: 'bronce' },
     { level: 3, nameBasic: 'Orcos (Neutral)', tier: 'bronce' },
     { level: 3, nameBasic: 'Elementales de hielo (Neutral)', tier: 'bronce' },
     { level: 3, nameBasic: 'Lobos de mar (Neutral)', tier: 'bronce' },
     { level: 4, nameBasic: 'Cruzados (Neutral)', tier: 'plata' },
     { level: 4, nameBasic: 'Vampiros (Neutral)', tier: 'plata' },
     { level: 4, nameBasic: 'Medusas (Neutral)', tier: 'plata' },
-    { level: 4, nameBasic: 'Archimagos (Neutral)', tier: 'plata' },
+    { level: 4, nameBasic: 'Magos (Neutral)', tier: 'plata' },
     { level: 4, nameBasic: 'Ayssids (Neutral)', tier: 'plata' },
     { level: 4, nameBasic: 'Sátiros', tier: 'plata' },
     { level: 4, nameBasic: 'Ogros (Neutral)', tier: 'plata' },
@@ -167,14 +166,14 @@ const FACTION_UNITS: FactionsUnitsData = {
     { level: 4, nameBasic: 'Hechiceras (Neutral)', tier: 'plata' },
     { level: 4, nameBasic: 'Aves de trueno (Neutral)', tier: 'plata' },
     { level: 4, nameBasic: 'Elemental de fuego', tier: 'plata' },
-    { level: 5, nameBasic: 'Golems de Oro', tier: 'plata' },
+    { level: 5, nameBasic: 'Gólems de oro', tier: 'plata' },
     { level: 5, nameBasic: 'Momias', tier: 'plata' },
     { level: 5, nameBasic: 'Fanáticos (Neutral)', tier: 'plata' },
     { level: 5, nameBasic: 'Liches (Neutral)', tier: 'plata' },
     { level: 5, nameBasic: 'Minotauros (Neutral)', tier: 'plata' },
     { level: 5, nameBasic: 'Genios (Neutral)', tier: 'plata' },
     { level: 5, nameBasic: 'Elementales de magma (Neutral)', tier: 'plata' },
-    { level: 6, nameBasic: 'Golems de Diamante', tier: 'oro' },
+    { level: 6, nameBasic: 'Gólems de diamante', tier: 'oro' },
     { level: 6, nameBasic: 'Campeones (Neutral)', tier: 'oro' },
     { level: 6, nameBasic: 'Caballeros del Terror (Neutral)', tier: 'oro' },
     { level: 6, nameBasic: 'Mantícoras (Neutral)', tier: 'oro' },
@@ -364,28 +363,28 @@ const UNIT_DETAILS: {
     elite: { atk: 2, def: 0, hp: 2, ini: 5, type: 'a Distancia', abilities: [], customCost: { gold: 2, materials: 0, valuable: 0 } }
   },
   "Gárgolas": {
-    basic: { atk: 2, def: 1, hp: 3, ini: 6, type: 'Voladora', abilities: ["Pasiva: Esta unidad ignora cualquier efecto Contínuo de Hechizo."], customCost: { gold: 3, materials: 0, valuable: 0 } },
-    elite: { atk: 3, def: 1, hp: 3, ini: 9, type: 'Voladora', abilities: ["Pasiva: Esta unidad ignora cualquier efecto Contínuo de Hechizo."], customCost: { gold: 4, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 1, hp: 3, ini: 6, type: 'Voladora', abilities: ["Pasiva: Esta unidad ignora cualquier efecto Contínuo de hechizos."], customCost: { gold: 3, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 1, hp: 3, ini: 9, type: 'Voladora', abilities: ["Pasiva: Esta unidad ignora cualquier efecto Contínuo de hechizos."], customCost: { gold: 4, materials: 0, valuable: 0 } }
   },
-  "Golems de Hierro": {
-    basic: { atk: 3, def: 1, hp: 3, ini: 4, type: 'Melé', abilities: ["Pasiva: Esta unidad reduce cualquier daño provocado por hechizos en 1, hasta un mínimo de 0."], customCost: { gold: 4, materials: 0, valuable: 0 } },
-    elite: { atk: 3, def: 2, hp: 3, ini: 5, type: 'Melé', abilities: ["Pasiva: Esta unidad reduce cualquier daño provocado por hechizos en 2, hasta un mínimo de 0."], customCost: { gold: 7, materials: 0, valuable: 0 } }
+  "Gólems de hierro": {
+    basic: { atk: 3, def: 1, hp: 3, ini: 4, type: 'Melé', abilities: ["Pasiva: Esta unidad reduce cualquier Daño que reciba de hechizos en 1, hasta un mínimo de 0."], customCost: { gold: 4, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 2, hp: 3, ini: 5, type: 'Melé', abilities: ["Pasiva: Esta unidad reduce cualquier Daño que reciba de hechizos en 2, hasta un mínimo de 0."], customCost: { gold: 7, materials: 0, valuable: 0 } }
   },
-  "Archimagos": {
-    basic: { atk: 3, def: 0, hp: 4, ini: 5, type: 'a Distancia', abilities: ["Al Atacar: Ignora las penalizaciones de combate."], customCost: { gold: 6, materials: 0, valuable: 0 } },
-    elite: { atk: 4, def: 1, hp: 4, ini: 6, type: 'a Distancia', abilities: ["Al Atacar: Ignora las penalizacions de combate.", "Activación: Suma +1 de Potencia al primer hechizo que lances esta ronda."], customCost: { gold: 11, materials: 0, valuable: 0 } }
+  "Magos": {
+    basic: { atk: 3, def: 0, hp: 4, ini: 5, type: 'a Distancia', abilities: ["Al Atacar: Ignora penalizaciones de combate."], customCost: { gold: 6, materials: 0, valuable: 0 } },
+    elite: { atk: 4, def: 1, hp: 4, ini: 6, type: 'a Distancia', abilities: ["Al Atacar: Ignora penalizaciones de combate.", "Activación: Añade +1 Poder al primer hechizo que lances esta ronda."], customCost: { gold: 11, materials: 0, valuable: 0 } }
   },
   "Genios": {
-    basic: { atk: 3, def: 1, hp: 6, ini: 7, type: 'Voladora', abilities: ["Alternativa: Descarta 3 cartas de tu mazo y lleva un hechizo descartado de esta manera a tu mano."], customCost: { gold: 8, materials: 0, valuable: 0 } },
-    elite: { atk: 4, def: 1, hp: 6, ini: 8, type: 'Voladora', abilities: ["Al Atacar: Descarta hasta 3 cartas de tu mazo y lleva un hechizo descartado de esta manera a tu mano."], customCost: { gold: 12, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 1, hp: 6, ini: 7, type: 'Voladora', abilities: ["Alternativa: Descarta 3 cartas de tu mazo y devuelve a tu mano un Hechizo descartado de esta forma."], customCost: { gold: 8, materials: 0, valuable: 0 } },
+    elite: { atk: 4, def: 1, hp: 6, ini: 8, type: 'Voladora', abilities: ["Al Atacar: Descarta hasta 3 cartas de tu mazo y devuelve a tu mano un Hechizo descartado de esta forma."], customCost: { gold: 12, materials: 0, valuable: 0 } }
   },
   "Nagas": {
-    basic: { atk: 5, def: 2, hp: 7, ini: 6, type: 'Melé', abilities: ["Al Atacar: Ignora los contraataques."], customCost: { gold: 13, materials: 0, valuable: 0 } },
-    elite: { atk: 6, def: 2, hp: 7, ini: 8, type: 'Melé', abilities: ["Al Atacar: Ignora los contraataques."], customCost: { gold: 18, materials: 0, valuable: 1 } }
+    basic: { atk: 5, def: 2, hp: 7, ini: 6, type: 'Melé', abilities: ["Al Atacar: Ignora contraataques."], customCost: { gold: 13, materials: 0, valuable: 0 } },
+    elite: { atk: 6, def: 2, hp: 7, ini: 8, type: 'Melé', abilities: ["Al Atacar: Ignora contraataques."], customCost: { gold: 18, materials: 0, valuable: 1 } }
   },
   "Titanes": {
-    basic: { atk: 6, def: 3, hp: 8, ini: 7, type: 'Melé', abilities: ["Pasiva: Ignora cualquier efecto Contínuo."], customCost: { gold: 18, materials: 0, valuable: 1 } },
-    elite: { atk: 6, def: 3, hp: 8, ini: 11, type: 'a Distancia', abilities: ["Pasiva: Ignora cualquier efecto Continuo y las penalizaciones de combate contra unidades adyacentes."], customCost: { gold: 32, materials: 0, valuable: 2 } }
+    basic: { atk: 6, def: 3, hp: 8, ini: 7, type: 'Melé', abilities: ["Pasiva: Esta unidad ignora cualquier efecto Contínuo."], customCost: { gold: 18, materials: 0, valuable: 1 } },
+    elite: { atk: 6, def: 3, hp: 8, ini: 11, type: 'a Distancia', abilities: ["Pasiva: Esta unidad cualquier efecto Continuo y los penalizadores de combate aplicados a unidades adyacentes."], customCost: { gold: 32, materials: 0, valuable: 2 } }
   },
 
   // Inferno
@@ -620,7 +619,7 @@ const UNIT_DETAILS: {
   "Trolls": {
     basic: { atk: 1, def: 1, hp: 1, ini: 3, type: 'Melé', abilities: ["Carga: +1 de Ataque tras avanzar."] }
   },
-  "Golems de Acero": {
+  "Gólems de Acero": {
     basic: { atk: 1, def: 1, hp: 1, ini: 3, type: 'Melé', abilities: ["Carga: +1 de Ataque tras avanzar."] }
   },
   "Jabalíes": {
@@ -635,7 +634,7 @@ const UNIT_DETAILS: {
   "Ojos Maléficos (Neutral)": {
     basic: { atk: 2, def: 1, hp: 3, ini: 6, type: 'a Distancia', abilities: ["Pasiva: Ignora la penalización de combate contra unidades adyacentes."], customCost: { gold: 6, materials: 0, valuable: 0 } }
   },
-  "Golems de Hierro (Neutral)": {
+  "Gólems de hierro (Neutral)": {
     basic: { atk: 2, def: 1, hp: 4, ini: 3, type: 'Melé', abilities: ["Pasiva: Esta unidad reduce cualquier daño provocado por hechizos en 2, hasta un mínimo de 0."], customCost: { gold: 6, materials: 0, valuable: 0 } }
   },
   "Orcos (Neutral)": {
@@ -692,7 +691,7 @@ const UNIT_DETAILS: {
   "Elemental de fuego": {
     basic: { atk: 3, def: 1, hp: 3, ini: 6, type: 'Melé', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de fuego. Esta unidad inflige daño elemental."], customCost: { gold: 13, materials: 0, valuable: 0 } }
   },
-  "Golems de Oro": {
+  "Gólems de oro": {
     basic: { atk: 2, def: 2, hp: 2, ini: 3, type: 'Melé', abilities: ["Constructo.", "Resistencia de Oro: Reduce el daño de hechizos enemigos en 2."] }
   },
   "Momias": {
@@ -713,7 +712,7 @@ const UNIT_DETAILS: {
   "Elementales de magma (Neutral)": {
     basic: { atk: 3, def: 2, hp: 4, ini: 4, type: 'Melé', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de tierra. Esta unidad inflige daño elemental."], customCost: { gold: 14, materials: 0, valuable: 0 } }
   },
-  "Golems de Diamante": {
+  "Gólems de diamante": {
     basic: { atk: 2, def: 2, hp: 2, ini: 3, type: 'Melé', abilities: ["Resistencia Enana: Al recibir un hechizo, lanza el dado de combate; con +1 lo ignora."] }
   },
   "Campeones (Neutral)": {
@@ -1157,8 +1156,8 @@ export default function RecruitmentCalculator() {
 
     // Handle pure neutral units
     const pureNeutralsMap: { [key: string]: string } = {
-      'Golems de Oro': 'Creature_Gold_Golem_5.png',
-      'Golems de Diamante': 'Creature_Diamond_Golem_6.png',
+      'Gólems de oro': 'Creature_Gold_Golem_5.png',
+      'Gólems de diamante': 'Creature_Diamond_Golem_6.png',
       'Paisanos': 'Creature_Peasant_1.png',
       'Hobbits': 'Creature_Halfling_(Factory).png',
       'Pícaros': 'Creature_Rogue_2.png',
@@ -1176,7 +1175,6 @@ export default function RecruitmentCalculator() {
       'Fangarm': 'Creature_Fangarm_5.png',
       'Duende': 'Creature_Leprechaun_2.png',
       'Sátiros': 'Creature_Satyr_4.png',
-      'Golems de Acero': 'Creature_Steel_Golem_4.png',
       'Gólems de acero': 'Creature_Steel_Golem_4.png',
       'Elemental de aire': 'Creature_Air_Elemental_2.png',
       'Elementales de aire': 'Creature_Air_Elemental_2.png',
