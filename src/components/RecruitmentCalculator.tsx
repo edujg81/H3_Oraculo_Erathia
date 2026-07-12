@@ -1528,7 +1528,7 @@ export default function RecruitmentCalculator() {
                 </div>
 
                 {/* Reach & Combat Mode info */}
-                <div className="bg-slate-950/50 p-2.5 rounded-xl border border-slate-800/60 flex items-center justify-between text-xs z-10 mb-4">
+                <div className="bg-slate-950/50 p-2.5 rounded-xl border border-slate-800/60 flex items-center text-xs z-10 mb-4">
                   <div className="flex items-center gap-2">
                     <span className="text-lg">
                       {stats.type === 'Voladora' ? '🦅' : stats.type === 'a Distancia' ? '🏹' : '⚔️'}
@@ -1544,9 +1544,6 @@ export default function RecruitmentCalculator() {
                       </span>
                     </div>
                   </div>
-                  <span className="text-[10px] font-mono text-slate-400 uppercase">
-                    Rango: {stats.type}
-                  </span>
                 </div>
 
                 {/* Special Abilities List */}
