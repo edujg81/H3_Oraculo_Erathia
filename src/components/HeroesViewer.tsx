@@ -32,7 +32,7 @@ function getHeroBaseFilename(heroName: string, factionId?: string): string {
 
   // Live vs Undead Lord Haart portraits
   if (filename === 'Lord_Haart' && factionId === 'necropolis') {
-    filename = 'caballero_muerte_Lord_Haart';
+    filename = 'caballero_muerte_lord_haart';
   }
 
   return filename;
@@ -45,52 +45,87 @@ function getHeroPortrait(
   className: string,
   factionId: string
 ): string | undefined {
-  // Extract English class name from parentheses if present, e.g. "Caballero (Knight)" -> "knight"
-  const match = className.match(/\(([^)]+)\)/);
-  const englishClass = match ? match[1].toLowerCase().replace(/\s+/g, '_') : '';
+  if (!heroPortraits) return undefined;
 
-  // Get Spanish class prefix
-  let spanishClass = className
+  // Normalize inputs
+  const cleanHeroName = heroName
     .toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/\s+/g, '_');
 
+  const cleanClassName = className
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, '_');
+
+  // Map some Spanish class synonyms to match the filenames in thumbs
+  let spanishClass = cleanClassName;
   if (spanishClass === 'caballero_de_la_muerte') {
     spanishClass = 'caballero_muerte';
   } else if (spanishClass === 'caminante_de_planos') {
     spanishClass = 'caminante_planos';
   }
 
-  // Get standardized base name
-  const baseName = getHeroBaseFilename(heroName, factionId);
-  const baseNameLower = baseName.toLowerCase();
+  // Get base name from overrides (e.g. caballero_tarnum, etc.)
+  const baseName = getHeroBaseFilename(heroName, factionId).toLowerCase();
 
-  // Candidate filename configurations
-  const candidates = [
-    // 1. Prefix Spanish class name with lowercase, e.g. "alquimista_josephine"
-    spanishClass ? `${spanishClass}_${baseNameLower}` : null,
-    // 2. Prefix English class name if extracted from parentheses
-    englishClass ? `${englishClass}_${baseNameLower}` : null,
-    // 3. Just lowercase name, e.g. "adelaide", "catherine"
-    baseNameLower,
-    // 4. Just name with original casing, e.g. "Catherine"
-    baseName,
-    // 5. Prefix Spanish class name with original casing baseName
-    spanishClass ? `${spanishClass}_${baseName}` : null,
-    // 6. Prefix English class name with original casing baseName
-    englishClass ? `${englishClass}_${baseName}` : null,
-  ].filter(Boolean) as string[];
+  // We want to find a file in heroPortraits that match our candidates.
+  // Let's build candidates for the filename without extension:
+  const candidates = new Set<string>();
 
-  // Search through known glob keys for a match with common image formats
+  // If it is Tarnum, we have specific base names like "caballero_tarnum", etc.
+  candidates.add(baseName);
+
+  // Add spanishClass + "_" + baseName
+  candidates.add(`${spanishClass}_${baseName}`);
+
+  // Add spanishClass + "_" + cleanHeroName
+  candidates.add(`${spanishClass}_${cleanHeroName}`);
+
+  // Add just cleanHeroName
+  candidates.add(cleanHeroName);
+
+  // Add other common combinations
+  candidates.add(baseName.replace('lord_', ''));
+  candidates.add(cleanHeroName.replace('lord_', ''));
+
+  // Also extract English class name if present in parentheses
+  const match = className.match(/\(([^)]+)\)/);
+  if (match) {
+    const englishClass = match[1].toLowerCase().replace(/\s+/g, '_');
+    candidates.add(`${englishClass}_${baseName}`);
+    candidates.add(`${englishClass}_${cleanHeroName}`);
+  }
+
+  // Search through heroPortraits keys.
+  // We extract the filename (with or without extension) from each key and compare.
+  const portraitKeys = Object.keys(heroPortraits);
+
   for (const candidate of candidates) {
-    const keyJpg = `../assets/images/thumbs/${candidate}.jpg`;
-    const keyPng = `../assets/images/thumbs/${candidate}.png`;
-    const keyJpeg = `../assets/images/thumbs/${candidate}.jpeg`;
+    const targetJpg = `${candidate}.jpg`;
+    const targetPng = `${candidate}.png`;
+    const targetJpeg = `${candidate}.jpeg`;
 
-    if (heroPortraits[keyJpg]) return heroPortraits[keyJpg];
-    if (heroPortraits[keyPng]) return heroPortraits[keyPng];
-    if (heroPortraits[keyJpeg]) return heroPortraits[keyJpeg];
+    const foundKey = portraitKeys.find(key => {
+      const filePart = key.substring(key.lastIndexOf('/') + 1).toLowerCase();
+      return filePart === targetJpg || filePart === targetPng || filePart === targetJpeg;
+    });
+
+    if (foundKey) {
+      return heroPortraits[foundKey];
+    }
+  }
+
+  // Fallback: search if the key contains the cleanHeroName at all
+  const fallbackKey = portraitKeys.find(key => {
+    const filePart = key.substring(key.lastIndexOf('/') + 1).toLowerCase();
+    return filePart.includes(cleanHeroName);
+  });
+
+  if (fallbackKey) {
+    return heroPortraits[fallbackKey];
   }
 
   return undefined;
@@ -371,7 +406,7 @@ export default function HeroesViewer() {
                             src={heroImage}
                             alt={hero.name}
                             className={`w-full h-full object-cover select-none pointer-events-none ${
-                              hero.name === 'Tarnum' && selectedFaction === 'confluencia'
+                              hero.name === 'Tarnum' && selectedFaction === 'conflujo'
                                 ? 'scale-[1.35] origin-top'
                                 : ''
                             }`}
@@ -460,7 +495,7 @@ export default function HeroesViewer() {
                             src={selectedHeroImage}
                             alt={selectedHero.name}
                             className={`w-full h-full object-cover select-none pointer-events-none transition-transform duration-500 ${
-                              selectedHero.name === 'Tarnum' && selectedFaction === 'confluencia'
+                              selectedHero.name === 'Tarnum' && selectedFaction === 'conflujo'
                                 ? 'scale-[1.35] origin-top group-hover:scale-[1.45]'
                                 : 'group-hover:scale-110'
                             }`}

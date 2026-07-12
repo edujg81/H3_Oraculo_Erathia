@@ -8,6 +8,7 @@ import ScenariosDatabase from './components/ScenariosDatabase';
 import HeroesViewer from './components/HeroesViewer';
 import SkillsBrowser from './components/SkillsBrowser';
 import WarMachinesViewer from './components/WarMachinesViewer';
+import MapLocationsViewer from './components/MapLocationsViewer';
 import { playTickSound, playTimeOutSound } from './utils/audio';
 // @ts-ignore
 import oracleLogo from './assets/images/sandro_oracle_titled_logo_1783458347417.jpg';
@@ -15,7 +16,7 @@ import { RuleSection, Player } from './types';
 import { 
   Sparkles, Library, Timer, Printer, Award, BookOpen, 
   HelpCircle, Compass, Gamepad2, Hourglass, Swords, Users, Dices, Coins,
-  Hammer
+  Hammer, Map
 } from 'lucide-react';
 
 const FACTIONS = [
@@ -32,7 +33,7 @@ const FACTIONS = [
 ];
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'chat' | 'rules' | 'pdf' | 'timer_full' | 'calculator' | 'scenarios' | 'heroes' | 'units' | 'skills' | 'warmachines'>('chat');
+  const [activeTab, setActiveTab] = useState<'chat' | 'rules' | 'pdf' | 'timer_full' | 'calculator' | 'scenarios' | 'heroes' | 'units' | 'skills' | 'warmachines' | 'locations'>('chat');
   const [selectedSection, setSelectedSection] = useState<RuleSection | null>(null);
 
   // Unified Timer and Round State (App-Level for clean sync in Bento Sidebar)
@@ -282,6 +283,7 @@ export default function App() {
     { id: 'heroes', label: 'Héroes', icon: Users, color: 'text-yellow-400' },
     { id: 'skills', label: 'Habilidades', icon: Award, color: 'text-amber-500' },
     { id: 'warmachines', label: 'Máquinas de Guerra', icon: Hammer, color: 'text-amber-600' },
+    { id: 'locations', label: 'Localizaciones del Mapa', icon: Map, color: 'text-emerald-500' },
     { id: 'timer_full', label: 'Gestión de Partida', icon: Hourglass, color: 'text-emerald-400' },
     { id: 'pdf', label: 'Manual Completo / PDF', icon: Printer, color: 'text-purple-400' }
   ];
@@ -409,6 +411,12 @@ export default function App() {
             {activeTab === 'warmachines' && (
               <div className="space-y-4">
                 <WarMachinesViewer />
+              </div>
+            )}
+
+            {activeTab === 'locations' && (
+              <div className="space-y-4">
+                <MapLocationsViewer />
               </div>
             )}
 
