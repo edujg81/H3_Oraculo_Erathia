@@ -1,0 +1,53 @@
+=== MAGIC_ARROW ===
+Flecha mágica  Basic Spell <activation> The selected unit suffers: <power> 0 ➣ 1 <damage> <power> 1 ➣ 2 <damage> <power> 2 ➣ 3 <damage> — OR — <instant> +1 <power> Notas  Magic Arrow se considera un hechizo básico, a pesar de tener un símbolo mágico en cada esquina. Magic Arrow puede beneficiarse de la bonificación de poder de hechizo a cualquier escuela de magia, pero solo puede verse afectada por una sola escuela de magia a la vez. 1 Si una unidad ignora una escuela de magia específica (es inmune a los hechizos de esa escuela de magia), puede * no * ignorar la flecha mágica. Viene Con  Juego Principal Expansión de Muralla Expansión de Fortaleza Expansión de Infierno Expansión de Bastión Expansión de Conflujo Expansión de Ensenada Regular Stretch Goals 2024 (Alternate Heroes 2 art) Ver También  Escuela de Magia Aérea Escuela de Magia Terrestre Escuela de Magia Ígnea Escuela de Magia Acuática Lista de Hechizos Not officially confirmed by game designers, and is therefore considered a Community rule.  
+
+=== LIGHTNING_BOLT ===
+Rayo  Hechizo de Aire Básico <activation> The selected unit suffers: <power> 0 ➣ 2 <damage> <power> 1 ➣ 3 <damage> <power> 2 ➣ 4 <damage> — OR — <instant> +1 <power> Viene Con  Juego Principal Ver También  Escuela de Magia Aérea Lista de Hechizos
+
+=== HASTE ===
+Celeridad  Hechizo de Aire Básico <ongoing> Hasta el final del Combate, la unidad seleccionada gana: <power> 0 ➣ +1 <initiative> <power> 1 ➣ +2 <initiative> <power> 2 ➣ +3 <initiative> — O — <instant> +1 <power> Notas  1 En el campo de batalla pequeño, sólo aumenta la iniciativa de la unidad, no su rango de movimiento. En la Expansión de Campo de Batalla, la iniciativa se utiliza para determinar el alcance de movimiento, por lo que una unidad bajo este hechizo también ve aumentado su alcance de movimiento. Viene Con  Juego Principal Ver También  Escuela de Magia Aérea Lista de Hechizos Expansión de Campo de Batalla Excepciones para modos de juego específicos. Esta explicación no es válida para todos los modos de juego. La variante específica para el modo de juego se menciona en el texto.  
+
+=== PRECISION ===
+Precisión  Hechizo de Aire Básico <instant> When attacking a non-adjacent unit , the selected <unit_ranged> unit ignores the combat penalties and gains: <power> 0 ➣ +1 <attack> <power> 1 ➣ +2 <attack> <power> 2 ➣ +3 <attack> — OR — <instant> +1 <power> Viene Con  Expansión de Muralla Ver También  Escuela de Magia Aérea Lista de Hechizos
+
+=== DIMENSION_DOOR ===
+Puerta Dimensional  Hechizo de Aire Experto <map_effect> Mueve un Héroe hasta * zona(s). Ignora los obstáculos y zonas intermedias y resuelve la última con normalidad. <power> 0 ➣ *1 <power> 2 ➣ *2 <power> 4 ➣ *3 — O — <instant> +1 <power> Notas  La Puerta Dimensional sólo puede mover al Héroe del lanzador, no a un Héroe controlado por cualquier otro jugador. Puede utilizarse para saltar zonas bloqueadas. Viene Con  Expansión de Muralla Ver También  Escuela de Magia Aérea Lista de Hechizos
+
+=== CURE ===
+Curar  Hechizo Básico de Agua <instant> Retira cualquier efecto o <paralysis> de la unidad seleccionada, y retira de esta unidad hasta: <power> 0 ➣ 1 <damage> <power> 1 ➣ 2 <damage> <power> 2 ➣ 3 <damage> — O — <instant> +1 <power> Notas  1 No está claro qué se entiende aquí por «efecto». 2 La curación sólo puede ser lanzada sobre una unidad aliada. 2 La eliminación de un efecto es opcional. Un efecto positivo no tiene que ser eliminado y por lo tanto puede permanecer activo. Viene Con  Juego Principal Ver También  Escuela de Magia Acuática Lista de Hechizos Pregunta abierta que aún no tiene respuesta.   No confirmado oficialmente por los diseñadores del juego, por lo que se considera una norma comunitaria.   
+
+=== BLESS ===
+Bendecir  Hechizo Básico de Agua <instant> La :unit: de <unit_ground> o <unit_flying> seleccionada <power> 0 ➣ Ignora la tirada del dado de Ataque . <power> 1 ➣ Ignora la tirada del dado de Ataque y gana +1 <attack> <power> 2 ➣ Ignora la tirada del dado de Ataque y gana +2 <attack> — O — <instant> +1 <power> Notas  Si no se tira ningún dado de Ataque durante el ataque, tampoco se muestra ningún resultado. Esto significa que las unidades que tienen habilidades basadas en el resultado de una tirada de Ataque no se activan. (ej. la :defensa: de los Zombis no aumenta, y las Momias no pueden poner el dado de Ataque a «-1»). Viene Con  Juego Principal Ver También  Escuela de Magia Acuática Lista de Hechizos
+
+=== DISPEL ===
+Disipar  Hechizo Básico de Agua <instant> Eliminar todos los efectos <ongoing> de una casilla o de una * unidad y de la casilla que ocupa. <power> 0 ➣ * <bronze> <power> 1 ➣ * <bronze> o <silver> <power> 2 ➣ * <bronze> o <silver> o <golden> — O — <instant> +1 <power> Notas  Los efectos globales que no están vinculados a una unidad específica ( ej. Tiro con Arco) no pueden ser eliminados. Viene Con  Expansión de Torre Ver También  Escuela de Magia Acuática Lista de Hechizos
+
+=== CURSE ===
+Maldición  Hechizo Básico de Fuego <instant> La unidad seleccionado sufre (hasta un mínimo de 0): <power> 0 ➣ -1 <defense> <power> 1 ➣ -2 <defense> <power> 2 ➣ -3 <defense> — O — <instant> +1 <power> Viene Con  Juego Principal Ver También  Escuela de Magia Ígnea Lista de Hechizos
+
+=== BLIND ===
+Cegar  Hechizo Básico de Fuego <activation> Coloca una ficha de <paralysis> sobre la unidad * seleccionada: <power> 0 ➣ * <bronze> <power> 1 ➣ * <bronze> o <silver> <power> 2 ➣ * <bronze> o <silver> o <golden> — O — <instant> +1 <power> Notas  Ver Parálisis Viene Con  Juego Principal Ver También  Escuela de Magia Ígnea Lista de Hechizos
+
+=== FIRE_WALL ===
+Muro de Fuego  Hechizo Básico de Fuego <ongoing> Para este Combate, coloca esta carta en un espacio vacío del tablero de Combate. Inflige * a cualquier unidad que se detenga aquí y a cualquier unidad <unit_ground> o <unit_ranged> que la atraviese. <power> 0 ➣ *1 <damage> <power> 2 ➣ *2 <damage> <power> 4 ➣ *3 <damage> — O — <instant> +1 <power> Notas  1 En el campo de batalla grande, se coloca una ficha de Muro de Fuego en el campo de batalla en lugar de la carta. Viene Con  Expansión de Muralla Ver También  Escuela de Magia Ígnea Lista de Hechizos Excepciones para modos de juego específicos. Esta explicación no es válida para todos los modos de juego. La variante específica para el modo de juego se menciona en el texto.  
+
+=== SHIELD ===
+Blindaje  Hechizo Básico de Tierra <instant> The defending unit gains * against a <unit_ground> or <unit_flying> unit . <power> 0 ➣ *+1 <defense> <power> 1 ➣ *+2 <defense> <power> 2 ➣ *+3 <defense> — OR — <instant> +1 <power> Viene Con  Expansión de Torre Ver También  Escuela de Magia Terrestre Lista de Hechizos
+
+=== STONE_SKIN ===
+Piel de piedra  Hechizo Básico de Tierra <instant> The selected unit gains: <power> 0 ➣ +1 <defense> <power> 1 ➣ +2 <defense> <power> 2 ➣ +3 <defense> — OR — <instant> +1 <power> Viene Con  Juego Principal Ver También  Escuela de Magia Terrestre Lista de Hechizos
+
+=== SLOW ===
+Slow  Hechizo Básico de Tierra <ongoing> Until the end of the Combat, the selected unit suffers: <power> 0 ➣ -1 <initiative> <power> 1 ➣ -2 <initiative> <power> 2 ➣ -3 <initiative> — OR — <instant> +1 <power> Notas  1 En el pequeño campo de batalla, solo la iniciativa de la unidad disminuye, no su rango de movimiento.En la expansión del campo de batalla, la iniciativa se utiliza para determinar el rango de movimiento, por lo tanto, una unidad bajo este hechizo también tiene su rango de movimiento disminuido. Viene Con  Juego Principal Ver También  Escuela de Magia Terrestre Lista de Hechizos Excepciones para modos de juego específicos. Esta explicación no es válida para todos los modos de juego. La variante específica para el modo de juego se menciona en el texto.  
+
+=== EARTHQUAKE ===
+Terremoto  Hechizo Básico de Tierra <instant> Durante un asedio de Town : <power> 0 ➣ Elimina 1 obstáculo de Puerta o Muro a tu elección. <power> 1 ➣ Elimina 2 obstáculos de Puerta o Muro a tu elección. <power> 2 ➣ Cada unidad adyacente a un obstáculo Muro o Puerta sufre 1 <damage> . Elimina todos los obstáculos de Puerta o Muro. — O — <instant> +1 <power> Viene Con  Expansión de Muralla Ver También  Escuela de Magia Terrestre Lista de Hechizos
+
+=== RESURRECTION ===
+Resurrección  Hechizo de Tierra Experto <instant> Cancel an attack that would reduce your * unit's <health_points> to 0. You can cast this spell immediately after the enemy unit's attack. <power> 0 ➣ * <bronze> <power> 2 ➣ * <bronze> or <silver> <power> 4 ➣ * <bronze> or <silver> or <golden> — OR — <instant> +1 <power> Notas  Solo el daño de un ataque puede ser anulado.Si los puntos de salud se reducen por otros medios de daño (como habilidades, hechizos, especialidades, etc.), no se puede jugar la resurrección. Si el daño de un ataque se anula, la unidad resucitada no tomará represalias, incluso si no ha realizado una represalia en esta ronda. Viene Con  Juego Principal Ver También  Escuela de Magia Terrestre Lista de Hechizos
+
+=== CHAIN_LIGHTNING ===
+Relámpago en Cadena  Hechizo de Aire Experto <activation> Selecciona una unidad y otras 2 unidades cercanas a ella. Asigna * <damage> , empezando por la primera unidad seleccionada. <power> 0 ➣ 1/1/1 <damage> <power> 2 ➣ 2/1/1 <damage> <power> 4 ➣ 3/2/1 <damage> — O — <instant> +1 <power> Notas  El <damage> de Relámpago en Cadena también se aplica a unidades aliadas. Si varias unidades se encuentran a la misma distancia del objetivo de este hechizo, el lanzador elige cuál de ellas recibe el segundo daño y cuál el tercero. Viene Con  Juego Principal Ver También  Lista de Hechizos Escuela de Magia Aérea
+
+=== IMPLOSION ===
+Implosión  Hechizo de Tierra Experto <activation> La unidad seleccionada sufre: <power> 1 ➣ 2 <damage> <power> 3 ➣ 4 <damage> <power> 5 ➣ 6 <damage> — O — <instant> +1 <power> Notas  Para jugar este hechizo, es necesario jugar también al menos un poder de hechizo. Viene Con  Expansión de Fortaleza Ver También  Escuela de Magia Terrestre Lista de Hechizos
