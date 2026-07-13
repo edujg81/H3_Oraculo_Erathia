@@ -26,7 +26,7 @@ interface FactionsUnitsData {
 const FACTION_UNITS: FactionsUnitsData = {
   castillo: [
     { level: 1, nameBasic: 'Alabarderos', nameElite: 'Alabarderos', tier: 'bronce' },
-    { level: 2, nameBasic: 'Arqueros', nameElite: 'Arqueros', tier: 'bronce' },
+    { level: 2, nameBasic: 'Tiradores', nameElite: 'Tiradores', tier: 'bronce' },
     { level: 3, nameBasic: 'Grifos', nameElite: 'Grifos', tier: 'bronce' },
     { level: 4, nameBasic: 'Cruzados', nameElite: 'Cruzados', tier: 'plata' },
     { level: 5, nameBasic: 'Fanáticos', nameElite: 'Fanáticos', tier: 'plata' },
@@ -236,31 +236,31 @@ const UNIT_DETAILS: {
   // Castillo
   "Alabarderos": {
     basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'Melé', abilities: [], customCost: { gold: 2, materials: 0, valuable: 0 } },
-    elite: { atk: 3, def: 1, hp: 2, ini: 5, type: 'Melé', abilities: ["Pasiva: Cuando sea objetivo de cualquier ataque, puedes descartar 1 carta e ignorar el resultado de la tirada del dado de ataque."], customCost: { gold: 3, materials: 0, valuable: 0 } }
+    elite: { atk: 3, def: 1, hp: 2, ini: 5, type: 'Melé', abilities: ["Pasivo: Cuando esta unidad sea el objetivo de un ataque, puedes descartar una carta para ignorar el resultado del dado de ataque."], customCost: { gold: 3, materials: 0, valuable: 0 } }
   },
-  "Arqueros": {
+  "Tiradores": {
     basic: { atk: 2, def: 0, hp: 2, ini: 4, type: 'a Distancia', abilities: [], customCost: { gold: 3, materials: 0, valuable: 0 } },
-    elite: { atk: 2, def: 0, hp: 2, ini: 6, type: 'a Distancia', abilities: ["Al Atacar: Si el objetivo no está adyacente, ataca a ese objetivo de nuevo."], customCost: { gold: 5, materials: 0, valuable: 0 } }
+    elite: { atk: 2, def: 0, hp: 2, ini: 6, type: 'a Distancia', abilities: ["Al Atacar: Si un objetivo no está adyacente, vuelve a atacarlo."], customCost: { gold: 5, materials: 0, valuable: 0 } }
   },
   "Grifos": {
-    basic: { atk: 2, def: 0, hp: 4, ini: 6, type: 'Voladora', abilities: ["Contraataque: Esta unidad puede realizar un número ilimitado de contraataques."], customCost: { gold: 4, materials: 0, valuable: 0 } },
-    elite: { atk: 3, def: 0, hp: 4, ini: 9, type: 'Voladora', abilities: ["Contraataque: Esta unidad puede realizar un número ilimitado de contraataques."], customCost: { gold: 6, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 0, hp: 4, ini: 6, type: 'Voladora', abilities: ["Contraataque: Esta unidad puede llevar a cabo una cantidad ilimitada de contraataques."], customCost: { gold: 4, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 0, hp: 4, ini: 9, type: 'Voladora', abilities: ["Contraataque: Esta unidad puede llevar a cabo una cantidad ilimitada de contraataques."], customCost: { gold: 6, materials: 0, valuable: 0 } }
   },
   "Cruzados": {
     basic: { atk: 3, def: 2, hp: 4, ini: 5, type: 'Melé', abilities: [], customCost: { gold: 6, materials: 0, valuable: 0 } },
-    elite: { atk: 4, def: 2, hp: 4, ini: 6, type: 'Melé', abilities: ["Al Atacar: Puedes volver a tirar cada '0' en el dado de Ataque de esta unidad."], customCost: { gold: 10, materials: 0, valuable: 0 } }
+    elite: { atk: 4, def: 2, hp: 4, ini: 6, type: 'Melé', abilities: ["Al Atacar: Puedes volver a tirar los 0 en el dado de ataque de esta unidad."], customCost: { gold: 10, materials: 0, valuable: 0 } }
   },
   "Fanáticos": {
     basic: { atk: 3, def: 1, hp: 5, ini: 5, type: 'a Distancia', abilities: [], customCost: { gold: 8, materials: 0, valuable: 0 } },
-    elite: { atk: 4, def: 1, hp: 5, ini: 7, type: 'a Distancia', abilities: ["Pasiva: No sufre penalizaciones en combates cuerpo a cuerpo."], customCost: { gold: 12, materials: 0, valuable: 0 } }
+    elite: { atk: 4, def: 1, hp: 5, ini: 7, type: 'a Distancia', abilities: ["Pasivo: Ignora la penalización de combate contra unidades adyacentes."], customCost: { gold: 12, materials: 0, valuable: 0 } }
   },
   "Campeones": {
-    basic: { atk: 5, def: 2, hp: 7, ini: 7, type: 'Melé', abilities: ["Mapa: Si tu héroe está en una casilla con establos, el coste de refuerzo de esta unidad se reduce en 6 Oros."], customCost: { gold: 12, materials: 0, valuable: 0 } },
-    elite: { atk: 6, def: 2, hp: 7, ini: 9, type: 'Melé', abilities: ["Al Atacar: Si el movimiento de esta unidad termina en un espacio distinto al de inicio, puedes volver a tirar un dado de Ataque."], customCost: { gold: 20, materials: 0, valuable: 1 } }
+    basic: { atk: 5, def: 2, hp: 7, ini: 7, type: 'Melé', abilities: ["Mapa: Si tu héroe está en una zona con establos, el coste de refuerzo de esta unidad se reduce en 6 Oros."], customCost: { gold: 12, materials: 0, valuable: 0 } },
+    elite: { atk: 6, def: 2, hp: 7, ini: 9, type: 'Melé', abilities: ["Al Atacar: Si esta unidad termina su movimiento en un espacio diferente al inicial, puedes volver a tirar un dado de ataque."], customCost: { gold: 20, materials: 0, valuable: 1 } }
   },
   "Arcángeles": {
-    basic: { atk: 6, def: 3, hp: 8, ini: 12, type: 'Voladora', abilities: ["Pasiva: Cuando comience el combate, roba 1 carta."], customCost: { gold: 20, materials: 0, valuable: 1 } },
-    elite: { atk: 7, def: 3, hp: 10, ini: 18, type: 'Voladora', abilities: ["Pasiva: Una vez por combate. Cancela un ataque que reduzca la vida de otra unidad a 0."], customCost: { gold: 30, materials: 0, valuable: 2 } }
+    basic: { atk: 6, def: 3, hp: 8, ini: 12, type: 'Voladora', abilities: ["Pasivo: Cuando se inicie un combate, roba 1 carta."], customCost: { gold: 20, materials: 0, valuable: 1 } },
+    elite: { atk: 7, def: 3, hp: 10, ini: 18, type: 'Voladora', abilities: ["Pasivo: Una vez por combate. Cancela un ataque que fuese a reducir a 0 los Puntos de Salud otra unidad a 0."], customCost: { gold: 30, materials: 0, valuable: 2 } }
   },
 
   // Necrópolis
