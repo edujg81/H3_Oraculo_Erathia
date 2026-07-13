@@ -283,7 +283,7 @@ export default function App() {
     { id: 'heroes', label: 'Héroes', icon: Users, color: 'text-yellow-400' },
     { id: 'skills', label: 'Habilidades', icon: Award, color: 'text-amber-500' },
     { id: 'warmachines', label: 'Máquinas de Guerra', icon: Hammer, color: 'text-amber-600' },
-    { id: 'locations', label: 'Localizaciones del Mapa', icon: Map, color: 'text-emerald-500' },
+    { id: 'locations', label: 'Lugares del Mapa', icon: Map, color: 'text-emerald-500' },
     { id: 'timer_full', label: 'Gestión de Partida', icon: Hourglass, color: 'text-emerald-400' },
     { id: 'pdf', label: 'Manual Completo / PDF', icon: Printer, color: 'text-purple-400' }
   ];

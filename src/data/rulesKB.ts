@@ -70,7 +70,7 @@ Se utiliza principalmente como botín o recompensa (como al vencer en el Templo 
     title: "5. Fichas Especiales de Juego y sus Reglamentos",
     category: "components",
     content: `Para regular diversos efectos atmosféricos, tácticos y limitaciones, el juego de mesa utiliza fichas dedicadas:
-1. Fichas de Tiempo (Time Tokens): Se colocan en el tablero de ronda de escenario o pista de campaña. Actúan como una cuenta atrás fija. Además, limitan las visitas a ciertas localizaciones raras, indicando cuándo se reactivan o cuándo spawnearán ejércitos neutrales en el mapa de aventura.
+1. Fichas de Tiempo (Time Tokens): Se colocan en el tablero de ronda de escenario o pista de campaña. Actúan como una cuenta atrás fija. Además, limitan las visitas a ciertos lugares raros, indicando cuándo se reactivan o cuándo spawnearán ejércitos neutrales en el mapa de aventura.
 2. Cartas de Hechizo en Pergamino (Spell Scroll Cards): Cartas que representan pergaminos arcanos. En el juego base contienen un hechizo específico imprimado, permitiendo a cualquier héroe lanzar ese hechizo en combate (o mapa) sin poseer el Libro de Hechizos ni el nivel requerido, descartándose tras su uso. En la expansión de Confluencia, los pergaminos se cargan con dos hechizos boca abajo del mazo, actuando bajo reglas especiales asimétricas de límite, poder más débil y venta (ver sección 20 para más detalles).
 3. Fichas de Arenas Movedizas (Quicksand Spell Tokens): Fichas de obstáculo provisional que se sitúan sobre la reja de combatetactico (4x5) tras conjurar el hechizo homónimo de tierra. Cualquier unidad terrestre que camine hacia esta casilla debe cesar su movimiento de forma fulminante en ella, perdiendo su ataque en ese turno.
 4. Fichas de Ataque (Attack Tokens): Indicadores circulares temporales que se colocan sobre la carta de regimiento para reflejar bufos mágicos de bendición (+1 al ataque) o debuffs (-1 al ataque), alterando directamente los dados de combate rojos tirados.
@@ -320,9 +320,9 @@ El jugador puede descartar voluntariamente cartas de su mano si lo desea y cede 
   },
   {
     id: "map_locations_compendium",
-    title: "15. Compendio Completo de Localizaciones del Mapa y Efectos",
+    title: "15. Compendio Completo de Lugares del Mapa y Efectos",
     category: "map",
-    content: `Las localizaciones en el mapa de aventura de Heroes III pertenecen a cuatro grandes categorías de interacción con reglas precisas:
+    content: `Los lugares en el mapa de aventura de Heroes III pertenecen a cuatro grandes categorías de interacción con reglas precisas:
 
 1. VISITABLES (Colocan un cubo negro tras visitarse; quedan inutilizadas a menos que el escenario asigne retirar los cubos):
 • Piedra de Aprendizaje (Learning Stone): El héroe gana inmediatamente 1 punto de Exp.
@@ -651,9 +651,9 @@ En torneos con cronómetro táctico, cada jugador dispone de un pool de 3 minuto
   },
   {
     id: "cove_maritime_locations",
-    title: "26. Localizaciones Marítimas y de Expansión Cove (Savage Seas)",
+    title: "26. Lugares Marítimos y de Expansión Cove (Savage Seas)",
     category: "map",
-    content: `Las losetas de mar introducidas en la expansión Cove (Savage Seas) incorporan un conjunto propio de localizaciones visitables y obstáculos interactivos únicos:
+    content: `Las losetas de mar introducidas en la expansión Cove (Savage Seas) incorporan un conjunto propio de lugares visitables y obstáculos interactivos únicos:
 
 1. TEMPLO DEL MAR (Sea Temple):
 Custodiado por regimientos de Elementales de Agua y Serpientes Marinas de oro. Vencer al guardián confiere +1 Hechizo de Agua aleatorio experto de forma gratuita y un Botín del Dado de Tesoro.
@@ -672,9 +672,9 @@ Se asimilan a las criptas terrestres. Contienen tesoros guardados por fantasmas 
   },
   {
     id: "elemental_locations_conflux",
-    title: "27. Localizaciones Elementales y Expansión Conflux",
+    title: "27. Lugares Elementales y Expansión Conflux",
     category: "map",
-    content: `La expansión de Confluencia (Conflux) añade localizaciones de energía elemental pura para el mapa de aventura de Erathia:
+    content: `La expansión de Confluencia (Conflux) añade lugares de energía elemental pura para el mapa de aventura de Erathia:
 
 1. PORTAL DE LOS ELEMENTOS (Elemental Portal):
 Permite reclutar de forma directa elementales de Aire, Agua, Fuego o Tierra pagando Oro o el recurso elemental homónimo, sin necesidad de regresar a tu capital.
@@ -715,7 +715,7 @@ Permite sacrificar cartas de Hechizo o Artefactos menores no deseados de tu mano
     id: "creature_banks",
     title: "29. Bancos de Criaturas (Creature Banks) y Fichas de Apilamiento (Stack Tokens)",
     category: "combat",
-    content: `Los Bancos de Criaturas son localizaciones de batalla místicas añadidas por las expansiones que se sitúan sobre las losetas lejanas (II-III) o cercanas (IV-V) en sus casillas de obstáculo bloqueadas.
+    content: `Los Bancos de Criaturas son lugares de batalla místicos añadidos por las expansiones que se sitúan sobre las losetas lejanas (II-III) o cercanas (IV-V) en sus casillas de obstáculo bloqueadas.
 
 1. REGLAMENTO DE ASALTO Y DESPLIEGUE:
 • Combate Estricto: Al entrar a un Banco de Criaturas, se debe derrotar a la guarnición fija del enclave. Estas zonas carecen de nivel de dificultad estándar, por lo que nunca admiten el "Combate Rápido" (Quick Combat). No existe límite de rondas para pelear y extender el combate no cuesta puntos de movimiento (PM). Tampoco se obtiene experiencia al ganar.

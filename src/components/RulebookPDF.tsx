@@ -192,7 +192,7 @@ export default function RulebookPDF() {
               <span className="text-amber-500 font-bold">II.</span> Tipos de Losetas (Atlas de Erathia)
             </div>
             <div>
-              <span className="text-amber-500 font-bold">III.</span> Compendio de Localizaciones del Mapa y Efectos
+              <span className="text-amber-500 font-bold">III.</span> Compendio de Lugares del Mapa y Efectos
             </div>
             <div>
               <span className="text-amber-500 font-bold">IV.</span> Preparación De Las Partidas y Listado de Escenarios
@@ -373,10 +373,10 @@ export default function RulebookPDF() {
         {/* Section 3 */}
         <section className="space-y-3 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
-            III. Compendio de Localizaciones del Mapa y sus Efectos
+            III. Compendio de Lugares del Mapa y sus Efectos
           </h3>
           <p className="text-xs">
-            Las losetas de mapa contienen edificios e hitos con los que el Héroe puede interactuar durante su Fase de Movimiento. Estas localizaciones se organizan en tres categorías rígidas de usabilidad:
+            Las losetas de mapa contienen edificios e hitos con los que el Héroe puede interactuar durante su Fase de Movimiento. Estos lugares se organizan en tres categorías rígidas de usabilidad:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-slate-800 space-y-2">
@@ -422,9 +422,9 @@ export default function RulebookPDF() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs pt-1">
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-slate-800 space-y-2">
-              <strong className="text-amber-400 block font-mono font-bold border-b border-slate-900 pb-1">🌊 4. Localizaciones de Mar (Expansión Marítima)</strong>
+              <strong className="text-amber-400 block font-mono font-bold border-b border-slate-900 pb-1">🌊 4. Lugares de Mar (Expansión Marítima)</strong>
               <p className="text-slate-350 text-[12px] leading-relaxed">
-                Localizaciones especiales sobre losetas de mar o costas navegables. El Héroe interactúa usando un Barco:
+                Lugares especiales sobre losetas de mar o costas navegables. El Héroe interactúa usando un Barco:
               </p>
               <ul className="list-disc pl-4 space-y-1 text-slate-300 text-[12px]">
                 <li><strong>Templo del Mar (Temple of the Sea):</strong> Combate duro contra Haspides e Hidras de Mar. La victoria otorga +3 Objetos de Valor (Gemas/Cristal) y un Artefacto de nivel Reliquia.</li>
@@ -998,7 +998,7 @@ export default function RulebookPDF() {
                   <br />
                   - <strong>Explorar:</strong> Voltear e interactuar con una loseta de mapa adyacente consume 1 PM. Debe conectarse por el camino del mapa secundando el patrón de rotaciones válidas.
                   <br />
-                  - <strong>Custodios:</strong> Entrar a localizaciones con enemigos neutrales custodiándolas bloquea tu paso y te obliga a iniciar un combate de forma inmediata. Un Héroe secundario tiene un límite de 2 PM fijos.
+                  - <strong>Custodios:</strong> Entrar a lugares con enemigos neutrales custodiándolas bloquea tu paso y te obliga a iniciar un combate de forma inmediata. Un Héroe secundario tiene un límite de 2 PM fijos.
                 </p>
               </div>
 
