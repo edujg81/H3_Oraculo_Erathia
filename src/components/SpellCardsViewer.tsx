@@ -61,6 +61,13 @@ export default function SpellCardsViewer() {
     };
   }, [selectedSpell, powerBoost]);
 
+  // Maximum power level dynamically computed from the spell's available levels
+  const maxPowerForSpell = useMemo(() => {
+    if (!selectedSpell || !selectedSpell.powerLevels) return 0;
+    const keys = Object.keys(selectedSpell.powerLevels).map(Number);
+    return keys.length > 0 ? Math.max(...keys) : 0;
+  }, [selectedSpell]);
+
   // Trigger simulation roll
   const runSimulation = () => {
     if (!selectedSpell) return;
@@ -206,7 +213,7 @@ export default function SpellCardsViewer() {
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] text-slate-400 font-mono block tracking-wider uppercase font-bold">Poder acumulado para el Lanzamiento:</span>
                     <span className="text-[10px] font-mono text-slate-500 bg-slate-950 px-2 py-0.5 rounded border border-slate-850">
-                      Máximo +5 Poder en Mesa
+                      Límite Hechizo: +{maxPowerForSpell} Poder
                     </span>
                   </div>
                   
@@ -225,8 +232,8 @@ export default function SpellCardsViewer() {
                         </span>
                       </div>
                       <button
-                        onClick={() => setPowerBoost(prev => Math.min(5, prev + 1))}
-                        disabled={powerBoost === 5 || !selectedSpell.isBoostable}
+                        onClick={() => setPowerBoost(prev => Math.min(maxPowerForSpell, prev + 1))}
+                        disabled={powerBoost >= maxPowerForSpell || !selectedSpell.isBoostable}
                         className="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 disabled:opacity-30 disabled:hover:bg-slate-800 text-slate-300 border border-slate-700 flex items-center justify-center cursor-pointer transition"
                       >
                         <Plus className="w-4 h-4" />
