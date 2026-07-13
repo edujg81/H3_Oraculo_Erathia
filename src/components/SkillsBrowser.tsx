@@ -32,16 +32,16 @@ const FACTION_NAMES: Record<string, string> = {
   infierno: 'Inferno (Inferno)',
   stronghold: 'Bastión (Stronghold)',
   fortaleza: 'Fortaleza (Fortress)',
-  confluencia: 'Confluencia (Conflux)',
-  cove: 'Bahía (Cove)'
+  confluencia: 'Conflujo (Conflux)',
+  cove: 'Cala (Cove)'
 };
 
 // Master Static Database of ALL 32 Board Game Skills with exact official card mechanics
 const ALL_BOARD_GAME_SKILLS = [
   {
-    name: 'Magia de Aire',
+    name: 'Magia de aire',
     normal: 'Permanente: +1 Poder para hechizos de la escuela de magia de aire.',
-    expert: 'Instantáneo: Al lanzar un Hechizo de la escuela de aire, puedes descartar esta carta y ganar +3 Poder.',
+    expert: 'Cuando lances un Hechizo de la escuela de aire, puedes descartar esta carta y ganar +3 Poder.',
     category: 'Magia' as const,
     description: 'Afinidad elemental permanente que potencia los hechizos de la escuela de aire.'
   },
@@ -53,7 +53,7 @@ const ALL_BOARD_GAME_SKILLS = [
     description: 'Afinidad elemental permanente que potencia los hechizos de la escuela de tierra.'
   },
   {
-    name: 'Magia de Fuego',
+    name: 'Magia de fuego',
     normal: 'Permanente: +1 Poder para hechizos de la escuela de magia de fuego.',
     expert: 'Instantáneo: Al lanzar un Hechizo de la escuela de fuego, puedes descartar esta carta y ganar +3 Poder.',
     category: 'Magia' as const,
@@ -130,7 +130,7 @@ const ALL_BOARD_GAME_SKILLS = [
     description: 'Facilita la asimilación pacífica de unidades salvajes y evita batallas costosas.'
   },
   {
-    name: 'Vista de águila',
+    name: 'Vista de águila / Ojo de lince',
     normal: 'Instantáneo: Roba cartas del mazo de hechizos hasta que encuentres una carta de hechizo básico. Llévatela a la mano o descártala. Devuelve el resto de las cartas al mazo de hechizos y barájalo.',
     expert: 'Instantáneo: Roba cartas del mazo de hechizos hasta que encuentres una carta de hechizo avanzado. Llévatela a la mano o descártala. Devuelve el resto de las cartas al mazo de hechizos y barájalo.',
     category: 'Desarrollo' as const,
@@ -151,7 +151,7 @@ const ALL_BOARD_GAME_SKILLS = [
     description: 'Sostiene la vitalidad de tus tropas de asalto sanando heridas críticas en el fragor de la batalla.'
   },
   {
-    name: 'Inteligencia',
+    name: 'Inteligencia / Espionaje',
     normal: 'Instantáneo: Al comienzo de la ronda de combate, juega una carta de hechizo.\nDurante la ronda de combate sigues pudiendo jugar solo una carta de hechizo.',
     expert: 'Instantáneo: Al comienzo de la ronda de combate, juega una carta de hechizo.\nEste hechizo no cuenta para el límite de hechizos por ronda de combate.',
     category: 'Magia' as const,
@@ -268,43 +268,34 @@ const ALL_BOARD_GAME_SKILLS = [
 const NORMALIZE_SKILL_NAME: Record<string, string> = {
   'Liderazgo': 'Liderazgo',
   'Tiro con arco': 'Tiro con arco',
-  'Arquería': 'Tiro con arco',
   'Artillería': 'Artillería',
   'Táctica': 'Táctica',
-  'Tácticas': 'Táctica',
   'Armero': 'Armero',
-  'Armadura': 'Armero',
   'Resistencia': 'Resistencia',
   'Interferencia': 'Interferencia',
   'Suerte': 'Suerte',
   'Sabiduría': 'Sabiduría',
   'Hechicería': 'Hechicería',
   'Misticismo': 'Misticismo',
-  'Inteligencia': 'Inteligencia',
+  'Inteligencia': 'Inteligencia / Espionaje',
+  'Espionaje': 'Inteligencia / Espionaje',
   'Nigromancia': 'Nigromancia',
   'Logística': 'Logística',
   'Exploración': 'Exploración',
   'Orientación': 'Orientación',
-  'Buscador de Caminos': 'Orientación',
   'Patrimonio': 'Patrimonio',
-  'Finanzas': 'Patrimonio',
   'Diplomacia': 'Diplomacia',
   'Primeros auxilios': 'Primeros auxilios',
-  'Primeros Auxilios': 'Primeros auxilios',
-  'Vista de águila': 'Vista de águila',
-  'Ojo de Águila': 'Vista de águila',
+  'Vista de águila': 'Vista de águila / Ojo de lince',
+  'Ojo de lince': 'Vista de águila / Ojo de lince',
   'Erudito': 'Erudito',
   'Aprendizaje': 'Aprendizaje',
-  'Navegación': 'Logística',
-  'Ofensiva': 'Ofensa',
   'Ofensa': 'Ofensa',
-  'Ofensiva / Ataque': 'Ofensa',
-  'Magia de aire': 'Magia de Aire',
-  'Magia de tierra': 'Magia de Tierra',
-  'Magia de fuego': 'Magia de Fuego',
+  'Magia de aire': 'Magia de aire',
+  'Magia de tierra': 'Magia de tierra',
+  'Magia de fuego': 'Magia de fuego',
   'Magia de agua': 'Magia de agua',
-  'Magia básica del fuego': 'Magia básica del fuego',
-  'Magia Básica de Fuego': 'Magia básica del fuego'
+  'Magia básica del fuego': 'Magia básica del fuego'
 };
 
 export default function SkillsBrowser() {

@@ -10,6 +10,7 @@ import SkillsBrowser from './components/SkillsBrowser';
 import WarMachinesViewer from './components/WarMachinesViewer';
 import MapLocationsViewer from './components/MapLocationsViewer';
 import SpellCardsViewer from './components/SpellCardsViewer';
+import TownsViewer from './components/TownsViewer';
 import { playTickSound, playTimeOutSound } from './utils/audio';
 // @ts-ignore
 import oracleLogo from './assets/images/sandro_oracle_titled_logo_1783458347417.jpg';
@@ -17,7 +18,7 @@ import { RuleSection, Player } from './types';
 import { 
   Sparkles, Library, Timer, Printer, Award, BookOpen, 
   HelpCircle, Compass, Gamepad2, Hourglass, Swords, Users, Dices, Coins,
-  Hammer, Map, Wand2
+  Hammer, Map, Wand2, Building2
 } from 'lucide-react';
 
 const FACTIONS = [
@@ -34,7 +35,7 @@ const FACTIONS = [
 ];
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'chat' | 'rules' | 'pdf' | 'timer_full' | 'calculator' | 'scenarios' | 'heroes' | 'units' | 'skills' | 'spells' | 'warmachines' | 'locations'>('chat');
+  const [activeTab, setActiveTab] = useState<'chat' | 'rules' | 'pdf' | 'timer_full' | 'calculator' | 'scenarios' | 'heroes' | 'units' | 'skills' | 'spells' | 'warmachines' | 'locations' | 'towns'>('chat');
   const [selectedSection, setSelectedSection] = useState<RuleSection | null>(null);
 
   // Unified Timer and Round State (App-Level for clean sync in Bento Sidebar)
@@ -282,6 +283,7 @@ export default function App() {
     { id: 'scenarios', label: 'Misiones', icon: Compass, color: 'text-rose-400' },
     { id: 'units', label: 'Unidades', icon: Swords, color: 'text-red-400' },
     { id: 'heroes', label: 'Héroes', icon: Users, color: 'text-yellow-400' },
+    { id: 'towns', label: 'Ciudades y Edificios', icon: Building2, color: 'text-amber-500 font-semibold' },
     { id: 'skills', label: 'Habilidades', icon: Award, color: 'text-amber-500' },
     { id: 'spells', label: 'Hechizos', icon: Wand2, color: 'text-violet-400' },
     { id: 'warmachines', label: 'Máquinas de Guerra', icon: Hammer, color: 'text-amber-600' },
@@ -460,6 +462,12 @@ export default function App() {
                   FACTIONS={FACTIONS}
                   handleSetPlayerCount={handleSetPlayerCount}
                 />
+              </div>
+            )}
+
+            {activeTab === 'towns' && (
+              <div className="space-y-4 animate-fadeIn">
+                <TownsViewer />
               </div>
             )}
 
