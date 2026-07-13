@@ -1138,5 +1138,344 @@ COMPENDIO DE CRIATURAS POR FACCIONES:
 • Defensa (🛡️): Mitiga directamente el número de heridas recibidas antes de aplicar daño al medidor de salud.
 • Iniciativa (⚡): Define el orden exacto de colocación en el track cronológico de activación táctica de la ronda.
 • Vida (❤️): Puntos de herida tolerables. Al acumular fichas de daño equivalentes, la unidad es removida inmediatamente del juego de mesa y colocada en la pila de bajas.`
+  },
+  {
+    id: "faction_units_index",
+    title: "38. Índice Detallado de Criaturas de Facciones e Invocaciones",
+    category: "combat",
+    content: `A continuación se desglosa el catálogo completo indexado con todos los atributos oficiales, costes de reclutamiento y habilidades tácticas de las 10 facciones asimétricas y las invocaciones (excluyendo neutrales y banco de criaturas) de Heroes of Might and Magic III: El Juego de Mesa. 
+
+---
+
+### 1. CASTILLO (Castle)
+• Alabarderos (Tier Bronce - Niv. 1)
+  - Básica: Ataque 2, Defensa 1, Vida 2, Iniciativa 4. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 1, Vida 2, Iniciativa 5. Tipo: Melé. Coste: 3 Oro. Habilidad: "Pasivo: Cuando esta unidad sea el objetivo de un ataque, puedes descartar una carta para ignorar el resultado del dado de ataque."
+
+• Tiradores (Tier Bronce - Niv. 2)
+  - Básica: Ataque 2, Defensa 0, Vida 2, Iniciativa 4. Tipo: a Distancia. Coste: 3 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 2, Defensa 0, Vida 2, Iniciativa 6. Tipo: a Distancia. Coste: 5 Oro. Habilidad: "Al Atacar: Si un objetivo no está adyacente, vuelve a atacarlo."
+
+• Grifos (Tier Bronce - Niv. 3)
+  - Básica: Ataque 2, Defensa 0, Vida 4, Iniciativa 6. Tipo: Voladora. Coste: 4 Oro. Habilidad: "Contraataque: Esta unidad puede llevar a cabo una cantidad ilimitada de contraataques."
+  - Élite: Ataque 3, Defensa 0, Vida 4, Iniciativa 9. Tipo: Voladora. Coste: 6 Oro. Habilidad: "Contraataque: Esta unidad puede llevar a cabo una cantidad ilimitada de contraataques."
+
+• Cruzados (Tier Plata - Niv. 4)
+  - Básica: Ataque 3, Defensa 2, Vida 4, Iniciativa 5. Tipo: Melé. Coste: 6 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 4, Defensa 2, Vida 4, Iniciativa 6. Tipo: Melé. Coste: 10 Oro. Habilidad: "Al Atacar: Puedes volver a tirar los 0 en el dado de ataque de esta unidad."
+
+• Fanáticos (Tier Plata - Niv. 5)
+  - Básica: Ataque 3, Defensa 1, Vida 5, Iniciativa 5. Tipo: a Distancia. Coste: 8 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 4, Defensa 1, Vida 5, Iniciativa 7. Tipo: a Distancia. Coste: 12 Oro. Habilidad: "Pasivo: Ignora la penalización de combate contra unidades adyacentes."
+
+• Campeones (Tier Oro - Niv. 6)
+  - Básica: Ataque 5, Defensa 2, Vida 7, Iniciativa 7. Tipo: Melé. Coste: 12 Oro. Habilidad: "Mapa: Si tu héroe está en una zona con establos, el coste de refuerzo de esta unidad se reduce en 6 Oros."
+  - Élite: Ataque 6, Defensa 2, Vida 7, Iniciativa 9. Tipo: Melé. Coste: 20 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Si esta unidad termina su movimiento en un espacio diferente al inicial, puedes volver a tirar un dado de ataque."
+
+• Arcángeles (Tier Oro - Niv. 7)
+  - Básica: Ataque 6, Defensa 3, Vida 8, Iniciativa 12. Tipo: Voladora. Coste: 20 Oro y 1 Objeto de valor. Habilidad: "Pasivo: Cuando se inicie un combate, roba 1 carta."
+  - Élite: Ataque 7, Defensa 3, Vida 10, Iniciativa 18. Tipo: Voladora. Coste: 30 Oro y 2 Objetos de valor. Habilidad: "Pasivo: Una vez por combate. Cancela un ataque que fuese a reducir los Puntos de Salud de otra unidad a 0."
+
+---
+
+### 2. NECRÓPOLIS (Necropolis)
+• Esqueletos (Tier Bronce - Niv. 1)
+  - Básica: Ataque 2, Defensa 1, Vida 2, Iniciativa 4. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 1, Vida 2, Iniciativa 5. Tipo: Melé. Coste: 3 Oro. Habilidades: Ninguna.
+
+• Zombis (Tier Bronce - Niv. 2)
+  - Básica: Ataque 2, Defensa 1, Vida 3, Iniciativa 3. Tipo: Melé. Coste: 3 Oro. Habilidad: "Pasivo: Si el atacante resuelve un +1 en el dado de ataque, obtén +1 Defensa."
+  - Élite: Ataque 2, Defensa 1, Vida 3, Iniciativa 4. Tipo: Melé. Coste: 4 Oro. Habilidad: "Pasivo: Si el atacante resuelve un 0 o un +1 en el dado de ataque, obtén +1 Defensa."
+
+• Espectros (Tier Bronce - Niv. 3)
+  - Básica: Ataque 3, Defensa 0, Vida 3, Iniciativa 5. Tipo: Voladora. Coste: 4 Oro. Habilidad: "Activación: Retira hasta 1 Herida de esta unidad."
+  - Élite: Ataque 3, Defensa 0, Vida 5, Iniciativa 7. Tipo: Voladora. Coste: 6 Oro. Habilidad: "Activación: Retira hasta 1 Herida de esta unidad y después descarta 1 carta al azar de la mano del enemigo."
+
+• Vampiros (Tier Plata - Niv. 4)
+  - Básica: Ataque 4, Defensa 1, Vida 4, Iniciativa 6. Tipo: Voladora. Coste: 8 Oro. Habilidad: "Al Atacar: Ignora el contraataque."
+  - Élite: Ataque 5, Defensa 1, Vida 4, Iniciativa 9. Tipo: Voladora. Coste: 12 Oro. Habilidad: "Al Atacar: Ignora el contraataque. Después retira hasta 2 Heridas a esta unidad."
+
+• Liches (Tier Plata - Niv. 5)
+  - Básica: Ataque 3, Defensa 1, Vida 5, Iniciativa 6. Tipo: a Distancia. Coste: 8 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 4, Defensa 1, Vida 5, Iniciativa 7. Tipo: a Distancia. Coste: 14 Oro. Habilidad: "Al Atacar: Elige una unidad adyacente al objetivo y atácala. Para este ataque tu Ataque es 2."
+
+• Caballeros del terror (Tier Oro - Niv. 6)
+  - Básica: Ataque 5, Defensa 2, Vida 7, Iniciativa 7. Tipo: Melé. Coste: 12 Oro. Habilidad: "Al Atacar: Al contraatacar después de este ataque, el enemigo lanza 2 dados de ataque y resuelve el resultado menor."
+  - Élite: Ataque 6, Defensa 2, Vida 7, Iniciativa 9. Tipo: Melé. Coste: 20 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Si resuelves un 0 o un +1 en el dado de ataque, aumenta el valor total del ataque de esta unidad en un +1 adicional."
+
+• Dragones fantasma (Tier Oro - Niv. 7)
+  - Básica: Ataque 6, Defensa 3, Vida 8, Iniciativa 9. Tipo: Voladora. Coste: 19 Oro y 1 Objeto de valor. Habilidad: "Activación: Descarta la ficha Moral Positiva del enemigo."
+  - Élite: Ataque 7, Defensa 3, Vida 9, Iniciativa 14. Tipo: Voladora. Coste: 32 Oro y 2 Objetos de valor. Habilidad: "Activación: Descarta la ficha Moral Positiva del enemigo. Al Atacar: Gana +1 Ataque."
+
+---
+
+### 3. MAZMORRA (Dungeon)
+• Trogloditas (Tier Bronce - Niv. 1)
+  - Básica: Ataque 2, Defensa 1, Vida 2, Iniciativa 4. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 1, Vida 2, Iniciativa 5. Tipo: Melé. Coste: 3 Oro. Habilidad: "Pasivo: Esta unidad ignora el efecto Parálisis."
+
+• Arpías (Tier Bronce - Niv. 2)
+  - Básica: Ataque 2, Defensa 0, Vida 3, Iniciativa 6. Tipo: Voladora. Coste: 3 Oro. Habilidad: "Al Atacar: Después del contraataque del enemigo, esta unidad puede volver al espacio desde el que se ha movido para atacar."
+  - Élite: Ataque 3, Defensa 0, Vida 3, Iniciativa 9. Tipo: Voladora. Coste: 5 Oro. Habilidad: "Al Atacar: Ignora el contraataque. Esta unidad puede volver al espacio desde el que se ha movido para atacar."
+
+• Ojos maléficos (Tier Bronce - Niv. 3)
+  - Básica: Ataque 3, Defensa 0, Vida 3, Iniciativa 5. Tipo: a Distancia. Coste: 4 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 1, Vida 3, Iniciativa 7. Tipo: a Distancia. Coste: 6 Oro. Habilidad: "Pasivo: Ignora la penalización de combate contra unidades adyacentes."
+
+• Medusas (Tier Plata - Niv. 4)
+  - Básica: Ataque 3, Defensa 1, Vida 4, Iniciativa 5. Tipo: a Distancia. Coste: 6 Oro. Habilidad: "Contraataque: Después del contraataque, lanza un dado de ataque; si sacas 0, el objetivo queda Parálizado."
+  - Élite: Ataque 4, Defensa 1, Vida 4, Iniciativa 6. Tipo: a Distancia. Coste: 12 Oro. Habilidad: "Pasivo: Ignora la penalización de combate contra unidades adyacentes. Contraataque: El objetivo queda Parálizado."
+
+• Minotauros (Tier Plata - Niv. 5)
+  - Básica: Ataque 4, Defensa 2, Vida 4, Iniciativa 6. Tipo: Melé. Coste: 8 Oro. Habilidad: "Al Atacar: Si resuelves un -1 en el dado de ataque, roba una carta."
+  - Élite: Ataque 5, Defensa 2, Vida 4, Iniciativa 8. Tipo: Melé. Coste: 14 Oro. Habilidad: "Al Atacar: Si resuelves un -1 en el dado de ataque, roba una carta."
+
+• Mantícoras (Tier Oro - Niv. 6)
+  - Básica: Ataque 5, Defensa 1, Vida 6, Iniciativa 7. Tipo: Voladora. Coste: 10 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 5, Defensa 1, Vida 6, Iniciativa 11. Tipo: Voladora. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Durante este ataque, ignora el valor de Defensa de la carta de la unidad objetivo."
+
+• Mantícoras (Alternativa) (Tier Oro - Niv. 6)
+  - Básica: Ataque 4, Defensa 1, Vida 7, Iniciativa 8. Tipo: Voladora. Coste: 12 Oro. Habilidad: "Al Atacar: Coloca 1 cubo de facción sobre el objetivo. Cuando se active, retira el cubo para infligir 1 Herida."
+  - Élite: Ataque 4, Defensa 2, Vida 7, Iniciativa 11. Tipo: Voladora. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Pasivo: Después de cada ataque, coloca 1 cubo de facción sobre el objetivo. Cuando se active, retira el cubo para infligir 1 Herida."
+
+• Dragones negros (Tier Oro - Niv. 7)
+  - Básica: Ataque 6, Defensa 3, Vida 8, Iniciativa 11. Tipo: Voladora. Coste: 19 Oro y 1 Objeto de valor. Habilidad: "Pasivo: Reduce el Daño de Hechizo recibido por esta unidad en 2 (hasta un mínimo de 0)."
+  - Élite: Ataque 8, Defensa 3, Vida 8, Iniciativa 15. Tipo: Voladora. Coste: 33 Oro y 2 Objetos de valor. Habilidad: "Pasivo: Ignora cualquier efecto de Hechizo y Daño de especialidad."
+
+---
+
+### 4. MURALLAS (Rampart)
+• Centauros (Tier Bronce - Niv. 1)
+  - Básica: Ataque 2, Defensa 0, Vida 3, Iniciativa 6. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 0, Vida 3, Iniciativa 8. Tipo: Melé. Coste: 3 Oro. Habilidades: Ninguna.
+
+• Enanos (Tier Bronce - Niv. 2)
+  - Básica: Ataque 2, Defensa 1, Vida 3, Iniciativa 3. Tipo: Melé. Coste: 3 Oro. Habilidad: "Pasivo: Si esta unidad es objetivo de cualquier carta de hechizo o especialidad, lanza 1 dado de ataque. Si sacas un +1, ignora el efecto de la carta."
+  - Élite: Ataque 3, Defensa 1, Vida 3, Iniciativa 5. Tipo: Melé. Coste: 4 Oro. Habilidad: "Pasivo: Si esta unidad es objetivo de cualquier carta de hechizo o especialidad, lanza 1 dado de ataque. Si sacas un +1, ignora el efecto de la carta."
+
+• Elfos (Tier Bronce - Niv. 3)
+  - Básica: Ataque 2, Defensa 1, Vida 3, Iniciativa 6. Tipo: a Distancia. Coste: 4 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 1, Vida 3, Iniciativa 7. Tipo: a Distancia. Coste: 7 Oro. Habilidad: "Al Atacar: Si una unidad objetivo no está adyacente, vuélvela a atacar si sacas un -1 o un 0."
+
+• Pegasos (Tier Plata - Niv. 4)
+  - Básica: Ataque 3, Defensa 0, Vida 5, Iniciativa 8. Tipo: Voladora. Coste: 6 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 4, Defensa 0, Vida 6, Iniciativa 12. Tipo: Voladora. Coste: 10 Oro. Habilidad: "Pasivo: El Poder de todos los hechizos enemigos se reduce en 1 (hasta un mínimo de 0)."
+
+• Dendroides (Tier Plata - Niv. 5)
+  - Básica: Ataque 4, Defensa 2, Vida 5, Iniciativa 3. Tipo: Melé. Coste: 8 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 4, Defensa 2, Vida 6, Iniciativa 4. Tipo: Melé. Coste: 15 Oro. Habilidad: "Pasivo: Las unidades enemigas que empiecen su activación adyacentes a esta unidad no pueden moverse."
+
+• Unicornios (Tier Oro - Niv. 6)
+  - Básica: Ataque 5, Defensa 1, Vida 8, Iniciativa 7. Tipo: Melé. Coste: 11 Oro. Habilidad: "Pasivo: Reduce el Daño de Hechizos sufridos por esta unidad en 1 (hasta un mínimo de 0)."
+  - Élite: Ataque 6, Defensa 1, Vida 8, Iniciativa 9. Tipo: Melé. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Pasivo: Reduce el Daño de Hechizos sufridos por esta unidad y unidades adyacentes aliadas en 1 (hasta un mínimo de 0)."
+
+• Dragones dorados (Tier Oro - Niv. 7)
+  - Básica: Ataque 5, Defensa 3, Vida 9, Iniciativa 10. Tipo: Voladora. Coste: 22 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Ataca a 2 espacios en fila. El primer ataque se resuelve de forma normal y el segundo con 2 Ataque."
+  - Élite: Ataque 6, Defensa 3, Vida 10, Iniciativa 16. Tipo: Voladora. Coste: 30 Oro y 2 Objetos de valor. Habilidad: "Al Atacar: Ataca a 2 espacios en fila. El primer ataque se resuelve normalmente y el segundo tiene 3 Ataque."
+
+---
+
+### 5. TORRE (Tower)
+• Gremlins (Tier Bronce - Niv. 1)
+  - Básica: Ataque 2, Defensa 0, Vida 2, Iniciativa 4. Tipo: Melé. Coste: 0 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 2, Defensa 0, Vida 2, Iniciativa 5. Tipo: a Distancia. Coste: 2 Oro. Habilidades: Ninguna.
+
+• Gárgolas (Tier Bronce - Niv. 2)
+  - Básica: Ataque 2, Defensa 1, Vida 3, Iniciativa 6. Tipo: Voladora. Coste: 3 Oro. Habilidad: "Pasiva: Esta unidad ignora cualquier efecto Contínuo de hechizos."
+  - Élite: Ataque 3, Defensa 1, Vida 3, Iniciativa 9. Tipo: Voladora. Coste: 4 Oro. Habilidad: "Pasiva: Esta unidad ignora cualquier efecto Contínuo de hechizos."
+
+• Gólems de hierro (Tier Bronce - Niv. 3)
+  - Básica: Ataque 3, Defensa 1, Vida 3, Iniciativa 4. Tipo: Melé. Coste: 4 Oro. Habilidad: "Pasiva: Esta unidad reduce cualquier Daño que reciba de hechizos en 1, hasta un mínimo de 0."
+  - Élite: Ataque 3, Defensa 2, Vida 3, Iniciativa 5. Tipo: Melé. Coste: 7 Oro. Habilidad: "Pasiva: Esta unidad reduce cualquier Daño que reciba de hechizos en 2, hasta un mínimo de 0."
+
+• Magos (Tier Plata - Niv. 4)
+  - Básica: Ataque 3, Defensa 0, Vida 4, Iniciativa 5. Tipo: a Distancia. Coste: 6 Oro. Habilidad: "Al Atacar: Ignora penalizaciones de combate."
+  - Élite: Ataque 4, Defensa 1, Vida 4, Iniciativa 6. Tipo: a Distancia. Coste: 11 Oro. Habilidad: "Al Atacar: Ignora penalizaciones de combate. Activación: Añade +1 Poder al primer hechizo que lances esta ronda."
+
+• Genios (Tier Plata - Niv. 5)
+  - Básica: Ataque 3, Defensa 1, Vida 6, Iniciativa 7. Tipo: Voladora. Coste: 8 Oro. Habilidad: "Alternativa: Descarta 3 cartas de tu mazo y devuelve a tu mano un Hechizo descartado de esta forma."
+  - Élite: Ataque 4, Defensa 1, Vida 6, Iniciativa 8. Tipo: Voladora. Coste: 12 Oro. Habilidad: "Al Atacar: Descarta hasta 3 cartas de tu mazo y devuelve a tu mano un Hechizo descartado de esta forma."
+
+• Nagas (Tier Oro - Niv. 6)
+  - Básica: Ataque 5, Defensa 2, Vida 7, Iniciativa 6. Tipo: Melé. Coste: 13 Oro. Habilidad: "Al Atacar: Ignora contraataques."
+  - Élite: Ataque 6, Defensa 2, Vida 7, Iniciativa 8. Tipo: Melé. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Ignora contraataques."
+
+• Titanes (Tier Oro - Niv. 7)
+  - Básica: Ataque 6, Defensa 3, Vida 8, Iniciativa 7. Tipo: Melé. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Pasiva: Esta unidad ignora cualquier efecto Contínuo."
+  - Élite: Ataque 6, Defensa 3, Vida 8, Iniciativa 11. Tipo: a Distancia. Coste: 32 Oro y 2 Objetos de valor. Habilidad: "Pasiva: Esta unidad ignora cualquier efecto Continuo y los penalizadores de combate aplicados a unidades adyacentes."
+
+---
+
+### 6. INFIERNO (Inferno)
+• Familiares (Tier Bronce - Niv. 1)
+  - Básica: Ataque 2, Defensa 1, Vida 2, Iniciativa 5. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 1, Vida 2, Iniciativa 7. Tipo: Melé. Coste: 3 Oro. Habilidad: "Pasivo: Cuando un enemigo lanza un Hechizo de su mano, debe descartar 1 carta de la mano."
+
+• Magogs (Tier Bronce - Niv. 2)
+  - Básica: Ataque 2, Defensa 0, Vida 2, Iniciativa 4. Tipo: a Distancia. Coste: 3 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 2, Defensa 0, Vida 3, Iniciativa 6. Tipo: a Distancia. Coste: 5 Oro. Habilidad: "Al Atacar: Cuando los magogs atacan a un objetivo que no está adyacente a ellos, hacen 1 Herida a una unidad adyacente al objetivo."
+
+• Cerberos (Tier Bronce - Niv. 3)
+  - Básica: Ataque 3, Defensa 0, Vida 4, Iniciativa 7. Tipo: Melé. Coste: 4 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 1, Vida 5, Iniciativa 8. Tipo: Melé. Coste: 7 Oro. Habilidad: "Al Atacar: Ignora contraataques. Además, hace 1 Herida a otra unidad enemiga adyacente a los cerberos."
+
+• Demonios (Tier Plata - Niv. 4)
+  - Básica: Ataque 3, Defensa 2, Vida 4, Iniciativa 5. Tipo: Melé. Coste: 6 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 2, Vida 5, Iniciativa 6. Tipo: Melé. Coste: 8 Oro. Habilidades: Ninguna.
+
+• Señores del abismo (Tier Plata - Niv. 5)
+  - Básica: Ataque 4, Defensa 1, Vida 6, Iniciativa 6. Tipo: Melé. Coste: 8 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 5, Defensa 1, Vida 6, Iniciativa 7. Tipo: Melé. Coste: 15 Oro. Habilidad: "Alternativo: Una vez por cada combate en el que hayas perdido una unidad, invoca o refuerza <<unos pocos>> demonios."
+
+• Efrits (Tier Oro - Niv. 6)
+  - Básica: Ataque 5, Defensa 1, Vida 7, Iniciativa 9. Tipo: Voladora. Coste: 12 Oro. Habilidad: "Pasivo: Ignora el Daño del hechizo Flecha mágica."
+  - Élite: Ataque 6, Defensa 1, Vida 7, Iniciativa 13. Tipo: Voladora. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Pasivo: Ignora cualquier Daño de la Flecha mágica y hechizos de la escuela de fuego."
+
+• Archidiablos (Tier Oro - Niv. 7)
+  - Básica: Ataque 6, Defensa 3, Vida 8, Iniciativa 11. Tipo: Voladora. Coste: 22 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Ignora contraataques."
+  - Élite: Ataque 7, Defensa 3, Vida 9, Iniciativa 15. Tipo: Voladora. Coste: 30 Oro y 2 Objetos de valor. Habilidad: "Al Atacar: Ignora contraataques. Pasivo: Al moverse, los archidiablos se pueden mover a cualquier espacio vacío."
+
+---
+
+### 7. BASTIÓN (Stronghold)
+• Goblins (Tier Bronce - Niv. 1)
+  - Básica: Ataque 1, Defensa 0, Vida 4, Iniciativa 6. Tipo: Melé. Coste: 1 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 2, Defensa 0, Vida 4, Iniciativa 7. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
+
+• Incursores lupinos (Tier Bronce - Niv. 2)
+  - Básica: Ataque 2, Defensa 0, Vida 3, Iniciativa 7. Tipo: Melé. Coste: 3 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 2, Defensa 0, Vida 4, Iniciativa 8. Tipo: Melé. Coste: 5 Oro. Habilidad: "Al Atacar: Ataca este objetivo otra vez. El segundo ataque se produce después de que el objetivo contraataque (si es posible)."
+
+• Orcos (Tier Bronce - Niv. 3)
+  - Básica: Ataque 2, Defensa 1, Vida 4, Iniciativa 4. Tipo: a Distancia. Coste: 4 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 1, Vida 5, Iniciativa 5. Tipo: a Distancia. Coste: 7 Oro. Habilidades: Ninguna.
+
+• Ogros (Tier Plata - Niv. 4)
+  - Básica: Ataque 3, Defensa 2, Vida 4, Iniciativa 4. Tipo: Melé. Coste: 6 Oro. Habilidad: "Alternativo: Coloca una ficha +1 Ataque en la unidad Melé o Voladora que elijas durante 2 rondas de combate."
+  - Élite: Ataque 3, Defensa 2, Vida 6, Iniciativa 5. Tipo: Melé. Coste: 8 Oro. Habilidad: "Alternativo: Coloca una ficha +2 Ataque en la unidad Melé o Voladora que elijas durante 2 rondas de combate."
+
+• Aves de trueno (Tier Plata - Niv. 5)
+  - Básica: Ataque 4, Defensa 1, Vida 5, Iniciativa 9. Tipo: Voladora. Coste: 8 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 4, Defensa 1, Vida 6, Iniciativa 11. Tipo: Voladora. Coste: 14 Oro. Habilidad: "Pasivo: Justo después del ataque de esta unidad y antes de un contraataque, tira 1 dado de ataque; con un 0 o +1, inflige 1 Herida al objetivo."
+
+• Cíclopes (Tier Oro - Niv. 6)
+  - Básica: Ataque 5, Defensa 0, Vida 6, Iniciativa 6. Tipo: a Distancia. Coste: 13 Oro. Habilidad: "Alternativo: Esta unidad puede destruir un muro o la puerta."
+  - Élite: Ataque 5, Defensa 1, Vida 7, Iniciativa 8. Tipo: a Distancia. Coste: 17 Oro y 1 Objeto de valor. Habilidad: "Alternativo: Esta unidad puede destruir un muro, puerta o torre de arqueros."
+
+• Behemoths (Tier Oro - Niv. 7)
+  - Básica: Ataque 6, Defensa 2, Vida 9, Iniciativa 6. Tipo: Melé. Coste: 19 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Disminuye la Defensa del objetivo en 1 (hasta un mínimo de 0)."
+  - Élite: Ataque 7, Defensa 2, Vida 10, Iniciativa 9. Tipo: Melé. Coste: 29 Oro y 2 Objetos de valor. Habilidad: "Al Atacar: Disminuye la Defensa del objetivo en 2 (hasta un mínimo de 0). Después del ataque, pon 1 ficha de corrosión en el objetivo."
+
+---
+
+### 8. FORTALEZA (Fortress)
+• Gnolls (Tier Bronce - Niv. 1)
+  - Básica: Ataque 2, Defensa 1, Vida 3, Iniciativa 4. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 2, Defensa 1, Vida 4, Iniciativa 5. Tipo: Melé. Coste: 3 Oro. Habilidades: Ninguna.
+
+• Hombres lagarto (Tier Bronce - Niv. 2)
+  - Básica: Ataque 2, Defensa 0, Vida 3, Iniciativa 4. Tipo: a Distancia. Coste: 3 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 0, Vida 3, Iniciativa 5. Tipo: a Distancia. Coste: 5 Oro. Habilidades: Ninguna.
+
+• Libélulas (Tier Bronce - Niv. 3)
+  - Básica: Ataque 3, Defensa 0, Vida 3, Iniciativa 8. Tipo: Voladora. Coste: 4 Oro. Habilidad: "Al Atacar: Retira todos los efectos Continuos que el enemigo ha jugado sobre el objetivo."
+  - Élite: Ataque 3, Defensa 1, Vida 3, Iniciativa 12. Tipo: Voladora. Coste: 7 Oro. Habilidad: "Al Atacar: Retira todos los efectos Continuos que el enemigo ha jugado sobre el objetivo. Si el objetivo contraataca, sufre -1 Ataque."
+
+• Basiliscos (Tier Plata - Niv. 4)
+  - Básica: Ataque 4, Defensa 1, Vida 4, Iniciativa 5. Tipo: Melé. Coste: 6 Oro. Habilidad: "Al Atacar: Con un resultado -1 en el dado de ataque la unidad atacada recibe una ficha Parálisis."
+  - Élite: Ataque 4, Defensa 1, Vida 5, Iniciativa 7. Tipo: Melé. Coste: 9 Oro. Habilidad: "Al Atacar: Con un resultado -1 en el dado de ataque la unidad atacada recibe una ficha Parálisis."
+
+• Gorgonas (Tier Plata - Niv. 5)
+  - Básica: Ataque 4, Defensa 2, Vida 5, Iniciativa 5. Tipo: Melé. Coste: 9 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 5, Defensa 2, Vida 5, Iniciativa 6. Tipo: Melé. Coste: 14 Oro. Habilidad: "Al Atacar: Después del ataque, lanza 2 dados de ataque; si sacas un doble 0, reduce los Puntos de Salud de la unidad objetivo a 0."
+
+• Wyverns (Tier Oro - Niv. 6)
+  - Básica: Ataque 5, Defensa 1, Vida 8, Iniciativa 7. Tipo: Voladora. Coste: 12 Oro. Habilidad: "Al Atacar: Coloca 1 cubo de facción sobre el objetivo. Al comienzo de su activación retíralo para infligirle 1 Herida."
+  - Élite: Ataque 6, Defensa 1, Vida 8, Iniciativa 11. Tipo: Voladora. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Coloca 2 cubos de facción sobre el objetivo. Al comienzo de cada activación, retira 1 para infligirle 1 Herida."
+
+• Hidras (Tier Oro - Niv. 7)
+  - Básica: Ataque 6, Defensa 3, Vida 8, Iniciativa 5. Tipo: Melé. Coste: 20 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Ignora el contraataque."
+  - Élite: Ataque 7, Defensa 3, Vida 10, Iniciativa 7. Tipo: Melé. Coste: 28 Oro y 2 Objetos de valor. Habilidad: "Al Atacar: Ignora el contraataque. Esta unidad ataca a hasta 2 unidades enemigas adyacentes."
+
+---
+
+### 9. CONFLUENCIA (Conflux)
+• Hadas (Tier Bronce - Niv. 1)
+  - Básica: Ataque 2, Defensa 0, Vida 2, Iniciativa 7. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 2, Defensa 0, Vida 4, Iniciativa 9. Tipo: Melé. Coste: 4 Oro. Habilidad: "Al Atacar: Ignora los contraataques."
+
+• Elementales de la tormenta (Tier Bronce - Niv. 2)
+  - Básica: Ataque 2, Defensa 0, Vida 3, Iniciativa 7. Tipo: a Distancia. Coste: 3 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 2, Defensa 0, Vida 5, Iniciativa 8. Tipo: a Distancia. Coste: 5 Oro. Habilidad: "Al Atacar: Añade +1 Potencia al primer hechizo de magia de aire que lances durante esta activación."
+
+• Elementales de hielo (Tier Bronce - Niv. 3)
+  - Básica: Ataque 2, Defensa 1, Vida 4, Iniciativa 5. Tipo: a Distancia. Coste: 4 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 1, Vida 5, Iniciativa 6. Tipo: a Distancia. Coste: 7 Oro. Habilidad: "Activación: Añade +1 Potencia al primer hechizo de magia de agua que lances durante esta activación."
+
+• Elementales de energía (Tier Plata - Niv. 4)
+  - Básica: Ataque 3, Defensa 1, Vida 5, Iniciativa 5. Tipo: Melé. Coste: 6 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 4, Defensa 1, Vida 5, Iniciativa 8. Tipo: Melé. Coste: 8 Oro. Habilidad: "Activación: Añade +1 Potencia al primer hechizo de magia de fuego que lances."
+
+• Elementales de magma (Tier Plata - Niv. 5)
+  - Básica: Ataque 4, Defensa 2, Vida 5, Iniciativa 4. Tipo: Melé. Coste: 9 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 5, Defensa 2, Vida 5, Iniciativa 6. Tipo: Melé. Coste: 13 Oro. Habilidad: "Activación: Añade +1 Potencia al primer hechizo de magia tierra que lances durante esta activación."
+
+• Elementales mágicos (Tier Oro - Niv. 6)
+  - Básica: Ataque 4, Defensa 2, Vida 7, Iniciativa 7. Tipo: Melé. Coste: 13 Oro. Habilidad: "Al Atacar: Ignora los contraataques. Ataca a todas las unidades adyacentes."
+  - Élite: Ataque 5, Defensa 2, Vida 7, Iniciativa 9. Tipo: Melé. Coste: 19 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Ignora los contraataques. Ataca todas las unidades enemigas adyacentes. Pasivo: Ignora cualquier efecto de Hechizo y Daño de especialidad."
+
+• Fénix (Tier Oro - Niv. 7)
+  - Básica: Ataque 6, Defensa 2, Vida 7, Iniciativa 12. Tipo: Voladora. Coste: 21 Oro y 1 Objeto de valor. Habilidad: "Pasivo: Una vez por combate. Cuando los PS de esta unidad se reduzcan a 0, ponlos en 1. Pasivo: Inmunes a los Hechizos de magia de fuego."
+  - Élite: Ataque 7, Defensa 2, Vida 8, Iniciativa 18. Tipo: Voladora. Coste: 29 Oro y 2 Objetos de valor. Habilidad: "Al Atacar: Ataca 2 espacios en una línea. El primer ataque se resuelve normalmente y el segundo tiene 2 Ataque. Pasivo: Inmunes a los Hechizos de magia de fuego."
+
+---
+
+### 10. CALA (Cove)
+• Oceánidos (Tier Bronce - Niv. 1)
+  - Básica: Ataque 2, Defensa 0, Vida 3, Iniciativa 6. Tipo: Voladora. Coste: 2 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 0, Vida 3, Iniciativa 8. Tipo: Voladora. Coste: 3 Oro. Habilidad: "Pasivo: Ignora todos los efectos y Daño de un Hechizo de magia de agua."
+
+• Marineros (Tier Bronce - Niv. 2)
+  - Básica: Ataque 2, Defensa 1, Vida 3, Iniciativa 5. Tipo: Melé. Coste: 3 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 2, Defensa 1, Vida 5, Iniciativa 6. Tipo: Melé. Coste: 5 Oro. Habilidad: "Pasivo: Una vez por combate, cuando esta unidad retira una unidad del combate, gana 2 Oros."
+
+• Lobos de mar (Tier Bronce - Niv. 3)
+  - Básica: Ataque 2, Defensa 0, Vida 4, Iniciativa 6. Tipo: a Distancia. Coste: 4 Oro. Habilidad: "Pasivo: Ignora la penalización de combate contra unidades adyacentes."
+  - Élite: Ataque 3, Defensa 0, Vida 5, Iniciativa 8. Tipo: a Distancia. Coste: 6 Oro. Habilidad: "Al Atacar: Ignora los contraataques. Pasivo: Ignora la penalización de combate contra unidades adyacentes."
+
+• Ayssids (Tier Plata - Niv. 4)
+  - Básica: Ataque 3, Defensa 1, Vida 5, Iniciativa 9. Tipo: Voladora. Coste: 6 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 1, Vida 6, Iniciativa 11. Tipo: Voladora. Coste: 10 Oro. Habilidad: "Al Atacar: Si los Puntos de salud del objetivo se reducen a 0, después de resolver el Contraataque (si corresponde), los Ayssids pueden atacar a otra unidad adyacente."
+
+• Hechiceras (Tier Plata - Niv. 5)
+  - Básica: Ataque 3, Defensa 1, Vida 5, Iniciativa 6. Tipo: a Distancia. Coste: 8 Oro. Habilidad: "Alternativo: Coloca una ficha de debilidad <<-2>> sobre cualquier unidad durante 2 rondas de combate."
+  - Élite: Ataque 4, Defensa 1, Vida 6, Iniciativa 7. Tipo: a Distancia. Coste: 13 Oro. Habilidad: "Al Atacar: Después del ataque, coloca una ficha de Debilidad <<-1>> sobre el objetivo durante 2 rondas de combate."
+
+• Nix (Tier Oro - Niv. 6)
+  - Básica: Ataque 5, Defensa 2, Vida 7, Iniciativa 6. Tipo: Melé. Coste: 12 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 6, Defensa 2, Vida 8, Iniciativa 7. Tipo: Melé. Coste: 20 Oro y 1 Objeto de valor. Habilidad: "Pasivo: Esta unidad no puede recibir más de 4 Heridas de un solo ataque."
+
+• Háspidos (Tier Oro - Niv. 7)
+  - Básica: Ataque 5, Defensa 3, Vida 8, Iniciativa 9. Tipo: Melé. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: +2 Ataque si, durante este combate, esta unidad se giró del lado de manada al lado de unos pocos."
+  - Élite: Ataque 7, Defensa 3, Vida 8, Iniciativa 12. Tipo: Melé. Coste: 30 Oro y 2 Objetos de valor. Habilidad: "Al Atacar: Coloca 2 cubos de facción sobre el objetivo. Al comienzo de cada una de sus activaciones, retira 1 de ellos para infligir 1 Herida."
+
+---
+
+### 11. INVOCACIONES (Summons)
+• Elementales de aire (Niv. 2)
+  - Básica: Ataque 2, Defensa 0, Vida 4, Iniciativa 8. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de aire. Esta unidad inflige daño elemental."
+  - Élite: Ataque 3, Defensa 0, Vida 4, Iniciativa 8. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de aire. Esta unidad inflige daño elemental."
+
+• Elementales de agua (Niv. 2)
+  - Básica: Ataque 2, Defensa 0, Vida 5, Iniciativa 6. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de agua. Esta unidad inflige daño elemental."
+  - Élite: Ataque 3, Defensa 0, Vida 5, Iniciativa 6. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de agua. Esta unidad inflige daño elemental."
+
+• Elementales de fuego (Niv. 3)
+  - Básica: Ataque 2, Defensa 1, Vida 4, Iniciativa 5. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de fuego. Esta unidad inflige daño elemental."
+  - Élite: Ataque 3, Defensa 1, Vida 4, Iniciativa 5. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de fuego. Esta unidad inflige daño elemental."
+
+• Elementales de tierra (Niv. 3)
+  - Básica: Ataque 2, Defensa 2, Vida 2, Iniciativa 5. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de tierra. Esta unidad inflige daño elemental."
+  - Élite: Ataque 3, Defensa 2, Vida 2, Iniciativa 5. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de tierra. Esta unidad inflige daño elemental."`
   }
 ];
