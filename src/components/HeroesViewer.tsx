@@ -583,32 +583,32 @@ export default function HeroesViewer() {
                     {/* Level Perks Indicators */}
                     <div className="grid grid-cols-2 gap-3 pt-1">
                       {/* Hand Limit Perk */}
-                      <div className="bg-slate-950/50 border border-slate-900 rounded-xl p-3 flex items-center gap-3">
-                        <div className="w-9 h-9 rounded-lg bg-indigo-950/40 border border-indigo-900/30 flex items-center justify-center text-indigo-400 shrink-0">
+                      <div className="bg-slate-950/50 border border-slate-900 rounded-2xl p-3 flex flex-col items-center justify-center text-center">
+                        <div className="w-9 h-9 rounded-xl bg-indigo-950/40 border border-indigo-900/30 flex items-center justify-center text-indigo-400 mb-2">
                           <Layers className="w-4 h-4" />
                         </div>
                         <div>
                           <span className="text-[10px] uppercase font-mono text-slate-500 block">Límite de cartas en mano</span>
-                          <span className="text-sm font-bold text-slate-200 font-mono">
+                          <span className="text-sm font-bold text-slate-200 font-mono block mt-0.5">
                             {getHandLimit(heroLevel)} cartas
                           </span>
-                          <span className="text-[10px] text-slate-400 block leading-tight mt-0.5">
+                          <span className="text-[10px] text-slate-400 block leading-tight mt-1">
                             Al inicio de cada ronda
                           </span>
                         </div>
                       </div>
 
                       {/* Crowns Token perk */}
-                      <div className="bg-slate-950/50 border border-slate-900 rounded-xl p-3 flex items-center gap-3">
-                        <div className="w-9 h-9 rounded-lg bg-amber-950/40 border border-amber-900/30 flex items-center justify-center text-amber-400 shrink-0">
+                      <div className="bg-slate-950/50 border border-slate-900 rounded-2xl p-3 flex flex-col items-center justify-center text-center">
+                        <div className="w-9 h-9 rounded-xl bg-amber-950/40 border border-amber-900/30 flex items-center justify-center text-amber-400 mb-2 text-lg">
                           👑
                         </div>
                         <div>
                           <span className="text-[10px] uppercase font-mono text-slate-500 block">Coronas disponibles</span>
-                          <span className="text-sm font-bold text-slate-200 font-mono">
+                          <span className="text-sm font-bold text-slate-200 font-mono block mt-0.5">
                             {getCrowns(heroLevel)} {getCrowns(heroLevel) === 1 ? 'Corona' : 'Coronas'}
                           </span>
-                          <span className="text-[10px] text-slate-400 block leading-tight mt-0.5">
+                          <span className="text-[10px] text-slate-400 block leading-tight mt-1">
                             Activan Efecto Experto de Habilidades
                           </span>
                         </div>
