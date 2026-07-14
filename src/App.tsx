@@ -42,8 +42,30 @@ export default function App() {
   const [round, setRound] = useState(1);
   const [roundType, setRoundType] = useState<'Recursos' | 'Astrológica'>('Recursos');
   const [players, setPlayers] = useState<Player[]>([
-    { id: '1', name: 'Jugador 1 (Necrópolis)', color: 'bg-slate-800 border-slate-700 text-amber-200' },
-    { id: '2', name: 'Jugador 2 (Mazmorra)', color: 'bg-purple-950/60 border-purple-800 text-purple-200' }
+    { 
+      id: '1', 
+      name: 'Jugador 1 (Necrópolis)', 
+      color: 'bg-slate-800 border-slate-700 text-amber-200',
+      gold: 15,
+      materials: 3,
+      valuables: 1,
+      actionBuildUsed: false,
+      actionRecruitUsed: false,
+      actionMageGuildUsed: false,
+      factionId: 'necropolis'
+    },
+    { 
+      id: '2', 
+      name: 'Jugador 2 (Mazmorra)', 
+      color: 'bg-purple-950/60 border-purple-800 text-purple-200',
+      gold: 15,
+      materials: 3,
+      valuables: 1,
+      actionBuildUsed: false,
+      actionRecruitUsed: false,
+      actionMageGuildUsed: false,
+      factionId: 'mazmorra'
+    }
   ]);
   const [newPlayerName, setNewPlayerName] = useState('');
   const [selectedFaction, setSelectedFaction] = useState('castillo');
@@ -213,6 +235,20 @@ export default function App() {
   const handleNextTurn = () => {
     if (players.length > 0) {
       const nextIndex = (activePlayerIndex + 1) % players.length;
+      
+      // Reset action tokens for the next player as they start their turn
+      setPlayers(prev => prev.map((p, idx) => {
+        if (idx === nextIndex) {
+          return {
+            ...p,
+            actionBuildUsed: false,
+            actionRecruitUsed: false,
+            actionMageGuildUsed: false
+          };
+        }
+        return p;
+      }));
+
       setActivePlayerIndex(nextIndex);
       // When the index wraps around to 0, all players have played this round, so advance the round.
       if (nextIndex === 0) {
@@ -244,7 +280,14 @@ export default function App() {
       {
         id: Date.now().toString(),
         name: nameToUse,
-        color: factionObj.color
+        color: factionObj.color,
+        gold: 15,
+        materials: 3,
+        valuables: 1,
+        actionBuildUsed: false,
+        actionRecruitUsed: false,
+        actionMageGuildUsed: false,
+        factionId: factionObj.id
       }
     ]);
     setNewPlayerName('');
@@ -254,7 +297,14 @@ export default function App() {
     const defaultPlayers = FACTIONS.slice(0, count).map((f, idx) => ({
       id: (idx + 1).toString(),
       name: `Jugador ${idx + 1} (${f.name.split(' ')[0]})`,
-      color: f.color
+      color: f.color,
+      gold: 15,
+      materials: 3,
+      valuables: 1,
+      actionBuildUsed: false,
+      actionRecruitUsed: false,
+      actionMageGuildUsed: false,
+      factionId: f.id
     }));
     setPlayers(defaultPlayers);
     setActivePlayerIndex(0);

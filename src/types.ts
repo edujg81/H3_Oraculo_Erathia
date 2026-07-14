@@ -16,6 +16,13 @@ export interface Player {
   id: string;
   name: string;
   color: string; // Tailwind class
+  gold: number;
+  materials: number;
+  valuables: number;
+  actionBuildUsed: boolean;
+  actionRecruitUsed: boolean;
+  actionMageGuildUsed: boolean;
+  factionId?: string;
 }
 
 export interface TimerState {

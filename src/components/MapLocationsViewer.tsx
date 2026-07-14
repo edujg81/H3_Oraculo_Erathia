@@ -28,10 +28,10 @@ const LOCATIONS_DATA: MapLocation[] = [
   },
   {
     id: 'temple',
-    name: 'Templo (Temple)',
+    name: 'Templo',
     type: 'Visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Otorga una ficha de Moral Positiva (+1) de forma temporal al Héroe.',
+    effect: 'Gana una ficha de Moral Positiva.',
     rulesNotes: 'El bono de Moral Positiva dura hasta el final del próximo combate del Héroe.',
     iconType: 'temple'
   },
@@ -40,25 +40,34 @@ const LOCATIONS_DATA: MapLocation[] = [
     name: 'Santuario del Gesto Mágico (Magic Shrine)',
     type: 'Visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Permite buscar (2) cartas en el mazo de Hechizos y adquirir una pagando su coste en Oro correspondiente.',
+    effect: 'Puedes buscar (2) en el mazo de hechizos.',
     rulesNotes: 'Debe pagarse el coste en oro del hechizo para incorporarlo a la mano/mazo. Si no puedes pagarlo, no robas.',
     iconType: 'shrine'
   },
   {
     id: 'mystical_garden',
-    name: 'Jardín Místico (Mystical Garden)',
+    name: 'Jardín Místico',
     type: 'Visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'El Héroe elige de forma inmediata entre ganar 2 de Oro o 1 Objeto de valor (Gema/Cristal/Mercurio).',
+    effect: 'Elige una: Gana 2 Oros o 1 Objeto de valor.',
     rulesNotes: 'Una excelente fuente de recursos tempranos en el mapa. Una sola visita por partida.',
     iconType: 'resource'
   },
   {
-    id: 'warriors_tomb',
-    name: 'Tumba / Tumba del Guerrero (Tomb / Warrior\'s Tomb)',
+    id: 'tomb',
+    name: 'Tumba',
     type: 'Visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Permite buscar (2) en el mazo de Artefactos y equipar un Artefacto al Héroe. Sin embargo, asigna Moral Negativa (-1) de forma inmediata por profanación.',
+    effect: 'Gana una ficha de moral negativa, 3 Oros y busca (1) Artefacto.',
+    rulesNotes: 'La ficha de Moral Negativa permanece hasta la resolución del siguiente combate del Héroe.',
+    iconType: 'death'
+  },
+  {
+    id: 'warriors_tomb',
+    name: 'Tumba del Guerrero',
+    type: 'Visitable',
+    zones: ['Superficie', 'Subterráneo'],
+    effect: 'Puedes buscar (2) en el mazo de Artefactos dos veces. Después de buscar, recibe moral negativa dos veces.',
     rulesNotes: 'La ficha de Moral Negativa permanece hasta la resolución del siguiente combate del Héroe.',
     iconType: 'death'
   },
@@ -73,19 +82,19 @@ const LOCATIONS_DATA: MapLocation[] = [
   },
   {
     id: 'windmill',
-    name: 'Molino de Viento (Windmill)',
+    name: 'Molino',
     type: 'Visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Entrega 1 Objeto de valor de forma gratuita (tipo determinado por el escenario o al azar).',
+    effect: 'Recibe 1 Objeto de valor.',
     rulesNotes: 'Es una localización mística de producción fija, ideal para costear mejoras de unidades de Plata u Oro.',
     iconType: 'mill'
   },
   {
     id: 'waterwheel',
-    name: 'Molino de Agua (Waterwheel)',
+    name: 'Molino de Agua',
     type: 'Visitable',
     zones: ['Superficie'],
-    effect: 'Entrega 3 de Oro de forma inmediata al Héroe que lo visita.',
+    effect: 'Recibe 3 Oros.',
     rulesNotes: 'Ubicado típicamente cerca de cauces de agua o valles fértiles. Se inhabilita con un cubo negro tras ser reclamado.',
     iconType: 'mill'
   },
@@ -110,7 +119,7 @@ const LOCATIONS_DATA: MapLocation[] = [
   {
     id: 'library_enlightenment',
     name: 'Biblioteca de la Iluminación',
-    type: 'Revisitable',
+    type: 'Re-visitable',
     zones: ['Superficie', 'Subterráneo'],
     effect: 'Paga 3 Oros para retirar 1 carta de estadística de tu mano o pila de descarte y sustituirla por cualquier otra carta de característica. Puedes hacerlo dos veces por visita.',
     rulesNotes: 'Solo puede ser visitada una vez por cada Héroe. Se registra colocando un cubo del color del jugador.',
@@ -118,118 +127,118 @@ const LOCATIONS_DATA: MapLocation[] = [
   },
   {
     id: 'star_axis',
-    name: 'Eje Estelar (Star Axis)',
-    type: 'Visitable',
+    name: 'Eje Estelar',
+    type: 'Señalizable',
     zones: ['Superficie'],
-    effect: 'Otorga de forma permanente +1 punto de Poder de Hechizo (Poder Mágico) al Héroe.',
-    rulesNotes: 'Una sola visita por Héroe. Se registra colocando un cubo de control de tu color para indicar que ya reclamaste el aumento.',
+    effect: 'Retira una de las cartas de estadística de tu mano y sustitúyela por una reforzada del mismo tipo.',
+    rulesNotes: 'Cuando visites el eje estelar no retires los cubos de facción enemigos. Puede haber varios cubos en la zona. Una vez que cualquier facción haya visitado el eje estelar, este cuenta como zona vacía para esa facción, tal y como ocurre con las zonas visitables.',
     iconType: 'altar'
   },
   {
     id: 'scholar',
-    name: 'Erudito (Scholar)',
+    name: 'Erudito',
     type: 'Visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Enseña un Hechizo aleatorio de nivel 1-2 sin coste en Oro, o bien otorga 1 carta de Habilidad o Experiencia directa al azar.',
+    effect: 'Tira 1 dado de ataque.\nSegún el resultado, haz lo siguiente:\n  +1: Roba la carta de estadística elegida o retira una de las cartas de estadística de tu mano.\n  0: Roba 2 cartas de habilidad, quédate una y descarta la otra.\n  -1: Roba 2 cartas de hechizo, quédate una y descarta la otra.',
     rulesNotes: 'De un solo uso. Una vez resuelto su efecto, el erudito abandona la zona colocando un cubo negro.',
     iconType: 'witch'
   },
   {
     id: 'fountain_youth',
-    name: 'Fuente de la Juventud (Fountain of Youth)',
+    name: 'Fuente de la Juventud',
     type: 'Visitable',
     zones: ['Superficie'],
-    effect: 'El Héroe obtiene de forma instantánea +1 Punto de Movimiento (PM) extra para este turno y +1 de Moral Positiva.',
+    effect: 'El Héroe que entre en esta zona gana 1 Punto de Movimiento (PM) adicional este turno y una ficha de Moral Positiva.',
     rulesNotes: 'De un solo uso. Coloca un cubo negro tras ser reclamado por un Héroe en este escenario.',
     iconType: 'temple'
   },
   {
     id: 'pandoras_box',
-    name: 'La Caja de Pandora (Pandora\'s Box)',
+    name: 'La Caja de Pandora',
     type: 'Visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Desata un combate inmediato de dificultad desconocida. Al vencer, otorga recompensas extremas: gran cantidad de Oro, Experiencia o múltiples cartas de Hechizo/Artefacto.',
+    effect: 'Tira un número específico de dados de Recursos o Tesoro y selecciona uno para resolver su efecto.\nSe puede sustituir su efecto por una carta de Caja de Pandora.',
     rulesNotes: 'Si el Héroe es derrotado o decide retirarse, la caja permanece cerrada en la casilla para futuros intentos.',
     iconType: 'shrine'
   },
   {
     id: 'magic_spring',
-    name: 'Manantial Mágico (Magic Spring)',
+    name: 'Manantial Mágico',
     type: 'Visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Restablece completamente todos los Puntos de Maná o dobla el límite de cartas de Hechizo que puedes retener para tu próximo combate.',
+    effect: 'Puedes mirar las 3 cartas superiores de tu pila de descarte y añadir una de ellas a tu mano. Devuelve el resto de cartas a la parte superior de la pila de descarte en cualquier orden.',
     rulesNotes: 'Se puede activar una vez por semana de escenario (ronda de juego). Coloca un marcador temporal.',
     iconType: 'shrine'
   },
   {
     id: 'obelisk',
-    name: 'Obelisco (Obelisk)',
-    type: 'Visitable',
+    name: 'Obelisco',
+    type: 'Señalizable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Revela una porción del mapa que indica la ubicación exacta del Grial (retira una carta de rompecabezas).',
+    effect: 'Los efectos del obelisco dependen del escenario. Cuando lo visites, no retires los cubos de la facción enemiga. Puede haber varios cubos en la zona. Una vez que una facción visite un obelisco, ese se convierte en una zona vacía para dicha facción, tal y como ocurre con las zonas visitables.',
     rulesNotes: 'Cada jugador coloca un cubo de su color al visitarlo para registrar que ya lo leyó. No se bloquea para otros jugadores.',
     iconType: 'stone'
   },
   {
     id: 'redwood_observatory',
-    name: 'Observatorio de Secoya (Redwood Observatory)',
+    name: 'Observatorio de Secoya',
     type: 'Visitable',
     zones: ['Superficie'],
-    effect: 'Revela inmediatamente todas las losetas de mapa adyacentes que estén boca abajo sin necesidad de moverse a ellas.',
+    effect: 'Descubre una loseta adyacente a esta.',
     rulesNotes: 'De un solo uso. Coloca un cubo negro tras ser activado. Permite avistar amenazas y minas tempranas.',
     iconType: 'tree'
   },
   {
     id: 'spell_scroll_loc',
-    name: 'Pergamino de Hechizo (Spell Scroll)',
+    name: 'Pergamino de Hechizo',
     type: 'Visitable',
     zones: ['Superficie', 'Subterráneo', 'Agua'],
-    effect: 'Permite buscar y añadir un Hechizo aleatorio de rango 1-2 a tu mano que actúa como pergamino de un solo uso.',
+    effect: 'Cuando entres en este lugar, roba 1 carta de pergamino de hechizo, ponla cerca de tu carta de héroe y sigue las instrucciones indicadas en la carta.',
     rulesNotes: 'El Héroe puede lanzar el hechizo impreso en el pergamino sin poseer Libro de Hechizos ni requerir la habilidad de magia adecuada.',
     iconType: 'shrine'
   },
   {
     id: 'prison',
-    name: 'Prisión (Prison)',
+    name: 'Prisión',
     type: 'Visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Al visitarla, liberas a un Héroe aliado cautivo que se une de forma inmediata a tu imperio como Héroe Secundario con su ejército básico inicial.',
+    effect: 'Ganas un héroe secundario. Coloca su miniatura en esta zona. Si ya tienes uno, gana 3 Oros.',
     rulesNotes: 'De un solo uso. Habitualmente protegida por temibles ejércitos neutrales en el mapa de aventura.',
     iconType: 'death'
   },
   {
     id: 'shrine_magic_incantation',
-    name: 'Santuario del Encantamiento Mágico (Shrine of Magic Incantation)',
+    name: 'Santuario del Encantamiento Mágico',
     type: 'Visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Permite aprender un Hechizo de nivel 1-2 específico que se expone públicamente, pagando su correspondiente coste en Oro.',
+    effect: 'Puedes pagar 3 Oros para busca (2) en el mazo de hechizos.',
     rulesNotes: 'A diferencia de la Choza de la Bruja, el hechizo es visible para todos desde el principio del escenario.',
     iconType: 'shrine'
   },
   {
     id: 'artifact_symbol',
-    name: 'Símbolo de Artefacto (Artifact Symbol)',
+    name: 'Símbolo de Artefacto',
     type: 'Visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Representa un artefacto suelto en el suelo. Permite robar un Artefacto de la baraja correspondiente (Menor, Mayor o Reliquia).',
+    effect: 'Puedes buscar (2) en el mazo de artefactos..',
     rulesNotes: 'Generalmente se coloca custodiado por un ejército neutral adyacente. Se retira del mapa una vez recogido.',
     iconType: 'resource'
   },
   {
     id: 'resource_symbol',
-    name: 'Símbolo de Recursos (Resource Symbol)',
+    name: 'Símbolo de Recursos',
     type: 'Visitable',
     zones: ['Superficie', 'Subterráneo', 'Agua'],
-    effect: 'Montones sueltos de Oro, Madera, Mineral u Objetos de valor. Al interactuar con ellos, sumas de inmediato dichos recursos a tu hoja de control.',
+    effect: 'Lanza la cantidad indicada de dados de recursos y elige uno para resolver su efecto.',
     rulesNotes: 'Se retira de la casilla una vez recogido. Es de un solo uso.',
     iconType: 'resource'
   },
   {
     id: 'treasure_symbol',
-    name: 'Símbolo de Tesoro (Treasure Symbol)',
+    name: 'Símbolo de Tesoro',
     type: 'Visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Cofre del tesoro místico. Al recogerlo, el Héroe elige de forma inmediata entre ganar 5 de Oro o 1 Punto de Experiencia.',
+    effect: 'Lanza la cantidad indicada de dados de tesoro y elige uno para resolver su efecto.',
     rulesNotes: 'Representa la clásica disyuntiva táctica de la saga para potenciar la economía o acelerar la subida de nivel del héroe.',
     iconType: 'resource'
   },
@@ -237,82 +246,82 @@ const LOCATIONS_DATA: MapLocation[] = [
   // 2. Re-visitables (Regresas múltiples veces, consumiendo 1 PM si estás en ella o moviéndote)
   {
     id: 'trading_post',
-    name: 'Mercadillo (Trading Post)',
+    name: 'Mercadillo',
     type: 'Re-visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Permite comerciar e intercambiar recursos según la Tabla de Comercio oficial, o destruir 1 carta no deseada de tu mano (excepto iniciales o flechas mágicas) a cambio de 1 de Oro.',
+    effect: 'Permite al héroe que lo visite intercambiar recursos, retirar una carta o comprar una máquina de guerra.',
     rulesNotes: 'Ideal para limpiar el mazo de combate eliminando cartas de fuerza/magia inútiles o equilibrar el stock de metales y gemas.',
     iconType: 'market'
   },
   {
     id: 'sanctuary_loc',
-    name: 'Santuario (Sanctuary)',
+    name: 'Santuario',
     type: 'Re-visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Los Héroes situados en este hexágono están completamente resguardados y no pueden ser atacados por otros Héroes bajo ningún concepto.',
+    effect: 'Los Héroes presentes en esta zona no pueden ser atacados por otros héroes. Si la zona está ocupada por un héroe, los demás héroes no pueden acceder a ella, pero sí pueden atravesarla.',
     rulesNotes: 'Un héroe rival puede atravesar este hexágono libremente durante su movimiento, pero nunca puede detenerse en él si ya está ocupado.',
     iconType: 'sanctuary'
   },
   {
     id: 'stables',
-    name: 'Establos (Stables)',
+    name: 'Establos',
     type: 'Re-visitable',
     zones: ['Superficie'],
-    effect: 'Al ingresar en el hexágono, el Héroe gana inmediatamente +1 Punto de Movimiento (PM) adicional que debe consumir obligatoriamente durante el turno de aventura en curso.',
-    rulesNotes: 'No acumulable en el mismo turno. Se utiliza habitualmente para realizar incursiones lejanas y retornar a salvo.',
+    effect: 'Gana 1 Punto de Movimiento (PM) adicional.',
+    rulesNotes: 'No acumulable al siguiente turno. Se utiliza habitualmente para realizar incursiones lejanas y retornar a salvo.',
     iconType: 'stables'
   },
   {
     id: 'war_academy',
-    name: 'Universidad Militar (War Academy)',
-    type: 'Re-visitable',
+    name: 'Universidad',
+    type: 'Visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Permite destruir de forma permanente cualquier carta de Habilidad de la mano pagando 10 de Oro para realizar un draft libre de una nueva Habilidad.',
+    effect: 'Paga 6 Oros para buscar (4) en la pila de descartes de habilidades.',
     rulesNotes: 'Perfecto para corregir la especialización militar del Héroe en las fases avanzadas del escenario.',
     iconType: 'academy'
   },
   {
     id: 'war_machine_factory',
-    name: 'Fábrica de Máquinas de Guerra (War Machine Factory)',
+    name: 'Fábrica de Máquinas de Guerra',
     type: 'Re-visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Permite comprar máquinas de guerra aliadas (Balista, Carro de Munición o Tienda de Primeros Auxilios) pagando su coste en Oro (10 de Oro por máquina).',
+    effect: 'Este lugar permite a los héroes comprar máquinas de guerra.',
     rulesNotes: 'Los héroes pueden regresar aquí en cualquier ronda para equipar o reemplazar sus máquinas dañadas en combate.',
     iconType: 'mill'
   },
   {
     id: 'hill_fort',
-    name: 'Fuerte de la Colina (Hill Fort)',
-    type: 'Re-visitable',
+    name: 'Fuerte de la Colina',
+    type: 'Visitable',
     zones: ['Superficie'],
-    effect: 'Permite mejorar de forma instantánea cualquier criatura básica de tu ejército a su versión Élite pagando la diferencia de coste de reclutamiento.',
-    rulesNotes: 'Un punto logístico muy codiciado que ahorra tener que viajar de vuelta a la Metrópolis para reforzar unidades.',
+    effect: 'Inmediatamente puedes reforzar una de tus unidades Bronce o Plata. El coste de refuerzo se reduce en 3 Oros hasta un mínimo de 0.',
+    rulesNotes: 'Un punto logístico muy codiciado que ahorra oro para reforzar unidades.',
     iconType: 'stables'
   },
   {
     id: 'market_time',
-    name: 'Mercado del Tiempo (Market of Time)',
-    type: 'Re-visitable',
+    name: 'Mercado del Tiempo',
+    type: 'Visitable',
     zones: ['Superficie'],
-    effect: 'Permite a un Héroe eliminar ("olvidar") de forma permanente una Habilidad secundaria de su mazo de juego de forma definitiva.',
+    effect: 'Retira una carta de tu mano. Después, busca (2) en el mazo de habilidades, hechizos o artefactos.',
     rulesNotes: 'Un lugar legendario para corregir y optimizar la build de cartas de tu Héroe en cualquier momento de la partida.',
     iconType: 'market'
   },
   {
     id: 'black_market',
-    name: 'Mercado Negro (Black Market)',
+    name: 'Mercado Negro',
     type: 'Re-visitable',
     zones: ['Subterráneo'],
-    effect: 'Permite comprar Artefactos de la baraja principal pagando elevados costes en Oro (ej. 15 por Menor, 30 por Mayor) o vender tus artefactos no deseados.',
+    effect: 'Mira las 4 primeras cartas de la pila de descarte de artefactos.\nPuedes comprar una por:\n  - 5 Oros si es un artefacto menor.\n  - 7 Oros si es un artefacto mayor.\n  - 10 oros si es un artefacto reliquiea.',
     rulesNotes: 'Ubicado casi siempre en zonas subterráneas lejanas o peligrosas de Erathia.',
     iconType: 'market'
   },
   {
     id: 'tavern',
-    name: 'Taberna (Tavern)',
+    name: 'Taberna',
     type: 'Re-visitable',
     zones: ['Superficie'],
-    effect: 'Permite pagar 10 de Oro para reclutar un Héroe Secundario con su ejército inicial intacto, consultar rumores o comprar un bufo temporal de moral (+1) por 2 de Oro.',
+    effect: 'Puedes pagar 7 Oros en este campo para ganar un héroe secundario y elegir un jugador enemigo que descarte 1 carta al azar de su mano.',
     rulesNotes: 'Útil para reclutar exploradores de apoyo que agilicen la recogida de recursos sueltos.',
     iconType: 'market'
   },
@@ -320,10 +329,10 @@ const LOCATIONS_DATA: MapLocation[] = [
   // 3. Señalizables (Se capturan colocando un cubo de color de tu facción)
   {
     id: 'mine',
-    name: 'Minas (Mine - Oro, Mineral, Madera, Cristal, Alquimista)',
+    name: 'Mina',
     type: 'Señalizable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Incrementa de forma permanente tu nivel de producción del recurso respectivo en el tablero de ciudad en cada Ronda de Recursos (rondas impares).',
+    effect: 'Si caputaras una mina que nadie ha capturado antes, recibes inmediatamente sus recursos. Además, en función de su tipo, generará ingresos pasivos al comienzo de cada ronda de recursos. El ingreso se pierde si se pierde el control de la mina.\n  - Mina de minerales, Aserradero: 2 Materiales de construcción.\n  - Laboratorio de alquimista, mina de cristal, estanque de gemas: 1 Objeto de valor.\n  - Mina de oro: 5 Oros.',
     rulesNotes: 'Al capturarla por primera vez, el jugador recibe de inmediato la producción de un turno de forma gratuita. Los rivales pueden conquistarla sustituyendo tu cubo de color por el suyo.',
     iconType: 'mine'
   },
@@ -358,37 +367,37 @@ const LOCATIONS_DATA: MapLocation[] = [
   // 4. Especiales / Transición / Agua / Obstáculos
   {
     id: 'subterranean_gate',
-    name: 'Puerta Subterránea (Subterranean Gate)',
-    type: 'Obstáculo / Paso',
+    name: 'Portal Subterráneo',
+    type: 'Re-visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Permite la transición bidimensional inmediata entre la capa de Superficie y la capa de Subterráneo consumiendo los puntos de movimiento estándar.',
+    effect: 'Cuando entres en este lugar, muévete a la ubicación conectada en la loseta adyacente. Este lugar te permite entrar o salir de las losetas subterráneas.',
     rulesNotes: 'Un héroe situado en la superficie no puede descubrir losetas del subterráneo que estén ocultas a través de la puerta hasta que no cruce físicamente por ella.',
     iconType: 'gate'
   },
   {
     id: 'monolith_two_way',
-    name: 'Monolito (doble sentido) (Two-way Monolith)',
-    type: 'Obstáculo / Paso',
+    name: 'Monolito (Doble sentido)',
+    type: 'Re-visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Enlaza bidireccionalmente dos puntos del mapa de aventura. Al entrar en el monolito, el Héroe se teletransporta inmediatamente al monolito de salida correspondiente.',
+    effect: 'Cuando entres en este lugar, mueve a tu héroe a la ubicación del monolito de salida correspondiente.\nPuedes utilizar el monolito de salida para regresar al monolito de entrada.',
     rulesNotes: 'Consume 1 punto de movimiento (PM). Si el monolito de llegada está bloqueado por un héroe enemigo, se desata combate de inmediato.',
     iconType: 'gate'
   },
   {
     id: 'monolith_one_way',
-    name: 'Monolito (un sentido) (One-way Monolith)',
-    type: 'Obstáculo / Paso',
+    name: 'Monolito (Un sentido)',
+    type: 'Re-visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Teletransporta unidireccionalmente al Héroe hacia una loseta receptora fijada de antemano. No permite realizar el viaje de regreso por el mismo monolito.',
+    effect: 'Cuando entres a este lugar, mueve a tu héroe a la ubicación del monolito de salida correspondiente.\nNo puedes usar el monolito de salida para regresar al monolito de entrada.',
     rulesNotes: 'Útil para realizar asaltos sorpresa en zonas resguardadas del rival sin posibilidad de retorno directo.',
     iconType: 'gate'
   },
   {
     id: 'blocked_zone',
-    name: 'Zona Bloqueada (Blocked Zone)',
+    name: 'Zona Bloqueada',
     type: 'Obstáculo / Paso',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Hexágonos totalmente obstruidos por elementos del mapa (bosques tupidos, montañas, lava, muros). Impide el movimiento de tropas por tierra de forma permanente.',
+    effect: 'Este es un tipo de terreno especial al que los héroes no pueden acceder.\nSu grueso borde amarillo lo hace fácilmente reconocible.',
     rulesNotes: 'La zona bloqueada se puede superar empleando hechizos especiales de movimiento como Volar (Fly) o Portal Dimensional (Dimension Door).',
     iconType: 'gate'
   },
@@ -403,19 +412,19 @@ const LOCATIONS_DATA: MapLocation[] = [
   },
   {
     id: 'sea_temple',
-    name: 'Templo del Mar (Sea Temple)',
-    type: 'Especial',
+    name: 'Templo del Mar',
+    type: 'Visitable',
     zones: ['Agua'],
-    effect: 'Custodiado por regimientos de Elementales de Agua y Serpientes Marinas de oro. Derrotar al guardián otorga +1 Hechizo de Agua aleatorio en rango experto y un Botín del Dado de Tesoro.',
+    effect: 'Gana 10 Oros y busca (2) Artefactos dos veces.',
     rulesNotes: 'Considerado uno de los desafíos marítimos más peligrosos pero con las recompensas mágicas más determinantes de Savage Seas.',
     iconType: 'sea_temple'
   },
   {
     id: 'shipwreck_survivor',
-    name: 'Náufrago Superviviente (Shipwreck Survivor)',
+    name: 'Superviviente de naufragio',
     type: 'Visitable',
     zones: ['Agua'],
-    effect: 'Al rescatarlo, el Héroe lanza el Dado de Tesoro de inmediato. Si obtiene éxito, recibe un Artefacto Menor gratis. Si falla la tirada, recibe +5 de Oro como agradecimiento.',
+    effect: 'Busca (2) Artefactos',
     rulesNotes: 'Localización mística de un solo uso. Una forma segura de conseguir oro o artefactos navegando.',
     iconType: 'survivor'
   },
@@ -439,10 +448,10 @@ const LOCATIONS_DATA: MapLocation[] = [
   },
   {
     id: 'shipwreck_lots',
-    name: 'Restos de Naufragio (Shipwreck Lots)',
+    name: 'Restos de Naufragio',
     type: 'Visitable',
     zones: ['Agua'],
-    effect: 'Enclaves protegidos similares a las criptas terrestres. Custodiados por Fantasmas y Piratas no-muertos. Su victoria garantiza abundantes Objetos de Valor e invitaciones de Dados de Tesoro.',
+    effect: 'Tira 1 dado de Ataque.\nEn función del resultado, haz lo siguiente:\n  +1: Tira y resuelve 2 dados de Recursos.\n  0: Tira y resuelve 1 dado de Recursos.\n  -1: No ganas nada.',
     rulesNotes: 'Requiere preparación táctica debido a los efectos desestabilizadores de moral de las huestes fantasmas de las profundidades.',
     iconType: 'shipwreck_lots'
   },
@@ -466,37 +475,37 @@ const LOCATIONS_DATA: MapLocation[] = [
   },
   {
     id: 'sea_chest',
-    name: 'Cofre Marino (Sea Chest)',
+    name: 'Cofre Marino',
     type: 'Visitable',
     zones: ['Agua'],
-    effect: 'Cofre del tesoro místico flotando en el agua. El Héroe gana de inmediato entre 5 y 10 de Oro, o puede optar por buscar un Artefacto Menor en su lugar.',
+    effect: 'Tira 1 dado de Ataque.\nEn función del resultado, haz lo siguiente:\n  +1: Busca (1) Artefacto.\n  0: Gana 5 Oros.\n  -1: No ganas nada.',
     rulesNotes: 'Un solo uso. Equivalente marítimo al cofre de tesoro terrestre en Savage Seas.',
     iconType: 'resource'
   },
   {
     id: 'shipwreck',
-    name: 'Naufragio (Shipwreck)',
+    name: 'Naufragio',
     type: 'Visitable',
     zones: ['Agua'],
-    effect: 'Un barco encallado custodiado por Fantasmas y piratas no-muertos. Derrotarles garantiza entre 10 y 20 de Oro y un Artefacto Mayor o de nivel Reliquia.',
+    effect: 'Tira y resuelve 2 dados de Recursos.',
     rulesNotes: 'Un desafío marítimo riguroso con penalizador moral debido a la presencia fantasmal de las profundidades.',
     iconType: 'shipwreck_lots'
   },
   {
     id: 'flotsam',
-    name: 'Pecio (Flotsam)',
+    name: 'Pecio',
     type: 'Visitable',
     zones: ['Agua'],
-    effect: 'Restos de madera y suministros de barcos destruidos. Al interactuar con él, otorga inmediatamente +3 de Madera o 5 de Oro de forma gratuita.',
+    effect: 'Gana 2 Materiales de consntrucción.',
     rulesNotes: 'Se retira del mapa de aventura permanentemente tras su recogida. No genera penalizaciones ni requiere batallas.',
     iconType: 'resource'
   },
   {
     id: 'siren',
-    name: 'Sirena (Siren)',
+    name: 'Sirena',
     type: 'Visitable',
     zones: ['Agua'],
-    effect: 'El Héroe puede sacrificar una criatura aliada de nivel Bronce de su ejército para ganar inmediatamente +1 Punto de Experiencia permanente.',
+    effect: 'El Héroe que entró en este campo gana 1 PM adicional este turno.\nTambién obtendrás una ficha de moral positiva.',
     rulesNotes: 'Solo admite una visita por héroe por escenario. Se marca colocando un cubo negro en la loseta de mar.',
     iconType: 'witch'
   },
@@ -504,10 +513,10 @@ const LOCATIONS_DATA: MapLocation[] = [
   // 5. Expansión Conflux / Especiales / Bancos de Criaturas
   {
     id: 'elemental_portal',
-    name: 'Portal de los Elementos (Elemental Portal)',
-    type: 'Re-visitable',
+    name: 'Conflujo elemental',
+    type: 'Visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Permite contratar de forma directa elementales de Aire, Agua, Fuego o Tierra abonando su precio en Oro o con el recurso elemental correspondiente, sin necesidad de volver a la Metrópolis.',
+    effect: 'Al entrar en este lugar, por cada vivienda que tengas, roba del mazo de unidades neutrales correspondiente hasta que encuentres una carta de <<Elementales>>. Puedes reclutar una de estas unidades si pagas su coste de reclutamiento. Vuelve a barajar el resto de las cartas en sus mazos.',
     rulesNotes: 'Expansión Conflux. Ofrece versatilidad para reponer bajas tácticas directamente en la vanguardia de exploración.',
     iconType: 'portal'
   },
@@ -531,28 +540,28 @@ const LOCATIONS_DATA: MapLocation[] = [
   },
   {
     id: 'grail',
-    name: 'Grial (Grail)',
-    type: 'Especial',
+    name: 'Grial',
+    type: 'Visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Artefacto supremo que debe desenterrarse mediante excavaciones. Al llevarlo a tu capital, se erige la Estructura del Grial, que duplica la producción de reclutas locales y otorga +20 de Oro de ingresos por ronda.',
+    effect: 'Gana una ficha de grial.',
     rulesNotes: 'Excavar requiere gastar todos los puntos de movimiento del Héroe en una loseta libre tras haber descifrado el mapa completo de los obeliscos.',
     iconType: 'altar'
   },
   {
     id: 'cyclops_stockpile',
-    name: 'Reserva de Cíclopes (Cyclops Stockpile)',
-    type: 'Especial',
+    name: 'Reserva de Cíclopes',
+    type: 'Visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Banco de Criaturas defendido por Cíclopes. Superar la guarnición premia al Héroe de forma inmediata con gran cantidad de recursos, especialmente +4 u +8 de Materiales de construcción (Mineral/Madera) y abundante Oro.',
+    effect: 'Al preparar el ejército neutral que custodia este lugar, en lugar de robar 1 unidad Azul, busca 2 cíclopes Oro y añádelos al ejército neutral (búscalos primero en la pila de descartes Oro y luego en el mazo de unidades neutrales Oro). Si ganas el combate, tira y resuelve 4 dados de Recursos.\nCualquier efecto adicional depende del escenario.',
     rulesNotes: 'Combate asimétrico regulado por Fichas de Apilamiento (Stack Tokens) de vida extra. No se gana experiencia de combate.',
     iconType: 'mine'
   },
   {
     id: 'dragon_utopia',
-    name: 'Utopía del Dragón (Dragon Utopia)',
-    type: 'Especial',
+    name: 'Utopía del Dragón',
+    type: 'Señalizable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'El desafío de batalla más temible del mapa. Protegido por una guarnición letal de Dragones. Vencerles otorga 40 de Oro y 3 búsquedas en la baraja de Artefactos de nivel Mayor y Reliquia.',
+    effect: 'Los efectos dependen del eseenario.',
     rulesNotes: 'Ubicada en el centro del escenario (losetas de nivel VII). No se permite combate rápido ni retiradas fáciles. El combate se decide por aniquilación.',
     iconType: 'sea_temple'
   }

@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Player } from '../types';
 import { 
   Play, Pause, RotateCcw, UserPlus, Trash, Hourglass, 
-  HelpCircle, Users, Clock, Calendar, ShieldAlert, Plus, ChevronRight
+  HelpCircle, Users, Clock, Calendar, ShieldAlert, Plus, ChevronRight,
+  Coins, Hammer, Crown, Shield, Zap
 } from 'lucide-react';
 
 interface GameTimerProps {
@@ -72,6 +73,33 @@ export default function GameTimer({
   };
 
   const isLowTime = turnSeconds < 15 && turnLimit > 0;
+
+  const activePlayer = players[activePlayerIndex];
+
+  const updateActivePlayerResource = (resource: 'gold' | 'materials' | 'valuables', amount: number) => {
+    setPlayers(prev => prev.map((p, idx) => {
+      if (idx === activePlayerIndex) {
+        const currentVal = p[resource] ?? 0;
+        return {
+          ...p,
+          [resource]: Math.max(0, currentVal + amount)
+        };
+      }
+      return p;
+    }));
+  };
+
+  const toggleActivePlayerAction = (actionKey: 'actionBuildUsed' | 'actionRecruitUsed' | 'actionMageGuildUsed') => {
+    setPlayers(prev => prev.map((p, idx) => {
+      if (idx === activePlayerIndex) {
+        return {
+          ...p,
+          [actionKey]: !p[actionKey]
+        };
+      }
+      return p;
+    }));
+  };
 
   return (
     <div className="space-y-6">
@@ -273,6 +301,194 @@ export default function GameTimer({
               </div>
             )}
           </div>
+
+          {/* Independent Treasury & Town Action Tokens for Active Player */}
+          {activePlayer && (
+            <div className="bg-[#1b1311] border border-slate-800 rounded-3xl p-6 shadow-xl space-y-6 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl pointer-events-none" />
+              
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-800/80 pb-4 gap-3">
+                <div>
+                  <span className="text-[10px] text-amber-500/80 font-mono uppercase tracking-widest block font-bold">
+                    Tesorería y Acciones de Ciudad
+                  </span>
+                  <h3 className="font-serif text-amber-200 text-lg font-bold">
+                    {activePlayer.name}
+                  </h3>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    // Collect basic round town income for this player
+                    setPlayers(prev => prev.map((p, idx) => {
+                      if (idx === activePlayerIndex) {
+                        return {
+                          ...p,
+                          gold: (p.gold ?? 0) + 10,
+                          materials: (p.materials ?? 0) + 1,
+                          valuables: (p.valuables ?? 0) + 1
+                        };
+                      }
+                      return p;
+                    }));
+                  }}
+                  className="self-start sm:self-center bg-emerald-950/40 hover:bg-emerald-900/30 border border-emerald-800/60 hover:border-emerald-600 text-emerald-400 hover:text-emerald-300 text-xs font-bold py-1.5 px-3.5 rounded-xl transition flex items-center space-x-1.5 cursor-pointer shadow-sm"
+                >
+                  <Coins className="w-3.5 h-3.5" />
+                  <span>Cobrar Ingresos (+10O, +1M, +1V)</span>
+                </button>
+              </div>
+
+              {/* Resource grid with increment/decrement buttons */}
+              <div className="grid grid-cols-3 gap-3">
+                {/* Gold */}
+                <div className="bg-amber-950/10 border border-amber-900/30 rounded-2xl p-4 flex flex-col items-center relative">
+                  <Coins className="w-6 h-6 text-amber-500 mb-1" />
+                  <span className="text-2xl font-bold text-amber-300 font-mono">{activePlayer.gold ?? 15}</span>
+                  <span className="text-[10px] text-amber-600 uppercase font-mono font-semibold">Oro (O)</span>
+                  <div className="flex gap-1.5 mt-2.5">
+                    <button 
+                      type="button"
+                      onClick={() => updateActivePlayerResource('gold', -1)} 
+                      className="w-7 h-7 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs flex items-center justify-center font-bold cursor-pointer transition border border-slate-800"
+                    >
+                      -
+                    </button>
+                    <button 
+                      type="button"
+                      onClick={() => updateActivePlayerResource('gold', 1)} 
+                      className="w-7 h-7 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs flex items-center justify-center font-bold cursor-pointer transition border border-slate-800"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+
+                {/* Materials */}
+                <div className="bg-orange-950/10 border border-orange-900/30 rounded-2xl p-4 flex flex-col items-center relative">
+                  <Hammer className="w-6 h-6 text-orange-500 mb-1" />
+                  <span className="text-2xl font-bold text-orange-300 font-mono">{activePlayer.materials ?? 3}</span>
+                  <span className="text-[10px] text-orange-600 uppercase font-mono font-semibold">Materiales (M)</span>
+                  <div className="flex gap-1.5 mt-2.5">
+                    <button 
+                      type="button"
+                      onClick={() => updateActivePlayerResource('materials', -1)} 
+                      className="w-7 h-7 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs flex items-center justify-center font-bold cursor-pointer transition border border-slate-800"
+                    >
+                      -
+                    </button>
+                    <button 
+                      type="button"
+                      onClick={() => updateActivePlayerResource('materials', 1)} 
+                      className="w-7 h-7 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs flex items-center justify-center font-bold cursor-pointer transition border border-slate-800"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+
+                {/* Valuables */}
+                <div className="bg-purple-950/10 border border-purple-900/30 rounded-2xl p-4 flex flex-col items-center relative">
+                  <Crown className="w-6 h-6 text-purple-500 mb-1" />
+                  <span className="text-2xl font-bold text-purple-300 font-mono">{activePlayer.valuables ?? 1}</span>
+                  <span className="text-[10px] text-purple-600 uppercase font-mono font-semibold">Valiosos (V)</span>
+                  <div className="flex gap-1.5 mt-2.5">
+                    <button 
+                      type="button"
+                      onClick={() => updateActivePlayerResource('valuables', -1)} 
+                      className="w-7 h-7 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs flex items-center justify-center font-bold cursor-pointer transition border border-slate-800"
+                    >
+                      -
+                    </button>
+                    <button 
+                      type="button"
+                      onClick={() => updateActivePlayerResource('valuables', 1)} 
+                      className="w-7 h-7 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs flex items-center justify-center font-bold cursor-pointer transition border border-slate-800"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Three independent town action tokens */}
+              <div className="space-y-3 bg-slate-950/40 p-4 rounded-2xl border border-slate-850">
+                <div className="flex items-center justify-between border-b border-slate-800/50 pb-2">
+                  <span className="text-[10px] text-slate-400 font-mono uppercase tracking-wider font-semibold">
+                    Fichas de Acción de Ciudad (Límite por Turno)
+                  </span>
+                  <span className="text-[9px] font-mono bg-amber-950/80 text-amber-400 px-2 py-0.5 rounded border border-amber-900/40">
+                    3 Independientes
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1">
+                  {/* Build Token */}
+                  <button
+                    type="button"
+                    onClick={() => toggleActivePlayerAction('actionBuildUsed')}
+                    className={`p-3 rounded-xl border text-left cursor-pointer transition-all flex items-center gap-3 ${
+                      activePlayer.actionBuildUsed
+                        ? 'border-red-950 bg-red-950/10 text-red-400 opacity-60'
+                        : 'border-amber-600/30 bg-amber-500/5 text-amber-300 hover:border-amber-500/60 shadow-sm'
+                    }`}
+                  >
+                    <div className={`w-6 h-6 rounded-lg flex items-center justify-center ${activePlayer.actionBuildUsed ? 'bg-red-950 text-red-500' : 'bg-amber-600/20 text-amber-400 animate-pulse'}`}>
+                      🏢
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <span className="text-[11px] font-bold block leading-none">Construir</span>
+                      <span className="text-[9px] text-slate-500 block font-mono mt-1">
+                        {activePlayer.actionBuildUsed ? 'GASTADO' : 'DISPONIBLE'}
+                      </span>
+                    </div>
+                  </button>
+
+                  {/* Recruit Token */}
+                  <button
+                    type="button"
+                    onClick={() => toggleActivePlayerAction('actionRecruitUsed')}
+                    className={`p-3 rounded-xl border text-left cursor-pointer transition-all flex items-center gap-3 ${
+                      activePlayer.actionRecruitUsed
+                        ? 'border-red-950 bg-red-950/10 text-red-400 opacity-60'
+                        : 'border-amber-600/30 bg-amber-500/5 text-amber-300 hover:border-amber-500/60 shadow-sm'
+                    }`}
+                  >
+                    <div className={`w-6 h-6 rounded-lg flex items-center justify-center ${activePlayer.actionRecruitUsed ? 'bg-red-950 text-red-500' : 'bg-amber-600/20 text-amber-400 animate-pulse'}`}>
+                      ⚔️
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <span className="text-[11px] font-bold block leading-none font-sans">Reclutar</span>
+                      <span className="text-[9px] text-slate-500 block font-mono mt-1">
+                        {activePlayer.actionRecruitUsed ? 'GASTADO' : 'DISPONIBLE'}
+                      </span>
+                    </div>
+                  </button>
+
+                  {/* Mage Guild Token */}
+                  <button
+                    type="button"
+                    onClick={() => toggleActivePlayerAction('actionMageGuildUsed')}
+                    className={`p-3 rounded-xl border text-left cursor-pointer transition-all flex items-center gap-3 ${
+                      activePlayer.actionMageGuildUsed
+                        ? 'border-red-950 bg-red-950/10 text-red-400 opacity-60'
+                        : 'border-amber-600/30 bg-amber-500/5 text-amber-300 hover:border-amber-500/60 shadow-sm'
+                    }`}
+                  >
+                    <div className={`w-6 h-6 rounded-lg flex items-center justify-center ${activePlayer.actionMageGuildUsed ? 'bg-red-950 text-red-500' : 'bg-amber-600/20 text-amber-400 animate-pulse'}`}>
+                      🔮
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <span className="text-[11px] font-bold block leading-none">Cofradía</span>
+                      <span className="text-[9px] text-slate-500 block font-mono mt-1">
+                        {activePlayer.actionMageGuildUsed ? 'GASTADO' : 'DISPONIBLE'}
+                      </span>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Right Column: Player & Faction Management (col-span-5) */}
@@ -329,8 +545,19 @@ export default function GameTimer({
                       </div>
                       <div>
                         <p className="text-xs font-semibold">{player.name}</p>
+                        <div className="flex flex-wrap items-center gap-2 mt-1 select-none">
+                          <span className="text-[10px] font-mono bg-slate-950/85 px-2 py-0.5 rounded border border-slate-800/80 text-amber-300 font-bold">
+                            🟡 {player.gold ?? 15}O • 🪵 {player.materials ?? 3}M • 🔮 {player.valuables ?? 1}V
+                          </span>
+                          <span className="text-[10px] font-mono text-slate-400 flex items-center gap-1">
+                            <span>Tokens:</span>
+                            <span title="Construir" className="cursor-help">{player.actionBuildUsed ? '🔴' : '🟢'}</span>
+                            <span title="Reclutar" className="cursor-help">{player.actionRecruitUsed ? '🔴' : '🟢'}</span>
+                            <span title="Cofradía" className="cursor-help">{player.actionMageGuildUsed ? '🔴' : '🟢'}</span>
+                          </span>
+                        </div>
                         {isActive && (
-                          <span className="text-[10px] text-amber-400 font-mono flex items-center gap-1.5 mt-0.5">
+                          <span className="text-[9px] text-amber-400 font-mono flex items-center gap-1 mt-1 font-bold">
                             <span className="w-1.5 h-1.5 bg-amber-400 rounded-full animate-ping" />
                             Turno Activo
                           </span>

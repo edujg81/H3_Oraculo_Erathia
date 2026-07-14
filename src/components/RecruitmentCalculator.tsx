@@ -1384,7 +1384,7 @@ export default function RecruitmentCalculator() {
                   }`}
                 >
                   <span className="text-sm">⚡ "Manada"</span>
-                  <span className="text-[10px] opacity-75 font-mono uppercase tracking-wider">Lado Élite</span>
+                  <span className="text-[10px] opacity-75 font-mono uppercase tracking-wider">Lado Reforzado</span>
                 </button>
               )}
             </div>
@@ -1434,7 +1434,7 @@ export default function RecruitmentCalculator() {
                       </span>
                     </div>
                     <h3 className="text-2xl font-serif font-extrabold text-white mt-1 tracking-wide uppercase drop-shadow-md">
-                      {effectiveUpgraded ? selectedUnit.nameElite : selectedUnit.nameBasic}
+                      {selectedUnit.nameBasic}
                     </h3>
                   </div>
 
@@ -1474,7 +1474,7 @@ export default function RecruitmentCalculator() {
                   {imageUrl ? (
                     <img 
                       src={imageUrl} 
-                      alt={effectiveUpgraded ? selectedUnit.nameElite : selectedUnit.nameBasic} 
+                      alt={selectedUnit.nameBasic} 
                       className={`w-auto h-[90%] object-contain select-none pointer-events-none transition-transform duration-500 group-hover/img:scale-105 filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] z-20 relative ${
                         effectiveUpgraded ? 'contrast-[1.05] brightness-[1.03]' : ''
                       }`}
