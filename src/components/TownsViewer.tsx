@@ -12,10 +12,10 @@ const FACTION_LIST = [
   { id: 'mazmorra', name: 'Mazmorra (Dungeon)', color: 'border-purple-900 bg-purple-950/20 text-purple-200 hover:bg-purple-900/10' },
   { id: 'rampart', name: 'Murallas (Rampart)', color: 'border-emerald-900 bg-emerald-950/20 text-emerald-200 hover:bg-emerald-900/10' },
   { id: 'torre', name: 'Torre (Tower)', color: 'border-cyan-900 bg-cyan-950/20 text-cyan-200 hover:bg-cyan-900/10' },
-  { id: 'infierno', name: 'Infierno (Inferno)', color: 'border-red-900 bg-red-950/20 text-red-200 hover:bg-red-900/10' },
+  { id: 'infierno', name: 'Inferno (Inferno)', color: 'border-red-900 bg-red-950/20 text-red-200 hover:bg-red-900/10' },
   { id: 'stronghold', name: 'Bastión (Stronghold)', color: 'border-amber-950 bg-amber-950/20 text-amber-200 hover:bg-amber-900/10' },
   { id: 'fortaleza', name: 'Fortaleza (Fortress)', color: 'border-teal-900 bg-teal-950/20 text-teal-200 hover:bg-teal-900/10' },
-  { id: 'confluencia', name: 'Confluencia (Conflux)', color: 'border-indigo-900 bg-indigo-950/20 text-indigo-200 hover:bg-indigo-900/10' },
+  { id: 'confluencia', name: 'Conflujo (Conflux)', color: 'border-indigo-900 bg-indigo-950/20 text-indigo-200 hover:bg-indigo-900/10' },
   { id: 'cove', name: 'Cala (Cove)', color: 'border-sky-900 bg-sky-950/20 text-sky-200 hover:bg-sky-900/10' }
 ];
 

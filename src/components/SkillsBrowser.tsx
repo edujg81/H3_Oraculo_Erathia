@@ -27,13 +27,13 @@ const FACTION_NAMES: Record<string, string> = {
   castillo: 'Castillo (Castle)',
   necropolis: 'Necrópolis (Necropolis)',
   mazmorra: 'Mazmorra (Dungeon)',
-  rampart: 'Murallas (Rampart)',
+  murallas: 'Murallas (Rampart)',
   torre: 'Torre (Tower)',
-  infierno: 'Inferno (Inferno)',
-  stronghold: 'Bastión (Stronghold)',
+  inferno: 'Inferno (Inferno)',
+  bastion: 'Bastión (Stronghold)',
   fortaleza: 'Fortaleza (Fortress)',
-  confluencia: 'Conflujo (Conflux)',
-  cove: 'Cala (Cove)'
+  conflujo: 'Conflujo (Conflux)',
+  cala: 'Cala (Cove)'
 };
 
 // Master Static Database of ALL 32 Board Game Skills with exact official card mechanics
@@ -48,21 +48,21 @@ const ALL_BOARD_GAME_SKILLS = [
   {
     name: 'Magia de tierra',
     normal: 'Permanente: +1 Poder para hechizos de la escuela de magia de tierra.',
-    expert: 'Instantáneo: Al lanzar un Hechizo de la escuela de tierra, puedes descartar esta carta y ganar +3 Poder.',
+    expert: 'Cuando lances un Hechizo de la escuela de tierra, puedes descartar esta carta y ganar +3 Poder.',
     category: 'Magia' as const,
     description: 'Afinidad elemental permanente que potencia los hechizos de la escuela de tierra.'
   },
   {
     name: 'Magia de fuego',
     normal: 'Permanente: +1 Poder para hechizos de la escuela de magia de fuego.',
-    expert: 'Instantáneo: Al lanzar un Hechizo de la escuela de fuego, puedes descartar esta carta y ganar +3 Poder.',
+    expert: 'Cuando lances un Hechizo de la escuela de fuego, puedes descartar esta carta y ganar +3 Poder.',
     category: 'Magia' as const,
     description: 'Afinidad elemental permanente que potencia los hechizos de la escuela de fuego.'
   },
   {
     name: 'Magia de agua',
     normal: 'Permanente: +1 Poder para hechizos de la escuela de magia de agua.',
-    expert: 'Instantáneo: Al lanzar un Hechizo de la escuela de agua, puedes descartar esta carta y ganar +3 Potencia.',
+    expert: 'Cuando lances un Hechizo de la escuela de agua, puedes descartar esta carta y ganar +3 Poder.',
     category: 'Magia' as const,
     description: 'Afinidad elemental permanente que potencia los hechizos de la escuela de agua.'
   },
