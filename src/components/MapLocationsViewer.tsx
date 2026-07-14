@@ -64,11 +64,11 @@ const LOCATIONS_DATA: MapLocation[] = [
   },
   {
     id: 'tree_of_knowledge',
-    name: 'Árbol del Conocimiento (Tree of Knowledge)',
+    name: 'Árbol de la  Sabiduría',
     type: 'Visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'El Héroe puede pagar 3 Objetos de valor o 10 de Oro para subir inmediatamente 2 niveles de Experiencia (Rango).',
-    rulesNotes: 'Subir rangos desbloquea habilidades avanzadas en el track de experiencia de tu Héroe.',
+    effect: 'Puedes pagar 3 Objetos de valor o 10 Oros para ganar 2 niveles de Experiencia.',
+    rulesNotes: 'Subir niveles desbloquea habilidades avanzadas en el contador de experiencia de tu Héroe.',
     iconType: 'tree'
   },
   {
@@ -91,28 +91,28 @@ const LOCATIONS_DATA: MapLocation[] = [
   },
   {
     id: 'witch_hut',
-    name: 'Choza de la Bruja (Witch Hut)',
+    name: 'Cabaña de la Bruja',
     type: 'Visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'El Héroe puede adquirir una carta de Habilidad de forma aleatoria de la baraja principal pagando 5 de Oro, sin necesidad de gastar un nivel de experiencia para aprenderla.',
+    effect: 'Puedes, o bien retirar una carta de habilidad de tu mano, o bien mirar la carta superior del mazo de habilidades y añadirla a tu mano o a tu descarte de habilidades.',
     rulesNotes: 'La habilidad se extrae al azar. Puede otorgar ventajas inesperadas pero requiere adaptabilidad táctica.',
     iconType: 'witch'
   },
   {
     id: 'fairy_ring',
-    name: 'Anillo Feérico (Fairy Ring)',
+    name: 'Anillo Feérico',
     type: 'Visitable',
     zones: ['Superficie'],
-    effect: 'Otorga una ficha de Moral Positiva (+1) para el próximo combate del Héroe.',
+    effect: 'Cuando entres en esta ubicación, retira 1 carta de tu mano y luego busca (2) en el mazo de esa carta. De esta manera no puedes eliminar cartas de estadísticas, habilidades iniciales o especialidades.',
     rulesNotes: 'Símbolo de buena suerte en la superficie. Coloca un cubo negro tras visitarlo; solo admite una visita por héroe.',
     iconType: 'shrine'
   },
   {
     id: 'library_enlightenment',
-    name: 'Biblioteca de la Iluminación (Library of Enlightenment)',
-    type: 'Visitable',
+    name: 'Biblioteca de la Iluminación',
+    type: 'Revisitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Si el Héroe tiene nivel 5 o superior, obtiene +2 puntos de Atributos de forma permanente para gastar en su hoja de estadísticas.',
+    effect: 'Paga 3 Oros para retirar 1 carta de estadística de tu mano o pila de descarte y sustituirla por cualquier otra carta de característica. Puedes hacerlo dos veces por visita.',
     rulesNotes: 'Solo puede ser visitada una vez por cada Héroe. Se registra colocando un cubo del color del jugador.',
     iconType: 'academy'
   },
@@ -329,29 +329,29 @@ const LOCATIONS_DATA: MapLocation[] = [
   },
   {
     id: 'settlement',
-    name: 'Asentamiento (Settlement)',
+    name: 'Asentamiento',
     type: 'Señalizable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Otorga una bonificación de producción a elegir (expandir ingresos) y entrega un recurso inmediato. Permite el reclutamiento a distancia de tropas o la acción de Reforzar ejércitos pagando la mitad de su coste habitual.',
-    rulesNotes: 'Actúan como avanzadillas tácticas en el mapa que evitan tener que regresar constantemente a la capital a por refuerzos.',
+    effect: 'Cuando señalizas un asentamiento, puedes elegir una de las recompensas de la lista. Si capturas un asentamiento que nadie antes ha capturado, recibes inmediatamente sus recursos:\n  - Aumenta en 5 tus ingresos de Oro.\n  - Aumenta en 2 tus ingresos de materiales de construcción.\n  - Aumenta en 1 tus ingresos de objetos de valor.\n  - Refuerza una de tus unidades de categoría bronce o plata por la mitad del coste habitual.\n\nSi eliges aumentar tus ingresos, coloca la ficha de recursos correspondiente en la zona del asentamiento. Dejarás de recibir estos bonificadores de ingresos si pierdes el control del asentamiento.',
+    rulesNotes: 'Actúan como minas de recursos o permiten reforzar unidades a menor coste.',
     iconType: 'settlement'
   },
   {
     id: 'town',
-    name: 'Ciudad (Town)',
+    name: 'Ciudad',
     type: 'Señalizable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Permite expandir y edificar estructuras en tu capital, reclutar criaturas aliadas y obtener ingresos de oro fijos en cada ronda de recursos.',
-    rulesNotes: 'Se puede asediar. El jugador que controle la ciudad coloca su cubo de color de facción y la protege con su propia muralla y foso.',
+    effect: 'Esta es la zona inicial de un jugador. Si un jugador captura una ciudad, ganará un bonificador que depende del escenario.',
+    rulesNotes: 'Se puede asediar. El jugador que controle la ciudad coloca su cubo de color de facción y la protege con su propia muralla.',
     iconType: 'settlement'
   },
   {
     id: 'random_town',
-    name: 'Ciudad Aleatoria (Random Town)',
+    name: 'Ciudad Aleatoria',
     type: 'Señalizable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Una ciudad cuyo tipo de facción se define al azar en el despliegue del escenario o se adapta a la facción del primer jugador que la capture.',
-    rulesNotes: 'Una vez capturada y definida, funciona con las mismas reglas de edificación e ingresos de una ciudad estándar.',
+    effect: 'Cuando señalices una ciudad aleatoria que no haya controlado antes ningún jugador, recibe inmediatamente 10 Oros. Además, generará pasivamente ingresos al comienzo de cada ronda de recursos: 10 Oros.\nCuando descubras este lugar en el mapa, cada jugador lanza 2 dados de recursos. El jugador con la mayor cantidad de recursos en su dados elige una facción (excepto las facciones que ya estén en juego), a partir de ahora, esta zona está defendida por unidades de dicha facción.\nA menos que se indique lo contrario, la ciudad aleatoria está defendida por:\n  - 1 manada de Bronce.\n  - 2 manadas de Plata.\n  - 2 unas pocas de Oro.',
+    rulesNotes: 'El jugador que controla las unidades defensoras puede elegir las Bronce.\nDurante este asedio no utilices la carta Torre de arqueros.',
     iconType: 'settlement'
   },
 
@@ -422,10 +422,10 @@ const LOCATIONS_DATA: MapLocation[] = [
   {
     id: 'buoy',
     name: 'Boya (Buoy)',
-    type: 'Obstáculo / Paso',
+    type: 'Visitable',
     zones: ['Agua'],
-    effect: 'Casilla de ayuda marítima. Pasar sobre ella restablece e incrementa instantáneamente en +1 Punto de Movimiento (PM) al Héroe de navegación por este turno.',
-    rulesNotes: 'Permite trazar rutas marítimas optimizadas para cruzar el archipiélago a gran velocidad.',
+    effect: 'Gana una ficha de moral positiva.',
+    rulesNotes: 'Coloca 1 cubo negro al visitarlo.',
     iconType: 'buoy'
   },
   {
@@ -448,20 +448,20 @@ const LOCATIONS_DATA: MapLocation[] = [
   },
   {
     id: 'abandoned_ship',
-    name: 'Barco Abandonado (Abandoned Ship)',
+    name: 'Barco Abandonado',
     type: 'Visitable',
     zones: ['Agua'],
-    effect: 'Permite asaltar los restos flotantes de un barco. Desata combate contra Elementales de Agua. La victoria otorga un botín masivo de Oro (15-20) o Artefactos.',
+    effect: 'Puedes buscar (2) en el mazo de artefactos. Si lo haces, también ganarás 2 Oros.',
     rulesNotes: 'De un solo uso. Requiere superar el combate táctico obligatorio para poder reclamar las recompensas.',
     iconType: 'shipwreck_lots'
   },
   {
     id: 'sea_barrel',
-    name: 'Barril Marino (Sea Barrel)',
+    name: 'Barril Marino',
     type: 'Visitable',
     zones: ['Agua'],
-    effect: 'El Héroe recoge barriles a la deriva, sumando instantáneamente +2 de Madera u Oro (+5) a su reino.',
-    rulesNotes: 'Se retira de la loseta de agua de forma irreversible una vez recogido (un solo uso).',
+    effect: 'Tira y resuelve 1 dado de recursos.',
+    rulesNotes: 'Un solo uso. Se coloca un cubo negro tras visitarlo.',
     iconType: 'resource'
   },
   {
