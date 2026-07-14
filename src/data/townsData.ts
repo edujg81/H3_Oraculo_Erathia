@@ -27,9 +27,9 @@ export interface TownData {
   lore: string;
   buildings: FactionBuilding[];
   units: {
-    bronze: Unit;
-    silver: Unit;
-    gold: Unit;
+    bronze: { nivel1: Unit, nivel2: Unit, nivel3: Unit },
+    silver: { nivel4: Unit, nivel5: Unit },
+    gold: { nivel6: Unit, nivel7: Unit }
   };
 }
 
@@ -43,70 +43,90 @@ export const townsData: Record<string, TownData> = {
       {
         id: 'alcaldia',
         name: 'Alcaldía',
-        cost: { gold: 10 },
-        benefit: 'Al comienzo de cada ronda de recursos, produce +10 de Oro. Además, reduce en 1 de Oro el coste del primer reclutamiento de Bronce en cada ronda.'
+        cost: { gold: 10, materials: 4 },
+        benefit: 'Al comienzo de cada ronda de recursos, elige: +5 de Oro o +1 PM.'
       },
       {
         id: 'ciudadela',
         name: 'Ciudadela',
-        cost: { gold: 5, materials: 5 },
+        cost: { gold: 8, materials: 6, valuables: 1 },
         benefit: 'Desbloquea reforzar unidades. Cuando estés bajo asedio, añade 3 cartas de muralla, 1 de puerta y 1 de torre de arqueros al tablero de combate.'
       },
       {
         id: 'cofradia',
         name: 'Cofradía de Magos',
-        cost: { gold: 5, materials: 5, valuables: 5 },
-        benefit: 'Al construirla, busca 2 cartas en el mazo de hechizos y elige una para tu mano. En rondas posteriores, puedes usar la Ficha de Cofradía para volver a buscar (Busca 2, elige 1) pagando 6 de Oro.'
+        cost: { gold: 4, materials: 2, valuables: 1 },
+        benefit: 'Al construirla: Busca (2) Hechizos dos veces.\nDespués: Una vez por turno paga 6 Oros para buscar (2) Hechizos.'
       },
       {
         id: 'bronce',
         name: 'Torres (Morada de Bronce)',
-        cost: { gold: 10 },
-        benefit: 'Permite reclutar Alabarderos y Arqueros (unidades de Bronce).',
+        cost: { gold: 5, materials: 3, valuables: 1 },
+        benefit: 'Permite reclutar Alabarderos, Tiradores y Grifos (unidades de Bronce).',
         upgradeName: 'Herrería',
-        upgradeCost: { gold: 5, materials: 5 },
-        upgradeBenefit: 'Habilita la compra de cartas de Arma/Armadura o añade bonificaciones de combate.'
+        upgradeCost: { gold: 4, materials: 3 },
+        upgradeBenefit: 'Durante tu turno, elige una:\n1. Retira una carta Artefacto de tu mano para ganar 4 Oros.\n2. Paga 6 Oros para buscar (2) Artefactos.'
       },
       {
         id: 'plata',
         name: 'Tierra sagrada (Morada de Plata)',
-        cost: { gold: 15, materials: 5 },
-        benefit: 'Permite reclutar Grifos, Cruzados y Monjes.',
-        upgradeName: 'Tierra sagrada Mejorada',
-        upgradeCost: { gold: 10, materials: 5, valuables: 2 },
-        upgradeBenefit: 'Permite reclutar o reforzar a las caras de "Manada" de Grifos, Cruzados y Monjes.'
+        cost: { gold: 8, materials: 6, valuables: 3 },
+        benefit: 'Permite reclutar Cruzados y Fanáticos.'
       },
       {
         id: 'oro',
         name: 'Gloria de Erathia (Morada de Oro)',
-        cost: { gold: 20, materials: 5, valuables: 5 },
-        benefit: 'Permite reclutar Caballeros y Ángeles.',
-        upgradeName: 'Gloria de Erathia Mejorada',
-        upgradeCost: { gold: 15, materials: 5, valuables: 3 },
-        upgradeBenefit: 'Permite reclutar o reforzar a las caras de "Manada" de Caballeros y Ángeles.'
+        cost: { gold: 10, materials: 9, valuables: 4 },
+        benefit: 'Permite reclutar Campeones y Arcángeles.'
       },
       {
         id: 'especial',
         name: 'Hermandad de la Espada',
-        cost: { gold: 10, materials: 5, valuables: 3 },
-        benefit: 'Otorga +1 a la fuerza de combate de las tropas terrestres aliadas adyacentes en el combate táctico.'
+        cost: { gold: 8, materials: 4, valuables: 0 },
+        benefit: 'Al comienzo de cada ronda de recursos gana Moral Positiva.'
       }
     ],
     units: {
       bronze: {
-        name: 'Alabarderos / Arqueros',
-        recruitCost: { gold: 4 },
-        eliteCost: { gold: 4 }
+        nivel1: {
+          name: 'Alabarderos',
+          recruitCost: { gold: 2 },
+          eliteCost: { gold: 3 } 
+        },
+        nivel2: {
+          name: 'Tiradores',
+          recruitCost: { gold: 3 },
+          eliteCost: { gold: 5 } 
+        },
+        nivel3: {
+          name: 'Grifos',
+          recruitCost: { gold: 4 },
+          eliteCost: { gold: 6 } 
+        }
       },
       silver: {
-        name: 'Grifos / Cruzados / Monjes',
-        recruitCost: { gold: 8 },
-        eliteCost: { gold: 8 }
+        nivel4: {
+          name: 'Cruzados',
+          recruitCost: { gold: 6 },
+          eliteCost: { gold: 10 } 
+        },
+        nivel5: {
+          name: 'Fanáticos',
+          recruitCost: { gold: 8 },
+          eliteCost: { gold: 12 } 
+        }
       },
       gold: {
-        name: 'Caballeros / Ángeles',
-        recruitCost: { gold: 12 },
-        eliteCost: { gold: 12 }
+        nivel6: {
+          name: 'Campeones',
+          recruitCost: { gold: 12 },
+          eliteCost: { gold: 20, valuables: 1 } 
+        },
+        nivel7: {
+          name: 'Arcángeles',
+          recruitCost: { gold: 20, valuables: 1 },
+          eliteCost: { gold: 30, valuables: 2 } 
+        }
       }
     }
   },
@@ -119,70 +139,90 @@ export const townsData: Record<string, TownData> = {
       {
         id: 'alcaldia',
         name: 'Alcaldía',
-        cost: { gold: 10 },
-        benefit: 'Al comienzo de cada ronda de recursos, produce +5 de Oro y alza 1 Esqueleto básico gratis en tu reserva de tropas (sin coste de oro).'
+        cost: { gold: 10, materials: 4 },
+        benefit: 'Al comienzo de cada ronda de recursos, elige: +4 de Oro o Refuerza 1 unidad Bronce gratis.'
       },
       {
         id: 'ciudadela',
         name: 'Ciudadela',
-        cost: { gold: 5, materials: 5 },
-        benefit: 'Desbloquea reforzar unidades. Cuando estés bajo asedio, añade 3 cartas de muralla, 1 de puerta y 1 de torre de espíritus al tablero de combate.'
+        cost: { gold: 8, materials: 5, valuables: 1 },
+        benefit: 'Desbloquea reforzar unidades. Cuando estés bajo asedio, añade 3 cartas de muralla, 1 de puerta y 1 de torre de arqueros al tablero de combate.'
       },
       {
         id: 'cofradia',
         name: 'Cofradía de Magos',
-        cost: { gold: 5, materials: 5, valuables: 5 },
-        benefit: 'Al construirla, busca 2 cartas en el mazo de hechizos y elige una para tu mano. En rondas posteriores, puedes usar la Ficha de Cofradía para volver a buscar (Busca 2, elige 1) pagando 6 de Oro.'
+        cost: { gold: 4, materials: 2, valuables: 1 },
+        benefit: 'Al construirla: Busca (2) Hechizos dos veces. Después: Una vez por turno paga 5 Oros para buscar (2) Hechizos.',
+        upgradeName: 'Amplificador de nigromancia',
+        upgradeCost: { gold: 7, materials: 3, valuables: 1 },
+        upgradeBenefit: 'Al comienzo de tu turno, elige una:\n1. Busca en el mazo de habilidades la carta Nigromancia y añádela a tu mazo.\n2. Recupera 1 carta de especialidad de tu descarte.'
       },
       {
         id: 'bronce',
-        name: 'Cementerio (Morada de Bronce)',
-        cost: { gold: 10 },
-        benefit: 'Permite reclutar Esqueletos y Zombis (unidades de Bronce).',
-        upgradeName: 'Amplificador de nigromancia',
-        upgradeCost: { gold: 5, materials: 5 },
-        upgradeBenefit: 'Siempre que derrotes a un ejército neutral de nivel Bronce, alza inmediatamente 1 Esqueleto básico gratis.'
+        name: 'Viejo cementerio (Morada de Bronce)',
+        cost: { gold: 5, materials: 3, valuables: 1 },
+        benefit: 'Permite reclutar Esqueletos, Zombis y Espectros (unidades de Bronce).'
       },
       {
         id: 'plata',
-        name: 'Mausoleo (Morada de Plata)',
-        cost: { gold: 15, materials: 5 },
-        benefit: 'Permite reclutar Fantasmas, Vampiros y Liches.',
-        upgradeName: 'Mausoleo Mejorado',
-        upgradeCost: { gold: 10, materials: 5, valuables: 2 },
-        upgradeBenefit: 'Permite reclutar o reforzar a las caras de "Manada" de Fantasmas, Vampiros y Liches.'
+        name: 'Dominios del mausoleo (Morada de Plata)',
+        cost: { gold: 8, materials: 6, valuables: 3 },
+        benefit: 'Permite reclutar Vampiros y Liches (unidades Plata).'
       },
       {
         id: 'oro',
-        name: 'Tumba del dragón (Morada de Oro)',
-        cost: { gold: 20, materials: 5, valuables: 5 },
-        benefit: 'Permite reclutar Caballeros de la muerte y Dragones de hueso.',
-        upgradeName: 'Tumba del dragón Mejorada',
-        upgradeCost: { gold: 15, materials: 5, valuables: 3 },
-        upgradeBenefit: 'Permite reclutar o reforzar a las caras de "Manada" de Caballeros de la muerte y Dragones de hueso.'
+        name: 'Criptas de las tinieblas (Morada de Oro)',
+        cost: { gold: 10, materials: 9, valuables: 4 },
+        benefit: 'Permite reclutar Caballeros del terror y Dragones fantasma (unidades Oro).'
       },
       {
         id: 'especial',
-        name: 'Foso de almas',
-        cost: { gold: 10, materials: 5, valuables: 3 },
-        benefit: 'Reduce el coste de oro para reclutar o revivir unidades de tu cementerio o pila de descartes en un 20%.'
+        name: 'Manto de la oscuridad',
+        cost: { gold: 6, materials: 4, valuables: 1 },
+        benefit: 'Durante tu turno, elige una:\n1. Descarta hasta 2 cartas de fuerza y magia para robar otras 2.\n2. Al comienzo del combate contra un héroe enemigo, descarta 1 carta al azar de la mano de tu oponente.'
       }
     ],
     units: {
       bronze: {
-        name: 'Esqueletos / Zombis',
-        recruitCost: { gold: 4 },
-        eliteCost: { gold: 4 }
+        nivel1: {
+          name: 'Esqueletos',
+          recruitCost: { gold: 2 },
+          eliteCost: { gold: 3 } 
+        },
+        nivel2: {
+          name: 'Zombis',
+          recruitCost: { gold: 3 },
+          eliteCost: { gold: 4 } 
+        },
+        nivel3: {
+          name: 'Espectros',
+          recruitCost: { gold: 4 },
+          eliteCost: { gold: 6 } 
+        }
       },
       silver: {
-        name: 'Fantasmas / Vampiros / Liches',
-        recruitCost: { gold: 8 },
-        eliteCost: { gold: 8 }
+        nivel4: {
+          name: 'Vampiros',
+          recruitCost: { gold: 8 },
+          eliteCost: { gold: 12 } 
+        },
+        nivel5: {
+          name: 'Liches',
+          recruitCost: { gold: 8 },
+          eliteCost: { gold: 14 } 
+        }
       },
       gold: {
-        name: 'Caballeros de la muerte / Dragones de hueso',
-        recruitCost: { gold: 12 },
-        eliteCost: { gold: 12 }
+        nivel6: {
+          name: 'Caballeros del terror',
+          recruitCost: { gold: 12 },
+          eliteCost: { gold: 20, valuables: 1 } 
+        },
+        nivel7: {
+          name: 'Dragones fantasma',
+          recruitCost: { gold: 19, valuables: 1 },
+          eliteCost: { gold: 32, valuables: 2 } 
+        }
       }
     }
   },
@@ -195,70 +235,90 @@ export const townsData: Record<string, TownData> = {
       {
         id: 'alcaldia',
         name: 'Alcaldía',
-        cost: { gold: 10 },
-        benefit: 'Al comienzo de cada ronda de recursos, produce +5 de Oro y +1 Material. Una vez por ronda, puedes pagar 2 de Oro para robar 1 carta del mazo de aventura.'
+        cost: { gold: 10, materials: 4 },
+        benefit: 'Al comienzo de cada ronda de recursos, elige: +5 de Oro o +1 Objeto de valor.'
       },
       {
         id: 'ciudadela',
         name: 'Ciudadela',
-        cost: { gold: 5, materials: 5 },
-        benefit: 'Desbloquea reforzar unidades. Cuando estés bajo asedio, añade 3 cartas de muralla, 1 de puerta de hierro y 1 de foso de lava al combate.'
+        cost: { gold: 8, materials: 5, valuables: 1 },
+        benefit: 'Desbloquea reforzar unidades. Cuando estés bajo asedio, añade 3 cartas de muralla, 1 de puerta de hierro y 1 torre de arqueros al tablero de combate.'
       },
       {
         id: 'cofradia',
         name: 'Cofradía de Magos',
-        cost: { gold: 5, materials: 5, valuables: 5 },
-        benefit: 'Al construirla, busca 2 cartas en el mazo de hechizos y elige una para tu mano. En rondas posteriores, puedes usar la Ficha de Cofradía para volver a buscar (Busca 2, elige 1) pagando 6 de Oro.'
+        cost: { gold: 4, materials: 2, valuables: 1 },
+        benefit: 'Al construirla: busca (2) Hechizos dos veces.\n\nDespués: Una vez por turno paga 5 Oros para buscar (2) Hechizos.',
+        upgradeName: 'Vórtice de maná',
+        upgradeCost: { gold: 6, materials: 3, valuables: 1 },
+        upgradeBenefit: 'Al comienzo de tu turno, descarta 1 carta de tu mano para devolver tu descarte al mazo de fuerza y magia y barajarlo. Después, busca (3) en él.'
       },
       {
         id: 'bronce',
-        name: 'Cueva de Trogloditas (Morada de Bronce)',
-        cost: { gold: 10 },
-        benefit: 'Permite reclutar Trogloditas y Harpías (unidades de Bronce).',
-        upgradeName: 'Cueva Mejorada',
-        upgradeCost: { gold: 5, materials: 5 },
-        upgradeBenefit: 'Las unidades de Bronce ganan +1 de velocidad de iniciativa en la primera ronda del combate.'
+        name: 'Madrigueras (Morada de Bronce)',
+        cost: { gold: 5, materials: 3, valuables: 1 },
+        benefit: 'Permite reclutar Trogloditas, Arpías y Ojos maléficos (unidades de Bronce).'
       },
       {
         id: 'plata',
-        name: 'Capilla del Azote (Morada de Plata)',
-        cost: { gold: 15, materials: 5 },
-        benefit: 'Permite reclutar Contempladores, Medusas y Minotauros.',
-        upgradeName: 'Capilla del Azote Mejorada',
-        upgradeCost: { gold: 10, materials: 5, valuables: 2 },
-        upgradeBenefit: 'Permite reclutar o reforzar a las caras de "Manada" de Contempladores, Medusas y Minotauros.'
+        name: 'Laberintos internos (Morada de Plata)',
+        cost: { gold: 8, materials: 6, valuables: 3 },
+        benefit: 'Permite reclutar Medusas y Minotauros (unidades de Plata).'
       },
       {
         id: 'oro',
-        name: 'Cueva de Dragones (Morada de Oro)',
-        cost: { gold: 20, materials: 5, valuables: 5 },
-        benefit: 'Permite reclutar Manticoras y Dragones rojos.',
-        upgradeName: 'Cueva de Dragones Mejorada',
-        upgradeCost: { gold: 15, materials: 5, valuables: 3 },
-        upgradeBenefit: 'Permite reclutar o reforzar a las caras de "Manada" de Manticoras y Dragones negros.'
+        name: 'Antiguas guaridas (Morada de Oro)',
+        cost: { gold: 10, materials: 9, valuables: 4 },
+        benefit: 'Permite reclutar Manticoras y Dragones negros.'
       },
       {
         id: 'especial',
-        name: 'Vórtice de maná',
+        name: 'Portal de invocación',
         cost: { gold: 10, materials: 5, valuables: 3 },
-        benefit: 'Una vez por combate, te permite restablecer instantáneamente todos tus puntos de Maná consumidos o duplicar el daño de tu primer conjuro táctico.'
+        benefit: 'Al comienzo de tu turno, puedes robar 1 carta de unidad neutral de los mazos correspondientes a las viviendas de tu ciudad y pagar el coste de reclutamiento para reclutar a esta unidad.'
       }
     ],
     units: {
       bronze: {
-        name: 'Trogloditas / Harpías',
-        recruitCost: { gold: 4 },
-        eliteCost: { gold: 4 }
+        nivel1: {
+          name: 'Trogloditas',
+          recruitCost: { gold: 2 },
+          eliteCost: { gold: 3 } 
+        },
+        nivel2: {
+          name: 'Arpías',
+          recruitCost: { gold: 3 },
+          eliteCost: { gold: 5 } 
+        },
+        nivel3: {
+          name: 'Ojos maléficos',
+          recruitCost: { gold: 4 },
+          eliteCost: { gold: 6 } 
+        }
       },
       silver: {
-        name: 'Contempladores / Medusas / Minotauros',
-        recruitCost: { gold: 8 },
-        eliteCost: { gold: 8 }
+        nivel4: {
+          name: 'Medusas',
+          recruitCost: { gold: 6 },
+          eliteCost: { gold: 12 } 
+        },
+        nivel5: {
+          name: 'Minotauros',
+          recruitCost: { gold: 8 },
+          eliteCost: { gold: 14 } 
+        }
       },
       gold: {
-        name: 'Manticoras / Dragones rojos',
-        recruitCost: { gold: 12 },
-        eliteCost: { gold: 12 }
+        nivel6: {
+          name: 'Manticoras',
+          recruitCost: { gold: 10 },
+          eliteCost: { gold: 18, valuables: 1 } 
+        },
+        nivel7: {
+          name: 'Dragones negros',
+          recruitCost: { gold: 19, valuables: 1 },
+          eliteCost: { gold: 32, valuables: 2 } 
+        }
       }
     }
   },
@@ -322,19 +382,45 @@ export const townsData: Record<string, TownData> = {
     ],
     units: {
       bronze: {
-        name: 'Centauros / Enanos',
-        recruitCost: { gold: 4 },
-        eliteCost: { gold: 4 }
+        nivel1: {
+          name: 'Alabarderos',
+          recruitCost: { gold: 2 },
+          eliteCost: { gold: 3 } 
+        },
+        nivel2: {
+          name: 'Tiradores',
+          recruitCost: { gold: 3 },
+          eliteCost: { gold: 5 } 
+        },
+        nivel3: {
+          name: 'Grifos',
+          recruitCost: { gold: 4 },
+          eliteCost: { gold: 6 } 
+        }
       },
       silver: {
-        name: 'Elfos / Pegasos / Dendroides',
-        recruitCost: { gold: 8 },
-        eliteCost: { gold: 8 }
+        nivel4: {
+          name: 'Cruzados',
+          recruitCost: { gold: 6 },
+          eliteCost: { gold: 10 } 
+        },
+        nivel5: {
+          name: 'Fanáticos',
+          recruitCost: { gold: 8 },
+          eliteCost: { gold: 12 } 
+        }
       },
       gold: {
-        name: 'Unicornios / Dragones verdes',
-        recruitCost: { gold: 12 },
-        eliteCost: { gold: 12 }
+        nivel6: {
+          name: 'Campeones',
+          recruitCost: { gold: 12 },
+          eliteCost: { gold: 20, valuables: 1 } 
+        },
+        nivel7: {
+          name: 'Arcángeles',
+          recruitCost: { gold: 20, valuables: 1 },
+          eliteCost: { gold: 30, valuables: 2 } 
+        }
       }
     }
   },
@@ -398,19 +484,45 @@ export const townsData: Record<string, TownData> = {
     ],
     units: {
       bronze: {
-        name: 'Gremlins / Gárgolas',
-        recruitCost: { gold: 4 },
-        eliteCost: { gold: 4 }
+        nivel1: {
+          name: 'Alabarderos',
+          recruitCost: { gold: 2 },
+          eliteCost: { gold: 3 } 
+        },
+        nivel2: {
+          name: 'Tiradores',
+          recruitCost: { gold: 3 },
+          eliteCost: { gold: 5 } 
+        },
+        nivel3: {
+          name: 'Grifos',
+          recruitCost: { gold: 4 },
+          eliteCost: { gold: 6 } 
+        }
       },
       silver: {
-        name: 'Gólems de hierro / Genios / Archimagos',
-        recruitCost: { gold: 8 },
-        eliteCost: { gold: 8 }
+        nivel4: {
+          name: 'Cruzados',
+          recruitCost: { gold: 6 },
+          eliteCost: { gold: 10 } 
+        },
+        nivel5: {
+          name: 'Fanáticos',
+          recruitCost: { gold: 8 },
+          eliteCost: { gold: 12 } 
+        }
       },
       gold: {
-        name: 'Gigantes / Titanes',
-        recruitCost: { gold: 12 },
-        eliteCost: { gold: 12 }
+        nivel6: {
+          name: 'Campeones',
+          recruitCost: { gold: 12 },
+          eliteCost: { gold: 20, valuables: 1 } 
+        },
+        nivel7: {
+          name: 'Arcángeles',
+          recruitCost: { gold: 20, valuables: 1 },
+          eliteCost: { gold: 30, valuables: 2 } 
+        }
       }
     }
   },
@@ -474,19 +586,45 @@ export const townsData: Record<string, TownData> = {
     ],
     units: {
       bronze: {
-        name: 'Familiares / Magogs',
-        recruitCost: { gold: 4 },
-        eliteCost: { gold: 4 }
+        nivel1: {
+          name: 'Alabarderos',
+          recruitCost: { gold: 2 },
+          eliteCost: { gold: 3 } 
+        },
+        nivel2: {
+          name: 'Tiradores',
+          recruitCost: { gold: 3 },
+          eliteCost: { gold: 5 } 
+        },
+        nivel3: {
+          name: 'Grifos',
+          recruitCost: { gold: 4 },
+          eliteCost: { gold: 6 } 
+        }
       },
       silver: {
-        name: 'Cerberos / Demonios / Señores del abismo',
-        recruitCost: { gold: 8 },
-        eliteCost: { gold: 8 }
+        nivel4: {
+          name: 'Cruzados',
+          recruitCost: { gold: 6 },
+          eliteCost: { gold: 10 } 
+        },
+        nivel5: {
+          name: 'Fanáticos',
+          recruitCost: { gold: 8 },
+          eliteCost: { gold: 12 } 
+        }
       },
       gold: {
-        name: 'Efrits / Archidiablos',
-        recruitCost: { gold: 12 },
-        eliteCost: { gold: 12 }
+        nivel6: {
+          name: 'Campeones',
+          recruitCost: { gold: 12 },
+          eliteCost: { gold: 20, valuables: 1 } 
+        },
+        nivel7: {
+          name: 'Arcángeles',
+          recruitCost: { gold: 20, valuables: 1 },
+          eliteCost: { gold: 30, valuables: 2 } 
+        }
       }
     }
   },
@@ -550,19 +688,45 @@ export const townsData: Record<string, TownData> = {
     ],
     units: {
       bronze: {
-        name: 'Duendes / Orcos',
-        recruitCost: { gold: 4 },
-        eliteCost: { gold: 4 }
+        nivel1: {
+          name: 'Alabarderos',
+          recruitCost: { gold: 2 },
+          eliteCost: { gold: 3 } 
+        },
+        nivel2: {
+          name: 'Tiradores',
+          recruitCost: { gold: 3 },
+          eliteCost: { gold: 5 } 
+        },
+        nivel3: {
+          name: 'Grifos',
+          recruitCost: { gold: 4 },
+          eliteCost: { gold: 6 } 
+        }
       },
       silver: {
-        name: 'Lobos / Rocs / Ogros',
-        recruitCost: { gold: 8 },
-        eliteCost: { gold: 8 }
+        nivel4: {
+          name: 'Cruzados',
+          recruitCost: { gold: 6 },
+          eliteCost: { gold: 10 } 
+        },
+        nivel5: {
+          name: 'Fanáticos',
+          recruitCost: { gold: 8 },
+          eliteCost: { gold: 12 } 
+        }
       },
       gold: {
-        name: 'Cíclopes / Behemoths',
-        recruitCost: { gold: 12 },
-        eliteCost: { gold: 12 }
+        nivel6: {
+          name: 'Campeones',
+          recruitCost: { gold: 12 },
+          eliteCost: { gold: 20, valuables: 1 } 
+        },
+        nivel7: {
+          name: 'Arcángeles',
+          recruitCost: { gold: 20, valuables: 1 },
+          eliteCost: { gold: 30, valuables: 2 } 
+        }
       }
     }
   },
@@ -626,19 +790,45 @@ export const townsData: Record<string, TownData> = {
     ],
     units: {
       bronze: {
-        name: 'Goblins de agua / Hombres lagarto',
-        recruitCost: { gold: 4 },
-        eliteCost: { gold: 4 }
+        nivel1: {
+          name: 'Alabarderos',
+          recruitCost: { gold: 2 },
+          eliteCost: { gold: 3 } 
+        },
+        nivel2: {
+          name: 'Tiradores',
+          recruitCost: { gold: 3 },
+          eliteCost: { gold: 5 } 
+        },
+        nivel3: {
+          name: 'Grifos',
+          recruitCost: { gold: 4 },
+          eliteCost: { gold: 6 } 
+        }
       },
       silver: {
-        name: 'Libélulas / Basiliscos / Gorgonas',
-        recruitCost: { gold: 8 },
-        eliteCost: { gold: 8 }
+        nivel4: {
+          name: 'Cruzados',
+          recruitCost: { gold: 6 },
+          eliteCost: { gold: 10 } 
+        },
+        nivel5: {
+          name: 'Fanáticos',
+          recruitCost: { gold: 8 },
+          eliteCost: { gold: 12 } 
+        }
       },
       gold: {
-        name: 'Escorpiones / Hidras de caos',
-        recruitCost: { gold: 12 },
-        eliteCost: { gold: 12 }
+        nivel6: {
+          name: 'Campeones',
+          recruitCost: { gold: 12 },
+          eliteCost: { gold: 20, valuables: 1 } 
+        },
+        nivel7: {
+          name: 'Arcángeles',
+          recruitCost: { gold: 20, valuables: 1 },
+          eliteCost: { gold: 30, valuables: 2 } 
+        }
       }
     }
   },
@@ -702,19 +892,45 @@ export const townsData: Record<string, TownData> = {
     ],
     units: {
       bronze: {
-        name: 'Pixies / Elementales de Aire',
-        recruitCost: { gold: 4 },
-        eliteCost: { gold: 4 }
+        nivel1: {
+          name: 'Alabarderos',
+          recruitCost: { gold: 2 },
+          eliteCost: { gold: 3 } 
+        },
+        nivel2: {
+          name: 'Tiradores',
+          recruitCost: { gold: 3 },
+          eliteCost: { gold: 5 } 
+        },
+        nivel3: {
+          name: 'Grifos',
+          recruitCost: { gold: 4 },
+          eliteCost: { gold: 6 } 
+        }
       },
       silver: {
-        name: 'Elementales de Agua / Fuego / Tierra',
-        recruitCost: { gold: 8 },
-        eliteCost: { gold: 8 }
+        nivel4: {
+          name: 'Cruzados',
+          recruitCost: { gold: 6 },
+          eliteCost: { gold: 10 } 
+        },
+        nivel5: {
+          name: 'Fanáticos',
+          recruitCost: { gold: 8 },
+          eliteCost: { gold: 12 } 
+        }
       },
       gold: {
-        name: 'Psíquicos / Fénix',
-        recruitCost: { gold: 12 },
-        eliteCost: { gold: 12 }
+        nivel6: {
+          name: 'Campeones',
+          recruitCost: { gold: 12 },
+          eliteCost: { gold: 20, valuables: 1 } 
+        },
+        nivel7: {
+          name: 'Arcángeles',
+          recruitCost: { gold: 20, valuables: 1 },
+          eliteCost: { gold: 30, valuables: 2 } 
+        }
       }
     }
   },
@@ -778,19 +994,45 @@ export const townsData: Record<string, TownData> = {
     ],
     units: {
       bronze: {
-        name: 'Oceánidos / Marineros',
-        recruitCost: { gold: 4 },
-        eliteCost: { gold: 4 }
+        nivel1: {
+          name: 'Alabarderos',
+          recruitCost: { gold: 2 },
+          eliteCost: { gold: 3 } 
+        },
+        nivel2: {
+          name: 'Tiradores',
+          recruitCost: { gold: 3 },
+          eliteCost: { gold: 5 } 
+        },
+        nivel3: {
+          name: 'Grifos',
+          recruitCost: { gold: 4 },
+          eliteCost: { gold: 6 } 
+        }
       },
       silver: {
-        name: 'Hechiceras de mar / Piratas regnan',
-        recruitCost: { gold: 8 },
-        eliteCost: { gold: 8 }
+        nivel4: {
+          name: 'Cruzados',
+          recruitCost: { gold: 6 },
+          eliteCost: { gold: 10 } 
+        },
+        nivel5: {
+          name: 'Fanáticos',
+          recruitCost: { gold: 8 },
+          eliteCost: { gold: 12 } 
+        }
       },
       gold: {
-        name: 'Aves marinas / Serpientes de mar',
-        recruitCost: { gold: 12 },
-        eliteCost: { gold: 12 }
+        nivel6: {
+          name: 'Campeones',
+          recruitCost: { gold: 12 },
+          eliteCost: { gold: 20, valuables: 1 } 
+        },
+        nivel7: {
+          name: 'Arcángeles',
+          recruitCost: { gold: 20, valuables: 1 },
+          eliteCost: { gold: 30, valuables: 2 } 
+        }
       }
     }
   }

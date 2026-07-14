@@ -96,7 +96,7 @@ export default function TownsViewer() {
             <div className="flex items-center gap-2 border-b border-slate-800 pb-3">
               <Swords className="w-5 h-5 text-amber-500" />
               <h4 className="text-xs font-bold text-slate-200 uppercase tracking-widest font-serif">
-                Roster de Criaturas y Reclutamiento
+                Criaturas y Reclutamiento
               </h4>
             </div>
 
@@ -107,23 +107,17 @@ export default function TownsViewer() {
                   <span className="text-[10px] font-mono text-amber-500 uppercase tracking-wider font-semibold">
                     Categoría de Bronce (Tier 1)
                   </span>
-                  <span className="text-[9px] font-mono bg-amber-950/40 text-amber-300 border border-amber-900/40 px-2 py-0.5 rounded">
-                    Unas pocas / Manada
-                  </span>
                 </div>
                 
                 <div className="space-y-2">
                   <div className="flex justify-between text-xs font-medium">
-                    <span className="text-slate-200">🛡️ {currentTown?.units?.bronze?.name || 'Unidad de Bronce'} (Unas pocas)</span>
-                    <span className="text-amber-300 font-mono font-bold flex items-center gap-1">
-                      <Coins className="w-3 h-3" /> {currentTown?.units?.bronze?.recruitCost?.gold || 4}O
-                    </span>
+                    <span className="text-slate-200">🛡️ {currentTown?.units?.bronze?.nivel1.name}</span>
                   </div>
                   <div className="flex justify-between text-xs font-medium">
-                    <span className="text-emerald-400">🔥 {currentTown?.units?.bronze?.name || 'Unidad de Bronce'} (Manada)</span>
-                    <span className="text-emerald-300 font-mono font-bold flex items-center gap-1">
-                      <Coins className="w-3 h-3 text-emerald-500" /> {currentTown?.units?.bronze?.eliteCost?.gold || 4}O
-                    </span>
+                    <span className="text-slate-200">🛡️ {currentTown?.units?.bronze?.nivel2.name}</span>
+                  </div>
+                  <div className="flex justify-between text-xs font-medium">
+                    <span className="text-slate-200">🛡️ {currentTown?.units?.bronze?.nivel3.name}</span>
                   </div>
                 </div>
               </div>
@@ -134,23 +128,14 @@ export default function TownsViewer() {
                   <span className="text-[10px] font-mono text-amber-500 uppercase tracking-wider font-semibold">
                     Categoría de Plata (Tier 2)
                   </span>
-                  <span className="text-[9px] font-mono bg-amber-950/40 text-amber-300 border border-amber-900/40 px-2 py-0.5 rounded">
-                    Unas pocas / Manada
-                  </span>
                 </div>
                 
                 <div className="space-y-2">
                   <div className="flex justify-between text-xs font-medium">
-                    <span className="text-slate-200">🛡️ {currentTown?.units?.silver?.name || 'Unidad de Plata'} (Unas pocas)</span>
-                    <span className="text-amber-300 font-mono font-bold flex items-center gap-1">
-                      <Coins className="w-3 h-3" /> {currentTown?.units?.silver?.recruitCost?.gold || 8}O
-                    </span>
+                    <span className="text-slate-200">🛡️ {currentTown?.units?.silver?.nivel4.name}</span>
                   </div>
                   <div className="flex justify-between text-xs font-medium">
-                    <span className="text-emerald-400">🔥 {currentTown?.units?.silver?.name || 'Unidad de Plata'} (Manada)</span>
-                    <span className="text-emerald-300 font-mono font-bold flex items-center gap-1">
-                      <Coins className="w-3 h-3 text-emerald-500" /> {currentTown?.units?.silver?.eliteCost?.gold || 8}O
-                    </span>
+                    <span className="text-slate-200">🛡️ {currentTown?.units?.silver?.nivel5.name}</span>
                   </div>
                 </div>
               </div>
@@ -161,23 +146,14 @@ export default function TownsViewer() {
                   <span className="text-[10px] font-mono text-amber-500 uppercase tracking-wider font-semibold">
                     Categoría de Oro (Tier 3)
                   </span>
-                  <span className="text-[9px] font-mono bg-amber-950/40 text-amber-300 border border-amber-900/40 px-2 py-0.5 rounded">
-                    Unas pocas / Manada
-                  </span>
                 </div>
                 
                 <div className="space-y-2">
                   <div className="flex justify-between text-xs font-medium">
-                    <span className="text-slate-200">🛡️ {currentTown?.units?.gold?.name || 'Unidad de Oro'} (Unas pocas)</span>
-                    <span className="text-amber-300 font-mono font-bold flex items-center gap-1">
-                      <Coins className="w-3 h-3" /> {currentTown?.units?.gold?.recruitCost?.gold || 12}O
-                    </span>
+                    <span className="text-slate-200">🛡️ {currentTown?.units?.gold?.nivel6.name}</span>
                   </div>
                   <div className="flex justify-between text-xs font-medium">
-                    <span className="text-emerald-400">🔥 {currentTown?.units?.gold?.name || 'Unidad de Oro'} (Manada)</span>
-                    <span className="text-emerald-300 font-mono font-bold flex items-center gap-1">
-                      <Coins className="w-3 h-3 text-emerald-500" /> {currentTown?.units?.gold?.eliteCost?.gold || 12}O
-                    </span>
+                    <span className="text-slate-200">🛡️ {currentTown?.units?.gold?.nivel7.name}</span>
                   </div>
                 </div>
               </div>
