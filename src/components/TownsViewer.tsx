@@ -42,7 +42,7 @@ const specialStructureHighlight: Record<string, { border: string; glow: string; 
   necropolis: {
     border: 'border-zinc-400',
     glow: 'shadow-[0_0_22px_rgba(228,228,231,0.4)]',
-    text: 'text-zinc-350',
+    text: 'text-zinc-400',
     bg: 'bg-zinc-900/25'
   },
   mazmorra: {
@@ -58,7 +58,7 @@ const specialStructureHighlight: Record<string, { border: string; glow: string; 
     bg: 'bg-lime-950/25'
   },
   torre: {
-    border: 'border-cyan-300',
+    border: 'border-cyan-200',
     glow: 'shadow-[0_0_22px_rgba(103,232,249,0.6)]',
     text: 'text-cyan-200',
     bg: 'bg-slate-900/35'
@@ -270,17 +270,17 @@ export default function TownsViewer() {
               <div className="flex items-center gap-2 border-b border-slate-800 pb-2.5">
                 <Scroll className="w-5 h-5 text-purple-450" />
                 <h4 className="text-xs font-bold text-slate-200 uppercase tracking-widest font-serif">
-                  Reglas: Cofradía de Magos
+                  Reglas: Cofradía de magos
                 </h4>
               </div>
               <p className="text-xs text-slate-400 leading-relaxed mt-2">
-                La construcción de la <strong className="text-slate-300">Cofradía de Magos</strong> en tu ciudad te permite gastar una de tus tres fichas de acción de turno para realizar una búsqueda de hechizos.
+                La construcción de la <strong className="text-slate-300">Cofradía de magos</strong> en tu ciudad te permite gastar la ficha de acción Libro de hechizos en tu turno para realizar una búsqueda de hechizos.
               </p>
             </div>
             <div className="text-[11px] font-mono text-slate-500 space-y-1.5 bg-slate-950/30 p-3 rounded-xl border border-slate-900 mt-1">
-              <p>1. Gasta una ficha de acción de Ciudad.</p>
-              <p>2. Roba 3 cartas de hechizo de la baraja.</p>
-              <p>3. Elige 1 carta para añadir al libro de hechizos de tu héroe activo y devuelve las otras.</p>
+              <p>1. Gasta la ficha de acción de Ciudad "Libro de hechizos".</p>
+              <p>2. Roba 2 cartas del mazo de hechizos.</p>
+              <p>3. Elige 1 carta para añadir a tu libro de hechizos (a tu mano) y devuelve la otra al descarte de hechizos.</p>
             </div>
           </div>
         </div>
@@ -493,7 +493,7 @@ export default function TownsViewer() {
         <div className="flex items-center gap-2 border-b border-slate-800 pb-3">
           <Swords className="w-5 h-5 text-amber-500" />
           <h4 className="text-xs font-bold text-slate-200 uppercase tracking-widest font-serif">
-            Criaturas y Reclutamiento Oficial
+            Criaturas y Reclutamiento
           </h4>
         </div>
 
@@ -543,7 +543,7 @@ export default function TownsViewer() {
 
                 <div className="space-y-0.5">
                   <span className="text-[9px] font-mono text-emerald-500/80 uppercase block font-bold">
-                    Refuerzo / Élite ("Manada")
+                    Refuerzo ("Manada")
                   </span>
                   {renderCost(unit.eliteCost)}
                 </div>
@@ -563,17 +563,17 @@ export default function TownsViewer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs leading-relaxed text-slate-400">
           <div className="space-y-1 bg-[#1b1311]/40 p-3 rounded-xl border border-slate-850">
             <span className="font-bold text-slate-200 block">Límite de Obras y Acciones</span>
-            <p>En tu turno de la ciudad, puedes gastar hasta **3 Fichas de Acción** en cualquier combinación de las 3 acciones disponibles: construir, reclutar/reforzar, o usar la Cofradía de Magos.</p>
+            <p>En la ciudad, puedes gastar hasta **3 Fichas de Acción** de las 3 acciones disponibles: construir, reclutar/reforzar, o usar el libro de hechizos.</p>
           </div>
           
           <div className="space-y-1 bg-[#1b1311]/40 p-3 rounded-xl border border-slate-850">
             <span className="font-bold text-slate-200 block">Refuerzo de Unidades</span>
-            <p>Si posees la **Ciudadela**, desbloqueas la capacidad de gastar 1 ficha de acción para añadir marcadores de escudo (reforzar) a tus tropas por un coste de 2 de Oro y 1 de Material.</p>
+            <p>Si posees la **Ciudadela**, desbloqueas la capacidad de gastar 1 la ficha de acción de reclutar/reforzar para reforzar a tus tropas (usar el lado "manada") pagando el coste indicado.</p>
           </div>
 
           <div className="space-y-1 bg-[#1b1311]/40 p-3 rounded-xl border border-slate-850">
             <span className="font-bold text-slate-200 block">Cofradía de Magos</span>
-            <p>Construir la Cofradía de Magos habilita la acción de ciudad para robar 3 cartas de hechizo y equipar 1 de ellas en tu héroe, potenciando tu arsenal místico.</p>
+            <p>Construir la Cofradía de magos habilita la acción de ciudad libro de hechizos para robar 2 cartas de hechizo y añadir 1 de ellas a tu mano, potenciando tu arsenal místico.</p>
           </div>
         </div>
       </div>

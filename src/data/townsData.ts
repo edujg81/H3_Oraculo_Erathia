@@ -55,7 +55,7 @@ export const townsData: Record<string, TownData> = {
       },
       {
         id: 'cofradia',
-        name: 'Cofradía de Magos',
+        name: 'Cofradía de magos',
         cost: { gold: 4, materials: 2, valuables: 1 },
         benefit: 'Al construirla: Busca (2) Hechizos dos veces.\nDespués: Una vez por turno paga 6 Oros para buscar (2) Hechizos.'
       },
@@ -158,7 +158,7 @@ export const townsData: Record<string, TownData> = {
       },
       {
         id: 'cofradia',
-        name: 'Cofradía de Magos',
+        name: 'Cofradía de magos',
         cost: { gold: 4, materials: 2, valuables: 1 },
         benefit: 'Al construirla: Busca (2) Hechizos dos veces.\nDespués: Una vez por turno paga 6 Oros para buscar (2) Hechizos.'
       },
@@ -261,7 +261,7 @@ export const townsData: Record<string, TownData> = {
       },
       {
         id: 'cofradia',
-        name: 'Cofradía de Magos',
+        name: 'Cofradía de magos',
         cost: { gold: 4, materials: 2, valuables: 1 },
         benefit: 'Al construirla: Busca (2) Hechizos dos veces.\nDespués: Una vez por turno paga 5 Oros para buscar (2) Hechizos.',
         upgradeName: 'Vórtice de maná',
@@ -367,7 +367,7 @@ export const townsData: Record<string, TownData> = {
       },
       {
         id: 'cofradia',
-        name: 'Cofradía de Magos',
+        name: 'Cofradía de magos',
         cost: { gold: 4, materials: 2, valuables: 1 },
         benefit: 'Al construirla: Busca (2) Hechizos dos veces.\nDespués: Una vez por turno paga 5 Oros para buscar (2) Hechizos.'
       },
@@ -467,7 +467,7 @@ export const townsData: Record<string, TownData> = {
       },
       {
         id: 'cofradia',
-        name: 'Cofradía de Magos',
+        name: 'Cofradía de magos',
         cost: { gold: 4, materials: 2, valuables: 1 },
         benefit: 'Al construirla: Busca (2) Hechizos dos veces.\nDespués: Una vez por turno paga 5 Oros para buscar (2) Hechizos.',
         upgradeName: 'Muro del conocimiento',
@@ -570,7 +570,7 @@ export const townsData: Record<string, TownData> = {
       },
       {
         id: 'cofradia',
-        name: 'Cofradía de Magos',
+        name: 'Cofradía de magos',
         cost: { gold: 4, materials: 2, valuables: 1 },
         benefit: 'Al construirla: Busca (2) Hechizos dos veces.\nDespués: Una vez por turno paga 5 Oros para buscar (2) Hechizos.'
       },
@@ -663,46 +663,46 @@ export const townsData: Record<string, TownData> = {
         id: 'alcaldia',
         name: 'Alcaldía',
         cost: { gold: 10, materials: 4 },
-        benefit: 'Al comienzo de cada ronda de recursos, elige: +5 de Oro o +1 Material.'
+        benefit: 'Al comienzo de cada ronda de recursos, elige: Roba 2 cartas del mazo de fuerza y magia o +2 Materiales de construcción.'
       },
       {
         id: 'ciudadela',
         name: 'Ciudadela',
-        cost: { gold: 8, materials: 5, valuables: 1 },
-        benefit: 'Desbloquea reforzar unidades. Cuando estés bajo asedio, añade 3 cartas de muralla, 1 de puerta y 1 de torre de arqueros al tablero de combate.'
+        cost: { gold: 8, materials: 4, valuables: 1 },
+        benefit: 'Desbloquea unidades de refuerzo. Bajo asedio, añade 3 cartas de muro, 1 puerta y 1 de torre de arqueros al tablero de combate.'
       },
       {
         id: 'cofradia',
-        name: 'Cofradía de Magos',
+        name: 'Cofradía de magos',
         cost: { gold: 4, materials: 2, valuables: 1 },
-        benefit: 'Al construirla: Busca (2) Hechizos dos veces.\nDespués: Una vez por turno paga 5 Oros para buscar (2) Hechizos.'
+        benefit: 'Al construirla: Busca (2) Hechizos dos veces.\nDespués: Una vez por turno paga 6 Oros para buscar (2) Hechizos.'
       },
       {
         id: 'bronce',
         name: 'Chozas (Morada de Bronce)',
-        cost: { gold: 5, materials: 3, valuables: 1 },
-        benefit: 'Permite reclutar Goblins, Incursores lupinos y Orcos (unidades de Bronce).',
-        upgradeName: 'Mercado de esclavos',
-        upgradeCost: { gold: 4, materials: 3 },
-        upgradeBenefit: 'Permite retirar o cambiar tropas de tu reserva de reclutamiento a cambio de su coste básico refundido en materiales.'
+        cost: { gold: 4, materials: 3, valuables: 1 },
+        benefit: 'Permite reclutar Goblins, Incursores lupinos y Orcos.',
+        upgradeName: 'Gremio de mercenarios',
+        upgradeCost: { gold: 2, materials: 2 },
+        upgradeBenefit: 'Cada vez que ganes un combate contra unidades neutrales, gana 1 Oro. Al reclutar o reforzar, puedes utilizar Materiales u Objetos de valor como Oro.'
       },
       {
         id: 'plata',
-        name: 'Nido de Rocs (Morada de Plata)',
+        name: 'Fuerte bajo el nido (Morada de Plata)',
         cost: { gold: 8, materials: 6, valuables: 3 },
-        benefit: 'Permite reclutar Ogros y Aves de trueno (unidades de Plata).'
+        benefit: 'Permite reclutar Ogros y Aves de trueno.'
       },
       {
         id: 'oro',
-        name: 'La Guarida del Behemoth (Morada de Oro)',
-        cost: { gold: 10, materials: 9, valuables: 4 },
+        name: 'Cuevas de montaña (Morada de Oro)',
+        cost: { gold: 10, materials: 8, valuables: 4 },
         benefit: 'Permite reclutar Cíclopes y Behemoths.'
       },
       {
         id: 'especial',
         name: 'Salón de Valhalla',
-        cost: { gold: 8, materials: 4, valuables: 0 },
-        benefit: 'Incrementa de forma permanente en +1 la estadística de Ataque de tu héroe principal.'
+        cost: { gold: 8, materials: 3, valuables: 0 },
+        benefit: 'Una vez por ronda, una de las unidades gana +1 Ataque para un solo ataque.'
       }
     ],
     units: {
@@ -766,7 +766,7 @@ export const townsData: Record<string, TownData> = {
         id: 'alcaldia',
         name: 'Alcaldía',
         cost: { gold: 10, materials: 4 },
-        benefit: 'Al comienzo de cada ronda de recursos, elige: +5 de Oro o +1 Material.'
+        benefit: 'Al comienzo de cada ronda de recursos, elige: +5 de Oro o Intercambiar recursos como en el mercadillo.'
       },
       {
         id: 'ciudadela',
@@ -776,36 +776,36 @@ export const townsData: Record<string, TownData> = {
       },
       {
         id: 'cofradia',
-        name: 'Cofradía de Magos',
+        name: 'Cofradía de magos',
         cost: { gold: 4, materials: 2, valuables: 1 },
         benefit: 'Al construirla: Busca (2) Hechizos dos veces.\nDespués: Una vez por turno paga 5 Oros para buscar (2) Hechizos.'
       },
       {
         id: 'bronce',
-        name: 'Nido de Hombres Lagarto (Morada de Bronce)',
+        name: 'Guarida (Morada de Bronce)',
         cost: { gold: 5, materials: 3, valuables: 1 },
-        benefit: 'Permite reclutar Gnolls, Hombres lagarto y Libélulas (unidades de Bronce).',
-        upgradeName: 'Jaula de Señores de la Guerra',
-        upgradeCost: { gold: 4, materials: 3 },
-        upgradeBenefit: 'Incrementa de forma permanente en +1 la estadística de Defensa de tu héroe principal.'
+        benefit: 'Permite reclutar Gnolls, Hombres lagarto y Libélulas.',
+        upgradeName: 'Jaula de los guerreros',
+        upgradeCost: { gold: 6, materials: 4, valuables: 1 },
+        upgradeBenefit: 'Si la construyes, al comienzo de cada ronda de recursos, coloca un cubo de facción aquí (máximo 2). Durante cualquier combate, un jugador puede retirarlos para ganar +1 Ataque o +1 Defensa por cubo.'
       },
       {
         id: 'plata',
-        name: 'Cercado de Basiliscos (Morada de Plata)',
+        name: 'Guaridas de la ciénaga (Morada de Plata)',
         cost: { gold: 8, materials: 6, valuables: 3 },
-        benefit: 'Permite reclutar Basiliscos y Gorgonas (unidades de Plata).'
+        benefit: 'Permite reclutar Basiliscos y Gorgonas.'
       },
       {
         id: 'oro',
-        name: 'Estanque de Hidras (Morada de Oro)',
+        name: 'Nido sobre el estanque (Morada de Oro)',
         cost: { gold: 10, materials: 9, valuables: 4 },
         benefit: 'Permite reclutar Wyverns e Hidras.'
       },
       {
         id: 'especial',
-        name: 'Muro de Hiedra',
-        cost: { gold: 8, materials: 4, valuables: 0 },
-        benefit: 'Otorga una bonificación de +1 a la armadura o defensa de todas tus tropas que se encuentren situadas dentro o adyacentes a tus murallas defensivas.'
+        name: 'Obelisco de sangre',
+        cost: { gold: 6, materials: 6, valuables: 0 },
+        benefit: 'Al comienzo de cada ronda de recursos o instantáneamente, después de que tu ciudad haya sido asediada, puedes buscar (4) en tu descarte.'
       }
     ],
     units: {
@@ -868,47 +868,47 @@ export const townsData: Record<string, TownData> = {
       {
         id: 'alcaldia',
         name: 'Alcaldía',
-        cost: { gold: 10, materials: 4 },
-        benefit: 'Al comienzo de cada ronda de recursos, elige: +5 de Oro o +1 Material. Al comprar hechizos, puedes pagar con Materiales en lugar de Oro.'
+        cost: { gold: 10, materials: 3 },
+        benefit: 'Al principio de cada ronda de recursos, elige: +4 de Oro o Buscar (3) Hechizos.'
       },
       {
         id: 'ciudadela',
         name: 'Ciudadela',
-        cost: { gold: 8, materials: 5, valuables: 1 },
-        benefit: 'Desbloquea reforzar unidades. Cuando estés bajo asedio, añade 3 cartas de muralla astral, 1 de portal de energía y 1 de rayo elemental.'
+        cost: { gold: 8, materials: 4, valuables: 1 },
+        benefit: 'Desbloquea refuerzo de unidades. Bajo asedio, añade 3 cartas de muro, 1 puerta y 1 torre de arqueros al tablero de combate.'
       },
       {
         id: 'cofradia',
-        name: 'Cofradía de Magos',
+        name: 'Cofradía de magos',
         cost: { gold: 4, materials: 2, valuables: 1 },
         benefit: 'Al construirla: Busca (2) Hechizos dos veces.\nDespués: Una vez por turno paga 5 Oros para buscar (2) Hechizos.'
       },
       {
         id: 'bronce',
-        name: 'Hogar de Hadas (Morada de Bronce)',
-        cost: { gold: 5, materials: 3, valuables: 1 },
-        benefit: 'Permite reclutar Hadas, Elementales de tormenta y Elementales de hielo (unidades de Bronce).',
-        upgradeName: 'Linterna Mágica',
-        upgradeCost: { gold: 4, materials: 3 },
-        upgradeBenefit: 'Permite reclutar 1 Hadas básica adicional por ronda directamente desde tu reserva sin consumir límite ordinario de reclutamiento.'
+        name: 'Altares de aire y agua (Morada de Bronce)',
+        cost: { gold: 4, materials: 3, valuables: 1 },
+        benefit: 'Permite reclutar Hadas, Elementales de tormenta y Elementales de hielo.',
+        upgradeName: 'Jardín de la vida',
+        upgradeCost: { gold: 2, materials: 1, valuables: 1 },
+        upgradeBenefit: 'Al comienzo de cada ronda, recluta o refuerza hadas gratis.'
       },
       {
         id: 'plata',
-        name: 'Llama de Vida (Morada de Plata)',
+        name: 'Altares de fuego y tierra (Morada de Plata)',
         cost: { gold: 8, materials: 6, valuables: 3 },
-        benefit: 'Permite reclutar Elementales de energía y Elementales de magma (unidades de Plata).'
+        benefit: 'Permite reclutar Elementales de energía y Elementales de magma.'
       },
       {
         id: 'oro',
-        name: 'Nido de Cenizas (Morada de Oro)',
-        cost: { gold: 10, materials: 9, valuables: 4 },
+        name: 'Pira mágica (Morada de Oro)',
+        cost: { gold: 9, materials: 8, valuables: 4 },
         benefit: 'Permite reclutar Elementales mágicos y Fénix.'
       },
       {
         id: 'especial',
-        name: 'Confluencia elemental',
-        cost: { gold: 8, materials: 4, valuables: 0 },
-        benefit: 'Te permite transmutar o cambiar cartas de hechizos que tengas equipadas por otras del draft de igual o inferior nivel pagando 2 de Oro.'
+        name: 'Universidad mágica',
+        cost: { gold: 6, materials: 3, valuables: 0 },
+        benefit: 'Una vez por ronda, en lugar de buscar en el mazo Hechizos, elige una escuela de magia y descarta cartas de la parte superior del mazo de hechizos hasta que encuentres un hechizo de la escuela elegida.\nLlévate el hechizo a la mano.'
       }
     ],
     units: {
@@ -972,46 +972,46 @@ export const townsData: Record<string, TownData> = {
         id: 'alcaldia',
         name: 'Alcaldía',
         cost: { gold: 10, materials: 4 },
-        benefit: 'Al comienzo de cada ronda de recursos, elige: +5 de Oro o +1 Material.'
+        benefit: 'Al comienzo de cada ronda de recursos, elige: +4 de Oro o Retira 1 Artefacto de tu mano para ganar 1 Punto de experiencia.'
       },
       {
         id: 'ciudadela',
         name: 'Ciudadela',
-        cost: { gold: 8, materials: 5, valuables: 1 },
-        benefit: 'Desbloquea reforzar unidades. Cuando estés bajo asedio, añade 3 cartas de empalizadas, 1 de compuerta y 1 cañón de cubierta.'
+        cost: { gold: 8, materials: 4, valuables: 1 },
+        benefit: 'Desbloquea refuerzo de unidades. Bajo asedio, añade 3 cartas de muros, 1 de puerta y 1 torre de arqueros al tablero de combate.'
       },
       {
         id: 'cofradia',
-        name: 'Cofradía de Magos',
+        name: 'Cofradía de magos',
         cost: { gold: 4, materials: 2, valuables: 1 },
         benefit: 'Al construirla: Busca (2) Hechizos dos veces.\nDespués: Una vez por turno paga 5 Oros para buscar (2) Hechizos.'
       },
       {
         id: 'bronce',
-        name: 'Taberna de Abordaje (Morada de Bronce)',
-        cost: { gold: 5, materials: 3, valuables: 1 },
-        benefit: 'Permite reclutar Oceánidos, Marineros y Lobos de mar (unidades de Bronce).',
-        upgradeName: 'Nido de cuervos',
-        upgradeCost: { gold: 4, materials: 3 },
-        upgradeBenefit: 'Al comienzo de cada ronda, te otorga +1 Material o Valioso al azar extra.'
+        name: 'Bahía (Morada de Bronce)',
+        cost: { gold: 4, materials: 3, valuables: 1 },
+        benefit: 'Permite reclutar Oceánidos, Marineros y Lobos de mar.',
+        upgradeName: 'Taberna',
+        upgradeCost: { gold: 3, materials: 2, valuables: 0 },
+        upgradeBenefit: 'Una vez durante la ronda de anuncio astrológico, al tiempo que refuerzas una unidad, reduce el coste de refuerzo en 3 Oros (hasta un mínimo de 0).'
       },
       {
         id: 'plata',
-        name: 'Nido del Pirata (Morada de Plata)',
+        name: 'Nidos que se elevan sobre el mar (Morada de Plata)',
         cost: { gold: 8, materials: 6, valuables: 3 },
-        benefit: 'Permite reclutar Ayssids y Hechiceras (unidades de Plata).'
+        benefit: 'Permite reclutar Ayssids y Hechiceras.'
       },
       {
         id: 'oro',
-        name: 'Bahía de la Serpiente (Morada de Oro)',
-        cost: { gold: 10, materials: 9, valuables: 4 },
+        name: 'Vórtice temido (Morada de Oro)',
+        cost: { gold: 10, materials: 8, valuables: 4 },
         benefit: 'Permite reclutar Nix y Háspidos.'
       },
       {
         id: 'especial',
-        name: 'Faro del Puerto',
-        cost: { gold: 8, materials: 4, valuables: 0 },
-        benefit: 'Otorga +2 Puntos de Movimiento gratis siempre que navegues o explores casillas con losetas de agua o mar.'
+        name: 'Cofradía de ladrones',
+        cost: { gold: 4, materials: 2, valuables: 1 },
+        benefit: 'Una vez durante tu turno, elige cualquier mazo del juego (incluido el mazo de fuerza y magia de otro jugador), mira sus 2 cartas superiores y coloca una de ellas en su pila de descarte y la otra de nuevo en la parte superior del mazo.'
       }
     ],
     units: {
