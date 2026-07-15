@@ -52,7 +52,12 @@ export default function App() {
       actionBuildUsed: false,
       actionRecruitUsed: false,
       actionMageGuildUsed: false,
-      factionId: 'necropolis'
+      factionId: 'necropolis',
+      goldGen: 10,
+      materialsGen: 2,
+      valuablesGen: 1,
+      mainHeroMove: 3,
+      secHeroMove: 2
     },
     { 
       id: '2', 
@@ -64,7 +69,12 @@ export default function App() {
       actionBuildUsed: false,
       actionRecruitUsed: false,
       actionMageGuildUsed: false,
-      factionId: 'mazmorra'
+      factionId: 'mazmorra',
+      goldGen: 10,
+      materialsGen: 2,
+      valuablesGen: 1,
+      mainHeroMove: 3,
+      secHeroMove: 2
     }
   ]);
   const [newPlayerName, setNewPlayerName] = useState('');
@@ -236,14 +246,16 @@ export default function App() {
     if (players.length > 0) {
       const nextIndex = (activePlayerIndex + 1) % players.length;
       
-      // Reset action tokens for the next player as they start their turn
+      // Reset action tokens and movement points for the next player as they start their turn
       setPlayers(prev => prev.map((p, idx) => {
         if (idx === nextIndex) {
           return {
             ...p,
             actionBuildUsed: false,
             actionRecruitUsed: false,
-            actionMageGuildUsed: false
+            actionMageGuildUsed: false,
+            mainHeroMove: 3,
+            secHeroMove: 2
           };
         }
         return p;
@@ -287,7 +299,12 @@ export default function App() {
         actionBuildUsed: false,
         actionRecruitUsed: false,
         actionMageGuildUsed: false,
-        factionId: factionObj.id
+        factionId: factionObj.id,
+        goldGen: 10,
+        materialsGen: 2,
+        valuablesGen: 1,
+        mainHeroMove: 3,
+        secHeroMove: 2
       }
     ]);
     setNewPlayerName('');
@@ -304,7 +321,12 @@ export default function App() {
       actionBuildUsed: false,
       actionRecruitUsed: false,
       actionMageGuildUsed: false,
-      factionId: f.id
+      factionId: f.id,
+      goldGen: 10,
+      materialsGen: 2,
+      valuablesGen: 1,
+      mainHeroMove: 3,
+      secHeroMove: 2
     }));
     setPlayers(defaultPlayers);
     setActivePlayerIndex(0);

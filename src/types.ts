@@ -23,6 +23,11 @@ export interface Player {
   actionRecruitUsed: boolean;
   actionMageGuildUsed: boolean;
   factionId?: string;
+  goldGen?: number;
+  materialsGen?: number;
+  valuablesGen?: number;
+  mainHeroMove?: number;
+  secHeroMove?: number;
 }
 
 export interface TimerState {

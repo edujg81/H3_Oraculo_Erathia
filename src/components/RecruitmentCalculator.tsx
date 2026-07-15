@@ -1300,7 +1300,7 @@ export default function RecruitmentCalculator() {
                     onClick={() => setSelectedTier(t)}
                     className={`flex-1 py-1.5 text-[10px] uppercase font-bold tracking-wider rounded-lg border flex items-center justify-center gap-1 cursor-pointer transition ${
                       isSelected
-                        ? t === 'bronce' ? 'border-amber-700 bg-amber-900/10 text-amber-500'
+                        ? t === 'bronce' ? 'border-[#a0522d] bg-[#a0522d]/10 text-[#a0522d]'
                         : t === 'plata' ? 'border-slate-400 bg-slate-400/10 text-slate-300'
                         : 'border-yellow-500 bg-yellow-500/10 text-yellow-300'
                         : 'bg-slate-950 border-slate-900 text-slate-500 hover:text-slate-300'
