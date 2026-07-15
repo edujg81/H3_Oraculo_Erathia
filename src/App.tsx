@@ -433,8 +433,8 @@ export default function App() {
       <main className="flex-1 max-w-7xl mx-auto w-full p-4 sm:p-6 lg:p-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
           
-          {/* Main Console Viewport (Left col-span-8 or col-span-12 depending on tab) */}
-          <div className={`${activeTab === 'timer_full' ? 'lg:col-span-8' : 'lg:col-span-12'} space-y-4`}>
+          {/* Main Console Viewport (Full width) */}
+          <div className="lg:col-span-12 space-y-4">
             {activeTab === 'chat' && (
               <div className="space-y-4">
                 <div className="bg-amber-950/20 border border-amber-900/30 rounded-2xl p-4 flex gap-3 text-xs sm:text-sm text-amber-200 leading-relaxed">
@@ -503,7 +503,9 @@ export default function App() {
             )}
 
             {activeTab === 'timer_full' && (
-              <div className="space-y-4">
+              <div className="space-y-6">
+                
+                {/* 1. Core Game Management Dashboard (Timer, Players, Treasury, Generation) */}
                 <GameTimer
                   round={round}
                   setRound={setRound}
@@ -534,6 +536,489 @@ export default function App() {
                   FACTIONS={FACTIONS}
                   handleSetPlayerCount={handleSetPlayerCount}
                 />
+
+                {/* 2. Setup & Session Rules Row */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                  
+                  {/* Bento 2: Turn Phases Guide */}
+                  <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-5 space-y-4 shadow-xl">
+                    <h3 className="text-sm font-bold text-amber-500 uppercase tracking-widest flex items-center border-b border-slate-800/80 pb-2">
+                      <svg className="w-4 h-4 mr-2 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                      </svg>
+                      Fases del Turno de Mesa
+                    </h3>
+                    
+                    <div className="flex flex-col space-y-2 text-xs">
+                      <div className="flex items-start py-1 border-b border-slate-800/40">
+                        <span className="w-5 h-5 rounded-full bg-amber-600/10 text-amber-500 flex items-center justify-center text-[10px] font-mono font-bold mr-2.5 shrink-0 mt-0.5">1</span>
+                        <div>
+                          <span className="text-slate-300 font-medium block">Fase de Recursos (Rondas Impares)</span>
+                          <span className="text-[10px] text-slate-500 block leading-tight mt-0.5">Cobro de ingresos según tu ciudad y minas (R.1 excluido).</span>
+                        </div>
+                      </div>
+                      <div className="flex items-start py-1 border-b border-slate-800/40">
+                        <span className="w-5 h-5 rounded-full bg-amber-600/10 text-amber-500 flex items-center justify-center text-[10px] font-mono font-bold mr-2.5 shrink-0 mt-0.5">2</span>
+                        <div>
+                          <span className="text-slate-300 font-medium block">Inicio y Reposición</span>
+                          <span className="text-[10px] text-slate-500 block leading-tight mt-0.5">Repone cartas hasta tu límite; restablece tus 3 PM verdes y experto.</span>
+                        </div>
+                      </div>
+                      <div className="flex items-start py-1 border-b border-slate-800/40">
+                        <span className="w-5 h-5 rounded-full bg-amber-600/10 text-amber-500 flex items-center justify-center text-[10px] font-mono font-bold mr-2.5 shrink-0 mt-0.5">3</span>
+                        <div>
+                          <span className="text-slate-300 font-medium block">Movimiento e Interacción</span>
+                          <span className="text-[10px] text-slate-500 block leading-tight mt-0.5">Gasta tus 3 PM para explorar, moverte, resolver o hacer 1 acción de ciudad.</span>
+                        </div>
+                      </div>
+                      <div className="flex items-start py-1">
+                        <span className="w-5 h-5 rounded-full bg-amber-600/10 text-amber-500 flex items-center justify-center text-[10px] font-mono font-bold mr-2.5 shrink-0 mt-0.5">4</span>
+                        <div>
+                          <span className="text-slate-300 font-medium block">Fase de Combate / Fin</span>
+                          <span className="text-[10px] text-slate-500 block leading-tight mt-0.5">Resuelve los enfrentamientos tácticos en el tablero de combate táctico.</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bento 3: Preparación según Modo */}
+                  <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-5 space-y-4 shadow-xl">
+                    <h3 className="text-sm font-bold text-amber-500 uppercase tracking-widest flex items-center border-b border-slate-800/80 pb-2">
+                      <svg className="w-4 h-4 mr-2 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                      </svg>
+                      Preparación según Modo
+                    </h3>
+
+                    {/* Mini Mode Selector Pills */}
+                    <div className="flex flex-wrap gap-1 border-b border-slate-800/40 pb-2.5">
+                      {[
+                        { id: 'enfrentamiento', label: 'Encuentro' },
+                        { id: 'cooperativo', label: 'Cooperativo' },
+                        { id: 'campaña', label: 'Campaña' },
+                        { id: 'alianza', label: 'Alianza' }
+                      ].map(mode => (
+                        <button
+                          key={mode.id}
+                          onClick={() => setPrepMode(mode.id as any)}
+                          className={`text-[10px] font-mono px-2 py-1 rounded-md border cursor-pointer uppercase transition ${
+                            prepMode === mode.id 
+                              ? 'border-amber-600 bg-amber-500/10 text-amber-400 font-bold' 
+                              : 'border-slate-800 text-slate-500 hover:text-slate-300'
+                          }`}
+                        >
+                          {mode.label}
+                        </button>
+                      ))}
+                    </div>
+
+                    {/* Dynamic instruction based on selector */}
+                    {prepMode === 'enfrentamiento' && (
+                      <div className="space-y-2 text-xs">
+                        <div className="bg-slate-950/60 p-2.5 rounded-lg border border-slate-800/50 flex justify-between items-center text-[10px]">
+                          <span className="font-semibold text-slate-300">Modo Enfrentamiento (2-3 J.)</span>
+                          <span className="text-slate-500">Normal</span>
+                        </div>
+                        <ul className="text-[12px] text-slate-400 space-y-1.5 list-disc pl-4.5">
+                          <li>Recursos: <strong>15 Oro, 3 de Madera, 1 Gemas</strong></li>
+                          <li>Mazo inicial de 9 cartas según tu héroe principal</li>
+                          <li>Por cada 2 Exp obtenida aumentas un nivel de Héroe</li>
+                          <li>Derrotar el héroe rival para declarar la victoria</li>
+                        </ul>
+                      </div>
+                    )}
+
+                    {prepMode === 'cooperativo' && (
+                      <div className="space-y-2 text-xs">
+                        <div className="bg-slate-950/60 p-2.5 rounded-lg border border-slate-800/50 flex justify-between items-center text-[10px]">
+                          <span className="font-semibold text-slate-300">Modo Cooperativo (Aliados)</span>
+                          <span className="text-sky-400 font-mono">Vs Escenario</span>
+                        </div>
+                        <ul className="text-[12px] text-slate-400 space-y-1.5 list-disc pl-4.5">
+                          <li>Los jugadores nunca se pueden atacar entre sí</li>
+                          <li>Puedes donar recursos a tus aliados en tu turno</li>
+                          <li>Escenario "Gelea": Colocar cubo en Utopía del Dragón</li>
+                          <li>Escenario "Misión Maldita": Combate contra mazos de la IA</li>
+                        </ul>
+                      </div>
+                    )}
+
+                    {prepMode === 'campaña' && (
+                      <div className="space-y-2 text-xs">
+                        <div className="bg-slate-950/60 p-2.5 rounded-lg border border-slate-800/50 flex justify-between items-center text-[10px]">
+                          <span className="font-semibold text-slate-300">Campaña Solo (1 J.)</span>
+                          <span className="text-purple-400 font-mono">Vs Mazo IA</span>
+                        </div>
+                        <ul className="text-[12px] text-slate-400 space-y-1.5 list-disc pl-4.5">
+                          <li>Se habilitan los mazos de control de IA del enemigo</li>
+                          <li>La IA mueve e inicia combates siempre tras el usuario</li>
+                          <li>No se permite rendirse ni ofrecer sobornos a la IA</li>
+                          <li>Aislinn o Isra custodian las losetas principales</li>
+                        </ul>
+                      </div>
+                    )}
+
+                    {prepMode === 'alianza' && (
+                      <div className="space-y-2 text-xs">
+                        <div className="bg-slate-950/60 p-2.5 rounded-lg border border-slate-800/50 flex justify-between items-center text-[10px]">
+                          <span className="font-semibold text-slate-300">Modo Alianza (2 vs 2)</span>
+                          <span className="text-amber-500 font-mono">Equipos</span>
+                        </div>
+                        <ul className="text-[12px] text-slate-400 space-y-1.5 list-disc pl-4.5">
+                          <li>Envío libre de recursos a tu aliado sin costes</li>
+                          <li>Intercambio de artefactos si están adyacentes</li>
+                          <li>Ganará el equipo que capture y flaggee el Castillo rival</li>
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+
+                </div>
+
+                {/* 3. Roll Simulators Row (At the bottom, out of the way) */}
+                <div className="bg-slate-900/60 border border-slate-800/80 rounded-3xl p-6 space-y-6 shadow-2xl relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
+                  
+                  <div className="flex flex-col sm:flex-row items-center justify-between border-b border-slate-800/80 pb-4">
+                    <div>
+                      <h3 className="font-serif text-amber-200 text-lg font-bold flex items-center gap-2">
+                        <span>🎲</span> Cubilete de Sandro: Simuladores de Tiradas y Dados
+                      </h3>
+                      <p className="text-[10px] text-slate-400 font-mono uppercase tracking-wider mt-1 font-semibold">Herramientas auxiliares para resolver eventos y combates tácticos</p>
+                    </div>
+                    <span className="text-[10px] font-mono bg-amber-950/40 text-amber-400 px-2.5 py-1 rounded border border-amber-900/30 mt-2 sm:mt-0 shadow-sm">
+                      ZONA DE AZAR SECUNDARIA
+                    </span>
+                  </div>
+
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+                    
+                    {/* War Machine Calculator & Cannon simulator */}
+                    <div className="bg-slate-950/40 border border-slate-850 rounded-2xl p-4.5 space-y-4">
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-bold text-slate-300 font-serif flex items-center gap-1.5">
+                          <span>🧱</span> Calculadora de Máquinas de Guerra
+                        </span>
+                        <span className="text-[9px] font-mono text-slate-500 uppercase tracking-widest bg-slate-900 px-2 py-0.5 rounded border border-slate-800">Corte & Impacto</span>
+                      </div>
+
+                      <div className="grid grid-cols-5 gap-1.5 pt-0.5">
+                        {[
+                          { id: 'ballista', label: 'Balista', icon: '🏹' },
+                          { id: 'catapult', label: 'Catap.', icon: '🧱' },
+                          { id: 'ammo_cart', label: 'Mun.', icon: '📦' },
+                          { id: 'first_aid', label: 'Tienda', icon: '🩹' },
+                          { id: 'cannon', label: 'Cañón', icon: '💣' }
+                        ].map(mach => (
+                          <button
+                            key={mach.id}
+                            onClick={() => { setSelectedMachine(mach.id as any); setMachineRollResult(''); }}
+                            className={`py-1.5 rounded-lg border text-center cursor-pointer transition text-[12px] font-medium flex flex-col items-center justify-center ${
+                              selectedMachine === mach.id
+                                ? 'border-amber-500 bg-amber-500/15 text-amber-300 font-bold'
+                                : 'bg-slate-950/60 border-slate-850 text-slate-400 hover:text-slate-200 hover:border-slate-700'
+                            }`}
+                            title={mach.label}
+                          >
+                            <span className="text-lg">{mach.icon}</span>
+                            <span className="text-[9.5px] mt-0.5">{mach.label}</span>
+                          </button>
+                        ))}
+                      </div>
+
+                      {/* Machine Description */}
+                      <div className="bg-slate-950/80 p-3.5 rounded-xl border border-slate-850 text-xs leading-relaxed text-slate-300 min-h-[92px] flex items-center">
+                        {selectedMachine === 'ballista' && (
+                          <p><strong>🏹 Balista (Ballista):</strong> Carta permanente. Al inicio de cada ronda de combate, inflige automáticamente <strong className="text-amber-300">1 herida</strong> de daño físico a la unidad enemiga con menor iniciativa.</p>
+                        )}
+                        {selectedMachine === 'catapult' && (
+                          <p><strong>🧱 Catapulta (Catapult):</strong> Carta permanente obligatoria en Asedios. Al inicio de cada ronda de combate, se lanza el dado de combate estándar para dañar la Puerta (0), un Muro (+1) o fallar (-1).</p>
+                        )}
+                        {selectedMachine === 'ammo_cart' && (
+                          <p><strong>📦 Carro de Municiones (Ammo Cart):</strong> Carta permanente. Al inicio de cada ronda de combate, elige una unidad aliada a distancia para que ignore el penalizador de distancia y el penalizador cuerpo a cuerpo (melee penalty).</p>
+                        )}
+                        {selectedMachine === 'first_aid' && (
+                          <p><strong>🩹 Tienda de Auxilio (First Aid Tent):</strong> Carta permanente. Al final de cada ronda de combate, remueve/sana automáticamente <strong className="text-amber-300">1 herida</strong> de la unidad aliada con menor iniciativa que esté dañada.</p>
+                        )}
+                        {selectedMachine === 'cannon' && (
+                          <p><strong className="text-cyan-400">💣 Cañón (Cove Cannon):</strong> Carta permanente de Bahía. Al inicio de cada ronda de combate, se lanza el dado de combate estándar para infligir 1 (-1), 2 (0) o 3 (+1) heridas directas a una unidad o estructura.</p>
+                        )}
+                      </div>
+
+                      {/* Roll Action Button */}
+                      <div className="space-y-3">
+                        <button
+                          onClick={handleMachineRoll}
+                          className="w-full py-2.5 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-xl text-xs cursor-pointer transition-all text-center shadow shadow-amber-950/20 uppercase tracking-wider"
+                        >
+                          {selectedMachine === 'cannon' ? '💥 ¡FUEGO CON EL CAÑÓN! 💣' : `🎲 Lanzar Acción (${selectedMachine === 'ammo_cart' ? 'Activar' : 'Tirar Dado'})`}
+                        </button>
+
+                        {/* Roll Result feedback */}
+                        {machineRollResult && (
+                          <div className="p-3 bg-amber-950/20 border border-amber-900/30 rounded-xl text-xs text-amber-200 font-mono text-center animate-fadeIn leading-relaxed">
+                            {machineRollResult}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Multi-Dice Simulator */}
+                    <div className="bg-slate-950/40 border border-slate-850 rounded-2xl p-4.5 space-y-4">
+                      
+                      {/* Dice Type Sub-tabs */}
+                      <div className="flex bg-slate-950 p-1 rounded-xl border border-slate-850">
+                        {(['combat', 'resource', 'treasure'] as const).map(tabKey => (
+                          <button
+                            key={tabKey}
+                            onClick={() => setActiveDiceTab(tabKey)}
+                            className={`flex-1 py-2 text-xs font-bold uppercase rounded-lg transition-all cursor-pointer text-center ${
+                              activeDiceTab === tabKey
+                                ? 'bg-amber-600/15 text-amber-300 font-bold border border-amber-500/25 shadow-sm'
+                                : 'text-slate-500 hover:text-slate-350 hover:bg-slate-900/40'
+                            }`}
+                          >
+                            {tabKey === 'combat' ? '⚔️ Combate' : tabKey === 'resource' ? '🪵 Recursos' : '🔮 Tesoro'}
+                          </button>
+                        ))}
+                      </div>
+
+                      {/* COMBAT DICE VIEW */}
+                      {activeDiceTab === 'combat' && (
+                        <div className="space-y-4">
+                          <div className="flex items-center justify-between">
+                            <span className="text-xs font-semibold text-slate-300 flex items-center gap-1.5">
+                              <Dices className="w-3.5 h-3.5 text-amber-500" />
+                              Dado de Combate Táctico
+                            </span>
+                            <span className="text-[10px] font-mono text-slate-500 bg-slate-900 px-2 py-0.5 rounded border border-slate-850">
+                              Rango [-1, 0, +1]
+                            </span>
+                          </div>
+
+                          <div className="flex items-center gap-4 bg-slate-950/60 p-3.5 rounded-xl border border-slate-850">
+                            {/* Visual Die Face */}
+                            <div className="shrink-0 flex items-center justify-center">
+                              <button
+                                onClick={rollCombatDie}
+                                disabled={isRollingCombatDie}
+                                className={`w-18 h-18 rounded-2xl flex flex-col items-center justify-center border-2 transition-all duration-300 relative select-none cursor-pointer group/die ${
+                                  isRollingCombatDie
+                                    ? 'bg-amber-600/20 border-amber-500/70 shadow-[0_0_15px_rgba(245,158,11,0.3)] scale-95 duration-75 rotate-45'
+                                    : combatDieResult === 1
+                                    ? 'bg-emerald-950/50 border-emerald-500 text-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.2)]'
+                                    : combatDieResult === -1
+                                    ? 'bg-red-950/50 border-red-500 text-red-400 shadow-[0_0_12px_rgba(239,68,68,0.2)]'
+                                    : combatDieResult === 0
+                                    ? 'bg-slate-900 border-slate-650 text-slate-300'
+                                    : 'bg-slate-950 border-slate-850 hover:border-amber-600/50 text-slate-500'
+                                }`}
+                              >
+                                <div className="absolute inset-0.5 border border-dashed border-slate-800/30 rounded-xl pointer-events-none" />
+
+                                {isRollingCombatDie ? (
+                                  <div className="text-2xl animate-spin text-amber-500">🎲</div>
+                                ) : combatDieResult !== null ? (
+                                  <div className="flex flex-col items-center">
+                                    <span className="text-3xl font-mono font-extrabold tracking-tighter leading-none">
+                                      {combatDieResult >= 0 ? `+${combatDieResult}` : combatDieResult}
+                                    </span>
+                                    <span className="text-[9px] uppercase tracking-widest font-mono opacity-80 mt-1 scale-90">
+                                      {combatDieResult === 1 ? 'Crítico' : combatDieResult === -1 ? 'Fallo' : 'Normal'}
+                                    </span>
+                                  </div>
+                                ) : (
+                                  <div className="flex flex-col items-center opacity-70 group-hover/die:opacity-100 transition-opacity">
+                                    <span className="text-2xl">⚔️</span>
+                                    <span className="text-[9px] uppercase tracking-wider font-mono mt-0.5">Tirar</span>
+                                  </div>
+                                )}
+                              </button>
+                            </div>
+
+                            {/* Text Description */}
+                            <div className="flex-1 text-xs text-slate-400 space-y-1.5">
+                              <p className="leading-relaxed">
+                                Resuelve ataques físicos, contraataques y catapulta de asedios.
+                              </p>
+                              {combatDieResult !== null && !isRollingCombatDie && (
+                                <div className={`text-xs font-medium leading-normal flex items-center gap-1.5 ${
+                                  combatDieResult === 1 ? 'text-emerald-300' : combatDieResult === -1 ? 'text-red-300' : 'text-slate-200'
+                                }`}>
+                                  <span>{combatDieResult === 1 ? '⚡' : combatDieResult === -1 ? '❌' : '🛡️'}</span>
+                                  <span>
+                                    {combatDieResult === 1 
+                                      ? '¡Bonificación de +1 al ataque!' 
+                                      : combatDieResult === -1 
+                                      ? 'Penalizador de -1 al ataque o fallo.' 
+                                      : 'Resultado estándar normal.'}
+                                  </span>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+
+                          <button
+                            onClick={rollCombatDie}
+                            disabled={isRollingCombatDie}
+                            className="w-full py-2.5 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 text-amber-300 hover:text-amber-100 font-semibold rounded-xl text-xs cursor-pointer transition text-center shadow-md flex items-center justify-center gap-1.5 font-mono uppercase tracking-wider"
+                          >
+                            {isRollingCombatDie ? 'Agitando cubilete...' : 'Lanzar Dado Combate'}
+                          </button>
+                        </div>
+                      )}
+
+                      {/* RESOURCE DICE VIEW */}
+                      {activeDiceTab === 'resource' && (
+                        <div className="space-y-4">
+                          <div className="flex items-center justify-between">
+                            <span className="text-xs font-semibold text-slate-300 flex items-center gap-1.5">
+                              <Dices className="w-3.5 h-3.5 text-amber-500" />
+                              Dado de Recursos
+                            </span>
+                            <span className="text-[10px] font-mono text-slate-500 bg-slate-900 px-2 py-0.5 rounded border border-slate-850">
+                              Producción d6
+                            </span>
+                          </div>
+
+                          <div className="flex items-center gap-4 bg-slate-950/60 p-3.5 rounded-xl border border-slate-850">
+                            {/* Visual Die Face */}
+                            <div className="shrink-0 flex items-center justify-center">
+                              <button
+                                onClick={rollResourceDie}
+                                disabled={isRollingResourceDie}
+                                className={`w-18 h-18 rounded-2xl flex flex-col items-center justify-center border-2 transition-all duration-300 relative select-none cursor-pointer group/die ${
+                                  isRollingResourceDie
+                                    ? 'bg-amber-600/20 border-amber-500/70 shadow-[0_0_15px_rgba(245,158,11,0.3)] scale-95 duration-75 rotate-45'
+                                    : resourceDieResult
+                                    ? 'bg-amber-950/50 border-amber-500 text-amber-400 shadow-[0_0_12px_rgba(245,158,11,0.2)]'
+                                    : 'bg-slate-950 border-slate-850 hover:border-amber-600/50 text-slate-500'
+                                }`}
+                              >
+                                <div className="absolute inset-0.5 border border-dashed border-slate-800/30 rounded-xl pointer-events-none" />
+
+                                {isRollingResourceDie ? (
+                                  <div className="text-2xl animate-spin text-amber-500">🎲</div>
+                                ) : resourceDieResult ? (
+                                  <div className="flex flex-col items-center text-center">
+                                    <span className="text-xl font-mono font-extrabold leading-none mb-0.5">
+                                      {resourceDieResult.split(' ')[0]}
+                                    </span>
+                                    <span className="text-[9px] uppercase tracking-wider font-mono opacity-80 leading-none">
+                                      {resourceDieResult.split(' ').slice(1).join(' ')}
+                                    </span>
+                                  </div>
+                                ) : (
+                                  <div className="flex flex-col items-center opacity-70 group-hover/die:opacity-100 transition-opacity">
+                                    <span className="text-2xl">🪵</span>
+                                    <span className="text-[9px] uppercase tracking-wider font-mono mt-0.5">Tirar</span>
+                                  </div>
+                                )}
+                              </button>
+                            </div>
+
+                            {/* Text Description */}
+                            <div className="flex-1 text-xs text-slate-400 space-y-1.5">
+                              <p className="leading-relaxed">
+                                Tira al explorar el mapa o durante rondas de producción para obtener suministros extra.
+                              </p>
+                              {resourceDieResult && !isRollingResourceDie && (
+                                <div className="text-xs font-medium leading-normal text-amber-300 flex items-center gap-1.5">
+                                  <span>📦</span>
+                                  <span>¡Has recolectado {resourceDieResult}!</span>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+
+                          <button
+                            onClick={rollResourceDie}
+                            disabled={isRollingResourceDie}
+                            className="w-full py-2.5 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 text-amber-300 hover:text-amber-100 font-semibold rounded-xl text-xs cursor-pointer transition text-center shadow-md flex items-center justify-center gap-1.5 font-mono uppercase tracking-wider"
+                          >
+                            {isRollingResourceDie ? 'Agitando cubilete...' : 'Lanzar Dado de Recursos'}
+                          </button>
+                        </div>
+                      )}
+
+                      {/* TREASURE DICE VIEW */}
+                      {activeDiceTab === 'treasure' && (
+                        <div className="space-y-4">
+                          <div className="flex items-center justify-between">
+                            <span className="text-xs font-semibold text-slate-300 flex items-center gap-1.5">
+                              <Dices className="w-3.5 h-3.5 text-amber-500" />
+                              Dado de Tesoro
+                            </span>
+                            <span className="text-[10px] font-mono text-slate-500 bg-slate-900 px-2 py-0.5 rounded border border-slate-850">
+                              Cofres d6
+                            </span>
+                          </div>
+
+                          <div className="flex items-center gap-4 bg-slate-950/60 p-3.5 rounded-xl border border-slate-850">
+                            {/* Visual Die Face */}
+                            <div className="shrink-0 flex items-center justify-center">
+                              <button
+                                onClick={rollTreasureDie}
+                                disabled={isRollingTreasureDie}
+                                className={`w-18 h-18 rounded-2xl flex flex-col items-center justify-center border-2 transition-all duration-300 relative select-none cursor-pointer group/die ${
+                                  isRollingTreasureDie
+                                    ? 'bg-amber-600/20 border-amber-500/70 shadow-[0_0_15px_rgba(245,158,11,0.3)] scale-95 duration-75 rotate-45'
+                                    : treasureDieResult
+                                    ? 'bg-purple-950/50 border-purple-500 text-purple-400 shadow-[0_0_12px_rgba(168,85,247,0.2)]'
+                                    : 'bg-slate-950 border-slate-850 hover:border-amber-600/50 text-slate-500'
+                                }`}
+                              >
+                                <div className="absolute inset-0.5 border border-dashed border-slate-800/30 rounded-xl pointer-events-none" />
+
+                                {isRollingTreasureDie ? (
+                                  <div className="text-2xl animate-spin text-amber-500">🎲</div>
+                                ) : treasureDieResult ? (
+                                  <div className="flex flex-col items-center text-center">
+                                    <span className="text-xl font-mono font-extrabold leading-none mb-0.5">
+                                      {treasureDieResult.split(' ')[0]}
+                                    </span>
+                                    <span className="text-[9.5px] uppercase tracking-wider font-mono opacity-80 leading-none px-1">
+                                      {treasureDieResult.split(' ').slice(1, 4).join(' ')}
+                                    </span>
+                                  </div>
+                                ) : (
+                                  <div className="flex flex-col items-center opacity-70 group-hover/die:opacity-100 transition-opacity">
+                                    <span className="text-2xl">🔮</span>
+                                    <span className="text-[9px] uppercase tracking-wider font-mono mt-0.5">Tirar</span>
+                                  </div>
+                                )}
+                              </button>
+                            </div>
+
+                            {/* Text Description */}
+                            <div className="flex-1 text-xs text-slate-400 space-y-1.5">
+                              <p className="leading-relaxed">
+                                Lánzalo para abrir cofres abandonados, ruinas o saquear asentamientos derrotados.
+                              </p>
+                              {treasureDieResult && !isRollingTreasureDie && (
+                                <div className="text-xs font-medium leading-normal text-purple-300 flex items-center gap-1.5">
+                                  <span>✨</span>
+                                  <span>¡Recompensa: {treasureDieResult}!</span>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+
+                          <button
+                            onClick={rollTreasureDie}
+                            disabled={isRollingTreasureDie}
+                            className="w-full py-2.5 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 text-amber-300 hover:text-amber-100 font-semibold rounded-xl text-xs cursor-pointer transition text-center shadow-md flex items-center justify-center gap-1.5 font-mono uppercase tracking-wider"
+                          >
+                            {isRollingTreasureDie ? 'Agitando cubilete...' : 'Lanzar Dado de Tesoro'}
+                          </button>
+                        </div>
+                      )}
+
+                    </div>
+
+                  </div>
+                </div>
+
               </div>
             )}
 
@@ -550,8 +1035,8 @@ export default function App() {
             )}
           </div>
 
-          {/* Immutable Bento Cards Sidepanel (Right col-span-4) */}
-          {activeTab === 'timer_full' && (
+          {/* Old layout deactivated - Moved to full-width horizontal grid at bottom */}
+          {false && (
             <div className="lg:col-span-4 space-y-6">
             
             {/* Bento 2: Turn Phases Guide (Always Handy) */}

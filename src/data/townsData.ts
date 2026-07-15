@@ -559,14 +559,14 @@ export const townsData: Record<string, TownData> = {
       {
         id: 'alcaldia',
         name: 'Alcaldía',
-        cost: { gold: 10, materials: 4 },
-        benefit: 'Al comienzo de cada ronda de recursos, elige: +5 de Oro o +1 Material.'
+        cost: { gold: 13, materials: 5 },
+        benefit: 'Al comienzo de cada ronda de recursos, elige: +6 de Oro o +3 Material de construcción.'
       },
       {
         id: 'ciudadela',
         name: 'Ciudadela',
-        cost: { gold: 8, materials: 5, valuables: 1 },
-        benefit: 'Desbloquea reforzar unidades. Cuando estés bajo asedio, añade 3 cartas de muralla, 1 de puerta y 1 de torre de arqueros al tablero de combate.'
+        cost: { gold: 9, materials: 4, valuables: 1 },
+        benefit: 'Desbloquea el refuerzo de unidades. Cuando estés bajo asedio, añade 3 cartas de muralla, 1 de puerta y 1 de torre de arqueros al tablero de combate.'
       },
       {
         id: 'cofradia',
@@ -576,30 +576,30 @@ export const townsData: Record<string, TownData> = {
       },
       {
         id: 'bronce',
-        name: 'Criadero de Sabuesos (Morada de Bronce)',
+        name: 'Crisol de pecados (Morada de Bronce)',
         cost: { gold: 5, materials: 3, valuables: 1 },
-        benefit: 'Permite reclutar Familiares, Magogs y Cerberos (unidades de Bronce).',
-        upgradeName: 'Silo de azufre',
-        upgradeCost: { gold: 4, materials: 3 },
-        upgradeBenefit: 'Produce automáticamente +1 Azufre (recurso Valioso) al comienzo de cada ronda de recursos.'
+        benefit: 'Permite reclutar Familiares, Magogs y Cerberos.',
+        upgradeName: 'Nubes de azufre',
+        upgradeCost: { gold: 6, materials: 3, valuables: 2 },
+        upgradeBenefit: 'Al construirlo y al comienzo de cada ronda astrológica, coloca aquí 1 cubo de facción (máx. 3). Durante cualquier combate, puedes retirarlos para ganar +1 Poder por cubo. Solo puedes utilizar 1 cubo por Hechizo.'
       },
       {
         id: 'plata',
-        name: 'Fosa de Demonios (Morada de Plata)',
-        cost: { gold: 8, materials: 6, valuables: 3 },
-        benefit: 'Permite reclutar Demonios y Señores del abismo (unidades de Plata).'
+        name: 'Puertas del abismo (Morada de Plata)',
+        cost: { gold: 9, materials: 6, valuables: 3 },
+        benefit: 'Permite reclutar Demonios y Señores del abismo.'
       },
       {
         id: 'oro',
-        name: 'Palacio de Efrits (Morada de Oro)',
+        name: 'Palacio del fuego infernal (Morada de Oro)',
         cost: { gold: 10, materials: 9, valuables: 4 },
         benefit: 'Permite reclutar Efrits y Archidiablos.'
       },
       {
         id: 'especial',
-        name: 'Puertas del Castillo',
-        cost: { gold: 8, materials: 4, valuables: 0 },
-        benefit: 'Permite a tus héroes teletransportarse instantáneamente de vuelta a este Castillo desde cualquier portal o ciudad del mapa de exploración pagando solo 1 PM.'
+        name: 'Puerta del Castillo',
+        cost: { gold: 7, materials: 5, valuables: 0 },
+        benefit: 'Durante tu turno, elige una:\n1. Paga 3 Oros para descartar 1 carta al azar de la mano de tu oponente.\n2. Si tu héroe está en una ciudad o asentamiento, muévelo a otra ciudad o asentamiento bajo tu control.'
       }
     ],
     units: {

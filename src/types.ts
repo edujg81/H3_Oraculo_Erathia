@@ -28,6 +28,7 @@ export interface Player {
   valuablesGen?: number;
   mainHeroMove?: number;
   secHeroMove?: number;
+  incomeCollectedRound?: number;
 }
 
 export interface TimerState {
