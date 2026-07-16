@@ -9,47 +9,8 @@ dotenv.config();
 const app = express();
 const PORT = 3000;
 
-// El despliegue de producción corre detrás del proxy de Cloud Run;
-// sin esto, req.ip devolvería siempre la IP interna del proxy y el
-// rate limiter agruparía a todos los usuarios en un único bucket.
-app.set("trust proxy", true);
-
-// Body parser (límite de tamaño para evitar payloads abusivos)
-app.use(express.json({ limit: "100kb" }));
-
-// --- Rate limiting simple en memoria para /api/chat ---
-// Cada llamada a Gemini tiene coste de tokens/cuota; sin este límite,
-// cualquier visitante del despliegue público podría agotar la clave de API.
-const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000; // 10 minutos
-const RATE_LIMIT_MAX_REQUESTS = 20; // por IP, por ventana
-const rateLimitBuckets = new Map<string, number[]>();
-
-function isRateLimited(ip: string): boolean {
-  const now = Date.now();
-  const timestamps = (rateLimitBuckets.get(ip) || []).filter(
-    (t) => now - t < RATE_LIMIT_WINDOW_MS
-  );
-  if (timestamps.length >= RATE_LIMIT_MAX_REQUESTS) {
-    rateLimitBuckets.set(ip, timestamps);
-    return true;
-  }
-  timestamps.push(now);
-  rateLimitBuckets.set(ip, timestamps);
-  return false;
-}
-
-// Limpieza periódica para no acumular IPs inactivas indefinidamente en memoria
-setInterval(() => {
-  const now = Date.now();
-  for (const [ip, timestamps] of rateLimitBuckets.entries()) {
-    const active = timestamps.filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
-    if (active.length === 0) rateLimitBuckets.delete(ip);
-    else rateLimitBuckets.set(ip, active);
-  }
-}, RATE_LIMIT_WINDOW_MS).unref?.();
-
-const MAX_MESSAGES = 40; // longitud máxima del historial de chat aceptado
-const MAX_MESSAGE_LENGTH = 4000; // caracteres por mensaje
+// Body parser
+app.use(express.json());
 
 // Initialize GenAI safely
 let ai: GoogleGenAI | null = null;
@@ -76,43 +37,10 @@ app.get("/api/rules", (req, res) => {
 // 2. API: Rule Chat Companion
 app.post("/api/chat", async (req, res) => {
   try {
-    const clientIp = req.ip || req.socket.remoteAddress || "unknown";
-    if (isRateLimited(clientIp)) {
-      return res.status(429).json({
-        error: "Demasiadas consultas a Sandro en poco tiempo. Espera unos minutos antes de volver a intentarlo."
-      });
-    }
-
     const { messages, selectedSectionId } = req.body;
 
     if (!messages || !Array.isArray(messages)) {
       return res.status(400).json({ error: "Invalid request parameters. 'messages' array is required." });
-    }
-
-    if (messages.length === 0 || messages.length > MAX_MESSAGES) {
-      return res.status(400).json({
-        error: `El historial de mensajes debe tener entre 1 y ${MAX_MESSAGES} entradas.`
-      });
-    }
-
-    const hasInvalidMessage = messages.some((m: any) => {
-      return (
-        typeof m !== "object" ||
-        m === null ||
-        (m.role !== "user" && m.role !== "assistant") ||
-        typeof m.content !== "string" ||
-        m.content.length === 0 ||
-        m.content.length > MAX_MESSAGE_LENGTH
-      );
-    });
-    if (hasInvalidMessage) {
-      return res.status(400).json({
-        error: `Cada mensaje debe tener 'role' ('user'|'assistant') y 'content' de texto (máx. ${MAX_MESSAGE_LENGTH} caracteres).`
-      });
-    }
-
-    if (selectedSectionId !== undefined && typeof selectedSectionId !== "string") {
-      return res.status(400).json({ error: "'selectedSectionId' debe ser una cadena de texto." });
     }
 
     if (!ai) {
