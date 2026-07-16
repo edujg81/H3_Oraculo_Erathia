@@ -57,8 +57,15 @@ export default function ChatAdvisor({
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, isLoading]);
 
+  const MAX_MESSAGE_LENGTH = 4000; // debe coincidir con el límite validado en server.ts
+
   const handleSendMessage = async (textToSend: string) => {
     if (!textToSend.trim() || isLoading) return;
+
+    if (textToSend.length > MAX_MESSAGE_LENGTH) {
+      setChatError(`Tu mensaje es demasiado largo (máx. ${MAX_MESSAGE_LENGTH} caracteres). Resúmelo un poco, por favor.`);
+      return;
+    }
 
     setChatError(null);
     const userMsg: Message = {
@@ -72,12 +79,18 @@ export default function ChatAdvisor({
     setInputValue('');
     setIsLoading(true);
 
+    // Solo se envían los últimos mensajes: evita romper la conversación al
+    // superar el límite de historial validado por el servidor (ver server.ts)
+    // y mantiene el coste de tokens de cada consulta acotado.
+    const MAX_HISTORY_SENT = 30;
+
     try {
+      const fullHistory = [...messages, userMsg];
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          messages: [...messages, userMsg],
+          messages: fullHistory.slice(-MAX_HISTORY_SENT),
           selectedSectionId: selectedSection?.id || undefined
         })
       });

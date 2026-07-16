@@ -1,17 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import RulesBrowser from './components/RulesBrowser';
-import ChatAdvisor from './components/ChatAdvisor';
-import RulebookPDF from './components/RulebookPDF';
-import GameTimer from './components/GameTimer';
-import RecruitmentCalculator from './components/RecruitmentCalculator';
-import ScenariosDatabase from './components/ScenariosDatabase';
-import HeroesViewer from './components/HeroesViewer';
-import SkillsBrowser from './components/SkillsBrowser';
-import WarMachinesViewer from './components/WarMachinesViewer';
-import MapLocationsViewer from './components/MapLocationsViewer';
-import SpellCardsViewer from './components/SpellCardsViewer';
-import TownsViewer from './components/TownsViewer';
-import { playTickSound, playTimeOutSound } from './utils/audio';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
+import { useGameTimer } from './hooks/useGameTimer';
+import { useDiceRoller } from './hooks/useDiceRoller';
+
+// Vistas cargadas de forma perezosa (code-splitting): solo se descarga el
+// bundle de la pestaña activa en lugar de las 12 vistas de golpe.
+const RulesBrowser = lazy(() => import('./components/RulesBrowser'));
+const ChatAdvisor = lazy(() => import('./components/ChatAdvisor'));
+const RulebookPDF = lazy(() => import('./components/RulebookPDF'));
+const GameTimer = lazy(() => import('./components/GameTimer'));
+const RecruitmentCalculator = lazy(() => import('./components/RecruitmentCalculator'));
+const ScenariosDatabase = lazy(() => import('./components/ScenariosDatabase'));
+const HeroesViewer = lazy(() => import('./components/HeroesViewer'));
+const SkillsBrowser = lazy(() => import('./components/SkillsBrowser'));
+const WarMachinesViewer = lazy(() => import('./components/WarMachinesViewer'));
+const MapLocationsViewer = lazy(() => import('./components/MapLocationsViewer'));
+const SpellCardsViewer = lazy(() => import('./components/SpellCardsViewer'));
+const TownsViewer = lazy(() => import('./components/TownsViewer'));
 // @ts-ignore
 import oracleLogo from './assets/images/sandro_oracle_titled_logo_1783458347417.jpg';
 import { RuleSection, Player } from './types';
@@ -33,6 +37,16 @@ const FACTIONS = [
   { id: 'confluencia', name: 'Confluencia (Conflux)', color: 'bg-indigo-950/60 border-indigo-800 text-indigo-200' },
   { id: 'cove', name: 'Bahía (Cove)', color: 'bg-sky-950/60 border-sky-800 text-sky-200' }
 ];
+
+// Fallback mostrado mientras se descarga el bundle de la pestaña activa
+function TabLoadingFallback() {
+  return (
+    <div className="flex flex-col items-center justify-center py-24 gap-3 text-amber-500/80">
+      <span className="text-3xl animate-spin">🔮</span>
+      <p className="text-xs font-mono uppercase tracking-widest text-slate-500">Invocando módulo...</p>
+    </div>
+  );
+}
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<'chat' | 'rules' | 'pdf' | 'timer_full' | 'calculator' | 'scenarios' | 'heroes' | 'units' | 'skills' | 'spells' | 'warmachines' | 'locations' | 'towns'>('chat');
@@ -81,14 +95,15 @@ export default function App() {
   const [selectedFaction, setSelectedFaction] = useState('castillo');
   const [activePlayerIndex, setActivePlayerIndex] = useState(0);
 
-  // Overall Match stopwatch state
-  const [totalSeconds, setTotalSeconds] = useState(0);
-  const [isTotalRunning, setIsTotalRunning] = useState(true); // Default running
-
-  // Turn time state
-  const [turnLimit, setTurnLimit] = useState(60); // Default to 60s
-  const [turnSeconds, setTurnSeconds] = useState(60);
-  const [isTurnRunning, setIsTurnRunning] = useState(false);
+  // Cronómetro global y reloj de turno (extraído a hook)
+  const {
+    totalSeconds, setTotalSeconds,
+    isTotalRunning, setIsTotalRunning,
+    turnLimit, setTurnLimit,
+    turnSeconds, setTurnSeconds,
+    isTurnRunning, setIsTurnRunning,
+    formatTime,
+  } = useGameTimer();
 
   // Preparation Mode Selector State
   const [prepMode, setPrepMode] = useState<'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza'>('enfrentamiento');
@@ -99,148 +114,20 @@ export default function App() {
   const [supplyChain, setSupplyChain] = useState(false);
   const [elementalDamage, setElementalDamage] = useState(false);
 
-  // War Machines state
-  const [selectedMachine, setSelectedMachine] = useState<'ballista' | 'catapult' | 'ammo_cart' | 'first_aid' | 'cannon'>('ballista');
-  const [machineRollResult, setMachineRollResult] = useState('');
-
-  // Combat Die State
-  const [combatDieResult, setCombatDieResult] = useState<number | null>(null);
-  const [isRollingCombatDie, setIsRollingCombatDie] = useState(false);
-
-  // Resource Die State
-  const [resourceDieResult, setResourceDieResult] = useState<string | null>(null);
-  const [isRollingResourceDie, setIsRollingResourceDie] = useState(false);
-
-  // Treasure Die State
-  const [treasureDieResult, setTreasureDieResult] = useState<string | null>(null);
-  const [isRollingTreasureDie, setIsRollingTreasureDie] = useState(false);
-
-  // Active Dice Tab state
-  const [activeDiceTab, setActiveDiceTab] = useState<'combat' | 'resource' | 'treasure'>('combat');
-
-  const handleMachineRoll = () => {
-    if (selectedMachine === 'ballista') {
-      setMachineRollResult("¡Ataque de Balista! 🏹 Al inicio de la ronda de combate, inflige automáticamente 1 herida física a la unidad enemiga con menor iniciativa.");
-    } else if (selectedMachine === 'catapult') {
-      const rollValue = Math.floor(Math.random() * 3) - 1; // -1, 0, or +1
-      let outcome = "";
-      if (rollValue === -1) {
-        outcome = "¡Fallo/Errado! ☄️ El disparo de la catapulta pasa de largo sin causar daños.";
-      } else if (rollValue === 0) {
-        outcome = "Impacto en Puerta (Gate) 🚪 - La catapulta causa 1 punto de daño al portón central.";
-      } else {
-        outcome = "Impacto en Muro (Wall) 🧱 - La catapulta causa 1 punto de daño a una sección de muralla de tu elección.";
-      }
-      setMachineRollResult(`Lanzamiento de Dado de Combate: [Resultado ${rollValue >= 0 ? '+' : ''}${rollValue}] ➔ ${outcome}`);
-    } else if (selectedMachine === 'ammo_cart') {
-      setMachineRollResult("¡Carro de Municiones activo! 📦 Al inicio de la ronda de combate, una unidad aliada de ataque a distancia ignora los penalizadores de distancia y cuerpo a cuerpo (melee penalty) esta ronda.");
-    } else if (selectedMachine === 'first_aid') {
-      setMachineRollResult("¡Tienda de Auxilio activa! 🩹 Al final de la ronda de combate, remueve/sana automáticamente 1 herida de la unidad aliada con menor iniciativa que esté dañada.");
-    } else if (selectedMachine === 'cannon') {
-      const rollValue = Math.floor(Math.random() * 3) - 1; // -1, 0, or +1
-      const damage = rollValue === -1 ? 1 : rollValue === 0 ? 2 : 3;
-      setMachineRollResult(`Lanzamiento de Dado de Combate para Cañón: [Resultado ${rollValue >= 0 ? '+' : ''}${rollValue}] ➔ ¡Cañonazo! 💣 Inflige ${damage} ${damage === 1 ? 'herida' : 'heridas'} a la unidad o estructura enemiga elegida.`);
-    }
-  };
-
-  const rollCombatDie = () => {
-    setIsRollingCombatDie(true);
-    setCombatDieResult(null);
-    setTimeout(() => {
-      const rollValue = Math.floor(Math.random() * 3) - 1; // -1, 0, or +1
-      setCombatDieResult(rollValue);
-      setIsRollingCombatDie(false);
-    }, 600);
-  };
-
-  const rollResourceDie = () => {
-    setIsRollingResourceDie(true);
-    setResourceDieResult(null);
-    setTimeout(() => {
-      const faces = [
-        '🟡 +1 Oro',
-        '🟡 +2 Oro',
-        '🪵 +1 Madera o Mineral',
-        '🪵 +2 Madera o Mineral',
-        '🔮 +1 Recurso Valioso',
-        '❌ Vacío (Sin ganancia)'
-      ];
-      const rollIndex = Math.floor(Math.random() * 6);
-      setResourceDieResult(faces[rollIndex]);
-      setIsRollingResourceDie(false);
-    }, 600);
-  };
-
-  const rollTreasureDie = () => {
-    setIsRollingTreasureDie(true);
-    setTreasureDieResult(null);
-    setTimeout(() => {
-      const faces = [
-        '✨ +0.5 Nivel (Héroe principal gana medio nivel de EXP)',
-        '✨ +0.5 Nivel (Héroe principal gana medio nivel de EXP)',
-        '🔍 Buscar(2) Artefactos (Buscar(2) en mazo de Artefactos)',
-        '🔍 Buscar(2) Artefactos (Buscar(2) en mazo de Artefactos)',
-        '🎲 1 Dado Rec. (Lanzar 1 dado de recursos)',
-        '🎲 2 Dados Rec. (Lanzar 2 dados de recursos y elegir uno)'
-      ];
-      const rollIndex = Math.floor(Math.random() * 6);
-      setTreasureDieResult(faces[rollIndex]);
-      setIsRollingTreasureDie(false);
-    }, 600);
-  };
+  // Dados y máquinas de guerra (extraído a hook)
+  const {
+    selectedMachine, setSelectedMachine,
+    machineRollResult, setMachineRollResult, handleMachineRoll,
+    combatDieResult, isRollingCombatDie, rollCombatDie,
+    resourceDieResult, isRollingResourceDie, rollResourceDie,
+    treasureDieResult, isRollingTreasureDie, rollTreasureDie,
+    activeDiceTab, setActiveDiceTab,
+  } = useDiceRoller();
 
   // Adjust round type automatically based on round value
   useEffect(() => {
     setRoundType(round % 2 !== 0 ? 'Recursos' : 'Astrológica');
   }, [round]);
-
-  // Overall Match stopwatch timer effect
-  useEffect(() => {
-    let interval: NodeJS.Timeout | null = null;
-    if (isTotalRunning) {
-      interval = setInterval(() => {
-        setTotalSeconds(prev => prev + 1);
-      }, 1000);
-    } else {
-      if (interval) clearInterval(interval);
-    }
-    return () => {
-      if (interval) clearInterval(interval);
-    };
-  }, [isTotalRunning]);
-
-  // Turn Countdown timer effect
-  useEffect(() => {
-    let interval: NodeJS.Timeout | null = null;
-    if (isTurnRunning) {
-      interval = setInterval(() => {
-        setTurnSeconds(prev => {
-          if (prev <= 1) {
-            setIsTurnRunning(false);
-            playTimeOutSound();
-            return 0;
-          }
-          const nextVal = prev - 1;
-          if (nextVal <= 10) {
-            playTickSound();
-          }
-          return nextVal;
-        });
-      }, 1000);
-    } else {
-      if (interval) clearInterval(interval);
-    }
-    return () => {
-      if (interval) clearInterval(interval);
-    };
-  }, [isTurnRunning]);
-
-  // Format second counts neatly
-  const formatTime = (secs: number) => {
-    const mins = Math.floor(secs / 60);
-    const s = secs % 60;
-    return `${mins.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
-  };
 
   const handleNextTurn = () => {
     if (players.length > 0) {
@@ -435,6 +322,7 @@ export default function App() {
           
           {/* Main Console Viewport (Full width) */}
           <div className="lg:col-span-12 space-y-4">
+          <Suspense fallback={<TabLoadingFallback />}>
             {activeTab === 'chat' && (
               <div className="space-y-4">
                 <div className="bg-amber-950/20 border border-amber-900/30 rounded-2xl p-4 flex gap-3 text-xs sm:text-sm text-amber-200 leading-relaxed">
@@ -1033,6 +921,7 @@ export default function App() {
                 <RulebookPDF />
               </div>
             )}
+          </Suspense>
           </div>
 
           {/* Old layout deactivated - Moved to full-width horizontal grid at bottom */}
