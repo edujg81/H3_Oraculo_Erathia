@@ -69,7 +69,48 @@ El proyecto está construido bajo una arquitectura moderna **Full-Stack (Client-
 
 ---
 
-## 📦 Instalación y Desarrollo Local
+## 🧠 Base de Conocimiento de Sandro
+
+Sandro (el chat de IA) no responde solo con lo que "sabe" el modelo: cada consulta se acompaña de un contexto (`systemInstruction`) construido en `server.ts` a partir de dos fuentes:
+
+1. **`src/data/rulesKB.ts`** — el reglamento en sí (`RuleSection[]`): mecánicas de combate, asedio, mapa, modos de juego, FAQs, etc. Se incluye **siempre, entero**, en cada consulta.
+2. **`src/data/knowledgeIndex.ts`** — un índice generado a partir de las bases de datos "de UI" (`heroesData.ts`, `unitsData.ts`, `skillsData.ts`, `townsData.ts`) que cubre los **64 héroes**, **~156 unidades**, **32 habilidades secundarias** y **10 ciudades** del juego. Para no disparar el tamaño (y el coste) del prompt en cada mensaje:
+   - Se incluye siempre un **catálogo compacto** (solo nombres, ~7.000 caracteres) para que Sandro sepa qué existe.
+   - Solo se añade la **ficha detallada completa** de un héroe/unidad/habilidad/ciudad cuando su nombre aparece mencionado en los últimos mensajes del usuario (`getRelevantEntitySections`), con coincidencia por límites de palabra para evitar falsos positivos (p. ej. que "función" no dispare al héroe "Iona").
+
+### Arquitectura de los datos del juego (`src/data/`)
+
+| Archivo | Contenido | Usado por |
+|---|---|---|
+| `heroesData.ts` | Estadísticas, habilidad inicial y especialidad de los 64 héroes | `HeroesViewer`, `SkillsBrowser`, base de conocimiento |
+| `unitsData.ts` | Estadísticas, coste y habilidades de las unidades reclutables y neutrales | `RecruitmentCalculator`, base de conocimiento |
+| `skillsData.ts` | Catálogo oficial de las 32 Habilidades Secundarias | `SkillsBrowser`, base de conocimiento |
+| `townsData.ts` | Edificios, costes y unidades reclutables por ciudad | `TownsViewer`, base de conocimiento |
+| `spellsData.ts` | Catálogo de hechizos | `SpellCardsViewer` |
+| `rulesKB.ts` | Reglamento completo estructurado en secciones | `RulesBrowser`, `/api/chat` |
+| `knowledgeIndex.ts` | Genera el catálogo + fichas indexadas para Sandro a partir de los anteriores | `server.ts` |
+
+> **Si añades o corriges un héroe, unidad, habilidad o ciudad**, hazlo en su archivo de datos correspondiente (`heroesData.ts`, `unitsData.ts`, `skillsData.ts` o `townsData.ts`); `knowledgeIndex.ts` lo recoge automáticamente sin necesidad de tocarlo, y tanto la UI como Sandro quedan actualizados a la vez.
+
+---
+
+## ⚡ Rendimiento y arquitectura del frontend
+
+* Las 12 vistas del *bento dashboard* se cargan con **`React.lazy` + `Suspense`** (`src/App.tsx`): solo se descarga el código de la pestaña activa, no las 12 de golpe. Esto reduce el bundle inicial de ~1,25 MB a ~245 KB.
+* La lógica del cronómetro/reloj de turno y de los dados/máquinas de guerra vive en hooks dedicados (`src/hooks/useGameTimer.ts`, `src/hooks/useDiceRoller.ts`) para mantener `App.tsx` más manejable, mientras el estado de jugadores/ronda permanece centralizado en `App.tsx` (necesario para sincronizar el panel lateral).
+
+---
+
+## 🔒 Seguridad del endpoint `/api/chat`
+
+Para proteger la cuota de la clave de Gemini en despliegues públicos, `server.ts` valida y limita cada petición:
+
+* Historial de mensajes: entre 1 y 40 entradas, cada una ≤ 4.000 caracteres.
+* Límite de tamaño de body: 100 KB.
+* **Rate limiting** en memoria: 20 peticiones cada 10 minutos por IP (`trust proxy` activado para funcionar tras el proxy de Cloud Run).
+* El cliente (`ChatAdvisor.tsx`) trunca el historial enviado a los últimos 30 mensajes y valida la longitud antes de enviar, para no romper conversaciones largas contra estos límites.
+
+---
 
 ### Requisitos Previos
 
