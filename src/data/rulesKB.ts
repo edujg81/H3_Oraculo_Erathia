@@ -465,6 +465,55 @@ Cuando se obtenga una carta de pergamino de hechizos se coloca junto a la ficha 
 Límite en Juego: Solo se pueden tener 2 pergaminos en juego a la vez. Si se consigue un tercero, se roban los nuevos hechizos y se descarta uno de los pergaminos (el nuevo o uno de los anteriores). Cuando se agota un pergamino o se vende, las cartas de hechizos se retiran y la carta de pergamino se coloca en el mazo de pergaminos.`
   },
   {
+    id: "scenario_modes_and_end_conditions",
+    title: "Tipos de Escenarios (Enfrentamiento, Campaña, Alianza, Cooperativo) y Fin de Escenario",
+    category: "modes",
+    content: `Cada partida de Heroes III se juega utilizando un Escenario de Los Libros de Misiones. Hay cuatro tipos de Escenarios oficiales:
+
+1. ENFRENTAMIENTO (Clash):
+• Un modo totalmente competitivo para 2-3 jugadores, donde cada facción lucha por la supremacía absoluta del mapa y sus recursos.
+
+2. CAMPAÑA:
+• Un modo para un jugador de Escenarios conectados contra una IA enemiga.
+• Para las reglas exclusivas del Modo Solitario, ver las reglas con IA y Fin de Escenario. En los Libros de Misiones de Campaña se detallan otros cambios en las reglas.
+• Transición de Campaña en Solitario: Al acabar un escenario de Campaña en Solitario, restablece el Nivel de Experiencia de tu Héroe a 1, y prepara el mazo inicial para la siguiente campaña. Este mazo consistirá en:
+  - Las cartas de Característica del mazo.
+  - El nivel 1 de tu Carta Especialidad.
+  - 5 cartas no especiales a elección de tu mazo.
+• Sáltate los pasos de Configuración del Mazo durante la Preparación para el siguiente escenario de la campaña.
+
+3. ALIANZA:
+• Un modo por equipos de 2 contra 2. Al jugar en este modo se aplican las siguientes reglas:
+  - Determinación de Alianza: Una alianza es un equipo de 2 jugadores que se determina al comienzo del juego y dura tanto como el escenario elegido.
+  - Elección de Facción: Cada jugador elige su facción al comienzo del escenario.
+  - Intercambio de Artefactos: Jugadores aliados pueden intercambiar cartas de artefacto entre ellos. Para ello, es necesario que sus héroes ocupen zonas adyacentes del mapa de aventura.
+  - Intercambio de Recursos: Los recursos se pueden intercambiar libremente sin necesidad de que los héroes de ambos jugadores ocupen zonas adyacentes. Los miembros de una alianza pueden intercambiar recursos libremente durante el turno de cualquiera de los jugadores del equipo.
+  - Bloqueo de Señalización: Los jugadores de una alianza no pueden señalizar lugares (flaggear) que ya estén señalizados por otro jugador de la misma alianza.
+  - Victoria Compartida: En el modo Alianza, los jugadores aliados comparten en su totalidad las condiciones de victoria y derrota. No existe ningún paso adicional para comparar quién lo hizo mejor en una partida ni quién contribuyó más a la victoria.
+
+4. COOPERATIVO:
+• Un modo cooperativo para 2-3 jugadores en el que todos comparten el mismo objetivo:
+  - Unidad de Alianza: En todas las partidas cooperativas, todos los jugadores son aliados y juegan juntos para superar el escenario.
+  - Combate con Neutrales: Al controlar unidades neutrales que defienden un hexágono o casilla, se utilizan las reglas de combate para el modo Solitario (consulta "Combate de IA").
+  - Regla Especial del Mercadillo (Trading Post): Cuando tu héroe visita un mercadillo, aparte de aprovechar los efectos normales de comercio de ese lugar (ver "Tabla de comercio"), también puedes usarlo para transferir recursos directamente a cualquier otro jugador aliado.
+  - Condiciones de Victoria Cooperativas: Pueden incluir derrotar un número específico de unidades neutrales o tomar el control de lugares específicos. Si algún jugador cumple la condición de victoria de un escenario (a menos que se indique lo contrario), la partida termina inmediatamente y todos los jugadores ganan el escenario.
+
+FIN DE ESCENARIO Y REGLAS DE ELIMINACIÓN:
+Todos los escenarios tienen sus Condiciones de Victoria descritas en el Libro de Escenario. Además, siempre es posible ser Eliminado de cualquier Escenario de las siguientes maneras:
+• Sin Ciudad ni Asentamiento: Jugar 3 rondas completas sin controlar ninguna ciudad o asentamiento.
+• Derrota de Héroe Principal sin Base: Perder un Combate con tu Héroe Principal cuando no te queden Ciudades o Asentamientos en el mapa, incluyendo cuando defiendas tu última Ciudad o Asentamiento.
+
+Consecuencias de la Eliminación:
+• Los jugadores eliminados son retirados inmediatamente de la partida.
+• Se descartan de forma definitiva sus Cubos de Facción y figuras de Héroe del Mapa de Juego.
+• Las cartas de su Mazo se tratan como Retiradas del juego para el resto del Escenario.
+• Si eres Eliminado, aún puedes participar de forma activa en el juego controlando las Unidades Neutrales que atacan a los jugadores sobrevivientes en la reja de batalla.
+
+Victoria por Eliminación:
+• Si eliminas todas las facciones enemigas ganas el escenario.
+• En escenarios con tres o más jugadores, recoger un Cubo de Facción de cada jugador enemigo te hace ganar inmediatamente la partida. Otras reglas específicas del Escenario también pueden modificar el resultado de la recogida de Cubos de Facción.`
+  },
+  {
     id: "ai_rules_compendium",
     title: "21. Reglamento Detallado de la Inteligencia Artificial (IA)",
     category: "modes",
@@ -573,7 +622,7 @@ Los Héroes de la IA disponen de un mazo simplificado sin recursos ni tablero de
 6. TORRE (Tower) - Libro de Misiones de "El Ascenso Alquímico":
 • Mapas Únicos: "Alchemical Duel" (Duelo Alquímico - 2P Clash por mercurio), "Arcane Secrets" (Secretos Arcanos - 2P Coop descifrando manuscritos helados).
 • Misión de Campaña I: "Nubes de Magos" (Mage Clouds): Junta riquezas de Oro para construir la Cofradía de Magos Nivel IV e invocar Titanes arcanos.
-• Misión de Campaña II: "El Secreto del Alquimista" (The Alchemist's Secret): Consigue azufre y mercurio en glaciares para reactivar Golems de Hierro inmunes a conjuros.
+• Misión de Campaña II: "El Secreto del Alquimista" (The Alchemist's Secret): Consigue azufre y mercurio en glaciares para reactivar Gólems de Hierro inmunes a conjuros.
 • Misión de Campaña III: "El Portal de las Tormentas" (The Storm Portal): Defiende el portal de transmutación durante 5 rondas contra hordas elementales enfurecidas.
 
 7. INFIERNO (Inferno) - Libro de Misiones de "Dominio del Inframundo":
@@ -740,7 +789,7 @@ Permite sacrificar cartas de Hechizo o Artefactos menores no deseados de tu mano
   - Naufragio (Shipwreck): Custodiada por 4 Wraiths. Recompensa: Ficha de moral negativa y 5 de Oro. Extra: +2 de Oro y realizar una búsqueda (X) en el mazo de Artefactos.
 • Near Map Tiles (Losetas IV-V):
   - Barco Derrelicto (Derelict Ship): Custodiada por 4 Wraiths. Recompensa: Ficha de moral negativa y 5 de Oro. Extra: +2 de Oro y búsqueda (X) de Artefactos.
-  - Pirámide (Pyramid): Custodiada por 1 Gold Golem, 1 Diamond Golem y momias. Recompensa: Búsqueda (5) de Hechizos. Extra: Permite remover hasta X cartas redundantes de tu descarte para buscar (5) en los mazos correspondientes.
+  - Pirámide (Pyramid): Custodiada por 1 Gólem de oro, 1 Gólem de diamante y momias. Recompensa: Búsqueda (5) de Hechizos. Extra: Permite remover hasta X cartas redundantes de tu descarte para buscar (5) en los mazos correspondientes.
   - Conservatorio de Grifos (Griffin Conservatory): Custodiada por 4 Griffins. Recompensa: 1 unidad de Griffins. Extra: Se reciben en rango Stacked si se derrotaron al menos 2 unidades apiladas en el combate.
   - Banco de Nagas (Naga Bank): Custodiada por 4 Nagas. Recompensa: 6 de Oro, 2 Objetos de valor. Extra: +6 de Oro y +1 de Objeto de valor por unidad apilada.
   - Almacén de Cíclopes (Cyclops Stockpile): Custodiada por 4 Cyclopes. Recompensa: 8 de Oro, 2 Objetos de valor. Extra: +2 de Oro y +1 de Objeto de valor por unidad apilada.
@@ -828,7 +877,7 @@ Permite sacrificar cartas de Hechizo o Artefactos menores no deseados de tu mano
 • Sephinroth (Magia - Warlock): Habilidad Inicial: Inteligencia (Intelligence) | Especialidad: Objetos de Valor (Valuables). Genera recursos místicos adicionales pasivos para la facción.
 
 5. TORRE (TOWER):
-• Josephine (Poder - Alchemist): Habilidad Inicial: Hechicería (Sorcery) | Especialidad: Golems (Golems). Potencia la defensa y durabilidad de los Golems aliados.
+• Josephine (Poder - Alchemist): Habilidad Inicial: Hechicería (Sorcery) | Especialidad: Gólems (Gólems). Potencia la defensa y durabilidad de los Gólems aliados.
 • Iona (Poder - Alchemist): Habilidad Inicial: Inteligencia (Intelligence) | Especialidad: Genios (Genies). Incrementa el ataque y la iniciativa de los Genios en combate.
 • Torosar (Poder - Alchemist/Wizard): Habilidad Inicial: Misticismo (Mysticism) | Especialidad: Balista (Ballista). Sus máquinas de guerra ganan iniciativa y daño por metralla explosiva.
 • Solmyr (Magia - Wizard): Habilidad Inicial: Hechicería (Sorcery) | Especialidad: Rayo en Cadena (Chain Lightning). Comienza el juego con este devastador hechizo de daño a múltiples objetivos.
@@ -1105,7 +1154,7 @@ COMPENDIO DE CRIATURAS POR FACCIONES:
 
 3. HABILIDADES MÁGICAS Y DE INMUNIDAD:
 • Inmunidad Mágica Completa (Spell Immunity): La criatura (ej. Dragón Negro) es absolutamente inmune a cualquier tipo de carta de hechizo jugada por los héroes (incluyendo hechizos dañinos enemigos, bendiciones de ataque aliadas, curaciones o resurrecciones ordinarias).
-• Resistencia Mágica (Magic Resistance): Probabilidad fija (ej. Golem o Dragón de Hada) de disipar o devolver hechizos enemigos directamente a su lanzador original.
+• Resistencia Mágica (Magic Resistance): Probabilidad fija (ej. Gólem o Dragón de Hada) de disipar o devolver hechizos enemigos directamente a su lanzador original.
 
 4. HABILIDADES DE ATAQUE EN ÁREA Y EFECTO:
 • Aliento / Ataque Lineal (Breath Attack): El ataque de la criatura (ej. Dragones) daña tanto a la unidad objetivo como a la criatura que se encuentre inmediatamente posicionada en la casilla detrás del objetivo principal en la línea de ataque.

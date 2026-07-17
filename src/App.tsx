@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { useGameTimer } from './hooks/useGameTimer';
 import { useDiceRoller } from './hooks/useDiceRoller';
+import { GamePrepMode } from './components/GamePrepMode';
 
 // Vistas cargadas de forma perezosa (code-splitting): solo se descarga el
 // bundle de la pestaña activa en lugar de las 12 vistas de golpe.
@@ -834,96 +835,7 @@ export default function App() {
             </div>
 
             {/* Bento 3: Game Setup Interactive Summary */}
-            <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-5 space-y-4 shadow-xl">
-              <h3 className="text-sm font-bold text-amber-500 uppercase tracking-widest flex items-center border-b border-slate-800/80 pb-2">
-                <svg className="w-4 h-4 mr-2 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                </svg>
-                Preparación según Modo
-              </h3>
-
-              {/* Mini Mode Selector Pills */}
-              <div className="flex flex-wrap gap-1 border-b border-slate-800/40 pb-2.5">
-                {[
-                  { id: 'enfrentamiento', label: 'Encuentro' },
-                  { id: 'cooperativo', label: 'Cooperativo' },
-                  { id: 'campaña', label: 'Campaña' },
-                  { id: 'alianza', label: 'Alianza' }
-                ].map(mode => (
-                  <button
-                    key={mode.id}
-                    onClick={() => setPrepMode(mode.id as any)}
-                    className={`text-[10px] font-mono px-2 py-1 rounded-md border cursor-pointer uppercase transition ${
-                      prepMode === mode.id 
-                        ? 'border-amber-600 bg-amber-500/10 text-amber-400' 
-                        : 'border-slate-800 text-slate-500 hover:text-slate-300'
-                    }`}
-                  >
-                    {mode.label}
-                  </button>
-                ))}
-              </div>
-
-              {/* Dynamic instruction based on selector */}
-              {prepMode === 'enfrentamiento' && (
-                <div className="space-y-2 text-xs">
-                  <div className="bg-slate-950/60 p-2.5 rounded-lg border border-slate-800/50 flex justify-between items-center text-[10px]">
-                    <span className="font-semibold text-slate-300">Modo Enfrentamiento (2-3 J.)</span>
-                    <span className="text-slate-500">Normal</span>
-                  </div>
-                  <ul className="text-[12px] text-slate-400 space-y-1.5 list-disc pl-4.5">
-                    <li>Recursos: <strong>15 Oro, 3 de Madera, 1 Gemas</strong></li>
-                    <li>Mazo inicial de 9 cartas según tu héroe principal</li>
-                    <li>Por cada 2 Exp obtenida aumentas un nivel de Héroe</li>
-                    <li>Derrotar el héroe rival para declarar la victoria</li>
-                  </ul>
-                </div>
-              )}
-
-              {prepMode === 'cooperativo' && (
-                <div className="space-y-2 text-xs">
-                  <div className="bg-slate-950/60 p-2.5 rounded-lg border border-slate-800/50 flex justify-between items-center text-[10px]">
-                    <span className="font-semibold text-slate-300">Modo Cooperativo (Aliados)</span>
-                    <span className="text-sky-400 font-mono">Vs Escenario</span>
-                  </div>
-                  <ul className="text-[12px] text-slate-400 space-y-1.5 list-disc pl-4.5">
-                    <li>Los jugadores nunca se pueden atacar entre sí</li>
-                    <li>Puedes donar recursos a tus aliados en tu turno</li>
-                    <li>Escenario "Gelea": Colocar cubo en Utopía del Dragón</li>
-                    <li>Escenario "Misión Maldita": Combate contra mazos de la IA</li>
-                  </ul>
-                </div>
-              )}
-
-              {prepMode === 'campaña' && (
-                <div className="space-y-2 text-xs">
-                  <div className="bg-slate-950/60 p-2.5 rounded-lg border border-slate-800/50 flex justify-between items-center text-[10px]">
-                    <span className="font-semibold text-slate-300">Campaña Solo (1 J.)</span>
-                    <span className="text-purple-400 font-mono">Vs Mazo IA</span>
-                  </div>
-                  <ul className="text-[12px] text-slate-400 space-y-1.5 list-disc pl-4.5">
-                    <li>Se habilitan los mazos de control de IA del enemigo</li>
-                    <li>La IA mueve e inicia combates siempre tras el usuario</li>
-                    <li>No se permite rendirse ni ofrecer sobornos a la IA</li>
-                    <li>Aislinn o Isra custodian las losetas principales</li>
-                  </ul>
-                </div>
-              )}
-
-              {prepMode === 'alianza' && (
-                <div className="space-y-2 text-xs">
-                  <div className="bg-slate-950/60 p-2.5 rounded-lg border border-slate-800/50 flex justify-between items-center text-[10px]">
-                    <span className="font-semibold text-slate-300">Modo Alianza (2 vs 2)</span>
-                    <span className="text-amber-500 font-mono">Equipos</span>
-                  </div>
-                  <ul className="text-[12px] text-slate-400 space-y-1.5 list-disc pl-4.5">
-                    <li>Envío libre de recursos a tu aliado sin costes</li>
-                    <li>Intercambio de artefactos si están adyacentes</li>
-                    <li>Ganará el equipo que capture y flaggee el Castillo rival</li>
-                  </ul>
-                </div>
-              )}
-            </div>
+            <GamePrepMode prepMode={prepMode} setPrepMode={setPrepMode} isSidebar={true} />
 
             {/* Bento 5: Opciones Avanzadas & Calculadora de Máquinas de Guerra */}
             <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-5 space-y-4 shadow-xl">

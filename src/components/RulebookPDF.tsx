@@ -255,7 +255,7 @@ export default function RulebookPDF() {
                 <span className="text-slate-200 block">• <strong>Necrópolis (Necropolis):</strong> No-muertos inmunes a la moral entera. Reclutan de las bajas en batalla.</span>
                 <span className="text-slate-200 block">• <strong>Mazmorra (Dungeon):</strong> Dragones negros, harpías y hechicería destructiva letal.</span>
                 <span className="text-slate-200 block">• <strong>Murallas (Rampart):</strong> Elfos, dragones verdes y enanos. Comunión con la naturaleza y bosques abundantes.</span>
-                <span className="text-slate-200 block">• <strong>Torre (Tower):</strong> Golems, magos y titanes. Maestranza en la manipulación y forjado de artefactos arcanos.</span>
+                <span className="text-slate-200 block">• <strong>Torre (Tower):</strong> Gólems, magos y titanes. Maestranza en la manipulación y forjado de artefactos arcanos.</span>
                 <span className="text-slate-200 block">• <strong>Infierno (Inferno):</strong> Kreegans, diablos surgidos del abismo ardiente y pactos de fuego devastadores.</span>
                 <span className="text-slate-200 block">• <strong>Bastión (Stronghold):</strong> Salvajes orcos, ogros y cíclopes. Dependencia absoluta de la fuerza bruta y coraje militar.</span>
                 <span className="text-slate-200 block">• <strong>Fortaleza (Fortress):</strong> Lagartos, hidras del caos y basiliscos en ciénagas y pantanos de impenetrable defensa.</span>
@@ -784,8 +784,8 @@ export default function RulebookPDF() {
                     <p className="text-[10px] text-slate-400">Amasa inmensos recursos de Oro y Gemas para elevar la Cofradía de Magos a Nivel IV e invocar el apoyo místico de los Titanes.</p>
                   </li>
                   <li>
-                    <strong className="text-amber-400">Misión II: "El Secreto de los Golems" (The Golem Secret)</strong>
-                    <p className="text-[10px] text-slate-400">Rastrea viales de azufre y mercurio en las laderas congeladas para insuflar vida a un regimiento de golems inmunes a conjuros mágicos.</p>
+                    <strong className="text-amber-400">Misión II: "El Secreto de los Gólems" (The Golem Secret)</strong>
+                    <p className="text-[10px] text-slate-400">Rastrea viales de azufre y mercurio en las laderas congeladas para insuflar vida a un regimiento de gólems inmunes a conjuros mágicos.</p>
                   </li>
                   <li>
                     <strong className="text-amber-400">Misión III: "El Portal Celestial" (The Cloud Portal)</strong>

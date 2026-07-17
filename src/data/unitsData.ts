@@ -65,7 +65,7 @@ export const FACTION_UNITS: FactionsUnitsData = {
   torre: [
     { level: 1, nameBasic: 'Gremlins', nameElite: 'Gremlins', tier: 'bronce' },
     { level: 2, nameBasic: 'Gárgolas', nameElite: 'Gárgolas', tier: 'bronce' },
-    { level: 3, nameBasic: 'Gólems de hierro', nameElite: 'Golems de hierro', tier: 'bronce' },
+    { level: 3, nameBasic: 'Gólems de hierro', nameElite: 'Gólems de hierro', tier: 'bronce' },
     { level: 4, nameBasic: 'Magos', nameElite: 'Magos', tier: 'plata' },
     { level: 5, nameBasic: 'Genios', nameElite: 'Genios', tier: 'plata' },
     { level: 6, nameBasic: 'Nagas', nameElite: 'Nagas', tier: 'oro' },
