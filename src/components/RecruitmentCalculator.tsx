@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Shield, Sparkles, HelpCircle, Swords, Heart, Zap, Compass, RefreshCw, Star, Info } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+
 import { UnitStats, BoardGameUnit, FactionsUnitsData, FACTION_UNITS, BASE_COSTS, UNIT_DETAILS } from '../data/unitsData';
+
 const FACTION_THEMES: {
   [factionId: string]: {
     primary: string;
@@ -354,20 +356,20 @@ export default function RecruitmentCalculator() {
     const pureNeutralsMap: { [key: string]: string } = {
       'Gólems de oro': 'Creature_Gold_Golem_5.png',
       'Gólems de diamante': 'Creature_Diamond_Golem_6.png',
-      'Paisanos': 'Creature_Peasant_1.png',
-      'Hobbits': 'Creature_Halfling_(Factory).png',
-      'Pícaros': 'Creature_Rogue_2.png',
+      'Campesinos': 'Creature_Peasant_1.png',
+      'Medianos': 'Creature_Halfling_(Factory).png',
+      'Saqueadores': 'Creature_Rogue_2.png',
       'Jabalíes': 'Creature_Boar_2.png',
       'Momias': 'Creature_Mummy_3.png',
       'Nómadas': 'Creature_Nomad_3.png',
       'Trolls': 'Creature_Troll_5.png',
-      'Encantadores': 'Creature_Enchanter_6.png',
+      'Hechiceros': 'Creature_Enchanter_6.png',
       'Tiradores': 'Creature_Sharpshooter_4.png',
       'Tiradores certeros': 'Creature_Sharpshooter_4.png',
-      'Dragón de Hada': 'Creature_Faerie_Dragon_7.png',
-      'Dragón de Óxido': 'Creature_Rust_Dragon_8.png',
-      'Dragón de Cristal': 'Creature_Crystal_Dragon_8.png',
-      'Dragón Azul': 'Creature_Azure_Dragon_8.png',
+      'Dragones hada': 'Creature_Faerie_Dragon_7.png',
+      'Dragones herrumbrosos': 'Creature_Rust_Dragon_8.png',
+      'Dragones de cristal': 'Creature_Crystal_Dragon_8.png',
+      'Dragones azures': 'Creature_Azure_Dragon_8.png',
       'Fangarm': 'Creature_Fangarm_5.png',
       'Duende': 'Creature_Leprechaun_2.png',
       'Sátiros': 'Creature_Satyr_4.png',
@@ -527,7 +529,7 @@ export default function RecruitmentCalculator() {
           <div className="space-y-1.5">
             <label className="text-[10px] uppercase font-mono tracking-wider text-slate-500 block">Tropa / Nivel de Criatura:</label>
             {availableUnits.length > 0 ? (
-              <div className="space-y-1.5 max-h-[160px] overflow-y-auto pr-1 scrollbar-thin">
+              <div className="space-y-1.5">
                 {availableUnits.map(unit => {
                   const isSelected = selectedUnit?.nameBasic === unit.nameBasic;
                   return (
