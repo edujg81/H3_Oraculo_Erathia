@@ -3,7 +3,7 @@
 // como fuente de la base de conocimiento del oráculo Sandro (ver server.ts
 // y src/data/knowledgeIndex.ts).
 
-interface UnitStats {
+export interface UnitStats {
   atk: number;
   def: number;
   hp: number;
@@ -13,18 +13,18 @@ interface UnitStats {
   customCost?: { gold: number; materials: number; valuable: number };
 }
 
-interface BoardGameUnit {
+export interface BoardGameUnit {
   level: number;
   nameBasic: string;
   nameElite?: string;
   tier: 'bronce' | 'plata' | 'oro' | 'azul';
 }
 
-interface FactionsUnitsData {
+export interface FactionsUnitsData {
   [factionId: string]: BoardGameUnit[];
 }
 
-const FACTION_UNITS: FactionsUnitsData = {
+export const FACTION_UNITS: FactionsUnitsData = {
   castillo: [
     { level: 1, nameBasic: 'Alabarderos', nameElite: 'Alabarderos', tier: 'bronce' },
     { level: 2, nameBasic: 'Tiradores', nameElite: 'Tiradores', tier: 'bronce' },
@@ -230,7 +230,7 @@ const FACTION_UNITS: FactionsUnitsData = {
   ]
 };
 
-const BASE_COSTS = {
+export const BASE_COSTS = {
   bronce: {
     basic: { gold: 0, materials: 0, valuable: 0 },
     elite: { gold: 0, materials: 0, valuable: 0 }
@@ -249,7 +249,7 @@ const BASE_COSTS = {
   }
 };
 
-const UNIT_DETAILS: {
+export const UNIT_DETAILS: {
   [nameBasic: string]: {
     basic: UnitStats;
     elite?: UnitStats;
