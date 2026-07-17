@@ -47,6 +47,6 @@ export interface RuleSection {
   id: string;
   title: string;
   content: string;
-  category: 'general' | 'setup' | 'combat' | 'faq' | 'components' | 'modes' | 'map' | 'town' | 'magic';
+  category: 'general' | 'setup' | 'combat' | 'faq' | 'components' | 'modes' | 'map' | 'town' | 'magic' | 'heroes' | 'units' | 'skills';
 }
 
