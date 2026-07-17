@@ -11,17 +11,17 @@ export const rulesKB: RuleSection[] = [
     id: "factions_detailed",
     title: "2. Las 10 Facciones de Erathia",
     category: "general",
-    content: `El juego cuenta con un total de 10 facciones asimétricas oficiales que comprenden el juego base y todas las expansiones:
-1. Castillo (Castle - Borde Azul): Fuerte presencia militar convencional basada en caballeros, campeones pesados y la moral alta del orden divino.
-2. Necrópolis (Necropolis - Borde Gris): Huestes de no-muertos comandadas por nigromantes. Poseen inmunidad absoluta a los efectos de moral positiva/negativa y pueden alistar tropas de las bajas sufridas en batalla.
-3. Mazmorra (Dungeon - Borde Morado): Hechicería oscura destructiva y monstruos temibles de las cavernas como contempladores, harpías y los indestructibles dragones negros.
-4. Murallas (Rampart - Borde Verde): Elfos, centauros y dragones dorados en comunión con las fuerzas forestales. Poseen gran agilidad y ventajas en el terreno de bosque.
-5. Torre (Tower - Borde Celeste): Magos arcanos, titanes de tormenta y golems mecánicos. Excelente manipulación de artefactos y cofradías de magos potenciadas.
-6. Infierno (Inferno - Borde Rojo): Demonios, archidiablos e imps surgidos de los fuegos del Abismo. Sus tácticas se basan en el fuego destructor y el sacrificio.
-7. Bastión (Stronghold - Borde Naranja): Salvajes orcos, ogros y cíclopes. Fuerte dependencia de la fuerza física bruta, inmunidad a ciertas magias y rabia de combate.
-8. Fortaleza (Fortress - Borde Marrón): Criaturas del pantano como hidras de caos, basiliscos y reptadores. Poseen defensas impenetrables y manipulación de efectos de terreno.
-9. Confluencia (Conflux - Borde Magenta): Seres de energía pura constituidos por elementales de fuego, tierra, agua y aire, coronados por los fénix resucitados.
-10. Bahía (Cove - Borde Turquesa): Piratas, corsarios y serpientes marinas del océano. Facilidad absoluta para la navegación costera, astilleros ágiles y contrabando de recursos.`
+    content: `El juego cuenta con un total de 10 facciones oficiales que comprenden el juego base y todas las expansiones:
+1. Castillo (Borde Azul): Fuerte presencia militar convencional basada en caballeros, campeones pesados y la moral alta del orden divino.
+2. Necrópolis (Borde Gris): Huestes de no-muertos comandadas por nigromantes. Poseen inmunidad absoluta a los efectos de moral positiva/negativa y pueden alistar tropas de las bajas sufridas en batalla.
+3. Mazmorra (Borde Morado): Hechicería oscura destructiva y monstruos temibles de las cavernas como contempladores, harpías y los indestructibles dragones negros.
+4. Murallas (Borde Verde): Elfos, centauros y dragones dorados en comunión con las fuerzas forestales. Poseen gran agilidad y ventajas en el terreno de bosque.
+5. Torre (Borde Celeste): Magos arcanos, titanes de tormenta y golems mecánicos. Excelente manipulación de artefactos y cofradías de magos potenciadas.
+6. Fortaleza (Borde Verde Oscuro): Criaturas del pantano como hidras de caos, basiliscos y reptadores. Poseen defensas impenetrables y manipulación de efectos de terreno.
+7. Inferno (Borde Rojo): Demonios, archidiablos e imps surgidos de los fuegos del Abismo. Sus tácticas se basan en el fuego destructor y el sacrificio.
+8. Bastión (Borde Naranja): Salvajes orcos, ogros y cíclopes. Fuerte dependencia de la fuerza física bruta, inmunidad a ciertas magias y rabia de combate.
+9. Conflujo (Borde Magenta): Seres de energía pura constituidos por elementales de fuego, tierra, agua y aire, coronados por los fénix resucitados.
+10. Cala (Borde Turquesa): Piratas, corsarios y serpientes marinas del océano. Facilidad absoluta para la navegación costera, astilleros ágiles y contrabando de recursos.`
   },
   {
     id: "rules_components_resources",
@@ -31,9 +31,9 @@ export const rulesKB: RuleSection[] = [
 • Losetas de Mapa: Losetas de cartón hexagonales clasificadas según el nivel numérico de los encuentros (I a VII).
 • Tablero de Batalla (4x5): Una grilla para colocar tropas aliadas y hostiles.
 • Los Tres Recursos del Imperio (Representados en el track de Ciudad):
-  - Oro (): Moneda elemental de Erathia. Financia la adquisición de tropas, la contratación de héroes y compras de hechizos.
-  - Materiales de construcción (): Agrupa la madera y el mineral de hierro indispensables para la expansión urbana.
-  - Objetos de valor (): Representa divisas místicas escasas (mercurio, azufre, gemas, cristales) necesarias para invocar criaturas de nivel legendario (Tier III/Oro y Azur) o erigir santuarios mágicos.`
+  - Oro: Moneda elemental de Erathia. Financia la adquisición de tropas, la contratación de héroes y compras de hechizos.
+  - Materiales de construcción: Agrupa la madera y el mineral de hierro indispensables para la expansión urbana.
+  - Objetos de valor: Representa divisas místicas escasas (mercurio, azufre, gemas, cristales) necesarias para invocar criaturas de nivel legendario (Tier Oro y Azur) o erigir santuarios mágicos.`
   },
   {
     id: "dice_mechanics_detailed",
@@ -41,16 +41,16 @@ export const rulesKB: RuleSection[] = [
     category: "components",
     content: `El juego incorpora tres tipos de dados de seis caras (d6) especiales reglamentarios para definir la fortuna, las tácticas y las recompensas (no existen dados de asedio específicos en el juego de mesa, todos los asaltos y catapultas se resuelven empleando el dado de combate estándar):
 
-1. DADO DE RECURSOS (Resource Die):
+1. DADO DE RECURSOS:
 Se utiliza al explorar ciertos enclaves arcanos o durante la fase de recursos para añadir fortuna. Sus caras son:
-• Cara 1: +1 Moneda de Oro ()
-• Cara 2: +2 Monedas de Oro ()
-• Cara 3: +1 Unidad de Madera o Mineral ()
-• Cara 4: +2 Unidades de Madera o Mineral ()
-• Cara 5: +1 Objeto de Valor (Sulfur/Gemas/Mercury/Cristal) ()
+• Cara 1: +1 Moneda de Oro
+• Cara 2: +2 Monedas de Oro
+• Cara 3: +1 Material de construcción
+• Cara 4: +2 Materiales de construcción
+• Cara 5: +1 Objeto de Valor
 • Cara 6: Vacío / Fallo (Sin ganancia)
 
-2. DADO DE COMBATE / ATAQUE (Combat/Attack Die):
+2. DADO DE ATAQUE:
 Se lanza obligatoriamente en cada ataque o contraataque (represalia) en la grilla táctica para modificar el daño final en heridas. Este dado cuenta únicamente con tres tipos de valores distribuidos equitativamente en sus caras:
 • Caras con valor de -1: Reduce el daño final en 1 herida (con un mínimo absoluto de 0 heridas infligidas).
 • Caras con valor de 0: Sin variación (se inflige el daño base de la unidad).
@@ -58,12 +58,12 @@ Se lanza obligatoriamente en cada ataque o contraataque (represalia) en la grill
 
 No existen caras que otorguen +2, daño directo ignorando defensa ni represalias extra. Los resultados posibles son estrictamente -1, 0 y +1.
 
-3. DADO DE TESORO (Treasure Die - Representado con <treasure>):
+3. DADO DE TESORO:
 Se utiliza principalmente como botín o recompensa (como al vencer en el Templo del Mar o rescatar a un Náufrago Superviviente). Se lanza para recibir valiosas mejoras para el Héroe o la economía:
-• Caras 1 y 2: Medio Nivel de Experiencia () - El Héroe Principal del jugador gana medio nivel de experiencia de forma inmediata.
-• Caras 3 y 4: Búsqueda de Artefacto (Search 2) () - Roba 2 cartas del mazo de Artefactos, quédate con una de ellas en la mano y descarta la otra.
-• Cara 5: Lanzar Dado de Recursos () - Lanza y resuelve de inmediato 1 Dado de Recursos.
-• Cara 6: Elegir Dado de Recursos () - Lanza 2 Dados de Recursos y elige uno de los dos resultados para resolverlo.`
+• Caras 1 y 2: Medio Nivel de Experiencia - El Héroe Principal del jugador gana medio nivel de experiencia de forma inmediata.
+• Caras 3 y 4: Búsqueda de Artefacto (Busca 2) - Roba 2 cartas del mazo de Artefactos, quédate con una de ellas en la mano y descarta la otra.
+• Cara 5: Lanzar Dado de Recursos - Lanza y resuelve de inmediato 1 Dado de Recursos.
+• Cara 6: Elegir Dado de Recursos - Lanza 2 Dados de Recursos y elige uno de los dos resultados para resolverlo.`
   },
   {
     id: "special_tokens_mechanics",
@@ -71,7 +71,7 @@ Se utiliza principalmente como botín o recompensa (como al vencer en el Templo 
     category: "components",
     content: `Para regular diversos efectos atmosféricos, tácticos y limitaciones, el juego de mesa utiliza fichas dedicadas:
 1. Fichas de Tiempo (Time Tokens): Se colocan en el tablero de ronda de escenario o pista de campaña. Actúan como una cuenta atrás fija. Además, limitan las visitas a ciertos lugares raros, indicando cuándo se reactivan o cuándo spawnearán ejércitos neutrales en el mapa de aventura.
-2. Cartas de Hechizo en Pergamino (Spell Scroll Cards): Cartas que representan pergaminos arcanos. En el juego base contienen un hechizo específico imprimado, permitiendo a cualquier héroe lanzar ese hechizo en combate (o mapa) sin poseer el Libro de Hechizos ni el nivel requerido, descartándose tras su uso. En la expansión de Confluencia, los pergaminos se cargan con dos hechizos boca abajo del mazo, actuando bajo reglas especiales asimétricas de límite, poder más débil y venta (ver sección 20 para más detalles).
+2. Cartas de Hechizo en Pergamino (Spell Scroll Cards): Cartas que representan pergaminos arcanos. En el juego base contienen un hechizo específico imprimado, permitiendo a cualquier héroe lanzar ese hechizo en combate (o mapa) sin poseer el Libro de Hechizos ni el nivel requerido, descartándose tras su uso. En la expansión de Conflujo, los pergaminos se cargan con dos hechizos boca abajo del mazo, actuando bajo reglas especiales asimétricas de límite, poder más débil y venta (ver sección 20 para más detalles).
 3. Fichas de Arenas Movedizas (Quicksand Spell Tokens): Fichas de obstáculo provisional que se sitúan sobre la reja de combatetactico (4x5) tras conjurar el hechizo homónimo de tierra. Cualquier unidad terrestre que camine hacia esta casilla debe cesar su movimiento de forma fulminante en ella, perdiendo su ataque en ese turno.
 4. Fichas de Ataque (Attack Tokens): Indicadores circulares temporales que se colocan sobre la carta de regimiento para reflejar bufos mágicos de bendición (+1 al ataque) o debuffs (-1 al ataque), alterando directamente los dados de combate rojos tirados.
 5. Fichas de Corrosión (Corrosion Tokens): Representan la destrucción ácida de protecciones o el hechizo "Corrosión". Reducen la estadística de defensa física de la criatura objetivo en -1 o -2 puntos de forma persistente hasta que finalice el combate táctico en curso o la unidad perezca.
@@ -112,9 +112,9 @@ El artefacto más poderoso. Está enterrado en el mapa de aventura. Se desvela v
   },
   {
     id: "artifacts_rules_faq",
-    title: "8. Reglamento Detallado de Artefactos y FAQs",
-    category: "faq",
-    content: `Esta sección detalla de forma exhaustiva las reglas oficiales del juego de mesa y aclaraciones de FAQs para el uso de las cartas de Artefacto (Menores, Mayores, Reliquias, Grial y Pergaminos) en Heroes of Might and Magic III: El Juego de Mesa.
+    title: "8. Reglamento Detallado de Artefactos",
+    category: "components",
+    content: `Esta sección detalla de forma exhaustiva las reglas oficiales del juego de mesa para el uso de las cartas de Artefacto (Menores, Mayores, Reliquias, Grial y Pergaminos) en Heroes of Might and Magic III: El Juego de Mesa.
 
 1. NATURALEZA Y FLUJO DE LAS CARTAS DE ARTEFACTO EN EL MAZO:
 • Integración total en el mazo: Los artefactos son cartas que forman parte del mazo de Poder y Magia de tu Héroe (Might & Magic Deck) exactamente igual que los hechizos, habilidades o características. No son "equipo" físico externo ni se bajan de forma permanente a la mesa.
@@ -129,29 +129,51 @@ El artefacto más poderoso. Está enterrado en el mapa de aventura. Se desvela v
 3. TRANSFERENCIAS, COMERCIO Y ALIANZA:
 • Transferencia entre Héroes: Un Héroe Secundario adyacente en el mapa de aventura al Héroe Principal puede transferirle cartas de artefacto de su mano de forma totalmente gratuita (sin coste de PM ni acción).
 • Comercio y Venta: Visitar un Puesto de Comercio o erigir un Mercado permite vender cartas de artefacto desde tu mano activa o tu pila de descartes para canjearlas por Oro u otros recursos.
-• Altar de Confluencia: Permite sacrificar artefactos menores que tengas en tu mano activa para transmutarlos en Puntos de Experiencia (Exp) directa o valiosos Objetos de Valor ().
-
---- PREGUNTAS FRECUENTES (FAQs) OFICIALES SOBRE ARTEFACTOS ---
-
-P: ¿Puedo equipar un artefacto en una cuadrícula o ranura de personaje (como casco, torso o arma)?
-R: No. En el juego de mesa no existe el concepto de "equipar" artefactos en ranuras ni de colocarlos en la mesa boca arriba para que tengan efectos pasivos automáticos continuos en cada ronda (salvo que sea una carta expresamente calificada como "Permanente"). Son cartas que se juegan desde la mano, se resuelven y se descartan a tu pila de descartes.
-
-P: ¿Qué ocurre con los Pergaminos de Hechizo (Scrolls)?
-R: En el juego base, se tratan como cartas de un solo uso que se descartan permanentemente tras lanzarse. Sin embargo, en la expansión de Confluencia se introducen 20 cartas de pergamino de hechizos con un mazo propio (y 10 barajadas en el mazo de artefactos). Al obtenerse uno, se le colocan 2 hechizos boca abajo encima. El pergamino se puede jugar (usando el poder más débil de sus hechizos, sin contar para el límite de hechizos, ni pudiendo usarse para potenciar otros), o venderse en mercadillos por 2 Oros por cada hechizo restante en él. Se limita a un máximo de 2 pergaminos activos por héroe a la vez (si se obtiene un tercero, se descarta uno de los pergaminos activos). Al agotarse o venderse, las cartas de hechizo se remueven y la carta de pergamino vuelve al mazo de pergaminos.
-
-P: ¿Cómo funciona el bonus inicial de artefacto de la preparación (por dificultad)?
-R: Si la dificultad seleccionada te otorga un artefacto inicial, debes buscarlo en el mazo de artefactos correspondiente y colocarlo directamente en tu mano inicial, no en tu mazo de robo ni en la pila de descarte.
-
-P: ¿Los artefactos se pierden si mi Héroe es derrotado en combate?
-R: No. Tus cartas de artefacto que se encuentren en tu mano, mazo de robo o pila de descartes permanecen en tu poder. El Héroe derrotado pierde todas las tropas asignadas, su Oro acumulado y reaparece en la ciudad capital con su mazo de Poder y Magia intacto.`
+• Altar de Conflujo: Permite sacrificar artefactos menores que tengas en tu mano activa para transmutarlos en Puntos de Experiencia (Exp) directa o valiosos Objetos de Valor.`
   },
   {
     id: "setup_detailed_scenarios",
     title: "9. Preparación de las Partidas y Selección de Dificultad",
     category: "setup",
-    content: `A continuación se detallan las reglas oficiales para preparar una partida y las bonificaciones que los jugadores reciben al seleccionar el nivel de dificultad en el paso 16 de la preparación:
+    content: `A continuación se detallan los pasos oficiales de preparación de la partida, seguidos por la selección del nivel de dificultad y el compendio de escenarios:
 
-I. BONOS DE INICIO SEGÚN LA DIFICULTAD ELEGIDA:
+I. PASOS PARA LA PREPARACIÓN DE UNA PARTIDA (PASO A PASO):
+1. **Selección del Escenario**: Selecciona un escenario de los Libros de Misiones. Para la primera partida se recomienda encarecidamente el escenario introductorio "Un Mundo Feliz" del Libro de Misiones básico.
+2. **Selección de Facción**: Cada jugador escoge una Facción entre las disponibles.
+3. **Selección del Héroe**: Escoge un Héroe de tu Facción como Héroe Principal. Cada Facción tiene al menos una Carta de Héroe de doble cara, con cada lado representando a un héroe diferente con sus propias estadísticas, especialidades y habilidades.
+4. **Coger los Componentes de Facción**: Coge los siguientes componentes pertenecientes a tu Facción elegida:
+   • 1 x Carta de Héroe de doble cara (en el lado del Héroe elegido).
+   • 2 x modelo del Héroe (miniaturas).
+   • 7 x Losetas de los edificios de la ciudad.
+   • 1 x Tablero de Ciudad.
+   • 7 x Cartas de Unidades a doble cara.
+   • 3 x Cartas de Especialidad específicas del Héroe elegido.
+   • 1 x Carta de la Habilidad específica del Héroe elegido.
+   • 20 x Cubos de la Facción elegida de tu color.
+   • 1 x Ficha de Construcción.
+   • 1 x Ficha de Población (o Reclutamiento).
+   • 1 x Ficha de Libro de Hechizos.
+   • 3 x Fichas de Movimiento.
+5. **Establecer el Nivel Inicial**: Coloca uno de tus Cubos de Facción en la primera casilla del Registro de Niveles que se encuentra en la Carta del Héroe (representado por un "I"). Ahora tu Héroe es de Nivel 1.
+6. **Colocación del Mapa**: Coloca las Losetas del mapa y otros componentes específicos del escenario como se muestra en el Libro de Misiones.
+7. **Configuración de Ciudad**: Coloca el Tablero de Ciudad de tu Facción elegida delante de ti y coloca las Losetas de los Edificios de la ciudad a su lado. Comprueba qué edificios están ya construidos en el Escenario que vas a jugar y coloca sus respectivas Losetas en el Tablero de Ciudad. Resuelve cualquier efecto inmediato de los Edificios ya construidos al final de la configuración.
+8. **Ingresos y Fichas Iniciales**: Establece tus ingresos iniciales según indique el Escenario colocando Cubos de tu Facción en los niveles de ingresos de tu Tablero de Ciudad. Coloca las Fichas de Población, Construcción y Libro de Hechizos en sus respectivas ranuras en el Tablero de Ciudad.
+9. **Reserva de Recursos**: Agrupa las Fichas de Recursos en diferentes montones cerca del alcance de todos. Toma los Recursos iniciales indicados por el Escenario y colócalos junto a tu Tablero de Ciudad. Ésta es tu reserva de recursos.
+10. **Organización de Fichas**: Separa las fichas restantes en sus respectivos montones.
+11. **Crear el Mazo de Características**: Ordena las Cartas de Características en cuatro montones: Ataque, Defensa, Poder y Conocimiento. Consulta las características de tu Carta de Héroe y coge el número correspondiente de cada montón. Éste es tu Mazo Inicial.
+12. **Añadir las Flechas Mágicas**: Si tu Héroe Principal es un Héroe de Poder (Might), añade 1 copia del Hechizo Flecha Mágica a tu Mazo, y si es un Héroe de Magia (Magic), añade 2 copias.
+13. **Añadir Especialidad y Habilidad**: Añade la Habilidad de tu Héroe y la Carta de Nivel I de su Especialidad a tu Mazo.
+14. **Barajar Mazo Inicial**: Baraja tu Mazo Inicial y colócalo boca abajo junto a tu Carta de Héroe. Este mazo es el Mazo de Poder y Magia del Héroe, al que nos referiremos sencillamente como "tu mazo".
+15. **Configurar los Mazos de Compendio**: Ordena las Cartas de Habilidad, Artefacto y Hechizo en 3 mazos boca abajo (incluidos los Hechizos de Flecha Mágica no utilizados) y barájalos. De cada uno de estos mazos coge la Carta superior y colócala boca arriba junto a su mazo, creando 3 Pilas de Descarte.
+16. **Elegir la Dificultad**: Escoge la Dificultad (ver Tabla de Dificultad en sección 10) del Escenario y coge sus respectivos Bonus de Inicio.
+17. **Preparación de Neutrales**: Ordena las Unidades Neutrales en 4 mazos según su nivel (Bronce, Plata, Oro, Azur). Baraja los mazos y deja espacio para sus Pilas de Descarte.
+18. **Preparación de Batalla**: Coloca el tablero de combate al alcance de los jugadores. Comprueba en el Escenario qué Unidades iniciales recibes y colócalas en un montón cerca de tu Tablero de Ciudad, separadas del resto de Unidades de tu Facción.
+19. **Marcador de Rondas**: Coloca el Marcador de Rondas junto al mapa de juego y coloca un Cubo Negro en el espacio "1".
+20. **Mazo de Proclamaciones y Eventos**: Baraja las Cartas de Proclamación de los Astrólogos y colócalas boca abajo junto al Marcador de Rondas. Si hay más de 1 jugador, baraja también las Cartas de Eventos y colócalas boca abajo junto al Marcador de Rondas. En cada ronda par (Astrológica) se leerá una carta de Proclamación de los Astrólogos y en cada ronda impar (de Recursos, exceptuando la primera) se resolverá una carta de Eventos.
+21. **Posicionamiento del Héroe**: Orienta tu loseta inicial a tu gusto. Elige qué modelo de Héroe representa a tu Héroe Principal en este juego y coloca el modelo (miniatura) elegido en el Campo central de tu Loseta Inicial.
+22. **Jugador Inicial**: Elige un jugador inicial. El jugador inicial nunca cambia durante el juego.
+
+II. BONOS DE INICIO SEGÚN LA DIFICULTAD ELEGIDA:
 • Fácil (Easy): El jugador lanza 2 dados de Recursos y recibe los recursos de ambos – O – Busca (2) en el mazo de Artefactos, dos veces (elige uno y descarta el otro en cada búsqueda).
 • Normal (Normal): El jugador lanza 2 dados de Recursos y recibe los recursos de uno de ellos – O – Busca (2) en el mazo de Artefactos (toma uno y descarta el restante).
 • Difícil (Hard): El jugador lanza 1 dado de Recursos y recibe los recursos indicados en él – O – Revela cartas de la parte superior del mazo de Artefactos una a una hasta encontrar 1 Artefacto Menor (Minor) y lo añade a su mano (descartando el resto de cartas reveladas).
@@ -159,7 +181,7 @@ I. BONOS DE INICIO SEGÚN LA DIFICULTAD ELEGIDA:
 
 Nota sobre Campañas: Las misiones de campaña tienen bonus únicos y específicos descritos en su propio libro que sustituyen por completo al bonus inicial de dificultad ordinario.
 
-II. COMPENDIO DE ESCENARIOS OFICIALES Y EXPANSIONES:
+III. COMPENDIO DE ESCENARIOS OFICIALES Y EXPANSIONES:
 1. "El Fin del Mundo" (The End of the World - PvP): Escenario competitivo de 7 rondas para 2 héroes. El objetivo principal es explorar y reclamar la loseta central VII para acumular el mayor índice de recursos antes de que expire el tiempo cósmico.
 2. "Los Campeones de Gelea" (Champions of Gelea - Coop): Los ejércitos unen sus fuerzas tácticas para depositar un marcador de control del reino en la Utopía de los Dragones central, completando de esta forma la misión antes de la Ronda 11.
 3. "Utopía Esmeralda" (Emerald Utopia - PvP): Escenario temático enfocado en la caza de grandes sierpes. El primer jugador que asalte de manera exitosa la Utopía del Dragón y derrote sus custodios arcanos es coronado monarca.
@@ -168,7 +190,7 @@ II. COMPENDIO DE ESCENARIOS OFICIALES Y EXPANSIONES:
 6. "War of the Mighty" (La Guerra de los Poderosos - Escaramuza PvP 2v2): Choque por parejas en el que los integrantes pueden transferirse Oro y Materiales de construcción gratis. El objetivo es sitiar y destruir el castillo central de cualquier miembro del equipo contrario.
 7. "Guardián de la Mazmorra" (Dungeon Guardian - Coop): Duración fija de 12 rondas. Los jugadores se sumergen en las losetas subterráneas con el fin de localizar, desafiar y abatir a la Sierpe de Azur que protege el trono subterraneo.
 8. "Ascensión" (Ascending Ascent - PvP / Solo): Mapa en bento-grid de montaña. Los jugadores avanzan en vertical enfrentando ejércitos neutrales en cada meseta autónoma. El jugador que logre erigir la Cofradía de Magos al máximo nivel absoluto y lance el Portal Dimensional se corona vencedor de forma espiritual.
-9. "Islas Esmeralda" (Emerald Isles - PvP Marítimo): Introduce astilleros y naves marítimas. Exige poseer el mazo de Bahía o Confluencia. Vence el jugador que logre conectar por puentes y boyas marítimas tres archipiélagos aislados.
+9. "Islas Esmeralda" (Emerald Isles - PvP Marítimo): Introduce astilleros y naves marítimas. Exige poseer el mazo de Cala o Conflujo. Vence el jugador que logre conectar por puentes y boyas marítimas tres archipiélagos aislados.
 10. "Realm of Chaos" (El Reino del Caos - Mixto): Los asaltos de plagas se triplican. Un mapa laberíntico asimétrico donde abundan losetas de magma de Inferno. Cada héroe debe vencer en combate a un "Señor del Abismo" para reclamar las tejas centrales.
 11. "Inocencia Perdida" (Lost Innocence - Campaña Solitario): Escenario asimétrico donde el héroe principal inicia con moral de valor negativa e infectado de corrupción ácida. Debe limpiar templos para restaurar su moral antes de enfrentar el asedio del Castillo de la IA.
 12. "Crimson and Clover" (Trébol Carmesí - Escaramuza): Un clásico de 4 jugadores PvP libre donde las losetas fluviales dividen los territorios. La posesión de Establos y la correcta gestión de los PM en los caminos determinan la supremacía mercantil.`
@@ -219,15 +241,15 @@ El nivel romano impreso en el reverso de la loseta dictamina el número y tipo d
 
 II. TABLA OFICIAL DE COMERCIO (Intercambio en Mercadillos y Puestos de Comercio)
 Las transacciones de recursos siguen tasas de conversión fijas y asimétricas dependiendo de lo que vendas y compres de acuerdo con el manual oficial:
-• Vendo Oro ():
-  - Para comprar un Objeto de Valor (): Pagas 6 de Oro para recibir 1 Objeto de Valor (Relación 6:1).
-  - Para comprar un Material de Construcción (): Pagas 2 de Oro para recibir 1 Material (Relación 2:1).
-• Vendo Objeto de Valor ():
-  - Para comprar Oro (): Vendes 1 Objeto de Valor para recibir 3 de Oro (Relación 1:3).
-  - Para comprar Materiales (): Vendes 1 Objeto de Valor para recibir 2 Materiales de Construcción (Relación 1:2).
-• Vendo Material de Construcción ():
-  - Para comprar Oro (): Vendes 1 Material para recibir 1 de Oro (Relación 1:1).
-  - Para comprar un Objeto de Valor (): Pagas 3 Materiales por 1 Objeto de Valor (Relación 3:1).
+• Vendo Oro:
+  - Para comprar un Objeto de Valor: Pagas 6 de Oro para recibir 1 Objeto de Valor (Relación 6:1).
+  - Para comprar un Material de Construcción: Pagas 2 de Oro para recibir 1 Material (Relación 2:1).
+• Vendo Objeto de Valor:
+  - Para comprar Oro: Vendes 1 Objeto de Valor para recibir 3 de Oro (Relación 1:3).
+  - Para comprar Materiales: Vendes 1 Objeto de Valor para recibir 2 Materiales de Construcción (Relación 1:2).
+• Vendo Material de Construcción:
+  - Para comprar Oro: Vendes 1 Material para recibir 1 de Oro (Relación 1:1).
+  - Para comprar un Objeto de Valor: Pagas 3 Materiales por 1 Objeto de Valor (Relación 3:1).
 
 • Reciclaje de Cartas redundantes: Visitar un Mercadillo te permite descartar permanentemente un máximo de 1 carta redundante de tu mano activa (exceptuando Especialidades iniciales, Características iniciales, Habilidades iniciales y Flechas Mágicas iniciales) para canjearla por 1 de Oro.`
   },
@@ -393,7 +415,7 @@ Cuando asaltas una ciudad amurallada protegida por fortificación erigida, se ac
 2. Balista (Ballista): Carta permanente de artillería. Se activa de forma automática al inicio de cada ronda de combate para infligir exactamente 1 herida de daño físico a la unidad enemiga que tenga la menor iniciativa de todas en el grid táctico.
 3. Carro de Munición (Ammo Cart): Carta permanente de soporte. Al inicio de cada ronda de combate, permite elegir una unidad aliada de ataque a distancia (Rangers). Dicha unidad ignora por completo tanto el penalizador por distancia (Range Penalty) como el penalizador de cuerpo a cuerpo (Melee Penalty) durante el resto de la ronda.
 4. Tienda de Primeros Auxilios (First Aid Tent): Carta permanente médica. Al final de cada ronda de combate, remueve/sana de forma automática 1 herida de la unidad aliada que tenga la menor iniciativa y que esté dañada.
-5. Cañón (Cannon): Carta permanente exclusiva de la facción de Bahía (Cove). Se activa de forma automática al inicio de cada ronda de combate. Eliges una unidad o estructura enemiga y lanzas el dado de combate estándar: -1 inflige 1 herida / daño, 0 inflige 2 heridas / daños y +1 inflige 3 heridas / daños.`
+5. Cañón (Cannon): Carta permanente exclusiva de la facción de Cala (Cove). Se activa de forma automática al inicio de cada ronda de combate. Eliges una unidad o estructura enemiga y lanzas el dado de combate estándar: -1 inflige 1 herida / daño, 0 inflige 2 heridas / daños y +1 inflige 3 heridas / daños.`
   },
   {
     id: "schools_of_magic_treatise",
@@ -437,11 +459,11 @@ Cuando asaltas una ciudad amurallada protegida por fortificación erigida, se ac
     id: "conflux_elemental_rules",
     title: "20. Losetas Elementales, Invocaciones y Daño Elemental",
     category: "magic",
-    content: `La expansión Confluencia (Conflux) introduce dimensiones místicas de energía pura y leyes físicas adaptativas para la batalla:
+    content: `La expansión Conflujo (Conflux) introduce dimensiones místicas de energía pura y leyes físicas adaptativas para la batalla:
 
 1. Losetas de Mapa Elementales (Elemental Planes Tiles):
 Losetas exclusivas de reverso cian que representan fragmentos colisionados en Erathia de los Planos Elementales:
-• Plano Astral / Fuego (Fire Rift): Cruzar o culminar el movimiento táctico en esta loseta confiere +2 PM gratuitos si tu facción activa es Confluencia o Inferno. Duplica además el daño infligido de cualquier hechizo elemental de fuego lanzado desde ella.
+• Plano Astral / Fuego (Fire Rift): Cruzar o culminar el movimiento táctico en esta loseta confiere +2 PM gratuitos si tu facción activa es Conflujo o Inferno. Duplica además el daño infligido de cualquier hechizo elemental de fuego lanzado desde ella.
 • Plano de Agua (Water Rift): Caminar por él no genera penalización de fango o nieve, y permite el embarque automático sin penalización de fin de turno.
 • Plano de Tierra y Aire (Earth & Air Rift): Otorga +1 a la Defensa Física o +1 a la Iniciativa de los regimientos de campaña asentados respectivamente.
 
@@ -454,7 +476,7 @@ Mediante la magia correspondiente (Invocación Elemental), un héroe puede conju
 • El daño de descargas arcanas puras (como Rayo de Hielo o Relámpago) ignora de forma absoluta el valor numérico de Defensa física de la criatura defensora, aplicando de forma directa las heridas al marcador de salud.
 • Inmunidades Innatas: No es reducible excepto mediante inmunidades absolutas especificadas en las cartas de Criatura Élite (por ejemplo, los Dragones Negros son completamente inmunes a toda la magia, los Fénix son inmunes al daño de Fuego, y los Elementales de Tierra ignoran el daño de Implosión o Lentitud).
 
-4. Cartas de Pergamino de Hechizos (Spell Scroll Cards - Expansión Confluencia):
+4. Cartas de Pergamino de Hechizos (Spell Scroll Cards - Expansión Conflujo):
 La expansión de Conflujo trae un conjunto de 20 cartas de pergamino de hechizos. Durante la preparación del juego se barajan 10 de estas cartas en el mazo de artefactos y el resto se deja a un lado como mazo de pergaminos (algunos eventos o lugares pueden hacer uso de ellos más adelante).
 Cuando se obtenga una carta de pergamino de hechizos se coloca junto a la ficha del héroe, luego se roban dos cartas del mazo de hechizos y se colocan boca abajo sobre la carta de pergamino. En adelante se tratarán como una sola carta que se podrá usar como cualquier otro hechizo con las siguientes excepciones:
 • Un hechizo jugado desde un pergamino no cuenta para el límite de hechizos.
@@ -528,7 +550,7 @@ Victoria por Eliminación:
 • Regla de Cercanía y Empates: En cualquier caso, si hay múltiples objetivos con la misma prioridad de Tier, la IA dirige su ataque contra el objetivo físico que se encuentre más cercano. Si hay un empate absoluto de distancia, el jugador decide cuál de sus unidades es golpeada. De forma nativa, las unidades de la IA nunca toman la acción de Defenderse en mesa.
 
 2. ALGORITMOS DE ASEDIO PARA LA IA (AI SIEGE):
-• Al asediar una fortaleza enemiga del jugador, la IA coloca la Puerta principal frente a su unidad dotada con el mayor valor de iniciativa. Las tropas terrestres de la IA nunca dirigen sus ataques físicos a los muros o puertas de forma voluntaria; prefieren esperar en defensa o volar sobre ellos. Las unidades voladoras saltan los muros directo a su prioridad.
+• Al asediar una ciudad enemiga del jugador, la IA coloca la Puerta principal frente a su unidad dotada con el mayor valor de iniciativa. Las tropas terrestres de la IA nunca dirigen sus ataques físicos a los muros o puertas de forma voluntaria; prefieren esperar en defensa o volar sobre ellos. Las unidades voladoras saltan los muros directo a su prioridad.
 • Para el cálculo de ataques del Torreón de Arqueros automático: la IA lo trata como un defensor de rango plata. Al atacar con el Torreón de Arqueros, la IA escoge de forma imperativa como blanco al atacante del jugador que tenga la menor cantidad de puntos de vida restantes en ese instante para asegurar una baja militar.
 
 3. PRIORIDADES DE MOVIMIENTO EN EL MAPA (AI HERO TURNS):
@@ -573,7 +595,7 @@ Los Héroes de la IA disponen de un mazo simplificado sin recursos ni tablero de
 6. Misión VI: "Un Plan Diabólico" (A Devilish Plan - Campaña de Inferno)
 • Objetivo: Un relato asimétrico del bando opuesto. El jugador asume tropas de Inferno y debe capturar de forma forzosa capitales de Castillo en el norte del mapa en menos de 9 rondas, sembrando portales de fuego de Azufre.
 
-7. Misión VII: "Golpea el Hierro mientras esté Frío" (Strike while the Iron is Cold - Campaña Confluencia)
+7. Misión VII: "Golpea el Hierro mientras esté Frío" (Strike while the Iron is Cold - Campaña Conflujo)
 • Objetivo: Invasión de elementales. El héroe debe canalizar e interceptar losetas elementales controladas por criaturas míticas nativas del Plano del Caos antes de que consigan reclutar elementales de oro.
 
 8. Misión VIII: "Keepers of Sorrows" (Custodios de las Penas - Campaña Necrópolis)
@@ -717,13 +739,13 @@ Casilla que ayuda en la navegación. Pasar por una Boya restablece instantáneam
 Obstáculo peligroso. Entrar en un Remolino cuesta un fin de movimiento inmediato. Además, debes lanzar un dado de combate: si se obtiene "-1", pierdes tu tropa de nivel más bajo en el naufragio. Conecta con otro Remolino del mapa como portal de teletransporte rápido.
 
 5. RESTOS DE NAUFRAGIO (Shipwreck Lots):
-Se asimilan a las criptas terrestres. Contienen tesoros guardados por fantasmas y piratas no-muertos. Ofrecen abundantes Objetos de Valor () y Dados de Tesoro.`
+Se asimilan a las criptas terrestres. Contienen tesoros guardados por fantasmas y piratas no-muertos. Ofrecen abundantes Objetos de Valor y Dados de Tesoro.`
   },
   {
     id: "elemental_locations_conflux",
     title: "27. Lugares Elementales y Expansión Conflux",
     category: "map",
-    content: `La expansión de Confluencia (Conflux) añade lugares de energía elemental pura para el mapa de aventura de Erathia:
+    content: `La expansión de Conflujo (Conflux) añade lugares de energía elemental pura para el mapa de aventura de Erathia:
 
 1. PORTAL DE LOS ELEMENTOS (Elemental Portal):
 Permite reclutar de forma directa elementales de Aire, Agua, Fuego o Tierra pagando Oro o el recurso elemental homónimo, sin necesidad de regresar a tu capital.
@@ -732,7 +754,7 @@ Permite reclutar de forma directa elementales de Aire, Agua, Fuego o Tierra paga
 Santuarios de dimensión paralela. El Héroe puede interactuar gastando 1 Acción para enfrentar una prueba de Hechicería (Poder) de nivel III. El éxito concede inmunidades elementales pasivas para su ejército o un pergamino místico.
 
 3. ALTAR DE LA CONFLUENCIA (Conflux Altar):
-Permite sacrificar cartas de Hechizo o Artefactos menores no deseados de tu mano para obtener Puntos de Experiencia (Exp) directa para tu Héroe u Objetos de Valor ().`
+Permite sacrificar cartas de Hechizo o Artefactos menores no deseados de tu mano para obtener Puntos de Experiencia (Exp) directa para tu Héroe u Objetos de Valor.`
   },
   {
     id: "battlefield_expansion",
@@ -775,7 +797,7 @@ Permite sacrificar cartas de Hechizo o Artefactos menores no deseados de tu mano
 • Modificadores de Estadística: Cada ficha de apilamiento volteada sobre un defensor altera sus capacidades:
   - Ficha de Espadas: +1 al Ataque.
   - Ficha de Escudo: +1 a la Defensa.
-  - Ficha de Corazón: +1 a los Puntos de Vida (HP).
+  - Ficha de Corazón: +1 a los Puntos de Salud (HP).
   - Ficha de Botas: +2 a la Iniciativa de combate.
 • Regla de Unidad Apilada (Stacked Unit): Una criatura dotada con un Stack Token emula a un regimiento Élite. Al recibir un volumen de daño acumulado igual o superior a su vitalidad máxima, en lugar de ser eliminada de la reja, se descarta una ficha de apilamiento asignada y se absorbe el daño restante, deduciéndolo de su nueva vida. Las criaturas sin fichas de apilamiento mueren normalmente.
 
@@ -806,7 +828,7 @@ Permite sacrificar cartas de Hechizo o Artefactos menores no deseados de tu mano
 • Arenas Movedizas (Quicksand Token): Tras conjurar el hechizo de tierra, se sitúan de 2 a 6 fichas de arena movediza boca abajo en el tablero (la mitad vacías, la mitad con el icono de fango). Al entrar un regimiento en la casilla se voltea la ficha: si contiene el icono de fango, el movimiento y activación de la unidad cesan de forma fulminante en esa casilla en esta ronda. Dos arenas de distintos colores de jugador pueden ocupar la misma casilla.
 • Mina Terrestre (Land Mine Token): Se sitúan de 2 a 6 fichas boca abajo en el tablero (la mitad vacías, la mitad con icono de explosión de 2 de daño). Al pisarse, detiene el movimiento de la unidad. Si muestra el icono de explosión, inflige 2 de daño directo por fuego a la unidad. Si esta sobrevive, continúa su activación.
 • Campo de Fuerza (Force Field Token): Crea un obstáculo rectangular indestructible que cubre 1 espacio en tableros normales o 2 espacios en Campo de Batalla. Solo las unidades aéreas (Flying) pueden cruzar o volar sobre él; las unidades terrestres sufren bloqueo físico completo.
-• Muro de Fuego (Fire Wall Token): Creado por el hechizo homónimo de fuego o por las cartas de Especialidad I y VI del héroe Luna (Confluencia). Inflige daño de fuego puro de área al inicio de la activación de cualquier regimiento enemigo que comience o transite por las casillas de fuego rúnico.
+• Muro de Fuego (Fire Wall Token): Creado por el hechizo homónimo de fuego o por las cartas de Especialidad I y VI del héroe Luna (Conflujo). Inflige daño de fuego puro de área al inicio de la activación de cualquier regimiento enemigo que comience o transite por las casillas de fuego rúnico.
 
 2. MECÁNICAS DE INVOCACIÓN (SUMMONING):
 • Invocación Elemental (Summon Elementals): Los conjuros elementales añaden elementales de aire, tierra, agua o fuego en casillas libres del combate. Estas unidades aliadas operan de forma temporal bajo tu control. Si su iniciativa es inferior o igual a la de la unidad activa del turno actual, se activan en esta misma ronda; en caso contrario, se consideran ya activadas. Nunca se añaden de forma permanente a tu mazo de unidades al concluir la contienda; se disipan por completo.
@@ -824,7 +846,7 @@ Permite sacrificar cartas de Hechizo o Artefactos menores no deseados de tu mano
     content: `De acuerdo con la base de datos comunitaria (https://es.homm3bg.wiki/), el juego se vertebra sobre un compendio robusto de cartas y elementos físicos diseñados para emular la jugabilidad del clásico del 99:
 
 1. CARTAS DEL COMPENDIO Y SU FUNCIONAMIENTO:
-• Cartas de Unidad / Tropas: Cada facción cuenta con sus unidades terrestres de rango Bronce, Plata y Oro. Tienen doble cara (Rango Básico y Rango Élite). Indican: Vida (Puntos de Herida), Iniciativa de Combate, Ataque Físico, Defensa Militar, Rango de Movimiento/Alcance y Habilidades Especiales pasivas/activas.
+• Cartas de Unidad / Tropas: Cada facción cuenta con sus unidades terrestres de rango Bronce, Plata y Oro. Tienen doble cara (Rango Básico y Rango Élite). Indican: Salud (Puntos de Herida), Iniciativa de Combate, Ataque Físico, Defensa Militar, Rango de Movimiento/Alcance y Habilidades Especiales pasivas/activas.
 • Cartas de Hechizo (Spell Cards): Se adquieren principalmente en la Cofradía de Magos o en Santuarios. Requieren Conocimiento para estar en la mano y Maná para lanzarse. Se dividen en Hechizos de Combate (bufos, debufs, daño directo) y Hechizos de Mapa de Aventura (ej. Volar, Dimension Door).
 • Cartas de Habilidad (Ability Cards): Representan la progresión del Héroe. Al subir de nivel a un rango Plata (II, III, V, VII), se draftea de un mazo común. Poseen un efecto Básico (gratis) y un efecto Experto (requiere gastar un contador de Experto para activarse en el turno).
 • Cartas de Especialidad (Specialty Cards): Únicas e intransferibles de cada Héroe. Se obtienen automáticamente al alcanzar el rango Dorado (niveles IV y VI). Potencian de forma asimétrica la estrategia natal o el rasgo icónico del Héroe.
@@ -916,7 +938,7 @@ Permite sacrificar cartas de Hechizo o Artefactos menores no deseados de tu mano
 • Grindan (Magia - Elementalist): Habilidad Inicial: Sabiduría (Wisdom) | Especialidad: Ralentizar (Slow). Especialista en inmovilizar y mermar el movimiento enemigo en la reja táctica.
 
 10. BAHÍA (COVE):
-• Jeremy (Poder - Captain): Habilidad Inicial: Ataque (Offense) | Especialidad: Cañón (Cannon). Empieza la partida con un Cañón pesado de Bahía que inflige daño masivo por ronda.
+• Jeremy (Poder - Captain): Habilidad Inicial: Ataque (Offense) | Especialidad: Cañón (Cannon). Empieza la partida con un Cañón pesado de Cala que inflige daño masivo por ronda.
 • Cassiopeia (Poder - Captain): Habilidad Inicial: Tácticas (Tactics) | Especialidad: Oceanidades (Oceanids). Potencia las estadísticas de combate de las Oceanidades en la línea frontal.
 • Miriam (Poder - Captain): Habilidad Inicial: Logística (Logistics) | Especialidad: Exploración (Scouting). Incrementa los Puntos de Movimiento y revela losetas de mapa adyacentes de forma gratuita.
 • Casmetra (Magia - Navigator): Habilidad Inicial: Sabiduría (Wisdom) | Especialidad: Hechiceras (Sorceresses). Acelera la adquisición y efectividad de las Hechiceras aliadas.
@@ -958,7 +980,7 @@ GUÍA COMPLETA DE HABILIDADES DEL COMPENDIO (es.homm3bg.wiki):
 • Básico: Instantáneo: Juega esta carta durante un asedio. Destruye 1 Muro o Puerta de forma instantánea.
 • Experto: Instantáneo: Juega esta carta durante un asedio. Destruye la Torre de Flechas (Arrow Tower) enemiga.
 
-6. Magias Básicas Elementales (Basic Air / Earth / Fire / Water Magic - Expansión Confluencia):
+6. Magias Básicas Elementales (Basic Air / Earth / Fire / Water Magic - Expansión Conflujo):
 • Básico: Permanente: En lugar de buscar en el mazo de Hechizos, busca el primer Hechizo de la Escuela correspondiente en él, colócalo en tu mano y baraja el mazo.
 • Experto: Instantáneo: +3 Poder para un Hechizo de la Escuela elemental correspondiente.
 
@@ -1087,8 +1109,8 @@ GUÍA COMPLETA DE HABILIDADES DEL COMPENDIO (es.homm3bg.wiki):
 • Infierno - Castillo de Fuego (Fire Castle): Incrementa el daño físico de los contraataques o represalias de todas tus unidades defensoras.
 • Bastión - Mercado de Esclavos (Slave Market): Permite vender o intercambiar recursos y artefactos por sumas fijas de Oro sin penalización comercial.
 • Fortaleza - Jaulas de Wyverns (Wyvern Cages): Permite alistar Wyverns de nivel II de forma anticipada sin tener la vivienda de Plata.
-• Confluencia - Altar de los Elementos (Elemental Altar): Permite transformar recursos sobrantes de Madera/Mineral directamente en Objetos de Valor místicos.
-• Bahía - Gremio de Contrabandistas (Smugglers' Guild): Permite vender artefactos redundantes a cambio de Oro o de valiosos Objetos de Recursos.`
+• Conflujo - Altar de los Elementos (Elemental Altar): Permite transformar recursos sobrantes de Madera/Mineral directamente en Objetos de Valor místicos.
+• Cala - Gremio de Contrabandistas (Smugglers' Guild): Permite vender artefactos redundantes a cambio de Oro o de valiosos Objetos de Recursos.`
   },
   {
     id: "wiki_units_creatures",
@@ -1097,11 +1119,11 @@ GUÍA COMPLETA DE HABILIDADES DEL COMPENDIO (es.homm3bg.wiki):
     content: `Las criaturas y unidades de combate táctico representan el núcleo del poder militar de tu Héroe. Cada facción de Erathia cuenta con 7 niveles de criaturas divididas en tres Tiers principales (Bronce, Plata, Oro), además de las Criaturas Especiales o Neutrales de Tier Azul.
 
 REGLAS GENERALES DE LAS CRIATURAS EN COMBATE:
-• Anverso y Reverso (Cara de la Carta): Cada carta de criatura es de doble cara. La cara básica ("Pocos" o "Few") representa el regimiento estándar de reclutamiento. La cara de élite ("Manada" o "Pack") representa la tropa mejorada con mayores estadísticas (Ataque, Defensa, Puntos de Vida, Iniciativa) y habilidades devastadoras.
+• Anverso y Reverso (Cara de la Carta): Cada carta de criatura es de doble cara. La cara básica ("Pocos" o "Few") representa el regimiento estándar de reclutamiento. La cara de élite ("Manada" o "Pack") representa la tropa mejorada con mayores estadísticas (Ataque, Defensa, Puntos de Salud, Iniciativa) y habilidades devastadoras.
 • Ataque (⚔️): Indica el número de dados de combate o el valor de daño base que la criatura inflige al atacar.
 • Defensa (🛡️): Reduce el daño entrante. Un valor de defensa alto mitiga los ataques físicos directos.
 • Iniciativa (⚡): Determina el orden estricto de activación de las unidades en el tablero de batalla. La criatura con mayor iniciativa actúa primero.
-• Puntos de Vida (❤️): La cantidad de heridas o daños que la unidad puede resistir antes de ser derrotada.
+• Puntos de Salud (❤️): La cantidad de heridas o daños que la unidad puede resistir antes de ser derrotada.
 • Movimiento Táctico: Las unidades del juego de mesa no tienen una estadística numérica de "Movimiento". Se desplazan por el tablero táctico de 4x5 casillas libremente de acuerdo con su tipo de alcance (Cuerpo a cuerpo, A distancia o Volador) respetando las limitaciones generales de obstáculos o zonas de control.
 • Tipo de Alcance: Las unidades se clasifican en Cuerpo a Cuerpo (Melee), A distancia (Ranged - sufren penalización de daño a la mitad si hay enemigos adyacentes) o Voladoras (Flying - ignoran obstáculos y unidades).
 
@@ -1129,10 +1151,10 @@ COMPENDIO DE CRIATURAS POR FACCIONES:
 • Arpías / Arpías Brujas (Tier Bronce - Niv. 2): Vuelan para atacar y regresan de inmediato a su posición inicial, atacando "Sin Represalia" en su versión élite.
 • Minotauros / Reyes Minotauro (Tier Plata - Niv. 5): Tienen moral alta constante y pueden bloquear ataques físicos enemigos con sus escudos.
 • Dragón Negro (Tier Oro - Niv. 7): 
-  - Lado "Pocos" (Few): Ataque 6, Defensa 3, Vida 8, Iniciativa 11. Coste: 19 Oro y 1 Objeto de Valor. Habilidad pasiva: "Reduce el daño recibido por Hechizos en 2 hasta un mínimo de 0."
-  - Lado "Manada" (Pack / Élite): Ataque 8, Defensa 3, Vida 8, Iniciativa 11. Habilidad pasiva: "Ignora cualquier efecto de Hechizo y el daño de Especialidad."
-  - Carta Neutral de Dragón Negro: Ataque 5, Defensa 2, Vida 7, Iniciativa 9. Coste: 30 Oro. Habilidad: "Ataca 2 espacios en línea. El primer ataque se resuelve normalmente, y el segundo tiene 2 de Ataque."
-  - Carta de Dragón Negro para Utopía (Banco de Criaturas): Ataque 5, Defensa 2, Vida 5, Iniciativa 9. Habilidad pasiva: "Mientras esta unidad esté apilada, obtiene +3 de Ataque."
+  - Lado "Pocos" (Few): Ataque 6, Defensa 3, Salud 8, Iniciativa 11. Coste: 19 Oro y 1 Objeto de Valor. Habilidad pasiva: "Reduce el daño recibido por Hechizos en 2 hasta un mínimo de 0."
+  - Lado "Manada" (Pack / Élite): Ataque 8, Defensa 3, Salud 8, Iniciativa 11. Habilidad pasiva: "Ignora cualquier efecto de Hechizo y el daño de Especialidad."
+  - Carta Neutral de Dragón Negro: Ataque 5, Defensa 2, Salud 7, Iniciativa 9. Coste: 30 Oro. Habilidad: "Ataca 2 espacios en línea. El primer ataque se resuelve normalmente, y el segundo tiene 2 de Ataque."
+  - Carta de Dragón Negro para Utopía (Banco de Criaturas): Ataque 5, Defensa 2, Salud 5, Iniciativa 9. Habilidad pasiva: "Mientras esta unidad esté apilada, obtiene +3 de Ataque."
   No existe dragón rojo en el juego de mesa.`
   },
   {
@@ -1198,333 +1220,477 @@ COMPENDIO DE CRIATURAS POR FACCIONES:
 
 ### 1. CASTILLO (Castle)
 • Alabarderos (Tier Bronce - Niv. 1)
-  - Básica: Ataque 2, Defensa 1, Vida 2, Iniciativa 4. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 3, Defensa 1, Vida 2, Iniciativa 5. Tipo: Melé. Coste: 3 Oro. Habilidad: "Pasivo: Cuando esta unidad sea el objetivo de un ataque, puedes descartar una carta para ignorar el resultado del dado de ataque."
+  - Básica: Ataque 2, Defensa 1, Salud 2, Iniciativa 4. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 1, Salud 2, Iniciativa 5. Tipo: Melé. Coste: 3 Oro. Habilidad: "Pasivo: Cuando esta unidad sea el objetivo de un ataque, puedes descartar una carta para ignorar el resultado del dado de ataque."
 
 • Tiradores (Tier Bronce - Niv. 2)
-  - Básica: Ataque 2, Defensa 0, Vida 2, Iniciativa 4. Tipo: a Distancia. Coste: 3 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 2, Defensa 0, Vida 2, Iniciativa 6. Tipo: a Distancia. Coste: 5 Oro. Habilidad: "Al Atacar: Si un objetivo no está adyacente, vuelve a atacarlo."
+  - Básica: Ataque 2, Defensa 0, Salud 2, Iniciativa 4. Tipo: a Distancia. Coste: 3 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 2, Defensa 0, Salud 2, Iniciativa 6. Tipo: a Distancia. Coste: 5 Oro. Habilidad: "Al Atacar: Si un objetivo no está adyacente, vuelve a atacarlo."
 
 • Grifos (Tier Bronce - Niv. 3)
-  - Básica: Ataque 2, Defensa 0, Vida 4, Iniciativa 6. Tipo: Voladora. Coste: 4 Oro. Habilidad: "Contraataque: Esta unidad puede llevar a cabo una cantidad ilimitada de contraataques."
-  - Élite: Ataque 3, Defensa 0, Vida 4, Iniciativa 9. Tipo: Voladora. Coste: 6 Oro. Habilidad: "Contraataque: Esta unidad puede llevar a cabo una cantidad ilimitada de contraataques."
+  - Básica: Ataque 2, Defensa 0, Salud 4, Iniciativa 6. Tipo: Voladora. Coste: 4 Oro. Habilidad: "Contraataque: Esta unidad puede llevar a cabo una cantidad ilimitada de contraataques."
+  - Élite: Ataque 3, Defensa 0, Salud 4, Iniciativa 9. Tipo: Voladora. Coste: 6 Oro. Habilidad: "Contraataque: Esta unidad puede llevar a cabo una cantidad ilimitada de contraataques."
 
 • Cruzados (Tier Plata - Niv. 4)
-  - Básica: Ataque 3, Defensa 2, Vida 4, Iniciativa 5. Tipo: Melé. Coste: 6 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 4, Defensa 2, Vida 4, Iniciativa 6. Tipo: Melé. Coste: 10 Oro. Habilidad: "Al Atacar: Puedes volver a tirar los 0 en el dado de ataque de esta unidad."
+  - Básica: Ataque 3, Defensa 2, Salud 4, Iniciativa 5. Tipo: Melé. Coste: 6 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 4, Defensa 2, Salud 4, Iniciativa 6. Tipo: Melé. Coste: 10 Oro. Habilidad: "Al Atacar: Puedes volver a tirar los 0 en el dado de ataque de esta unidad."
 
 • Fanáticos (Tier Plata - Niv. 5)
-  - Básica: Ataque 3, Defensa 1, Vida 5, Iniciativa 5. Tipo: a Distancia. Coste: 8 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 4, Defensa 1, Vida 5, Iniciativa 7. Tipo: a Distancia. Coste: 12 Oro. Habilidad: "Pasivo: Ignora la penalización de combate contra unidades adyacentes."
+  - Básica: Ataque 3, Defensa 1, Salud 5, Iniciativa 5. Tipo: a Distancia. Coste: 8 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 4, Defensa 1, Salud 5, Iniciativa 7. Tipo: a Distancia. Coste: 12 Oro. Habilidad: "Pasivo: Ignora la penalización de combate contra unidades adyacentes."
 
 • Campeones (Tier Oro - Niv. 6)
-  - Básica: Ataque 5, Defensa 2, Vida 7, Iniciativa 7. Tipo: Melé. Coste: 12 Oro. Habilidad: "Mapa: Si tu héroe está en una zona con establos, el coste de refuerzo de esta unidad se reduce en 6 Oros."
-  - Élite: Ataque 6, Defensa 2, Vida 7, Iniciativa 9. Tipo: Melé. Coste: 20 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Si esta unidad termina su movimiento en un espacio diferente al inicial, puedes volver a tirar un dado de ataque."
+  - Básica: Ataque 5, Defensa 2, Salud 7, Iniciativa 7. Tipo: Melé. Coste: 12 Oro. Habilidad: "Mapa: Si tu héroe está en una zona con establos, el coste de refuerzo de esta unidad se reduce en 6 Oros."
+  - Élite: Ataque 6, Defensa 2, Salud 7, Iniciativa 9. Tipo: Melé. Coste: 20 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Si esta unidad termina su movimiento en un espacio diferente al inicial, puedes volver a tirar un dado de ataque."
 
 • Arcángeles (Tier Oro - Niv. 7)
-  - Básica: Ataque 6, Defensa 3, Vida 8, Iniciativa 12. Tipo: Voladora. Coste: 20 Oro y 1 Objeto de valor. Habilidad: "Pasivo: Cuando se inicie un combate, roba 1 carta."
-  - Élite: Ataque 7, Defensa 3, Vida 10, Iniciativa 18. Tipo: Voladora. Coste: 30 Oro y 2 Objetos de valor. Habilidad: "Pasivo: Una vez por combate. Cancela un ataque que fuese a reducir los Puntos de Salud de otra unidad a 0."
+  - Básica: Ataque 6, Defensa 3, Salud 8, Iniciativa 12. Tipo: Voladora. Coste: 20 Oro y 1 Objeto de valor. Habilidad: "Pasivo: Cuando se inicie un combate, roba 1 carta."
+  - Élite: Ataque 7, Defensa 3, Salud 10, Iniciativa 18. Tipo: Voladora. Coste: 30 Oro y 2 Objetos de valor. Habilidad: "Pasivo: Una vez por combate. Cancela un ataque que fuese a reducir los Puntos de Salud de otra unidad a 0."
 
 ---
 
 ### 2. NECRÓPOLIS (Necropolis)
 • Esqueletos (Tier Bronce - Niv. 1)
-  - Básica: Ataque 2, Defensa 1, Vida 2, Iniciativa 4. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 3, Defensa 1, Vida 2, Iniciativa 5. Tipo: Melé. Coste: 3 Oro. Habilidades: Ninguna.
+  - Básica: Ataque 2, Defensa 1, Salud 2, Iniciativa 4. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 1, Salud 2, Iniciativa 5. Tipo: Melé. Coste: 3 Oro. Habilidades: Ninguna.
 
 • Zombis (Tier Bronce - Niv. 2)
-  - Básica: Ataque 2, Defensa 1, Vida 3, Iniciativa 3. Tipo: Melé. Coste: 3 Oro. Habilidad: "Pasivo: Si el atacante resuelve un +1 en el dado de ataque, obtén +1 Defensa."
-  - Élite: Ataque 2, Defensa 1, Vida 3, Iniciativa 4. Tipo: Melé. Coste: 4 Oro. Habilidad: "Pasivo: Si el atacante resuelve un 0 o un +1 en el dado de ataque, obtén +1 Defensa."
+  - Básica: Ataque 2, Defensa 1, Salud 3, Iniciativa 3. Tipo: Melé. Coste: 3 Oro. Habilidad: "Pasivo: Si el atacante resuelve un +1 en el dado de ataque, obtén +1 Defensa."
+  - Élite: Ataque 2, Defensa 1, Salud 3, Iniciativa 4. Tipo: Melé. Coste: 4 Oro. Habilidad: "Pasivo: Si el atacante resuelve un 0 o un +1 en el dado de ataque, obtén +1 Defensa."
 
 • Espectros (Tier Bronce - Niv. 3)
-  - Básica: Ataque 3, Defensa 0, Vida 3, Iniciativa 5. Tipo: Voladora. Coste: 4 Oro. Habilidad: "Activación: Retira hasta 1 Herida de esta unidad."
-  - Élite: Ataque 3, Defensa 0, Vida 5, Iniciativa 7. Tipo: Voladora. Coste: 6 Oro. Habilidad: "Activación: Retira hasta 1 Herida de esta unidad y después descarta 1 carta al azar de la mano del enemigo."
+  - Básica: Ataque 3, Defensa 0, Salud 3, Iniciativa 5. Tipo: Voladora. Coste: 4 Oro. Habilidad: "Activación: Retira hasta 1 Herida de esta unidad."
+  - Élite: Ataque 3, Defensa 0, Salud 5, Iniciativa 7. Tipo: Voladora. Coste: 6 Oro. Habilidad: "Activación: Retira hasta 1 Herida de esta unidad y después descarta 1 carta al azar de la mano del enemigo."
 
 • Vampiros (Tier Plata - Niv. 4)
-  - Básica: Ataque 4, Defensa 1, Vida 4, Iniciativa 6. Tipo: Voladora. Coste: 8 Oro. Habilidad: "Al Atacar: Ignora el contraataque."
-  - Élite: Ataque 5, Defensa 1, Vida 4, Iniciativa 9. Tipo: Voladora. Coste: 12 Oro. Habilidad: "Al Atacar: Ignora el contraataque. Después retira hasta 2 Heridas a esta unidad."
+  - Básica: Ataque 4, Defensa 1, Salud 4, Iniciativa 6. Tipo: Voladora. Coste: 8 Oro. Habilidad: "Al Atacar: Ignora el contraataque."
+  - Élite: Ataque 5, Defensa 1, Salud 4, Iniciativa 9. Tipo: Voladora. Coste: 12 Oro. Habilidad: "Al Atacar: Ignora el contraataque. Después retira hasta 2 Heridas a esta unidad."
 
 • Liches (Tier Plata - Niv. 5)
-  - Básica: Ataque 3, Defensa 1, Vida 5, Iniciativa 6. Tipo: a Distancia. Coste: 8 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 4, Defensa 1, Vida 5, Iniciativa 7. Tipo: a Distancia. Coste: 14 Oro. Habilidad: "Al Atacar: Elige una unidad adyacente al objetivo y atácala. Para este ataque tu Ataque es 2."
+  - Básica: Ataque 3, Defensa 1, Salud 5, Iniciativa 6. Tipo: a Distancia. Coste: 8 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 4, Defensa 1, Salud 5, Iniciativa 7. Tipo: a Distancia. Coste: 14 Oro. Habilidad: "Al Atacar: Elige una unidad adyacente al objetivo y atácala. Para este ataque tu Ataque es 2."
 
 • Caballeros del terror (Tier Oro - Niv. 6)
-  - Básica: Ataque 5, Defensa 2, Vida 7, Iniciativa 7. Tipo: Melé. Coste: 12 Oro. Habilidad: "Al Atacar: Al contraatacar después de este ataque, el enemigo lanza 2 dados de ataque y resuelve el resultado menor."
-  - Élite: Ataque 6, Defensa 2, Vida 7, Iniciativa 9. Tipo: Melé. Coste: 20 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Si resuelves un 0 o un +1 en el dado de ataque, aumenta el valor total del ataque de esta unidad en un +1 adicional."
+  - Básica: Ataque 5, Defensa 2, Salud 7, Iniciativa 7. Tipo: Melé. Coste: 12 Oro. Habilidad: "Al Atacar: Al contraatacar después de este ataque, el enemigo lanza 2 dados de ataque y resuelve el resultado menor."
+  - Élite: Ataque 6, Defensa 2, Salud 7, Iniciativa 9. Tipo: Melé. Coste: 20 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Si resuelves un 0 o un +1 en el dado de ataque, aumenta el valor total del ataque de esta unidad en un +1 adicional."
 
 • Dragones fantasma (Tier Oro - Niv. 7)
-  - Básica: Ataque 6, Defensa 3, Vida 8, Iniciativa 9. Tipo: Voladora. Coste: 19 Oro y 1 Objeto de valor. Habilidad: "Activación: Descarta la ficha Moral Positiva del enemigo."
-  - Élite: Ataque 7, Defensa 3, Vida 9, Iniciativa 14. Tipo: Voladora. Coste: 32 Oro y 2 Objetos de valor. Habilidad: "Activación: Descarta la ficha Moral Positiva del enemigo. Al Atacar: Gana +1 Ataque."
+  - Básica: Ataque 6, Defensa 3, Salud 8, Iniciativa 9. Tipo: Voladora. Coste: 19 Oro y 1 Objeto de valor. Habilidad: "Activación: Descarta la ficha Moral Positiva del enemigo."
+  - Élite: Ataque 7, Defensa 3, Salud 9, Iniciativa 14. Tipo: Voladora. Coste: 32 Oro y 2 Objetos de valor. Habilidad: "Activación: Descarta la ficha Moral Positiva del enemigo. Al Atacar: Gana +1 Ataque."
 
 ---
 
 ### 3. MAZMORRA (Dungeon)
 • Trogloditas (Tier Bronce - Niv. 1)
-  - Básica: Ataque 2, Defensa 1, Vida 2, Iniciativa 4. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 3, Defensa 1, Vida 2, Iniciativa 5. Tipo: Melé. Coste: 3 Oro. Habilidad: "Pasivo: Esta unidad ignora el efecto Parálisis."
+  - Básica: Ataque 2, Defensa 1, Salud 2, Iniciativa 4. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 1, Salud 2, Iniciativa 5. Tipo: Melé. Coste: 3 Oro. Habilidad: "Pasivo: Esta unidad ignora el efecto Parálisis."
 
 • Arpías (Tier Bronce - Niv. 2)
-  - Básica: Ataque 2, Defensa 0, Vida 3, Iniciativa 6. Tipo: Voladora. Coste: 3 Oro. Habilidad: "Al Atacar: Después del contraataque del enemigo, esta unidad puede volver al espacio desde el que se ha movido para atacar."
-  - Élite: Ataque 3, Defensa 0, Vida 3, Iniciativa 9. Tipo: Voladora. Coste: 5 Oro. Habilidad: "Al Atacar: Ignora el contraataque. Esta unidad puede volver al espacio desde el que se ha movido para atacar."
+  - Básica: Ataque 2, Defensa 0, Salud 3, Iniciativa 6. Tipo: Voladora. Coste: 3 Oro. Habilidad: "Al Atacar: Después del contraataque del enemigo, esta unidad puede volver al espacio desde el que se ha movido para atacar."
+  - Élite: Ataque 3, Defensa 0, Salud 3, Iniciativa 9. Tipo: Voladora. Coste: 5 Oro. Habilidad: "Al Atacar: Ignora el contraataque. Esta unidad puede volver al espacio desde el que se ha movido para atacar."
 
 • Ojos maléficos (Tier Bronce - Niv. 3)
-  - Básica: Ataque 3, Defensa 0, Vida 3, Iniciativa 5. Tipo: a Distancia. Coste: 4 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 3, Defensa 1, Vida 3, Iniciativa 7. Tipo: a Distancia. Coste: 6 Oro. Habilidad: "Pasivo: Ignora la penalización de combate contra unidades adyacentes."
+  - Básica: Ataque 3, Defensa 0, Salud 3, Iniciativa 5. Tipo: a Distancia. Coste: 4 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 1, Salud 3, Iniciativa 7. Tipo: a Distancia. Coste: 6 Oro. Habilidad: "Pasivo: Ignora la penalización de combate contra unidades adyacentes."
 
 • Medusas (Tier Plata - Niv. 4)
-  - Básica: Ataque 3, Defensa 1, Vida 4, Iniciativa 5. Tipo: a Distancia. Coste: 6 Oro. Habilidad: "Contraataque: Después del contraataque, lanza un dado de ataque; si sacas 0, el objetivo queda Parálizado."
-  - Élite: Ataque 4, Defensa 1, Vida 4, Iniciativa 6. Tipo: a Distancia. Coste: 12 Oro. Habilidad: "Pasivo: Ignora la penalización de combate contra unidades adyacentes. Contraataque: El objetivo queda Parálizado."
+  - Básica: Ataque 3, Defensa 1, Salud 4, Iniciativa 5. Tipo: a Distancia. Coste: 6 Oro. Habilidad: "Contraataque: Después del contraataque, lanza un dado de ataque; si sacas 0, el objetivo queda Parálizado."
+  - Élite: Ataque 4, Defensa 1, Salud 4, Iniciativa 6. Tipo: a Distancia. Coste: 12 Oro. Habilidad: "Pasivo: Ignora la penalización de combate contra unidades adyacentes. Contraataque: El objetivo queda Parálizado."
 
 • Minotauros (Tier Plata - Niv. 5)
-  - Básica: Ataque 4, Defensa 2, Vida 4, Iniciativa 6. Tipo: Melé. Coste: 8 Oro. Habilidad: "Al Atacar: Si resuelves un -1 en el dado de ataque, roba una carta."
-  - Élite: Ataque 5, Defensa 2, Vida 4, Iniciativa 8. Tipo: Melé. Coste: 14 Oro. Habilidad: "Al Atacar: Si resuelves un -1 en el dado de ataque, roba una carta."
+  - Básica: Ataque 4, Defensa 2, Salud 4, Iniciativa 6. Tipo: Melé. Coste: 8 Oro. Habilidad: "Al Atacar: Si resuelves un -1 en el dado de ataque, roba una carta."
+  - Élite: Ataque 5, Defensa 2, Salud 4, Iniciativa 8. Tipo: Melé. Coste: 14 Oro. Habilidad: "Al Atacar: Si resuelves un -1 en el dado de ataque, roba una carta."
 
 • Mantícoras (Tier Oro - Niv. 6)
-  - Básica: Ataque 5, Defensa 1, Vida 6, Iniciativa 7. Tipo: Voladora. Coste: 10 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 5, Defensa 1, Vida 6, Iniciativa 11. Tipo: Voladora. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Durante este ataque, ignora el valor de Defensa de la carta de la unidad objetivo."
+  - Básica: Ataque 5, Defensa 1, Salud 6, Iniciativa 7. Tipo: Voladora. Coste: 10 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 5, Defensa 1, Salud 6, Iniciativa 11. Tipo: Voladora. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Durante este ataque, ignora el valor de Defensa de la carta de la unidad objetivo."
 
 • Mantícoras (Alternativa) (Tier Oro - Niv. 6)
-  - Básica: Ataque 4, Defensa 1, Vida 7, Iniciativa 8. Tipo: Voladora. Coste: 12 Oro. Habilidad: "Al Atacar: Coloca 1 cubo de facción sobre el objetivo. Cuando se active, retira el cubo para infligir 1 Herida."
-  - Élite: Ataque 4, Defensa 2, Vida 7, Iniciativa 11. Tipo: Voladora. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Pasivo: Después de cada ataque, coloca 1 cubo de facción sobre el objetivo. Cuando se active, retira el cubo para infligir 1 Herida."
+  - Básica: Ataque 4, Defensa 1, Salud 7, Iniciativa 8. Tipo: Voladora. Coste: 12 Oro. Habilidad: "Al Atacar: Coloca 1 cubo de facción sobre el objetivo. Cuando se active, retira el cubo para infligir 1 Herida."
+  - Élite: Ataque 4, Defensa 2, Salud 7, Iniciativa 11. Tipo: Voladora. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Pasivo: Después de cada ataque, coloca 1 cubo de facción sobre el objetivo. Cuando se active, retira el cubo para infligir 1 Herida."
 
 • Dragones negros (Tier Oro - Niv. 7)
-  - Básica: Ataque 6, Defensa 3, Vida 8, Iniciativa 11. Tipo: Voladora. Coste: 19 Oro y 1 Objeto de valor. Habilidad: "Pasivo: Reduce el Daño de Hechizo recibido por esta unidad en 2 (hasta un mínimo de 0)."
-  - Élite: Ataque 8, Defensa 3, Vida 8, Iniciativa 15. Tipo: Voladora. Coste: 33 Oro y 2 Objetos de valor. Habilidad: "Pasivo: Ignora cualquier efecto de Hechizo y Daño de especialidad."
+  - Básica: Ataque 6, Defensa 3, Salud 8, Iniciativa 11. Tipo: Voladora. Coste: 19 Oro y 1 Objeto de valor. Habilidad: "Pasivo: Reduce el Daño de Hechizo recibido por esta unidad en 2 (hasta un mínimo de 0)."
+  - Élite: Ataque 8, Defensa 3, Salud 8, Iniciativa 15. Tipo: Voladora. Coste: 33 Oro y 2 Objetos de valor. Habilidad: "Pasivo: Ignora cualquier efecto de Hechizo y Daño de especialidad."
 
 ---
 
 ### 4. MURALLAS (Rampart)
 • Centauros (Tier Bronce - Niv. 1)
-  - Básica: Ataque 2, Defensa 0, Vida 3, Iniciativa 6. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 3, Defensa 0, Vida 3, Iniciativa 8. Tipo: Melé. Coste: 3 Oro. Habilidades: Ninguna.
+  - Básica: Ataque 2, Defensa 0, Salud 3, Iniciativa 6. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 0, Salud 3, Iniciativa 8. Tipo: Melé. Coste: 3 Oro. Habilidades: Ninguna.
 
 • Enanos (Tier Bronce - Niv. 2)
-  - Básica: Ataque 2, Defensa 1, Vida 3, Iniciativa 3. Tipo: Melé. Coste: 3 Oro. Habilidad: "Pasivo: Si esta unidad es objetivo de cualquier carta de hechizo o especialidad, lanza 1 dado de ataque. Si sacas un +1, ignora el efecto de la carta."
-  - Élite: Ataque 3, Defensa 1, Vida 3, Iniciativa 5. Tipo: Melé. Coste: 4 Oro. Habilidad: "Pasivo: Si esta unidad es objetivo de cualquier carta de hechizo o especialidad, lanza 1 dado de ataque. Si sacas un +1, ignora el efecto de la carta."
+  - Básica: Ataque 2, Defensa 1, Salud 3, Iniciativa 3. Tipo: Melé. Coste: 3 Oro. Habilidad: "Pasivo: Si esta unidad es objetivo de cualquier carta de hechizo o especialidad, lanza 1 dado de ataque. Si sacas un +1, ignora el efecto de la carta."
+  - Élite: Ataque 3, Defensa 1, Salud 3, Iniciativa 5. Tipo: Melé. Coste: 4 Oro. Habilidad: "Pasivo: Si esta unidad es objetivo de cualquier carta de hechizo o especialidad, lanza 1 dado de ataque. Si sacas un +1, ignora el efecto de la carta."
 
 • Elfos (Tier Bronce - Niv. 3)
-  - Básica: Ataque 2, Defensa 1, Vida 3, Iniciativa 6. Tipo: a Distancia. Coste: 4 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 3, Defensa 1, Vida 3, Iniciativa 7. Tipo: a Distancia. Coste: 7 Oro. Habilidad: "Al Atacar: Si una unidad objetivo no está adyacente, vuélvela a atacar si sacas un -1 o un 0."
+  - Básica: Ataque 2, Defensa 1, Salud 3, Iniciativa 6. Tipo: a Distancia. Coste: 4 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 1, Salud 3, Iniciativa 7. Tipo: a Distancia. Coste: 7 Oro. Habilidad: "Al Atacar: Si una unidad objetivo no está adyacente, vuélvela a atacar si sacas un -1 o un 0."
 
 • Pegasos (Tier Plata - Niv. 4)
-  - Básica: Ataque 3, Defensa 0, Vida 5, Iniciativa 8. Tipo: Voladora. Coste: 6 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 4, Defensa 0, Vida 6, Iniciativa 12. Tipo: Voladora. Coste: 10 Oro. Habilidad: "Pasivo: El Poder de todos los hechizos enemigos se reduce en 1 (hasta un mínimo de 0)."
+  - Básica: Ataque 3, Defensa 0, Salud 5, Iniciativa 8. Tipo: Voladora. Coste: 6 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 4, Defensa 0, Salud 6, Iniciativa 12. Tipo: Voladora. Coste: 10 Oro. Habilidad: "Pasivo: El Poder de todos los hechizos enemigos se reduce en 1 (hasta un mínimo de 0)."
 
 • Dendroides (Tier Plata - Niv. 5)
-  - Básica: Ataque 4, Defensa 2, Vida 5, Iniciativa 3. Tipo: Melé. Coste: 8 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 4, Defensa 2, Vida 6, Iniciativa 4. Tipo: Melé. Coste: 15 Oro. Habilidad: "Pasivo: Las unidades enemigas que empiecen su activación adyacentes a esta unidad no pueden moverse."
+  - Básica: Ataque 4, Defensa 2, Salud 5, Iniciativa 3. Tipo: Melé. Coste: 8 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 4, Defensa 2, Salud 6, Iniciativa 4. Tipo: Melé. Coste: 15 Oro. Habilidad: "Pasivo: Las unidades enemigas que empiecen su activación adyacentes a esta unidad no pueden moverse."
 
 • Unicornios (Tier Oro - Niv. 6)
-  - Básica: Ataque 5, Defensa 1, Vida 8, Iniciativa 7. Tipo: Melé. Coste: 11 Oro. Habilidad: "Pasivo: Reduce el Daño de Hechizos sufridos por esta unidad en 1 (hasta un mínimo de 0)."
-  - Élite: Ataque 6, Defensa 1, Vida 8, Iniciativa 9. Tipo: Melé. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Pasivo: Reduce el Daño de Hechizos sufridos por esta unidad y unidades adyacentes aliadas en 1 (hasta un mínimo de 0)."
+  - Básica: Ataque 5, Defensa 1, Salud 8, Iniciativa 7. Tipo: Melé. Coste: 11 Oro. Habilidad: "Pasivo: Reduce el Daño de Hechizos sufridos por esta unidad en 1 (hasta un mínimo de 0)."
+  - Élite: Ataque 6, Defensa 1, Salud 8, Iniciativa 9. Tipo: Melé. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Pasivo: Reduce el Daño de Hechizos sufridos por esta unidad y unidades adyacentes aliadas en 1 (hasta un mínimo de 0)."
 
 • Dragones dorados (Tier Oro - Niv. 7)
-  - Básica: Ataque 5, Defensa 3, Vida 9, Iniciativa 10. Tipo: Voladora. Coste: 22 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Ataca a 2 espacios en fila. El primer ataque se resuelve de forma normal y el segundo con 2 Ataque."
-  - Élite: Ataque 6, Defensa 3, Vida 10, Iniciativa 16. Tipo: Voladora. Coste: 30 Oro y 2 Objetos de valor. Habilidad: "Al Atacar: Ataca a 2 espacios en fila. El primer ataque se resuelve normalmente y el segundo tiene 3 Ataque."
+  - Básica: Ataque 5, Defensa 3, Salud 9, Iniciativa 10. Tipo: Voladora. Coste: 22 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Ataca a 2 espacios en fila. El primer ataque se resuelve de forma normal y el segundo con 2 Ataque."
+  - Élite: Ataque 6, Defensa 3, Salud 10, Iniciativa 16. Tipo: Voladora. Coste: 30 Oro y 2 Objetos de valor. Habilidad: "Al Atacar: Ataca a 2 espacios en fila. El primer ataque se resuelve normalmente y el segundo tiene 3 Ataque."
 
 ---
 
 ### 5. TORRE (Tower)
 • Gremlins (Tier Bronce - Niv. 1)
-  - Básica: Ataque 2, Defensa 0, Vida 2, Iniciativa 4. Tipo: Melé. Coste: 0 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 2, Defensa 0, Vida 2, Iniciativa 5. Tipo: a Distancia. Coste: 2 Oro. Habilidades: Ninguna.
+  - Básica: Ataque 2, Defensa 0, Salud 2, Iniciativa 4. Tipo: Melé. Coste: 0 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 2, Defensa 0, Salud 2, Iniciativa 5. Tipo: a Distancia. Coste: 2 Oro. Habilidades: Ninguna.
 
 • Gárgolas (Tier Bronce - Niv. 2)
-  - Básica: Ataque 2, Defensa 1, Vida 3, Iniciativa 6. Tipo: Voladora. Coste: 3 Oro. Habilidad: "Pasiva: Esta unidad ignora cualquier efecto Contínuo de hechizos."
-  - Élite: Ataque 3, Defensa 1, Vida 3, Iniciativa 9. Tipo: Voladora. Coste: 4 Oro. Habilidad: "Pasiva: Esta unidad ignora cualquier efecto Contínuo de hechizos."
+  - Básica: Ataque 2, Defensa 1, Salud 3, Iniciativa 6. Tipo: Voladora. Coste: 3 Oro. Habilidad: "Pasiva: Esta unidad ignora cualquier efecto Contínuo de hechizos."
+  - Élite: Ataque 3, Defensa 1, Salud 3, Iniciativa 9. Tipo: Voladora. Coste: 4 Oro. Habilidad: "Pasiva: Esta unidad ignora cualquier efecto Contínuo de hechizos."
 
 • Gólems de hierro (Tier Bronce - Niv. 3)
-  - Básica: Ataque 3, Defensa 1, Vida 3, Iniciativa 4. Tipo: Melé. Coste: 4 Oro. Habilidad: "Pasiva: Esta unidad reduce cualquier Daño que reciba de hechizos en 1, hasta un mínimo de 0."
-  - Élite: Ataque 3, Defensa 2, Vida 3, Iniciativa 5. Tipo: Melé. Coste: 7 Oro. Habilidad: "Pasiva: Esta unidad reduce cualquier Daño que reciba de hechizos en 2, hasta un mínimo de 0."
+  - Básica: Ataque 3, Defensa 1, Salud 3, Iniciativa 4. Tipo: Melé. Coste: 4 Oro. Habilidad: "Pasiva: Esta unidad reduce cualquier Daño que reciba de hechizos en 1, hasta un mínimo de 0."
+  - Élite: Ataque 3, Defensa 2, Salud 3, Iniciativa 5. Tipo: Melé. Coste: 7 Oro. Habilidad: "Pasiva: Esta unidad reduce cualquier Daño que reciba de hechizos en 2, hasta un mínimo de 0."
 
 • Magos (Tier Plata - Niv. 4)
-  - Básica: Ataque 3, Defensa 0, Vida 4, Iniciativa 5. Tipo: a Distancia. Coste: 6 Oro. Habilidad: "Al Atacar: Ignora penalizaciones de combate."
-  - Élite: Ataque 4, Defensa 1, Vida 4, Iniciativa 6. Tipo: a Distancia. Coste: 11 Oro. Habilidad: "Al Atacar: Ignora penalizaciones de combate. Activación: Añade +1 Poder al primer hechizo que lances esta ronda."
+  - Básica: Ataque 3, Defensa 0, Salud 4, Iniciativa 5. Tipo: a Distancia. Coste: 6 Oro. Habilidad: "Al Atacar: Ignora penalizaciones de combate."
+  - Élite: Ataque 4, Defensa 1, Salud 4, Iniciativa 6. Tipo: a Distancia. Coste: 11 Oro. Habilidad: "Al Atacar: Ignora penalizaciones de combate. Activación: Añade +1 Poder al primer hechizo que lances esta ronda."
 
 • Genios (Tier Plata - Niv. 5)
-  - Básica: Ataque 3, Defensa 1, Vida 6, Iniciativa 7. Tipo: Voladora. Coste: 8 Oro. Habilidad: "Alternativa: Descarta 3 cartas de tu mazo y devuelve a tu mano un Hechizo descartado de esta forma."
-  - Élite: Ataque 4, Defensa 1, Vida 6, Iniciativa 8. Tipo: Voladora. Coste: 12 Oro. Habilidad: "Al Atacar: Descarta hasta 3 cartas de tu mazo y devuelve a tu mano un Hechizo descartado de esta forma."
+  - Básica: Ataque 3, Defensa 1, Salud 6, Iniciativa 7. Tipo: Voladora. Coste: 8 Oro. Habilidad: "Alternativa: Descarta 3 cartas de tu mazo y devuelve a tu mano un Hechizo descartado de esta forma."
+  - Élite: Ataque 4, Defensa 1, Salud 6, Iniciativa 8. Tipo: Voladora. Coste: 12 Oro. Habilidad: "Al Atacar: Descarta hasta 3 cartas de tu mazo y devuelve a tu mano un Hechizo descartado de esta forma."
 
 • Nagas (Tier Oro - Niv. 6)
-  - Básica: Ataque 5, Defensa 2, Vida 7, Iniciativa 6. Tipo: Melé. Coste: 13 Oro. Habilidad: "Al Atacar: Ignora contraataques."
-  - Élite: Ataque 6, Defensa 2, Vida 7, Iniciativa 8. Tipo: Melé. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Ignora contraataques."
+  - Básica: Ataque 5, Defensa 2, Salud 7, Iniciativa 6. Tipo: Melé. Coste: 13 Oro. Habilidad: "Al Atacar: Ignora contraataques."
+  - Élite: Ataque 6, Defensa 2, Salud 7, Iniciativa 8. Tipo: Melé. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Ignora contraataques."
 
 • Titanes (Tier Oro - Niv. 7)
-  - Básica: Ataque 6, Defensa 3, Vida 8, Iniciativa 7. Tipo: Melé. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Pasiva: Esta unidad ignora cualquier efecto Contínuo."
-  - Élite: Ataque 6, Defensa 3, Vida 8, Iniciativa 11. Tipo: a Distancia. Coste: 32 Oro y 2 Objetos de valor. Habilidad: "Pasiva: Esta unidad ignora cualquier efecto Continuo y los penalizadores de combate aplicados a unidades adyacentes."
+  - Básica: Ataque 6, Defensa 3, Salud 8, Iniciativa 7. Tipo: Melé. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Pasiva: Esta unidad ignora cualquier efecto Contínuo."
+  - Élite: Ataque 6, Defensa 3, Salud 8, Iniciativa 11. Tipo: a Distancia. Coste: 32 Oro y 2 Objetos de valor. Habilidad: "Pasiva: Esta unidad ignora cualquier efecto Continuo y los penalizadores de combate aplicados a unidades adyacentes."
 
 ---
 
 ### 6. INFIERNO (Inferno)
 • Familiares (Tier Bronce - Niv. 1)
-  - Básica: Ataque 2, Defensa 1, Vida 2, Iniciativa 5. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 3, Defensa 1, Vida 2, Iniciativa 7. Tipo: Melé. Coste: 3 Oro. Habilidad: "Pasivo: Cuando un enemigo lanza un Hechizo de su mano, debe descartar 1 carta de la mano."
+  - Básica: Ataque 2, Defensa 1, Salud 2, Iniciativa 5. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 1, Salud 2, Iniciativa 7. Tipo: Melé. Coste: 3 Oro. Habilidad: "Pasivo: Cuando un enemigo lanza un Hechizo de su mano, debe descartar 1 carta de la mano."
 
 • Magogs (Tier Bronce - Niv. 2)
-  - Básica: Ataque 2, Defensa 0, Vida 2, Iniciativa 4. Tipo: a Distancia. Coste: 3 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 2, Defensa 0, Vida 3, Iniciativa 6. Tipo: a Distancia. Coste: 5 Oro. Habilidad: "Al Atacar: Cuando los magogs atacan a un objetivo que no está adyacente a ellos, hacen 1 Herida a una unidad adyacente al objetivo."
+  - Básica: Ataque 2, Defensa 0, Salud 2, Iniciativa 4. Tipo: a Distancia. Coste: 3 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 2, Defensa 0, Salud 3, Iniciativa 6. Tipo: a Distancia. Coste: 5 Oro. Habilidad: "Al Atacar: Cuando los magogs atacan a un objetivo que no está adyacente a ellos, hacen 1 Herida a una unidad adyacente al objetivo."
 
 • Cerberos (Tier Bronce - Niv. 3)
-  - Básica: Ataque 3, Defensa 0, Vida 4, Iniciativa 7. Tipo: Melé. Coste: 4 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 3, Defensa 1, Vida 5, Iniciativa 8. Tipo: Melé. Coste: 7 Oro. Habilidad: "Al Atacar: Ignora contraataques. Además, hace 1 Herida a otra unidad enemiga adyacente a los cerberos."
+  - Básica: Ataque 3, Defensa 0, Salud 4, Iniciativa 7. Tipo: Melé. Coste: 4 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 1, Salud 5, Iniciativa 8. Tipo: Melé. Coste: 7 Oro. Habilidad: "Al Atacar: Ignora contraataques. Además, hace 1 Herida a otra unidad enemiga adyacente a los cerberos."
 
 • Demonios (Tier Plata - Niv. 4)
-  - Básica: Ataque 3, Defensa 2, Vida 4, Iniciativa 5. Tipo: Melé. Coste: 6 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 3, Defensa 2, Vida 5, Iniciativa 6. Tipo: Melé. Coste: 8 Oro. Habilidades: Ninguna.
+  - Básica: Ataque 3, Defensa 2, Salud 4, Iniciativa 5. Tipo: Melé. Coste: 6 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 2, Salud 5, Iniciativa 6. Tipo: Melé. Coste: 8 Oro. Habilidades: Ninguna.
 
 • Señores del abismo (Tier Plata - Niv. 5)
-  - Básica: Ataque 4, Defensa 1, Vida 6, Iniciativa 6. Tipo: Melé. Coste: 8 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 5, Defensa 1, Vida 6, Iniciativa 7. Tipo: Melé. Coste: 15 Oro. Habilidad: "Alternativo: Una vez por cada combate en el que hayas perdido una unidad, invoca o refuerza <<unos pocos>> demonios."
+  - Básica: Ataque 4, Defensa 1, Salud 6, Iniciativa 6. Tipo: Melé. Coste: 8 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 5, Defensa 1, Salud 6, Iniciativa 7. Tipo: Melé. Coste: 15 Oro. Habilidad: "Alternativo: Una vez por cada combate en el que hayas perdido una unidad, invoca o refuerza <<unos pocos>> demonios."
 
 • Efrits (Tier Oro - Niv. 6)
-  - Básica: Ataque 5, Defensa 1, Vida 7, Iniciativa 9. Tipo: Voladora. Coste: 12 Oro. Habilidad: "Pasivo: Ignora el Daño del hechizo Flecha mágica."
-  - Élite: Ataque 6, Defensa 1, Vida 7, Iniciativa 13. Tipo: Voladora. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Pasivo: Ignora cualquier Daño de la Flecha mágica y hechizos de la escuela de fuego."
+  - Básica: Ataque 5, Defensa 1, Salud 7, Iniciativa 9. Tipo: Voladora. Coste: 12 Oro. Habilidad: "Pasivo: Ignora el Daño del hechizo Flecha mágica."
+  - Élite: Ataque 6, Defensa 1, Salud 7, Iniciativa 13. Tipo: Voladora. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Pasivo: Ignora cualquier Daño de la Flecha mágica y hechizos de la escuela de fuego."
 
 • Archidiablos (Tier Oro - Niv. 7)
-  - Básica: Ataque 6, Defensa 3, Vida 8, Iniciativa 11. Tipo: Voladora. Coste: 22 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Ignora contraataques."
-  - Élite: Ataque 7, Defensa 3, Vida 9, Iniciativa 15. Tipo: Voladora. Coste: 30 Oro y 2 Objetos de valor. Habilidad: "Al Atacar: Ignora contraataques. Pasivo: Al moverse, los archidiablos se pueden mover a cualquier espacio vacío."
+  - Básica: Ataque 6, Defensa 3, Salud 8, Iniciativa 11. Tipo: Voladora. Coste: 22 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Ignora contraataques."
+  - Élite: Ataque 7, Defensa 3, Salud 9, Iniciativa 15. Tipo: Voladora. Coste: 30 Oro y 2 Objetos de valor. Habilidad: "Al Atacar: Ignora contraataques. Pasivo: Al moverse, los archidiablos se pueden mover a cualquier espacio vacío."
 
 ---
 
 ### 7. BASTIÓN (Stronghold)
 • Goblins (Tier Bronce - Niv. 1)
-  - Básica: Ataque 1, Defensa 0, Vida 4, Iniciativa 6. Tipo: Melé. Coste: 1 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 2, Defensa 0, Vida 4, Iniciativa 7. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
+  - Básica: Ataque 1, Defensa 0, Salud 4, Iniciativa 6. Tipo: Melé. Coste: 1 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 2, Defensa 0, Salud 4, Iniciativa 7. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
 
 • Incursores lupinos (Tier Bronce - Niv. 2)
-  - Básica: Ataque 2, Defensa 0, Vida 3, Iniciativa 7. Tipo: Melé. Coste: 3 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 2, Defensa 0, Vida 4, Iniciativa 8. Tipo: Melé. Coste: 5 Oro. Habilidad: "Al Atacar: Ataca este objetivo otra vez. El segundo ataque se produce después de que el objetivo contraataque (si es posible)."
+  - Básica: Ataque 2, Defensa 0, Salud 3, Iniciativa 7. Tipo: Melé. Coste: 3 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 2, Defensa 0, Salud 4, Iniciativa 8. Tipo: Melé. Coste: 5 Oro. Habilidad: "Al Atacar: Ataca este objetivo otra vez. El segundo ataque se produce después de que el objetivo contraataque (si es posible)."
 
 • Orcos (Tier Bronce - Niv. 3)
-  - Básica: Ataque 2, Defensa 1, Vida 4, Iniciativa 4. Tipo: a Distancia. Coste: 4 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 3, Defensa 1, Vida 5, Iniciativa 5. Tipo: a Distancia. Coste: 7 Oro. Habilidades: Ninguna.
+  - Básica: Ataque 2, Defensa 1, Salud 4, Iniciativa 4. Tipo: a Distancia. Coste: 4 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 1, Salud 5, Iniciativa 5. Tipo: a Distancia. Coste: 7 Oro. Habilidades: Ninguna.
 
 • Ogros (Tier Plata - Niv. 4)
-  - Básica: Ataque 3, Defensa 2, Vida 4, Iniciativa 4. Tipo: Melé. Coste: 6 Oro. Habilidad: "Alternativo: Coloca una ficha +1 Ataque en la unidad Melé o Voladora que elijas durante 2 rondas de combate."
-  - Élite: Ataque 3, Defensa 2, Vida 6, Iniciativa 5. Tipo: Melé. Coste: 8 Oro. Habilidad: "Alternativo: Coloca una ficha +2 Ataque en la unidad Melé o Voladora que elijas durante 2 rondas de combate."
+  - Básica: Ataque 3, Defensa 2, Salud 4, Iniciativa 4. Tipo: Melé. Coste: 6 Oro. Habilidad: "Alternativo: Coloca una ficha +1 Ataque en la unidad Melé o Voladora que elijas durante 2 rondas de combate."
+  - Élite: Ataque 3, Defensa 2, Salud 6, Iniciativa 5. Tipo: Melé. Coste: 8 Oro. Habilidad: "Alternativo: Coloca una ficha +2 Ataque en la unidad Melé o Voladora que elijas durante 2 rondas de combate."
 
 • Aves de trueno (Tier Plata - Niv. 5)
-  - Básica: Ataque 4, Defensa 1, Vida 5, Iniciativa 9. Tipo: Voladora. Coste: 8 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 4, Defensa 1, Vida 6, Iniciativa 11. Tipo: Voladora. Coste: 14 Oro. Habilidad: "Pasivo: Justo después del ataque de esta unidad y antes de un contraataque, tira 1 dado de ataque; con un 0 o +1, inflige 1 Herida al objetivo."
+  - Básica: Ataque 4, Defensa 1, Salud 5, Iniciativa 9. Tipo: Voladora. Coste: 8 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 4, Defensa 1, Salud 6, Iniciativa 11. Tipo: Voladora. Coste: 14 Oro. Habilidad: "Pasivo: Justo después del ataque de esta unidad y antes de un contraataque, tira 1 dado de ataque; con un 0 o +1, inflige 1 Herida al objetivo."
 
 • Cíclopes (Tier Oro - Niv. 6)
-  - Básica: Ataque 5, Defensa 0, Vida 6, Iniciativa 6. Tipo: a Distancia. Coste: 13 Oro. Habilidad: "Alternativo: Esta unidad puede destruir un muro o la puerta."
-  - Élite: Ataque 5, Defensa 1, Vida 7, Iniciativa 8. Tipo: a Distancia. Coste: 17 Oro y 1 Objeto de valor. Habilidad: "Alternativo: Esta unidad puede destruir un muro, puerta o torre de arqueros."
+  - Básica: Ataque 5, Defensa 0, Salud 6, Iniciativa 6. Tipo: a Distancia. Coste: 13 Oro. Habilidad: "Alternativo: Esta unidad puede destruir un muro o la puerta."
+  - Élite: Ataque 5, Defensa 1, Salud 7, Iniciativa 8. Tipo: a Distancia. Coste: 17 Oro y 1 Objeto de valor. Habilidad: "Alternativo: Esta unidad puede destruir un muro, puerta o torre de arqueros."
 
 • Behemoths (Tier Oro - Niv. 7)
-  - Básica: Ataque 6, Defensa 2, Vida 9, Iniciativa 6. Tipo: Melé. Coste: 19 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Disminuye la Defensa del objetivo en 1 (hasta un mínimo de 0)."
-  - Élite: Ataque 7, Defensa 2, Vida 10, Iniciativa 9. Tipo: Melé. Coste: 29 Oro y 2 Objetos de valor. Habilidad: "Al Atacar: Disminuye la Defensa del objetivo en 2 (hasta un mínimo de 0). Después del ataque, pon 1 ficha de corrosión en el objetivo."
+  - Básica: Ataque 6, Defensa 2, Salud 9, Iniciativa 6. Tipo: Melé. Coste: 19 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Disminuye la Defensa del objetivo en 1 (hasta un mínimo de 0)."
+  - Élite: Ataque 7, Defensa 2, Salud 10, Iniciativa 9. Tipo: Melé. Coste: 29 Oro y 2 Objetos de valor. Habilidad: "Al Atacar: Disminuye la Defensa del objetivo en 2 (hasta un mínimo de 0). Después del ataque, pon 1 ficha de corrosión en el objetivo."
 
 ---
 
 ### 8. FORTALEZA (Fortress)
 • Gnolls (Tier Bronce - Niv. 1)
-  - Básica: Ataque 2, Defensa 1, Vida 3, Iniciativa 4. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 2, Defensa 1, Vida 4, Iniciativa 5. Tipo: Melé. Coste: 3 Oro. Habilidades: Ninguna.
+  - Básica: Ataque 2, Defensa 1, Salud 3, Iniciativa 4. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 2, Defensa 1, Salud 4, Iniciativa 5. Tipo: Melé. Coste: 3 Oro. Habilidades: Ninguna.
 
 • Hombres lagarto (Tier Bronce - Niv. 2)
-  - Básica: Ataque 2, Defensa 0, Vida 3, Iniciativa 4. Tipo: a Distancia. Coste: 3 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 3, Defensa 0, Vida 3, Iniciativa 5. Tipo: a Distancia. Coste: 5 Oro. Habilidades: Ninguna.
+  - Básica: Ataque 2, Defensa 0, Salud 3, Iniciativa 4. Tipo: a Distancia. Coste: 3 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 0, Salud 3, Iniciativa 5. Tipo: a Distancia. Coste: 5 Oro. Habilidades: Ninguna.
 
 • Libélulas (Tier Bronce - Niv. 3)
-  - Básica: Ataque 3, Defensa 0, Vida 3, Iniciativa 8. Tipo: Voladora. Coste: 4 Oro. Habilidad: "Al Atacar: Retira todos los efectos Continuos que el enemigo ha jugado sobre el objetivo."
-  - Élite: Ataque 3, Defensa 1, Vida 3, Iniciativa 12. Tipo: Voladora. Coste: 7 Oro. Habilidad: "Al Atacar: Retira todos los efectos Continuos que el enemigo ha jugado sobre el objetivo. Si el objetivo contraataca, sufre -1 Ataque."
+  - Básica: Ataque 3, Defensa 0, Salud 3, Iniciativa 8. Tipo: Voladora. Coste: 4 Oro. Habilidad: "Al Atacar: Retira todos los efectos Continuos que el enemigo ha jugado sobre el objetivo."
+  - Élite: Ataque 3, Defensa 1, Salud 3, Iniciativa 12. Tipo: Voladora. Coste: 7 Oro. Habilidad: "Al Atacar: Retira todos los efectos Continuos que el enemigo ha jugado sobre el objetivo. Si el objetivo contraataca, sufre -1 Ataque."
 
 • Basiliscos (Tier Plata - Niv. 4)
-  - Básica: Ataque 4, Defensa 1, Vida 4, Iniciativa 5. Tipo: Melé. Coste: 6 Oro. Habilidad: "Al Atacar: Con un resultado -1 en el dado de ataque la unidad atacada recibe una ficha Parálisis."
-  - Élite: Ataque 4, Defensa 1, Vida 5, Iniciativa 7. Tipo: Melé. Coste: 9 Oro. Habilidad: "Al Atacar: Con un resultado -1 en el dado de ataque la unidad atacada recibe una ficha Parálisis."
+  - Básica: Ataque 4, Defensa 1, Salud 4, Iniciativa 5. Tipo: Melé. Coste: 6 Oro. Habilidad: "Al Atacar: Con un resultado -1 en el dado de ataque la unidad atacada recibe una ficha Parálisis."
+  - Élite: Ataque 4, Defensa 1, Salud 5, Iniciativa 7. Tipo: Melé. Coste: 9 Oro. Habilidad: "Al Atacar: Con un resultado -1 en el dado de ataque la unidad atacada recibe una ficha Parálisis."
 
 • Gorgonas (Tier Plata - Niv. 5)
-  - Básica: Ataque 4, Defensa 2, Vida 5, Iniciativa 5. Tipo: Melé. Coste: 9 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 5, Defensa 2, Vida 5, Iniciativa 6. Tipo: Melé. Coste: 14 Oro. Habilidad: "Al Atacar: Después del ataque, lanza 2 dados de ataque; si sacas un doble 0, reduce los Puntos de Salud de la unidad objetivo a 0."
+  - Básica: Ataque 4, Defensa 2, Salud 5, Iniciativa 5. Tipo: Melé. Coste: 9 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 5, Defensa 2, Salud 5, Iniciativa 6. Tipo: Melé. Coste: 14 Oro. Habilidad: "Al Atacar: Después del ataque, lanza 2 dados de ataque; si sacas un doble 0, reduce los Puntos de Salud de la unidad objetivo a 0."
 
 • Wyverns (Tier Oro - Niv. 6)
-  - Básica: Ataque 5, Defensa 1, Vida 8, Iniciativa 7. Tipo: Voladora. Coste: 12 Oro. Habilidad: "Al Atacar: Coloca 1 cubo de facción sobre el objetivo. Al comienzo de su activación retíralo para infligirle 1 Herida."
-  - Élite: Ataque 6, Defensa 1, Vida 8, Iniciativa 11. Tipo: Voladora. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Coloca 2 cubos de facción sobre el objetivo. Al comienzo de cada activación, retira 1 para infligirle 1 Herida."
+  - Básica: Ataque 5, Defensa 1, Salud 8, Iniciativa 7. Tipo: Voladora. Coste: 12 Oro. Habilidad: "Al Atacar: Coloca 1 cubo de facción sobre el objetivo. Al comienzo de su activación retíralo para infligirle 1 Herida."
+  - Élite: Ataque 6, Defensa 1, Salud 8, Iniciativa 11. Tipo: Voladora. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Coloca 2 cubos de facción sobre el objetivo. Al comienzo de cada activación, retira 1 para infligirle 1 Herida."
 
 • Hidras (Tier Oro - Niv. 7)
-  - Básica: Ataque 6, Defensa 3, Vida 8, Iniciativa 5. Tipo: Melé. Coste: 20 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Ignora el contraataque."
-  - Élite: Ataque 7, Defensa 3, Vida 10, Iniciativa 7. Tipo: Melé. Coste: 28 Oro y 2 Objetos de valor. Habilidad: "Al Atacar: Ignora el contraataque. Esta unidad ataca a hasta 2 unidades enemigas adyacentes."
+  - Básica: Ataque 6, Defensa 3, Salud 8, Iniciativa 5. Tipo: Melé. Coste: 20 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Ignora el contraataque."
+  - Élite: Ataque 7, Defensa 3, Salud 10, Iniciativa 7. Tipo: Melé. Coste: 28 Oro y 2 Objetos de valor. Habilidad: "Al Atacar: Ignora el contraataque. Esta unidad ataca a hasta 2 unidades enemigas adyacentes."
 
 ---
 
 ### 9. CONFLUENCIA (Conflux)
 • Hadas (Tier Bronce - Niv. 1)
-  - Básica: Ataque 2, Defensa 0, Vida 2, Iniciativa 7. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 2, Defensa 0, Vida 4, Iniciativa 9. Tipo: Melé. Coste: 4 Oro. Habilidad: "Al Atacar: Ignora los contraataques."
+  - Básica: Ataque 2, Defensa 0, Salud 2, Iniciativa 7. Tipo: Melé. Coste: 2 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 2, Defensa 0, Salud 4, Iniciativa 9. Tipo: Melé. Coste: 4 Oro. Habilidad: "Al Atacar: Ignora los contraataques."
 
 • Elementales de la tormenta (Tier Bronce - Niv. 2)
-  - Básica: Ataque 2, Defensa 0, Vida 3, Iniciativa 7. Tipo: a Distancia. Coste: 3 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 2, Defensa 0, Vida 5, Iniciativa 8. Tipo: a Distancia. Coste: 5 Oro. Habilidad: "Al Atacar: Añade +1 Potencia al primer hechizo de magia de aire que lances durante esta activación."
+  - Básica: Ataque 2, Defensa 0, Salud 3, Iniciativa 7. Tipo: a Distancia. Coste: 3 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 2, Defensa 0, Salud 5, Iniciativa 8. Tipo: a Distancia. Coste: 5 Oro. Habilidad: "Al Atacar: Añade +1 Potencia al primer hechizo de magia de aire que lances durante esta activación."
 
 • Elementales de hielo (Tier Bronce - Niv. 3)
-  - Básica: Ataque 2, Defensa 1, Vida 4, Iniciativa 5. Tipo: a Distancia. Coste: 4 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 3, Defensa 1, Vida 5, Iniciativa 6. Tipo: a Distancia. Coste: 7 Oro. Habilidad: "Activación: Añade +1 Potencia al primer hechizo de magia de agua que lances durante esta activación."
+  - Básica: Ataque 2, Defensa 1, Salud 4, Iniciativa 5. Tipo: a Distancia. Coste: 4 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 1, Salud 5, Iniciativa 6. Tipo: a Distancia. Coste: 7 Oro. Habilidad: "Activación: Añade +1 Potencia al primer hechizo de magia de agua que lances durante esta activación."
 
 • Elementales de energía (Tier Plata - Niv. 4)
-  - Básica: Ataque 3, Defensa 1, Vida 5, Iniciativa 5. Tipo: Melé. Coste: 6 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 4, Defensa 1, Vida 5, Iniciativa 8. Tipo: Melé. Coste: 8 Oro. Habilidad: "Activación: Añade +1 Potencia al primer hechizo de magia de fuego que lances."
+  - Básica: Ataque 3, Defensa 1, Salud 5, Iniciativa 5. Tipo: Melé. Coste: 6 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 4, Defensa 1, Salud 5, Iniciativa 8. Tipo: Melé. Coste: 8 Oro. Habilidad: "Activación: Añade +1 Potencia al primer hechizo de magia de fuego que lances."
 
 • Elementales de magma (Tier Plata - Niv. 5)
-  - Básica: Ataque 4, Defensa 2, Vida 5, Iniciativa 4. Tipo: Melé. Coste: 9 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 5, Defensa 2, Vida 5, Iniciativa 6. Tipo: Melé. Coste: 13 Oro. Habilidad: "Activación: Añade +1 Potencia al primer hechizo de magia tierra que lances durante esta activación."
+  - Básica: Ataque 4, Defensa 2, Salud 5, Iniciativa 4. Tipo: Melé. Coste: 9 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 5, Defensa 2, Salud 5, Iniciativa 6. Tipo: Melé. Coste: 13 Oro. Habilidad: "Activación: Añade +1 Potencia al primer hechizo de magia tierra que lances durante esta activación."
 
 • Elementales mágicos (Tier Oro - Niv. 6)
-  - Básica: Ataque 4, Defensa 2, Vida 7, Iniciativa 7. Tipo: Melé. Coste: 13 Oro. Habilidad: "Al Atacar: Ignora los contraataques. Ataca a todas las unidades adyacentes."
-  - Élite: Ataque 5, Defensa 2, Vida 7, Iniciativa 9. Tipo: Melé. Coste: 19 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Ignora los contraataques. Ataca todas las unidades enemigas adyacentes. Pasivo: Ignora cualquier efecto de Hechizo y Daño de especialidad."
+  - Básica: Ataque 4, Defensa 2, Salud 7, Iniciativa 7. Tipo: Melé. Coste: 13 Oro. Habilidad: "Al Atacar: Ignora los contraataques. Ataca a todas las unidades adyacentes."
+  - Élite: Ataque 5, Defensa 2, Salud 7, Iniciativa 9. Tipo: Melé. Coste: 19 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: Ignora los contraataques. Ataca todas las unidades enemigas adyacentes. Pasivo: Ignora cualquier efecto de Hechizo y Daño de especialidad."
 
 • Fénix (Tier Oro - Niv. 7)
-  - Básica: Ataque 6, Defensa 2, Vida 7, Iniciativa 12. Tipo: Voladora. Coste: 21 Oro y 1 Objeto de valor. Habilidad: "Pasivo: Una vez por combate. Cuando los PS de esta unidad se reduzcan a 0, ponlos en 1. Pasivo: Inmunes a los Hechizos de magia de fuego."
-  - Élite: Ataque 7, Defensa 2, Vida 8, Iniciativa 18. Tipo: Voladora. Coste: 29 Oro y 2 Objetos de valor. Habilidad: "Al Atacar: Ataca 2 espacios en una línea. El primer ataque se resuelve normalmente y el segundo tiene 2 Ataque. Pasivo: Inmunes a los Hechizos de magia de fuego."
+  - Básica: Ataque 6, Defensa 2, Salud 7, Iniciativa 12. Tipo: Voladora. Coste: 21 Oro y 1 Objeto de valor. Habilidad: "Pasivo: Una vez por combate. Cuando los PS de esta unidad se reduzcan a 0, ponlos en 1. Pasivo: Inmunes a los Hechizos de magia de fuego."
+  - Élite: Ataque 7, Defensa 2, Salud 8, Iniciativa 18. Tipo: Voladora. Coste: 29 Oro y 2 Objetos de valor. Habilidad: "Al Atacar: Ataca 2 espacios en una línea. El primer ataque se resuelve normalmente y el segundo tiene 2 Ataque. Pasivo: Inmunes a los Hechizos de magia de fuego."
 
 ---
 
 ### 10. CALA (Cove)
 • Oceánidos (Tier Bronce - Niv. 1)
-  - Básica: Ataque 2, Defensa 0, Vida 3, Iniciativa 6. Tipo: Voladora. Coste: 2 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 3, Defensa 0, Vida 3, Iniciativa 8. Tipo: Voladora. Coste: 3 Oro. Habilidad: "Pasivo: Ignora todos los efectos y Daño de un Hechizo de magia de agua."
+  - Básica: Ataque 2, Defensa 0, Salud 3, Iniciativa 6. Tipo: Voladora. Coste: 2 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 0, Salud 3, Iniciativa 8. Tipo: Voladora. Coste: 3 Oro. Habilidad: "Pasivo: Ignora todos los efectos y Daño de un Hechizo de magia de agua."
 
 • Marineros (Tier Bronce - Niv. 2)
-  - Básica: Ataque 2, Defensa 1, Vida 3, Iniciativa 5. Tipo: Melé. Coste: 3 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 2, Defensa 1, Vida 5, Iniciativa 6. Tipo: Melé. Coste: 5 Oro. Habilidad: "Pasivo: Una vez por combate, cuando esta unidad retira una unidad del combate, gana 2 Oros."
+  - Básica: Ataque 2, Defensa 1, Salud 3, Iniciativa 5. Tipo: Melé. Coste: 3 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 2, Defensa 1, Salud 5, Iniciativa 6. Tipo: Melé. Coste: 5 Oro. Habilidad: "Pasivo: Una vez por combate, cuando esta unidad retira una unidad del combate, gana 2 Oros."
 
 • Lobos de mar (Tier Bronce - Niv. 3)
-  - Básica: Ataque 2, Defensa 0, Vida 4, Iniciativa 6. Tipo: a Distancia. Coste: 4 Oro. Habilidad: "Pasivo: Ignora la penalización de combate contra unidades adyacentes."
-  - Élite: Ataque 3, Defensa 0, Vida 5, Iniciativa 8. Tipo: a Distancia. Coste: 6 Oro. Habilidad: "Al Atacar: Ignora los contraataques. Pasivo: Ignora la penalización de combate contra unidades adyacentes."
+  - Básica: Ataque 2, Defensa 0, Salud 4, Iniciativa 6. Tipo: a Distancia. Coste: 4 Oro. Habilidad: "Pasivo: Ignora la penalización de combate contra unidades adyacentes."
+  - Élite: Ataque 3, Defensa 0, Salud 5, Iniciativa 8. Tipo: a Distancia. Coste: 6 Oro. Habilidad: "Al Atacar: Ignora los contraataques. Pasivo: Ignora la penalización de combate contra unidades adyacentes."
 
 • Ayssids (Tier Plata - Niv. 4)
-  - Básica: Ataque 3, Defensa 1, Vida 5, Iniciativa 9. Tipo: Voladora. Coste: 6 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 3, Defensa 1, Vida 6, Iniciativa 11. Tipo: Voladora. Coste: 10 Oro. Habilidad: "Al Atacar: Si los Puntos de salud del objetivo se reducen a 0, después de resolver el Contraataque (si corresponde), los Ayssids pueden atacar a otra unidad adyacente."
+  - Básica: Ataque 3, Defensa 1, Salud 5, Iniciativa 9. Tipo: Voladora. Coste: 6 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 3, Defensa 1, Salud 6, Iniciativa 11. Tipo: Voladora. Coste: 10 Oro. Habilidad: "Al Atacar: Si los Puntos de salud del objetivo se reducen a 0, después de resolver el Contraataque (si corresponde), los Ayssids pueden atacar a otra unidad adyacente."
 
 • Hechiceras (Tier Plata - Niv. 5)
-  - Básica: Ataque 3, Defensa 1, Vida 5, Iniciativa 6. Tipo: a Distancia. Coste: 8 Oro. Habilidad: "Alternativo: Coloca una ficha de debilidad <<-2>> sobre cualquier unidad durante 2 rondas de combate."
-  - Élite: Ataque 4, Defensa 1, Vida 6, Iniciativa 7. Tipo: a Distancia. Coste: 13 Oro. Habilidad: "Al Atacar: Después del ataque, coloca una ficha de Debilidad <<-1>> sobre el objetivo durante 2 rondas de combate."
+  - Básica: Ataque 3, Defensa 1, Salud 5, Iniciativa 6. Tipo: a Distancia. Coste: 8 Oro. Habilidad: "Alternativo: Coloca una ficha de debilidad <<-2>> sobre cualquier unidad durante 2 rondas de combate."
+  - Élite: Ataque 4, Defensa 1, Salud 6, Iniciativa 7. Tipo: a Distancia. Coste: 13 Oro. Habilidad: "Al Atacar: Después del ataque, coloca una ficha de Debilidad <<-1>> sobre el objetivo durante 2 rondas de combate."
 
 • Nix (Tier Oro - Niv. 6)
-  - Básica: Ataque 5, Defensa 2, Vida 7, Iniciativa 6. Tipo: Melé. Coste: 12 Oro. Habilidades: Ninguna.
-  - Élite: Ataque 6, Defensa 2, Vida 8, Iniciativa 7. Tipo: Melé. Coste: 20 Oro y 1 Objeto de valor. Habilidad: "Pasivo: Esta unidad no puede recibir más de 4 Heridas de un solo ataque."
+  - Básica: Ataque 5, Defensa 2, Salud 7, Iniciativa 6. Tipo: Melé. Coste: 12 Oro. Habilidades: Ninguna.
+  - Élite: Ataque 6, Defensa 2, Salud 8, Iniciativa 7. Tipo: Melé. Coste: 20 Oro y 1 Objeto de valor. Habilidad: "Pasivo: Esta unidad no puede recibir más de 4 Heridas de un solo ataque."
 
 • Háspidos (Tier Oro - Niv. 7)
-  - Básica: Ataque 5, Defensa 3, Vida 8, Iniciativa 9. Tipo: Melé. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: +2 Ataque si, durante este combate, esta unidad se giró del lado de manada al lado de unos pocos."
-  - Élite: Ataque 7, Defensa 3, Vida 8, Iniciativa 12. Tipo: Melé. Coste: 30 Oro y 2 Objetos de valor. Habilidad: "Al Atacar: Coloca 2 cubos de facción sobre el objetivo. Al comienzo de cada una de sus activaciones, retira 1 de ellos para infligir 1 Herida."
+  - Básica: Ataque 5, Defensa 3, Salud 8, Iniciativa 9. Tipo: Melé. Coste: 18 Oro y 1 Objeto de valor. Habilidad: "Al Atacar: +2 Ataque si, durante este combate, esta unidad se giró del lado de manada al lado de unos pocos."
+  - Élite: Ataque 7, Defensa 3, Salud 8, Iniciativa 12. Tipo: Melé. Coste: 30 Oro y 2 Objetos de valor. Habilidad: "Al Atacar: Coloca 2 cubos de facción sobre el objetivo. Al comienzo de cada una de sus activaciones, retira 1 de ellos para infligir 1 Herida."
 
 ---
 
 ### 11. INVOCACIONES (Summons)
 • Elementales de aire (Niv. 2)
-  - Básica: Ataque 2, Defensa 0, Vida 4, Iniciativa 8. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de aire. Esta unidad inflige daño elemental."
-  - Élite: Ataque 3, Defensa 0, Vida 4, Iniciativa 8. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de aire. Esta unidad inflige daño elemental."
+  - Básica: Ataque 2, Defensa 0, Salud 4, Iniciativa 8. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de aire. Esta unidad inflige daño elemental."
+  - Élite: Ataque 3, Defensa 0, Salud 4, Iniciativa 8. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de aire. Esta unidad inflige daño elemental."
 
 • Elementales de agua (Niv. 2)
-  - Básica: Ataque 2, Defensa 0, Vida 5, Iniciativa 6. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de agua. Esta unidad inflige daño elemental."
-  - Élite: Ataque 3, Defensa 0, Vida 5, Iniciativa 6. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de agua. Esta unidad inflige daño elemental."
+  - Básica: Ataque 2, Defensa 0, Salud 5, Iniciativa 6. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de agua. Esta unidad inflige daño elemental."
+  - Élite: Ataque 3, Defensa 0, Salud 5, Iniciativa 6. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de agua. Esta unidad inflige daño elemental."
 
 • Elementales de fuego (Niv. 3)
-  - Básica: Ataque 2, Defensa 1, Vida 4, Iniciativa 5. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de fuego. Esta unidad inflige daño elemental."
-  - Élite: Ataque 3, Defensa 1, Vida 4, Iniciativa 5. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de fuego. Esta unidad inflige daño elemental."
+  - Básica: Ataque 2, Defensa 1, Salud 4, Iniciativa 5. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de fuego. Esta unidad inflige daño elemental."
+  - Élite: Ataque 3, Defensa 1, Salud 4, Iniciativa 5. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de fuego. Esta unidad inflige daño elemental."
 
 • Elementales de tierra (Niv. 3)
-  - Básica: Ataque 2, Defensa 2, Vida 2, Iniciativa 5. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de tierra. Esta unidad inflige daño elemental."
-  - Élite: Ataque 3, Defensa 2, Vida 2, Iniciativa 5. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de tierra. Esta unidad inflige daño elemental."`
+  - Básica: Ataque 2, Defensa 2, Salud 2, Iniciativa 5. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de tierra. Esta unidad inflige daño elemental."
+  - Élite: Ataque 3, Defensa 2, Salud 2, Iniciativa 5. Tipo: Melé. Habilidad: "Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de tierra. Esta unidad inflige daño elemental."`
+  },
+  {
+    id: "faq_creatures_units",
+    title: "FAQs: Criaturas y Unidades",
+    category: "faq",
+    content: `Aclaraciones oficiales y preguntas frecuentes sobre el despliegue, combate, habilidades pasivas y especiales de las unidades en el tablero táctico.
+
+P: Si dos unidades empatan en su valor de Iniciativa, ¿cuál actúa primero en el track de combate?
+R: En caso de empate numérico exacto en la Iniciativa, el empate se resuelve siempre a favor del Defensor. La unidad defensora se activará primero en el track de iniciativa de esa ronda de combate táctico.
+
+P: ¿La estadística de Defensa mitiga el daño en cada ataque individual que reciba una unidad?
+R: Sí. El valor de Defensa de la criatura resta heridas directas en cada ataque individual recibido en la misma ronda de combate. Si tu unidad sufre tres ataques cuerpo a cuerpo seguidos por enemigos diferentes en el mismo turno, su Defensa se aplica las tres veces de forma independiente para mitigar el daño de cada ataque.
+
+P: ¿Cuándo y cuántas veces se puede realizar un ataque de represalia en combate táctico?
+R: Cualquier unidad que sobreviva a un ataque físico cuerpo a cuerpo (melé) y no haya contraatacado en la ronda de combate actual debe realizar un ataque de represalia inmediato contra su atacante. Cada unidad puede contraatacar exactamente una vez por ronda. Tras hacerlo, se le coloca un marcador para indicarlo.
+- Las unidades atacadas por criaturas con la habilidad especial de "Sin Represalia" (ej. Arpías de élite o Vampiros básicos) no pueden contraatacar.
+- Los ataques con proyectiles de tiradores a distancia nunca desencadenan represalias físicas.
+- Los Grifos y Grifos Reales ignoran el límite habitual y pueden contraatacar de forma ilimitada a todas las agresiones físicas cuerpo a cuerpo que reciban.
+
+P: ¿Qué penalizaciones sufren las unidades a distancia (Tiradores) en combate cuerpo a cuerpo?
+R: Si un tirador tiene a una unidad enemiga adyacente en el tablero táctico de batalla:
+1. Pierde la facultad de realizar disparos a distancia a cualquier otra casilla.
+2. Se ve obligado a atacar físicamente en melé a la unidad enemiga adyacente.
+3. El daño físico infligido se reduce a la mitad (redondeado hacia abajo) de su valor base.
+- Excepción: Las unidades con la habilidad pasiva "Sin penalización en cuerpo a cuerpo" (ej. Fanáticos de élite u Ojos Maléficos mejorados) ignoran esta reducción y golpean con todo su poder de ataque.
+
+P: ¿Cómo funciona el coste de refuerzo y la mejora de unidades a rango Élite?
+R: Las cartas de unidad son de doble cara (cara Básica y cara de Élite mejorada):
+- Promoción/Refuerzo: Si tienes una unidad básica en tu ejército activo y quieres mejorarla, debes visitar tu Metrópolis natal, pagar la diferencia exacta en recursos (Oro, etc.) entre ambas caras y voltear la carta a su lado de Élite.
+- Reclutamiento de Élite Directo: Si ya has construido el Castillo y las viviendas mejoradas del regimiento, puedes alistar directamente la unidad en su versión de Élite pagando su coste de Élite completo.
+
+P: ¿Cómo recupero mis unidades que han caído en combate táctico?
+R: Las unidades derrotadas van a tu pila de bajas personal. Durante tu Fase de Planificación, puedes realizar la acción de Reclutar en tu ciudad, pagando el coste total de Oro de las unidades disponibles en tus viviendas construidas para devolverlas a tu ejército activo.`
+  },
+  {
+    id: "faq_gameplay_mechanics",
+    title: "FAQs: Mecánicas de Juego y Exploración",
+    category: "faq",
+    content: `Resolución de dudas sobre el movimiento en el mapa de aventura, la gestión del tiempo y la construcción en la ciudad.
+
+P: ¿Cómo se calculan de forma exacta los Puntos de Movimiento (PM) al iniciar el turno?
+R: Tu héroe recibe una base de 3 Puntos de Movimiento (PM) de forma predeterminada al comenzar la ronda. Esta base se modifica de la siguiente forma:
+1. Establos: Si tu héroe inicia su turno en una ciudad con Establos construidos, o si visitó la loseta de Establos en el mapa de aventura durante la ronda anterior, gana +1 PM adicional para todo el turno.
+2. Habilidad de Logística: Jugar el nivel Experto de la habilidad de Logística te concede un aumento de +1 PM para ese turno. El nivel Básico te permite moverte de forma gratuita un hexágono al final del turno.
+3. Penalizaciones por Terreno: Las casillas de pantano, nieve profunda o barro denso consumen 2 PM por hexágono en lugar de 1 PM, a menos que poseas la habilidad de Buscador de Caminos experto o uses hechizos utilitarios como "Volar" o "Caminar sobre el Agua".
+
+P: ¿Pueden dos héroes míos ocupar el mismo hexágono del mapa de aventura?
+R: No. El reglamento prohíbe terminantemente que dos figuras de héroe compartan el mismo hexágono o casilla de mapa al final de un movimiento. No obstante, puedes cruzar libremente a través de las casillas ocupadas por tus propios héroes durante tu fase de movimiento, siempre que finalices tu trayecto en una casilla totalmente vacía.
+
+P: ¿Puedo construir múltiples edificios en el mismo turno si dispongo de recursos suficientes?
+R: No. El reglamento limita estrictamente el desarrollo urbano a exactamente una estructura construida por ronda durante tu Fase de Planificación, pagando los costes correspondientes en Oro, Madera, Mineral o Valiosos en tu track de recursos de ciudad.`
+  },
+  {
+    id: "faq_skills_specialties",
+    title: "FAQs: Habilidades y Especialidades",
+    category: "faq",
+    content: `Dudas sobre las maestrías de los héroes, especialidades de combate y las 32 habilidades secundarias de Erathia.
+
+P: ¿Las cartas de Especialidad asimétrica de mi héroe consumen mi límite de lanzamiento de hechizos en combate?
+R: No. Las cartas de Especialidad (adquiridas en los niveles IV y VI) representan el entrenamiento militar o místico exclusivo y asimétrico de tu héroe. No se consideran hechizos estándar, por lo que jugarlas no consume tu límite de lanzar un único hechizo por ronda de combate, ni requieren poseer un Libro de Hechizos activo de la cofradía de magos.
+
+P: ¿Cómo funciona el aumento del límite de mano al subir de nivel?
+R: Al subir de nivel en tu pista de Experiencia, tu héroe incrementa pasivamente su límite de cartas en mano al reponer (indicado en el track de nivel). Esto te permite mantener más cartas tácticas, estadísticas y artefactos listos para usar durante la Fase de Planificación de cada ronda.
+
+P: ¿Se puede usar la habilidad de Artillería con cualquier máquina de guerra del juego?
+R: No. La habilidad de Artillería afecta de forma muy selectiva: su nivel básico inflige 1 herida directa a la unidad enemiga de menor iniciativa en el tablero, y su nivel experto potencia única y exclusivamente los disparos de la Balista (permitiendo resolver su disparo 3 veces consecutivas al mismo objetivo). No otorga ninguna bonificación a la Catapulta ni al Carro de Municiones.`
+  },
+  {
+    id: "faq_game_modes",
+    title: "FAQs: Modos de Juego y Alianzas",
+    category: "faq",
+    content: `Aclaraciones sobre las modalidades Cooperativa, Campaña, Alianzas (2v2) y las condiciones de eliminación de jugadores.
+
+P: ¿Cómo funciona el intercambio de recursos y artefactos en el modo Alianza (2v2)?
+R: En el modo Alianza, las reglas de comercio y transferencia se flexibilizan notablemente:
+- El comercio de recursos (Oro, Madera, Mineral, Valiosos) es libre y sin costes en cualquier momento de la ronda.
+- El intercambio de cartas de Artefacto está permitido siempre que los héroes de ambos aliados finalicen su movimiento en casillas adyacentes del mapa de aventura.
+- Está estrictamente prohibido atacar o bloquear el paso al héroe de tu aliado, así como flaggear (reclamar) minas que ya pertenezcan a tu compañero de equipo.
+
+P: ¿Cuáles son las condiciones oficiales de Eliminación Directa de la partida?
+R: Existen dos vías reglamentarias oficiales por las que sufres la eliminación directa e irreversible de la partida:
+1. Sin Base Operativa: Pasar 3 rondas completas de juego consecutivas sin controlar al menos una ciudad o un asentamiento en el mapa de aventura.
+2. Derrota del Héroe Principal sin Base: Perder un combate táctico con tu Héroe Principal cuando no te quede bajo control ninguna ciudad o asentamiento en el mapa de aventura (esto incluye perder a tu héroe defendiendo tu última ciudad de un asedio enemigo).
+
+P: ¿Qué ocurre con mis componentes y mazo si soy eliminado de la partida?
+R: Al ser eliminado:
+- Se descartan permanentemente tus Cubos de Facción y tu figura de héroe se retira del mapa de aventura.
+- Las cartas de tu mazo de Poder y Magia quedan Retiradas del juego por el resto del escenario actual.
+- El jugador eliminado no queda inactivo en la mesa de juego: asume el control directo de las Unidades Neutrales de la Inteligencia Artificial en todos los combates que libren los jugadores supervivientes, intentando derrotarlos en el tablero táctico.`
+  },
+  {
+    id: "faq_spells_magic",
+    title: "FAQs: Hechizos y Magia",
+    category: "faq",
+    content: `Tratado místico sobre las escuelas elementales, el Conocimiento, el Poder y efectos específicos de los hechizos.
+
+P: ¿Cuál es el límite real de cartas de Hechizo que puedo mantener en mi mano?
+R: Viene determinado estrictamente por la estadística de Conocimiento de tu héroe. Si tu héroe posee 2 de Conocimiento, al reponer cartas durante la Fase de Planificación, no podrás retener más de 2 cartas de Hechizo en tu mano activa.
+
+P: ¿Cómo funciona el hechizo Flecha Mágica contra inmunidades elementales?
+R: La Flecha Mágica es un hechizo neutro y místico:
+- Se beneficia del incremento de daño de cualquier escuela elemental que domines (Aire, Tierra, Fuego o Agua).
+- Al ser un hechizo neutro sin afinidad pura a un elemento, ninguna criatura con inmunidad elemental puede ignorar su daño. Por ejemplo, un Gólem de Hierro o de Acero (inmunes a ciertos elementos) recibirá el daño completo de una Flecha Mágica.
+
+P: ¿Puedo lanzar el hechizo Resurrección para recuperar unidades muertas por magia o por la Torre de Flechas en un asedio?
+R: No. El hechizo de Resurrección (escuela de Tierra) tiene una limitación estricta de FAQs oficiales: solo se puede lanzar para mitigar y sanar el daño infligido por ataques físicos directos de criaturas enemigas en combate táctico.
+- Si tu unidad es eliminada por un hechizo de daño directo (ej. Rayo o Implosión), efectos pasivos (ej. Nubes de Muerte) o la Torre de Flechas en un asedio, no puede ser resucitada.
+- La unidad resucitada vuelve a la batalla pero pierde su contraataque de represalia en esa ronda, aunque no lo hubiese gastado previamente.
+
+P: ¿La limpieza del hechizo Curar me obliga a purgar mis propios bufos beneficiosos activos?
+R: No. Limpiar efectos dañinos con el hechizo Curar (escuela de Agua) es totalmente opcional. Puedes sanar el daño físico y optar por remover una maldición de fuego enemiga, manteniendo intactos tus bufos de Celeridad o Bendición activos sobre la misma unidad.
+
+P: ¿Por qué exige el hechizo Implosión descartar cartas para poder jugarse si ya tengo la carta de hechizo?
+R: El hechizo de Implosión requiere un nivel mínimo de Poder 1 para activarse. Dado que la mayoría de los héroes inician la andadura con Poder 0 en sus estadísticas básicas, el jugador está obligado a realizar la acción de Potenciar (Empower), descartando 1 carta de su mano de juego para sumar +1 de Poder temporal y poder conjurarlo.
+
+P: ¿Cómo interactúa el hechizo Bendecir con las tiradas del dado de ataque?
+R: Bendecir obliga a tu criatura a ignorar la tirada física del dado, aplicando automáticamente el daño máximo listado en su ficha. Dado que no se realiza una tirada física, no se genera ningún resultado del dardo. Cualquier habilidad de una unidad que dependa de caras específicas del dado de ataque (como las bonificaciones al salir un +1 o maldiciones al salir un -1) no puede activarse.`
+  },
+  {
+    id: "faq_artifacts_scrolls",
+    title: "FAQs: Artefactos, Pergaminos y Grial",
+    category: "faq",
+    content: `Resolución de dudas sobre el mazo de tesoros arcanos, reliquias permanentes, pergaminos de hechizos y la excavación del Grial.
+
+P: Al obtener un Artefacto explorando el mapa de aventura, ¿se envía a mi pila de descartes?
+R: No. Existe la Regla Sagrada de Adquisición para las cartas de Artefacto (Menores, Mayores o Reliquias): se añaden directamente a tu mano de juego activa, permitiendo jugarlos inmediatamente en el mismo turno si cumples los requisitos. Una vez jugados y resueltos, se envían a tu pila de descartes del héroe.
+
+P: ¿Se deben equipar los artefactos en ranuras de personaje físicas?
+R: No. En el reglamento básico de mesa no existen ranuras de equipo en el tablero. Los artefactos son cartas que se juegan desde la mano y van al descarte, con la única excepción de las cartas con la etiqueta Permanente (símbolo de candado), que permanecen en mesa boca arriba otorgando efectos continuos hasta que sean descartadas o sustituidas por otras.
+
+P: ¿Cómo funcionan los Pergaminos de Hechizo en la expansión de Conflujo?
+R: La expansión incorpora un sistema exclusivo de Pergaminos con mazo propio de 20 cartas:
+- Al obtener un Pergamino, roba 2 cartas de hechizo comunes y colócalas bocabajo sobre la carta de Pergamino (sin ir a tu mano de hechizos).
+- Puedes lanzar cualquiera de esos hechizos desde el pergamino gastando tu maná de forma habitual.
+- Los hechizos de pergaminos se lanzan siempre en su línea de poder más débil (Poder 0). No se pueden potenciar descartando cartas ni sumar bonus de escuelas mágicas.
+- Un héroe puede controlar un máximo de 2 pergaminos activos simultáneamente. Si adquiere un tercero, debe descartar uno de los activos.
+- Puedes vender pergaminos en cualquier Mercadillo recibiendo 2 de Oro por cada hechizo que aún permanezca sin usar sobre la carta.
+
+P: ¿Cómo funciona exactamente el descubrimiento y excavación del Grial?
+R: El Grial es el elemento místico más poderoso del mapa de aventura. Su excavación se resuelve de la siguiente forma:
+1. Debes visitar los Obeliscos antiguos repartidos por el mapa para ir eliminando coordenadas erróneas de tu mapa de plano místico.
+2. Una vez que determines la casilla exacta del entierro, sitúa a tu Héroe Principal sobre ella.
+3. Gasta 1 PM completo del turno y declara formalmente la acción de Excavar.
+4. Si acertaste, añade la carta del Grial directamente a tu mano. Si fallas, pierdes el PM empleado. Llevar el Grial de vuelta a tu ciudad capital te permite erigir la estructura legendaria del Grial, otorgando +20 de Oro en cada Fase de Recursos y un poder mítico único de facción.`
   }
 ];
