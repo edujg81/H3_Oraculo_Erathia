@@ -3,6 +3,7 @@ import path from "path";
 import dotenv from "dotenv";
 import { GoogleGenAI } from "@google/genai";
 import { rulesKB } from "./src/data/rulesKB.js"; // Note: esbuild handles ts resolution
+import { entityCatalogSummary, getRelevantEntitySections } from "./src/data/knowledgeIndex.js";
 
 dotenv.config();
 
@@ -123,6 +124,21 @@ app.post("/api/chat", async (req, res) => {
 
     // Embed the knowledge base as systemic context
     const kbString = rulesKB.map(section => `### ${section.title}\nCategory: ${section.category}\n${section.content}`).join("\n\n");
+
+    // Detecta héroes / unidades / habilidades / ciudades mencionados en los
+    // últimos mensajes del usuario y añade su ficha completa al contexto.
+    // El catálogo de nombres (entityCatalogSummary) sí se incluye siempre,
+    // pero es barato (solo nombres); el detalle completo (~260 fichas) solo
+    // se añade bajo demanda para no disparar el tamaño/coste del prompt.
+    const recentUserText = messages
+      .filter((m: any) => m.role === "user")
+      .slice(-4)
+      .map((m: any) => m.content)
+      .join("\n");
+    const relevantEntitySections = getRelevantEntitySections(recentUserText);
+    const entityDetailString = relevantEntitySections
+      .map(section => `### ${section.title}\n${section.content}`)
+      .join("\n\n");
     
     // Construct system instructions
     let systemInstruction = `Eres "Sandro el Sabio", un asesor de reglas experto e inteligente para el juego de mesa oficial "Heroes of Might and Magic III: The Board Game" (2022/2024 Archon Studio).
@@ -133,9 +149,14 @@ REGLAS DE RESPUESTA:
 2. Utiliza la BASE DE CONOCIMIENTO proporcionada a continuación para fundamentar tus respuestas de forma precisa. No inventes reglas. Cita secciones de forma natural.
 3. Si la pregunta es sobre traducción (algunos manuales están en inglés), ayuda traduciendo los términos y explicando su equivalencia en español (por ejemplo: "Haspids" son Haspides o Hásspides de la facción de Cove, "Attack token" es ficha de ataque, "Spell scroll" es pergamino de hechizo, "Creature banks" son bancos de criaturas como el Pyramid o Wolf Raider Hive).
 4. Sé conciso y estructurado. Usa negritas y viñetas para que los jugadores en medio de una partida puedan leerte de un solo vistazo.
+5. Además de las reglas, dispones de un catálogo con TODOS los héroes, unidades reclutables, habilidades secundarias y ciudades del juego (ver "CATÁLOGO DISPONIBLE" más abajo). Si el jugador pregunta por un nombre concreto que reconoces en ese catálogo pero no ves su ficha detallada en este mensaje, dile que te dé el nombre exacto para poder consultarlo, en vez de inventarte sus estadísticas o efectos.
 
 === BASE DE CONOCIMIENTO DE REGLAS DE HEROES III ===
 ${kbString}
+
+=== CATÁLOGO DISPONIBLE (héroes, unidades, habilidades, ciudades) ===
+${entityCatalogSummary}
+${entityDetailString ? `\n=== FICHAS DETALLADAS RELEVANTES A LA CONSULTA ACTUAL ===\n${entityDetailString}\n` : ''}
 `;
 
     if (selectedSectionId) {
@@ -144,6 +165,13 @@ ${kbString}
         systemInstruction += `\n\nEl usuario está consultando específicamente la sección: "${section.title}"\nPresta especial atención a detallar este contenido si la pregunta se refiere a él:\n${section.content}`;
       }
     }
+
+    // Log ligero de tamaño del prompt: ayuda a vigilar el coste de tokens
+    // de cada consulta, especialmente cuando se añaden fichas detalladas.
+    console.log(
+      `[chat] prompt ~${systemInstruction.length} chars ` +
+      `(reglas: ${kbString.length}, fichas relevantes: ${relevantEntitySections.length})`
+    );
 
     // Format messages for @google/genai SDK
     // @google/genai contents structure has format: { role: 'user'|'model', parts: [{ text: '...' }] }
