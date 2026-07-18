@@ -95,7 +95,11 @@ const specialStructureHighlight: Record<string, { border: string; glow: string; 
   }
 };
 
-export default function TownsViewer() {
+interface TownsViewerProps {
+  onSelectUnit?: (unitName: string, factionId: string) => void;
+}
+
+export default function TownsViewer({ onSelectUnit }: TownsViewerProps) {
   const [selectedFaction, setSelectedFaction] = useState<string>('castillo');
 
   // Safety fallback
@@ -502,7 +506,10 @@ export default function TownsViewer() {
             <div 
               key={idx} 
               id={`unit-row-${idx}`}
-              className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-3.5 bg-slate-950/40 rounded-2xl border border-slate-900/60 hover:border-slate-850/80 transition-all gap-4"
+              onClick={() => onSelectUnit?.(unit.name, selectedFaction)}
+              className={`flex flex-col sm:flex-row items-start sm:items-center justify-between p-3.5 bg-slate-950/40 rounded-2xl border border-slate-900/60 hover:border-slate-850/80 transition-all gap-4 group ${
+                onSelectUnit ? 'cursor-pointer hover:bg-slate-900/50 hover:border-amber-500/30' : ''
+              }`}
             >
               {/* Left part: Unit name, tier, level and type icon */}
               <div className="flex items-center gap-3">
@@ -522,8 +529,13 @@ export default function TownsViewer() {
                       {getUnitTypeLabel(unit.type as any)}
                     </span>
                   </div>
-                  <h5 className="text-xs md:text-sm font-bold text-slate-200 mt-0.5">
+                  <h5 className="text-xs md:text-sm font-bold text-slate-200 mt-0.5 flex items-center gap-1.5 group-hover:text-amber-400 transition-colors">
                     {unit.name}
+                    {onSelectUnit && (
+                      <span className="text-[9px] bg-amber-500/10 border border-amber-500/25 text-amber-400 px-1.5 py-0.5 rounded-md font-sans opacity-0 group-hover:opacity-100 transition-all duration-200 flex items-center gap-0.5 ml-1.5">
+                        Ver Ficha 👁️
+                      </span>
+                    )}
                   </h5>
                 </div>
               </div>

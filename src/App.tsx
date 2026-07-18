@@ -52,6 +52,7 @@ function TabLoadingFallback() {
 export default function App() {
   const [activeTab, setActiveTab] = useState<'chat' | 'rules' | 'pdf' | 'timer_full' | 'calculator' | 'scenarios' | 'heroes' | 'units' | 'skills' | 'spells' | 'warmachines' | 'locations' | 'towns'>('chat');
   const [selectedSection, setSelectedSection] = useState<RuleSection | null>(null);
+  const [linkedUnitName, setLinkedUnitName] = useState<string | null>(null);
 
   // Unified Timer and Round State (App-Level for clean sync in Bento Sidebar)
   const [round, setRound] = useState(1);
@@ -357,7 +358,10 @@ export default function App() {
 
             {activeTab === 'units' && (
               <div className="space-y-4">
-                <RecruitmentCalculator />
+                <RecruitmentCalculator 
+                  initialUnitName={linkedUnitName}
+                  onClearInitialUnit={() => setLinkedUnitName(null)}
+                />
               </div>
             )}
 
@@ -777,7 +781,12 @@ export default function App() {
 
             {activeTab === 'towns' && (
               <div className="space-y-4 animate-fadeIn">
-                <TownsViewer />
+                <TownsViewer 
+                  onSelectUnit={(unitName) => {
+                    setLinkedUnitName(unitName);
+                    setActiveTab('units');
+                  }}
+                />
               </div>
             )}
 

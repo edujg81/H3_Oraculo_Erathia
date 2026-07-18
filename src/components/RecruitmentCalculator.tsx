@@ -253,11 +253,49 @@ const renderFactionWatermark = (factionId: string, className: string = "w-28 h-2
   }
 };
 
-export default function RecruitmentCalculator() {
+interface RecruitmentCalculatorProps {
+  initialUnitName?: string | null;
+  onClearInitialUnit?: () => void;
+}
+
+export default function RecruitmentCalculator({ initialUnitName, onClearInitialUnit }: RecruitmentCalculatorProps = {}) {
   const [selectedFaction, setSelectedFaction] = useState('castillo');
   const [selectedTier, setSelectedTier] = useState<'bronce' | 'plata' | 'oro' | 'azul'>('bronce');
   const [selectedUnit, setSelectedUnit] = useState<BoardGameUnit | null>(null);
   const [isUpgraded, setIsUpgraded] = useState(false);
+
+  // Handle linking from other views like TownsViewer
+  useEffect(() => {
+    if (initialUnitName) {
+      let foundFaction: string | null = null;
+      let foundUnit: BoardGameUnit | null = null;
+
+      for (const [factionId, units] of Object.entries(FACTION_UNITS)) {
+        const u = units.find(unit => 
+          unit.nameBasic.toLowerCase() === initialUnitName.toLowerCase() || 
+          (unit.nameElite && unit.nameElite.toLowerCase() === initialUnitName.toLowerCase())
+        );
+        if (u) {
+          foundFaction = factionId;
+          foundUnit = u;
+          break;
+        }
+      }
+
+      if (foundFaction && foundUnit) {
+        setSelectedFaction(foundFaction);
+        setSelectedTier(foundUnit.tier);
+        setSelectedUnit(foundUnit);
+        if (foundUnit.nameElite && foundUnit.nameElite.toLowerCase() === initialUnitName.toLowerCase() && foundUnit.nameElite !== foundUnit.nameBasic) {
+          setIsUpgraded(true);
+        } else {
+          setIsUpgraded(false);
+        }
+      }
+
+      onClearInitialUnit?.();
+    }
+  }, [initialUnitName, onClearInitialUnit]);
 
   const factions = [
     { id: 'castillo', name: 'Castillo (Castle)' },
@@ -277,14 +315,16 @@ export default function RecruitmentCalculator() {
 
   // Auto-adjust selected tier when faction changes
   useEffect(() => {
+    if (initialUnitName) return;
     if (selectedFaction !== 'neutrales' && selectedTier === 'azul') {
       setSelectedTier('bronce');
     }
-  }, [selectedFaction, selectedTier]);
+  }, [selectedFaction, selectedTier, initialUnitName]);
 
   // If we change faction and the current tier has no units for it,
   // let's auto-switch to first tier that has units.
   useEffect(() => {
+    if (initialUnitName) return;
     const unitsInThisTier = (FACTION_UNITS[selectedFaction] || []).filter(u => u.tier === selectedTier);
     if (unitsInThisTier.length === 0) {
       const validTiers: ('bronce' | 'plata' | 'oro' | 'azul')[] = ['bronce', 'plata', 'oro', 'azul'];
@@ -293,13 +333,14 @@ export default function RecruitmentCalculator() {
         setSelectedTier(firstValidTier);
       }
     }
-  }, [selectedFaction]);
+  }, [selectedFaction, selectedTier, initialUnitName]);
 
   // Retrieve available units for current faction and tier
   const availableUnits = (FACTION_UNITS[selectedFaction] || []).filter(u => u.tier === selectedTier);
 
   // Sync selected unit when list or tier changes
   useEffect(() => {
+    if (initialUnitName) return;
     if (availableUnits.length > 0) {
       const exists = availableUnits.some(u => u.nameBasic === selectedUnit?.nameBasic);
       if (!exists) {
@@ -308,7 +349,7 @@ export default function RecruitmentCalculator() {
     } else {
       setSelectedUnit(null);
     }
-  }, [selectedFaction, selectedTier, availableUnits, selectedUnit]);
+  }, [selectedFaction, selectedTier, availableUnits, selectedUnit, initialUnitName]);
 
   // Get current stats & cost
   const isSingleSided = selectedFaction === 'neutrales' || selectedFaction === 'bancos';
