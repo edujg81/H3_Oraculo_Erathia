@@ -1,6 +1,8 @@
 {
   "name": "Heroes III - Oráculo de Erathia",
   "description": "Asesor de partidas con chat inteligente y base de conocimiento para Heroes of Might and Magic III: El Juego de Mesa.",
-  "requestFramePermissions": [],
+  "requestFramePermissions": [
+    "microphone"
+  ],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

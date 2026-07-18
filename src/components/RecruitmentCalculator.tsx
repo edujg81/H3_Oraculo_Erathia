@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Shield, Sparkles, HelpCircle, Swords, Heart, Zap, Compass, RefreshCw, Star, Info } from 'lucide-react';
+import { Shield, Sparkles, HelpCircle, Swords, Heart, Zap, Compass, RefreshCw, Star, Info, Feather, Target } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 import { UnitStats, BoardGameUnit, FactionsUnitsData, FACTION_UNITS, BASE_COSTS, UNIT_DETAILS } from '../data/unitsData';
@@ -263,6 +263,7 @@ export default function RecruitmentCalculator({ initialUnitName, onClearInitialU
   const [selectedTier, setSelectedTier] = useState<'bronce' | 'plata' | 'oro' | 'azul'>('bronce');
   const [selectedUnit, setSelectedUnit] = useState<BoardGameUnit | null>(null);
   const [isUpgraded, setIsUpgraded] = useState(false);
+  const [selectedTypeFilter, setSelectedTypeFilter] = useState<'todos' | 'Melé' | 'Voladora' | 'a Distancia'>('todos');
 
   // Handle linking from other views like TownsViewer
   useEffect(() => {
@@ -286,6 +287,7 @@ export default function RecruitmentCalculator({ initialUnitName, onClearInitialU
         setSelectedFaction(foundFaction);
         setSelectedTier(foundUnit.tier);
         setSelectedUnit(foundUnit);
+        setSelectedTypeFilter('todos');
         if (foundUnit.nameElite && foundUnit.nameElite.toLowerCase() === initialUnitName.toLowerCase() && foundUnit.nameElite !== foundUnit.nameBasic) {
           setIsUpgraded(true);
         } else {
@@ -336,7 +338,14 @@ export default function RecruitmentCalculator({ initialUnitName, onClearInitialU
   }, [selectedFaction, selectedTier, initialUnitName]);
 
   // Retrieve available units for current faction and tier
-  const availableUnits = (FACTION_UNITS[selectedFaction] || []).filter(u => u.tier === selectedTier);
+  const rawAvailableUnits = (FACTION_UNITS[selectedFaction] || []).filter(u => u.tier === selectedTier);
+
+  // Filter by unit type
+  const availableUnits = rawAvailableUnits.filter(unit => {
+    if (selectedTypeFilter === 'todos') return true;
+    const stats = UNIT_DETAILS[unit.nameBasic]?.basic;
+    return stats?.type === selectedTypeFilter;
+  });
 
   // Sync selected unit when list or tier changes
   useEffect(() => {
@@ -349,7 +358,7 @@ export default function RecruitmentCalculator({ initialUnitName, onClearInitialU
     } else {
       setSelectedUnit(null);
     }
-  }, [selectedFaction, selectedTier, availableUnits, selectedUnit, initialUnitName]);
+  }, [selectedFaction, selectedTier, availableUnits, selectedUnit, initialUnitName, selectedTypeFilter]);
 
   // Get current stats & cost
   const isSingleSided = selectedFaction === 'neutrales' || selectedFaction === 'bancos';
@@ -566,6 +575,48 @@ export default function RecruitmentCalculator({ initialUnitName, onClearInitialU
             </div>
           </div>
 
+          {/* Tipo de Unidad Filter */}
+          <div className="space-y-1.5">
+            <label className="text-[10px] uppercase font-mono tracking-wider text-slate-500 block">Filtrar por Tipo:</label>
+            <div className="grid grid-cols-4 gap-1">
+              {(['todos', 'Melé', 'Voladora', 'a Distancia'] as const).map(type => {
+                const isSelected = selectedTypeFilter === type;
+                let label = '';
+                let icon = null;
+                
+                if (type === 'todos') {
+                  label = 'Todos';
+                  icon = <Sparkles className="w-3.5 h-3.5 shrink-0 text-amber-500" />;
+                } else if (type === 'Melé') {
+                  label = 'Melé';
+                  icon = <Swords className="w-3.5 h-3.5 shrink-0 text-red-500" />;
+                } else if (type === 'Voladora') {
+                  label = 'Vuelo';
+                  icon = <Feather className="w-3.5 h-3.5 shrink-0 text-sky-400" />;
+                } else {
+                  label = 'Dist.';
+                  icon = <Target className="w-3.5 h-3.5 shrink-0 text-emerald-400" />;
+                }
+
+                return (
+                  <button
+                    key={type}
+                    onClick={() => setSelectedTypeFilter(type)}
+                    className={`py-1.5 px-1 text-[10px] uppercase font-bold tracking-wider rounded-lg border flex flex-col sm:flex-row items-center justify-center gap-1 cursor-pointer transition ${
+                      isSelected
+                        ? 'border-amber-500 bg-amber-500/10 text-amber-300 font-bold shadow-sm shadow-black/40'
+                        : 'bg-slate-950 border-slate-900 text-slate-400 hover:text-slate-200 hover:border-slate-800'
+                    }`}
+                    title={type === 'a Distancia' ? 'A Distancia' : type}
+                  >
+                    {icon}
+                    <span>{label}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
           {/* Unit List */}
           <div className="space-y-1.5">
             <label className="text-[10px] uppercase font-mono tracking-wider text-slate-500 block">Tropa / Nivel de Criatura:</label>
@@ -592,7 +643,12 @@ export default function RecruitmentCalculator({ initialUnitName, onClearInitialU
                 })}
               </div>
             ) : (
-              <p className="text-[12px] text-red-400 font-mono italic">Selecciona un rango válido.</p>
+              <p className="text-[12px] text-amber-500/70 font-mono italic bg-amber-500/5 border border-amber-500/10 p-3 rounded-xl">
+                {selectedTypeFilter !== 'todos' 
+                  ? 'No hay unidades de este tipo en este Rango.'
+                  : 'Selecciona un rango válido.'
+                }
+              </p>
             )}
           </div>
 

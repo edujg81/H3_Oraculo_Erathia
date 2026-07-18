@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Message, RuleSection } from '../types';
-import { Send, History, Trash2, ArrowRight, Sparkles, BookCheck, AlertCircle } from 'lucide-react';
+import { Send, History, Trash2, ArrowRight, Sparkles, BookCheck, AlertCircle, Mic, MicOff, Volume2, VolumeX } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function ChatAdvisor({
@@ -34,6 +34,241 @@ export default function ChatAdvisor({
   const [chatError, setChatError] = useState<string | null>(null);
   const [showConfirmClear, setShowConfirmClear] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // --- Speech Recognition & Text-to-Speech ---
+  const [isListening, setIsListening] = useState(false);
+  const [recognition, setRecognition] = useState<any>(null);
+  const [autoSpeak, setAutoSpeak] = useState(() => {
+    try {
+      return localStorage.getItem('h3_chat_autospeak') === 'true';
+    } catch {
+      return false;
+    }
+  });
+  const [currentlySpeakingId, setCurrentlySpeakingId] = useState<string | null>(null);
+  const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
+
+  // Pre-cargar voces, escuchar voiceschanged y cancelar colas residuales al montar
+  useEffect(() => {
+    if (!('speechSynthesis' in window)) return;
+
+    const loadVoices = () => {
+      const allVoices = window.speechSynthesis.getVoices();
+      setVoices(allVoices);
+    };
+
+    // Detiene cualquier locución que haya quedado pendiente del recargado/sesión previa
+    try {
+      window.speechSynthesis.cancel();
+    } catch (err) {
+      console.warn('Error al cancelar síntesis inicial:', err);
+    }
+
+    loadVoices();
+    if (window.speechSynthesis.onvoiceschanged !== undefined) {
+      window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+  }, []);
+
+  // Initialize Speech Recognition (Speech-to-Text)
+  useEffect(() => {
+    const SpeechRecognitionAPI = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (SpeechRecognitionAPI) {
+      const rec = new SpeechRecognitionAPI();
+      rec.continuous = false;
+      rec.interimResults = false;
+      rec.lang = 'es-ES';
+
+      rec.onstart = () => {
+        setIsListening(true);
+      };
+
+      rec.onresult = (event: any) => {
+        const transcript = event.results[0][0].transcript;
+        if (transcript) {
+          setInputValue(prev => {
+            const trimmed = prev.trim();
+            return trimmed ? `${trimmed} ${transcript}` : transcript;
+          });
+        }
+      };
+
+      rec.onerror = (event: any) => {
+        setIsListening(false);
+        if (event.error === 'no-speech') {
+          console.warn('Reconocimiento de voz finalizado: no se detectó habla.');
+          return;
+        }
+
+        console.error('Error de reconocimiento de voz:', event.error);
+        if (event.error === 'not-allowed') {
+          setChatError('Permiso de micrófono bloqueado. Asegúrate de dar acceso al micrófono en la barra del navegador, o haz clic en "Abrir en pestaña nueva" para que el navegador te solicite el permiso de micrófono de forma directa y limpia.');
+        } else {
+          setChatError(`Error en el reconocimiento de voz (${event.error}). Inténtalo de nuevo.`);
+        }
+      };
+
+      rec.onend = () => {
+        setIsListening(false);
+      };
+
+      setRecognition(rec);
+    }
+  }, []);
+
+  const toggleListening = () => {
+    if (!recognition) {
+      alert('Tu navegador o entorno de visualización no soporta el reconocimiento de voz (Speech Recognition). Intenta con Chrome, Edge o Safari.');
+      return;
+    }
+
+    if (isListening) {
+      recognition.stop();
+    } else {
+      // If currently speaking, stop first
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+      setCurrentlySpeakingId(null);
+      
+      try {
+        recognition.start();
+      } catch (err) {
+        console.error(err);
+      }
+    }
+  };
+
+  const speakText = (text: string, messageId: string) => {
+    if (!('speechSynthesis' in window)) {
+      alert('Tu navegador no soporta la síntesis de voz (Text-to-Speech).');
+      return;
+    }
+
+    if (currentlySpeakingId === messageId) {
+      window.speechSynthesis.cancel();
+      setCurrentlySpeakingId(null);
+      return;
+    }
+
+    window.speechSynthesis.cancel();
+
+    // Clean up text
+    let cleanedText = text
+      .replace(/\([^)]*\)/g, '') // Remove parentheses and their content
+      .replace(/\[[^\]]*\]/g, '') // Remove square brackets and their content
+      .replace(/[-–—]/g, ' ')    // Replace hyphens and dashes with spaces
+      .replace(/[*#_`~]/g, '')
+      .replace(/https?:\/\/\S+/g, '')
+      .replace(/[\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF]/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    const utterance = new SpeechSynthesisUtterance(cleanedText);
+    utterance.lang = 'es-ES';
+    utterance.pitch = 0.82; // Un tono de 0.82 da una resonancia masculina, profunda y lúgubre sin distorsión metálica o robótica
+    utterance.rate = 0.82;  // Un ritmo de 0.82 emula la cadencia pausada, deliberada y teatral de un narrador de cine de terror (estilo Vincent Price)
+
+    const availableVoices = voices.length > 0 ? voices : window.speechSynthesis.getVoices();
+    const spanishVoices = availableVoices.filter(v => {
+      const lang = v.lang.toLowerCase();
+      return lang.startsWith('es-') || lang === 'es';
+    });
+
+    if (spanishVoices.length > 0) {
+      // Definimos indicadores claros masculinos y femeninos para garantizar la voz de Sandro
+      const maleKeywords = [
+        'male', 'hombre', 'jorge', 'diego', 'julio', 'dario', 'alvaro', 
+        'sabat', 'yago', 'enrique', 'dave', 'microsoft jorge', 'carlos',
+        'manuel', 'miguel', 'francisco', 'javier', 'pedro', 'pablo', 'raul',
+        'eed', 'gco', 'ifs', 'esf', 'esg', 'esta', 'es-es-x-esf', 'es-es-x-esg'
+      ];
+      
+      const femaleKeywords = [
+        'female', 'mujer', 'elena', 'monica', 'laura', 'helena', 'hilda', 
+        'sandra', 'sabina', 'marta', 'lucia', 'dalia', 'mona', 'zira', 
+        'hazel', 'susan', 'paulina', 'marisol', 'ana', 'sfs', 'esc', 'esd',
+        'femenino', 'femenina'
+      ];
+
+      // Puntuamos cada voz para encontrar la masculina de mayor calidad
+      const scoredVoices = spanishVoices.map(voice => {
+        const name = voice.name.toLowerCase();
+        let score = 0;
+
+        const isMale = maleKeywords.some(k => name.includes(k));
+        const isFemale = femaleKeywords.some(k => name.includes(k));
+
+        if (isMale && !isFemale) {
+          score += 1500; // Máxima prioridad para voces masculinas identificadas
+        } else if (isFemale && !isMale) {
+          score -= 1500; // Evitar a toda costa voces femeninas identificadas
+        } else if (isFemale && isMale) {
+          score += 200;  // Empate (preferir masculino si se cuela alguna palabra clave)
+        }
+
+        // Dar un gran impulso adicional si es la prestigiosa Voz V o variantes neurales de Google de alta gama
+        if (name.includes('esg') || name.includes('esf') || name.includes('eed') || name.includes('gco')) {
+          score += 500;
+        }
+
+        // Calidad / Características Premium
+        if (name.includes('natural') || name.includes('neural') || name.includes('premium') || name.includes('multilingual')) {
+          score += 300;
+        }
+
+        // Preferir es-ES (España) para Sandro, pero aceptar otros si no hay más
+        if (voice.lang.toLowerCase().startsWith('es-es')) {
+          score += 100;
+        }
+
+        // Voces locales suelen ser más estables y responder mejor
+        if (voice.localService) {
+          score += 20;
+        }
+
+        return { voice, score };
+      });
+
+      // Ordenar de mayor a menor puntuación
+      scoredVoices.sort((a, b) => b.score - a.score);
+
+      // Usar la de mayor puntuación
+      utterance.voice = scoredVoices[0].voice;
+    }
+
+    utterance.onend = () => {
+      setCurrentlySpeakingId(null);
+    };
+
+    utterance.onerror = () => {
+      setCurrentlySpeakingId(null);
+    };
+
+    setCurrentlySpeakingId(messageId);
+    window.speechSynthesis.speak(utterance);
+  };
+
+  const handleToggleAutoSpeak = () => {
+    const newValue = !autoSpeak;
+    setAutoSpeak(newValue);
+    try {
+      localStorage.setItem('h3_chat_autospeak', String(newValue));
+    } catch {}
+    if (!newValue) {
+      window.speechSynthesis.cancel();
+      setCurrentlySpeakingId(null);
+    }
+  };
+
+  // Stop speaking on unmount
+  useEffect(() => {
+    return () => {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+    };
+  }, []);
 
   // Recommended prompt chips
   const recommendationChips = [
@@ -86,11 +321,21 @@ export default function ChatAdvisor({
 
     try {
       const fullHistory = [...messages, userMsg];
+      
+      // Sanitizar el historial para cumplir estrictamente con los requisitos del backend
+      const sanitizedHistory = fullHistory
+        .filter(m => (m.role === 'user' || m.role === 'assistant') && typeof m.content === 'string' && m.content.trim().length > 0)
+        .map(m => ({
+          role: m.role as 'user' | 'assistant',
+          content: m.content.slice(0, MAX_MESSAGE_LENGTH)
+        }))
+        .slice(-MAX_HISTORY_SENT);
+
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          messages: fullHistory.slice(-MAX_HISTORY_SENT),
+          messages: sanitizedHistory,
           selectedSectionId: selectedSection?.id || undefined
         })
       });
@@ -109,6 +354,11 @@ export default function ChatAdvisor({
       };
 
       setMessages(prev => [...prev, assistantMsg]);
+      
+      // Trigger voice read-out automatically ONLY for this newly received message if autoSpeak is enabled
+      if (autoSpeak) {
+        speakText(data.text, assistantMsg.id);
+      }
       
       // If we used a selected section, clear it as we already asked the question
       if (selectedSection) {
@@ -161,7 +411,21 @@ export default function ChatAdvisor({
           </div>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
+          {/* Lectura por Voz Toggle */}
+          <button
+            onClick={handleToggleAutoSpeak}
+            title={autoSpeak ? "Desactivar lectura automática por voz de Sandro" : "Activar lectura automática por voz de Sandro"}
+            className={`p-2 rounded-lg transition-all duration-200 cursor-pointer flex items-center gap-1.5 text-xs font-semibold ${
+              autoSpeak 
+                ? 'text-amber-400 bg-amber-950/40 border border-amber-900/40 hover:bg-amber-900/30' 
+                : 'text-slate-400 hover:text-amber-400 hover:bg-slate-800/60'
+            }`}
+          >
+            {autoSpeak ? <Volume2 className="w-4 h-4 text-amber-400 animate-pulse" /> : <VolumeX className="w-4 h-4" />}
+            <span className="hidden sm:inline">{autoSpeak ? "Voz: Activa 🔊" : "Voz: Silencio 🔇"}</span>
+          </button>
+
           <button
             onClick={handleClearChat}
             title={showConfirmClear ? "Haz clic otra vez para confirmar" : "Borrar chat"}
@@ -220,9 +484,34 @@ export default function ChatAdvisor({
                 }`}>
                   {msg.content}
                 </div>
-                <p className={`text-[10px] text-slate-500 font-mono ${msg.role === 'user' ? 'text-right' : ''}`}>
-                  {msg.timestamp}
-                </p>
+                <div className="flex items-center justify-between gap-2 mt-1">
+                  <p className={`text-[10px] text-slate-500 font-mono ${msg.role === 'user' ? 'text-right w-full' : ''}`}>
+                    {msg.timestamp}
+                  </p>
+                  {msg.role === 'assistant' && (
+                    <button
+                      onClick={() => speakText(msg.content, msg.id)}
+                      className={`p-1 px-2 rounded-md transition-all duration-200 cursor-pointer flex items-center gap-1 text-[10px] ${
+                        currentlySpeakingId === msg.id
+                          ? 'text-amber-400 bg-amber-500/10 border border-amber-500/20'
+                          : 'text-slate-500 hover:text-amber-400 hover:bg-slate-800/50'
+                      }`}
+                      title={currentlySpeakingId === msg.id ? "Detener lectura" : "Escuchar respuesta"}
+                    >
+                      {currentlySpeakingId === msg.id ? (
+                        <>
+                          <VolumeX className="w-3 h-3 animate-pulse text-amber-400" />
+                          <span className="font-mono text-[9px]">Detener</span>
+                        </>
+                      ) : (
+                        <>
+                          <Volume2 className="w-3 h-3" />
+                          <span className="font-mono text-[9px]">Escuchar</span>
+                        </>
+                      )}
+                    </button>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}
@@ -286,23 +575,44 @@ export default function ChatAdvisor({
             e.preventDefault();
             handleSendMessage(inputValue);
           }}
-          className="flex gap-2 relative"
+          className="flex gap-2 relative w-full"
         >
-          <input
-            type="text"
-            placeholder={selectedSection ? `Pregúntale a Sandro relacionado con la sección seleccionada...` : "Pregunta sobre reglas, combate rápido, asedios..."}
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            disabled={isLoading}
-            className="flex-1 bg-slate-900 border border-amber-950/30 rounded-xl pl-4 pr-12 py-3 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-amber-500 focus:border-amber-500 disabled:opacity-60"
-          />
-          <button
-            type="submit"
-            disabled={isLoading || !inputValue.trim()}
-            className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg transition disabled:opacity-40 cursor-pointer"
-          >
-            <Send className="w-4 h-4" />
-          </button>
+          <div className="flex-1 relative">
+            <input
+              type="text"
+              placeholder={selectedSection ? `Pregúntale a Sandro relacionado con la sección seleccionada...` : "Pregunta sobre reglas, combate rápido, asedios..."}
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              disabled={isLoading}
+              className="w-full bg-slate-900 border border-amber-950/30 rounded-xl pl-4 pr-24 py-3 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-amber-500 focus:border-amber-500 disabled:opacity-60"
+            />
+            <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1.5">
+              {/* Mic button */}
+              <button
+                type="button"
+                onClick={toggleListening}
+                disabled={isLoading}
+                className={`p-2 rounded-lg transition duration-200 cursor-pointer ${
+                  isListening
+                    ? 'bg-red-600 text-white animate-pulse shadow-lg shadow-red-500/20'
+                    : 'text-slate-400 hover:text-amber-400 hover:bg-slate-850'
+                }`}
+                title={isListening ? "Escuchando... Di tu pregunta táctica" : "Preguntar con voz 🎙️"}
+              >
+                {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
+              </button>
+              
+              {/* Send button */}
+              <button
+                type="submit"
+                disabled={isLoading || !inputValue.trim()}
+                className="p-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg transition disabled:opacity-40 cursor-pointer"
+                title="Enviar consulta"
+              >
+                <Send className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
         </form>
       </div>
     </div>
