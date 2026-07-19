@@ -255,35 +255,71 @@ Las transacciones de recursos siguen tasas de conversión fijas y asimétricas d
   },
   {
     id: "turn_flow_and_phases",
-    title: "11. Estructura Exacta del Turno e Inicio Global",
+    title: "11. Estructura de las Rondas, Turno del Jugador y Acciones",
     category: "general",
-    content: `Cada ronda de juego se divide en tres fases rígidas para asegurar la fluidez de la mesa de control:
+    content: `El juego se estructura en Rondas, durante las cuales cada jugador realizará su Turno en el sentido de las agujas del reloj empezando por el jugador inicial. Durante sus turnos los jugadores moverán sus Héroes por el Mapa del Juego, construirán edificios en su Ciudad, y reclutarán Unidades en un intento de conseguir la victoria del Escenario.
 
-I. FASE DE INICIO GLOBAL (Común a todos los jugadores)
-1. Determinación de la Ronda:
-   - Si la ronda actual es Impar (Rondas 1, 3, 5, 7, etc.), se activa la Ronda de Recursos. Todos los imperios cobran ingresos según la producción de su track de metrópolis más las minas y asentamientos señalizados con sus cubos. 
-     *Excepción Absoluta: En la Ronda 1 inicial no se cobra producción de recursos.
-   - Si la ronda actual es Par (Rondas 2, 4, 6, 8, etc.), se activa la Ronda Astrológica. El jugador inicial roba una carta del mazo de Anuncios Astrológicos (p. ej. Semana de la Gema, Mes de la Plaga) y aplica su efecto en voz alta. Su modificador se mantiene hasta el final de la ronda actual de juego para toda la mesa.
-2. Resolución de Eventos de Escenario (Mazo de Eventos):
-   Inmediatamente después, se verifica el libro o se roba del mazo de Eventos de Escenario. Son independientes de las cartas astrológicas: colocan monstruos fijos, desatan plagas que restan recursos de producción o introducen caminos cortados temporales.
+I. PASOS AL INICIO DE CADA RONDA (Excepto la primera)
+Antes de comenzar los turnos de los jugadores, se realizan de forma coordinada los siguientes pasos de mantenimiento:
+1. Voltear las Fichas de Construcción, Población y Libro de Hechizos dejándolas en su lado activo.
+2. Volver a colocar las fichas de Puntos de Movimiento (PM) a su lado verde activo.
+3. Recuperar los usos de los Efectos Experto (Coronas).
 
-II. TURNOS INDIVIDUALES DE JUGADOR (En sentido horario)
-Cada jugador ejecuta sus acciones siguiendo este orden riguroso de fases por turno:
-1. Fase de Suministro y Ajuste de Mano:
-   - Ajusta su mano de cartas de su mazo de Fuerza y Magia. Roba o descarta hasta alcanzar su límite de mano correspondiente (determinado por su experiencia actual en el track de Héroe).
-   - Repone y voltea boca arriba sus 3 fichas de Puntos de Movimiento (PM) verdes y activa las coronas de habilidades que hubiera consumido en el turno previo.
-2. Fase de Movimiento y Exploración:
-   - Gasta libremente sus 3 PM para desplazarse en el mapa, descubrir losetas de aventura, pelear con ejércitos neutrales de custodios, o visitar edificios mágicos.
-   - Se permite alternar movimientos del Héroe Principal (3 PM) con el Héroe Secundario (2 PM), pero sus reservas tácticas deben computarse de forma totalmente independiente.
-3. Acción de Ciudad (Límite de 1 por Turno):
-   - El jugador puede realizar uno de los siguientes procesos técnicos:
-     * Construir un nuevo edificio abonando Oro y Materiales.
-     * Reclutar regimientos de criaturas de bronce, plata u oro.
-     * Mejorar (Upgrade) regimientos de criaturas básicas a su rango de Élite.
-     * Adquirir cartas de Hechizo en la Cofradía de Magos activa.
+A continuación, dependiendo del número de Ronda actual, los jugadores ganan Recursos o resuelven una Carta de Proclamación de Astrólogos:
+• Rondas Impares (Rondas de Recursos): Todos los jugadores obtienen ingresos de la Ciudad, Asentamientos y Minas que controlan. Se omite este paso por completo durante la primera ronda de juego.
+• Rondas Pares (Rondas de Astrólogos): El jugador inicial roba una Carta de Proclamación de Astrólogos y se resuelven sus efectos generales.
+• Eventos de Escenario: Si el Escenario tiene Eventos marcados en el Marcador de Rondas que ya se han alcanzado, resuélvelos en este momento.
+• Eventos en Partidas Multijugador (> 2 jugadores): Tras obtener los ingresos en una ronda de recursos, un jugador (se rota en cada ronda empezando por el jugador inicial) roba una Carta de Evento y resuelve su efecto.
 
-III. FASE DE FIN DEL TURNO
-El jugador puede descartar voluntariamente cartas de su mano si lo desea y cede el turno en sentido de las agujas del reloj.`
+Tras el inicio de la Ronda, los jugadores toman Turnos en el sentido de las agujas del reloj. Después de que todos los jugadores hayan jugado su Turno, mueve el Cubo Negro del Marcador de Ronda un espacio hacia adelante e inicia una nueva Ronda. Sigue jugando rondas hasta que se cumpla alguna de las condiciones de finalización del escenario.
+
+II. TURNOS DEL JUGADOR Y GESTIÓN DE MANO
+Al comienzo de tu Turno, actualiza tu mano de Cartas del mazo de Poder y Magia siguiendo estos pasos:
+1. Descarta cualquier número de Cartas de tu mano. Si tu mano supera tu Límite de Mano actual, debes descartar cartas obligatoriamente para coincidir con dicho Límite.
+2. A continuación, puedes robar Cartas hasta el Límite de tu Mano.
+3. Resuelve cualquier habilidad 'al inicio de tu turno' después de haber robado las cartas.
+
+• El Límite de Mano depende directamente del Nivel del Héroe. El comienzo del Turno es la única vez en todo el juego que se comprueba el Límite de Mano del jugador.
+• Tipos de Acciones: Durante su turno, los jugadores pueden realizar tres tipos de Acciones principales: Acciones de Movimiento, Acciones de Ciudad y Acciones de Moral.
+• Fin de la Ronda: Cuando todos los jugadores hayan gastado sus Puntos de Movimiento y no quieran utilizar más Acciones, la Ronda actual habrá terminado.
+
+III. ACCIONES DE MOVIMIENTO
+Se realizan exclusivamente gastando Puntos de Movimiento (PM). Un jugador puede usar sus PM únicamente durante su propio turno. Por cada 1 PM gastado, se puede realizar una de las siguientes opciones:
+• Mover un Héroe 1 casilla.
+• Revisitar la Zona o ubicación actual del Héroe.
+• Continuar el combate de unidades Neutrales por 1 PM adicional.
+• Descubrir una ficha o loseta de mapa si el Héroe se encuentra adyacente a ella.
+• Colocar una nueva Loseta de Mapa (II-III) de tu reserva de losetas de mapa.
+
+Reglas Especiales de Movimiento:
+• Marcado de PM: Con las fichas de movimiento se marca la cantidad de PM que ha usado el Héroe, volteándolas a su lado inactivo.
+• Héroe Secundario: Si un jugador dispone de un Héroe Secundario, utiliza sus movimientos por separado. El Héroe Secundario tiene únicamente 2 PM. Los héroes pueden gastar sus PM en cualquier orden.
+• Héroes Aliados: Pueden moverse unos a través de otros, pero no pueden detener su movimiento en la misma casilla. Cuando te mueves a través de una casilla con un Héroe aliado, no se resuelve la casilla donde se encuentra dicho Héroe.
+• Ganancia extra de PM: Siempre que un efecto indique que ganas PM adicionales, sólo será válido para ser consumido durante ese turno actual.
+• Desalojo Forzoso: En la rara situación de que dos Héroes aliados sean forzados a acabar en la misma casilla, debes usar tu siguiente PM para mover obligatoriamente a uno de ellos fuera de esa casilla.
+
+IV. ACCIONES DE CIUDAD
+Cada una de las siguientes Acciones de la Ciudad se pueden utilizar exactamente una vez por Ronda. Estas Acciones pueden realizarse en cualquier momento durante el Turno de cualquier jugador, excepto durante el transcurso de un Combate o cuando tu Acción de Ciudad interrumpiese directamente otra Acción en proceso.
+• Reacción antes del Combate: Cuando un jugador anuncia que está a punto de comenzar un Combate, puedes reaccionar utilizando tus Acciones de Ciudad antes de realizar cualquier paso de la preparación de dicho Combate.
+• Desactivación: Después de realizar una Acción de la Ciudad, voltea la Ficha respectiva sobre su lado inactivo en tu Tablero de Ciudad. No puedes volver a usar esta Acción hasta el comienzo de la siguiente Ronda, cuando se renueven todas las Fichas de Ciudad.
+
+Las 3 Fichas de Acción de Ciudad son:
+1. Ficha de Construcción: Utilizada para construir un edificio y ampliar tu Ciudad.
+2. Ficha de Población: Utilizada para Reclutar o Reforzar Unidades en tu ciudad, o para Reclutar un Héroe Secundario.
+3. Ficha de Libro de Hechizos: Utilizada para la compra de Hechizos del compendio. Requiere tener construido el edificio de Cofradía de Magos en la ciudad.
+
+V. ACCIONES DE MORAL Y EXCEPCIONES DE FACCIÓN
+Los jugadores pueden ganar o perder Moral a través de varios efectos del juego. Al ganar Moral, coge una Ficha de Moral Positiva.
+• Límite: Sólo puedes tener un máximo de una Ficha de Moral Positiva a la vez. Si estás a punto de ganar una segunda Ficha, puedes gastar inmediatamente la primera que posees antes de recibir la segunda.
+• Uso de Moral Positiva: Se puede usar una Ficha de Moral Positiva para realizar cualquiera de las siguientes acciones en cualquier momento:
+  - Robar una Carta de tu Mazo.
+  - Descartar cualquier número de Cartas de tu mano, y luego robar exactamente ese mismo número de Cartas.
+  - Relanzar cualquier dado que acabes de lanzar.
+
+• Pérdida de Moral y Moral Negativa: Si pierdes Moral, descarta tu Ficha de Moral Positiva si posees una. De lo contrario, ganas una Ficha de Moral Negativa.
+• Cancelación: Ganar Moral Positiva mientras posees una Ficha de Moral Negativa hace que ambas se descarten mutuamente.
+• Penalización Extrema: Si ganas una segunda Ficha de Moral Negativa, en su lugar debes descartar por completo TODAS tus Cartas la próxima vez que termines tu turno.
+• EXCEPCIÓN DE LA FACCIÓN NECRÓPOLIS: La facción Necrópolis ignora los efectos de Moral por completo. Las fuerzas de no-muertos no pueden ganar ni perder moral por ningún motivo del juego.`
   },
   {
     id: "town_development_and_recruitment",

@@ -29,6 +29,7 @@ export interface Player {
   mainHeroMove?: number;
   secHeroMove?: number;
   incomeCollectedRound?: number;
+  moral?: 'positive' | 'neutral' | 'negative' | 'double_negative';
 }
 
 export interface TimerState {
@@ -49,4 +50,20 @@ export interface RuleSection {
   content: string;
   category: 'general' | 'setup' | 'combat' | 'faq' | 'components' | 'modes' | 'map' | 'town' | 'magic' | 'heroes' | 'units' | 'skills';
 }
+
+export function getPlayerLimit(mode: 'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza'): number {
+  switch (mode) {
+    case 'campaña':
+      return 1;
+    case 'enfrentamiento':
+      return 3;
+    case 'cooperativo':
+      return 3;
+    case 'alianza':
+      return 4;
+    default:
+      return 4;
+  }
+}
+
 

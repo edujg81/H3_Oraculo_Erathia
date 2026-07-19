@@ -13,7 +13,7 @@ import { playTickSound, playTimeOutSound } from '../utils/audio';
 export function useGameTimer() {
   // Cronómetro global de partida
   const [totalSeconds, setTotalSeconds] = useState(0);
-  const [isTotalRunning, setIsTotalRunning] = useState(true); // Corre por defecto
+  const [isTotalRunning, setIsTotalRunning] = useState(false); // No corre por defecto
 
   // Reloj de turno
   const [turnLimit, setTurnLimit] = useState(60); // 60s por defecto

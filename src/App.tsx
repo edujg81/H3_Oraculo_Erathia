@@ -19,7 +19,7 @@ const SpellCardsViewer = lazy(() => import('./components/SpellCardsViewer'));
 const TownsViewer = lazy(() => import('./components/TownsViewer'));
 // @ts-ignore
 import oracleLogo from './assets/images/sandro_oracle_titled_logo_1783458347417.jpg';
-import { RuleSection, Player } from './types';
+import { RuleSection, Player, getPlayerLimit } from './types';
 import { 
   Sparkles, Library, Timer, Printer, Award, BookOpen, 
   HelpCircle, Compass, Gamepad2, Hourglass, Swords, Users, Dices, Coins,
@@ -131,6 +131,18 @@ export default function App() {
     setRoundType(round % 2 !== 0 ? 'Recursos' : 'Astrológica');
   }, [round]);
 
+  // Limitar jugadores de forma proactiva según el modo de juego seleccionado
+  useEffect(() => {
+    const limit = getPlayerLimit(prepMode);
+    if (players.length > limit) {
+      const truncatedPlayers = players.slice(0, limit);
+      setPlayers(truncatedPlayers);
+      if (activePlayerIndex >= limit) {
+        setActivePlayerIndex(0);
+      }
+    }
+  }, [prepMode]);
+
   const handleNextTurn = () => {
     if (players.length > 0) {
       const nextIndex = (activePlayerIndex + 1) % players.length;
@@ -173,6 +185,11 @@ export default function App() {
 
   const handleAddPlayer = (e: React.FormEvent) => {
     e.preventDefault();
+    const limit = getPlayerLimit(prepMode);
+    if (players.length >= limit) {
+      console.warn(`Límite de jugadores alcanzado para el modo ${prepMode}: ${limit}`);
+      return;
+    }
     const factionObj = FACTIONS.find(f => f.id === selectedFaction) || FACTIONS[0];
     const nameToUse = newPlayerName.trim() || `Jugador ${players.length + 1} (${factionObj.name.split(' ')[0]})`;
     
@@ -200,7 +217,9 @@ export default function App() {
   };
 
   const handleSetPlayerCount = (count: number) => {
-    const defaultPlayers = FACTIONS.slice(0, count).map((f, idx) => ({
+    const limit = getPlayerLimit(prepMode);
+    const countToUse = Math.min(count, limit);
+    const defaultPlayers = FACTIONS.slice(0, countToUse).map((f, idx) => ({
       id: (idx + 1).toString(),
       name: `Jugador ${idx + 1} (${f.name.split(' ')[0]})`,
       color: f.color,

@@ -372,6 +372,7 @@ export default function GameTimer({
           {/* Player List & Faction Management */}
           <PlayerListSection
             players={players}
+            setPlayers={setPlayers}
             activePlayerIndex={activePlayerIndex}
             setActivePlayerIndex={setActivePlayerIndex}
             handleSetPlayerCount={handleSetPlayerCount}
@@ -382,6 +383,8 @@ export default function GameTimer({
             selectedFaction={selectedFaction}
             setSelectedFaction={setSelectedFaction}
             FACTIONS={FACTIONS}
+            prepMode={prepMode}
+            hasGameStarted={totalSeconds > 0 || isTotalRunning}
           />
 
         </div>
