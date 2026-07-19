@@ -493,34 +493,207 @@ Cuando asaltas una ciudad amurallada protegida por fortificación erigida, se ac
   },
   {
     id: "conflux_elemental_rules",
-    title: "20. Losetas Elementales, Invocaciones y Daño Elemental",
+    title: "20. Expansión Conflujo: Losetas Elementales, Invocaciones, Daño Elemental, Pergaminos y Escuela de Magia",
     category: "magic",
-    content: `La expansión Conflujo (Conflux) introduce dimensiones místicas de energía pura y leyes físicas adaptativas para la batalla:
+    content: `La expansión Conflujo (Conflux) introduce dimensiones místicas de energía pura, Planos Elementales, invocaciones tácticas y leyes mágicas avanzadas:
 
-1. Losetas de Mapa Elementales (Elemental Planes Tiles):
-Losetas exclusivas de reverso cian que representan fragmentos colisionados en Erathia de los Planos Elementales:
-• Plano Astral / Fuego (Fire Rift): Cruzar o culminar el movimiento táctico en esta loseta confiere +2 PM gratuitos si tu facción activa es Conflujo o Inferno. Duplica además el daño infligido de cualquier hechizo elemental de fuego lanzado desde ella.
-• Plano de Agua (Water Rift): Caminar por él no genera penalización de fango o nieve, y permite el embarque automático sin penalización de fin de turno.
-• Plano de Tierra y Aire (Earth & Air Rift): Otorga +1 a la Defensa Física o +1 a la Iniciativa de los regimientos de campaña asentados respectivamente.
+1. Losetas de Mapa Elementales:
+Esta expansión introduce un nuevo tipo de losetas: las losetas elementales. Cada una de ellas está asociada a una escuela de magia. Todos los hechizos de esa escuela de magia que lance un héroe en esa loseta tienen su <SpellPower> aumentado en 1. Las losetas son:
+• Loseta elemental de fuego cercana (asociada a la Magia de Fuego)
+• Loseta elemental de agua cercana (asociada a la Magia de Agua)
+• Loseta elemental de aire cercana (asociada a la Magia de Aire)
+• Loseta elemental de tierra cercana (asociada a la Magia de Tierra)
 
-2. Tratado de Invocaciones de Combate (Invocations):
-Mediante la magia correspondiente (Invocación Elemental), un héroe puede conjurar regimientos de Elementales de Tierra, Aire, Agua o Fuego en hexágonos desocupados de la grilla táctica:
-• Invocaciones Temporales: Estas criaturas actúan con iniciativa propia y atacan con daño elemental puro. Al finalizar el asalto, estas unidades se desintegran por completo, por lo que no se agregan a la mano activa ni consumen límite de ranura de ejército del héroe.
-• Regla de Disipación: Los hechizos de Desterrar o Disipar Magia destruyen inmediatamente toda unidad invocada sobre la reja táctica.
+2. Fichas de Tiempo (Time Tokens):
+Para marcar la duración restante de un efecto continuo <Ongoing>, puedes utilizar fichas de tiempo. Ponlas sobre una carta o ficha que proporcione el efecto y reduce su valor total en 1 al final de la ronda. Cuando no queden fichas de tiempo, el efecto termina: descarta su carta o ficha.
 
-3. Daño Elemental Puro (Elemental Damage):
-• El daño de descargas arcanas puras (como Rayo de Hielo o Relámpago) ignora de forma absoluta el valor numérico de Defensa física de la criatura defensora, aplicando de forma directa las heridas al marcador de salud.
-• Inmunidades Innatas: No es reducible excepto mediante inmunidades absolutas especificadas en las cartas de Criatura Élite (por ejemplo, los Dragones Negros son completamente inmunes a toda la magia, los Fénix son inmunes al daño de Fuego, y los Elementales de Tierra ignoran el daño de Implosión o Lentitud).
+3. Fichas de Monolito (Monolith Tokens):
+Una ficha de monolito marca una zona que conecta con otro monolito en otra loseta y permite que los héroes viajen entre ellos. Cuando descubras una loseta que contiene un monolito, coloca la loseta según las reglas normales y luego coloca la ficha en la zona indicada por el diseño del mapa del escenario.
+• Restricción: La ficha de monolito reemplaza la ubicación original de la zona y no se puede colocar en zonas bloqueadas, otras fichas o zonas que contengan lugares requeridos para cumplir alguna de las condiciones de victoria del escenario. Puedes colocar la ficha como desees, siempre que siga las reglas anteriores.
+• Tipos de Monolitos: Hay 2 tipos de monolitos, representados como emparejados (ambas fichas muestran el mismo tipo):
+  - Unidireccional: Permite a los héroes viajar solo desde el monolito de entrada al monolito de salida, pero no en la dirección opuesta.
+  - Bidireccional: Permite que los héroes se muevan de un lado a otro entre los mismos monolitos de forma libre.
 
-4. Cartas de Pergamino de Hechizos (Spell Scroll Cards - Expansión Conflujo):
-La expansión de Conflujo trae un conjunto de 20 cartas de pergamino de hechizos. Durante la preparación del juego se barajan 10 de estas cartas en el mazo de artefactos y el resto se deja a un lado como mazo de pergaminos (algunos eventos o lugares pueden hacer uso de ellos más adelante).
-Cuando se obtenga una carta de pergamino de hechizos se coloca junto a la ficha del héroe, luego se roban dos cartas del mazo de hechizos y se colocan boca abajo sobre la carta de pergamino. En adelante se tratarán como una sola carta que se podrá usar como cualquier otro hechizo con las siguientes excepciones:
-• Un hechizo jugado desde un pergamino no cuenta para el límite de hechizos.
-• Solo se puede usar el poder más débil del hechizo (no se pueden potenciar).
-• No se puede usar para potenciar otro hechizo.
-• Se puede vender el pergamino en un mercadillo por 2 Oros por cada hechizo que contenga el pergamino.
+4. Tratado de Invocaciones de Combate (Summon):
+Te permite añadir una unidad al tablero de combate durante el combate. Si realizas una acción de invocación, coloca la unidad invocada en el espacio vacío que elijas.
+• Activación de Invocadas: Las unidades invocadas se activan en la ronda en que fueron invocadas si su iniciativa es menor o igual que la iniciativa de la unidad activada actualmente. En los demás casos, trátalas como si ya se hubieran activado en esta ronda de combate.
+• Conservación: Después del combate, a menos que se indique lo contrario, las unidades convocadas se añaden a tu mazo de unidades.
+• Cartas de Unidades Invocadas: Este conjunto de 8 cartas representa unidades invocadas. Júntalas en un nuevo mazo llamado de unidades convocadas/invocadas y colócalo junto a los mazos de unidades neutrales. Siempre que uses un hechizo de Invocación, toma una carta de unidad específica de este mazo.
+• Hechizos de Invocación: Te permiten añadir una unidad al tablero de combate durante el combate. Según el <SpellPower> que utilices, puedes invocar una unidad no reforzada (unas pocas) o una reforzada (una manada). Una unidad invocada se coloca en un espacio vacío que elijas y sigue bajo tu mando hasta que muera o finalice el combate, lo que ocurra primero. Una unidad invocada de este tipo no se añade a tu mazo de unidades.
+• Fichas de Invocación: Indican qué unidades fueron convocadas. Coloca esta ficha sobre su carta. Al final del combate, descarta tanto la ficha como la unidad. Se pueden usar en lugar de miniaturas de unidades en el tablero de la expansión Campo de batalla.
+• Fichas de Muro de Fuego: Se utilizan en lugar de las cartas de especialidad de Luna en el tablero de la expansión Campo de batalla. Cada ficha corresponde a una carta de especialidad (situada al lado del tablero). Cuando la carta se retira o descarta, se descarta también la ficha de muro de fuego correspondiente.
 
-Límite en Juego: Solo se pueden tener 2 pergaminos en juego a la vez. Si se consigue un tercero, se roban los nuevos hechizos y se descarta uno de los pergaminos (el nuevo o uno de los anteriores). Cuando se agota un pergamino o se vende, las cartas de hechizos se retiran y la carta de pergamino se coloca en el mazo de pergaminos.`
+5. Daño Elemental Puro e Inmunidad (Elemental Damage):
+• Daño Elemental: Algunas unidades tienen la habilidad especial: «Esta unidad inflige daño elemental». En estos casos, realizas un ataque normal, pero el daño resultante funciona de manera similar al daño causado por hechizos, ya que ignora la <Defense> de la unidad.
+• Regla Especial de Daño: El daño elemental no se ve afectado por la habilidad especial de una unidad que reduce el daño recibido de los hechizos.
+• Inmunidad: La habilidad especial «Inmune» permite a una unidad ignorar los efectos de fuentes específicas, como hechizos o una escuela de magia determinada.
+
+6. Cartas Permanentes (Permanent Cards):
+Estas cartas te proporcionan un bonificador o tienen una condición que debe cumplirse.
+• Uso: Cuando juegues una carta permanente, colócala frente a ti. Permanecerá allí hasta que la descartes o la reemplaces con otra carta permanente. Un héroe solo puede tener una carta de este tipo a la vez.
+• Reglas Especiales: Las cartas permanentes se pueden jugar de la misma manera que las cartas con los símbolos de Mapa o Activación. El efecto de estas cartas dura solo mientras estén en juego. Cuando una carta permanente está en juego, aún puedes usar sus efectos básicos o avanzados, pero no se acumulan: si usas el efecto avanzado, no añadas el efecto básico.
+
+7. Escuelas de Magia (Schools of Magic):
+Algunas cartas pertenecen a las escuelas de magia, y cada carta de hechizo pertenece a una de las siguientes cuatro: Aire, Fuego, Tierra y Agua. Cada escuela tiene su propio borde alrededor del símbolo.
+• Flecha Mágica: Aunque «Flecha mágica» pertenece a todas las escuelas de magia, solo puede beneficiarse de un bonificador de una escuela a la vez. Al lanzar este hechizo, debes asignarlo a una escuela de magia para determinar el bonificador.
+
+8. Cartas de Pergamino de Hechizos (Spell Scroll Cards):
+La expansión de Conflujo trae un conjunto de 20 cartas de pergamino de hechizos. Durante la preparación se barajan 10 en el mazo de artefactos y el resto se deja a un lado como mazo de pergaminos.
+• Funcionamiento: Cuando obtienes un pergamino, colócalo junto a tu héroe, roba dos hechizos boca abajo del mazo de hechizos y ponlos encima. Se tratan como una sola carta ejecutable como hechizo normal, con las excepciones:
+  - No cuenta para el límite de hechizos por ronda (puedes jugar otro hechizo de tu mano).
+  - Solo se puede usar el poder más débil de los hechizos del pergamino (no se pueden potenciar con <SpellPower> ni sumas extras).
+  - No se puede usar un hechizo de pergamino para aumentar el <SpellPower> de otro.
+  - Se puede vender el pergamino en un mercadillo por 2 de Oro por cada hechizo que contenga.
+• Límite: Máximo de 2 pergaminos en juego a la vez. Si obtienes un tercero, robas los nuevos hechizos y decides cuál de los tres pergaminos descartar.`
+  },
+  {
+    id: "cove_maritime_rules",
+    title: "21. Expansión Cala: Losetas de Mapa Marino, Torbellinos, Debilidad, Clonación y Lugares del Mar",
+    category: "map",
+    content: `La expansión Cala (Cove) expande el mapa de Erathia hacia el océano con naves, piratas, remolinos y conjuros marinos avanzados:
+
+1. Losetas de Mapa Marino (Marine Map Tiles):
+Para descubrir las losetas de mapa marino se siguen las reglas de colocación habituales. Moverse por ellas introduce variaciones náuticas:
+• Terreno Mixto: Algunas losetas de mapa marino contienen zonas tanto de tierra como de mar. Te mueves de forma normal entre dos zonas del mismo tipo (de mar a mar o de tierra a tierra) y cuando entras en una zona de tierra desde una zona de mar.
+• Desembarque y Fin de Turno: Cuando tu héroe entra en una zona de mar desde una zona de tierra, su movimiento termina de inmediato para el resto de ese turno. No pierde los Puntos de Movimiento (PM) no gastados y todavía puede consumirlos (por ejemplo, para extender el combate resultante de resolver la zona en la que ha entrado), pero no puede realizar más movimientos en ese turno, ni siquiera con cartas.
+
+2. Fichas de Torbellino (Whirlpool Tokens):
+Un torbellino marca una zona que conecta con otro torbellino en otra loseta y permite que los héroes ya viajen entre ellos de forma directa.
+• Colocación: Al descubrir una loseta de mar con un torbellino, colócala según las reglas normales y sitúa la ficha de torbellino en la zona correspondiente. La ficha reemplaza la ubicación original de la zona y no se puede colocar en zonas bloqueadas, otras fichas o zonas con lugares necesarios para la victoria del escenario.
+• Mecánica de Viaje: Cada ficha muestra un número asociado al resultado del dado de ataque. Si hay tres fichas en el mapa, al entrar en una de ellas, tira un dado de ataque para determinar el torbellino de destino. Si el resultado te envía al mismo torbellino en el que acaba de entrar tu héroe, repite la tirada.
+• Penalización de Viaje: Después de realizar cada uno de estos viajes, pierdes obligatoriamente 1 unidad de tu ejército activo (que podrá ser reclutada nuevamente más tarde).
+
+3. Fichas de Debilidad (Weakness Tokens):
+Una unidad con esta ficha sufre −1 <Attack> o −2 <Attack>, como se indique en la cara visible. Cada unidad solo puede tener una ficha de debilidad a la vez; si una unidad ya debilitada recibe otra ficha de debilidad, el jugador controlador decide cuál de las dos conservar.
+
+4. Fichas de Clonación (Cloning Tokens):
+Se utilizan dos conjuntos de dos fichas de clonación de diferentes colores (un conjunto para cada oponente) para marcar el efecto del hechizo «Clonación».
+• Funcionamiento del Clon: Al lanzar el hechizo, elige una unidad aliada y un espacio vacío adyacente a ella en el tablero táctico. Coloca una ficha sobre la unidad original y la otra en el espacio vacío (que representará al clon).
+• Atributos del Clon: El clon copia exactamente el valor de ataque, la iniciativa y la habilidad especial de la unidad original. Sin embargo, su salud (HP) es de solo 1, su defensa es de 0 y su defensa no puede aumentarse mediante cartas u otras unidades.
+• Destrucción: Si la unidad clonada es atacada o recibe incluso un mínimo de 1 de daño de un hechizo, es destruida de inmediato. Si la unidad original es eliminada del tablero de combate, su clon se elimina automáticamente. El clon nunca hereda efectos que se hayan jugado en la unidad original antes o después de clonar.
+
+5. Máquina de Guerra: Cañón (Cannon War Machine):
+El Cañón es una máquina de guerra de asalto de la Cala.
+• Adquisición: Se puede comprar en la fábrica de máquinas de guerra o en un mercadillo.
+• Recargo de Mercadillo: Si decides comprar el Cañón en un mercadillo, no podrás realizar ninguna otra acción de mercadillo durante esa visita y deberás pagar 3 o 4 de Oro adicional en comparación con su coste base en la fábrica de máquinas de guerra.
+
+6. Lugares del Mapa Marino:
+• Barco Abandonado (Visitable - Banco de Criaturas): Puedes buscar (2) en el mazo de artefactos. Si lo haces, también ganarás 2 de Oro.
+• Naufragio (Visitable - Banco de Criaturas): Tira y resuelve 2 dados de recompensa (ReDie).
+• Pecio (Visitable): Otorga pasivamente 2 Materiales de construcción directos.
+• Barril Marino (Visitable): Tira y resuelve 1 dado de recompensa (ReDie).
+• Superviviente de Naufragio (Visitable): Te permite realizar la acción Buscar (2) en el mazo de artefactos de inmediato.
+• Sirena (Visitable): El héroe gana +1 PM adicional para consumir en el turno actual, y recibes una ficha de moral positiva.
+• Cofre Marino (Visitable): Tira 1 dado de ataque. Con +1: Busca (1) en el mazo de artefactos; con 0: Gana 5 de Oro; con −1: No ganas nada.
+• Restos de Naufragio (Visitable): Tira 1 dado de ataque. Con +1: Tira y resuelve 2 dados de recompensa; con 0: Tira y resuelve 1 dado de recompensa; con −1: No ganas nada.
+• Templo del Mar (Visitable): Otorga a tu elección 10 de Oro o 2 cartas de Artefacto del mazo.
+• Boya (Visitable): Te concede de forma inmediata una ficha de moral positiva.
+• Tumba (Visitable): Otorga 3 de Oro y busca (1) en el mazo de artefactos, pero te penaliza otorgándote una ficha de moral negativa.
+• Santuario del Gesto Mágico (Visitable): Te permite buscar (2) en el mazo de hechizos de forma gratuita.
+• Santuario del Encantamiento Mágico (Visitable): Puedes abonar 3 de Oro para buscar (2) en el mazo de hechizos.`
+  },
+  {
+    id: "naval_battles_and_creature_banks",
+    title: "22. Expansión Batallas Navales: Tablero Naval, Habilidades Potenciadas y Bancos de Criaturas",
+    category: "modes",
+    content: `La expansión Batallas Navales (Naval Battles) incorpora combates marítimos asimétricos, mecánicas de habilidades potenciadas y los peligrosos Bancos de Criaturas custodiados:
+
+1. Tablero de Combate Naval Alternativo:
+Si el escenario utiliza losetas de mar, se puede jugar con el tablero alternativo de combate naval de neopreno:
+• Obstáculo Central: Se eliminan por completo los dos hexágonos o espacios del centro del tablero, representando agua profunda o un abismo marino.
+• Unidades Terrestres: Las unidades de tipo terrestre (Ground) deben moverse obligatoriamente rodeando el obstáculo por el lado izquierdo o derecho del tablero.
+• Unidades Voladoras: Las unidades voladoras (Flying) pueden moverse sobre los espacios eliminados como si estuvieran allí, pero está terminantemente prohibido que finalicen su movimiento táctico o detengan su activación sobre ellos. Tampoco pueden moverse fuera de la cuadrícula.
+
+2. Fichas y Cartas de Habilidad Potenciada (Empowered Skills):
+Permiten elevar las 32 habilidades secundarias a un nuevo rango superior de poder permanente:
+• Ficha de Habilidad Potenciada: Te permite potenciar tu próxima carta de habilidad. Puedes usar esta ficha en el momento en que obtengas una nueva carta de habilidad (al subir de nivel, visitando un lugar, etc.). Colócala en tu carta de héroe y descártala tras usarla.
+• Carta de Habilidad Potenciada: Funciona de forma idéntica a las cartas de habilidad estándar, pero tiene un único efecto potenciado que no requiere consumir tu Corona de Efecto Experto. Al obtener la habilidad potenciada, retira del juego la carta de habilidad básica equivalente. El mazo de habilidades potenciadas se mantiene bocarriba al lado del mazo común. Son limitadas (solo hay una copia de cada una en juego).
+
+3. Fichas de Banco de Criaturas (Creature Bank Tokens):
+Permiten convertir zonas bloqueadas del mapa de aventura en zonas visitables de combate:
+• Clasificación: Se dividen en fichas Cercanas (reverso IV-V) y Lejanas (reverso II-III) según el tipo de loseta donde se revelen. Al descubrir una loseta, puedes elegir reemplazar una zona bloqueada con una ficha de banco del tipo correspondiente.
+• Acceso: Al entrar en la ficha, debes resolver el combate del banco de criaturas correspondiente. Si vences, reclamas su recompensa, retiras la ficha de la loseta y colocas un cubo negro para marcarla como visitada.
+
+4. Mecánica de Combate de Banco de Criaturas y Fichas de Pila (Stack Tokens):
+• Despliegue: El jugador coloca hasta 5 de sus unidades en la zona de despliegue táctica aliada. Las unidades neutrales que defienden el banco se toman de su mazo propio (bocarriba) y se colocan al azar en la zona de despliegue neutral.
+• Dificultad por Fichas de Pila: Según la dificultad del juego, roba fichas de pila bocabajo al azar y distribúyelas entre los defensores (máximo 1 ficha por unidad neutral):
+  - Fácil: 1 ficha de pila distribuida.
+  - Normal: 2 fichas de pila distribuidas.
+  - Difícil: 3 fichas de pila distribuidas.
+  - Imposible: 4 fichas de pila distribuidas.
+• Efectos de las Fichas de Pila: Cada ficha de pila añade un modificador a la unidad neutral sobre la que se sitúa (+1 a su <Attack>, +1 a su <Defense>, +1 a su Salud, o +2 a su Iniciativa). Las unidades con fichas de pila actúan como unidades reforzadas.
+• Elimiación de Pilas: Cuando una unidad neutral con ficha de pila sufre heridas iguales o superiores a su salud máxima (HP), descarta la ficha de pila, purga todo el daño que tuviera y aplica cualquier daño sobrante a su nueva salud base. Si muere sin fichas de pila, la carta de unidad derrotada se devuelve a su mazo de banco de criaturas (nunca se descarta definitivamente).
+• Botín: Al ganar, recibes la recompensa básica del banco más recompensas extra añadidas por cada unidad con ficha de pila derrotada. No otorgan Puntos de Experiencia (Exp) ni admiten combates rápidos.
+
+5. Lista Oficial de Bancos de Criaturas (Creature Banks):
+• Barco Abandonado: Defensores: 4 elementales de agua. Recompensa: Moral Negativa y 7 Oro. Extra: 2 de Oro por unidad apilada vencida + busca (X) en el mazo de hechizos, siendo X el número de unidades apiladas derrotadas.
+• Naufragio: Defensores: 4 espectros. Recompensa: Moral Negativa y 5 de Oro. Extra: 2 de Oro por unidad apilada vencida + busca (X) en el mazo de artefactos, siendo X el número de unidades apiladas derrotadas.
+• Colmena de Libélulas: Defensores: 4 libélulas. Recompensa: 1 unidad de libélulas. Extra: Si tenía al menos 2 unidades apiladas, ganas libélulas apiladas en su lugar.
+• Pirámide: Defensores: 2 gólems de oro, 2 gólems de diamante. Recompensa: Busca (5) en el mazo de hechizos. Extra: Por cada unidad de manada derrotada, puedes retirar 1 hechizo, habilidad o artefacto de tu mano/descarte y buscar (5) en la baraja respectiva.
+• Depósitos de Medusas: Defensores: 4 medusas. Recompensa: 6 Oro y 1 Recurso Valioso. Extra: 3 Oro o 1 Recurso Valioso por unidad apilada derrotada.
+• Tesorería Enana: Defensores: 4 enanos. Recompensa: 7 Oro. Extra: 3 Oro por unidad apilada derrotada.
+• Conservatorio de Grifos: Defensores: 4 grifos. Recompensa: 1 unidad de grifos. Extra: Si tenía al menos 2 unidades apiladas, ganas grifos apilados en su lugar.
+• Banco de Nagas: Defensores: 4 nagas. Recompensa: 6 Oro y 2 Recursos Valiosos. Extra: 6 Oro y 1 Recurso Valioso por unidad apilada derrotada.
+• Cripta: Defensores: 1 esqueleto, 1 zombi, 1 espectro, 1 vampiro. Recompensa: 6 Oro. Extra: 2 de Oro por unidad apilada derrotada.
+• Tesoro de los Diablillos: Defensores: 4 Familiares (diablillos). Recompensa: 3 Oro. Extra: 1 de Oro por unidad apilada derrotada.
+• Reservas del Cíclope: Defensores: 4 cíclopes. Recompensa: 8 Oro y 2 Recursos Valiosos. Extra: 2 Recursos de construcción y 1 Recurso Valioso por unidad apilada derrotada.
+• Utopía del Dragón: Defensores: 1 dragón negro, 1 dragón dorado, 1 dragón de cristal, 1 dragón hada. Recompensa: 40 Oro y busca (3) en el mazo de artefactos. Extra: Busca (5) en el mazo de artefactos o de hechizos por cada unidad apilada derrotada.`
+  },
+  {
+    id: "underground_additional_content",
+    title: "23. Expansión Contenido Adicional: Losetas Subterráneas, Puertas, Barcos, Ciudad Aleatoria y Campo de Fuerza",
+    category: "map",
+    content: `La expansión Contenido Adicional (Additional Content) introduce el plano subterráneo de Erathia, asedios aleatorios, naves físicas y defensas de campo de fuerza:
+
+1. Losetas de Mapa Subterráneo y Puerta Subterránea:
+El subsuelo representa una dimensión paralela de exploración en el mapa de aventura:
+• Regla de Tránsito: Los héroes no pueden moverse directamente entre una loseta de superficie y una loseta subterránea a menos que empleen el hechizo de Puerta Subterránea o de Portal a la Ciudad.
+• Fichas de Puerta Subterránea: Representan los túneles de acceso. Al descubrir una loseta que contiene una puerta subterránea, colócala normalmente. Elige una zona adyacente en la superficie (la «entrada») y coloca la mitad de la ficha de puerta subterránea en ella, y la otra mitad en la loseta subterránea correspondiente (la «salida»). Reemplaza la ubicación original de la zona y no puede colocarse en casillas bloqueadas o con lugares clave del escenario.
+• Movimiento Sin Coste: Al entrar en la puerta subterránea por la entrada, se descubre la loseta subterránea y se traslada al héroe directamente a la salida. Moverse entre la entrada y la salida de la puerta subterránea no consume Puntos de Movimiento (PM) adicionales, tratándose ambas zonas cubiertas como un único lugar. Permite viajar en ambos sentidos de forma continua.
+
+2. Mecánica del Barco (Boat Miniature):
+• Reemplazo de Miniatura: Puedes sustituir tu miniatura de héroe por la figura física de un barco inmediatamente después de entrar en una casilla o zona de mar activa.
+• Identificación de Propiedad: Coloca uno de tus cubos de facción en el interior de la miniatura de barco para recordar a qué héroe sustituye. Cuando el héroe entre en una zona de tierra firme desde el mar (desembarco), retira la miniatura de barco del mapa y vuelve a colocar la miniatura de héroe estándar.
+
+3. Fichas de Ataque (Attack Tokens):
+Una unidad que reciba esta ficha gana de forma inmediata +1 <Attack> o +2 <Attack> adicionales, según la cara visible de la ficha. Solo se permite un máximo de una ficha de ataque por unidad en combate táctico; si gana una segunda ficha, el jugador controlador escoge cuál de las dos conservar.
+
+4. Ciudad Aleatoria (Random Town) y Combate de Asedio:
+• Descubrimiento: Al descubrir la loseta de Ciudad Aleatoria, toma el mazo de cartas de ciudad, descarta las facciones activas en la partida, baraja el resto y roba una carta para determinar qué facción defenderá la ciudad aleatoria por el resto del escenario.
+• Despliegue Defensor: El asedio de la ciudad aleatoria se defiende de forma predeterminada mediante:
+  - 1 manada de estrella bronce (nivel 1-3). El jugador controlador de los defensores de la IA puede elegir cuál de bronce alistar.
+  - 2 manadas de estrella plata (nivel 4-5).
+  - 2 «unas pocas» de estrella oro (nivel 6-7).
+• Regla de Asedio: Durante este combate táctico de asedio, la carta de «Torre de arqueros» no se utiliza bajo ninguna circunstancia.
+
+5. Fichas de Campo de Fuerza (Force Field Tokens):
+• Mecánica del Obstáculo: Representa un muro o campo defensivo de energía física creado por el hechizo homónimo.
+• Restricción física: Actúa como un obstáculo de bloqueo absoluto. Únicamente las unidades de tipo volador (Flying) pueden moverse, saltar o volar a través de un espacio que contenga esta ficha. Las unidades terrestres o de melé sufren bloqueo completo.
+• Despliegue: En tableros normales, coloca 1 ficha sobre un espacio vacío. En tableros de Campo de Batalla, coloca 2 fichas en dos espacios vacíos adyacentes entre sí.
+
+6. Cartas de Caja de Pandora (Pandora's Box Cards):
+Este mazo opcional de 20 cartas sustituye el efecto genérico de la Caja de Pandora en el mapa. Al visitar el lugar, el héroe puede optar por robar una carta de caja de Pandora y resolver su efecto inmediato en su lugar, marcando la zona con un cubo negro de forma habitual.
+
+7. Hechizo de Mina (Landmine Spell):
+Conjuro de fuego que siembra el campo de batalla de trampas ocultas:
+• Despliegue de Minas: Según la <SpellPower> empleada, coge 2, 4 o 6 fichas de mina. La mitad deben estar vacías en su reverso y la otra mitad deben tener impreso el símbolo de 2 daños. Barájalas bocabajo y sitúa una por espacio vacío en el tablero de combate. Las fichas sobrantes se descartan.
+• Revelación y Daño: El jugador puede mirar el reverso de sus propias minas sembradas en cualquier momento. Cuando una unidad enemiga entra en una casilla con ficha de mina, se revela: si está vacía, no sufre penalización y sigue moviéndose; si muestra el símbolo de daño, la unidad sufre automáticamente 2 heridas directas y, si sobrevive, finaliza su activación en dicha casilla. Dos fichas de mina de jugadores rivales pueden coincidir en el mismo espacio táctico.`
+  },
+  {
+    id: "stronghold_expansion_additions",
+    title: "24. Expansión Bastión: Arenas Movedizas y Fichas de Corrosión",
+    category: "magic",
+    content: `La expansión Bastión (Stronghold) introduce el terreno desértico de Krewlod, furia de combate y tácticas de desgaste físico:
+
+1. Hechizo y Fichas de Arenas Movedizas (Quicksand Spell):
+• Despliegue: Según la <SpellPower> de tierra que emplee el héroe, toma 2, 4 o 6 fichas de arenas movedizas del mismo conjunto (donde la mitad están vacías y la otra mitad contienen el icono de arenas movedizas en su reverso). Barájalas bocabajo y distribuye una por hexágono táctico libre. Las sobrantes se retiran.
+• Revelación de Obstáculo: Cuando una unidad entra en una casilla con ficha de arenas movedizas, se voltea bocabajo: si está vacía, la unidad puede continuar su movimiento sin penalizaciones; si muestra el icono de arenas movedizas, la activación, el movimiento y la acción de ataque de la unidad finalizan de forma fulminante en ese hexágono en ese turno. Dos fichas de diferentes jugadores pueden ocupar el mismo hexágono.
+
+2. Fichas de Corrosión (Corrosion Tokens):
+Las fichas de corrosión representan el óxido ácido y el desgaste de armaduras de las fuerzas salvajes del Bastión:
+• Efecto en Combate: Una unidad afectada por esta ficha sufre una penalización permanente reduciendo su <Defense> en 1 punto, hasta un mínimo de 0.
+• Límite: Solo se permite un máximo de una ficha de corrosión por unidad táctica a la vez; si la unidad recibe una segunda ficha de corrosión, la ficha extra se descarta directamente a la caja.
+• Duración: A menos que sea purgada mediante un hechizo beneficioso o habilidad especial de curación/limpieza, la ficha de corrosión permanece sobre la unidad de forma continua hasta la finalización absoluta del combate táctico.`
   },
   {
     id: "scenario_modes_and_end_conditions",
