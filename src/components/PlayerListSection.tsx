@@ -272,7 +272,12 @@ export function PlayerListSection({
                       <span>Tokens:</span>
                       <span title="Construir" className="cursor-help">{player.actionBuildUsed ? '🔴' : '🟢'}</span>
                       <span title="Reclutar" className="cursor-help">{player.actionRecruitUsed ? '🔴' : '🟢'}</span>
-                      <span title="Cofradía" className="cursor-help">{player.actionMageGuildUsed ? '🔴' : '🟢'}</span>
+                      <span 
+                        title={player.hasMageGuild ? "Libro de Hechizos" : "Cofradía de Magos no comprada (Bloqueado)"} 
+                        className="cursor-help font-sans"
+                      >
+                        {player.hasMageGuild ? (player.actionMageGuildUsed ? '🔴' : '🟢') : '🔒'}
+                      </span>
                     </span>
                   </div>
                   <div className="flex flex-wrap items-center gap-2 mt-1 select-none">

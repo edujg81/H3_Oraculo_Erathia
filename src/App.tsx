@@ -74,7 +74,8 @@ export default function App() {
       valuablesGen: 1,
       mainHeroMove: 3,
       secHeroMove: 2,
-      hasSecHero: false
+      hasSecHero: false,
+      hasMageGuild: false
     },
     { 
       id: '2', 
@@ -213,7 +214,8 @@ export default function App() {
         valuablesGen: 1,
         mainHeroMove: 3,
         secHeroMove: 2,
-        hasSecHero: false
+        hasSecHero: false,
+        hasMageGuild: false
       }
     ]);
     setNewPlayerName('');
@@ -238,7 +240,8 @@ export default function App() {
       valuablesGen: 1,
       mainHeroMove: 3,
       secHeroMove: 2,
-      hasSecHero: false
+      hasSecHero: false,
+      hasMageGuild: false
     }));
     setPlayers(defaultPlayers);
     setActivePlayerIndex(0);

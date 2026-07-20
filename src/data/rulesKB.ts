@@ -590,7 +590,7 @@ Se utilizan dos conjuntos de dos fichas de clonación de diferentes colores (un 
 5. Máquina de Guerra: Cañón (Cannon War Machine):
 El Cañón es una máquina de guerra de asalto de la Cala.
 • Adquisición: Se puede comprar en la fábrica de máquinas de guerra o en un mercadillo.
-• Recargo de Mercadillo: Si decides comprar el Cañón en un mercadillo, no podrás realizar ninguna otra acción de mercadillo durante esa visita y deberás pagar 3 o 4 de Oro adicional en comparación con su coste base en la fábrica de máquinas de guerra.
+• Recargo de Mercadillo: Si decides comprar una máquina de guerra en un mercadillo, no podrás realizar ninguna otra acción de mercadillo durante esa visita, y su coste será de 3 o 4 de Oro adicional (dependiendo de la máquina en cuestión) en comparación con su coste en una fábrica de máquinas de guerra.
 
 6. Lugares del Mapa Marino:
 • Barco Abandonado (Visitable - Banco de Criaturas): Puedes buscar (2) en el mazo de artefactos. Si lo haces, también ganarás 2 de Oro.
@@ -1001,23 +1001,19 @@ Los Héroes de la IA disponen de un mazo simplificado sin recursos ni tablero de
   },
   {
     id: "tournament_rules_and_draft",
-    title: "34. Opciones Avanzadas, Modo Torneo y Ajustes de Competición",
+    title: "34. Opciones Avanzadas de la Comunidad (No Oficiales)",
     category: "modes",
-    content: `Para potenciar la simetría y profundidad competitiva del juego de mesa, se pueden activar las siguientes reglas reglamentarias avanzadas opcionales acordadas en la preparación:
+    content: `IMPORTANTE: Las variantes de esta sección NO son reglas oficiales de Archon Studio/Ubisoft — son variantes caseras inspiradas por la comunidad de jugadores para partidas informales. Para las reglas OFICIALES de competición, consulta la sección "35b. Reglamento Oficial del Modo Torneo (Libro de Torneo):
 
-1. Niebla de Guerra Dinámica (Tactical Fog of War):
-Para juegos competitivos extremos. Las losetas colindantes a las adyacentes permanecen ocultas boca abajo. Solo al detener al héroe en los lindes de una loseta revelada se puede voltear la siguiente. Las habilidades de Exploración (Pathfinding) o el hechizo Ojo de Águila permiten revelar hasta 2 losetas de distancia de manera anticipada.
+1. Niebla de Guerra Dinámica (Tactical Fog of War) [No oficial]:
+Para juegos competitivos extremos. Las losetas colindantes a las adyacentes permanecen ocultas boca abajo. Solo al detener al héroe en los lindes de una loseta revelada se puede voltear la siguiente. Las habilidades de Exploración (Pathfinding) o el hechizo Ver Tierra permiten revelar hasta 2 losetas de distancia de manera anticipada.
 
-2. Reglas Oficiales de Torneo de Erathia (Tournament Pick & Ban):
+2. Veto y Draft de Héroes [No oficial]:
 • Veto de Facción: En fase de inicio, cada jugador veta 1 facción enemiga de la bolsa común.
 • Draft de Héroes: Se barajan las cartas de Héroes de las facciones autorizadas, distribuyendo 3 al azar a cada jugador. Estos eligen 1 como Principal, descartan otro y pasan el restante al jugador de su derecha.
-• Compensación Geográfica: El segundo jugador del orden de turno comienza con una ficha de movimiento inactiva adicional de Establos gratis en su capital para equilibrar la ventaja de movimiento inicial del primer jugador.
 
-3. Logística de Relevo y Cadena de Suministro:
-Un héroe secundario que finalice su PM en un nudo de camino o puente adyacente a un héroe principal de su misma facción puede transferirle de forma gratuita y sin coste de acción cualquier cantidad de monedas de oro, artefactos o regimientos de criaturas de su mano, permitiendo prolongar turnos militares de ataque complejos en las líneas enemigas.
-
-4. Modo de Tiempo de Turno Reglamentario (Turn Timers):
-En torneos con cronómetro táctico, cada jugador dispone de un pool de 3 minutos por turno. El exceso de tiempo consumido penaliza el siguiente turno de aventura restando de forma inmediata 1 Ficha de Movimiento en el atlas.`
+3. Cronómetro de Turno [No oficial]:
+Para partidas con límite de tiempo, cada jugador dispone de un pool de minutos por turno acordado antes de la partida. El exceso de tiempo consumido puede penalizar el siguiente turno restando 1 Ficha de Movimiento, si así lo acuerdan los jugadores.`
   },
   {
     id: "rule_variants",
@@ -1034,11 +1030,11 @@ En torneos con cronómetro táctico, cada jugador dispone de un pool de 3 minuto
 3. INICIO CON DRAFT (Draft Start):
 • Variante recomendada para 3 o más jugadores que sustituye los mazos de inicio fijos. Se aparta la habilidad inicial del héroe y su especialidad de nivel I. Se barajan de forma independiente los mazos de Artefacto, Hechizo y Habilidad. Cada jugador roba 2 cartas de cada uno, elige una para conservar y pasa el resto al jugador de la izquierda. Se repite alternando izquierda y derecha hasta formar un pool de 12 cartas drafteadas. Se añaden las cartas de Estadística según el tablero para sumar un mazo de 18 (Might) o 17 (Magic), del cual se eligen 7 cartas (descartando el resto) para juntar con las 2 iniciales apartadas y constituir la mano inicial de 9 cartas lista.
 
-4. SEPARACIÓN DE DECK DE ARTEFACTOS Y HECHIZOS (Split Decks):
-• Variante estándar para el Modo Torneo. Los artefactos se dividen en tres mazos físicos independientes (Menores, Mayores y Reliquias), y los Hechizos en dos mazos (Básicos y Expertos). Al conseguir un objeto o conjuro, el mazo elegible depende de la posición del Héroe Principal en el mapa:
+4. SEPARACIÓN DE DECK DE ARTEFACTOS Y HECHIZOS (Split Decks) [Regla OPCIONAL oficial del Libro de Torneo, usable en cualquier escenario]:
+• Los artefactos se dividen en tres mazos físicos independientes (Menores, Mayores y Reliquias), y los Hechizos en dos mazos (Básicos y Avanzados; Flecha Mágica cuenta como básico). Al conseguir un objeto o hechizo, el mazo elegible depende de la posición del Héroe Principal en el mapa:
   - Losetas I, II-III (Zonas iniciales/lejanas): Mazo de Artefactos Menores y Hechizos Básicos.
-  - Losetas IV-V (Zonas intermedias): Mazo de Artefactos Menores o Mayores, y Hechizos Básicos o Expertos.
-  - Losetas VI-VII (Zonas centrales/avanzadas): Mazo de Artefactos Menores, Mayores o Reliquias, y Hechizos Básicos o Expertos.
+  - Losetas IV-V (Zonas cercanas): Mazo de Artefactos Mayores y Reliquias, y Hechizos Básicos o Avanzados.
+  - Losetas VI-VII (Zonas centrales/avanzadas): Mazo de cualquier tipo de Artefactos y Hechizos.
 
 5. RESERVA DE ORO (Gold Pool):
 • En partidas competitivas dinámicas, el pool de recursos se denomina 'Pool no gastado'. Al reclutar o reforzar regimientos, el Oro y los objetos de valor gastados se trasladan a una 'Reserva Reservada' especial al lado del mazo de tropa del jugador en lugar de retornar a la caja común. Al vender o perecer tropas en combate, el coste invertido en ellas retorna íntegro de la Reserva Reservada al Pool no gastado del jugador, mitigando el impacto devastador de bajas militares tempranas. Al rebajarse una tropa de Élite (Pack) a Básica (Few) por daño, el jugador recupera inmediatamente el coste de mejora.
@@ -1052,65 +1048,44 @@ En torneos con cronómetro táctico, cada jugador dispone de un pool de 3 minuto
     id: "tournament_game_mode",
     title: "35b. Reglamento Oficial del Modo Torneo (Reglas de Competición)",
     category: "modes",
-    content: `Para torneos y competiciones simétricas, se establece el siguiente reglamento unificado para determinar la preparación, el draft y el ganador de una partida de Heroes III: El Juego de Mesa:
+    content: `El Modo Torneo son partidas 1 contra 1 con reglas propias de construcción de mapa, puntuación y ajustes de equilibrio.
 
-## 1. Fase de Selección y Veto (Pick & Ban) de Facciones
-• Cada jugador veta (banea) una de las 10 facciones disponibles de la bolsa común en secreto o por acuerdo.
-• A continuación, los jugadores eligen su facción jugable entre las restantes de manera alternada (según sorteo de prioridad).
-• **Draft de Héroes:** Una vez seleccionada la facción, cada jugador baraja sus cartas de Héroes, roba 3 cartas al azar, elige una como su Héroe Principal, otra como su Héroe Secundario (si está disponible en el escenario) y devuelve la tercera a la caja.
+## 1. CONSTRUCCIÓN DEL MAPA DE ESCENARIO
+Cada escenario de torneo trae una preparación inicial que ilustra la disposición central del mapa; el resto de losetas las colocan ambos jugadores siguiendo estos pasos:
+1. Ambos jugadores lanzan 2 dados de recursos. El jugador con más recursos en sus dados elige quién empieza y quién es segundo. El segundo jugador obtiene una ficha de moral al comienzo de la partida.
+2. Se colocan las losetas de mapa centrales/especiales indicadas por la ilustración del escenario elegido.
+3. El jugador inicial descubre esas losetas y las rota como prefiera.
+4. Empezando por el SEGUNDO jugador, ambos se turnan para añadir, una a una, todas sus losetas de mapa cercanas (IV-V) al mapa: siempre que sea posible, una loseta cercana se coloca junto a una loseta central; en cada escenario, al menos 2 losetas cercanas deben incluir un obelisco.
+5. Colocadas las cercanas, el jugador inicial coloca su loseta inicial (I) adyacente a al menos una cercana. El otro jugador coloca su loseta inicial en el lado opuesto del mapa (la posición más alejada de la del jugador inicial, por número de losetas).
+6. Empezando por el jugador inicial, ambos añaden por turnos sus losetas lejanas (II-III): la primera de cada jugador debe ser adyacente a su loseta inicial; el resto sigue las reglas básicas de colocación de losetas (adyacente a su héroe y a al menos 2 losetas más).
+Nota: todas las losetas se rotan libremente y se colocan boca arriba.
 
-## 2. Fase de Draft de Inicio (Mazos Equilibrados)
-• Para mitigar el azar del inicio, se recomienda usar la variante **Draft Start**:
-  - Se apartan las cartas iniciales de Habilidad y Especialidad de nivel I de los héroes.
-  - Se barajan de manera independiente los mazos comunes de Habilidad, Hechizo y Artefacto.
-  - Cada jugador roba 2 cartas de cada mazo, conserva una en secreto y pasa la otra al oponente. Se repite hasta tener un pool de cartas drafteadas equilibrado que constituirá la mano inicial de la aventura.
+## 2. PUNTUACIÓN (PUNTOS DE VICTORIA)
+Cuando el escenario llega al límite de rondas o algún jugador cumple la condición de victoria, la partida acaba y ambos cuentan sus Puntos de Victoria (PV):
+• 4 PV por derrotar al héroe PRINCIPAL del enemigo (una sola vez por escenario, no acumulable).
+• 2 PV por derrotar al héroe SECUNDARIO del enemigo.
+• 1 PV por cada mina o asentamiento bajo tu control.
+• 1 PV por cada edificio construido en tu ciudad (sin distinción de tipo o nivel).
+• 1 PV por cada 2 cartas de artefacto en tu mazo de fuerza y magia (redondeando hacia abajo).
+• 1 PV por cada nivel de experiencia de tu héroe principal.
+• X PV adicionales según los objetivos especiales que indique la descripción de cada escenario concreto.
+Gana el jugador con más Puntos de Victoria totales. El Libro de Torneo NO especifica ningún criterio de desempate adicional más allá de "más puntos gana".
 
-## 3. Compensación de Iniciativa en el Mapa de Aventura
-• El jugador que empieza en segundo lugar (Jugador 2) recibe una bonificación inmediata de compensación debido a la ventaja táctica del primer turno del Jugador 1:
-  - Comienza la partida con una ficha de movimiento inactiva adicional de **Establos** de manera gratuita en su metrópolis, o bien recibe **+3 de Oro** iniciales adicionales.
+## 3. REGLAS ADICIONALES (se aplican a TODOS los escenarios de torneo, sin excepción)
+1. Se retira la carta de habilidad Diplomacia de la partida (no se puede reclutar unidades neutrales azur mediante Diplomacia en Modo Torneo).
+2. Se retira la carta de artefacto Reloj de la Hora Aciaga de la partida.
+3. Al comienzo de la primera ronda, cada jugador puede (opcionalmente) devolver toda su mano de cartas a su mazo de fuerza y magia, barajarlo y robar una mano nueva (mulligan único).
+4. El segundo jugador en el orden de turno comienza la partida con 1 ficha de moral.
+5. Acción adicional con la ficha de moral: durante una acción de buscar (X), puedes descartar todas las cartas que acabas de robar y volver a buscar (X) de nuevo. Aplica también al buscar en los mazos de artefactos, hechizos y habilidades (no solo al mazo de fuerza y magia).
+6. Cualquier carta de artefacto retirada del juego se coloca junto al mazo de fuerza y magia (no vuelve a la caja) hasta el final de la partida; ese montón de artefactos retirados SÍ cuenta para tus Puntos de Victoria finales.
+7. Nuevo lugar de mapa exclusivo de esta variante: Observatorio de Caoba (Visitable) — elige 1 loseta adyacente a esta que no contenga un héroe y puedes rotarla como quieras (respetando las reglas básicas de colocación de losetas).
 
-## 4. Estructura de Ronda y Tiempo (Límite de Torneo)
-• Una partida de torneo estándar se disputa bajo un límite riguroso de **9 Rondas completas** de juego.
-• **Cronométrica (Turn Timers):** Cada jugador dispone de exactamente **3 minutos por turno** de aventura. Si excede este tiempo, sufre una penalización inmediata restándole 1 Ficha de Movimiento en su siguiente turno.
+## 4. REGLAS OPCIONALES (utilizables en cualquier escenario, incluidos los básicos)
+• Mazos de artefacto divididos por tipo de loseta: separa el mazo de artefactos en 3 (Menores, Mayores, Reliquias). En losetas iniciales y lejanas SOLO se consiguen artefactos Menores. En losetas cercanas se consiguen artefactos Mayores y Reliquias (NO Menores). En el centro se consiguen los tres tipos (Menores, Mayores y Reliquias).
+• Mazos de hechizo divididos por tipo de loseta: separa el mazo de hechizos en 2 (Básicos y Avanzados/Expertos; Flecha Mágica cuenta como básico). En losetas iniciales y lejanas SOLO se consiguen hechizos básicos. En losetas cercanas Y centrales se consiguen tanto básicos como avanzados.
 
-## 5. Condiciones de Fin de Partida y Victoria
-• **Victoria Instantánea:** Un jugador gana la partida inmediatamente si logra capturar la Metrópolis natal del rival o elimina de forma definitiva a su Héroe Principal (cuando el rival no tenga más castillos o asentamientos).
-• **Victoria por Puntos (Ronda 9):** Si al concluir la 9ª ronda ningún jugador ha logrado la victoria instantánea, el vencedor de la partida se decide sumando los **Puntos de Victoria (PV)** obtenidos a lo largo del escenario:
-
-### A. Metrópolis y Edificación (Puntos de Ciudad):
-• **Ayuntamiento (Town Hall):** 1 PV
-• **Cabildo (City Hall):** 2 PV
-• **Capitolio (Capitol):** 3 PV
-• **Fuerte (Fort):** 1 PV
-• **Ciudadela (Citadel):** 2 PV
-• **Castillo (Castle):** 3 PV
-• **Cofradía de Magos:** Nivel I = 1 PV | Nivel II = 2 PV | Nivel III = 3 PV
-• **Viviendas de Criaturas (construidas):** Bronce = 1 PV | Plata = 2 PV | Oro = 3 PV
-• **Estructura de Grial (erigida en Metrópolis):** 5 PV
-
-### B. Fuerzas Militares (Tropas vivas en mazo/mano):
-• **Unidades de Bronce:** Rango Básico (Few) = 1 PV | Rango Élite (Pack) = 2 PV
-• **Unidades de Plata:** Rango Básico (Few) = 2 PV | Rango Élite (Pack) = 3 PV
-• **Unidades de Oro:** Rango Básico (Few) = 3 PV | Rango Élite (Pack) = 5 PV
-• **Unidades Azur (Legendarias):** Rango Básico (Few) = 6 PV | Rango Élite (Pack) = 8 PV
-
-### C. Control Territorial y Hazañas (Mapa de Aventura):
-• **Minas de Recursos Señalizadas:** Canteras, Aserraderos y Minas de Oro = 1 PV c/u | Minas de Valiosos (Mercurio, Azufre, Gemas, Cristal) = 2 PV c/u.
-• **Asentamientos o Portales bajo control:** 2 PV c/u.
-• **Héroes rivales derrotados:** 3 PV por cada combate ganado contra héroes del oponente.
-
-### D. Economía y Tesoro:
-• **Artefactos en posesión:** Menor = 1 PV | Mayor = 2 PV | Reliquia = 4 PV
-• **Hechizos en mazo:** Nivel 1 = 1 PV | Nivel 2 = 2 PV | Nivel 3 = 3 PV
-• **Reserva de Oro:** 1 PV por cada 10 monedas de Oro restantes (hasta un máximo de 5 PV).
-• **Objetos de Valor:** 1 PV por cada recurso valioso restante (hasta un máximo de 3 PV).
-
-## 6. Criterios de Desempate (Tiebreakers)
-En caso de empate absoluto en Puntos de Victoria, el orden de criterios de desempate prioritarios es:
-1. El jugador que haya derrotado al Héroe Principal enemigo más veces en batalla.
-2. El jugador que posea el Héroe de mayor Nivel de Experiencia total.
-3. El jugador que conserve la mayor cantidad de Oro neto en su tesorería.
-4. El jugador con más tropas supervivientes de rango Oro o Azur.`
+## 5. CREADOR DE ESCENARIOS (para diseñar tus propios escenarios de torneo)
+Pasos oficiales: 1) Título y descripción. 2) Nº de jugadores (2 en el básico; expansiones permiten más). 3) Duración en rondas (máx. recomendado 16, si necesitas más divide en varios escenarios tipo campaña). 4) Diseño del mapa (recomendado por jugador: 1 loseta inicial, 2 cercanas, 2 lejanas; usa las reglas de construcción de mapa de torneo o dibuja tu propio mapa; asegúrate de que el acceso a tipos de loseta sea equivalente entre jugadores). 5) Recursos iniciales (por defecto 15 oro/3 materiales/1 valioso). 6) Ingresos iniciales (por defecto «10» oro/«0» materiales/«0» valiosos). 7) Edificios iniciales. 8) Unidades iniciales (por defecto 3 "unas pocas" de bronce). 9) Bonificadores iniciales adicionales (normalmente reservado a campañas). 10) Reglas del escenario (qué hacen los lugares especiales como obeliscos o la utopía del dragón). 11) Condición(es) de victoria. 12) Qué ocurre al llegar al límite de rondas. 13) Eventos contrarreloj (qué deben hacer los jugadores al llegar a ciertas rondas).`
   },
   {
     id: "wiki_cards_components",
@@ -2046,5 +2021,83 @@ II. HÉROE SECUNDARIO:
 • Cartas ganadas: Si el Héroe Secundario gana alguna Carta, colócala en tu mano de forma normal.
 • Combate y Unidades Compartidas: En combate usan las mismas Cartas de Unidad que el Héroe Principal (comparten tropas). Se considera que tienen el mismo Nivel que el Héroe Principal a efectos de resolver Combates Rápidos.
 • Derrota o Retirada Instantánea: Si tu Héroe Secundario es atacado por un Héroe enemigo, puedes elegir que ese Héroe sea derrotado instantáneamente en lugar de luchar (para conservar intactas las tropas). Al ser derrotado, elimínalo del juego. Puede ser reclutado de nuevo con otro uso de la ficha de Población.`
+  },
+  {
+    id: "rampart_expansion_new_elements",
+    title: "50. Expansión Murallas (Rampart): Nuevos Elementos y Modo Alianza Avanzado",
+    category: "modes",
+    content: `Contenido verificado contra el Libro de Misiones de Murallas oficial (v1.0 ESP). La expansión Murallas añade la facción Murallas (elfos y enanos de AvLee), cartas de máquina de guerra, nuevos lugares de mapa, reglas para el Modo Alianza y una campaña en solitario propia.
+
+## CARTAS DE EFECTO PERMANENTE
+Nuevo tipo de carta (símbolo de infinito ∞): ofrecen un bonificador o condición duradera. Al jugar una carta de efecto permanente, colócala boca arriba frente a ti; permanece ahí hasta que la descartas voluntariamente o la sustituyes por otra carta de efecto permanente. Cada héroe solo puede tener UNA carta de efecto permanente activa a la vez. Mientras está en juego, puedes seguir usando sus efectos (básico o avanzado), pero no se apilan: si usas el efecto avanzado, no sumes también el básico.
+
+## MÁQUINA DE GUERRA (mecánica general)
+Se consiguen en la Fábrica de Máquinas de Guerra (lugar revisitable) o en un Mercadillo. Si la compras en un mercadillo, no puedes usar ninguna otra acción de ese mercadillo en la misma visita, y el coste es 3 de Oro más caro que en la fábrica. El mazo de máquinas de guerra se coloca al alcance de todos los jugadores.
+
+## MODO ALIANZA: REGLA ADICIONAL PRECISA
+Requiere como mínimo 1 expansión y 4 jugadores (2 contra 2). Reglas exactas:
+• Una alianza es un equipo de 2 jugadores formado al comienzo de la partida, que dura el resto del escenario.
+• Cada jugador elige su facción al comienzo del escenario (no tienen por qué compartir facción).
+• Los aliados pueden intercambiarse artefactos, pero SOLO si sus héroes están en zonas adyacentes.
+• Los aliados pueden intercambiar recursos LIBREMENTE en cualquier momento, sin necesidad de estar en zonas adyacentes.
+• REGLA CLAVE: un jugador de una alianza NO puede señalizar un lugar que YA haya sido señalizado por el otro jugador de su misma alianza (evita "recapturar" el mismo lugar para farmear el bonificador de primera captura dos veces dentro del mismo equipo).
+• Al acabar el escenario, los héroes aliados comparten las condiciones de victoria y derrota por igual; no existe ningún paso para comparar quién contribuyó más.
+
+## NUEVOS LUGARES DE MAPA DE LA EXPANSIÓN MURALLAS
+• Mina: Aserradero (Sawmill) — Categoría Señalizable. Funciona como cualquier otra mina: si la capturas sin dueño previo, recibes sus recursos de inmediato. Genera pasivamente 2 Materiales de Construcción al comienzo de cada ronda de recursos.
+• Fábrica de Máquinas de Guerra — Categoría Revisitable. Permite a los héroes comprar máquinas de guerra.
+• Mercadillo (actualizado en esta expansión) — Categoría Revisitable. Ahora permite además comprar una máquina de guerra (con el recargo de +3 de oro descrito arriba), aparte de sus funciones habituales de intercambiar recursos o retirar una carta.`
+  },
+  {
+    id: "rampart_alliance_confrontation_scenarios",
+    title: "51. Escenarios de Murallas: El Desafío (Alianza) y Oro Enano (Enfrentamiento)",
+    category: "modes",
+    content: `Dos escenarios oficiales incluidos en el Libro de Misiones de Murallas, útiles como referencia de cómo se preparan escenarios de Alianza y de Enfrentamiento con condición de victoria basada en un objetivo especial (Ficha de Grial).
+
+## EL DESAFÍO (Modo Alianza, 4 jugadores: 2 contra 2)
+• Duración: 11-14 rondas. Recursos iniciales: 16 oro, 4 materiales, 1 valioso. Ingresos: «10» oro, «0» materiales, «0» valiosos. Edificio inicial: 1 vivienda de bronce. Unidades iniciales: 2 manadas de bronce con el menor coste de reclutamiento.
+• Reglas especiales: al visitar un obelisco se lanzan 2 dados de tesoro y se resuelve uno; los jugadores pueden usar su mazo de fuerza y magia al pagar oro para defender la ciudad de su facción; una alianza NO puede visitar la zona con la ficha de grial hasta que sus miembros hayan visitado al menos 4 obeliscos diferentes distintos, o algún héroe ya haya cogido la ficha; conseguir la ficha de grial cuesta 2 puntos de movimiento en su zona; si derrotan o rinden al héroe portador, la ficha pasa al vencedor o se queda en la zona de rendición/derrota; la ficha de grial aumenta en 5 los ingresos de oro.
+• Condición de victoria: un héroe debe conseguir la ficha de grial y llevarla a la ciudad de su facción.
+• Marcador de rondas: al final de la ronda 11, si nadie tiene el grial, todos pierden. Si ya lo tienen, disponen hasta el final de la ronda 14 para llevarlo a su ciudad; si no, pierden.
+• Evento contrarreloj: al comienzo de las rondas 4 y 9, se retiran todos los cubos negros del mapa (permite "revisitar" lugares Visitables).
+
+## ORO ENANO (Modo Enfrentamiento, 2-3 jugadores)
+• Duración: 10 rondas. Recursos iniciales: 15 oro, 3 materiales, 1 valioso. Ingresos: «10» oro, «2» materiales, «0» valiosos. Unidades iniciales: 1 manada de bronce con el MAYOR coste de reclutamiento (al revés que el escenario anterior).
+• Regla especial clave: prohibido usar cartas que otorguen recursos; si al buscar robas una de estas cartas, debes enseñarla a los demás, descartarla y robar otra.
+• Reglas del grial: solo los héroes principales pueden conseguirla; otorga 15 oro inmediatos y +5 de ingresos de oro al llegar con ella a la ciudad; para visitar su zona hace falta haber visitado antes al menos 2 obeliscos diferentes (o que algún héroe ya la haya llevado una vez).
+• Condición de victoria: tener 75 de oro al final de una ronda (si varios la cumplen a la vez, gana quien tenga más oro). Si nadie llega a 75 antes del final de la ronda 10, todos pierden.
+• Evento contrarreloj: en las rondas 2, 4, 6, 8 y 10 se retiran los cubos negros de todos los molinos y molinos de agua del mapa.`
+  },
+  {
+    id: "rampart_solo_campaign",
+    title: "52. Campaña en Solitario de Murallas: La Venganza se Sirve Fría",
+    category: "modes",
+    content: `Resumen mecánico de la campaña en solitario de 3 escenarios incluida en el Libro de Misiones de Murallas (se omite la narrativa de historia; solo se recoge la estructura de reglas para poder resolver dudas de preparación y victoria).
+
+## ESCENARIO 1: EN BUSCA DE UN ASESINO
+Facción del jugador: Murallas (héroe Gelu). Dura 11 rondas. IA: facción Necrópolis (héroes Galthran y Aislinn, más el ejército de la ciudad). Bonificador a elegir: +2 objetos de valor, +4 materiales, o carta de máquina de guerra Carro de Municiones. Regla especial: a partir de la ronda 7, la dificultad de todos los combates del mapa aumenta en 1 hasta el final del escenario. Victoria: derrotar a todos los ejércitos enemigos antes del final de la ronda 11. Derrota: perder el control de tu ciudad, perder un combate contra un ejército enemigo, o no cumplir la victoria a tiempo.
+
+## ESCENARIO 2: PAZ DEFINITIVA
+Facción del jugador: Murallas (héroe Gem). Dura 13 rondas. IA: Necrópolis (guardias de lord Fayette y lord Fayette). Bonificador a elegir: +8 oro, +4 materiales, o buscar(2) en el mazo de hechizos dos veces. Victoria: derrotar a todos los ejércitos enemigos antes de que acabe la ronda 13 (si no derrotas a lord Fayette a tiempo, pierdes).
+
+## ESCENARIO 3: AGENTES DE LA VENGANZA
+Facción del jugador: Murallas (héroes Gem y Gelu disponibles). Dura 12 rondas. IA: Necrópolis (Charna, Galthran y Vidomina; Vidomina no se mueve por el mapa). Bonificador a elegir: +2 objetos de valor, buscar(4) en el mazo de artefactos, o reforzar dos de tus unidades. Regla especial: la dificultad de todos los combates en las losetas de Necrópolis aumenta en 1 durante todo el escenario. Victoria: derrotar al ejército enemigo (Vidomina) en la zona de la utopía del dragón antes de que acabe la ronda 12.
+
+Regla común a los 3 escenarios: los héroes enemigos se mueven después del jugador; si un enemigo está en una zona bloqueada, el jugador puede entrar igualmente en ella; tras derrotar al ejército de un héroe enemigo se ganan 2 objetos de valor; la primera vez que el héroe entra en una zona con obelisco se activa un evento de historia único de esa partida.`
+  },
+  {
+    id: "tournament_official_scenarios",
+    title: "53. Escenarios Oficiales del Libro de Torneo (1 contra 1)",
+    category: "modes",
+    content: `Los 3 escenarios oficiales incluidos en el Libro de Torneo, para partidas 1 contra 1 siguiendo las reglas de la sección "35b. Reglamento Oficial del Modo Torneo".
+
+## 1. ÚLTIMA OPORTUNIDAD
+Mapa: 2 losetas iniciales (I) + 4 cercanas (IV-V, 2 con obelisco) + 4 lejanas (II-III). Recursos iniciales: 10 oro, 3 materiales, 1 valioso. Ingresos: «10»/«0»/«0». Edificio inicial: 1 vivienda de bronce. Unidades iniciales: 3 "unas pocas" de bronce. Regla especial: visitar un obelisco otorga una ficha de moral. Condición de victoria: el héroe de un jugador debe derrotar al héroe principal de su oponente (fin inmediato de partida y recuento de PV). Si nadie lo consigue antes del final de la ronda 8, la partida acaba igualmente y se cuentan los PV.
+
+## 2. LA GRAN CARRERA
+Mapa: igual al anterior más 1 loseta central (VII-VIII) con la zona de la utopía del dragón. Mismos recursos/ingresos/edificios/unidades iniciales que el escenario 1. Regla especial: al visitar un obelisco, elige entre ganar una ficha de moral, lanzar 1 dado de recursos, o lanzar 1 dado de tesoro. Quien controle la utopía del dragón al final de la partida gana 3 PV adicionales. Condición de victoria: al capturar la utopía del dragón por primera vez, la partida continúa 1 ronda más y termina. Si nadie la captura antes del final de la ronda 11, la partida acaba igualmente y se cuentan los PV.
+
+## 3. HERENCIA INESPERADA
+Mapa: 2 losetas iniciales (I) + 2 cercanas con obelisco (una por jugador) + 2 cercanas sin obelisco + 2 centrales (VI-VII) con las zonas del grial y la utopía del dragón + 6 lejanas (II-III). Mismos recursos/ingresos/edificios/unidades iniciales. Regla especial: al visitar un obelisco, elige entre (a) lanzar 1 dado de recursos y 1 de tesoro y quedarte con el resultado de uno de los dos, o (b) buscar(2) en el mazo de artefactos. No se puede visitar la zona del grial hasta haber visitado 2 obeliscos diferentes, o que otro héroe ya haya cogido la ficha una vez; conseguirla cuesta 2 PM. Un jugador gana 3 PV adicionales al final del escenario si controla la utopía del dragón Y tiene la ficha de grial. Condición de victoria: al final de cualquier ronda en que alguien controle la utopía del dragón Y tenga la ficha de grial, se juega 1 ronda más y termina la partida. Si esto no ocurre antes del final de la ronda 14, la partida acaba igualmente y se cuentan los PV.`
   }
 ];

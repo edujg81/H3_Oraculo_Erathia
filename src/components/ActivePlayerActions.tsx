@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Compass, RotateCcw, ArrowRight } from 'lucide-react';
 import { Player } from '../types';
 
@@ -17,6 +17,17 @@ export function ActivePlayerActions({
   toggleMovementPoint,
   toggleActivePlayerAction,
 }: ActivePlayerActionsProps) {
+  const [showMageGuildSuccess, setShowMageGuildSuccess] = useState(false);
+
+  useEffect(() => {
+    setShowMageGuildSuccess(false);
+  }, [activePlayerIndex]);
+
+  const canAffordMageGuild = 
+    (activePlayer.gold ?? 0) >= 4 && 
+    (activePlayer.materials ?? 0) >= 2 && 
+    (activePlayer.valuables ?? 0) >= 1;
+
   return (
     <div id="active-player-actions-card" className="bg-[#0d0a09] border border-slate-800 rounded-3xl p-6 shadow-xl space-y-6 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl pointer-events-none" />
@@ -243,28 +254,107 @@ export function ActivePlayerActions({
             </div>
           </button>
 
-          {/* Mage Guild Token */}
-          <button
-            type="button"
-            onClick={() => toggleActivePlayerAction('actionMageGuildUsed')}
-            className={`p-3 rounded-xl border text-left cursor-pointer transition-all flex items-center gap-3 ${
-              activePlayer.actionMageGuildUsed
-                ? 'border-red-950 bg-red-950/10 text-red-400 opacity-60'
-                : 'border-amber-600/30 bg-amber-500/5 text-amber-300 hover:border-amber-500/60 shadow-sm'
-            }`}
-          >
-            <div className={`w-6 h-6 rounded-lg flex items-center justify-center ${activePlayer.actionMageGuildUsed ? 'bg-red-950 text-red-500' : 'bg-amber-600/20 text-amber-400 animate-pulse'}`}>
-              🔮
-            </div>
-            <div className="flex-1 min-w-0">
-              <span className="text-[11px] font-bold block leading-none">Cofradía</span>
-              <span className="text-[9px] text-slate-500 block font-mono mt-1">
-                {activePlayer.actionMageGuildUsed ? 'GASTADO' : 'DISPONIBLE'}
-              </span>
-            </div>
-          </button>
+          {/* Mage Guild / Spellbook Action Token */}
+          {activePlayer.hasMageGuild ? (
+            <button
+              type="button"
+              onClick={() => toggleActivePlayerAction('actionMageGuildUsed')}
+              className={`p-3 rounded-xl border text-left cursor-pointer transition-all flex items-center gap-3 ${
+                activePlayer.actionMageGuildUsed
+                  ? 'border-red-950 bg-red-950/10 text-red-400 opacity-60'
+                  : 'border-amber-600/30 bg-amber-500/5 text-amber-300 hover:border-amber-500/60 shadow-sm'
+              }`}
+              title={activePlayer.actionMageGuildUsed ? "Ficha de acción 'Libro de Hechizos' ya usada" : "Gasta la ficha 'Libro de Hechizos' para realizar una búsqueda de hechizos"}
+            >
+              <div className={`w-6 h-6 rounded-lg flex items-center justify-center ${activePlayer.actionMageGuildUsed ? 'bg-red-950 text-red-500' : 'bg-amber-600/20 text-amber-400 animate-pulse'}`}>
+                🔮
+              </div>
+              <div className="flex-1 min-w-0">
+                <span className="text-[11px] font-bold block leading-none">Libro Hechizos</span>
+                <span className="text-[9px] text-slate-500 block font-mono mt-1">
+                  {activePlayer.actionMageGuildUsed ? 'GASTADO' : 'DISPONIBLE'}
+                </span>
+              </div>
+            </button>
+          ) : (
+            <button
+              type="button"
+              disabled={!canAffordMageGuild}
+              onClick={() => {
+                if (!canAffordMageGuild) return;
+                setPlayers(prev => prev.map((p, idx) => {
+                  if (idx === activePlayerIndex) {
+                    return {
+                      ...p,
+                      gold: Math.max(0, (p.gold ?? 0) - 4),
+                      materials: Math.max(0, (p.materials ?? 0) - 2),
+                      valuables: Math.max(0, (p.valuables ?? 0) - 1),
+                      hasMageGuild: true,
+                      actionMageGuildUsed: true
+                    };
+                  }
+                  return p;
+                }));
+                setShowMageGuildSuccess(true);
+              }}
+              className={`p-2.5 rounded-xl border text-left transition-all flex flex-col justify-between min-h-[58px] ${
+                canAffordMageGuild
+                  ? 'border-amber-500/40 bg-amber-500/10 text-amber-300 hover:bg-amber-500/20 hover:border-amber-400 cursor-pointer shadow-sm'
+                  : 'border-slate-800 bg-slate-900/10 text-slate-500 cursor-not-allowed opacity-75'
+              }`}
+              title={canAffordMageGuild ? "Comprar Cofradía de Magos (Coste: 4 Oros, 2 Materiales, 1 Objeto de valor)" : "No tienes recursos suficientes para comprar la Cofradía de Magos (Coste: 4 🟡, 2 🪵, 1 🔮)"}
+            >
+              <div className="flex items-center gap-1.5 w-full">
+                <div className="w-5 h-5 rounded bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-[10px] shrink-0">
+                  🏰
+                </div>
+                <span className="text-[10px] font-bold block leading-none font-sans uppercase tracking-tight">Comprar Cofradía</span>
+              </div>
+              <div className="flex items-center gap-1 mt-1 text-[9px] font-mono font-medium text-slate-400">
+                <span>Coste:</span>
+                <span className={(activePlayer.gold ?? 0) >= 4 ? "text-amber-400 font-bold" : "text-red-500/80 font-bold"}>4🟡</span>
+                <span className={(activePlayer.materials ?? 0) >= 2 ? "text-amber-400 font-bold" : "text-red-500/80 font-bold"}>2🪵</span>
+                <span className={(activePlayer.valuables ?? 0) >= 1 ? "text-amber-400 font-bold" : "text-red-500/80 font-bold"}>1🔮</span>
+              </div>
+            </button>
+          )}
         </div>
       </div>
+
+      {showMageGuildSuccess && (
+        <div className="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-4 space-y-2.5 shadow-[0_0_15px_rgba(245,158,11,0.05)] animate-fadeIn">
+          <div className="flex items-center justify-between border-b border-amber-500/20 pb-1.5">
+            <div className="flex items-center gap-2 text-amber-300 font-serif text-xs font-bold">
+              <span>✨</span>
+              <span>¡Cofradía de Magos Comprada!</span>
+            </div>
+            <button
+              type="button"
+              onClick={() => setShowMageGuildSuccess(false)}
+              className="text-[9px] font-mono text-amber-400 hover:text-amber-200 bg-amber-950/40 hover:bg-amber-900/60 border border-amber-500/20 rounded px-1.5 py-0.5 cursor-pointer transition-all"
+            >
+              Entendido
+            </button>
+          </div>
+          <p className="text-[11px] text-slate-300 leading-normal font-sans">
+            Has erigido la <strong>Cofradía de Magos</strong> por <span className="text-white font-semibold">4 Oros, 2 Materiales y 1 Objeto de valor</span>.
+          </p>
+          <div className="bg-slate-950/60 border border-amber-500/10 rounded-xl p-2.5 flex items-start gap-2.5">
+            <span className="text-base text-amber-400 shrink-0">🔮</span>
+            <div className="min-w-0">
+              <span className="text-[10px] uppercase font-mono text-amber-400 font-bold block tracking-wider mb-0.5">
+                Efecto Inmediato
+              </span>
+              <p className="text-[11px] text-slate-400 leading-normal">
+                Puedes realizar un <strong className="text-amber-300">Buscar (2) Hechizos</strong> dos veces: roba dos cartas de hechizo, añade una a tu mano (Libro de Hechizos) y devuelve la otra al descarte. Repite este proceso una segunda vez.
+              </p>
+              <span className="text-[9px] text-slate-500 block font-mono mt-1">
+                (La ficha de acción Libro de Hechizos se muestra como gastada por este turno)
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

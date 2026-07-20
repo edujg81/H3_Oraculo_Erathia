@@ -29,6 +29,7 @@ export interface Player {
   mainHeroMove?: number;
   secHeroMove?: number;
   hasSecHero?: boolean;
+  hasMageGuild?: boolean;
   incomeCollectedRound?: number;
   moral?: 'positive' | 'neutral' | 'negative' | 'double_negative';
 }

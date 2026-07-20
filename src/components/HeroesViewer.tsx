@@ -297,8 +297,6 @@ export default function HeroesViewer() {
     }
   ) as Record<string, string>;
 
-  console.log(heroPortraits);
-
   const selectedHeroImage = selectedHero
     ? getHeroPortrait(heroPortraits, selectedHero.name, selectedHero.className, selectedFaction)
     : undefined;

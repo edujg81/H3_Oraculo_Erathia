@@ -6,3 +6,9 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Scratch/working files usados puntualmente para generar datos
+# (scraping, extracción de PDFs, etc.) — no forman parte del proyecto.
+/tmp/
+/app/
+*.scratch.txt
