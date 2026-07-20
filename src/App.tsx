@@ -73,7 +73,8 @@ export default function App() {
       materialsGen: 2,
       valuablesGen: 1,
       mainHeroMove: 3,
-      secHeroMove: 2
+      secHeroMove: 2,
+      hasSecHero: false
     },
     { 
       id: '2', 
@@ -90,7 +91,8 @@ export default function App() {
       materialsGen: 2,
       valuablesGen: 1,
       mainHeroMove: 3,
-      secHeroMove: 2
+      secHeroMove: 2,
+      hasSecHero: false
     }
   ]);
   const [newPlayerName, setNewPlayerName] = useState('');
@@ -210,7 +212,8 @@ export default function App() {
         materialsGen: 2,
         valuablesGen: 1,
         mainHeroMove: 3,
-        secHeroMove: 2
+        secHeroMove: 2,
+        hasSecHero: false
       }
     ]);
     setNewPlayerName('');
@@ -234,7 +237,8 @@ export default function App() {
       materialsGen: 2,
       valuablesGen: 1,
       mainHeroMove: 3,
-      secHeroMove: 2
+      secHeroMove: 2,
+      hasSecHero: false
     }));
     setPlayers(defaultPlayers);
     setActivePlayerIndex(0);
@@ -1302,7 +1306,7 @@ export default function App() {
                 Optimizado para resoluciones de escritorio y tabletas.
               </p>
               <p className="text-[10px] text-slate-600 mt-1">
-                Proyecto creado por y para fans. Todos los derechos del juego original corresponden a Archon Studio y Ubisoft.
+                Proyecto creado por edujg81 para fans. Todos los derechos del juego original corresponden a Archon Studio y Ubisoft.
               </p>
             </div>
             <div className="text-[10px] text-slate-600 whitespace-nowrap text-center sm:text-right mt-2 sm:mt-0">

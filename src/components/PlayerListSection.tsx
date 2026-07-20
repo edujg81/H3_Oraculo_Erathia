@@ -262,7 +262,11 @@ export function PlayerListSection({
                     <span className="text-[9px] font-mono text-slate-400 flex items-center gap-1.5">
                       <span>Mov:</span>
                       <span className="text-emerald-500 font-bold" title="Movimiento Héroe Principal">HP: {player.mainHeroMove ?? 3}/3</span>
-                      <span className="text-emerald-500 font-bold" title="Movimiento Héroe Secundario">HS: {player.secHeroMove ?? 2}/2</span>
+                      {player.hasSecHero ? (
+                        <span className="text-emerald-500 font-bold" title="Movimiento Héroe Secundario">HS: {player.secHeroMove ?? 2}/2</span>
+                      ) : (
+                        <span className="text-slate-600 font-medium" title="Héroe Secundario no contratado">HS: No</span>
+                      )}
                     </span>
                     <span className="text-[9px] font-mono text-slate-500 flex items-center gap-1">
                       <span>Tokens:</span>

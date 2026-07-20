@@ -28,6 +28,7 @@ export interface Player {
   valuablesGen?: number;
   mainHeroMove?: number;
   secHeroMove?: number;
+  hasSecHero?: boolean;
   incomeCollectedRound?: number;
   moral?: 'positive' | 'neutral' | 'negative' | 'double_negative';
 }

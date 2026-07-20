@@ -93,32 +93,99 @@ export function ActivePlayerActions({
           </div>
 
           {/* Héroe Secundario */}
-          <div className="bg-slate-950/60 border border-slate-850 rounded-xl p-3 flex flex-col gap-2">
-            <div className="flex justify-between items-center border-b border-slate-900 pb-1">
-              <span className="text-xs font-bold text-slate-200 font-serif">Héroe Secundario</span>
-              <span className="text-[10px] text-slate-400 font-mono">{(activePlayer.secHeroMove ?? 2)}/2 PM</span>
+          {activePlayer.hasSecHero ? (
+            <div className="bg-slate-950/60 border border-slate-850 rounded-xl p-3 flex flex-col gap-2 animate-fadeIn">
+              <div className="flex justify-between items-center border-b border-slate-900 pb-1">
+                <span className="text-xs font-bold text-slate-200 font-serif">Héroe Secundario</span>
+                <span className="text-[10px] text-slate-400 font-mono">{(activePlayer.secHeroMove ?? 2)}/2 PM</span>
+              </div>
+              <div className="flex items-center gap-2.5 justify-center py-1">
+                {[0, 1].map((idx) => {
+                  const isAvailable = idx < (activePlayer.secHeroMove ?? 2);
+                  return (
+                    <button
+                      key={idx}
+                      type="button"
+                      onClick={() => toggleMovementPoint('sec', idx)}
+                      className={`w-10 h-10 rounded-lg border flex items-center justify-center transition-all cursor-pointer ${
+                        isAvailable
+                          ? 'border-emerald-800 bg-emerald-950/20 text-emerald-400 hover:bg-emerald-950/30 hover:border-emerald-600 shadow-md shadow-emerald-950/20'
+                          : 'border-[#a0522d]/60 bg-[#a0522d]/5 text-[#a0522d] hover:bg-[#a0522d]/10 hover:border-[#a0522d]/80'
+                      }`}
+                      title={isAvailable ? "Click para gastar punto de movimiento" : "Click para recuperar punto de movimiento"}
+                    >
+                      <ArrowRight className="w-5 h-5 stroke-[3.5] transition-transform duration-200" />
+                    </button>
+                  );
+                })}
+              </div>
+              <div className="flex justify-between items-center text-[10px] text-slate-400 font-mono -mt-1 px-0.5">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setPlayers(prev => prev.map((p, idx) => {
+                      if (idx === activePlayerIndex) {
+                        return {
+                          ...p,
+                          hasSecHero: false,
+                          secHeroMove: 2
+                        };
+                      }
+                      return p;
+                    }));
+                  }}
+                  className="text-[9px] font-mono text-red-400 hover:text-red-300 bg-red-950/20 border border-red-950/40 hover:border-red-500/50 px-1.5 py-0.5 rounded cursor-pointer transition-all"
+                  title="Marcar como derrotado para eliminarlo del juego (permitirá volver a reclutarlo pagando 10 de Oro)"
+                >
+                  💀 Derrotado
+                </button>
+              </div>
             </div>
-            <div className="flex items-center gap-2.5 justify-center py-1">
-              {[0, 1].map((idx) => {
-                const isAvailable = idx < (activePlayer.secHeroMove ?? 2);
-                return (
-                  <button
-                    key={idx}
-                    type="button"
-                    onClick={() => toggleMovementPoint('sec', idx)}
-                    className={`w-10 h-10 rounded-lg border flex items-center justify-center transition-all cursor-pointer ${
-                      isAvailable
-                        ? 'border-emerald-800 bg-emerald-950/20 text-emerald-400 hover:bg-emerald-950/30 hover:border-emerald-600 shadow-md shadow-emerald-950/20'
-                        : 'border-[#a0522d]/60 bg-[#a0522d]/5 text-[#a0522d] hover:bg-[#a0522d]/10 hover:border-[#a0522d]/80'
-                    }`}
-                    title={isAvailable ? "Click para gastar punto de movimiento" : "Click para recuperar punto de movimiento"}
-                  >
-                    <ArrowRight className="w-5 h-5 stroke-[3.5] transition-transform duration-200" />
-                  </button>
-                );
-              })}
+          ) : (
+            <div className="bg-slate-950/60 border border-slate-850/60 rounded-xl p-3 flex flex-col justify-between min-h-[105px] animate-fadeIn">
+              <div className="flex justify-between items-center border-b border-slate-900 pb-1">
+                <span className="text-xs font-bold text-slate-400 font-serif">Héroe Secundario</span>
+                <span className="text-[9px] text-slate-500 font-mono">No Contratado</span>
+              </div>
+              
+              <div className="py-2">
+                <button
+                  type="button"
+                  disabled={activePlayer.actionRecruitUsed}
+                  onClick={() => {
+                    setPlayers(prev => prev.map((p, idx) => {
+                      if (idx === activePlayerIndex) {
+                        return {
+                          ...p,
+                          hasSecHero: true,
+                          actionRecruitUsed: true,
+                          secHeroMove: 2,
+                          gold: Math.max(0, (p.gold ?? 0) - 10)
+                        };
+                      }
+                      return p;
+                    }));
+                  }}
+                  className={`w-full py-1.5 px-2.5 rounded-lg border text-center text-[11px] font-bold transition-all cursor-pointer ${
+                    activePlayer.actionRecruitUsed
+                      ? 'border-slate-850 bg-slate-900/20 text-slate-500 cursor-not-allowed opacity-60'
+                      : 'border-amber-600/30 bg-amber-500/5 text-amber-300 hover:bg-amber-600/10 hover:border-amber-500/60 shadow-sm'
+                  }`}
+                  title={activePlayer.actionRecruitUsed ? "No disponible (ficha 'Reclutar' ya usada)" : "Paga 10 de Oro y gasta la ficha de Acción 'Reclutar' para contratar el 2º Héroe"}
+                >
+                  Reclutar 2º Héroe (-10 🪙)
+                </button>
+              </div>
+
+              <div className="text-[9px] text-center font-mono leading-tight">
+                {activePlayer.actionRecruitUsed ? (
+                  <span className="text-red-500/80">⚠️ Ficha "Reclutar" ya usada</span>
+                ) : (
+                  <span className="text-slate-500">Usa ficha "Reclutar" + 10 Oro</span>
+                )}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
 
