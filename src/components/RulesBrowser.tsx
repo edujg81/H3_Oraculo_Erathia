@@ -430,6 +430,7 @@ export default function RulesBrowser({
     { id: 'town', label: 'Ciudad y Recursos', icon: Home },
     { id: 'combat', label: 'Combate y Unidades', icon: Swords },
     { id: 'magic', label: 'Hechizos y Magia', icon: Sparkles },
+    { id: 'heroes', label: 'Héroes', icon: Star },
     { id: 'modes', label: 'Modos y Campañas', icon: Compass },
     { id: 'faq', label: 'FAQs / Dudas', icon: MessageSquareCode },
   ];

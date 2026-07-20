@@ -614,6 +614,41 @@ export default function HeroesViewer() {
                         </div>
                       </div>
                     </div>
+
+                    {heroLevel >= 2 && (
+                      <motion.div 
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="bg-amber-500/5 border border-amber-500/10 rounded-2xl p-4 space-y-3 shadow-[0_0_15px_rgba(245,158,11,0.03)] animate-fadeIn"
+                      >
+                        <div className="flex items-center gap-2 border-b border-amber-500/10 pb-2">
+                          <span className="text-amber-400 text-base">✨</span>
+                          <span className="text-[10px] uppercase font-mono text-amber-400 font-bold tracking-wider">
+                            Hitos de Progreso: Mazo de Habilidades
+                          </span>
+                        </div>
+                        <div className="space-y-2.5">
+                          {[2, 5, 7].map((lvl) => {
+                            if (heroLevel < lvl) return null;
+                            return (
+                              <div key={lvl} className="flex items-start gap-3 bg-slate-950/40 p-2.5 rounded-xl border border-slate-900/60 animate-fadeIn">
+                                <span className="px-1.5 py-0.5 rounded bg-amber-500/10 border border-amber-500/20 text-amber-400 font-mono text-[10px] font-bold shrink-0">
+                                  Nivel {lvl}
+                                </span>
+                                <div className="min-w-0">
+                                  <span className="text-[10px] uppercase font-mono text-slate-200 font-semibold block tracking-wider mb-0.5">
+                                    Busca (2) en Habilidades
+                                  </span>
+                                  <p className="text-[11px] text-slate-400 leading-relaxed">
+                                    Añade <strong className="text-amber-400 font-medium">una</strong> carta a tu mano y devuelve la otra al descarte de Habilidades.
+                                  </p>
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </motion.div>
+                    )}
                   </div>
 
                   {/* Attributes Grid (Las Características del Héroe) */}

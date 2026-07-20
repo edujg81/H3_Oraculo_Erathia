@@ -151,6 +151,26 @@ Para evitar fallos en las búsquedas del sistema y asegurar el total cumplimient
 
 ## 6. ✨ Héroes, Especialidades y Habilidades Secundarias
 
+> ### 🛡️ I. Reglamento de Héroe Principal y Héroe Secundario
+> Los jugadores controlan siempre a un Héroe Principal y, además, pueden reclutar a un Héroe Secundario. Los Héroes se utilizan para realizar Acciones de Movimiento en el tablero de juego (mapa) y para iniciar Combates contra enemigos con el fin de alcanzar una condición de victoria en el Escenario.
+> 
+> #### 👑 HÉROE PRINCIPAL:
+> * **Representación:** Está representado por su Figura, su Carta de Héroe y su Mazo de Poder y Magia.
+> * **Movimiento:** Tiene **3 Puntos de Movimiento (PM)** fijos al inicio de cada turno.
+> * **Mazo de Cartas:** Solo el Héroe Principal puede usar y jugar cartas de tu Mazo de Poder y Magia.
+> * **Progresión de Nivel:** Comienza el juego en el Nivel 1 y puede avanzar hasta el Nivel 7 acumulando Experiencia (adquirida al ganar combates, visitar localizaciones especiales o por el Dado de Tesoro).
+> * **Draft de Habilidades:** En los niveles **2, 5 y 7**, puedes realizar un Buscar(2) en el mazo común de Habilidades para draftear e incorporar una nueva carta a tu Mazo.
+> 
+> #### ♟️ HÉROE SECUNDARIO:
+> * **Reclutamiento y Coste:** Si controlas al menos una Ciudad o un Asentamiento, puedes contratar un Héroe Secundario volteando tu **Ficha de Población** boca abajo y pagando **10 de Oro**. Coloca su figura de inmediato sobre dicha Ciudad o Asentamiento controlado.
+> * *Nota importante de reclutamiento:* Las Unidades no pueden ser Reclutadas o Reforzadas en la ciudad durante el mismo paso en que reclutas un Héroe Secundario.
+> * **Representación y Límite:** Usa la figura del Héroe restante de tu Facción (puedes marcar este modelo con un Cubo de Facción o ficha para diferenciarlo en el mapa). Solo puedes controlar **un Héroe Secundario a la vez**.
+> * **Movimiento y Limitaciones:** Tiene únicamente **2 Puntos de Movimiento (PM)**. No posee tarjeta de Héroe, no puede ganar experiencia bajo ningún concepto y **no puede usar cartas de tu Mazo** en ningún momento por ningún motivo.
+> * **Reroute de Cartas:** Si tu Héroe Secundario gana alguna carta durante la exploración, colócala en tu mano de jugador de forma habitual para que la use el Héroe Principal.
+> * **Combate y Unidades Compartidas:** El Héroe Secundario no posee mazo, por lo que en combate utiliza las mismas Cartas de Unidad que el Héroe Principal (comparten tropas). Se considera que tienen el **mismo Nivel que el Héroe Principal** a efectos exclusivos de resolver Combates Rápidos (Quick Combat).
+> * **Derrota y Retirada Instantánea:** Si tu Héroe Secundario es atacado por un Héroe enemigo en el mapa de aventura, puedes elegir voluntariamente que el Héroe Secundario sea **derrotado de forma instantánea** en lugar de combatir, evitando la batalla para **conservar intactas las tropas** compartidas.
+> * **Muerte:** Cuando un Héroe Secundario es derrotado, retíralo permanentemente del juego. No obstante, puede volver a ser reclutado en turnos posteriores si vuelves a activar el uso de la ficha de Población.
+
 > ### ❓ P: ¿Las cartas de Especialidad asimétrica de mi héroe consumen mi límite de lanzamiento de hechizos?
 > * **Respuesta:** **No.** Las cartas de Especialidad (adquiridas en los niveles IV y VI) representan el entrenamiento militar o místico exclusivo y asimétrico de tu héroe. **No se consideran hechizos estándar**, por lo que jugarlas no consume tu límite de lanzar un único hechizo por ronda de combate, ni requieren poseer un Libro de Hechizos activo de cofradía.
 

@@ -2024,5 +2024,27 @@ I. REGLA DE TRANSICIÓN DE CAMPAÑA:
   2. El nivel 1 de tu Carta Especialidad de héroe.
   3. 5 cartas no especiales de tu elección de tu mazo anterior.
 • Se omiten por completo los pasos de Configuración del Mazo estándar durante la Preparación para el siguiente escenario de la campaña.`
+  },
+  {
+    id: "heroes_main_and_secondary",
+    title: "17. Reglamento de Héroes: Héroe Principal y Héroe Secundario",
+    category: "heroes",
+    content: `Los jugadores controlan siempre a un Héroe Principal y, además, pueden reclutar a un Héroe Secundario. Los Héroes se utilizan para realizar Acciones de Movimiento en el tablero de juego (mapa) y para iniciar Combates contra enemigos con el fin de alcanzar una condición de victoria en el Escenario.
+
+I. HÉROE PRINCIPAL:
+• Representación: Está representado por su Figura, su Carta de Héroe y su Mazo.
+• Movimiento: Tiene 3 Puntos de Movimiento (PM) por turno.
+• Uso del Mazo: Solo el Héroe Principal puede usar el Mazo de Poder y Magia.
+• Progresión y Experiencia: Comienza el juego en el Nivel 1 y puede avanzar hasta el Nivel 7 ganando Experiencia (adquirida en Combates, visitando ciertas Localizaciones, o con el Dado de Tesoro).
+• Habilidades: Al subir a los Niveles 2, 5 y 7, el jugador puede Buscar(2) en el Mazo de Habilidades para añadir una carta de habilidad a su Mazo.
+
+II. HÉROE SECUNDARIO:
+• Contratación y Coste: Si controlas una Ciudad o un Asentamiento, puedes contratar un Héroe Secundario volteando la Ficha de Población y pagando 10 de Oro.
+• Restricción de Reclutamiento: Las Unidades no pueden ser Reclutadas o Reforzadas mientras estás reclutando un Héroe Secundario.
+• Representación y Límite: Usa la figura del Héroe restante de tu Facción (puedes marcar el modelo con una ficha o un Cubo de Facción para diferenciarlo). Colócalo en una Ciudad o Asentamiento controlado. Solo puedes tener un Héroe Secundario a la vez.
+• Movimiento y Limitaciones: Tiene 2 Puntos de Movimiento (PM). No posee tarjeta de Héroe, no puede ganar experiencia y no puede usar Cartas de tu Mazo en ningún momento por ningún motivo.
+• Cartas ganadas: Si el Héroe Secundario gana alguna Carta, colócala en tu mano de forma normal.
+• Combate y Unidades Compartidas: En combate usan las mismas Cartas de Unidad que el Héroe Principal (comparten tropas). Se considera que tienen el mismo Nivel que el Héroe Principal a efectos de resolver Combates Rápidos.
+• Derrota o Retirada Instantánea: Si tu Héroe Secundario es atacado por un Héroe enemigo, puedes elegir que ese Héroe sea derrotado instantáneamente en lugar de luchar (para conservar intactas las tropas). Al ser derrotado, elimínalo del juego. Puede ser reclutado de nuevo con otro uso de la ficha de Población.`
   }
 ];
