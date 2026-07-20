@@ -35,8 +35,8 @@ const FACTIONS = [
   { id: 'infierno', name: 'Infierno (Inferno)', color: 'bg-red-950/60 border-red-800 text-red-200' },
   { id: 'stronghold', name: 'Bastión (Stronghold)', color: 'bg-amber-950/60 border-amber-800 text-amber-200' },
   { id: 'fortaleza', name: 'Fortaleza (Fortress)', color: 'bg-teal-950/60 border-teal-800 text-teal-200' },
-  { id: 'confluencia', name: 'Confluencia (Conflux)', color: 'bg-indigo-950/60 border-indigo-800 text-indigo-200' },
-  { id: 'cove', name: 'Bahía (Cove)', color: 'bg-sky-950/60 border-sky-800 text-sky-200' }
+  { id: 'confluencia', name: 'Conflujo (Conflux)', color: 'bg-indigo-950/60 border-indigo-800 text-indigo-200' },
+  { id: 'cove', name: 'Cala (Cove)', color: 'bg-sky-950/60 border-sky-800 text-sky-200' }
 ];
 
 // Fallback mostrado mientras se descarga el bundle de la pestaña activa
@@ -517,7 +517,7 @@ export default function App() {
                           <p><strong>🩹 Tienda de Auxilio (First Aid Tent):</strong> Carta permanente. Al final de cada ronda de combate, remueve/sana automáticamente <strong className="text-amber-300">1 herida</strong> de la unidad aliada con menor iniciativa que esté dañada.</p>
                         )}
                         {selectedMachine === 'cannon' && (
-                          <p><strong className="text-cyan-400">💣 Cañón (Cove Cannon):</strong> Carta permanente de Bahía. Al inicio de cada ronda de combate, se lanza el dado de combate estándar para infligir 1 (-1), 2 (0) o 3 (+1) heridas directas a una unidad o estructura.</p>
+                          <p><strong className="text-cyan-400">💣 Cañón (Cove Cannon):</strong> Carta permanente de Cala. Al inicio de cada ronda de combate, se lanza el dado de combate estándar para infligir 1 (-1), 2 (0) o 3 (+1) heridas directas a una unidad o estructura.</p>
                         )}
                       </div>
 
@@ -966,7 +966,7 @@ export default function App() {
                     <p><strong>🩹 Tienda de Auxilio (First Aid Tent):</strong> Carta permanente. Al final de cada ronda de combate, remueve/sana automáticamente <strong>1 herida</strong> de la unidad aliada con menor iniciativa que esté dañada.</p>
                   )}
                   {selectedMachine === 'cannon' && (
-                    <p><strong className="text-cyan-400">💣 Cañón (Cove Cannon):</strong> Carta permanente de Bahía. Al inicio de cada ronda de combate, se lanza el dado de combate estándar para infligir 1 (-1), 2 (0) o 3 (+1) heridas directas a una unidad o estructura.</p>
+                    <p><strong className="text-cyan-400">💣 Cañón (Cove Cannon):</strong> Carta permanente de Cala. Al inicio de cada ronda de combate, se lanza el dado de combate estándar para infligir 1 (-1), 2 (0) o 3 (+1) heridas directas a una unidad o estructura.</p>
                   )}
                 </div>
 

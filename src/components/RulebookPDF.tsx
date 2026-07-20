@@ -2,6 +2,330 @@ import { Printer, ShoppingBag, ShieldAlert, BookOpen, Download } from 'lucide-re
 // @ts-ignore
 import oracleLogo from '../assets/images/sandro_oracle_titled_logo_1783458347417.jpg';
 
+interface CompendiumUnit {
+  name: string;
+  faction: string;
+  colorClass: string;
+  tier: string;
+  basicStats: string;
+  eliteStats: string;
+  type: string;
+  abilities: string;
+}
+
+const compendiumUnits: CompendiumUnit[] = [
+  // 1. CASTILLO
+  {
+    name: "Grifos",
+    faction: "Castillo",
+    colorClass: "text-blue-300",
+    tier: "Bronce / Lvl 3",
+    basicStats: "⚔️2 🛡️0 ⚡6 ❤️4",
+    eliteStats: "⚔️3 🛡️0 ⚡9 ❤️4",
+    type: "Voladora",
+    abilities: "Contraataque: Esta unidad puede llevar a cabo una cantidad ilimitada de contraataques."
+  },
+  {
+    name: "Fanáticos",
+    faction: "Castillo",
+    colorClass: "text-blue-300",
+    tier: "Plata / Lvl 5",
+    basicStats: "⚔️3 🛡️1 ⚡5 ❤️5",
+    eliteStats: "⚔️4 🛡️1 ⚡7 ❤️5",
+    type: "a Distancia",
+    abilities: "Básico: Ninguna. Élite: Pasivo: Ignora la penalización de combate contra unidades adyacentes."
+  },
+  {
+    name: "Arcángeles",
+    faction: "Castillo",
+    colorClass: "text-blue-300",
+    tier: "Oro / Lvl 7",
+    basicStats: "⚔️6 🛡️3 ⚡12 ❤️8",
+    eliteStats: "⚔️7 🛡️3 ⚡18 ❤️10",
+    type: "Voladora",
+    abilities: "Básico: Pasivo: Cuando se inicie un combate, roba 1 carta. Élite: Pasivo: Una vez por combate. Cancela un ataque que fuese a reducir a 0 los Puntos de Salud otra unidad a 0."
+  },
+  // 2. NECROPOLIS
+  {
+    name: "Espectros",
+    faction: "Necrópolis",
+    colorClass: "text-slate-400",
+    tier: "Bronce / Lvl 3",
+    basicStats: "⚔️3 🛡️0 ⚡5 ❤️3",
+    eliteStats: "⚔️3 🛡️0 ⚡7 ❤️5",
+    type: "Voladora",
+    abilities: "Básico: Activación: Retira hasta 1 Herida de esta unidad. Élite: Activación: Retira hasta 1 Herida de esta unidad y después descarta 1 carta al azar de la mano del enemigo."
+  },
+  {
+    name: "Liches",
+    faction: "Necrópolis",
+    colorClass: "text-slate-400",
+    tier: "Plata / Lvl 5",
+    basicStats: "⚔️3 🛡️1 ⚡6 ❤️5",
+    eliteStats: "⚔️4 🛡️1 ⚡7 ❤️5",
+    type: "a Distancia",
+    abilities: "Básico: Ninguna. Élite: Al Atacar: Elige una unidad adyacente al objetivo y atácala. Para este ataque tu Ataque es 2."
+  },
+  {
+    name: "Dragones fantasma",
+    faction: "Necrópolis",
+    colorClass: "text-slate-400",
+    tier: "Oro / Lvl 7",
+    basicStats: "⚔️6 🛡️3 ⚡9 ❤️8",
+    eliteStats: "⚔️7 🛡️3 ⚡14 ❤️9",
+    type: "Voladora",
+    abilities: "Básico: Activación: Descarta la ficha Moral Positiva del enemigo. Élite: Activación: Descarta la ficha Moral Positiva del enemigo. Al Atacar: Gana +1 Ataque."
+  },
+  // 3. MAZMORRA
+  {
+    name: "Ojos maléficos",
+    faction: "Mazmorra",
+    colorClass: "text-purple-300",
+    tier: "Bronce / Lvl 3",
+    basicStats: "⚔️3 🛡️0 ⚡5 ❤️3",
+    eliteStats: "⚔️3 🛡️1 ⚡7 ❤️3",
+    type: "a Distancia",
+    abilities: "Básico: Ninguna. Élite: Pasivo: Ignora la penalización de combate contra unidades adyacentes."
+  },
+  {
+    name: "Minotauros",
+    faction: "Mazmorra",
+    colorClass: "text-purple-300",
+    tier: "Plata / Lvl 5",
+    basicStats: "⚔️4 🛡️2 ⚡6 ❤️4",
+    eliteStats: "⚔️5 🛡️2 ⚡8 ❤️4",
+    type: "Melé",
+    abilities: "Al Atacar: Si resuelves un -1 en el dado de ataque, roba una carta."
+  },
+  {
+    name: "Dragones negros",
+    faction: "Mazmorra",
+    colorClass: "text-purple-300",
+    tier: "Oro / Lvl 7",
+    basicStats: "⚔️6 🛡️3 ⚡11 ❤️8",
+    eliteStats: "⚔️8 🛡️3 ⚡15 ❤️8",
+    type: "Voladora",
+    abilities: "Básico: Pasivo: Reduce el Daño de Hechizo recibido por esta unidad en 2 (hasta un mínimo de 0). Élite: Pasivo: Ignora cualquier efecto de Hechizo y Daño de especialidad."
+  },
+  // 4. MURALLAS
+  {
+    name: "Elfos",
+    faction: "Murallas",
+    colorClass: "text-emerald-300",
+    tier: "Bronce / Lvl 3",
+    basicStats: "⚔️2 🛡️1 ⚡6 ❤️3",
+    eliteStats: "⚔️3 🛡️1 ⚡7 ❤️3",
+    type: "a Distancia",
+    abilities: "Básico: Ninguna. Élite: Al Atacar: Si una unidad objetivo no está adyacente, vuélvela a atacar si sacas un -1 o un 0."
+  },
+  {
+    name: "Dendroides",
+    faction: "Murallas",
+    colorClass: "text-emerald-300",
+    tier: "Plata / Lvl 5",
+    basicStats: "⚔️4 🛡️2 ⚡3 ❤️5",
+    eliteStats: "⚔️4 🛡️2 ⚡4 ❤️6",
+    type: "Melé",
+    abilities: "Básico: Ninguna. Élite: Pasivo: Las unidades enemigas que empiecen su activación adyacentes a esta unidad no pueden moverse."
+  },
+  {
+    name: "Dragones dorados",
+    faction: "Murallas",
+    colorClass: "text-emerald-300",
+    tier: "Oro / Lvl 7",
+    basicStats: "⚔️5 🛡️3 ⚡10 ❤️9",
+    eliteStats: "⚔️6 🛡️3 ⚡16 ❤️10",
+    type: "Voladora",
+    abilities: "Básico: Al Atacar: Ataca a 2 espacios en fila. El primer ataque se resuelve de forma normal y el segundo con 2 Ataque. Élite: Al Atacar: Ataca a 2 espacios en fila. El primer ataque se resuelve normalmente y el segundo tiene 3 Ataque."
+  },
+  // 5. TORRE
+  {
+    name: "Gólems de hierro",
+    faction: "Torre",
+    colorClass: "text-yellow-300",
+    tier: "Bronce / Lvl 3",
+    basicStats: "⚔️3 🛡️1 ⚡4 ❤️3",
+    eliteStats: "⚔️3 🛡️2 ⚡5 ❤️3",
+    type: "Melé",
+    abilities: "Básico: Pasiva: Esta unidad reduce cualquier Daño que reciba de hechizos en 1, hasta un mínimo de 0. Élite: Pasiva: Esta unidad reduce cualquier Daño que reciba de hechizos en 2, hasta un mínimo de 0."
+  },
+  {
+    name: "Genios",
+    faction: "Torre",
+    colorClass: "text-yellow-300",
+    tier: "Plata / Lvl 5",
+    basicStats: "⚔️3 🛡️1 ⚡7 ❤️6",
+    eliteStats: "⚔️4 🛡️1 ⚡8 ❤️6",
+    type: "Voladora",
+    abilities: "Básico: Alternativa: Descarta 3 cartas de tu mazo y devuelve a tu mano un Hechizo descartado de esta forma. Élite: Al Atacar: Descarta hasta 3 cartas de tu mazo y devuelve a tu mano un Hechizo descartado de esta forma."
+  },
+  {
+    name: "Titanes",
+    faction: "Torre",
+    colorClass: "text-yellow-300",
+    tier: "Oro / Lvl 7",
+    basicStats: "⚔️6 🛡️3 ⚡7 ❤️8",
+    eliteStats: "⚔️6 🛡️3 ⚡11 ❤️8",
+    type: "Melé / a Distancia",
+    abilities: "Básico: Pasiva: Esta unidad ignora cualquier efecto Contínuo. Élite: Pasiva: Esta unidad ignora cualquier efecto Continuo y los penalizadores de combate aplicados a unidades adyacentes."
+  },
+  // 6. INFERNO
+  {
+    name: "Cerberos",
+    faction: "Inferno",
+    colorClass: "text-red-400",
+    tier: "Bronce / Lvl 3",
+    basicStats: "⚔️3 🛡️0 ⚡7 ❤️4",
+    eliteStats: "⚔️3 🛡️1 ⚡8 ❤️5",
+    type: "Melé",
+    abilities: "Básico: Ninguna. Élite: Al Atacar: Ignora contraataques. Además, hace 1 Herida a otra unidad enemiga adyacente a los cerberos."
+  },
+  {
+    name: "Señores del abismo",
+    faction: "Inferno",
+    colorClass: "text-red-400",
+    tier: "Plata / Lvl 5",
+    basicStats: "⚔️4 🛡️1 ⚡6 ❤️6",
+    eliteStats: "⚔️5 🛡️1 ⚡7 ❤️6",
+    type: "Melé",
+    abilities: "Básico: Ninguna. Élite: Alternativo: Una vez por cada combate en el que hayas perdido una unidad. Invoca o refuerza <<unos pocos>> demonios (en el tablero)."
+  },
+  {
+    name: "Archidiablos",
+    faction: "Inferno",
+    colorClass: "text-red-400",
+    tier: "Oro / Lvl 7",
+    basicStats: "⚔️6 🛡️3 ⚡11 ❤️8",
+    eliteStats: "⚔️7 🛡️3 ⚡15 ❤️9",
+    type: "Voladora",
+    abilities: "Básico: Al Atacar: Ignora contraataques. Élite: Al Atacar: Ignora contraataques. Pasivo: Al moverse, los archidiablos se pueden mover a cualquier espacio vacío."
+  },
+  // 7. BASTION
+  {
+    name: "Orcos",
+    faction: "Bastión",
+    colorClass: "text-orange-400",
+    tier: "Bronce / Lvl 3",
+    basicStats: "⚔️2 🛡️1 ⚡4 ❤️4",
+    eliteStats: "⚔️3 🛡️1 ⚡5 ❤️5",
+    type: "a Distancia",
+    abilities: "Ninguna."
+  },
+  {
+    name: "Aves de trueno",
+    faction: "Bastión",
+    colorClass: "text-orange-400",
+    tier: "Plata / Lvl 5",
+    basicStats: "⚔️4 🛡️1 ⚡9 ❤️5",
+    eliteStats: "⚔️4 🛡️1 ⚡11 ❤️6",
+    type: "Voladora",
+    abilities: "Básico: Ninguna. Élite: Pasivo: Justo después del ataque de esta unidad y antes de un contraataque, tira 1 dado de ataque; con un <<0> o <<+1>>, inflige 1 Herida al objetivo."
+  },
+  {
+    name: "Behemoths",
+    faction: "Bastión",
+    colorClass: "text-orange-400",
+    tier: "Oro / Lvl 7",
+    basicStats: "⚔️6 🛡️2 ⚡6 ❤️9",
+    eliteStats: "⚔️7 🛡️2 ⚡9 ❤️10",
+    type: "Melé",
+    abilities: "Básico: Al Atacar: Disminuye la Defensa del objetivo en 1 (hasta un mínimo de 0). Élite: Al Atacar: Disminuye la Defensa del objetivo en 2 (hasta un mínimo de 0). Después del ataque, pon 1 ficha de corrosión en el objetivo."
+  },
+  // 8. FORTALEZA
+  {
+    name: "Libélulas",
+    faction: "Fortaleza",
+    colorClass: "text-teal-400",
+    tier: "Bronce / Lvl 3",
+    basicStats: "⚔️3 🛡️0 ⚡8 ❤️3",
+    eliteStats: "⚔️3 🛡️1 ⚡12 ❤️3",
+    type: "Voladora",
+    abilities: "Básico: Al Atacar: Retira todos los efectos Continuos que el enemigo ha jugado sobre el objetivo. Élite: Al Atacar: Retira todos los efectos Continuos que el enemigo ha jugado sobre el objetivo. Si el objetivo contraataca, sufre -1 Ataque."
+  },
+  {
+    name: "Gorgonas",
+    faction: "Fortaleza",
+    colorClass: "text-teal-400",
+    tier: "Plata / Lvl 5",
+    basicStats: "⚔️4 🛡️2 ⚡5 ❤️5",
+    eliteStats: "⚔️5 🛡️2 ⚡6 ❤️5",
+    type: "Melé",
+    abilities: "Básico: Ninguna. Élite: Al Atacar: Después del ataque, lanza 2 dados de ataque; si sacas un doble 0, reduce los Puntos de Salud de la unidad objetivo a 0."
+  },
+  {
+    name: "Hidras",
+    faction: "Fortaleza",
+    colorClass: "text-teal-400",
+    tier: "Oro / Lvl 7",
+    basicStats: "⚔️6 🛡️3 ⚡5 ❤️8",
+    eliteStats: "⚔️7 🛡️3 ⚡7 ❤️10",
+    type: "Melé",
+    abilities: "Básico: Al Atacar: Ignora el contraataque. Élite: Al Atacar: Ignora el contraataque. Esta unidad ataca a hasta 2 unidades enemigas adyacentes."
+  },
+  // 9. CONFLUJO
+  {
+    name: "Elementales de hielo",
+    faction: "Conflujo",
+    colorClass: "text-cyan-300",
+    tier: "Bronce / Lvl 3",
+    basicStats: "⚔️2 🛡️1 ⚡5 ❤️4",
+    eliteStats: "⚔️3 🛡️1 ⚡6 ❤️5",
+    type: "a Distancia",
+    abilities: "Básico: Ninguna. Élite: Activación: Añade +1 Potencia al primer hechizo de magia de agua que lances durante esta activación"
+  },
+  {
+    name: "Elementales de magma",
+    faction: "Conflujo",
+    colorClass: "text-cyan-300",
+    tier: "Plata / Lvl 5",
+    basicStats: "⚔️4 🛡️2 ⚡4 ❤️5",
+    eliteStats: "⚔️5 🛡️2 ⚡6 ❤️5",
+    type: "Melé",
+    abilities: "Básico: Ninguna. Élite: Activación: Añade +1 Potencia al primer hechizo de magia tierra que lances durante esta activación."
+  },
+  {
+    name: "Fénix",
+    faction: "Conflujo",
+    colorClass: "text-cyan-300",
+    tier: "Oro / Lvl 7",
+    basicStats: "⚔️6 🛡️2 ⚡12 ❤️7",
+    eliteStats: "⚔️7 🛡️2 ⚡18 ❤️8",
+    type: "Voladora",
+    abilities: "Básico: Pasivo: Una vez por combate. Cuando los PS de esta unidad se reduzcan a 0, ponlos en 1. Pasivo: Inmunes a los Hechizos de magia de fuego. Élite: Al Atacar: Ataca 2 espacios en una línea. El primer ataque se resuelve normalmente y el segundo tiene 2 Ataque. Pasivo: Inmunes a los Hechizos de magia de fuego."
+  },
+  // 10. CALA
+  {
+    name: "Lobos de mar",
+    faction: "Cala",
+    colorClass: "text-sky-400",
+    tier: "Bronce / Lvl 3",
+    basicStats: "⚔️2 🛡️0 ⚡6 ❤️4",
+    eliteStats: "⚔️3 🛡️0 ⚡8 ❤️5",
+    type: "a Distancia",
+    abilities: "Básico: Pasivo: Ignora la penalización de combate contra unidades adyacentes. Élite: Al Atacar: Ignora los contraataques. Pasivo: Ignora la penalización de combate contra unidades adyacentes."
+  },
+  {
+    name: "Hechiceras",
+    faction: "Cala",
+    colorClass: "text-sky-400",
+    tier: "Plata / Lvl 5",
+    basicStats: "⚔️3 🛡️1 ⚡6 ❤️5",
+    eliteStats: "⚔️4 🛡️1 ⚡7 ❤️6",
+    type: "a Distancia",
+    abilities: "Básico: Alternativo: Coloca una ficha de debilidad <<-2>> sobre cualquier unidad durante 2 rondas de combate. Élite: Al Atacar: Después del ataque, coloca una ficha de Debilidad <<-1>> sobre el objetivo durante 2 rondas de combate."
+  },
+  {
+    name: "Háspidos",
+    faction: "Cala",
+    colorClass: "text-sky-400",
+    tier: "Oro / Lvl 7",
+    basicStats: "⚔️5 🛡️3 ⚡9 ❤️8",
+    eliteStats: "⚔️7 🛡️3 ⚡12 ❤️8",
+    type: "Melé",
+    abilities: "Básico: Al Atacar: +2 Ataque si, durante este combate, esta unidad se giró del lado de manada al lado de unos pocos. Élite: Al Atacar: Coloca 2 cubos de facción sobre el objetivo. Al comienzo de cada una de sus activaciones, retira 1 de ellos para infligir 1 Herida."
+  }
+];
+
 export default function RulebookPDF() {
   const triggerPrint = () => {
     window.print();
@@ -180,53 +504,80 @@ export default function RulebookPDF() {
         </div>
 
         {/* Dynamic Table of Contents */}
-        <div className="bg-slate-950/60 border border-amber-900/20 rounded-xl p-4 sm:p-5 my-4 space-y-3">
+        <div className="bg-slate-950/60 border border-amber-900/20 rounded-xl p-4 sm:p-5 my-4 space-y-4">
           <h4 className="font-serif text-amber-400 font-bold text-sm sm:text-base border-b border-slate-800 pb-2 flex items-center gap-2">
-            📋 Índice General del Compromiso Técnico y Reglamento (Consolidado)
+            📋 Índice General del Reglamento Consolidado (Secciones I a XXI)
           </h4>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs text-slate-300 font-mono">
-            <div>
-              <span className="text-amber-500 font-bold">I.</span> Glosario, las 10 Facciones, Cartas y Fichas Especiales
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-xs text-slate-300 font-mono leading-relaxed">
+            <div className="space-y-2.5">
+              <span className="text-amber-400 font-bold block border-b border-slate-900 pb-1 uppercase text-[10px]">Parte A: Reglas Básicas y de Campaña</span>
+              <div>
+                <span className="text-amber-500 font-bold">I.</span> Glosario, las 10 Facciones, Cartas y Fichas Especiales
+              </div>
+              <div>
+                <span className="text-amber-500 font-bold">II.</span> Tipos de Losetas (Atlas de Erathia)
+              </div>
+              <div>
+                <span className="text-amber-500 font-bold">III.</span> Compendio de Lugares del Mapa y sus Efectos
+              </div>
+              <div>
+                <span className="text-amber-500 font-bold">IV.</span> Preparación De Las Partidas y Listado de Escenarios
+              </div>
+              <div>
+                <span className="text-amber-500 font-bold">V.</span> Compendio de Campañas Oficiales y Libros de Misiones
+              </div>
+              <div>
+                <span className="text-amber-500 font-bold">VI.</span> Flujo Detallado de Rondas y Fases de Turno
+              </div>
+              <div>
+                <span className="text-amber-500 font-bold">VII.</span> Desarrollo Urbano, Reclutamiento y Economía
+              </div>
+              <div>
+                <span className="text-amber-500 font-bold">VIII.</span> Reglamento de Combate Táctico, Movimiento y Máquinas de Guerra
+              </div>
+              <div>
+                <span className="text-amber-500 font-bold">IX.</span> Hechizos, Arcanos y Libro de Magias
+              </div>
+              <div>
+                <span className="text-amber-500 font-bold">X.</span> Guía de Expansiones y Elementos Avanzados de Juego
+              </div>
+              <div>
+                <span className="text-amber-500 font-bold">XI.</span> Tablas del Reglamento Oficial (Zonas de Dificultad y Recursos)
+              </div>
             </div>
-            <div>
-              <span className="text-amber-500 font-bold">II.</span> Tipos de Losetas (Atlas de Erathia)
-            </div>
-            <div>
-              <span className="text-amber-500 font-bold">III.</span> Compendio de Lugares del Mapa y Efectos
-            </div>
-            <div>
-              <span className="text-amber-500 font-bold">IV.</span> Preparación De Las Partidas y Listado de Escenarios
-            </div>
-            <div>
-              <span className="text-amber-500 font-bold">V.</span> Modo Campaña Oficial y su Cronología de Misiones
-            </div>
-            <div>
-              <span className="text-amber-500 font-bold">VI.</span> Flujo Detallado de Rondas y Fases (Astrología vs Eventos)
-            </div>
-            <div>
-              <span className="text-amber-500 font-bold">VII.</span> Desarrollo Urbano, Reclutamiento y Economía
-            </div>
-            <div>
-              <span className="text-amber-500 font-bold">VIII.</span> Reglamento De Combate Táctico y Máquinas de Guerra
-            </div>
-            <div>
-              <span className="text-amber-500 font-bold">IX.</span> Hechizos, Arcanos y Libro de Magias
-            </div>
-            <div className="space-y-1">
-              <div><span className="text-amber-500 font-bold">X.</span> Guía de Expansiones y Elementos Avanzados</div>
-              <div className="pl-4 text-slate-400 text-[12px]">• El Campo de Batalla Dinámico (Obstáculos)</div>
-              <div className="pl-4 text-slate-400 text-[12px]">• Asedio y Sitio de Castillos (Reglas de Catapulta)</div>
-              <div className="pl-4 text-slate-400 text-[12px]">• Mapa Subterráneo e Inframundo (Tránsito Dual)</div>
-              <div className="pl-4 text-slate-400 text-[12px]">• Logística de Barcos, Astilleros y Navegación</div>
-              <div className="pl-4 text-slate-400 text-[12px]">• Monolitos de Tránsito y Teletransporte</div>
-            </div>
-            <div className="space-y-1">
-              <div><span className="text-amber-500 font-bold">XI.</span> Tablas del Reglamento Oficial</div>
-              <div className="pl-4 text-slate-400 text-[12px]">• Tabla de Dificultad de las Zonas (Ejércitos)</div>
-              <div className="pl-4 text-slate-400 text-[12px]">• Tabla General de Conversión de Recursos</div>
-            </div>
-            <div>
-              <span className="text-amber-500 font-bold">XX.</span> Guía de Habilidades y Talentos del Héroe (Wiki)
+
+            <div className="space-y-2.5">
+              <span className="text-amber-400 font-bold block border-b border-slate-900 pb-1 uppercase text-[10px]">Parte B: Mecánicas Avanzadas y Compendio</span>
+              <div>
+                <span className="text-amber-500 font-bold">XII.</span> Losetas Elementales, Invocaciones y Daño Elemental (Conflujo)
+              </div>
+              <div>
+                <span className="text-amber-500 font-bold">XIII.</span> Opciones Avanzadas y Ajustes de Competición
+              </div>
+              <div>
+                <span className="text-amber-500 font-bold">XIV.</span> Dados del Juego (Dados de Recursos, Combate y Tesoro)
+              </div>
+              <div>
+                <span className="text-amber-500 font-bold">XV.</span> Tipos de Artefactos y Reliquias de Erathia
+              </div>
+              <div>
+                <span className="text-amber-500 font-bold">XVI.</span> Expansión de Campo de Batalla (Obstáculos Dinámicos)
+              </div>
+              <div>
+                <span className="text-amber-500 font-bold">XVII.</span> Variantes de Reglas Oficiales y Ajustes de Torneo
+              </div>
+              <div>
+                <span className="text-amber-500 font-bold">XVIII.</span> Bancos de Criaturas, Palabras Clave y Fichas de Unidad
+              </div>
+              <div>
+                <span className="text-amber-500 font-bold">XIX.</span> Reglamento y Algoritmos de la Inteligencia Artificial (IA)
+              </div>
+              <div>
+                <span className="text-amber-500 font-bold">XX.</span> Guía de Habilidades y Talentos del Héroe (Las 29 Maestrerías)
+              </div>
+              <div>
+                <span className="text-amber-500 font-bold">XXI.</span> Compendio de Criaturas y Unidades de Combate
+              </div>
             </div>
           </div>
         </div>
@@ -259,8 +610,8 @@ export default function RulebookPDF() {
                 <span className="text-slate-200 block">• <strong>Infierno (Inferno):</strong> Kreegans, diablos surgidos del abismo ardiente y pactos de fuego devastadores.</span>
                 <span className="text-slate-200 block">• <strong>Bastión (Stronghold):</strong> Salvajes orcos, ogros y cíclopes. Dependencia absoluta de la fuerza bruta y coraje militar.</span>
                 <span className="text-slate-200 block">• <strong>Fortaleza (Fortress):</strong> Lagartos, hidras del caos y basiliscos en ciénagas y pantanos de impenetrable defensa.</span>
-                <span className="text-slate-200 block">• <strong>Confluencia (Conflux):</strong> Seres arcanos y elementales de fuego, aire, tierra y agua, coronados por los fénix eternos.</span>
-                <span className="text-slate-200 block">• <strong>Bahía (Cove):</strong> Piratas, corsarios y monstruos de la profundidad. Expertos en navegación, contrabando y asaltos anfibios.</span>
+                <span className="text-slate-200 block">• <strong>Conflujo (Conflux):</strong> Seres arcanos y elementales de fuego, aire, tierra y agua, coronados por los fénix eternos.</span>
+                <span className="text-slate-200 block">• <strong>Cala (Cove):</strong> Piratas, corsarios y monstruos de la profundidad. Expertos en navegación, contrabando y asaltos anfibios.</span>
               </p>
             </div>
           </div>
@@ -436,12 +787,12 @@ export default function RulebookPDF() {
             </div>
 
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-slate-800 space-y-2">
-              <strong className="text-amber-400 block font-mono font-bold border-b border-slate-900 pb-1">🌀 5. Losetas de Mapa Elementales (Expansión Confluencia)</strong>
+              <strong className="text-amber-400 block font-mono font-bold border-b border-slate-900 pb-1">🌀 5. Losetas de Mapa Elementales (Expansión Conflujo)</strong>
               <p className="text-slate-350 text-[12px] leading-relaxed">
                 Fallas o grietas cósmicas conreversos cian que imponen las leyes de los Planos Elementales:
               </p>
               <ul className="list-disc pl-4 space-y-1 text-slate-300 text-[12px]">
-                <li><strong>Grieta de Fuego (Fire Rift):</strong> Duplica de forma fija la potencia y daño de los hechizos de fuego lanzados desde ella. Si la facción del héroe es Confluencia o Inferno, se le conceden +2 PM libres.</li>
+                <li><strong>Grieta de Fuego (Fire Rift):</strong> Duplica de forma fija la potencia y daño de los hechizos de fuego lanzados desde ella. Si la facción del héroe es Conflujo o Inferno, se le conceden +2 PM libres.</li>
                 <li><strong>Grieta de Agua (Water Rift):</strong> Excluye penalizaciones de fango o nieve de movimiento y permite embarcar de forma directa sin agotar el turno.</li>
                 <li><strong>Grieta de Tierra (Earth Rift):</strong> Concede +1 a la Defensa Física de toda criatura aliada que defienda este enclave.</li>
                 <li><strong>Grieta de Aire (Air Rift):</strong> Concede +1 a la Iniciativa táctica en combate, permitiendo asestar ataques anticipados.</li>
@@ -1133,7 +1484,7 @@ export default function RulebookPDF() {
               </div>
               <div className="border border-slate-900 p-2 rounded bg-slate-950/30">
                 <span className="text-amber-400 font-bold block">5. Cañón (Cannon)</span>
-                Carta permanente exclusiva de Bahía (Cove). Al inicio de cada ronda de combate, elige una unidad o estructura enemiga y lanza el dado de combate estándar: <strong>-1</strong> (1 herida), <strong>0</strong> (2 heridas), <strong>+1</strong> (3 heridas). En asedios, actúa dañando estructuras.
+                Carta permanente exclusiva de Cala (Cove). Al inicio de cada ronda de combate, elige una unidad o estructura enemiga y lanza el dado de combate estándar: <strong>-1</strong> (1 herida), <strong>0</strong> (2 heridas), <strong>+1</strong> (3 heridas). En asedios, actúa dañando estructuras.
               </div>
             </div>
           </div>
@@ -1445,10 +1796,10 @@ export default function RulebookPDF() {
         {/* Section XII */}
         <section className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
-            XII. Losetas Elementales, Invocaciones y Daño Elemental (Confluencia)
+            XII. Losetas Elementales, Invocaciones y Daño Elemental (Conflujo)
           </h3>
           <p className="text-xs text-slate-400">
-            La expansión Confluencia (Conflux) introduce dimensiones místicas de energía pura y leyes físicas adaptativas para la batalla:
+            La expansión Conflujo (Conflux) introduce dimensiones místicas de energía pura y leyes físicas adaptativas para la batalla:
           </p>
           <div className="space-y-3 text-xs bg-slate-950 p-4 border border-slate-800/80 rounded-xl">
             <div className="space-y-1">
@@ -1456,7 +1807,7 @@ export default function RulebookPDF() {
               <p className="text-slate-350">
                 Losetas exclusivas de reverso cian que representan fragmentos colisionados de los Planos Elementales:
                 <br />
-                • <strong>Plano de Fuego (Fire Rift):</strong> Cruzar o finalizar el movimiento táctico en esta loseta otorga +2 PM de forma gratuita si tu facción activa es Confluencia o Inferno. Duplica además el daño infligido de cualquier hechizo elemental de fuego lanzado desde ella.
+                • <strong>Plano de Fuego (Fire Rift):</strong> Cruzar o finalizar el movimiento táctico en esta loseta otorga +2 PM de forma gratuita si tu facción activa es Conflujo o Inferno. Duplica además el daño infligido de cualquier hechizo elemental de fuego lanzado desde ella.
                 <br />
                 • <strong>Plano de Agua (Water Rift):</strong> Caminar por él no genera penalización de fango o nieve, y permite el embarque automático sin perder el resto del turno.
                 <br />
@@ -1609,7 +1960,7 @@ export default function RulebookPDF() {
                 <li><strong>Regla de Obtención (A la Mano):</strong> Siempre que el Héroe consiga un artefacto (por vencer ejércitos, explorar un túmulo, o como bonificación inicial de dificultad al inicio de la partida), este se añade <strong>directamente a tu mano</strong> en lugar de ir a tu pila de descarte o mazo de robo.</li>
                 <li><strong>Regla de Uso y Descarte:</strong> Cuando se juega un artefacto para resolver uno de sus efectos (superior o inferior), se ejecuta su acción y se deposita inmediatamente en la <strong>pila de descarte</strong> de tu mazo de Héroe. Al barajar la pila de descarte cuando el mazo de robo se agote, el artefacto se mezcla con el resto de cartas y se robará de la misma forma que un hechizo en las fases siguientes.</li>
                 <li><strong>Cartas de Artefacto Permanentes:</strong> Únicamente las cartas con el símbolo o atributo de "Permanente" quedan boca arriba en la mesa al jugarse, siguiendo el reglamento y límites generales para cartas permanentes (sólo una activa a la vez por defecto).</li>
-                <li><strong>Comercio y Transferencia:</strong> Puedes vender artefactos de tu mano/descarte por Oro en el Mercado o Puesto de Comercio, sacrificarlos por Exp en el Altar de la Confluencia, o transferirlos gratis entre héroes aliados adyacentes en el mapa de aventura.</li>
+                <li><strong>Comercio y Transferencia:</strong> Puedes vender artefactos de tu mano/descarte por Oro en el Mercado o Puesto de Comercio, sacrificarlos por Exp en el Altar del Conflujo, o transferirlos gratis entre héroes aliados adyacentes en el mapa de aventura.</li>
               </ul>
             </div>
 
@@ -1780,11 +2131,12 @@ export default function RulebookPDF() {
 
         {/* Section XX */}
         <section className="space-y-4 page-break">
-          <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
-            XX. Guía de Habilidades y Talentos del Héroe
-          </h3>
-          <p className="text-xs text-slate-400">
-            Las Habilidades representan la progresión del Héroe. Al subir de nivel a un rango de Plata (II, III, V y VII), el Héroe draftea de un mazo común. Poseen un efecto <strong>Básico</strong> (pasivo o gratuito) y un efecto <strong>Experto</strong> (requiere gastar una ficha de Experto).
+          <h2 className="text-lg font-bold font-serif text-amber-500 tracking-wide uppercase flex items-center justify-between">
+            <span>XX. Guía de Habilidades y Talentos del Héroe</span>
+            <span className="text-xs font-mono text-slate-500">Talentos de Erathia</span>
+          </h2>
+          <p className="text-[10px] uppercase font-mono text-slate-400 mt-1">
+            Las Habilidades representan la progresión del Héroe. Al subir de nivel a un rango de Plata (II, III, V y VII), el Héroe draftea de un mazo común. Poseen un efecto <strong>Básico</strong> y un efecto <strong>Experto</strong>.
           </p>
           <div className="overflow-x-auto">
             <table className="min-w-full text-[12px] text-slate-300 bg-slate-950 border border-slate-800 rounded-lg">
@@ -1797,149 +2149,164 @@ export default function RulebookPDF() {
               </thead>
               <tbody className="divide-y divide-slate-800 leading-relaxed">
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">1. Magia de Aire (Air Magic)</td>
-                  <td className="px-3 py-2 border border-slate-800">Permanente: +1 Poder para hechizos de la Escuela de Aire.</td>
-                  <td className="px-3 py-2 border border-slate-800">Al lanzar un Hechizo de la Escuela de Aire, puedes descartar esta carta para ganar +3 Poder de forma instantánea.</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">1. Magia de aire (Air Magic)</td>
+                  <td className="px-3 py-2 border border-slate-800">Permanente: +1 Poder para hechizos de la escuela de magia de aire.</td>
+                  <td className="px-3 py-2 border border-slate-800">Cuando lances un Hechizo de la escuela de aire, puedes descartar esta carta y ganar +3 Poder.</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">2. Arquería (Archery)</td>
-                  <td className="px-3 py-2 border border-slate-800">En curso: Durante esta ronda de combate, tus unidades a distancia ganan +1 Ataque si el objetivo no es adyacente.</td>
-                  <td className="px-3 py-2 border border-slate-800">En curso: Hasta el final de la siguiente ronda, tus unidades a distancia ganan +1 Iniciativa y +1 Ataque si el objetivo no es adyacente.</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">2. Magia de tierra (Earth Magic)</td>
+                  <td className="px-3 py-2 border border-slate-800">Permanente: +1 Poder para hechizos de la escuela de magia de tierra.</td>
+                  <td className="px-3 py-2 border border-slate-800">Cuando lances un Hechizo de la escuela de tierra, puedes descartar esta carta y ganar +3 Poder.</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">3. Armadura (Armorer)</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">3. Magia de fuego (Fire Magic)</td>
+                  <td className="px-3 py-2 border border-slate-800">Permanente: +1 Poder para hechizos de la escuela de magia de fuego.</td>
+                  <td className="px-3 py-2 border border-slate-800">Cuando lances un Hechizo de la escuela de fuego, puedes descartar esta carta y ganar +3 Poder.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">4. Magia de agua (Water Magic)</td>
+                  <td className="px-3 py-2 border border-slate-800">Permanente: +1 Poder para hechizos de la escuela de magia de agua.</td>
+                  <td className="px-3 py-2 border border-slate-800">Cuando lances un Hechizo de la escuela de agua, puedes descartar esta carta y ganar +3 Poder.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">5. Magia básica del aire (Basic Air Magic)</td>
+                  <td className="px-3 py-2 border border-slate-800">Permanente: En lugar de buscar en el mazo de hechizos, encuentra el primer Hechizo de magia de aire que haya en él y llévate el Hechizo a la mano. A continuación, baraja.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: +3 Poder para un Hechizo de magia de aire.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">6. Magia básica de la tierra (Basic Earth Magic)</td>
+                  <td className="px-3 py-2 border border-slate-800">Permanente: En lugar de buscar en el mazo de hechizos, encuentra el primer Hechizo de magia de tierra que haya en él y llévate el Hechizo a la mano. A continuación, baraja.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: +3 Potencia para un Hechizo de magia de tierra.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">7. Magia básica del fuego (Basic Fire Magic)</td>
+                  <td className="px-3 py-2 border border-slate-800">Permanente: En lugar de buscar en el mazo de hechizos, encuentra el primer Hechizo de magia de fuego que haya en él y llévate el Hechizo a la mano. A continuación, baraja.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: +3 Potencia para un Hechizo de magia de fuego.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">8. Magia básica del agua (Basic Water Magic)</td>
+                  <td className="px-3 py-2 border border-slate-800">Permanente: En lugar de buscar en el mazo de hechizos, encuentra el primer Hechizo de magia de agua que haya en él y llévate el Hechizo a la mano. A continuación, baraja.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: +3 Potencia para un Hechizo de magia de agua.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">9. Tiro con arco (Archery)</td>
+                  <td className="px-3 py-2 border border-slate-800">Continuo: Durante esta ronda de combate, tus unidades a distancia ganan +1 Ataque si el objetivo no es adyacente.</td>
+                  <td className="px-3 py-2 border border-slate-800">Continuo: Hasta el final de la siguiente ronda, tus unidades a distancia ganan +1 Iniciativa y +1 Ataque si el objetivo no es adyacente.</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">10. Armero (Armorer)</td>
                   <td className="px-3 py-2 border border-slate-800">Instantáneo: +1 Defensa en esta ronda, luego roba 1 carta.</td>
                   <td className="px-3 py-2 border border-slate-800">Instantáneo: +2 Defensa en esta ronda, luego roba 1 carta.</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">4. Artillería (Artillery)</td>
-                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Inflige 1 daño a la unidad enemiga con la menor iniciativa.</td>
-                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Al usar la Balista, resuelve su efecto contra el mismo objetivo 3 veces.</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">11. Artillería (Artillery)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Inflige 1 Herida a la unidad enemiga con menor Iniciativa.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Al utilizar la carta Balista, resuelve su efecto 3 veces contra el mismo objetivo.</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">5. Balística (Ballistics)</td>
-                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega durante un asedio. Destruye 1 sección de Muro o la Puerta de forma instantánea.</td>
-                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega durante un asedio. Destruye la Torre de Flechas (Arrow Tower) aliada/enemiga.</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">12. Balística (Ballistics)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega esta carta durante un asedio. Destruye 1 muralla o puerta de forma instantánea.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega esta carta durante un asedio. Destruye la Torre de arqueros (Arrow Tower) aliada/enemiga.</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">6. Magias Básicas Elementales (Basic Air/Earth/Fire/Water Magic)</td>
-                  <td className="px-3 py-2 border border-slate-800">Permanente: En lugar de buscar en el mazo de Hechizos, toma el primer Hechizo de la Escuela correspondiente, colócalo en tu mano y baraja.</td>
-                  <td className="px-3 py-2 border border-slate-800">Instantáneo: +3 Poder para un Hechizo de la Escuela correspondiente.</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">13. Diplomacia (Diplomacy)</td>
+                  <td className="px-3 py-2 border border-slate-800">Efecto de mapa: Por cada vivienda controlada, roba 1 carta de Unidad Neutral correspondiente. Puedes reclutarla por su coste en Oro.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Salta el combate con unidades neutrales en una zona cuya dificultad sea menor o igual al nivel de tu Héroe. Reclama la zona y visítala gratis (sin ganar Experiencia).</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">7. Diplomacia (Diplomacy)</td>
-                  <td className="px-3 py-2 border border-slate-800">Efecto de mapa: Por cada morada (Dwelling) controlada, roba 1 carta de Unidad Neutral correspondiente. Puedes reclutarla por su coste en Oro.</td>
-                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Salta el combate con unidades neutrales en un campo cuya dificultad sea menor o igual al nivel de tu Héroe. Reclama el campo y visítalo gratis (sin ganar Experiencia).</td>
-                </tr>
-                <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">8. Ojo de Águila (Eagle Eye)</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">14. Vista de águila / Ojo de lince (Eagle Eye)</td>
                   <td className="px-3 py-2 border border-slate-800">Instantáneo: Roba cartas del mazo de Hechizos hasta revelar un Hechizo Básico. Ponlo en tu mano y baraja el resto.</td>
                   <td className="px-3 py-2 border border-slate-800">Instantáneo: Roba cartas del mazo de Hechizos hasta revelar un Hechizo Experto. Ponlo en tu mano y baraja el resto.</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">9. Magia de Tierra (Earth Magic)</td>
-                  <td className="px-3 py-2 border border-slate-800">Permanente: +1 Poder para hechizos de la Escuela de Tierra.</td>
-                  <td className="px-3 py-2 border border-slate-800">Al lanzar un Hechizo de la Escuela de Tierra, puedes descartar esta carta para ganar +3 Poder de forma instantánea.</td>
-                </tr>
-                <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">10. Finanzas (Estates)</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">15. Patrimonio (Estates)</td>
                   <td className="px-3 py-2 border border-slate-800">Instantáneo: Gana 3 de Oro.</td>
                   <td className="px-3 py-2 border border-slate-800">Instantáneo: Gana 6 de Oro.</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">11. Magia de Fuego (Fire Magic)</td>
-                  <td className="px-3 py-2 border border-slate-800">Permanente: +1 Poder para hechizos de la Escuela de Fuego.</td>
-                  <td className="px-3 py-2 border border-slate-800">Al lanzar un Hechizo de la Escuela de Fuego, puedes descartar esta carta para ganar +3 Poder de forma instantánea.</td>
-                </tr>
-                <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">12. Primeros Auxilios (First Aid)</td>
-                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Elimina 1 daño/herida de una de tus unidades.</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">16. Primeros auxilios (First Aid)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Retira 1 Herida de una de tus unidades.</td>
                   <td className="px-3 py-2 border border-slate-800">Instantáneo: Al usar la Tienda de Primeros Auxilios, resuelve su efecto contra el mismo objetivo 3 veces.</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">13. Inteligencia (Intelligence)</td>
-                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Durante el combate, justo antes de que cualquier unidad se active, puedes jugar una carta de Hechizo (aplica el límite de 1 por ronda).</td>
-                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Durante el combate, antes de que cualquier unidad se active, juega una carta de Hechizo. Este hechizo no cuenta para tu límite por ronda.</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">17. Inteligencia / Espionaje (Intelligence)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Al comienzo de la ronda de combate, juega una carta de Hechizo. Durante la ronda de combate sigues pudiendo jugar solo una de Hechizo.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Al comienzo de la ronda de combate, juega una carta de Hechizo. Este Hechizo no cuenta para tu límite de Hechizos por ronda de combate.</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">14. Interferencia (Interference)</td>
-                  <td className="px-3 py-2 border border-slate-800">Instantáneo: +1 Defensa. Se puede usar para reducir el daño de hechizos enemigos.</td>
-                  <td className="px-3 py-2 border border-slate-800">Instantáneo: +2 Defensa. Se puede usar para reducir el daño de hechizos enemigos.</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">18. Interferencia (Interference)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: +1 Defensa. Este efecto se puede utilizar para reducir el daño de un Hechizo enemigo.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: +2 Defensa. Este efecto se puede utilizar para reducir el daño de un Hechizo enemigo.</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">15. Liderazgo (Leadership)</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">19. Liderazgo (Leadership)</td>
                   <td className="px-3 py-2 border border-slate-800">Instantáneo: Gana una ficha de Moral Positiva (+1).</td>
                   <td className="px-3 py-2 border border-slate-800">Instantáneo: Roba 2 cartas, y gana una ficha de Moral Positiva.</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">16. Aprendizaje (Learning)</td>
-                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega al subir de nivel. Avanza su nivel de experiencia en medio nivel (0.5) adicional gratis.</td>
-                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega al subir de nivel. Avanza la experiencia en 1 nivel completo adicional, luego retira esta carta de la partida.</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">20. Aprendizaje (Learning)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juégala al subir de nivel. Aumenta su nivel de experiencia en medio nivel (0.5) adicional gratis.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juégala al subir de nivel. Aumenta el nivel de experiencia en 1 nivel completo adicional, luego retira esta carta de la partida.</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">17. Logística (Logistics)</td>
-                  <td className="px-3 py-2 border border-slate-800">En curso: Al final de tu turno, mueve el Héroe a un campo vacío adyacente.</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">21. Logística (Logistics)</td>
+                  <td className="px-3 py-2 border border-slate-800">Continuo: Al final de tu turno, mueve la miniatura de tu Héroe a una zona vacía adyacente.</td>
                   <td className="px-3 py-2 border border-slate-800">Instantáneo: Tu Héroe gana +1 Punto de Movimiento (PM) de forma inmediata.</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">18. Suerte (Luck)</td>
-                  <td className="px-3 py-2 border border-slate-800">En curso: Puedes volver a tirar el dado de Tesoro o el dado de Recursos una vez este turno.</td>
-                  <td className="px-3 py-2 border border-slate-800">En curso: Puedes volver a tirar cualquier dado una vez este turno.</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">22. Suerte (Luck)</td>
+                  <td className="px-3 py-2 border border-slate-800">Continuo: Puedes volver a lanzar un dado de tesoro y de recurso una vez durante este turno.</td>
+                  <td className="px-3 py-2 border border-slate-800">Continuo: Puedes volver a lanzar tantos dados como quieras una vez durante este turno.</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">19. Misticismo (Mysticism)</td>
-                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega justo después de lanzar un hechizo. En lugar de descartarlo, devuélvelo a tu mano.</td>
-                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega justo después de lanzar un hechizo. Devuelve la carta de Hechizo y todas las demás cartas jugadas con ella a tu mano.</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">23. Misticismo (Mysticism)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega esta carta inmediatamente después de lanzar un Hechizo. En vez de descartarlo, devuélvelo a tu mano.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega esta carta inmediatamente después de lanzar un Hechizo. Devuelve la carta de Hechizo y todas las demás cartas jugadas con ella a tu mano.</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">20. Nigromancia (Necromancy)</td>
-                  <td className="px-3 py-2 border border-slate-800">Efecto de mapa: Juega tras ganar un combate. Refuerza una unidad Bronce o Plata por la mitad de su coste en Oro (redondeado hacia abajo).</td>
-                  <td className="px-3 py-2 border border-slate-800">Efecto de mapa: Juega tras ganar un combate. Refuerza cualquier unidad de tu elección por la mitad de su coste en Oro.</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">24. Nigromancia (Necromancy)</td>
+                  <td className="px-3 py-2 border border-slate-800">Mapa: Juégalo después de ganar un combate. Refuerza una de tus unidades Bronce o Plata por la mitad del coste en Oro (redondeado hacia abajo).</td>
+                  <td className="px-3 py-2 border border-slate-800">Mapa: Juégalo después de ganar un combate. Refuerza cualquiera de tus unidades por la mitad del coste en Oro (redondeado hacia abajo).</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">21. Ofensiva / Ataque (Offense)</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">25. Ofensa (Offense)</td>
                   <td className="px-3 py-2 border border-slate-800">Instantáneo: +1 Ataque a tus unidades en esta ronda, luego roba 1 carta.</td>
                   <td className="px-3 py-2 border border-slate-800">Instantáneo: +2 Ataque a tus unidades en esta ronda, luego roba 1 carta.</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">22. Buscador de Caminos (Pathfinding)</td>
-                  <td className="px-3 py-2 border border-slate-800">Efecto de mapa: Permite mover a través de campos con Unidades Neutrales/Enemigos, pero si finaliza el movimiento en ellos, empieza el combate.</td>
-                  <td className="px-3 py-2 border border-slate-800">Efecto de mapa: Permite mover sobre fronteras amarillas y campos bloqueados, pero no puede terminar el movimiento en ellos.</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">26. Orientación / Buscador de caminos (Pathfinding)</td>
+                  <td className="px-3 py-2 border border-slate-800">Mapa: Este turno, tu Héroe puede moverse por zonas con unidades neutrales y héroes enemigos, pero si finaliza el movimiento en ellos empieza el combate.</td>
+                  <td className="px-3 py-2 border border-slate-800">Mapa: Tu Héroe puede atravesar bordes amarillos y zonas bloqueadas, pero no puede acabar su movimiento en ellas.</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">23. Resistencia (Resistance)</td>
-                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega tras un hechizo enemigo. Si se lanzó con 1 o menos de Poder, ignora su efecto.</td>
-                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega tras un hechizo enemigo. Ignora por completo el efecto de la carta de Hechizo enemiga.</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">27. Resistencia (Resistance)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega inmediatamente después de que el enemigo lance un Hechizo. Si se lanzó con 1 o menos de Poder, ignora su efecto.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega inmediatamente después de que el enemigo lance un Hechizo. Ignora por completo el efecto de la carta enemiga.</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">24. Erudito / Sabio (Scholar)</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">28. Erudito (Scholar)</td>
                   <td className="px-3 py-2 border border-slate-800">Instantáneo: Elige 1 carta de tu pila de descartes y devuélvela a tu mano.</td>
-                  <td className="px-3 py-2 border border-slate-800">Efecto de mapa: Elimina hasta 2 cartas de Estadística. Toma hasta 2 cartas de Estadística Potenciadas y ponlas encima de tu pila de descarte, luego retira al Erudito.</td>
+                  <td className="px-3 py-2 border border-slate-800">Mapa: Retira hasta 2 cartas de característica. Toma 2 cartas de característica potenciadas de la baraja y colócalas arriba de tu pila de descarte. Retira al Erudito.</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">25. Exploración (Scouting)</td>
-                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega antes de una acción de Búsqueda, luego haz Búsqueda(3) en su lugar.</td>
-                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega antes de una acción de Búsqueda, luego haz Búsqueda(5) en su lugar.</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">29. Exploración (Scouting)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega esta carta cuando vayas a buscar para realizar Búsqueda(3) en su lugar.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Juega esta carta cuando vayas a buscar para realizar Búsqueda(5) en su lugar.</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">26. Hechicería (Sorcery)</td>
-                  <td className="px-3 py-2 border border-slate-800">Instantáneo: +1 Poder para hechizos en esta ronda, luego roba 1 carta.</td>
-                  <td className="px-3 py-2 border border-slate-800">Instantáneo: +2 Poder para hechizos en esta ronda, luego roba 1 carta.</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">30. Hechicería (Sorcery)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: +1 Potencia para hechizos en esta ronda, luego roba 1 carta.</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: +2 Potencia para hechizos en esta ronda, luego roba 1 carta.</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">27. Tácticas (Tactics)</td>
-                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Al inicio del combate, puedes intercambiar la posición de cualesquiera 2 de tus unidades.</td>
-                  <td className="px-3 py-2 border border-slate-800">Activación: Durante el combate, puedes intercambiar la posición de cualesquiera 2 de tus unidades en tu turno.</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">31. Táctica (Tactics)</td>
+                  <td className="px-3 py-2 border border-slate-800">Instantáneo: Al comienzo del combate, intercambia la posición de cualesquiera 2 de tus unidades.</td>
+                  <td className="px-3 py-2 border border-slate-800">Activación: Durante el combate, intercambia la posición de cualesquiera 2 de tus unidades en tu turno.</td>
                 </tr>
                 <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">28. Magia de Agua (Water Magic)</td>
-                  <td className="px-3 py-2 border border-slate-800">Permanente: +1 Poder para hechizos de la Escuela de Agua.</td>
-                  <td className="px-3 py-2 border border-slate-800">Al lanzar un Hechizo de la Escuela de Agua, puedes descartar esta carta para ganar +3 Poder de forma instantánea.</td>
-                </tr>
-                <tr>
-                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">29. Sabiduría (Wisdom)</td>
-                  <td className="px-3 py-2 border border-slate-800">El coste de compra de hechizos en esta Ciudad se reduce en 2 de Oro. Al comprar de tu Gremio de Magos, realiza Búsqueda(3) en lugar de Búsqueda(2).</td>
-                  <td className="px-3 py-2 border border-slate-800">El coste de compra de hechizos en esta Ciudad se reduce en 2 de Oro. Al comprar de tu Gremio de Magos, realiza Búsqueda(4) en lugar de Búsqueda(2).</td>
+                  <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">32. Sabiduría (Wisdom)</td>
+                  <td className="px-3 py-2 border border-slate-800">Comprar hechizos en esta Ciudad cuesta 2 Oros menos. Al comprar de tu Gremio de Magos, realiza Búsqueda(3) en lugar de Búsqueda(2).</td>
+                  <td className="px-3 py-2 border border-slate-800">Comprar hechizos en esta Ciudad cuesta 2 Oros menos. Al comprar de tu Gremio de Magos, realiza Búsqueda(4) en lugar de Búsqueda(2).</td>
                 </tr>
               </tbody>
             </table>
@@ -1963,91 +2330,41 @@ export default function RulebookPDF() {
               En el juego de tablero de <strong>Heroes of Might and Magic III</strong>, el combate táctico se resuelve en una cuadrícula hexagonal. Las unidades son representadas por cartas de doble cara: la cara <strong>Básica</strong> ("Unas pocas") y la cara de <strong>Élite</strong> ("Manada" o mejorada). Reclutar y saber utilizar las habilidades de estas criaturas determina el éxito de las campañas.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-slate-950 p-4 border border-slate-800/80 rounded-xl">
-              <div className="space-y-1">
-                <span className="text-amber-400 font-semibold block font-mono">🎯 Atributos Clave de Combate</span>
-                <ul className="list-disc pl-4 space-y-1 text-slate-400 text-[12px]">
-                  <li><strong>Ataque (⚔️):</strong> Número de dados o daño básico infligido.</li>
-                  <li><strong>Defensa (🛡️):</strong> Reduce las heridas directas recibidas por ataques físicos.</li>
-                  <li><strong>Iniciativa (⚡):</strong> Orden de actuación en la ronda de batalla. Actúa el más veloz.</li>
-                  <li><strong>Puntos de Vida (❤️):</strong> Capacidad de daño tolerable antes de retirar la tropa.</li>
-                  <li><strong>Movimiento (👣):</strong> Hexágonos máximos de desplazamiento por activación.</li>
-                </ul>
-              </div>
-              <div className="space-y-1">
-                <span className="text-amber-400 font-semibold block font-mono">🏷️ Clasificación de Rangos (Tiers)</span>
-                <ul className="list-disc pl-4 space-y-1 text-slate-400 text-[12px]">
-                  <li><strong>Bronce (Niveles I - III):</strong> Unidades de infantería básica y tiradores iniciales. Muy numerosas y con costes de reclutamiento bajos en Oro.</li>
-                  <li><strong>Plata (Niveles IV - V):</strong> Criaturas profesionales y guerreros de élite. Requieren madera o mineral y estructuras de metrópolis medias.</li>
-                  <li><strong>Oro (Niveles VI - VII):</strong> Tropas legendarias o campeones de facción (ej. Ángeles o Dragones). Alto coste en Oro y Objetos de Valor místicos.</li>
-                </ul>
-              </div>
-            </div>
-
-            <h3 className="text-sm font-bold text-amber-400 uppercase tracking-wider font-mono pt-2">
-              Tabla Compendio de Criaturas Destacadas por Facción
-            </h3>
-
-            <table className="w-full text-[10px] text-left border-collapse border border-slate-800">
+            <table className="w-full text-[9px] text-left border-collapse border border-slate-800">
               <thead>
-                <tr className="bg-slate-950 text-slate-400 uppercase tracking-widest text-[10px] font-mono border-b border-slate-800">
-                  <th className="px-2.5 py-2 border border-slate-800">Criatura / Facción</th>
-                  <th className="px-2.5 py-2 border border-slate-800">Tier / Lvl</th>
-                  <th className="px-2.5 py-2 border border-slate-800">Cara Básica (Stats)</th>
-                  <th className="px-2.5 py-2 border border-slate-800">Cara Élite (Stats)</th>
+                <tr className="bg-slate-900 text-amber-400 font-mono text-[10px] border-b border-slate-800">
+                  <th className="px-2.5 py-2 border border-slate-800">Criatura (Facción)</th>
+                  <th className="px-2.5 py-2 border border-slate-800">Tier / Nivel</th>
+                  <th className="px-2.5 py-2 border border-slate-800">Unas Pocas</th>
+                  <th className="px-2.5 py-2 border border-slate-800">Manada</th>
+                  <th className="px-2.5 py-2 border border-slate-800">Tipo de criatura</th>
                   <th className="px-2.5 py-2 border border-slate-800">Habilidades Singulares</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-900">
-                <tr>
-                  <td className="px-2.5 py-2 font-semibold text-blue-300 border border-slate-800">Piqueros / Alabarderos</td>
-                  <td className="px-2.5 py-2 border border-slate-800">Bronce / Lvl 1</td>
-                  <td className="px-2.5 py-2 border border-slate-800">⚔️1 🛡️1 ⚡3 ❤️1</td>
-                  <td className="px-2.5 py-2 border border-slate-800">⚔️2 🛡️1 ⚡4 ❤️1</td>
-                  <td className="px-2.5 py-2 border border-slate-800"><strong>Carga:</strong> +1 Atk al mover 2+ hexes. Élite tiene <strong>Sin Represalia</strong>.</td>
-                </tr>
-                <tr>
-                  <td className="px-2.5 py-2 font-semibold text-blue-300 border border-slate-800">Ángeles / Arcángeles</td>
-                  <td className="px-2.5 py-2 border border-slate-800">Oro / Lvl 7</td>
-                  <td className="px-2.5 py-2 border border-slate-800">⚔️4 🛡️3 ⚡6 ❤️4</td>
-                  <td className="px-2.5 py-2 border border-slate-800">⚔️5 🛡️4 ⚡7 ❤️4</td>
-                  <td className="px-2.5 py-2 border border-slate-800"><strong>Vuelo.</strong> Élite puede revivir una unidad Bronce o Plata por combate.</td>
-                </tr>
-                <tr>
-                  <td className="px-2.5 py-2 font-semibold text-emerald-300 border border-slate-800">Elfos / Grandes Elfos</td>
-                  <td className="px-2.5 py-2 border border-slate-800">Bronce / Lvl 3</td>
-                  <td className="px-2.5 py-2 border border-slate-800">⚔️1 🛡️0 ⚡4 ❤️1</td>
-                  <td className="px-2.5 py-2 border border-slate-800">⚔️2 🛡️0 ⚡5 ❤️1</td>
-                  <td className="px-2.5 py-2 border border-slate-800"><strong>A distancia.</strong> Élite tiene <strong>Doble Disparo</strong> (ataca dos veces).</td>
-                </tr>
-                <tr>
-                  <td className="px-2.5 py-2 font-semibold text-slate-300 border border-slate-800">Vampiros / S. Vampiro</td>
-                  <td className="px-2.5 py-2 border border-slate-800">Plata / Lvl 4</td>
-                  <td className="px-2.5 py-2 border border-slate-800">⚔️2 🛡️1 ⚡5 ❤️2</td>
-                  <td className="px-2.5 py-2 border border-slate-800">⚔️3 🛡️2 ⚡6 ❤️2</td>
-                  <td className="px-2.5 py-2 border border-slate-800"><strong>No-muerto. Sin Represalia.</strong> Élite tiene <strong>Drenaje de Vida</strong>.</td>
-                </tr>
-                <tr>
-                  <td className="px-2.5 py-2 font-semibold text-purple-300 border border-slate-800">Dragones R. / Dragón Negro</td>
-                  <td className="px-2.5 py-2 border border-slate-800">Oro / Lvl 7</td>
-                  <td className="px-2.5 py-2 border border-slate-800">⚔️4 🛡️3 ⚡6 ❤️4</td>
-                  <td className="px-2.5 py-2 border border-slate-800">⚔️5 🛡️4 ⚡7 ❤️4</td>
-                  <td className="px-2.5 py-2 border border-slate-800"><strong>Vuelo, Aliento Lineal.</strong> Élite es inmune a toda magia del juego.</td>
-                </tr>
-                <tr>
-                  <td className="px-2.5 py-2 font-semibold text-yellow-300 border border-slate-800">Gigantes / Titanes</td>
-                  <td className="px-2.5 py-2 border border-slate-800">Oro / Lvl 7</td>
-                  <td className="px-2.5 py-2 border border-slate-800">⚔️4 🛡️3 ⚡5 ❤️4</td>
-                  <td className="px-2.5 py-2 border border-slate-800">⚔️5 🛡️3 ⚡6 ❤️4</td>
-                  <td className="px-2.5 py-2 border border-slate-800"><strong>Inmune a control mental.</strong> Élite ataca <strong>A distancia</strong>.</td>
-                </tr>
-                <tr>
-                  <td className="px-2.5 py-2 font-semibold text-amber-300 border border-slate-800">Behemoth / Ancestral</td>
-                  <td className="px-2.5 py-2 border border-slate-800">Oro / Lvl 7</td>
-                  <td className="px-2.5 py-2 border border-slate-800">⚔️4 🛡️2 ⚡5 ❤️4</td>
-                  <td className="px-2.5 py-2 border border-slate-800">⚔️5 🛡️2 ⚡6 ❤️4</td>
-                  <td className="px-2.5 py-2 border border-slate-800"><strong>Garras:</strong> Reduce 50% defensa enemiga. Élite la reduce a 0.</td>
-                </tr>
+              <tbody className="divide-y divide-slate-800 leading-relaxed font-mono">
+                {compendiumUnits.map((u, idx) => (
+                  <tr key={idx} className="hover:bg-slate-900/40">
+                    <td className="px-2.5 py-1.5 border border-slate-800">
+                      <span className={`font-semibold ${u.colorClass}`}>{u.name}</span>{" "}
+                      <span className="text-slate-500 font-normal text-[8px]">({u.faction})</span>
+                    </td>
+                    <td className="px-2.5 py-1.5 border border-slate-800 text-slate-400">{u.tier}</td>
+                    <td className="px-2.5 py-1.5 border border-slate-800 text-amber-100">{u.basicStats}</td>
+                    <td className="px-2.5 py-1.5 border border-slate-800 text-amber-300">{u.eliteStats}</td>
+                    <td className="px-2.5 py-1.5 border border-slate-800">
+                      <span className={`px-1.5 py-0.5 rounded text-[8px] font-semibold tracking-wider uppercase ${
+                        u.type.includes('Voladora') ? 'bg-emerald-950/80 text-emerald-400 border border-emerald-900/40' :
+                        u.type.includes('a Distancia') ? 'bg-sky-950/80 text-sky-400 border border-sky-900/40' :
+                        'bg-amber-950/80 text-amber-400 border border-amber-900/40'
+                      }`}>
+                        {u.type}
+                      </span>
+                    </td>
+                    <td className="px-2.5 py-1.5 border border-slate-800 font-sans text-slate-300 text-[8.5px] leading-snug">
+                      {u.abilities}
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

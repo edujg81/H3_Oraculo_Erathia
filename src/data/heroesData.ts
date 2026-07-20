@@ -1184,7 +1184,7 @@ export const FACTION_HEROES: FactionHeroesData = {
           { level: 6, name: 'Elementales de magma VI', effect: 'Instantáneo: La unidad seleccionada gana +2 Ataque.\n— O —\nContinuo: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 3.' }
         ]
       },
-      lore: 'Un viajero rústico de constitución mineral que lidera a los seres de tierra y magma del plano elemental de Confluencia.',
+      lore: 'Un viajero rústico de constitución mineral que lidera a los seres de tierra y magma del plano elemental de Conflujo.',
       quote: 'El suelo que pisáis no es vuestro, obecece a mi llamado. Sentid la furia de la tierra agrietándose bajo vuestros pies.'
     },
     {
@@ -1205,7 +1205,7 @@ export const FACTION_HEROES: FactionHeroesData = {
           { level: 6, name: 'Muro de fuego VI', effect: 'Continuo: Para este Combate, coloca esta carta o una ficha de muro de fuego en un espacio vacío del tablero de combate. Aplica 3 Heridas a cualquier unidad que comience su turno aquí o que se detenga aquí, y a cualquier unidad melé o a distancia que lo atraviese.' }
         ]
       },
-      lore: 'Una temperamental hechicera que domina las esferas ígneas y los muros incandescentes de Confluencia.',
+      lore: 'Una temperamental hechicera que domina las esferas ígneas y los muros incandescentes de Conflujo.',
       quote: 'Las llamas son la expresión más pura de la energía. Quienes osen cruzar mi muro de fuego solo encontrarán cenizas y olvido.'
     },
     {
@@ -1226,7 +1226,7 @@ export const FACTION_HEROES: FactionHeroesData = {
           { level: 6, name: 'Elementales mágicos VI', effect: 'Instantáneo: La unidad seleccionada gana +2 Ataque.\n— O —\nInstantáneo: +2 Potencia.' }
         ]
       },
-      lore: 'Un enigmático explorador planar que viaja a través de los vórtices de energía elemental de Confluencia.',
+      lore: 'Un enigmático explorador planar que viaja a través de los vórtices de energía elemental de Conflujo.',
       quote: 'Los límites físicos entre los planos no son más que ilusiones. La verdadera velocidad reside en comprender el flujo del espacio.'
     },
     {
@@ -1247,7 +1247,7 @@ export const FACTION_HEROES: FactionHeroesData = {
           { level: 6, name: 'Elementales VI', effect: 'Continuo: Para este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Elementales.' }
         ]
       },
-      lore: 'Una decidida viajera que lidera a los seres psíquicos de Confluencia mediante proyecciones de su propia mente.',
+      lore: 'Una decidida viajera que lidera a los seres psíquicos de Conflujo mediante proyecciones de su propia mente.',
       quote: 'La mente es el catalizador que une los elementos. Mis pensamientos guiarán vuestros golpes con el poder de una tormenta psíquica.'
     },
     {
@@ -1375,7 +1375,7 @@ export const FACTION_HEROES: FactionHeroesData = {
           { level: 6, name: 'Exploración VI', effect: 'Instantáneo: Retira 1 carta de habilidad, artefacto o hechizo de tu mano para Buscar(4) en el mazo correspondiente. A continuación, puedes retirar esta carta de especialidad.' }
         ]
       },
-      lore: 'Una astuta exploradora marina encargada del reconocimiento cartográfico de costas y del contrabando en Bahía.',
+      lore: 'Una astuta exploradora marina encargada del reconocimiento cartográfico de costas y del contrabando en Cala.',
       quote: 'Ninguna costa es demasiado escarpada ni ningún puerto demasiado seguro si Miriam decide trazar un rumbo a través de ellos.'
     },
     {

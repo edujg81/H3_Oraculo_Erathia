@@ -531,7 +531,7 @@ const LOCATIONS_DATA: MapLocation[] = [
   },
   {
     id: 'conflux_altar',
-    name: 'Altar de la Confluencia (Conflux Altar)',
+    name: 'Altar del Conflujo (Conflux Altar)',
     type: 'Re-visitable',
     zones: ['Superficie', 'Subterráneo'],
     effect: 'Permite sacrificar cartas de Hechizo o Artefactos menores obsoletos de tu mano para transformarlos inmediatamente en Puntos de Experiencia (Exp) o recursos de Objetos de Valor.',

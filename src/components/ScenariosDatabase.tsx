@@ -97,10 +97,10 @@ const SCENARIOS: Scenario[] = [
     players: '1-2 Jugadores',
     rounds: 10,
     difficulty: 'Media',
-    victoryCondition: 'Eliminar a las criaturas marinas colosales (Leviatanes y Serpientes Marinas) que custodian el Faro de la Bahía y asegurar el control de las minas costeras.',
-    setup: 'Mapa predominantemente costero o fluvial, con losetas de agua y muelles de la Bahía (Cove). Se colocan tres enclaves de monstruos marinos en los islotes.',
+    victoryCondition: 'Eliminar a las criaturas marinas colosales (Leviatanes y Serpientes Marinas) que custodian el Faro de la Cala y asegurar el control de las minas costeras.',
+    setup: 'Mapa predominantemente costero o fluvial, con losetas de agua y muelles de la Cala (Cove). Se colocan tres enclaves de monstruos marinos en los islotes.',
     specialRules: 'Los héroes se mueven un hexágono adicional de forma gratuita por cada muelle controlado. El coste de reclutamiento de unidades de tipo Pirata se reduce en -1 de Oro.',
-    expansion: 'Expansión de la Bahía (Cove)'
+    expansion: 'Expansión de la Cala (Cove)'
   },
   {
     id: 'dragon_cliffs',

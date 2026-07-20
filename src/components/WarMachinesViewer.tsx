@@ -360,7 +360,7 @@ export default function WarMachinesViewer() {
           {[
             { id: 'all', label: 'Todas' },
             { id: 'base', label: 'Juego Base' },
-            { id: 'cove', label: 'Cove (Bahía)' }
+            { id: 'cove', label: 'Cove (Cala)' }
           ].map(opt => (
             <button
               key={opt.id}
@@ -424,7 +424,7 @@ export default function WarMachinesViewer() {
                       </span>
                       {machine.id === 'cannon' && (
                         <span className="inline-block mt-1 text-[9px] font-mono text-cyan-400 uppercase tracking-wider font-bold">
-                          ⚓ Exclusivo de Bahía (Cove)
+                          ⚓ Exclusivo de Cala (Cove)
                         </span>
                       )}
                     </div>
@@ -606,7 +606,7 @@ export default function WarMachinesViewer() {
                 }}
                 className="rounded border-slate-800 bg-slate-900 text-amber-500 focus:ring-0 cursor-pointer w-4 h-4"
               />
-              <span>Héroe de Bahía</span>
+              <span>Héroe de Cala</span>
             </label>
           </div>
         </div>

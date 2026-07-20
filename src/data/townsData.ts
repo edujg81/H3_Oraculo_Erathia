@@ -965,7 +965,7 @@ export const townsData: Record<string, TownData> = {
   cove: {
     factionId: 'cove',
     factionName: 'Cala (Cove)',
-    townName: 'Bahía del Corsario',
+    townName: 'Cala del Corsario',
     lore: 'Un asentamiento costero pirata de Regnan, oculto tras densas brumas marinas. Comandan veloces oceánidos, asaltantes de abordaje armados con cañones pesados, serpientes marinas y ninfas acuáticas.',
     buildings: [
       {
@@ -988,7 +988,7 @@ export const townsData: Record<string, TownData> = {
       },
       {
         id: 'bronce',
-        name: 'Bahía (Morada de Bronce)',
+        name: 'Cala (Morada de Bronce)',
         cost: { gold: 4, materials: 3, valuables: 1 },
         benefit: 'Permite reclutar Oceánidos, Marineros y Lobos de mar.',
         upgradeName: 'Taberna',
