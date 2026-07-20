@@ -4,8 +4,8 @@ import {
 } from 'lucide-react';
 
 interface GamePrepModeProps {
-  prepMode: 'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza';
-  setPrepMode: React.Dispatch<React.SetStateAction<'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza'>>;
+  prepMode: 'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo';
+  setPrepMode: React.Dispatch<React.SetStateAction<'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo'>>;
   isSidebar?: boolean;
 }
 
@@ -44,10 +44,11 @@ export function GamePrepMode({ prepMode, setPrepMode, isSidebar = false }: GameP
       {/* Mini Mode Selector Pills */}
       <div className="flex flex-wrap gap-2 border-b border-slate-800/40 pb-3">
         {[
-          { id: 'enfrentamiento', label: 'Encuentro', icon: Swords },
+          { id: 'enfrentamiento', label: 'Enfrentamiento', icon: Swords },
+          { id: 'torneo', label: 'Torneo', icon: Trophy },
           { id: 'cooperativo', label: 'Cooperativo', icon: Users },
-          { id: 'campaña', label: 'Campaña solo', icon: Sparkles },
-          { id: 'alianza', label: 'Alianza (2v2)', icon: Layers }
+          { id: 'campaña', label: 'Campaña', icon: Sparkles },
+          { id: 'alianza', label: 'Alianza', icon: Layers }
         ].map(mode => {
           const Icon = mode.icon;
           return (
@@ -73,7 +74,7 @@ export function GamePrepMode({ prepMode, setPrepMode, isSidebar = false }: GameP
             <div className="bg-slate-950/60 p-3 rounded-xl border border-slate-800/80 flex justify-between items-center">
               <div className="flex items-center gap-2">
                 <Swords className="w-4 h-4 text-amber-500" />
-                <span className="font-semibold text-slate-300 text-xs">Modo Encuentro Estándar (2-3 Jugadores)</span>
+                <span className="font-semibold text-slate-300 text-xs">Modo Enfrentamiento Estándar (2-3 Jugadores)</span>
               </div>
               <span className="text-amber-500 font-mono text-[10px] bg-amber-950/40 px-2 py-0.5 rounded border border-amber-900/30 uppercase">Competitivo</span>
             </div>
@@ -94,6 +95,41 @@ export function GamePrepMode({ prepMode, setPrepMode, isSidebar = false }: GameP
               <li className="flex items-start gap-2.5 text-xs">
                 <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
                 <span><strong>Victoria Absoluta:</strong> El primer jugador que derrote con éxito al héroe principal enemigo o capture su ciudad de origen para reclamar Erathia es coronado ganador de inmediato.</span>
+              </li>
+            </ul>
+          </div>
+        )}
+
+        {prepMode === 'torneo' && (
+          <div className="space-y-3 animate-fadeIn">
+            <div className="bg-slate-950/60 p-3 rounded-xl border border-slate-800/80 flex justify-between items-center">
+              <div className="flex items-center gap-2">
+                <Trophy className="w-4 h-4 text-amber-500" />
+                <span className="font-semibold text-slate-300 text-xs">Modo Torneo 1v1 Balanceado</span>
+              </div>
+              <span className="text-amber-500 font-mono text-[10px] bg-amber-950/40 px-2 py-0.5 rounded border border-amber-900/30 uppercase">E-Sports</span>
+            </div>
+            
+            <ul className="text-slate-400 space-y-2 list-none pl-1">
+              <li className="flex items-start gap-2.5 text-xs">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                <span><strong>Fórmula Simétrica:</strong> Diseñado estrictamente para 2 jugadores con un límite de <strong>9 rondas completas</strong> de juego.</span>
+              </li>
+              <li className="flex items-start gap-2.5 text-xs">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                <span><strong>Cronómetro Táctico:</strong> Pool de 3 minutos por turno. El exceso de tiempo consumido penaliza restando de forma inmediata 1 Ficha de Movimiento en la siguiente fase de aventura.</span>
+              </li>
+              <li className="flex items-start gap-2.5 text-xs">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                <span><strong>Draft de Elección y Veto (Pick & Ban):</strong> Los jugadores eligen y prohíben facciones, héroes y cartas antes de preparar el atlas de manera balanceada.</span>
+              </li>
+              <li className="flex items-start gap-2.5 text-xs">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                <span><strong>Mazo de División (Split Decks):</strong> Los artefactos se dividen en 3 mazos físicos (Menores, Mayores y Reliquias), y los Hechizos en 2 mazos (Básicos y Expertos) para escalabilidad justa según la posición en el mapa.</span>
+              </li>
+              <li className="flex items-start gap-2.5 text-xs">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                <span><strong>Condición de Victoria:</strong> Derrotar al héroe principal enemigo, capturar su Metrópolis, o acumular mayor cantidad de puntos de victoria oficiales tras expirar las 9 rondas.</span>
               </li>
             </ul>
           </div>

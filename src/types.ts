@@ -51,10 +51,12 @@ export interface RuleSection {
   category: 'general' | 'setup' | 'combat' | 'faq' | 'components' | 'modes' | 'map' | 'town' | 'magic' | 'heroes' | 'units' | 'skills';
 }
 
-export function getPlayerLimit(mode: 'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza'): number {
+export function getPlayerLimit(mode: 'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo'): number {
   switch (mode) {
     case 'campaña':
       return 1;
+    case 'torneo':
+      return 2;
     case 'enfrentamiento':
       return 3;
     case 'cooperativo':

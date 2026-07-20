@@ -38,8 +38,8 @@ interface GameTimerProps {
   setSelectedFaction: React.Dispatch<React.SetStateAction<string>>;
   FACTIONS: Array<{ id: string; name: string; color: string }>;
   handleSetPlayerCount: (count: number) => void;
-  prepMode: 'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza';
-  setPrepMode: React.Dispatch<React.SetStateAction<'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza'>>;
+  prepMode: 'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo';
+  setPrepMode: React.Dispatch<React.SetStateAction<'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo'>>;
 }
 
 export default function GameTimer({

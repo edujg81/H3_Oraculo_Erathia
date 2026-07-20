@@ -1049,6 +1049,70 @@ En torneos con cronómetro táctico, cada jugador dispone de un pool de 3 minuto
 • Variantes de Sistema: El dado de combate rojo no influye en las heridas (solo activa habilidades); se roba un anuncio astrológico al inicio de las rondas de recursos; eliminación completa de anuncios astrológicos en la partida; los cubos negros de enclaves visitados se remueven en las Rondas 4, 8 y 12.`
   },
   {
+    id: "tournament_game_mode",
+    title: "35b. Reglamento Oficial del Modo Torneo (Reglas de Competición)",
+    category: "modes",
+    content: `Para torneos y competiciones simétricas, se establece el siguiente reglamento unificado para determinar la preparación, el draft y el ganador de una partida de Heroes III: El Juego de Mesa:
+
+## 1. Fase de Selección y Veto (Pick & Ban) de Facciones
+• Cada jugador veta (banea) una de las 10 facciones disponibles de la bolsa común en secreto o por acuerdo.
+• A continuación, los jugadores eligen su facción jugable entre las restantes de manera alternada (según sorteo de prioridad).
+• **Draft de Héroes:** Una vez seleccionada la facción, cada jugador baraja sus cartas de Héroes, roba 3 cartas al azar, elige una como su Héroe Principal, otra como su Héroe Secundario (si está disponible en el escenario) y devuelve la tercera a la caja.
+
+## 2. Fase de Draft de Inicio (Mazos Equilibrados)
+• Para mitigar el azar del inicio, se recomienda usar la variante **Draft Start**:
+  - Se apartan las cartas iniciales de Habilidad y Especialidad de nivel I de los héroes.
+  - Se barajan de manera independiente los mazos comunes de Habilidad, Hechizo y Artefacto.
+  - Cada jugador roba 2 cartas de cada mazo, conserva una en secreto y pasa la otra al oponente. Se repite hasta tener un pool de cartas drafteadas equilibrado que constituirá la mano inicial de la aventura.
+
+## 3. Compensación de Iniciativa en el Mapa de Aventura
+• El jugador que empieza en segundo lugar (Jugador 2) recibe una bonificación inmediata de compensación debido a la ventaja táctica del primer turno del Jugador 1:
+  - Comienza la partida con una ficha de movimiento inactiva adicional de **Establos** de manera gratuita en su metrópolis, o bien recibe **+3 de Oro** iniciales adicionales.
+
+## 4. Estructura de Ronda y Tiempo (Límite de Torneo)
+• Una partida de torneo estándar se disputa bajo un límite riguroso de **9 Rondas completas** de juego.
+• **Cronométrica (Turn Timers):** Cada jugador dispone de exactamente **3 minutos por turno** de aventura. Si excede este tiempo, sufre una penalización inmediata restándole 1 Ficha de Movimiento en su siguiente turno.
+
+## 5. Condiciones de Fin de Partida y Victoria
+• **Victoria Instantánea:** Un jugador gana la partida inmediatamente si logra capturar la Metrópolis natal del rival o elimina de forma definitiva a su Héroe Principal (cuando el rival no tenga más castillos o asentamientos).
+• **Victoria por Puntos (Ronda 9):** Si al concluir la 9ª ronda ningún jugador ha logrado la victoria instantánea, el vencedor de la partida se decide sumando los **Puntos de Victoria (PV)** obtenidos a lo largo del escenario:
+
+### A. Metrópolis y Edificación (Puntos de Ciudad):
+• **Ayuntamiento (Town Hall):** 1 PV
+• **Cabildo (City Hall):** 2 PV
+• **Capitolio (Capitol):** 3 PV
+• **Fuerte (Fort):** 1 PV
+• **Ciudadela (Citadel):** 2 PV
+• **Castillo (Castle):** 3 PV
+• **Cofradía de Magos:** Nivel I = 1 PV | Nivel II = 2 PV | Nivel III = 3 PV
+• **Viviendas de Criaturas (construidas):** Bronce = 1 PV | Plata = 2 PV | Oro = 3 PV
+• **Estructura de Grial (erigida en Metrópolis):** 5 PV
+
+### B. Fuerzas Militares (Tropas vivas en mazo/mano):
+• **Unidades de Bronce:** Rango Básico (Few) = 1 PV | Rango Élite (Pack) = 2 PV
+• **Unidades de Plata:** Rango Básico (Few) = 2 PV | Rango Élite (Pack) = 3 PV
+• **Unidades de Oro:** Rango Básico (Few) = 3 PV | Rango Élite (Pack) = 5 PV
+• **Unidades Azur (Legendarias):** Rango Básico (Few) = 6 PV | Rango Élite (Pack) = 8 PV
+
+### C. Control Territorial y Hazañas (Mapa de Aventura):
+• **Minas de Recursos Señalizadas:** Canteras, Aserraderos y Minas de Oro = 1 PV c/u | Minas de Valiosos (Mercurio, Azufre, Gemas, Cristal) = 2 PV c/u.
+• **Asentamientos o Portales bajo control:** 2 PV c/u.
+• **Héroes rivales derrotados:** 3 PV por cada combate ganado contra héroes del oponente.
+
+### D. Economía y Tesoro:
+• **Artefactos en posesión:** Menor = 1 PV | Mayor = 2 PV | Reliquia = 4 PV
+• **Hechizos en mazo:** Nivel 1 = 1 PV | Nivel 2 = 2 PV | Nivel 3 = 3 PV
+• **Reserva de Oro:** 1 PV por cada 10 monedas de Oro restantes (hasta un máximo de 5 PV).
+• **Objetos de Valor:** 1 PV por cada recurso valioso restante (hasta un máximo de 3 PV).
+
+## 6. Criterios de Desempate (Tiebreakers)
+En caso de empate absoluto en Puntos de Victoria, el orden de criterios de desempate prioritarios es:
+1. El jugador que haya derrotado al Héroe Principal enemigo más veces en batalla.
+2. El jugador que posea el Héroe de mayor Nivel de Experiencia total.
+3. El jugador que conserve la mayor cantidad de Oro neto en su tesorería.
+4. El jugador con más tropas supervivientes de rango Oro o Azur.`
+  },
+  {
     id: "wiki_cards_components",
     title: "36. Compendio de Cartas y Componentes",
     category: "components",
@@ -1901,5 +1965,64 @@ R: El Grial es el elemento místico más poderoso del mapa de aventura. Su excav
 2. Una vez que determines la casilla exacta del entierro, sitúa a tu Héroe Principal sobre ella.
 3. Gasta 1 PM completo del turno y declara formalmente la acción de Excavar.
 4. Si acertaste, añade la carta del Grial directamente a tu mano. Si fallas, pierdes el PM empleado. Llevar el Grial de vuelta a tu ciudad capital te permite erigir la estructura legendaria del Grial, otorgando +20 de Oro en cada Fase de Recursos y un poder mítico único de facción.`
+  },
+  {
+    id: "naval_battles_and_navigation",
+    title: "13. Batallas Navales y Navegación (Sea & Ships)",
+    category: "map",
+    content: `La expansión de Navegación introduce el mar, astilleros de ciudad, boyas, naves y combates anfibios:
+
+I. ASTILLEROS (SHIPYARDS) Y BARCOS:
+• Astilleros: Estructura urbana que permite gastar Madera y Oro para construir una ficha de Barco en una casilla de costa o río adyacente a tu Metrópolis.
+• Embarcar y Desembarcar: Mover el héroe desde una casilla de tierra firme hacia un Barco consume 1 PM (Punto de Movimiento) completo. El héroe adquiere el estado de navegación marina. Desembarcar de vuelta consume igualmente 1 PM completo del turno.
+• Movimiento Marítimo: El héroe navega por casillas de agua. No se beneficia de los bonos de caminos estándar (como Establos o Logística), pero puede utilizar el hechizo "Caminar sobre el Agua" (Water Walk) de la escuela de Agua para cruzar ríos o mares cortos a pie sin poseer naves terrestres.
+
+II. OBSTÁCULOS Y PELIGROS MARINOS:
+• Remolinos de Agua (Whirlpools): Casillas de peligro natural. Entrar en un remolino teletransporta de forma aleatoria al héroe a otro remolino del mapa, pero exige realizar una tirada de dado de combate: un resultado de "-1" destruye permanentemente una unidad de tu ejército debido a las corrientes marinas destructoras.
+• Boyas y Faros: Visitar boyas en el mapa de aventura otorga +1 PM gratis de movimiento marítimo temporal, y los Faros incrementan de forma pasiva la velocidad de navegación del jugador que los controle.`
+  },
+  {
+    id: "battlefield_and_obstacles",
+    title: "14. Expansión de Campo de Batalla y Obstáculos (Battlefield)",
+    category: "combat",
+    content: `La expansión de Campo de Batalla introduce losetas de mapa de mayor tamaño (Campos Dinámicos) y terrenos tácticos con efectos en la reja de batalla de 4x5:
+
+I. OBSTÁCULOS ACTIVOS EN EL TABLERO:
+• Ruinas, lodo y arenas movedizas: Bloquean el avance de tropas cuerpo a cuerpo (melee).
+• Campos de fuerza y minas terrestres: Efectos mágicos en ciertas casillas que infligen daño o detienen el movimiento de la unidad que los pise.
+
+II. EFECTOS DE TERRENO TÁCTICO:
+• Bosques y Coberturas: Los hexágonos de bosque conceden cobertura de +1 Defensa a arqueros o unidades adyacentes contra proyectiles.
+• Terrenos de Lava: Los terrenos de lava aumentan el daño por fuego de magias en +1 herida.
+• Terrenos de Pantano: Reducen el movimiento en el mapa de aventura y aplican penalizaciones de moral en combate a las facciones que no pertenezcan a la Fortaleza.
+
+III. REGLA DE INICIATIVA-MOVIMIENTO (CAMPOS DINÁMICOS):
+• En el modo de Campo de Batalla Grande, las unidades no tienen velocidad fija. Su Iniciativa (⚡) dicta directamente la cantidad de casillas de movimiento táctico de melé. Por tanto, hechizos como "Celeridad" (Haste) o "Ralentizar" (Slow) alteran tanto el orden de activación cronológico como el alcance de avance físico de las tropas en el tablero.`
+  },
+  {
+    id: "underworld_subterraneo",
+    title: "15. Expansión del Subterráneo (Underworld)",
+    category: "map",
+    content: `La expansión del Subterráneo añade una dimensión paralela al mapa de aventura representada por losetas de subterráneo oscuras:
+
+I. ACCESO AL SUBTERRÁNEO:
+• Puertas Subterráneas (Underworld Gateways): Casillas especiales en el mapa de superficie que consumen 1 PM para transportar al héroe a la loseta subterránea interconectada.
+
+II. EXPLORACIÓN BAJO TIERRA:
+• Exploración en la Oscuridad: Las losetas subterráneas no pueden ser reveladas mediante búsquedas de superficie estándar (Scouting); exigen entrar físicamente en el subsuelo para ser desveladas. En estas profundidades abundan los ejércitos de oro de la facción de Mazmorra y los bancos de criaturas como la "Utopía del Dragón".`
+  },
+  {
+    id: "campaign_transition_rules",
+    title: "16. Reglas de Campaña y Transición Solitario",
+    category: "modes",
+    content: `Para las reglas exclusivas del Modo Solitario, ver las reglas con IA y Fin de Escenario. Al finalizar un escenario de Campaña en Solitario y avanzar al siguiente, se aplica la regla de transición de mazo:
+
+I. REGLA DE TRANSICIÓN DE CAMPAÑA:
+• Restablece el Nivel de Experiencia de tu Héroe a 1.
+• Prepara el mazo inicial para la siguiente campaña, el cual consistirá estrictamente en:
+  1. Las cartas de Característica básicas del mazo.
+  2. El nivel 1 de tu Carta Especialidad de héroe.
+  3. 5 cartas no especiales de tu elección de tu mazo anterior.
+• Se omiten por completo los pasos de Configuración del Mazo estándar durante la Preparación para el siguiente escenario de la campaña.`
   }
 ];

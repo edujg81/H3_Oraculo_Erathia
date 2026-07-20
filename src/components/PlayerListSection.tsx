@@ -15,7 +15,7 @@ interface PlayerListSectionProps {
   selectedFaction: string;
   setSelectedFaction: React.Dispatch<React.SetStateAction<string>>;
   FACTIONS: Array<{ id: string; name: string; color: string }>;
-  prepMode: 'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza';
+  prepMode: 'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo';
   hasGameStarted: boolean;
 }
 
@@ -371,7 +371,7 @@ export function PlayerListSection({
             <div className="bg-amber-500/5 border border-amber-500/10 p-2.5 rounded-xl flex items-start gap-2 text-[11px] text-amber-400 animate-fadeIn">
               <AlertCircle className="w-3.5 h-3.5 shrink-0 text-amber-500 mt-0.5" />
               <span>
-                El modo <strong>{prepMode === 'enfrentamiento' ? 'Encuentro' : prepMode === 'campaña' ? 'Campaña' : prepMode === 'cooperativo' ? 'Cooperativo' : 'Alianza'}</strong> permite un máximo de {limit} {limit === 1 ? 'jugador' : 'jugadores'}.
+                El modo <strong>{prepMode === 'enfrentamiento' ? 'Enfrentamiento' : prepMode === 'campaña' ? 'Campaña' : prepMode === 'cooperativo' ? 'Cooperativo' : prepMode === 'alianza' ? 'Alianza' : 'Torneo'}</strong> permite un máximo de {limit} {limit === 1 ? 'jugador' : 'jugadores'}.
               </span>
             </div>
           )}

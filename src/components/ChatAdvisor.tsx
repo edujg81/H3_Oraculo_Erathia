@@ -166,8 +166,8 @@ export default function ChatAdvisor({
 
     const utterance = new SpeechSynthesisUtterance(cleanedText);
     utterance.lang = 'es-ES';
-    utterance.pitch = 0.82; // Un tono de 0.82 da una resonancia masculina, profunda y lúgubre sin distorsión metálica o robótica
-    utterance.rate = 0.82;  // Un ritmo de 0.82 emula la cadencia pausada, deliberada y teatral de un narrador de cine de terror (estilo Vincent Price)
+    utterance.pitch = 0.25; // Un tono de 0.82 da una resonancia masculina, profunda y lúgubre sin distorsión metálica o robótica
+    utterance.rate = 0.88;  // Un ritmo de 0.82 emula la cadencia pausada, deliberada y teatral de un narrador de cine de terror (estilo Vincent Price)
 
     const availableVoices = voices.length > 0 ? voices : window.speechSynthesis.getVoices();
     const spanishVoices = availableVoices.filter(v => {

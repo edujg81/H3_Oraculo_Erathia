@@ -15,7 +15,9 @@ Compilado en **Español de España** utilizando la terminología oficial, este c
 6. [✨ Héroes, Especialidades y Habilidades Secundarias](#6-héroes-especialidades-y-habilidades-secundarias)
 7. [🏘️ Desarrollo Urbano, Edificios y Reclutamiento](#7-desarrollo-urbano-edificios-y-reclutamiento)
 8. [🗺️ Modos de Juego, Alianzas, Cooperativo y Eliminación](#8-modos-de-juego-alianzas-cooperativo-y-eliminación)
-9. [🔮 El Oráculo de Sandro: Funcionamiento Técnico](#9-el-oráculo-de-sandro-funcionamiento-técnico)
+9. [🌊 Expansiones Oficiales: Subterráneo, Campo de Batalla y Navegación](#9-expansiones-oficiales-subterráneo-campo-de-batalla-y-navegación)
+10. [📖 Reglas de Campaña y Transición Solitario](#10-reglas-de-campaña-y-transición-solitario)
+11. [🔮 El Oráculo de Sandro: Funcionamiento Técnico](#11-el-oráculo-de-sandro-funcionamiento-técnico)
 
 ---
 
@@ -179,14 +181,63 @@ Para evitar fallos en las búsquedas del sistema y asegurar el total cumplimient
 
 ### 📊 Comparativa de Reglas según el Modo de Juego
 
-| Detalle de Regla | ⚔️ Encuentro (Clash) | 🤝 Cooperativo | 🗺️ Campaña Solo | 🛡️ Alianza (2v2) |
-| :--- | :--- | :--- | :--- | :--- |
-| **Relación de Jugadores** | Enemigos competitivos | Aliados totales | Un solo jugador contra IA | Parejas unidas fijas |
-| **Paso y Bloqueo** | Permitido bloquear y atacar | Prohibido atacar o bloquear | No aplica | Prohibido atacar o bloquear al aliado |
-| **Comercio de Recursos** | Solo mediante Mercados | En el Mercadillo (Trading Post) libre | No disponible | **Libre y sin costes** en cualquier momento |
-| **Intercambio de Artefactos** | No permitido | Solo en el Mercadillo | No disponible | **Permitido** si héroes finalizan adyacentes |
-| **Señalización (Flaggear)** | Libre sobre cualquier mina | No aplica | Libre | **Prohibido** flaggear minas de tu aliado |
-| **Condiciones de Victoria** | Vencer al rival o capturar base | Objetivos conjuntos del escenario | Superar el mazo táctico de la IA | El equipo comparte victoria/derrota |
+| Detalle de Regla | ⚔️ Encuentro (Clash) | 🤝 Cooperativo | 🗺️ Campaña Solo | 🛡️ Alianza (2v2) | 🏆 Torneo |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Relación de Jugadores** | Enemigos competitivos | Aliados totales | Un solo jugador contra IA | Parejas unidas fijas | Rivales simétricos individuales |
+| **Paso y Bloqueo** | Permitido bloquear y atacar | Prohibido atacar o bloquear | No aplica | Prohibido atacar o bloquear al aliado | Permitido bloquear y atacar |
+| **Comercio de Recursos** | Solo mediante Mercados | En el Mercadillo (Trading Post) libre | No disponible | **Libre y sin costes** en cualquier momento | Solo mediante Mercados construidos |
+| **Intercambio de Artefactos** | No permitido | Solo en el Mercadillo | No disponible | **Permitido** si héroes finalizan adyacentes | No permitido |
+| **Señalización (Flaggear)** | Libre sobre cualquier mina | No aplica | Libre | **Prohibido** flaggear minas de tu aliado | Libre (conquista de enclaves) |
+| **Condiciones de Victoria** | Vencer al rival o capturar base | Objetivos conjuntos del escenario | Superar el mazo táctico de la IA | El equipo comparte victoria/derrota | Victoria inmediata o Puntos de Victoria tras 9 Rondas |
+
+---
+
+### 🏆 Reglamento Oficial y Criterios del Modo Torneo
+
+El Modo Torneo de *Heroes of Might and Magic III: El Juego de Mesa* introduce un formato riguroso para partidas altamente equilibradas e individuales que concluyen exactamente tras **9 rondas de juego** si no ha ocurrido una victoria inmediata.
+
+#### 1. Preparación y Fase de Selección (Draft de Facciones y Héroes)
+* **Veto de Facción (Pick & Ban):** Cada jugador veta en secreto o por acuerdo una facción de la lista de las 10 facciones oficiales. Las facciones vetadas quedan fuera del juego.
+* **Elección de Facción:** Los jugadores eligen su facción de entre las restantes de manera alternada.
+* **Draft de Héroes:** Cada jugador roba 3 héroes al azar de su facción elegida. Elige uno como su Héroe Principal, otro como su Héroe Secundario (si se usa) y devuelve el tercero a la caja.
+* **Draft de Inicio (Draft Start):** Se barajan por separado los mazos de Habilidad, Hechizo y Artefacto. Cada jugador roba 2 cartas de cada mazo, conserva una y pasa la restante al oponente, construyendo una mano inicial asimétrica pero controlada, apartando las cartas iniciales fijas de nivel I.
+
+#### 2. Compensación para el Jugador 2
+* Para paliar la ventaja innata del Jugador 1 en el primer turno de exploración, el **Jugador 2 comienza con una ficha de movimiento inactiva gratuita de Establos** en su Metrópolis o bien recibe **+3 de Oro adicionales** en su reserva inicial.
+
+#### 3. Control de Tiempo de Turno (Turn Timers)
+* Cada jugador dispone de un máximo de **3 minutos por turno de aventura**. Superar este límite se penaliza inmediatamente restando 1 Ficha de Movimiento en su próximo turno de exploración.
+
+#### 4. Condiciones de Victoria e Instantánea
+* **Victoria Instantánea:** Capturar la Metrópolis natal del rival o derrotar definitivamente a su Héroe Principal (si el rival carece de otras ciudades o asentamientos).
+* **Victoria por Puntos (PV):** Si al terminar la 9ª ronda ningún jugador logra la victoria instantánea, el vencedor se decide sumando los **Puntos de Victoria (PV)** conseguidos según la siguiente escala oficial:
+
+| Categoría | Detalle de Elemento | Puntos de Victoria (PV) |
+| :--- | :--- | :--- |
+| 🏰 **Edificación Urbana** | Ayuntamiento (Town Hall) / Cabildo (City Hall) / Capitolio (Capitol) | 1 PV / 2 PV / 3 PV |
+| | Fuerte (Fort) / Ciudadela (Citadel) / Castillo (Castle) | 1 PV / 2 PV / 3 PV |
+| | Cofradía de Magos (Nivel I / Nivel II / Nivel III) | 1 PV / 2 PV / 3 PV |
+| | Viviendas de Criaturas Construidas (Bronce / Plata / Oro) | 1 PV / 2 PV / 3 PV |
+| | Estructura Única de Facción / Estructura del Grial | 1 PV / 5 PV |
+| ⚔️ **Fuerza Militar** | Por cada unidad de Bronce superviviente (Básica / Élite) | 1 PV / 2 PV |
+| | Por cada unidad de Plata superviviente (Básica / Élite) | 2 PV / 3 PV |
+| | Por cada unidad de Oro superviviente (Básica / Élite) | 3 PV / 5 PV |
+| | Por cada unidad Azur / Legendaria superviviente (Básica / Élite) | 6 PV / 8 PV |
+| 🗺️ **Control de Territorios** | Mina de recursos comunes controlada (Oro, Madera, Cantera) | 1 PV c/u |
+| | Mina de recursos valiosos controlada (Gemas, Azufre, Mercurio, Cristal) | 2 PV c/u |
+| | Asentamiento o Portal controlado | 2 PV c/u |
+| | Héroe rival derrotado en batalla | 3 PV c/u |
+| 💼 **Economía y Magia** | Artefacto en posesión (Menor / Mayor / Reliquia) | 1 PV / 2 PV / 4 PV |
+| | Hechizo aprendido en el mazo (Nivel 1 / Nivel 2 / Nivel 3) | 1 PV / 2 PV / 3 PV |
+| | Reserva de Oro (por cada 10 monedas, máx. 5 PV) | 1 PV |
+| | Recursos Valiosos sobrantes (por cada recurso valioso, máx. 3 PV) | 1 PV |
+
+#### 5. Criterios de Desempate (Tiebreakers)
+Si persiste un empate de Puntos de Victoria al concluir la sumatoria, la prioridad de desempate se rige bajo la siguiente jerarquía:
+1. Cantidad de combates ganados contra el Héroe Principal rival.
+2. Mayor Nivel de Experiencia total alcanzado por tu Héroe Principal.
+3. Mayor cantidad de Oro sobrante neto en tu tesorería.
+4. Mayor número de criaturas supervivientes de rango Oro o Azur en tu ejército.
 
 ---
 
@@ -207,7 +258,46 @@ Existen dos vías reglamentarias oficiales para sufrir la **eliminación directa
 
 ---
 
-## 9. El Oráculo de Sandro: Funcionamiento Técnico
+## 9. 🌊 Expansiones Oficiales: Subterráneo, Campo de Batalla y Navegación
+
+Las expansiones añaden nuevas capas de estrategia marina, exploración subterránea y dinámicas tácticas en el tablero:
+
+### 🚢 I. Reglas de Navegación, Astilleros y Mares (Sea & Ships)
+> 📝 **Astilleros (Shipyards):** Estructura urbana que te permite construir naves/barcos en casillas fluviales o costeras adyacentes a tu Metrópolis natal pagando costes específicos en Madera y Oro.
+> * **Embarcar y Desembarcar:** Mover tu miniatura de héroe desde una casilla terrestre hacia el barco flotante consume **1 PM (Punto de Movimiento)** completo, adquiriendo el estado de navegación. El desembarque en tierra firme consume igualmente **1 PM** completo de tu turno.
+> * **Caminar sobre el Agua (Water Walk):** El hechizo místico de la escuela de Agua te permite cruzar ríos o franjas marítimas de corta distancia a pie, ignorando la necesidad de poseer naves construidas terrestres.
+> * **🌪️ Remolinos de Agua (Whirlpools):** Casillas de peligro marítimo. Cruzar un remolino teletransporta aleatoriamente a tu héroe a otro remolino del mapa, pero exige realizar una tirada de dado de combate: si se obtiene un **`-1`**, se destruye permanentemente una unidad de tu ejército por colisión contra las corrientes.
+
+### 🗺️ II. Expansión del Subterráneo (Underworld)
+> 📝 **Acceso y Exploración en la Oscuridad:** El subterráneo representa una dimensión separada del mapa de superficie.
+> * **Puertas Subterráneas (Underworld Gateways):** Hexágonos con portales de acceso que consumen **1 PM** para transportar de forma inmediata a tu héroe de la superficie al subsuelo o viceversa.
+> * **Niebla Profunda:** No puedes revelar ni buscar losetas subterráneas usando la acción de buscar (Scouting) desde la superficie; es obligatorio que tu héroe ingrese físicamente al subsuelo para explorar y desvelar las losetas oscuras. Abundan los ejércitos de oro de la facción de Mazmorra.
+
+### ⚔️ III. Expansión de Campo de Batalla y Obstáculos (Battlefield)
+> 📝 **Campos Dinámicos y Terrenos Tácticos:** Introduce terrenos y obstáculos con efectos activos en la reja de batalla de 4x5:
+> * **Obstáculos Activos:** Ruinas, lodo y arenas movedizas que bloquean el avance de regimientos cuerpo a cuerpo. Las minas terrestres infligen heridas directas y los campos de fuerza detienen el movimiento táctico.
+> * **Cobertura de Bosque:** Los hexágonos con vegetación densa conceden cobertura de **+1 Defensa** pasiva contra proyectiles de arqueros enemigos.
+> * **Terreno de Lava:** Incrementa el daño por fuego de magias destructivas elementales en **+1 herida** directa.
+> * **⚡ Regla de Iniciativa-Movimiento:** En los mapas tácticos de esta expansión, las criaturas no tienen velocidades fijas. Su valor numérico de **Iniciativa (⚡)** dicta de forma exacta la cantidad de hexágonos de movimiento táctico de melé que pueden recorrer en su fase de activación. Por lo tanto, hechizos como *Celeridad* o *Ralentizar* aumentan o reducen directamente el alcance físico de avance de tus tropas.
+
+---
+
+## 10. 📖 Reglas de Campaña y Transición Solitario
+
+Para las partidas en formato Campaña Solitaria contra la Inteligencia Artificial del juego, se introduce una progresión de mazo y una transición de misiones unificada:
+
+### ⚔️ I. Regla de Transición de Misiones de Campaña
+> Tras finalizar con éxito un escenario de Campaña en Solitario y avanzar en el Libro de Misiones al siguiente nivel, tu héroe experimenta una reestructuración mística:
+> 1. **Reinicio de Experiencia:** El Nivel de tu Héroe Principal se restablece obligatoriamente a **Nivel 1**.
+> 2. **Composición del Mazo Inicial de la Siguiente Campaña:** Tu mazo de Poder y Magia consistirá únicamente en:
+>    * Las cartas de Característica básicas del mazo inicial.
+>    * La carta de **Especialidad de nivel I** de tu héroe.
+>    * **5 cartas no especiales de tu elección** que poseyeras en tu mazo al finalizar el escenario anterior.
+> 3. **Preparación Acelerada:** Durante el setup de la siguiente misión de campaña, **omite por completo** los pasos normales de Configuración del Mazo para mantener la continuidad de tus aprendizajes.
+
+---
+
+## 11. 🔮 El Oráculo de Sandro: Funcionamiento Técnico
 
 Para garantizar que **Sandro el Sabio** te ofrezca respuestas de la máxima precisión reglamentaria sin sufrir de alucinaciones ni inventar reglas, la aplicación utiliza un sistema avanzado de **Indexación de Conocimiento**:
 
