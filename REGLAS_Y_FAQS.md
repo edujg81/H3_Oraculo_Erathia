@@ -32,19 +32,19 @@ Para evitar fallos en las búsquedas del sistema y asegurar el total cumplimient
 | **Dungeon** | 👁️ **Mazmorra** | Mazmorra | Nombre oficial de facción. |
 | **Rampart** | 🍃 **Murallas** | Murallas | Nombre oficial de facción. |
 | **Tower** | 🧙‍♂️ **Torre** | Torre | Nombre oficial de facción. |
-| **Inferno** | 🔥 **Infierno** | Infierno | Nombre oficial de facción. |
+| **Inferno** | 🔥 **Inferno** | Inferno | Nombre oficial de facción. |
 | **Stronghold** | 🪵 **Bastión** | Bastión | Nombre oficial de facción. |
 | **Fortress** | 🐊 **Fortaleza** | Fortaleza | Nombre oficial de facción. |
-| **Conflux** | 🌀 **Confluencia** | Confluencia | Nombre oficial de facción. |
+| **Conflux** | 🌀 **Conflujo** | Conflujo | Nombre oficial de facción. |
 | **Cove** | 🏴‍☠️ **Cala** | Cala | Nombre oficial de facción. |
 | **Neutral** | 🌿 **Neutrales** | Neutrales | Nombre oficial de facción. |
 | **Golems** | 🤖 **Gólems** / **Gólem** | Torre / Neutral | **¡Muy Importante!** Siempre lleva tilde (`ó`). |
-| **Imps** / **Familiars** | 👹 **Familiares** | Infierno | Rango Bronce. No usar "Diablillos" o "Duendecillos". |
-| **Gogs** / **Magogs** | ☄️ **Magogs** | Infierno | Rango Bronce. No usar "Gogs". |
-| **Hell Hounds** / **Cerberi** | 🐕 **Cerberos** | Infierno | Rango Bronce. No usar "Sabuesos". |
+| **Imps** / **Familiars** | 👹 **Familiares** | Inferno | Rango Bronce. No usar "Diablillos" o "Duendecillos". |
+| **Gogs** / **Magogs** | ☄️ **Magogs** | Inferno | Rango Bronce. No usar "Gogs". |
+| **Hell Hounds** / **Cerberi** | 🐕 **Cerberos** | Inferno | Rango Bronce. No usar "Sabuesos". |
 | **Pit Fiends** / **Pit Lords** | 😈 **Señores del abismo** | Infierno | Rango Plata. En minúscula la "a" de abismo. |
-| **Efreet** / **Efreet Sultans** | 🧞‍♂️ **Efrits** | Infierno | Rango Oro. No usar "Efreet" ni "Sultanes". |
-| **Devils** / **Arch Devils** | 👿 **Archidiablos** | Infierno | Rango Oro. No usar "Diablos" ni "Archidemonios". |
+| **Efreet** / **Efreet Sultans** | 🧞‍♂️ **Efrits** | Inferno | Rango Oro. No usar "Efreet" ni "Sultanes". |
+| **Devils** / **Arch Devils** | 👿 **Archidiablos** | Inferno | Rango Oro. No usar "Diablos" ni "Archidemonios". |
 | **Centaur** | 🏹 **Centauros** | Murallas | Rango Bronce. |
 | **Dwarves** | 🛡️ **Enanos** | Murallas | Rango Bronce. |
 | **Elves** | 🏹 **Elfos** | Murallas | Rango Plata. |

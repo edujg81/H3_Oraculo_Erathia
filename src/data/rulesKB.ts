@@ -547,8 +547,23 @@ La expansión de Conflujo trae un conjunto de 20 cartas de pergamino de hechizos
 • Límite: Máximo de 2 pergaminos en juego a la vez. Si obtienes un tercero, robas los nuevos hechizos y decides cuál de los tres pergaminos descartar.`
   },
   {
+    id: "elemental_locations_conflux",
+    title: "21. Lugares Elementales y Expansión Conflux",
+    category: "map",
+    content: `La expansión de Conflujo (Conflux) añade lugares de energía elemental pura para el mapa de aventura de Erathia:
+
+1. PORTAL DE LOS ELEMENTOS (Elemental Portal):
+Permite reclutar de forma directa elementales de Aire, Agua, Fuego o Tierra pagando Oro o el recurso elemental homónimo, sin necesidad de regresar a tu capital.
+
+2. RIFTS ELEMENTALES (Rifts / Rifts de Fuego, Tierra, Aire, Agua):
+Santuarios de dimensión paralela. El Héroe puede interactuar gastando 1 Acción para enfrentar una prueba de Hechicería (Poder) de nivel III. El éxito concede inmunidades elementales pasivas para su ejército o un pergamino místico.
+
+3. ALTAR DE LA CONFLUENCIA (Conflux Altar):
+Permite sacrificar cartas de Hechizo o Artefactos menores no deseados de tu mano para obtener Puntos de Experiencia (Exp) directa para tu Héroe u Objetos de Valor.`
+  },
+  {
     id: "cove_maritime_rules",
-    title: "21. Expansión Cala: Losetas de Mapa Marino, Torbellinos, Debilidad, Clonación y Lugares del Mar",
+    title: "22. Expansión Cala: Losetas de Mapa Marino, Torbellinos, Debilidad, Clonación y Lugares del Mar",
     category: "map",
     content: `La expansión Cala (Cove) expande el mapa de Erathia hacia el océano con naves, piratas, remolinos y conjuros marinos avanzados:
 
@@ -593,8 +608,29 @@ El Cañón es una máquina de guerra de asalto de la Cala.
 • Santuario del Encantamiento Mágico (Visitable): Puedes abonar 3 de Oro para buscar (2) en el mazo de hechizos.`
   },
   {
+    id: "cove_maritime_locations",
+    title: "23. Lugares Marítimos y de Expansión Cove (Savage Seas)",
+    category: "map",
+    content: `Las losetas de mar introducidas en la expansión Cove (Savage Seas) incorporan un conjunto propio de lugares visitables y obstáculos interactivos únicos:
+
+1. TEMPLO DEL MAR (Sea Temple):
+Custodiado por regimientos de Elementales de Agua y Serpientes Marinas de oro. Vencer al guardián confiere +1 Hechizo de Agua aleatorio experto de forma gratuita y un Botín del Dado de Tesoro.
+
+2. NÁUFRAGO SUPERVIVIENTE (Shipwreck Survivor):
+Enclave visitable de una sola vez. Al interactuar con él, el Héroe lanza el Dado de Tesoro. Si obtiene un éxito, añade un Artefacto Menor a su mano; si falla, gana +5 de Oro por el agradecimiento del marinero rescatado.
+
+3. BOYA (Buoy):
+Casilla que ayuda en la navegación. Pasar por una Boya restablece instantáneamente +1 Punto de Movimiento (PM) al Héroe de navegación por este turno.
+
+4. REMOLINO (Whirlpool):
+Obstáculo peligroso. Entrar en un Remolino cuesta un fin de movimiento inmediato. Además, debes lanzar un dado de combate: si se obtiene "-1", pierdes tu tropa de nivel más bajo en el naufragio. Conecta con otro Remolino del mapa como portal de teletransporte rápido.
+
+5. RESTOS DE NAUFRAGIO (Shipwreck Lots):
+Se asimilan a las criptas terrestres. Contienen tesoros guardados por fantasmas y piratas no-muertos. Ofrecen abundantes Objetos de Valor y Dados de Tesoro.`
+  },
+  {
     id: "naval_battles_and_creature_banks",
-    title: "22. Expansión Batallas Navales: Tablero Naval, Habilidades Potenciadas y Bancos de Criaturas",
+    title: "24. Expansión Batallas Navales: Tablero Naval, Habilidades Potenciadas y Bancos de Criaturas",
     category: "modes",
     content: `La expansión Batallas Navales (Naval Battles) incorpora combates marítimos asimétricos, mecánicas de habilidades potenciadas y los peligrosos Bancos de Criaturas custodiados:
 
@@ -641,7 +677,7 @@ Permiten convertir zonas bloqueadas del mapa de aventura en zonas visitables de 
   },
   {
     id: "underground_additional_content",
-    title: "23. Expansión Contenido Adicional: Losetas Subterráneas, Puertas, Barcos, Ciudad Aleatoria y Campo de Fuerza",
+    title: "25. Expansión Contenido Adicional: Losetas Subterráneas, Puertas, Barcos, Ciudad Aleatoria y Campo de Fuerza",
     category: "map",
     content: `La expansión Contenido Adicional (Additional Content) introduce el plano subterráneo de Erathia, asedios aleatorios, naves físicas y defensas de campo de fuerza:
 
@@ -681,7 +717,7 @@ Conjuro de fuego que siembra el campo de batalla de trampas ocultas:
   },
   {
     id: "stronghold_expansion_additions",
-    title: "24. Expansión Bastión: Arenas Movedizas y Fichas de Corrosión",
+    title: "26. Expansión Bastión: Arenas Movedizas y Fichas de Corrosión",
     category: "magic",
     content: `La expansión Bastión (Stronghold) introduce el terreno desértico de Krewlod, furia de combate y tácticas de desgaste físico:
 
@@ -696,8 +732,91 @@ Las fichas de corrosión representan el óxido ácido y el desgaste de armaduras
 • Duración: A menos que sea purgada mediante un hechizo beneficioso o habilidad especial de curación/limpieza, la ficha de corrosión permanece sobre la unidad de forma continua hasta la finalización absoluta del combate táctico.`
   },
   {
+    id: "battlefield_expansion",
+    title: "27. Expansión de Campo de Batalla (Battlefield Expansion)",
+    category: "modes",
+    content: `La Expansión de Campo de Batalla introduce un tablero gigante (Battlefield Board) y dos modos de juego enfocados puramente en combate táctico prescindiendo del mapa de exploración habitual, además de cambios en las reglas para partidas estándar:
+
+1. MODOS DE JUEGO EXCLUSIVOS (1 vs. 1):
+• Modo Aventura (Adventure Mode): Los jugadores experimentan una fase previa de aventura guiada por cartas de Aventura antes de un combate final decisivo. Se elige una duración de ronda fija:
+  - Juego Corto: 9 Rondas.
+  - Juego Medio: 13 Rondas.
+  - Juego Largo: 16 Rondas.
+  Durante las Rondas de Recursos se cobran ingresos de Ciudad, y en las Rondas Astrológicas se aumentan los tracks de ingresos de recursos a preferencia de los jugadores. Se roban cartas de Aventura tipo Evento o Combate. Para resolver cartas de Combate, los jugadores declaran un nivel de poder y calculan su Fuerza de Combate sumando valores de unidades más tiradas de dados rojos de ataque para ganar recompensas. Las cartas útiles solo para combate van directo al mazo de combate final; las de recursos/descuentos se apartan para un solo uso.
+• Modo Escaramuza (Skirmish Mode): Se omite la fase de aventura. Los jugadores preparan directamente sus mazos y ejércitos de forma preconstruida según la duración acordada (Corto: Nivel III, Medio: Nivel V, Largo: Nivel VII, recibiendo unidades, habilidades, artefactos y hechizos preestablecidos por tabla) y entablan el Combate final.
+
+2. REGLAS DE COMBATE DE CAMPO DE BATALLA (BATTLEFIELD COMBAT):
+• Movimiento basado en Iniciativa: El rango de movimiento de cada miniatura sobre los hexágonos del tablero gigante es igual a su valor de Iniciativa (ej. Iniciativa 8 permite moverse hasta 8 hexágonos).
+• Movimiento a Distancia (Ranged): Las unidades de ataque a distancia (Ranged) pueden moverse o disparar, pero nunca realizar ambas acciones en el mismo turno de activación.
+• Penalización de Combate (Combat Penalty) para Arqueros: Los arqueros sufren penalización en sus dados de ataque si el objetivo está directamente adyacente O si se encuentra a una distancia de 8 o más hexágonos en el tablero gigante.
+• Desempates de Iniciativa (Initiative Tie): En caso de empate de iniciativa entre unidades aliadas y hostiles, el jugador que posea la "Ficha de Iniciativa" activa una de sus unidades primero. Luego se alternan una a una. Al finalizar, la ficha pasa al oponente.
+• Regresión de Turno: Al final de cada ronda completa de combate en estos modos, los jugadores recuperan un efecto Experto usado y roban 2 cartas de su mazo de combate.
+
+3. INTEGRACIÓN EN EL JUEGO REGULAR:
+• El tablero de Campo de Batalla puede usarse en partidas normales en sustitución del tablero táctico de 4x5.
+• En duelos jugador contra jugador se permite desplegar hasta un máximo de 7 unidades (en lugar de 5). El atacante recibe la Ficha de Iniciativa al inicio del despliegue.
+• Asedios con Murallas y Puertas: Se colocan los obstáculos en posiciones fijas como indica el reglamento. Las tropas defensoras solo pueden cruzar la puerta a través de los dos hexágonos centrales impresos en la ficha, mientras que el atacante puede golpear la puerta desde cualquiera de los cuatro hexágonos adyacentes.`
+  },
+  {
+    id: "creature_banks",
+    title: "28. Bancos de Criaturas (Creature Banks) y Fichas de Apilamiento (Stack Tokens)",
+    category: "combat",
+    content: `Los Bancos de Criaturas son lugares de batalla místicos añadidos por las expansiones que se sitúan sobre las losetas lejanas (II-III) o cercanas (IV-V) en sus casillas de obstáculo bloqueadas.
+
+1. REGLAMENTO DE ASALTO Y DESPLIEGUE:
+• Combate Estricto: Al entrar a un Banco de Criaturas, se debe derrotar a la guarnición fija del enclave. Estas zonas carecen de nivel de dificultad estándar, por lo que nunca admiten el "Combate Rápido" (Quick Combat). No existe límite de rondas para pelear y extender el combate no cuesta puntos de movimiento (PM). Tampoco se obtiene experiencia al ganar.
+• Despliegue de Tropas: Se sitúan las tropas en una cuadrícula fija donde el bando jugador ocupa las líneas centrales de despliegue (P) y las criaturas guardianas del banco se despliegan rodeando los extremos de la reja táctica en las zonas defensivas marcadas (N).
+
+2. FICHAS DE APILAMIENTO (STACK TOKENS) Y MECÁNICA DE PILAS:
+• Durante la preparación, según la dificultad elegida para el escenario, se roban de 1 a 4 "Fichas de Apilamiento" (Stack Tokens) de forma aleatoria y se colocan boca abajo sobre las cartas de los defensores del Banco (Fácil: 1 ficha, Normal: 2 fichas, Difícil: 3 fichas, Imposible: 4 fichas).
+• Modificadores de Estadística: Cada ficha de apilamiento volteada sobre un defensor altera sus capacidades:
+  - Ficha de Espadas: +1 al Ataque.
+  - Ficha de Escudo: +1 a la Defensa.
+  - Ficha de Corazón: +1 a los Puntos de Salud (HP).
+  - Ficha de Botas: +2 a la Iniciativa de combate.
+• Regla de Unidad Apilada (Stacked Unit): Una criatura dotada con un Stack Token emula a un regimiento Élite. Al recibir un volumen de daño acumulado igual o superior a su vitalidad máxima, en lugar de ser eliminada de la reja, se descarta una ficha de apilamiento asignada y se absorbe el daño restante, deduciéndolo de su nueva vida. Las criaturas sin fichas de apilamiento mueren normalmente.
+
+3. LISTADO DE ENCLAVES DE BANCOS DE CRIATURAS Y RECOMPENSAS:
+• Far Map Tiles (Losetas II-III):
+  - Reserva de Diablillos (Imp Cache): Custodiada por 4 Familiars. Recompensa: 3 de Oro. Extra: +1 de Oro por cada unidad apilada vencida.
+  - Cripta (Crypt): Custodiada por 1 Skeletons, 1 Zombies, 1 Wraiths y 1 Vampires. Recompensa: 6 de Oro. Extra: +2 de Oro por unidad apilada vencida.
+  - Tesorería Enana (Dwarven Treasury): Custodiada por 4 Dwarves. Recompensa: 7 de Oro. Extra: +3 de Oro por unidad apilada.
+  - Almacén de Medusas (Medusa Stores): Custodiada por 4 Medusas. Recompensa: 6 de Oro, 1 Objeto de valor. Extra: +3 de Oro y +1 de Objeto de valor por unidad apilada.
+  - Colmena de Moscas de Dragón (Dragon Fly Hive): Custodiada por 4 Dragon Flies. Recompensa: 1 carta de Dragon Flies. Extra: Las Dragon Flies obtenidas se reciben en rango Élite (Stacked) si se derrotaron al menos 2 unidades apiladas en el asalto.
+  - Naufragio (Shipwreck): Custodiada por 4 Wraiths. Recompensa: Ficha de moral negativa y 5 de Oro. Extra: +2 de Oro y realizar una búsqueda (X) en el mazo de Artefactos.
+• Near Map Tiles (Losetas IV-V):
+  - Barco Derrelicto (Derelict Ship): Custodiada por 4 Wraiths. Recompensa: Ficha de moral negativa y 5 de Oro. Extra: +2 de Oro y búsqueda (X) de Artefactos.
+  - Pirámide (Pyramid): Custodiada por 1 Gólem de oro, 1 Gólem de diamante y momias. Recompensa: Búsqueda (5) de Hechizos. Extra: Permite remover hasta X cartas redundantes de tu descarte para buscar (5) en los mazos correspondientes.
+  - Conservatorio de Grifos (Griffin Conservatory): Custodiada por 4 Griffins. Recompensa: 1 unidad de Griffins. Extra: Se reciben en rango Stacked si se derrotaron al menos 2 unidades apiladas en el combate.
+  - Banco de Nagas (Naga Bank): Custodiada por 4 Nagas. Recompensa: 6 de Oro, 2 Objetos de valor. Extra: +6 de Oro y +1 de Objeto de valor por unidad apilada.
+  - Almacén de Cíclopes (Cyclops Stockpile): Custodiada por 4 Cyclopes. Recompensa: 8 de Oro, 2 Objetos de valor. Extra: +2 de Oro y +1 de Objeto de valor por unidad apilada.
+  - Utopía de Dragones (Dragon Utopia): Custodiada por 1 Black Dragons, 1 Gold Dragons, 1 Faerie Dragons, 1 Crystal Dragons. Recompensa: 40 de Oro y búsqueda (3) en el mazo de Artefactos. Extra: X búsquedas (5) en los mazos de Artefactos o Hechizos.`
+  },
+  {
+    id: "card_keywords_tokens",
+    title: "29. Palabras Clave de Efectos de Cartas y Fichas en Unidades",
+    category: "combat",
+    content: `Las expansiones agregan palabras clave operativas y fichas de estado temporales o permanentes que alteran la física de las tropas en el tablero táctico:
+
+1. PALABRAS CLAVE DE CONJUROS Y HECHIZOS:
+• Clonar (Clone Token): Al conjurar el hechizo Clone en un regimiento aliado, se sitúa una ficha pequeña de clon en el regimiento y un token grande del mismo color en una casilla libre contigua. El clon hereda de forma idéntica todas las estadísticas pasivas básicas de la carta original, pero excluye cualquier bufo activo aplicado sobre ella. Si el clon recibe al menos 1 de daño de cualquier fuente O es el objetivo de un ataque directo (aunque inflija 0 heridas), sufre muerte automática y se remueve de la mesa. Desaparece si la tropa original es eliminada.
+• Arenas Movedizas (Quicksand Token): Tras conjurar el hechizo de tierra, se sitúan de 2 a 6 fichas de arena movediza boca abajo en el tablero (la mitad vacías, la mitad con el icono de fango). Al entrar un regimiento en la casilla se voltea la ficha: si contiene el icono de fango, el movimiento y activación de la unidad cesan de forma fulminante en esa casilla en esta ronda. Dos arenas de distintos colores de jugador pueden ocupar la misma casilla.
+• Mina Terrestre (Land Mine Token): Se sitúan de 2 a 6 fichas boca abajo en el tablero (la mitad vacías, la mitad con icono de explosión de 2 de daño). Al pisarse, detiene el movimiento de la unidad. Si muestra el icono de explosión, inflige 2 de daño directo por fuego a la unidad. Si esta sobrevive, continúa su activación.
+• Campo de Fuerza (Force Field Token): Crea un obstáculo rectangular indestructible que cubre 1 espacio en tableros normales o 2 espacios en Campo de Batalla. Solo las unidades aéreas (Flying) pueden cruzar o volar sobre él; las unidades terrestres sufren bloqueo físico completo.
+• Muro de Fuego (Fire Wall Token): Creado por el hechizo homónimo de fuego o por las cartas de Especialidad I y VI del héroe Luna (Conflujo). Inflige daño de fuego puro de área al inicio de la activación de cualquier regimiento enemigo que comience o transite por las casillas de fuego rúnico.
+
+2. MECÁNICAS DE INVOCACIÓN (SUMMONING):
+• Invocación Elemental (Summon Elementals): Los conjuros elementales añaden elementales de aire, tierra, agua o fuego en casillas libres del combate. Estas unidades aliadas operan de forma temporal bajo tu control. Si su iniciativa es inferior o igual a la de la unidad activa del turno actual, se activan en esta misma ronda; en caso contrario, se consideran ya activadas. Nunca se añaden de forma permanente a tu mazo de unidades al concluir la contienda; se disipan por completo.
+• Invocación de Demonios (Summon Demons): Las unidades de Señores del Abismo (Pit Lords) de Inferno pueden usar su habilidad activa especial (icono de espiral) para resucitar o invocar unidades de "Demons" de forma gratuita a partir de bajas sufridas por otras unidades aliadas en combate. Si las tropas resucitadas sobreviven al concluir el combate, estas cartas de Demons SÍ se agregan de forma permanente al mazo de unidades del jugador como nuevas reclutas.
+
+3. FICHAS DE ESTADO EN UNIDADES (TOKENS ON UNITS):
+• Ficha de Debilidad (Weakness Token - Cove/SG2): Aplica un penalizador de -1 o -2 a la estadística de Ataque físico del regimiento afectado según la cara de la ficha mostrada. Colocada por habilidades de unidades de apoyo como las Hechiceras (Sorceresses). Límite de una ficha por regimiento.
+• Ficha de Ataque (Attack Token - Stronghold/SG2): Incrementa la fuerza de ataque en +1 o +2 según la cara mostrada. Es otorgada por unidades de primera línea como los Ogros mediante su grito de batalla rúnico.
+• Ficha de Corrosión (Corrosion Token - Stronghold): Reduce de forma permanente la estadística de defensa del regimiento objetivo en -1 punto (hasta un mínimo absoluto de 0 defensa). Una unidad solo puede albergar una ficha de corrosión activa. No se elimina al concluir los turnos individuales de combate; dura hasta el fin de la contienda táctica en curso. Colocada por bestias feroces como los Behemoths.`
+  },
+  {
     id: "scenario_modes_and_end_conditions",
-    title: "Tipos de Escenarios (Enfrentamiento, Campaña, Alianza, Cooperativo) y Fin de Escenario",
+    title: "30. Tipos de Escenarios (Enfrentamiento, Campaña, Alianza, Cooperativo) y Fin de Escenario",
     category: "modes",
     content: `Cada partida de Heroes III se juega utilizando un Escenario de Los Libros de Misiones. Hay cuatro tipos de Escenarios oficiales:
 
@@ -746,7 +865,7 @@ Victoria por Eliminación:
   },
   {
     id: "ai_rules_compendium",
-    title: "21. Reglamento Detallado de la Inteligencia Artificial (IA)",
+    title: "31. Reglamento Detallado de la Inteligencia Artificial (IA)",
     category: "modes",
     content: `En campañas cooperativas y solitarios, la IA enemiga sigue algoritmos fijos, simplificados y sin azar para sus turnos de exploración y combate:
 
@@ -782,7 +901,7 @@ Los Héroes de la IA disponen de un mazo simplificado sin recursos ni tablero de
   },
   {
     id: "campaign_chronological",
-    title: "22. Modo Campaña Oficial y su Cronología de Misiones",
+    title: "32. Modo Campaña Oficial y su Cronología de Misiones",
     category: "modes",
     content: `El Modo Campaña (diseñado de forma cooperativa o solitaria) sigue una estructura narrativa estricta e histórica representando la Restoration of Erathia y sus campañas accesorias:
 
@@ -812,7 +931,7 @@ Los Héroes de la IA disponen de un mazo simplificado sin recursos ni tablero de
   },
   {
     id: "faction_mission_books_compendium",
-    title: "23. Compendio de Libros de Misiones de Facciones (Faction Mission Books)",
+    title: "33. Compendio de Libros de Misiones de Facciones (Faction Mission Books)",
     category: "modes",
     content: `Cada una de las 10 facciones cuenta con su libro de misiones oficial (Mission Book) que describe sus escenarios únicos (Clash / Cooperativo / Alianza) y su campaña histórica asimétrica:
 
@@ -882,7 +1001,7 @@ Los Héroes de la IA disponen de un mazo simplificado sin recursos ni tablero de
   },
   {
     id: "tournament_rules_and_draft",
-    title: "24. Opciones Avanzadas, Modo Torneo y Ajustes de Competición",
+    title: "34. Opciones Avanzadas, Modo Torneo y Ajustes de Competición",
     category: "modes",
     content: `Para potenciar la simetría y profundidad competitiva del juego de mesa, se pueden activar las siguientes reglas reglamentarias avanzadas opcionales acordadas en la preparación:
 
@@ -902,7 +1021,7 @@ En torneos con cronómetro táctico, cada jugador dispone de un pool de 3 minuto
   },
   {
     id: "rule_variants",
-    title: "25. Variantes de Reglas Oficiales (Chaos, Draft, Split Decks y Gold Pool)",
+    title: "35. Variantes de Reglas Oficiales (Chaos, Draft, Split Decks y Gold Pool)",
     category: "modes",
     content: `Los creadores del juego de mesa sugieren variantes oficiales para ajustar la dificultad, reducir el azar o enriquecer la profundidad estratégica de las partidas de Heroes III:
 
@@ -930,127 +1049,8 @@ En torneos con cronómetro táctico, cada jugador dispone de un pool de 3 minuto
 • Variantes de Sistema: El dado de combate rojo no influye en las heridas (solo activa habilidades); se roba un anuncio astrológico al inicio de las rondas de recursos; eliminación completa de anuncios astrológicos en la partida; los cubos negros de enclaves visitados se remueven en las Rondas 4, 8 y 12.`
   },
   {
-    id: "cove_maritime_locations",
-    title: "26. Lugares Marítimos y de Expansión Cove (Savage Seas)",
-    category: "map",
-    content: `Las losetas de mar introducidas en la expansión Cove (Savage Seas) incorporan un conjunto propio de lugares visitables y obstáculos interactivos únicos:
-
-1. TEMPLO DEL MAR (Sea Temple):
-Custodiado por regimientos de Elementales de Agua y Serpientes Marinas de oro. Vencer al guardián confiere +1 Hechizo de Agua aleatorio experto de forma gratuita y un Botín del Dado de Tesoro.
-
-2. NÁUFRAGO SUPERVIVIENTE (Shipwreck Survivor):
-Enclave visitable de una sola vez. Al interactuar con él, el Héroe lanza el Dado de Tesoro. Si obtiene un éxito, añade un Artefacto Menor a su mano; si falla, gana +5 de Oro por el agradecimiento del marinero rescatado.
-
-3. BOYA (Buoy):
-Casilla que ayuda en la navegación. Pasar por una Boya restablece instantáneamente +1 Punto de Movimiento (PM) al Héroe de navegación por este turno.
-
-4. REMOLINO (Whirlpool):
-Obstáculo peligroso. Entrar en un Remolino cuesta un fin de movimiento inmediato. Además, debes lanzar un dado de combate: si se obtiene "-1", pierdes tu tropa de nivel más bajo en el naufragio. Conecta con otro Remolino del mapa como portal de teletransporte rápido.
-
-5. RESTOS DE NAUFRAGIO (Shipwreck Lots):
-Se asimilan a las criptas terrestres. Contienen tesoros guardados por fantasmas y piratas no-muertos. Ofrecen abundantes Objetos de Valor y Dados de Tesoro.`
-  },
-  {
-    id: "elemental_locations_conflux",
-    title: "27. Lugares Elementales y Expansión Conflux",
-    category: "map",
-    content: `La expansión de Conflujo (Conflux) añade lugares de energía elemental pura para el mapa de aventura de Erathia:
-
-1. PORTAL DE LOS ELEMENTOS (Elemental Portal):
-Permite reclutar de forma directa elementales de Aire, Agua, Fuego o Tierra pagando Oro o el recurso elemental homónimo, sin necesidad de regresar a tu capital.
-
-2. RIFTS ELEMENTALES (Rifts / Rifts de Fuego, Tierra, Aire, Agua):
-Santuarios de dimensión paralela. El Héroe puede interactuar gastando 1 Acción para enfrentar una prueba de Hechicería (Poder) de nivel III. El éxito concede inmunidades elementales pasivas para su ejército o un pergamino místico.
-
-3. ALTAR DE LA CONFLUENCIA (Conflux Altar):
-Permite sacrificar cartas de Hechizo o Artefactos menores no deseados de tu mano para obtener Puntos de Experiencia (Exp) directa para tu Héroe u Objetos de Valor.`
-  },
-  {
-    id: "battlefield_expansion",
-    title: "28. Expansión de Campo de Batalla (Battlefield Expansion)",
-    category: "modes",
-    content: `La Expansión de Campo de Batalla introduce un tablero gigante (Battlefield Board) y dos modos de juego enfocados puramente en combate táctico prescindiendo del mapa de exploración habitual, además de cambios en las reglas para partidas estándar:
-
-1. MODOS DE JUEGO EXCLUSIVOS (1 vs. 1):
-• Modo Aventura (Adventure Mode): Los jugadores experimentan una fase previa de aventura guiada por cartas de Aventura antes de un combate final decisivo. Se elige una duración de ronda fija:
-  - Juego Corto: 9 Rondas.
-  - Juego Medio: 13 Rondas.
-  - Juego Largo: 16 Rondas.
-  Durante las Rondas de Recursos se cobran ingresos de Ciudad, y en las Rondas Astrológicas se aumentan los tracks de ingresos de recursos a preferencia de los jugadores. Se roban cartas de Aventura tipo Evento o Combate. Para resolver cartas de Combate, los jugadores declaran un nivel de poder y calculan su Fuerza de Combate sumando valores de unidades más tiradas de dados rojos de ataque para ganar recompensas. Las cartas útiles solo para combate van directo al mazo de combate final; las de recursos/descuentos se apartan para un solo uso.
-• Modo Escaramuza (Skirmish Mode): Se omite la fase de aventura. Los jugadores preparan directamente sus mazos y ejércitos de forma preconstruida según la duración acordada (Corto: Nivel III, Medio: Nivel V, Largo: Nivel VII, recibiendo unidades, habilidades, artefactos y hechizos preestablecidos por tabla) y entablan el Combate final.
-
-2. REGLAS DE COMBATE DE CAMPO DE BATALLA (BATTLEFIELD COMBAT):
-• Movimiento basado en Iniciativa: El rango de movimiento de cada miniatura sobre los hexágonos del tablero gigante es igual a su valor de Iniciativa (ej. Iniciativa 8 permite moverse hasta 8 hexágonos).
-• Movimiento a Distancia (Ranged): Las unidades de ataque a distancia (Ranged) pueden moverse o disparar, pero nunca realizar ambas acciones en el mismo turno de activación.
-• Penalización de Combate (Combat Penalty) para Arqueros: Los arqueros sufren penalización en sus dados de ataque si el objetivo está directamente adyacente O si se encuentra a una distancia de 8 o más hexágonos en el tablero gigante.
-• Desempates de Iniciativa (Initiative Tie): En caso de empate de iniciativa entre unidades aliadas y hostiles, el jugador que posea la "Ficha de Iniciativa" activa una de sus unidades primero. Luego se alternan una a una. Al finalizar, la ficha pasa al oponente.
-• Regresión de Turno: Al final de cada ronda completa de combate en estos modos, los jugadores recuperan un efecto Experto usado y roban 2 cartas de su mazo de combate.
-
-3. INTEGRACIÓN EN EL JUEGO REGULAR:
-• El tablero de Campo de Batalla puede usarse en partidas normales en sustitución del tablero táctico de 4x5.
-• En duelos jugador contra jugador se permite desplegar hasta un máximo de 7 unidades (en lugar de 5). El atacante recibe la Ficha de Iniciativa al inicio del despliegue.
-• Asedios con Murallas y Puertas: Se colocan los obstáculos en posiciones fijas como indica el reglamento. Las tropas defensoras solo pueden cruzar la puerta a través de los dos hexágonos centrales impresos en la ficha, mientras que el atacante puede golpear la puerta desde cualquiera de los cuatro hexágonos adyacentes.`
-  },
-  {
-    id: "creature_banks",
-    title: "29. Bancos de Criaturas (Creature Banks) y Fichas de Apilamiento (Stack Tokens)",
-    category: "combat",
-    content: `Los Bancos de Criaturas son lugares de batalla místicos añadidos por las expansiones que se sitúan sobre las losetas lejanas (II-III) o cercanas (IV-V) en sus casillas de obstáculo bloqueadas.
-
-1. REGLAMENTO DE ASALTO Y DESPLIEGUE:
-• Combate Estricto: Al entrar a un Banco de Criaturas, se debe derrotar a la guarnición fija del enclave. Estas zonas carecen de nivel de dificultad estándar, por lo que nunca admiten el "Combate Rápido" (Quick Combat). No existe límite de rondas para pelear y extender el combate no cuesta puntos de movimiento (PM). Tampoco se obtiene experiencia al ganar.
-• Despliegue de Tropas: Se sitúan las tropas en una cuadrícula fija donde el bando jugador ocupa las líneas centrales de despliegue (P) y las criaturas guardianas del banco se despliegan rodeando los extremos de la reja táctica en las zonas defensivas marcadas (N).
-
-2. FICHAS DE APILAMIENTO (STACK TOKENS) Y MECÁNICA DE PILAS:
-• Durante la preparación, según la dificultad elegida para el escenario, se roban de 1 a 4 "Fichas de Apilamiento" (Stack Tokens) de forma aleatoria y se colocan boca abajo sobre las cartas de los defensores del Banco (Fácil: 1 ficha, Normal: 2 fichas, Difícil: 3 fichas, Imposible: 4 fichas).
-• Modificadores de Estadística: Cada ficha de apilamiento volteada sobre un defensor altera sus capacidades:
-  - Ficha de Espadas: +1 al Ataque.
-  - Ficha de Escudo: +1 a la Defensa.
-  - Ficha de Corazón: +1 a los Puntos de Salud (HP).
-  - Ficha de Botas: +2 a la Iniciativa de combate.
-• Regla de Unidad Apilada (Stacked Unit): Una criatura dotada con un Stack Token emula a un regimiento Élite. Al recibir un volumen de daño acumulado igual o superior a su vitalidad máxima, en lugar de ser eliminada de la reja, se descarta una ficha de apilamiento asignada y se absorbe el daño restante, deduciéndolo de su nueva vida. Las criaturas sin fichas de apilamiento mueren normalmente.
-
-3. LISTADO DE ENCLAVES DE BANCOS DE CRIATURAS Y RECOMPENSAS:
-• Far Map Tiles (Losetas II-III):
-  - Reserva de Diablillos (Imp Cache): Custodiada por 4 Familiars. Recompensa: 3 de Oro. Extra: +1 de Oro por cada unidad apilada vencida.
-  - Cripta (Crypt): Custodiada por 1 Skeletons, 1 Zombies, 1 Wraiths y 1 Vampires. Recompensa: 6 de Oro. Extra: +2 de Oro por unidad apilada vencida.
-  - Tesorería Enana (Dwarven Treasury): Custodiada por 4 Dwarves. Recompensa: 7 de Oro. Extra: +3 de Oro por unidad apilada.
-  - Almacén de Medusas (Medusa Stores): Custodiada por 4 Medusas. Recompensa: 6 de Oro, 1 Objeto de valor. Extra: +3 de Oro y +1 de Objeto de valor por unidad apilada.
-  - Colmena de Moscas de Dragón (Dragon Fly Hive): Custodiada por 4 Dragon Flies. Recompensa: 1 carta de Dragon Flies. Extra: Las Dragon Flies obtenidas se reciben en rango Élite (Stacked) si se derrotaron al menos 2 unidades apiladas en el asalto.
-  - Naufragio (Shipwreck): Custodiada por 4 Wraiths. Recompensa: Ficha de moral negativa y 5 de Oro. Extra: +2 de Oro y realizar una búsqueda (X) en el mazo de Artefactos.
-• Near Map Tiles (Losetas IV-V):
-  - Barco Derrelicto (Derelict Ship): Custodiada por 4 Wraiths. Recompensa: Ficha de moral negativa y 5 de Oro. Extra: +2 de Oro y búsqueda (X) de Artefactos.
-  - Pirámide (Pyramid): Custodiada por 1 Gólem de oro, 1 Gólem de diamante y momias. Recompensa: Búsqueda (5) de Hechizos. Extra: Permite remover hasta X cartas redundantes de tu descarte para buscar (5) en los mazos correspondientes.
-  - Conservatorio de Grifos (Griffin Conservatory): Custodiada por 4 Griffins. Recompensa: 1 unidad de Griffins. Extra: Se reciben en rango Stacked si se derrotaron al menos 2 unidades apiladas en el combate.
-  - Banco de Nagas (Naga Bank): Custodiada por 4 Nagas. Recompensa: 6 de Oro, 2 Objetos de valor. Extra: +6 de Oro y +1 de Objeto de valor por unidad apilada.
-  - Almacén de Cíclopes (Cyclops Stockpile): Custodiada por 4 Cyclopes. Recompensa: 8 de Oro, 2 Objetos de valor. Extra: +2 de Oro y +1 de Objeto de valor por unidad apilada.
-  - Utopía de Dragones (Dragon Utopia): Custodiada por 1 Black Dragons, 1 Gold Dragons, 1 Faerie Dragons, 1 Crystal Dragons. Recompensa: 40 de Oro y búsqueda (3) en el mazo de Artefactos. Extra: X búsquedas (5) en los mazos de Artefactos o Hechizos.`
-  },
-  {
-    id: "card_keywords_tokens",
-    title: "30. Palabras Clave de Efectos de Cartas y Fichas en Unidades",
-    category: "combat",
-    content: `Las expansiones agregan palabras clave operativas y fichas de estado temporales o permanentes que alteran la física de las tropas en el tablero táctico:
-
-1. PALABRAS CLAVE DE CONJUROS Y HECHIZOS:
-• Clonar (Clone Token): Al conjurar el hechizo Clone en un regimiento aliado, se sitúa una ficha pequeña de clon en el regimiento y un token grande del mismo color en una casilla libre contigua. El clon hereda de forma idéntica todas las estadísticas pasivas básicas de la carta original, pero excluye cualquier bufo activo aplicado sobre ella. Si el clon recibe al menos 1 de daño de cualquier fuente O es el objetivo de un ataque directo (aunque inflija 0 heridas), sufre muerte automática y se remueve de la mesa. Desaparece si la tropa original es eliminada.
-• Arenas Movedizas (Quicksand Token): Tras conjurar el hechizo de tierra, se sitúan de 2 a 6 fichas de arena movediza boca abajo en el tablero (la mitad vacías, la mitad con el icono de fango). Al entrar un regimiento en la casilla se voltea la ficha: si contiene el icono de fango, el movimiento y activación de la unidad cesan de forma fulminante en esa casilla en esta ronda. Dos arenas de distintos colores de jugador pueden ocupar la misma casilla.
-• Mina Terrestre (Land Mine Token): Se sitúan de 2 a 6 fichas boca abajo en el tablero (la mitad vacías, la mitad con icono de explosión de 2 de daño). Al pisarse, detiene el movimiento de la unidad. Si muestra el icono de explosión, inflige 2 de daño directo por fuego a la unidad. Si esta sobrevive, continúa su activación.
-• Campo de Fuerza (Force Field Token): Crea un obstáculo rectangular indestructible que cubre 1 espacio en tableros normales o 2 espacios en Campo de Batalla. Solo las unidades aéreas (Flying) pueden cruzar o volar sobre él; las unidades terrestres sufren bloqueo físico completo.
-• Muro de Fuego (Fire Wall Token): Creado por el hechizo homónimo de fuego o por las cartas de Especialidad I y VI del héroe Luna (Conflujo). Inflige daño de fuego puro de área al inicio de la activación de cualquier regimiento enemigo que comience o transite por las casillas de fuego rúnico.
-
-2. MECÁNICAS DE INVOCACIÓN (SUMMONING):
-• Invocación Elemental (Summon Elementals): Los conjuros elementales añaden elementales de aire, tierra, agua o fuego en casillas libres del combate. Estas unidades aliadas operan de forma temporal bajo tu control. Si su iniciativa es inferior o igual a la de la unidad activa del turno actual, se activan en esta misma ronda; en caso contrario, se consideran ya activadas. Nunca se añaden de forma permanente a tu mazo de unidades al concluir la contienda; se disipan por completo.
-• Invocación de Demonios (Summon Demons): Las unidades de Señores del Abismo (Pit Lords) de Inferno pueden usar su habilidad activa especial (icono de espiral) para resucitar o invocar unidades de "Demons" de forma gratuita a partir de bajas sufridas por otras unidades aliadas en combate. Si las tropas resucitadas sobreviven al concluir el combate, estas cartas de Demons SÍ se agregan de forma permanente al mazo de unidades del jugador como nuevas reclutas.
-
-3. FICHAS DE ESTADO EN UNIDADES (TOKENS ON UNITS):
-• Ficha de Debilidad (Weakness Token - Cove/SG2): Aplica un penalizador de -1 o -2 a la estadística de Ataque físico del regimiento afectado según la cara de la ficha mostrada. Colocada por habilidades de unidades de apoyo como las Hechiceras (Sorceresses). Límite de una ficha por regimiento.
-• Ficha de Ataque (Attack Token - Stronghold/SG2): Incrementa la fuerza de ataque en +1 o +2 según la cara mostrada. Es otorgada por unidades de primera línea como los Ogros mediante su grito de batalla rúnico.
-• Ficha de Corrosión (Corrosion Token - Stronghold): Reduce de forma permanente la estadística de defensa del regimiento objetivo en -1 punto (hasta un mínimo absoluto de 0 defensa). Una unidad solo puede albergar una ficha de corrosión activa. No se elimina al concluir los turnos individuales de combate; dura hasta el fin de la contienda táctica en curso. Colocada por bestias feroces como los Behemoths.`
-  },
-  {
     id: "wiki_cards_components",
-    title: "31. Compendio de Cartas y Componentes (es.homm3bg.wiki)",
+    title: "36. Compendio de Cartas y Componentes (es.homm3bg.wiki)",
     category: "components",
     content: `De acuerdo con la base de datos comunitaria (https://es.homm3bg.wiki/), el juego se vertebra sobre un compendio robusto de cartas y elementos físicos diseñados para emular la jugabilidad del clásico del 99:
 
@@ -1070,7 +1070,7 @@ Permite sacrificar cartas de Hechizo o Artefactos menores no deseados de tu mano
   },
   {
     id: "wiki_heroes_specialties",
-    title: "32. Tarjetas de Héroes: Características y Especialidades (las 10 Facciones)",
+    title: "37. Tarjetas de Héroes: Características y Especialidades (las 10 Facciones)",
     category: "combat",
     content: `La wiki oficial de la comunidad detalla exhaustivamente las características iniciales, habilidades primarias de salida y especialidades de los Héroes oficiales para las 10 facciones asimétricas del juego:
 
@@ -1158,7 +1158,7 @@ Nota de Campaña: El héroe legendario Tarnum (Poder/Magia) está presente en m�
   },
   {
     id: "wiki_heroes_abilities",
-    title: "33. Habilidades y Progresión del Héroe (Guía Completa de es.homm3bg.wiki)",
+    title: "38. Habilidades y Progresión del Héroe (Guía Completa de es.homm3bg.wiki)",
     category: "combat",
     content: `Las Habilidades (Ability Cards) representan la progresión, entrenamiento y maestrías del Héroe. Al subir de nivel a un rango de Plata (niveles II, III, V y VII), el Héroe realiza un drafteo del mazo común de habilidades.
 
@@ -1287,7 +1287,7 @@ GUÍA COMPLETA DE HABILIDADES DEL COMPENDIO (es.homm3bg.wiki):
   },
   {
     id: "wiki_cities_buildings",
-    title: "34. Desarrollo Urbano: Ciudades y Catálogo de Edificios de Facción",
+    title: "39. Desarrollo Urbano: Ciudades y Catálogo de Edificios de Facción",
     category: "town",
     content: `El desarrollo de la metrópolis es fundamental para sustentar la economía de Erathia. La wiki de la comunidad (https://es.homm3bg.wiki/) describe la planificación y el catálogo completo de estructuras construibles:
 
@@ -1323,7 +1323,7 @@ GUÍA COMPLETA DE HABILIDADES DEL COMPENDIO (es.homm3bg.wiki):
   },
   {
     id: "wiki_units_creatures",
-    title: "35. Guía de Criaturas y Reglas de Combate (es.homm3bg.wiki)",
+    title: "40. Guía de Criaturas y Reglas de Combate (es.homm3bg.wiki)",
     category: "combat",
     content: `Las criaturas y unidades de combate táctico representan el núcleo del poder militar de tu Héroe. Cada facción de Erathia cuenta con 7 niveles de criaturas divididas en tres Tiers principales (Bronce, Plata, Oro), además de las Criaturas Especiales o Neutrales de Tier Azul.
 
@@ -1368,7 +1368,7 @@ COMPENDIO DE CRIATURAS POR FACCIONES:
   },
   {
     id: "wiki_abilities_detailed",
-    title: "36. Habilidades de las Criaturas de Combate (es.homm3bg.wiki/abilities/)",
+    title: "41. Habilidades de las Criaturas de Combate (es.homm3bg.wiki/abilities/)",
     category: "combat",
     content: `Las habilidades especiales impresas en las cartas de Criatura de Heroes of Might and Magic III: El Juego de Mesa determinan de forma absoluta el curso táctico de los combates en el tablero de 4x5 casillas. A continuación se desglosan las principales habilidades oficiales referenciadas en el portal de la comunidad (https://es.homm3bg.wiki/abilities/):
 
@@ -1400,7 +1400,7 @@ COMPENDIO DE CRIATURAS POR FACCIONES:
   },
   {
     id: "wiki_units_detailed",
-    title: "37. Catálogo y Guía Completa de Unidades (es.homm3bg.wiki/units/)",
+    title: "42. Catálogo y Guía Completa de Unidades (es.homm3bg.wiki/units/)",
     category: "combat",
     content: `El catálogo completo de ejércitos de Heroes of Might and Magic III: El Juego de Mesa abarca todas las facciones asimétricas y tropas neutrales detalladas en la wiki comunitaria (https://es.homm3bg.wiki/units/). Aquí se desglosa el reglamento específico para cada rango y el catálogo de atributos oficiales de las cartas de tropa:
 
@@ -1421,7 +1421,7 @@ COMPENDIO DE CRIATURAS POR FACCIONES:
   },
   {
     id: "faction_units_index",
-    title: "38. Índice Detallado de Criaturas de Facciones e Invocaciones",
+    title: "43. Índice Detallado de Criaturas de Facciones e Invocaciones",
     category: "combat",
     content: `A continuación se desglosa el catálogo completo indexado con todos los atributos oficiales, costes de reclutamiento y habilidades tácticas de las 10 facciones asimétricas y las invocaciones (excluyendo neutrales y banco de criaturas) de Heroes of Might and Magic III: El Juego de Mesa. 
 
@@ -1760,7 +1760,7 @@ COMPENDIO DE CRIATURAS POR FACCIONES:
   },
   {
     id: "faq_creatures_units",
-    title: "FAQs: Criaturas y Unidades",
+    title: "44. FAQs: Criaturas y Unidades",
     category: "faq",
     content: `Aclaraciones oficiales y preguntas frecuentes sobre el despliegue, combate, habilidades pasivas y especiales de las unidades en el tablero táctico.
 
@@ -1793,7 +1793,7 @@ R: Las unidades derrotadas van a tu pila de bajas personal. Durante tu Fase de P
   },
   {
     id: "faq_gameplay_mechanics",
-    title: "FAQs: Mecánicas de Juego y Exploración",
+    title: "45. FAQs: Mecánicas de Juego y Exploración",
     category: "faq",
     content: `Resolución de dudas sobre el movimiento en el mapa de aventura, la gestión del tiempo y la construcción en la ciudad.
 
@@ -1811,7 +1811,7 @@ R: No. El reglamento limita estrictamente el desarrollo urbano a exactamente una
   },
   {
     id: "faq_skills_specialties",
-    title: "FAQs: Habilidades y Especialidades",
+    title: "46. FAQs: Habilidades y Especialidades",
     category: "faq",
     content: `Dudas sobre las maestrías de los héroes, especialidades de combate y las 32 habilidades secundarias de Erathia.
 
@@ -1826,7 +1826,7 @@ R: No. La habilidad de Artillería afecta de forma muy selectiva: su nivel bási
   },
   {
     id: "faq_game_modes",
-    title: "FAQs: Modos de Juego y Alianzas",
+    title: "47. FAQs: Modos de Juego y Alianzas",
     category: "faq",
     content: `Aclaraciones sobre las modalidades Cooperativa, Campaña, Alianzas (2v2) y las condiciones de eliminación de jugadores.
 
@@ -1849,7 +1849,7 @@ R: Al ser eliminado:
   },
   {
     id: "faq_spells_magic",
-    title: "FAQs: Hechizos y Magia",
+    title: "48. FAQs: Hechizos y Magia",
     category: "faq",
     content: `Tratado místico sobre las escuelas elementales, el Conocimiento, el Poder y efectos específicos de los hechizos.
 
@@ -1877,7 +1877,7 @@ R: Bendecir obliga a tu criatura a ignorar la tirada física del dado, aplicando
   },
   {
     id: "faq_artifacts_scrolls",
-    title: "FAQs: Artefactos, Pergaminos y Grial",
+    title: "49. FAQs: Artefactos, Pergaminos y Grial",
     category: "faq",
     content: `Resolución de dudas sobre el mazo de tesoros arcanos, reliquias permanentes, pergaminos de hechizos y la excavación del Grial.
 

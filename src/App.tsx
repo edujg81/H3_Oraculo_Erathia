@@ -1283,7 +1283,7 @@ export default function App() {
               </div>
               <div className="flex items-center">
                 <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span> 
-                <span className="font-mono text-slate-300 font-semibold">8 MANUALES OFICIALES INDEXADOS</span>
+                <span className="font-mono text-slate-300 font-semibold">13 MANUALES OFICIALES INDEXADOS</span>
               </div>
               <div className="flex items-center">
                 <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span> 
@@ -1291,7 +1291,7 @@ export default function App() {
               </div>
             </div>
             <div className="text-slate-500 font-mono text-[10px] bg-slate-900/80 px-2.5 py-1 rounded-md border border-slate-850">
-              ORÁCULO DE SANDRO // ERATHIA OS v2.3
+              ORÁCULO DE SANDRO // ERATHIA OS v2.4
             </div>
           </div>
           
