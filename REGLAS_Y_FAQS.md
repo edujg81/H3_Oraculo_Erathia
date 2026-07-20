@@ -42,7 +42,7 @@ Para evitar fallos en las búsquedas del sistema y asegurar el total cumplimient
 | **Imps** / **Familiars** | 👹 **Familiares** | Inferno | Rango Bronce. No usar "Diablillos" o "Duendecillos". |
 | **Gogs** / **Magogs** | ☄️ **Magogs** | Inferno | Rango Bronce. No usar "Gogs". |
 | **Hell Hounds** / **Cerberi** | 🐕 **Cerberos** | Inferno | Rango Bronce. No usar "Sabuesos". |
-| **Pit Fiends** / **Pit Lords** | 😈 **Señores del abismo** | Infierno | Rango Plata. En minúscula la "a" de abismo. |
+| **Pit Fiends** / **Pit Lords** | 😈 **Señores del abismo** | Inferno | Rango Plata. En minúscula la "a" de abismo. |
 | **Efreet** / **Efreet Sultans** | 🧞‍♂️ **Efrits** | Inferno | Rango Oro. No usar "Efreet" ni "Sultanes". |
 | **Devils** / **Arch Devils** | 👿 **Archidiablos** | Inferno | Rango Oro. No usar "Diablos" ni "Archidemonios". |
 | **Centaur** | 🏹 **Centauros** | Murallas | Rango Bronce. |
@@ -137,7 +137,7 @@ Para evitar fallos en las búsquedas del sistema y asegurar el total cumplimient
 > ### ❓ P: ¿Se deben equipar los artefactos en ranuras de personaje físicas?
 > * **Respuesta:** **No.** En el reglamento básico de mesa no existen "ranuras de equipo" en el tablero. Los artefactos son cartas de un solo uso que se juegan desde la mano y van al descarte, **con la única excepción de las cartas con la etiqueta Permanente (símbolo de candado)**, que permanecen en mesa boca arriba otorgando efectos continuos hasta que sean descartadas o sustituidas.
 
-> ### ❓ P: ¿Cómo funcionan los Pergaminos de Hechizo (Scrolls) en la expansión de Confluencia?
+> ### ❓ P: ¿Cómo funcionan los Pergaminos de Hechizo (Scrolls) en la expansión de Conflujo?
 > * **Respuesta:** La expansión incorpora un sistema exclusivo de Pergaminos con mazo propio de 20 cartas:
 >   * Al obtener un Pergamino, roba 2 cartas de hechizo comunes y colócalas bocabajo sobre la carta de Pergamino (sin ir a tu mano de hechizos).
 >   * Puedes lanzar cualquiera de esos hechizos desde el pergamino gastando tu maná de forma habitual.

@@ -95,7 +95,7 @@ const WAR_MACHINES: WarMachine[] = [
     costFactory: 14,
     hp: 'Inmune',
     timing: 'Al comienzo de cada ronda de combate',
-    expansion: 'Expansión de Bahía (Cove)',
+    expansion: 'Expansión de Cala (Cove)',
     baseEffect: 'Puedes gastar 1 Corona para aplicar 2 Heridas a 1 unidad enemiga.',
     associatedSkill: 'Ninguna',
     skillNormalEffect: 'No Aplica.',
@@ -136,7 +136,7 @@ export default function WarMachinesViewer() {
                           m.associatedSkill.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesExpansion = expansionFilter === 'all' || 
                              (expansionFilter === 'base' && m.expansion.includes('Base')) ||
-                             (expansionFilter === 'cove' && m.expansion.includes('Bahía'));
+                             (expansionFilter === 'cove' && m.expansion.includes('Cala'));
     return matchesSearch && matchesExpansion;
   });
 
@@ -151,8 +151,8 @@ export default function WarMachinesViewer() {
     if (machineId === 'cannon' && !isCoveHero) {
       setSimulationLogs([
         "⚠️ REGLA DE MESA EXCLUSIVA:",
-        "El Cañón es de uso EXCLUSIVO para héroes de la facción Bahía (Cove).",
-        "Por favor, activa la casilla de 'Héroe de Bahía (Cove)' en las opciones superiores si deseas equiparlo en combate."
+        "El Cañón es de uso EXCLUSIVO para héroes de la facción Cala (Cove).",
+        "Por favor, activa la casilla de 'Héroe de Cala (Cove)' en las opciones superiores si deseas equiparlo en combate."
       ]);
       return;
     }

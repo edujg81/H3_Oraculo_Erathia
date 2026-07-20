@@ -9,7 +9,7 @@ const RulesBrowser = lazy(() => import('./components/RulesBrowser'));
 const ChatAdvisor = lazy(() => import('./components/ChatAdvisor'));
 const RulebookPDF = lazy(() => import('./components/RulebookPDF'));
 const GameTimer = lazy(() => import('./components/GameTimer'));
-const RecruitmentCalculator = lazy(() => import('./components/RecruitmentCalculator'));
+const UnitsBrowser = lazy(() => import('./components/UnitsBrowser'));
 const ScenariosDatabase = lazy(() => import('./components/ScenariosDatabase'));
 const HeroesViewer = lazy(() => import('./components/HeroesViewer'));
 const SkillsBrowser = lazy(() => import('./components/SkillsBrowser'));
@@ -377,7 +377,7 @@ export default function App() {
 
             {activeTab === 'units' && (
               <div className="space-y-4">
-                <RecruitmentCalculator 
+                <UnitsBrowser 
                   initialUnitName={linkedUnitName}
                   onClearInitialUnit={() => setLinkedUnitName(null)}
                 />

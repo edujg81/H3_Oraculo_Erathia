@@ -22,7 +22,7 @@ La aplicación está organizada en un sistema modular interactivo y reactivo:
    * Selector interactivo de escenarios y campañas oficiales del juego de mesa con resúmenes de preparación, objetivos de victoria y losetas necesarias para el mapa.
 
 4. **Unidades (Calculadora de Reclutamiento y Fichas)**
-   * Visor exhaustivo de estadísticas (Ataque, Defensa, Vida, Iniciativa, Tipo de unidad y Habilidades pasivas/activas) para todas las facciones: *Castillo, Necrópolis, Mazmorra, Murallas, Torre, Infierno, Bastión, Fortaleza, Confluencia, Bahía (Cove)*, unidades *Neutrales*, *Invocaciones* y defensores de *Bancos*.
+   * Visor exhaustivo de estadísticas (Ataque, Defensa, Vida, Iniciativa, Tipo de unidad y Habilidades pasivas/activas) para todas las facciones: *Castillo, Necrópolis, Mazmorra, Murallas, Torre, Inferno, Bastión, Fortaleza, Conflujo, Cala (Cove)*, unidades *Neutrales*, *Invocaciones* y defensores de *Bancos*.
    * Calculadora automática del coste de reclutamiento (Oro, Materiales y Objetos de Valor).
 
 5. **Héroes (Heroes Viewer)**
@@ -32,7 +32,7 @@ La aplicación está organizada en un sistema modular interactivo y reactivo:
    * Buscador interactivo de habilidades del juego (Logística, Tiro con Arco, Necromancia, Sabiduría, etc.) detallando los efectos de nivel Básico y Experto.
 
 7. **Máquinas de Guerra (War Machines)**
-   * Simulador táctico interactivo con cálculos y tiradas de dados dedicados para Balista, Catapulta, Carro de Municiones, Tienda de Auxilio y el Cañón de Bahía.
+   * Simulador táctico interactivo con cálculos y tiradas de dados dedicados para Balista, Catapulta, Carro de Municiones, Tienda de Auxilio y el Cañón de Cala.
 
 8. **Localizaciones del Mapa (Map Locations)**
    * Guía completa de losetas de mapa y estructuras (minas de recursos, criptas, utopías, santuarios) con sus respectivos costes, defensas y recompensas.

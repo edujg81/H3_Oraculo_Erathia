@@ -1,5 +1,5 @@
 // Datos de unidades reclutables de Heroes III: The Board Game.
-// Extraído de RecruitmentCalculator.tsx para poder reutilizarse también
+// Extraído de UnitsBrowser.tsx para poder reutilizarse también
 // como fuente de la base de conocimiento del oráculo Sandro (ver server.ts
 // y src/data/knowledgeIndex.ts).
 

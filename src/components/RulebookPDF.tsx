@@ -1781,7 +1781,7 @@ export default function RulebookPDF() {
         {/* Section XX */}
         <section className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
-            XX. Guía de Habilidades y Talentos del Héroe (es.homm3bg.wiki)
+            XX. Guía de Habilidades y Talentos del Héroe
           </h3>
           <p className="text-xs text-slate-400">
             Las Habilidades representan la progresión del Héroe. Al subir de nivel a un rango de Plata (II, III, V y VII), el Héroe draftea de un mazo común. Poseen un efecto <strong>Básico</strong> (pasivo o gratuito) y un efecto <strong>Experto</strong> (requiere gastar una ficha de Experto).
@@ -1950,7 +1950,7 @@ export default function RulebookPDF() {
         <section className="space-y-4 page-break">
           <div className="border-b-2 border-amber-500/30 pb-2">
             <h2 className="text-lg font-bold font-serif text-amber-500 tracking-wide uppercase flex items-center justify-between">
-              <span>XXI. Compendio de Criaturas y Unidades de Combate (es.homm3bg.wiki)</span>
+              <span>XXI. Compendio de Criaturas y Unidades de Combate</span>
               <span className="text-xs font-mono text-slate-500">Unidades de Erathia</span>
             </h2>
             <p className="text-[10px] uppercase font-mono text-slate-400 mt-1">

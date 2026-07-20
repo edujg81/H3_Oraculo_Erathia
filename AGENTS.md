@@ -38,7 +38,7 @@ Es sumamente crítico respetar la ortografía y el formato exacto de las unidade
     * `Gólems de diamante`
     * `Gólems de hierro (Neutral)`
 
-* **Denominación de unidades de Infierno:**
+* **Denominación de unidades de Inferno:**
   * `Familiares` (en lugar de Diablillos o Duendecillos)
   * `Magogs` (en lugar de Gogs)
   * `Cerberos` (en lugar de Sabuesos)

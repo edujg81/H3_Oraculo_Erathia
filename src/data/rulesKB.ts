@@ -1050,9 +1050,9 @@ En torneos con cronómetro táctico, cada jugador dispone de un pool de 3 minuto
   },
   {
     id: "wiki_cards_components",
-    title: "36. Compendio de Cartas y Componentes (es.homm3bg.wiki)",
+    title: "36. Compendio de Cartas y Componentes",
     category: "components",
-    content: `De acuerdo con la base de datos comunitaria (https://es.homm3bg.wiki/), el juego se vertebra sobre un compendio robusto de cartas y elementos físicos diseñados para emular la jugabilidad del clásico del 99:
+    content: `El juego se vertebra sobre un compendio robusto de cartas y elementos físicos diseñados para emular la jugabilidad del clásico del 99:
 
 1. CARTAS DEL COMPENDIO Y SU FUNCIONAMIENTO:
 • Cartas de Unidad / Tropas: Cada facción cuenta con sus unidades terrestres de rango Bronce, Plata y Oro. Tienen doble cara (Rango Básico y Rango Élite). Indican: Salud (Puntos de Herida), Iniciativa de Combate, Ataque Físico, Defensa Militar, Rango de Movimiento/Alcance y Habilidades Especiales pasivas/activas.
@@ -1072,7 +1072,7 @@ En torneos con cronómetro táctico, cada jugador dispone de un pool de 3 minuto
     id: "wiki_heroes_specialties",
     title: "37. Tarjetas de Héroes: Características y Especialidades (las 10 Facciones)",
     category: "combat",
-    content: `La wiki oficial de la comunidad detalla exhaustivamente las características iniciales, habilidades primarias de salida y especialidades de los Héroes oficiales para las 10 facciones asimétricas del juego:
+    content: `El reglamento oficial detalla exhaustivamente las características iniciales, habilidades primarias de salida y especialidades de los Héroes oficiales para las 10 facciones asimétricas del juego:
 
 1. CASTILLO (CASTLE):
 • Catherine (Poder - Knight): Habilidad Inicial: Liderazgo (Leadership) | Especialidad: Cruzados (Crusaders). Otorga ventajas ofensivas masivas a los Espadachines y Cruzados de Erathia.
@@ -1158,7 +1158,7 @@ Nota de Campaña: El héroe legendario Tarnum (Poder/Magia) está presente en m�
   },
   {
     id: "wiki_heroes_abilities",
-    title: "38. Habilidades y Progresión del Héroe (Guía Completa de es.homm3bg.wiki)",
+    title: "38. Habilidades y Progresión del Héroe",
     category: "combat",
     content: `Las Habilidades (Ability Cards) representan la progresión, entrenamiento y maestrías del Héroe. Al subir de nivel a un rango de Plata (niveles II, III, V y VII), el Héroe realiza un drafteo del mazo común de habilidades.
 
@@ -1167,7 +1167,7 @@ MECÁNICA GENERAL DE LAS HABILIDADES:
 • Rango Experto: Para activar el efecto Experto de una carta de habilidad, el jugador debe gastar un marcador o ficha de Experto durante su turno.
 • Limitaciones: Cada héroe tiene su propio pool de habilidades y límites asimétricos según su clase (Poder o Magia).
 
-GUÍA COMPLETA DE HABILIDADES DEL COMPENDIO (es.homm3bg.wiki):
+GUÍA COMPLETA DE HABILIDADES DEL COMPENDIO:
 
 1. Magia de Aire (Air Magic):
 • Básico: Permanente: +1 Poder para hechizos de la Escuela de Aire.
@@ -1289,7 +1289,7 @@ GUÍA COMPLETA DE HABILIDADES DEL COMPENDIO (es.homm3bg.wiki):
     id: "wiki_cities_buildings",
     title: "39. Desarrollo Urbano: Ciudades y Catálogo de Edificios de Facción",
     category: "town",
-    content: `El desarrollo de la metrópolis es fundamental para sustentar la economía de Erathia. La wiki de la comunidad (https://es.homm3bg.wiki/) describe la planificación y el catálogo completo de estructuras construibles:
+    content: `El desarrollo de la metrópolis es fundamental para sustentar la economía de Erathia. El reglamento oficial describe la planificación y el catálogo completo de estructuras construibles:
 
 1. ESTRUCTURAS COMUNES Y MEJORAS URBANAS:
 • Ayuntamiento (Town Hall / City Hall / Capitol):
@@ -1323,7 +1323,7 @@ GUÍA COMPLETA DE HABILIDADES DEL COMPENDIO (es.homm3bg.wiki):
   },
   {
     id: "wiki_units_creatures",
-    title: "40. Guía de Criaturas y Reglas de Combate (es.homm3bg.wiki)",
+    title: "40. Guía de Criaturas y Reglas de Combate",
     category: "combat",
     content: `Las criaturas y unidades de combate táctico representan el núcleo del poder militar de tu Héroe. Cada facción de Erathia cuenta con 7 niveles de criaturas divididas en tres Tiers principales (Bronce, Plata, Oro), además de las Criaturas Especiales o Neutrales de Tier Azul.
 
@@ -1368,9 +1368,9 @@ COMPENDIO DE CRIATURAS POR FACCIONES:
   },
   {
     id: "wiki_abilities_detailed",
-    title: "41. Habilidades de las Criaturas de Combate (es.homm3bg.wiki/abilities/)",
+    title: "41. Habilidades de las Criaturas de Combate",
     category: "combat",
-    content: `Las habilidades especiales impresas en las cartas de Criatura de Heroes of Might and Magic III: El Juego de Mesa determinan de forma absoluta el curso táctico de los combates en el tablero de 4x5 casillas. A continuación se desglosan las principales habilidades oficiales referenciadas en el portal de la comunidad (https://es.homm3bg.wiki/abilities/):
+    content: `Las habilidades especiales impresas en las cartas de Criatura de Heroes of Might and Magic III: El Juego de Mesa determinan de forma absoluta el curso táctico de los combates en el tablero de 4x5 casillas. A continuación se desglosan las principales habilidades oficiales:
 
 1. HABILIDADES DE DESPLAZAMIENTO Y ALCANCE:
 • Volador (Flying): La unidad ignora por completo cualquier obstáculo (como campos de fuerza, ruinas o arenas movedizas) y a otras unidades terrestres al desplazarse por la reja táctica.
@@ -1400,9 +1400,9 @@ COMPENDIO DE CRIATURAS POR FACCIONES:
   },
   {
     id: "wiki_units_detailed",
-    title: "42. Catálogo y Guía Completa de Unidades (es.homm3bg.wiki/units/)",
+    title: "42. Catálogo y Guía Completa de Unidades",
     category: "combat",
-    content: `El catálogo completo de ejércitos de Heroes of Might and Magic III: El Juego de Mesa abarca todas las facciones asimétricas y tropas neutrales detalladas en la wiki comunitaria (https://es.homm3bg.wiki/units/). Aquí se desglosa el reglamento específico para cada rango y el catálogo de atributos oficiales de las cartas de tropa:
+    content: `El catálogo completo de ejércitos de Heroes of Might and Magic III: El Juego de Mesa abarca todas las facciones asimétricas y tropas neutrales. Aquí se desglosa el reglamento específico para cada rango y el catálogo de atributos oficiales de las cartas de tropa:
 
 1. CLASIFICACIÓN DE UNIDADES POR TIERS DE RECLUTAMIENTO:
 • Tier Bronce (Rango I - Niveles 1-3): Representan la milicia, arqueros y guardianes básicos. Tienen costes económicos bajos (solo Oro, sin requisitos de recursos especiales) y se reclutan al construir viviendas de bronce con un Fuerte básico en la metrópolis. Suelen tener estadísticas de vida modestas (1 a 3 heridas).

@@ -33,11 +33,11 @@ El juego cuenta con un total de **10 facciones asimétricas oficiales**:
 3. **Mazmorra (Dungeon - Borde Morado):** Magia destructiva letal de la escuela de tierra y fuego, complementada por tropas que atacan sin represalia y regresan a su origen (harpías), minotauros de moral inquebrantable y el devastador Dragón Negro, totalmente inmune a los hechizos.
 4. **Murallas (Rampart - Borde Verde):** Elfos, centauros y dragones dorados en perfecta comunión con la naturaleza. Poseen gran movilidad, excelentes ataques a distancia de tiradores certeros que ignoran penalizaciones de distancia, y una economía forestal floreciente mediante el Tesoro Elfo.
 5. **Torre (Tower - Borde Celeste):** Gremlins, gólems, magos y titanes mecánicos. Se caracterizan por su asombrosa biblioteca para aprender magias adicionales, su maestría en la forja y potenciación de artefactos, y el uso estratégico de los **Gólems** de hierro, acero, oro o diamante para retener las líneas frontales.
-6. **Infierno (Inferno - Borde Rojo):** Demonios, efreets y archidiablos surgidos del Abismo. Sus tácticas combinan el sacrificio de tropas para sanar otras, el uso de fuegos mágicos destructivos en área e inmunidades al elemento fuego. Sus unidades básicas son los **Familiares** (imps) y los **Magos** destructivos, apoyados por **Cerberos** de tres cabezas y los temidos **Señores del abismo**.
+6. **Inferno (Inferno - Borde Rojo):** Demonios, efreets y archidiablos surgidos del Abismo. Sus tácticas combinan el sacrificio de tropas para sanar otras, el uso de fuegos mágicos destructivos en área e inmunidades al elemento fuego. Sus unidades básicas son los **Familiares** (imps) y los **Magogs** destructivos, apoyados por **Cerberos** de tres cabezas y los temidos **Señores del abismo**.
 7. **Bastión (Stronghold - Borde Naranja):** Hordas salvajes de orcos, ogros y cíclopes. Dependen casi exclusivamente de la fuerza física bruta, la rabia de batalla ofensiva que duplica ataques de melé, y poseer unidades asombrosamente duras pero sencillas de reclutar.
 8. **Fortaleza (Fortress - Borde Marrón):** Guerreros reptilianos e insectoides de las ciénagas, incluyendo basiliscos que petrifican al contacto y los letales wyverns. Sus unidades de apoyo y héroes poseen defensas impenetrables y manipulación de efectos de terreno mediante el uso de pantanos y lodo.
-9. **Confluencia (Conflux - Borde Magenta):** Seres espirituales elementales de agua, tierra, fuego y aire, coronados por los majestuosos fénixes. Dominan por completo el lanzamiento y canalización de magias elementales mediante altares de transmutación de recursos y la invocación directa de ejércitos espirituales temporales en la reja táctica.
-10. **Bahía (Cove - Borde Turquesa):** Corsarios, piratas, oceanidades y serpientes marinas. Poseedores de ventajas absolutas de movimiento en el agua mediante astilleros de construcción ágil y el contrabando de artefactos y mercancías a cambio de enormes arcas de oro.
+9. **Conflujo (Conflux - Borde Magenta):** Seres espirituales elementales de agua, tierra, fuego y aire, coronados por los majestuosos fénixes. Dominan por completo el lanzamiento y canalización de magias elementales mediante altares de transmutación de recursos y la invocación directa de ejércitos espirituales temporales en la reja táctica.
+10. **Cala (Cove - Borde Turquesa):** Corsarios, piratas, oceanidades y serpientes marinas. Poseedores de ventajas absolutas de movimiento en el agua mediante astilleros de construcción ágil y el contrabando de artefactos y mercancías a cambio de enormes arcas de oro.
 
 ---
 
@@ -92,7 +92,7 @@ Las partidas se organizan en una serie de **Rondas de Juego** estructuradas de f
 Se ejecuta la producción económica del reino. Cada jugador:
 1. Recibe la producción pasiva de Oro, Materiales y Objetos de Valor indicada por los edificios construidos en su Metrópolis.
 2. Añade los beneficios de minas reclamadas en el mapa de aventura.
-3. Resuelve los efectos pasivos de economía urbana (como el interes extra del *Tesoro Elfo* o los ingresos por contrabando de la *Bahía*).
+3. Resuelve los efectos pasivos de economía urbana (como el interes extra del *Tesoro Elfo* o los ingresos por contrabando de la *Cala*).
 
 ### II. Fase Astrológica (Rondas Pares: 2, 4, 6...)
 Se revela una carta del **Mazo de Astrólogos** que define un evento atmosférico, mágico o económico global aplicable a todos los jugadores durante esa ronda (por ejemplo: abundancia de recursos, plagas de criaturas salvajes o penalizaciones al lanzamiento de magias).
@@ -175,7 +175,7 @@ Se pueden adquirir en la fábrica de máquinas de guerra y se sitúan en la lín
 2. **Balista (Ballista):** Máquina ofensiva móvil. Permite al héroe realizar disparos de proyectil de gran potencia contra cualquier unidad en el tablero. Su daño aumenta sustancialmente si el héroe posee la habilidad de *Artillería*.
 3. **Tienda de Primeros Auxilios (First Aid Tent):** Máquina de soporte médico. Se activa en su respectiva fase para curar heridas y remover estados alterados (como parálisis o veneno) de tus regimientos aliados heridos en batalla.
 4. **Carro de Municiones (Ammo Cart):** Otorga un búfalo pasivo continuo a todas tus unidades a distancia del tablero, aumentando su ataque físico en +1 y previniendo que se queden sin proyectiles.
-5. **Cañón (Cannon - Exclusivo de Bahía):** Una letal máquina de asedio móvil de gran calibre. Combina la capacidad destructora de muros de la catapulta con la letalidad de disparo a criaturas de la balista, infligiendo daños masivos por disparo.
+5. **Cañón (Cannon - Exclusivo de Cala):** Una letal máquina de asedio móvil de gran calibre. Combina la capacidad destructora de muros de la catapulta con la letalidad de disparo a criaturas de la balista, infligiendo daños masivos por disparo.
 
 ---
 
@@ -222,99 +222,108 @@ Conforme a los registros de `key_spells_data.txt`, se definen las siguientes reg
 ## 9. Progresión del Héroe y Habilidades Secundarias
 
 La progresión de tu Héroe se registra en la pista de experiencia. Al subir de nivel:
-* **Nivel Plateado (II, III, V, VII):** Realizas un *Draft* del mazo común de habilidades. Revelas las 2 primeras cartas de habilidad, eliges una para incorporarla a tu mazo de Poder y Magia y barajas la restante en el mazo.
+* **Nivel Plateado (II, III, V, VII):** Realizas un *Draft* del mazo común de habilidades. Revelas las 2 primeras cartas de habilidad, eliges una para incorporarla a tu mazo de Poder y Magia y colocas la restante en su pila de descarte.
 * **Nivel Dorado (IV, VI):** Incorporas de forma gratuita tus cartas asimétricas de Especialidad de héroe a tu mano activa.
 
 ### Las 32 Habilidades Secundarias del Compendio
 Representan el entrenamiento militar y arcano del Héroe:
 
-1. **Logística (Logistics):**
-   * *Básico:* Al final de tu turno de movimiento en el mapa, desplaza tu héroe un hexágono vacío adyacente de forma gratuita.
-   * *Experto:* Gana instantáneamente +1 Punto de Movimiento (PM) este turno.
-2. **Sabiduría (Wisdom):**
-   * *Básico:* El coste de compra de hechizos en tu metrópolis se reduce en 2 Oros. Al comprar hechizos, realizas Búsqueda(3) en lugar de Búsqueda(2).
-   * *Experto:* El coste de compra se reduce en 2 Oros. Realizas Búsqueda(4) al adquirir hechizos.
-3. **Misticismo (Mysticism):**
-   * *Básico:* Tras lanzar un hechizo en combate, devuélvelo directamente a tu mano en lugar de descartarlo.
-   * *Experto:* Devuelve la carta de hechizo y todas las demás cartas descartadas para potenciar su poder a tu mano.
-4. **Inteligencia (Intelligence):**
-   * *Básico:* Permite lanzar una carta de hechizo durante el combate justo antes de que se active cualquier criatura (respetando el límite de un hechizo por ronda).
-   * *Experto:* Permite lanzar un hechizo antes de la activación de cualquier criatura. **Este hechizo no cuenta para el límite de un hechizo por ronda**, permitiendo lanzar dos hechizos en la misma ronda de combate.
-5. **Nigromancia (Necromancy):**
-   * *Básico:* Tras vencer en un combate militar (que no sea combate rápido), puedes reforzar una unidad de Bronce o Plata de tu elección pagando la mitad de su coste en Oro (redondeado hacia abajo).
-   * *Experto:* Puedes reforzar cualquier unidad de tu mazo (Bronce, Plata u Oro) por la mitad de su coste en Oro tras ganar un combate.
-6. **Liderazgo (Leadership):**
-   * *Básico:* Gana de forma instantánea una ficha de Moral Positiva (+1).
-   * *Experto:* Roba 2 cartas de tu mazo de Poder y Magia y gana una ficha de Moral Positiva.
-7. **Suerte (Luck):**
-   * *Básico:* Permite volver a tirar el dado de Tesoro o el dado de Recursos una vez durante este turno de exploración.
-   * *Experto:* Permite volver a tirar cualquier dado especial (recursos, tesoro o combate) una vez durante este turno.
-8. **Ofensiva / Ataque (Offense):**
-   * *Básico:* Otorga un búfalo de +1 de Ataque a todas tus unidades en esta ronda de combate, luego roba 1 carta.
-   * *Experto:* Otorga +2 de Ataque a todas tus unidades en esta ronda de combate, luego roba 1 carta.
-9. **Armadura (Armorer):**
-   * *Básico:* Otorga +1 de Defensa a tus unidades para esta ronda de combate táctico, luego roba 1 carta.
-   * *Experto:* Otorga +2 de Defensa a tus unidades para esta ronda de combate, luego roba 1 carta.
-10. **Tiro con Arco (Archery):**
-    * *Básico:* Durante esta ronda de combate, tus unidades de proyectil a distancia ganan +1 de Ataque si el objetivo no se encuentra adyacente.
-    * *Experto:* Hasta el final de la siguiente ronda de combate, tus unidades a distancia ganan +1 de Iniciativa y +1 de Ataque contra objetivos no adyacentes.
-11. **Hechicería (Sorcery):**
-    * *Básico:* Suma +1 de Poder (⚡) al lanzar hechizos en esta ronda, luego roba 1 carta de tu mazo.
-    * *Experto:* Suma +2 de Poder al lanzar hechizos en esta ronda, luego roba 1 carta de tu mazo.
-12. **Resistencia (Resistance):**
-    * *Básico:* Juega inmediatamente después de que un héroe rival lance un hechizo. Si se lanzó con Poder 1 o menos, ignora por completo el efecto de dicho hechizo.
-    * *Experto:* Juega tras el lanzamiento de un hechizo enemigo. Ignora por completo sus efectos, cancelándolo de forma mística.
-13. **Tácticas (Tactics):**
-    * *Básico:* Al inicio del combate táctico, antes de la primera activación, intercambia de forma libre la posición de dos unidades de tu ejército en la grilla.
-    * *Experto:* Durante el combate, puedes intercambiar de forma libre la posición de dos unidades de tu ejército en el tablero de batalla durante tu fase de activación.
-14. **Diplomacia (Diplomacy):**
-    * *Básico:* Por cada morada (Dwelling) controlada en el mapa, roba 1 carta de Unidad Neutral correspondiente. Puedes reclutarla pagando su coste en Oro.
-    * *Experto:* Salta el combate con unidades neutrales en una casilla cuya dificultad sea igual o menor al nivel actual de tu héroe. Reclama el enclave de forma gratuita sin combatir (no ganas Exp de combate).
-15. **Buscador de Caminos (Pathfinding):**
-    * *Básico:* Permite cruzar casillas con ejércitos neutrales u héroes enemigos sin combatir de forma provisional, pero si finalizas tu movimiento en su casilla, el combate detonará de inmediato.
-    * *Experto:* Tu héroe puede moverse a través de fronteras de color amarillo y casillas bloqueadas de mapa, pero no puede terminar su movimiento de PM en ellas.
-16. **Artillería (Artillery):**
-    * *Básico:* Realiza de forma instantánea 1 herida de daño directo a la unidad enemiga del tablero con la menor iniciativa.
-    * *Experto:* Al activar tu máquina de Balista, resuelve su efecto de disparo contra el mismo objetivo 3 veces consecutivas en ese turno.
-17. **Balística (Ballistics):**
-    * *Básico:* Jugable únicamente durante un asedio. Destruye de forma instantánea 1 muro de asedio o la puerta central defensora.
-    * *Experto:* Destruye de forma instantánea la Torre de Flechas automática de la ciudad natal defensora al comenzar el asedio.
-18. **Primeros Auxilios (First Aid):**
-    * *Básico:* Elimina de forma instantánea 1 herida de daño de una de tus unidades aliadas del tablero.
-    * *Experto:* Al usar tu Tienda de Primeros Auxilios, resuelve su efecto de sanación contra el mismo objetivo 3 veces consecutivas.
-19. **Ojo de Águila (Eagle Eye):**
-    * *Básico:* Roba cartas del mazo común de hechizos una a una hasta revelar un Hechizo Básico. Añádelo a tu mano y baraja el mazo.
-    * *Experto:* Roba cartas del mazo común de hechizos una a una hasta revelar un Hechizo Experto. Añádelo a tu mano y baraja el mazo.
+1. **Magia de aire (Air Magic):**
+   * *Básico:* Permanente: +1 Poder (⚡) para todos tus hechizos de la Escuela de Aire.
+   * *Experto:* Al lanzar un hechizo de la Escuela de Aire, puedes descartar esta carta para ganar +3 de Poder de forma instantánea.
+2. **Magia de tierra (Earth Magic):**
+   * *Básico:* Permanente: +1 Poder (⚡) para todos tus hechizos de la Escuela de Tierra.
+   * *Experto:* Al lanzar un hechizo de la Escuela de Tierra, puedes descartar esta carta para ganar +3 de Poder de forma mística.
+3. **Magia de fuego (Fire Magic):**
+   * *Básico:* Permanente: +1 Poder (⚡) para todos tus hechizos de la Escuela de Fuego.
+   * *Experto:* Al lanzar un hechizo de la Escuela de Fuego, puedes descartar esta carta para ganar +3 de Poder de forma mística.
+4. **Magia de agua (Water Magic):**
+   * *Básico:* Permanente: +1 Poder (⚡) para todos tus hechizos de la Escuela de Agua.
+   * *Experto:* Al lanzar un hechizo de la Escuela de Agua, puedes descartar esta carta para ganar +3 de Poder de forma mística.
+5. **Magia básica del aire (Basic Air Magic):**
+   * *Básico:* Permanente: En lugar de buscar en el mazo de hechizos, encuentra el primer Hechizo de magia de aire que haya en él, llévatelo a la mano y baraja el mazo.
+   * *Experto:* Instantáneo: +3 Poder para un Hechizo de magia de aire.
+6. **Magia básica de la tierra (Basic Earth Magic):**
+   * *Básico:* Permanente: En lugar de buscar en el mazo de hechizos, encuentra el primer Hechizo de magia de tierra que haya en él, llévatelo a la mano y baraja el mazo.
+   * *Experto:* Instantáneo: +3 Potencia para un Hechizo de magia de tierra.
+7. **Magia básica del fuego (Basic Fire Magic):**
+   * *Básico:* Permanente: En lugar de buscar en el mazo de hechizos, encuentra el primer Hechizo de magia de fuego que haya en él, llévatelo a la mano y baraja el mazo.
+   * *Experto:* Instantáneo: +3 Potencia para un Hechizo de magia de fuego.
+8. **Magia básica del agua (Basic Water Magic):**
+   * *Básico:* Permanente: En lugar de buscar en el mazo de hechizos, encuentra el primer Hechizo de magia de agua que haya en él, llévatelo a la mano y baraja el mazo.
+   * *Experto:* Instantáneo: +3 Potencia para un Hechizo de magia de agua.
+9. **Tiro con arco (Archery):**
+   * *Básico:* Continuo: Durante esta ronda de combate, tus unidades a distancia ganan +1 Ataque si el objetivo no es una unidad adyacente.
+   * *Experto:* Continuo: Hasta el final de la siguiente ronda de combate, todas tus unidades a distancia ganan +1 Iniciativa y +1 Ataque si el objetivo no es una unidad adyacente.
+10. **Armero (Armorer):**
+    * *Básico:* Instantáneo: Otorga +1 de Defensa, luego roba 1 carta.
+    * *Experto:* Instantáneo: Otorga +2 de Defensa, luego roba 1 carta.
+11. **Artillería (Artillery):**
+    * *Básico:* Instantáneo: Inflige 1 herida de daño directo a la unidad enemiga con menor Iniciativa en el tablero táctico.
+    * *Experto:* Instantáneo: Al activar tu máquina de Balista, resuelve su efecto de disparo contra el mismo objetivo 3 veces consecutivas.
+12. **Balística (Ballistics):**
+    * *Básico:* Instantáneo: Juega esta carta durante un asedio para destruir 1 muro o puerta.
+    * *Experto:* Instantáneo: Juega esta carta durante un asedio para destruir la Torre de arqueros de la ciudad defensora.
+13. **Diplomacia (Diplomacy):**
+    * *Básico:* Mapa: Por cada vivienda (Dwelling) que controles, roba 1 carta de la unidad neutral correspondiente. Puedes reclutarla si pagas su coste en Oro.
+    * *Experto:* Instantáneo: Ignora el combate con unidades neutrales en una zona cuya dificultad de la zona sea menor o igual al nivel de tu héroe. Visita la zona de forma gratuita (no ganas experiencia).
+14. **Vista de águila / Ojo de lince (Eagle Eye):**
+    * *Básico:* Instantáneo: Roba cartas del mazo de hechizos hasta encontrar un hechizo común básico, añádelo a tu mano o descártalo y baraja el mazo.
+    * *Experto:* Instantáneo: Roba cartas del mazo de hechizos hasta encontrar un hechizo avanzado experto, añádelo a tu mano o descártalo y baraja el mazo.
+15. **Patrimonio (Estates):**
+    * *Básico:* Instantáneo: Gana 3 de Oro de la tesorería de forma inmediata.
+    * *Experto:* Instantáneo: Gana 6 de Oro de la tesorería de forma inmediata.
+16. **Primeros auxilios (First Aid):**
+    * *Básico:* Instantáneo: Retira 1 herida de daño de una de tus unidades.
+    * *Experto:* Instantáneo: Al utilizar la carta Tienda de primeros auxilios, resuelve su efecto de sanación 3 veces consecutivas contra el mismo objetivo.
+17. **Inteligencia / Espionaje (Intelligence / Scouting):**
+    * *Básico:* Instantáneo: Al comienzo de la ronda de combate, permite lanzar una carta de hechizo (respetando el límite de un hechizo por ronda).
+    * *Experto:* Instantáneo: Al comienzo de la ronda de combate, lanza una carta de hechizo. Este hechizo no cuenta para el límite de un hechizo por ronda, permitiendo lanzar otro después.
+18. **Interferencia (Interference):**
+    * *Básico:* Instantáneo: Otorga +1 de Defensa. Se puede usar para reducir el daño de un hechizo hostil recibido en combate.
+    * *Experto:* Instantáneo: Otorga +2 de Defensa. Se puede usar para reducir el daño de un hechizo hostil recibido.
+19. **Liderazgo (Leadership):**
+    * *Básico:* Instantáneo: Gana una ficha de Moral Positiva (+1).
+    * *Experto:* Instantáneo: Roba 2 cartas de tu mazo, luego gana una ficha de Moral Positiva.
 20. **Aprendizaje (Learning):**
-    * *Básico:* Juega en el momento en que tu héroe gane experiencia para subir de nivel. Añade medio nivel (0.5 EXP) adicional gratuito de forma instantánea.
-    * *Experto:* Añade un nivel de experiencia completo gratuito al subir de nivel, tras lo cual esta carta de habilidad se remueve de forma permanente de la partida.
-21. **Finanzas (Estates):**
-    * *Básico:* Gana de forma instantánea 3 de Oro de la tesorería del juego.
-    * *Experto:* Gana de forma instantánea 6 de Oro de la tesorería.
-22. **Erudito / Sabio (Scholar):**
-    * *Básico:* Elige una carta de hechizo o habilidad de tu pila de descartes y devuélvela directamente a tu mano activa.
-    * *Experto:* Elimina hasta 2 cartas de Estadística de tu mazo o pila de descarte. Coge hasta 2 cartas de Estadística Potenciadas diferentes del mazo y ponlas encima de tu pila de robo, removiendo al Erudito de la partida.
-23. **Exploración (Scouting):**
-    * *Básico:* Al realizar una acción de búsqueda en losetas ocultas de mapa, realiza Búsqueda(3) en su lugar.
-    * *Experto:* Al realizar una acción de búsqueda de losetas, realiza Búsqueda(5) para revelar un mayor número de opciones.
-24. **Interferencia (Interference):**
-    * *Básico:* Otorga de forma instantánea +1 de Defensa a tus unidades de combate. Puede usarse para mitigar el daño de hechizos de daño directo enemigos.
-    * *Experto:* Otorga +2 de Defensa utilizable para reducir el daño infligido por hechizos enemigos en combate.
-25. **Magia de Aire (Air Magic):**
-    * *Básico:* Permanente: +1 Poder (⚡) para todos tus hechizos de la Escuela de Aire.
-    * *Experto:* Al lanzar un hechizo de la Escuela de Aire, puedes descartar esta carta de habilidad para ganar un búfalo instantáneo de +3 de Poder de forma mística.
-26. **Magia de Tierra (Earth Magic):**
-    * *Básico:* Permanente: +1 Poder (⚡) para todos tus hechizos de la Escuela de Tierra.
-    * *Experto:* Al lanzar un hechizo de la Escuela de Tierra, puedes descartar esta carta para ganar +3 de Poder instantáneo.
-27. **Magia de Fuego (Fire Magic):**
-    * *Básico:* Permanente: +1 Poder (⚡) para todos tus hechizos de la Escuela de Fuego.
-    * *Experto:* Al lanzar un hechizo de la Escuela de Fuego, puedes descartar esta carta para ganar +3 de Poder instantáneo.
-28. **Magia de Agua (Water Magic):**
-    * *Básico:* Permanente: +1 Poder (⚡) para todos tus hechizos de la Escuela de Agua.
-    * *Experto:* Al lanzar un hechizo de la Escuela de Agua, puedes descartar esta carta para ganar +3 de Poder instantáneo.
-29. **Magias Elementales Básicas (Basic Air / Earth / Fire / Water Magic - Expansión Confluencia):**
-    * *Básico:* En lugar de buscar en el mazo común de hechizos, busca el primer hechizo de la Escuela elemental correspondiente en el mazo, añádelo a tu mano y baraja.
-    * *Experto:* Otorga +3 de Poder de forma instantánea al lanzar un hechizo de la escuela elemental correspondiente.
+    * *Básico:* Instantáneo: Juega en el momento en que tu héroe suba de nivel para ganar medio nivel (0.5 EXP) adicional gratuito.
+    * *Experto:* Instantáneo: Juega en el momento en que tu héroe suba de nivel para ganar un nivel de experiencia completo gratuito, luego retira esta carta de la partida.
+21. **Logística (Logistics):**
+    * *Básico:* Continuo: Al final de tu turno de movimiento en el mapa, desplaza tu héroe un hexágono vacío adyacente de forma gratuita.
+    * *Experto:* Instantáneo: Tu héroe gana +1 de movimiento (PM) de forma instantánea este turno.
+22. **Suerte (Luck):**
+    * *Básico:* Continuo: Permite volver a lanzar el dado de tesoro y el dado de recursos una vez durante este turno de exploración.
+    * *Experto:* Continuo: Permite volver a lanzar tantos dados como quieras (recursos, tesoro o combate) una vez durante este turno.
+23. **Misticismo (Mysticism):**
+    * *Básico:* Instantáneo: Juega inmediatamente después de lanzar un hechizo para devolver la carta de hechizo a tu mano en lugar de descartarla.
+    * *Experto:* Instantáneo: Juega inmediatamente después de lanzar un hechizo para devolver la carta de hechizo y el resto de las cartas jugadas con ella de vuelta a tu mano.
+24. **Nigromancia (Necromancy):**
+    * *Básico:* Mapa: Juega tras ganar un combate que no sea un combate rápido. Refuerza una de tus unidades de Bronce o Plata por la mitad de su coste en Oro (redondeado hacia abajo).
+    * *Experto:* Mapa: Juega tras ganar un combate militar ordinario. Refuerza cualquiera de tus unidades (Bronce, Plata u Oro) por la mitad de su coste en Oro (redondeado hacia abajo).
+25. **Ofensa (Offense):**
+    * *Básico:* Instantáneo: Otorga +1 de Ataque a tus unidades en esta ronda de combate, luego roba 1 carta.
+    * *Experto:* Instantáneo: Otorga +2 de Ataque a tus unidades en esta ronda de combate, luego roba 1 carta.
+26. **Orientación (Pathfinding):**
+    * *Básico:* Mapa: Este turno tu héroe puede moverse por zonas con ejércitos neutrales u héroes enemigos, pero si finaliza su turno en una de ellas se iniciará el combate de forma inmediata.
+    * *Experto:* Mapa: Tu héroe puede atravesar fronteras amarillas y zonas bloqueadas, pero no puede finalizar su movimiento en ellos.
+27. **Resistencia (Resistance):**
+    * *Básico:* Instantáneo: Juega inmediatamente después de que el enemigo lance un hechizo con 1 de Poder (⚡) o menos para ignorar por completo su efecto.
+    * *Experto:* Instantáneo: Juega inmediatamente después de que el enemigo lance un hechizo para anularlo por completo ignorando sus efectos.
+28. **Erudito (Scholar):**
+    * *Básico:* Instantáneo: Elige una carta de tu descarte y añádela directamente a tu mano activa.
+    * *Experto:* Mapa: Retira hasta 2 cartas de característica básica de tu mano o descarte. Coge hasta 2 cartas de característica potenciada diferentes del mazo y colócalas en la parte superior de tu descarte, luego retira el Erudito de la partida.
+29. **Exploración (Scouting):**
+    * *Básico:* Instantáneo: Juega al realizar una acción de búsqueda de losetas de mapa para realizar Búsqueda(3) en su lugar.
+    * *Experto:* Instantáneo: Juega al realizar una acción de búsqueda para realizar Búsqueda(5) en su lugar.
+30. **Hechicería (Sorcery):**
+    * *Básico:* Instantáneo: Suma +1 de Poder (⚡) a tus lanzamientos esta ronda de combate, luego roba 1 carta de tu mazo.
+    * *Experto:* Instantáneo: Suma +2 de Poder (⚡) a tus lanzamientos esta ronda, luego roba 1 carta de tu mazo.
+31. **Táctica (Tactics):**
+    * *Básico:* Instantáneo: Al inicio del combate táctico, intercambia libremente la posición de 2 de tus unidades en el tablero de batalla.
+    * *Experto:* Activación: Durante el combate, permite intercambiar la posición de 2 de tus unidades en el tablero durante tu fase de activación.
+32. **Sabiduría (Wisdom):**
+    * *Básico:* Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Al adquirir hechizos de tu cofradía de magos, realizas Búsqueda(3) en vez de Búsqueda(2).
+    * *Experto:* Instantáneo: Comprar hechizos cuesta 2 Oros menos y realizas Búsqueda(4) al adquirir hechizos.
 
 ---
 
@@ -349,11 +358,11 @@ Cada una de las diez facciones posee un edificio exclusivo con efectos estratég
 * **Murallas - Tesoro Elfo (Treasure):** Al final de la fase de recursos, concede un interés financiero de Oro extra equivalente al 10% de tu Oro acumulado actual en la tesorería.
 * **Mazmorra - Vórtice de Maná (Mana Vortex):** Duplica de forma mística el Maná máximo de tu héroe de forma temporal durante la siguiente batalla tras visitar la ciudad capital.
 * **Torre - Biblioteca (Library):** Concede un 'Draft' de hechizos adicionales de búsqueda (Search +1) al subir de nivel la Cofradía de Magos.
-* **Infierno - Castillo de Fuego (Fire Castle):** Aumenta el daño físico infligido por los ataques de represalia (contraataques) de todas tus unidades defensoras en el tablero de batalla táctica.
+* **Inferno - Castillo de Fuego (Fire Castle):** Aumenta el daño físico infligido por los ataques de represalia (contraataques) de todas tus unidades defensoras en el tablero de batalla táctica.
 * **Bastión - Mercado de Esclavos (Slave Market):** Permite vender recursos de madera/mineral e artefactos sobrantes por sumas fijas de Oro sin penalización por cambio comercial.
 * **Fortaleza - Jaulas de Wyverns (Wyvern Cages):** Desbloquea el reclutamiento de la criatura de Wyverns de plata de forma anticipada antes de construir la vivienda de plata ordinaria.
-* **Confluencia - Altar de los Elementos (Elemental Altar):** Permite sacrificar y transmutar de forma directa recursos de madera y mineral sobrantes en valiosos Objetos de Valor místicos.
-* **Bahía - Gremio de Contrabandistas (Smugglers' Guild):** Permite vender artefactos redundantes a cambio de Oro o de valiosos Objetos de Recursos de tu elección.
+* **Conflujo - Altar de los Elementos (Elemental Altar):** Permite sacrificar y transmutar de forma directa recursos de madera y mineral sobrantes en valiosos Objetos de Valor místicos.
+* **Cala - Gremio de Contrabandistas (Smugglers' Guild):** Permite vender artefactos redundantes a cambio de Oro o de valiosos Objetos de Recursos de tu elección.
 
 ---
 

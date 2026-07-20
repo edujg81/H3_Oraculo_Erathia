@@ -253,12 +253,12 @@ const renderFactionWatermark = (factionId: string, className: string = "w-28 h-2
   }
 };
 
-interface RecruitmentCalculatorProps {
+interface UnitsBrowserProps {
   initialUnitName?: string | null;
   onClearInitialUnit?: () => void;
 }
 
-export default function RecruitmentCalculator({ initialUnitName, onClearInitialUnit }: RecruitmentCalculatorProps = {}) {
+export default function UnitsBrowser({ initialUnitName, onClearInitialUnit }: UnitsBrowserProps = {}) {
   const [selectedFaction, setSelectedFaction] = useState('castillo');
   const [selectedTier, setSelectedTier] = useState<'bronce' | 'plata' | 'oro' | 'azul'>('bronce');
   const [selectedUnit, setSelectedUnit] = useState<BoardGameUnit | null>(null);
@@ -371,7 +371,7 @@ export default function RecruitmentCalculator({ initialUnitName, onClearInitialU
         hp: Math.ceil(selectedUnit.level / 2),
         ini: selectedUnit.level + 2,
         type: 'Melé',
-        abilities: ['Habilidades tácticas descritas en el manual de es.homm3bg.wiki.']
+        abilities: ['Habilidades tácticas descritas en el manual oficial del juego.']
       })
     : null;
 
@@ -487,7 +487,7 @@ export default function RecruitmentCalculator({ initialUnitName, onClearInitialU
             Visor Digital de Criaturas y Unidades
           </h2>
           <p className="text-xs text-slate-400">
-            Explora las estadísticas de combate, costes, habilidades tácticas y caras de las cartas de Erathia (es.homm3bg.wiki).
+            Explora las estadísticas de combate, costes, habilidades tácticas y caras de las cartas de Erathia.
           </p>
         </div>
         <span className="text-[10px] font-mono bg-slate-950 px-2.5 py-1 rounded-md text-amber-400 border border-amber-900/30 self-start sm:self-center uppercase">
@@ -919,7 +919,7 @@ export default function RecruitmentCalculator({ initialUnitName, onClearInitialU
       <div className="bg-slate-950/60 rounded-2xl p-4 border border-slate-850 flex gap-4 text-xs text-slate-300 leading-relaxed">
         <HelpCircle className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
         <div className="space-y-1">
-          <strong className="text-slate-200">Reglas Oficiales del Tablero de Combate (es.homm3bg.wiki):</strong>
+          <strong className="text-slate-200">Reglas Oficiales del Tablero de Combate:</strong>
           <p>
             • <strong>Cara de la Carta:</strong> Al jugar la cara "Unas pocas" (basic), la unidad posee menores estadísticas. Puedes mejorarla en cualquier momento a "Manada" (elite) pagando la diferencia de coste en tu ciudad correspondiente.
           </p>
