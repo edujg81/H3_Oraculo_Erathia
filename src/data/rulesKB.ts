@@ -402,6 +402,9 @@ Los jugadores pueden ganar o perder Moral a través de varios efectos del juego.
 • Fuerte de la Colina (Metas Ampliadas): Visitable. Refuerza inmediatamente una unidad de bronce o plata con un descuento de 3 de Oro en su coste de refuerzo (mínimo 0).
 • Taberna (Metas Ampliadas): Revisitable. Paga 7 de Oro para ganar un héroe secundario y obligar a un jugador enemigo a descartar 1 carta al azar de su mano.
 • Eje Estelar (expansión Inferno): Señalizable. Retira una carta de Estadística de tu mano y sustitúyela por una Carta de Característica Potenciada del mismo tipo (efecto único, no exige gastar Experto). No retires cubos de facción enemigos al visitarlo; una vez visitado por una facción, pasa a ser zona vacía solo para esa facción.
+• Reservas del Cíclope (expansión Bastión): Visitable. El ejército neutral que lo custodia usa 2 cíclopes en vez de una unidad azur robada al azar; si ganas el combate, lanza y resuelve 4 dados de recursos.
+• Puerta Subterránea como lugar (expansión Bastión): Revisitable. Te mueve instantáneamente a la zona conectada en la loseta subterránea adyacente, sin gastar PM.
+• Pergamino de Hechizos como lugar (expansión Bastión): Visitable. Roba 1 carta de Pergamino de Hechizos y colócala junto a tu carta de héroe (ver mecánica de Cartas de Pergamino de Hechizos).
 
 2. REVISITABLES (Puedes regresar múltiples veces, sea moviéndote o pagando 1 PM si te encuentras ya ahí):
 • Mercadillo (Trading Post): Te permite intercambiar u ofrecer recursos según la Tabla de Comercio oficial, o destruir una carta innecesaria de tu mano (excluyendo cartas iniciales o flechas mágicas) a cambio de 1 de Oro.
@@ -423,8 +426,7 @@ I. LOGÍSTICA DE NAVEGACIÓN Y BARCOS
 Para escenarios de exploración con zonas de mares o losetas de agua (Cove):
 • Para construir barcos, tu facción debe edificar un Astillero (Shipyard) en ciudades dotadas con el símbolo de ancla (coste: 10 de Oro y 2 Materiales).
 • Una vez edificado, cualquier Héroe situado adyacente al Astillero puede comprar una miniatura de Barco abonando 10 de Oro.
-• Regla Sagrada de Embarque (Embarking Penalty): Entrar en un Barco (casilla de agua) desde una linde de tierra firme consume de forma fulminante e irreversible LA TOTALIDAD de los puntos de movimiento restantes del Héroe para ese turno. Su movimiento cesa de inmediato.
-• Regla Sagrada de Desembarque (Disembarking Penalty): Igualmente, abandonar el Barco para retornar a un nudo de tierra firme consume de inmediato todos los PM restantes del track de movimiento del Héroe para ese día.
+• Regla de Embarque/Desembarque: cuando un héroe entra en una zona de mar desde una zona de tierra, su movimiento termina para el resto del turno (no puede moverse más, ni con ayuda de cartas), pero NO pierde los PM no gastados: puede seguir usándolos para otras acciones que no sean moverse (por ejemplo, prolongar un combate). Moverse de mar a mar o de mar a tierra funciona con normalidad, sin este corte.
 
 II. EXPEDICIONES AL INFRAMUNDO SUBTERRÁNEO
 • Ciertos mapas se dividen en dos niveles independientes (La Superficie y la Capa Subterránea), conectándose exclusivamente por las losetas con el icono de la "Puerta Subterránea" (Subterranean Gate) o mediante portales místicos.
@@ -945,12 +947,12 @@ Los Héroes de la IA disponen de un mazo simplificado sin recursos ni tablero de
     category: "modes",
     content: `Nombres de campaña y escenarios verificados directamente contra los Libros de Misiones oficiales en español.
 
---- JUEGO BASE  ---
+--- JUEGO BASE ---
 
 1. CASTILLO - Libro de Misiones básico. Campaña en solitario "Larga Vida a la Reina" (héroe: Catherine o Rion; enemigo: Mazmorra)":
-  • Misión de Campaña I: "De Regreso al Hogar": (8 rondas) — libera al general Rion capturando la ciudad de Mazmorra.
-  • Misión de Campaña II: "Ángeles Guardianes": (10 rondas) — derrota a dos señores enemigos de la Mazmorra.
-  • Misión de Campaña III: "La Liberación de Steadwick": (13 rondas) — derrota al ejército final en la utopía del dragón.
+  • Misión de Campaña I: "De Regreso al Hogar" (8 rondas) — libera al general Rion capturando la ciudad de Mazmorra.
+  • Misión de Campaña II: "Ángeles Guardianes" (10 rondas) — derrota a dos señores enemigos de la Mazmorra.
+  • Misión de Campaña III: "La Liberación de Steadwick" (13 rondas) — derrota al ejército final en la utopía del dragón.
 - Escenarios independientes (Enfrentamiento): 
   • "El Retiro de los Monjes" (2 jugadores, 7 rondas, victoria por combate final entre héroes).
   • "Un Mundo Feliz" (2-3 jugadores, 8-9 rondas, victoria por controlar 5+ minas).
@@ -960,68 +962,83 @@ Los Héroes de la IA disponen de un mazo simplificado sin recursos ni tablero de
   • "Misión Maldita" (2-3 jugadores, 8-14 rondas según dificultad, limpiar el mazo de unidades neutrales de la utopía del dragón).
 
 2. MAZMORRA - Su campaña en solitario "La Sangre del Dragón" (héroe: Mutare o Alamar; enemigo: Castillo) se encuentra en el Libro de Misiones de Metas Ampliadas (Stretch Goals), junto con las campañas de Necrópolis y Torre.
-  • Misión de Campaña I: "Limpieza de Aspirantes": (11 rondas) — derrota a dos héroes enemigos de Castillo.
-  • Misión de Campaña II: "Sangre del Padre Dragón": (11 rondas) — derrota al ejército enemigo en la utopía del dragón.
-  • Misión de Campaña III: "Sed de Sangre": (10 rondas) — sobrevive a todos los ataques de los héroes enemigos.
+  • Misión de Campaña I: "Limpieza de Aspirantes" (11 rondas) — derrota a dos héroes enemigos de Castillo.
+  • Misión de Campaña II: "Sangre del Padre Dragón" (11 rondas) — derrota al ejército enemigo en la utopía del dragón.
+  • Misión de Campaña III: "Sed de Sangre" (10 rondas) — sobrevive a todos los ataques de los héroes enemigos.
 
 3. NECRÓPOLIS - Campaña "El Ascenso del Nigromante" (héroe: Sandro o Tamika; enemigos variados), en el Libro de Misiones de Metas Ampliadas.
-  • Misión de Campaña I: "Objetivo": (8 rondas) — derrota a ambos ejércitos enemigos.
-  • Misión de Campaña II: "Maestro": (10 rondas) — derrota a ambos ejércitos enemigos.
-  • Misión de Campaña III: "Duque Alarice": (11 rondas) — Derrota a todos los héroes enemigos y gana el combate en la utopía del dragón.
+  • Misión de Campaña I: "Objetivo" (8 rondas) — derrota a ambos ejércitos enemigos.
+  • Misión de Campaña II: "Maestro" (10 rondas) — derrota a ambos ejércitos enemigos.
+  • Misión de Campaña III: "Duque Alarice" (11 rondas) — Derrota a todos los héroes enemigos y gana el combate en la utopía del dragón.
 
 --- FACCIONES DE EXPANSIONES ---
 
 4. MURALLAS - Libro de Misiones de Murallas. Campaña "La Venganza se Sirve Fría" (héroe: Gelu/Gem; enemigo: Necrópolis):
-  • Misión de Campaña I: "En Busca de un Asesino": (11 rondas).
-  • Misión de Campaña II: "Paz Definitiva": (13 rondas).
-  • Misión de Campaña III: "Agentes de la Venganza": (12 rondas).
+  • Misión de Campaña I: "En Busca de un Asesino" (11 rondas).
+  • Misión de Campaña II: "Paz Definitiva" (13 rondas).
+  • Misión de Campaña III: "Agentes de la Venganza" (12 rondas).
 - Escenarios independientes (Alianza): 
   • "El Desafío" (4 jugadores, 11-14 rondas, escenario de grial).
 - Escenarios independientes (Enfrentamiento): 
   • "Oro Enano" (2-3 jugadores, 10 rondas, victoria por acumular 75 de oro).
 
 5. FORTALEZA - Libro de Misiones de Fortaleza. Campaña "Jugando con Fuego" (héroe: Adrienne o Wystan; enemigo: Necrópolis):
-  • Misión de Campaña I: "Cosecha de Ciudades": (13 rondas).
-  • Misión de Campaña II: "La Marcha de los No Muertos": (12 rondas).
-  • Misión de Campaña III: "El Incendio de Tatalia": (14 rondas).
+  • Misión de Campaña I: "Cosecha de Ciudades" (13 rondas).
+  • Misión de Campaña II: "La Marcha de los No Muertos" (12 rondas).
+  • Misión de Campaña III: "El Incendio de Tatalia" (14 rondas).
 - Escenarios independientes (Alianza): 
   • "Arrogancia" (4 jugadores, escenario de grial).
 - Escenarios independientes (Enfrentamiento): 
   • "En Busca del Grial" (2-3 jugadores, escenario de grial).
 
 6. TORRE - Su campaña en solitario "El Matadragones" (héroe: Dracon o Solmyr) está en el Libro de Misiones de Metas Ampliadas.
-  • Misión de Campaña I: "Dragones de Cristal": (9 rondas).
-  • Misión de Campaña II: "Dragones Herrumbrosos": (11 rondas, requiere expansión Fortaleza).
+  • Misión de Campaña I: "Dragones de Cristal" (9 rondas).
+  • Misión de Campaña II: "Dragones Herrumbrosos" (11 rondas, requiere expansión Fortaleza).
   • Misión de Campaña III: "Dragones Hada" (13 rondas, requiere expansión Murallas).
-  • Misión de Campaña IV: "Dragones Azures": (11 rondas).
+  • Misión de Campaña IV: "Dragones Azures" (11 rondas).
 
-7. INFIERNO (Inferno) - Libro de Misiones de Inferno. No incluye campaña en solitario; solo escenarios independientes:
-  • Misión de Campaña I: 
-  • Misión de Campaña II: 
-  • Misión de Campaña III: 
+7. INFIERNO - Libro de Misiones de Inferno incluye solo escenarios independientes. Su campaña, "Creadores de Pesares" (héroe: cualquiera de Inferno; requiere Murallas e Inferno, y la 3ª misión requiere Conflux), está en el Libro de Misiones de Contenido Adicional:
+  • Misión de Campaña I: "Un Plan Diabólico" (12 rondas).
+  • Misión de Campaña II: "Golpea el Hierro Mientras Esté Frío" (13 rondas).
+  • Misión de Campaña III: "Custodios de los Pesares" (13 rondas).
 - Escenarios independientes (Alianza): 
   • "El Cuento de las Dos Tierras" (4 jugadores, 11-13 rondas, victoria por control territorial o captura de ciudad).
 - Escenarios independientes (Enfrentamiento): 
   • "Destino Manifiesto" (3 jugadores, 12-14 rondas)
   • "Carpe Diem" (2 jugadores, 14 rondas, escenario de Ciudad Aleatoria).
 
-8. BASTIÓN (Stronghold) - Libro de Misiones de "El Festival de la Vida":
-• Mapas Únicos: "Savage Lands" (Tierras Salvajes - 2P Clash de ataque potenciado), "Tribal Unity" (Unidad Tribal - 2P Coop para unificar clanes orcos).
-• Misión de Campaña I: "Rito Salvaje" (Wild Rite): Kilgor rastrea y desafía cuerpo a cuerpo a un Behemoth alfa neutral en menos de 9 rondas de campaña.
-• Misión de Campaña II: "El Sendero del Cazador" (Hunter's Path): Captura las guaridas de los cíclopes para reclutar estas letales bestias de melé pesada.
-• Misión de Campaña III: "El Triunfo de Kilgor" (Kilgor's Triumph): Une por la fuerza los clanes bárbaros de Krewlod venciendo a generales bárbaros rivales.
+8. BASTIÓN - Libro de Misiones de Bastión. Campaña "Hermandad Bárbara" (héroes: Yog, luego Crag Hack, luego cualquier héroe de Bastión; enemigo principal: Necrópolis):
+  • Misión de Campaña I: "Cosecha" (10 rondas).
+  • Misión de Campaña II: "Recuperar a Legión" (10 rondas).
+  • Misión de Campaña III: "Secretos Revelados" (13 rondas).
+- Escenarios independientes (Alianza): 
+  • "Guerra de los Poderosos" (4 jugadores, 13 rondas, victoria por capturar la ciudad subterránea de Mazmorra o una ciudad enemiga).
+- Escenarios independientes (Enfrentamiento): 
+  • "Guardián de la Mazmorra" (2 jugadores, 12 rondas, uno de los jugadores debe elegir Mazmorra).
+- Escenarios independientes (Cooperativo): 
+  • "Túneles de los Enanos" (2-3 jugadores, 10-12 rondas según dificultad, cada jugador debe ganar un combate contra unidades azur en la loseta subterránea central).
 
-9. CONFLUENCIA (Conflux) - Libro de Misiones de "El Balance Elemental":
-• Mapas Únicos: "Elemental Skirmish" (Escaramuza - 2P Clash de inmunidad cambiante), "Astral Convergence" (Convergencia - 2P Coop defendiendo pilares).
-• Misión de Campaña I: "Sellando las Grietas" (Sealing the Rifts): Cierra los rifts elementales corruptores mediante pergaminos de exorcismo antes de la ronda 10.
-• Misión de Campaña II: "La Forja de los Elementos" (Elemental Forge): Une esencias puras en la forja rúnica para alistar poderosos Elementales de Tormenta.
-• Misión de Campaña III: "Armonía Astral" (Astral Harmony): Combate espíritus de dragones caídos en el nexo cósmico, donde el daño físico básico está anulado.
+9. CONFLUJO - Libro de Misiones de Conflujo. Campaña "Maestros de los Elementos" (héroe: Tarnum, o cualquier héroe de Conflujo desde la 3ª misión; el jugador elige una facción "anfitriona" para las 2 primeras misiones ya que Tarnum empieza sin ciudad):
+  • Misión de Campaña I: "Caminata Difícil sobre las Nubes" (13 rondas, plano del Aire).
+  • Misión de Campaña II: "Bailando en el Agua y el Fuego" (16 rondas, planos de Agua y Fuego).
+  • Misión de Campaña III: "Lugar Difícil" (10 rondas, plano de Tierra).
+  • Misión de Campaña IV: "Maestro de los Elementos" (14 rondas, combate final contra los 4 Señores Elementales).
+- Escenarios independientes (Alianza): 
+  • "Un Mal Día" (4 jugadores, 16 rondas, con monolitos unidireccionales)
+- Escenarios independientes (Enfrentamiento): 
+  • "Diluvio" (3 jugadores, 10 rondas, ciudad central defendida por una facción no usada)
+- Escenarios independientes (Cooperativo): 
+  • "Demasiados Monstruos" (2-3 jugadores, 11-16 rondas según dificultad, mapa dividido en 3 sectores conectados por monolitos).
 
-10. BAHÍA (Cove) - Libro de Misiones de "Savage Seas":
-• Mapas Únicos: "Isles of Regna" (Islas de Regna - 2-3P Clash marítimo e insular), "The Lost Fleet" (La Flota Perdida - 2P Coop salvando galeones).
-• Misión de Campaña I: "Herrumbre y Polvo" (Rust and Dust): Jeremy despeja canales de boyas fantasmas y esqueletos piratas en 10 rondas usando barcos y astilleros.
-• Misión de Campaña II: "Bajo la Bandera Alegre" (Under the Jolly Roger): Une tripulaciones libres asaltando guarniciones de Castillo y protegiendo al náufrago.
-• Misión de Campaña III: "El Cuerno del Abismo" (Horn of the Abyss): Bidley viaja al foso volcánico marino para derrotar a la Serpiente Marina y reclamar la reliquia.`
+10. CALA - Libro de Misiones de Cala. Campaña "Terror de los Mares" (héroe: Jeremy o cualquier héroe de Cala):
+  • Misión de Campaña I: "Evenmorn" (13 rondas).
+  • Misión de Campaña II: "En Busca del Cuerno" (13 rondas).
+  • Misión de Campaña III: "Traición" (12 rondas).
+- Escenarios independientes (Alianza): 
+  • "Estrecho de las Tormentas" (4 jugadores, 14 rondas).
+- Escenarios independientes (Enfrentamiento): 
+  • "Con Espada y Fuego" (2 jugadores, 11 rondas).
+  • "Archipiélago Ardiente" (3 jugadores, 13 rondas, victoria por derrotar un ejército neutral de nivel VII).`
   },
   {
     id: "tournament_rules_and_draft",
@@ -1029,7 +1046,7 @@ Los Héroes de la IA disponen de un mazo simplificado sin recursos ni tablero de
     category: "modes",
     content: `IMPORTANTE: Las variantes de esta sección NO son reglas oficiales de Archon Studio/Ubisoft — son variantes caseras inspiradas por la comunidad de jugadores para partidas informales. Para las reglas OFICIALES de competición, consulta la sección "35b. Reglamento Oficial del Modo Torneo (Libro de Torneo):
 
-1. Niebla de Guerra Dinámica (Tactical Fog of War) [No oficial]:
+1. Niebla de Guerra Dinámica [No oficial]:
 Para juegos competitivos extremos. Las losetas colindantes a las adyacentes permanecen ocultas boca abajo. Solo al detener al héroe en los lindes de una loseta revelada se puede voltear la siguiente. Las habilidades de Exploración (Pathfinding) o el hechizo Ver Tierra permiten revelar hasta 2 losetas de distancia de manera anticipada.
 
 2. Veto y Draft de Héroes [No oficial]:
@@ -1070,7 +1087,7 @@ Para partidas con límite de tiempo, cada jugador dispone de un pool de minutos 
   },
   {
     id: "tournament_game_mode",
-    title: "35b. Reglamento Oficial del Modo Torneo (Reglas de Competición)",
+    title: "35b. Reglamento Oficial del Modo Torneo (Libro de Torneo)",
     category: "modes",
     content: `El Modo Torneo son partidas 1 contra 1 con reglas propias de construcción de mapa, puntuación y ajustes de equilibrio.
 
@@ -2200,6 +2217,40 @@ DIFERENCIAS CON EL VIDEOJUEGO ORIGINAL (dudas frecuentes de quienes conocen el v
 • La habilidad Resistencia sí puede anular cualquier hechizo enemigo (más flexible que en el videojuego).
 • Solo Nigromancia está restringida a una facción concreta (Necrópolis); el resto de hechizos y efectos son universales salvo que la carta indique lo contrario.
 • Por norma general se lanza 1 hechizo por ronda de combate, salvo que un efecto (p. ej. cartas de conocimiento en su versión Experto) amplíe ese límite.`
+  },
+    {
+    id: "naval_battles_scenarios",
+    title: "40. Expansión Batallas Navales: Escenarios Independientes",
+    category: "modes",
+    content: `Modo Cooperativo — "Invasión Bárbara" (2-4 jugadores, 11 rondas): la loseta inicial central pertenece a una "Ciudad Enemiga" (recomendado usar Bastión). Cada jugador debe derrotar en solitario a los defensores de esa ciudad; victoria cuando todos los jugadores lo hayan logrado.
+
+Modo Enfrentamiento — "El Pantano de Tentáculos de Gorlam" (2 jugadores, 14 rondas): victoria por controlar 6+ minas al final de una ronda final. En las rondas 4-6 y 10-12, las minas de zonas de borde no producen ingresos y los combates en esas zonas se libran en el tablero de combate naval.
+
+Modo Solitario — "Isla de Fuego" (1 jugador, 16 rondas): cada loseta descubierta recibe un Banco de Criaturas distinto (Tesoro de los Diablillos, Conservatorio de Grifos, Banco de Nagas, Pirámide, Utopía del Dragón del banco de criaturas). Victoria: ganar un combate en todos los bancos de criaturas del mapa.`
+  },
+  {
+    id: "sg2_mechanics_scenarios",
+    title: "39. Expansión Contenido Adicional: Mecánicas y Escenarios Independientes",
+    category: "modes",
+    content: `MECÁNICAS NUEVAS (además de las ya cubiertas de losetas subterráneas/marinas, monolitos, barcos, ciudad aleatoria y campo de fuerza):
+• Cartas de Ciudad (mazo de 10, una por facción): sirven para aleatorizar la elección de facción al inicio (repartir 2 por jugador y elegir una, o draft por turnos) y para determinar qué facción defiende una Ciudad Aleatoria.
+• Cartas de Caja de Pandora (mazo de 20): al visitar ese lugar puedes robar una de estas cartas en vez del efecto normal del lugar; igualmente marcas el lugar como visitado.
+• Ficha de Debilidad: -1 o -2 de Ataque a una unidad (solo una ficha de este tipo a la vez por unidad).
+• Hechizo de Mina: variante del hechizo Arenas Movedizas que en vez de detener el movimiento inflige 2 de daño al entrar en la ficha revelada.
+• Carta de Mantícoras alternativa: variante opcional de la carta base, intercambiable con ella.
+
+PREPARACIONES AVANZADAS OPCIONALES (aplicables a cualquier escenario):
+• Cartas del Caos: en vez de descartar una carta, se retira del juego y se roba una nueva del mazo correspondiente para la pila de descarte (no aplica a cartas de Estadística ni especialidad).
+• Reserva de Oro: variante de gestión de ejército donde el coste de reclutar/reforzar se aparta en un "fondo reservado" recuperable al vender o perder esa unidad; pensada para partidas con número impar de jugadores.
+• Draft Inicial: en vez del mazo inicial estándar, cada jugador hace un draft por turnos de cartas de artefacto/habilidad/hechizo para construir un mazo de 9 cartas personalizado.
+• Preparación de Ejército Neutral: al reclutar, en vez de elegir libremente, se roban 2 cartas de unidad neutral por vivienda y se elige cuál reclutar.
+
+ESCENARIOS INDEPENDIENTES (Modo Enfrentamiento):
+"Ascensión" (4 jugadores en 2 equipos, 10 rondas): victoria por serie final de duelos 1 contra 1 entre representantes de cada equipo.
+"Islas Esmeralda" (4 jugadores, 16 rondas, con losetas marinas): victoria por eliminar a todos los demás jugadores.
+"Reino del Caos" (2 o 4 jugadores, 14 rondas, con utopía del dragón defendida por una facción no usada en la partida): victoria por derrotar ese ejército de IA.
+"Pérdida de la Inocencia" (3 jugadores, 11 rondas, escenario de grial): victoria por llevar el grial a tu ciudad o ser el único jugador restante.
+"El Trébol Carmesí" (2-4 jugadores, 14 rondas, con monolitos bidireccionales interconectados): gana quien derrote al mayor número de jugadores.`
   },
   {
     id: "inferno_mechanics_scenarios",
