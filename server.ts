@@ -2,10 +2,24 @@ import express from "express";
 import path from "path";
 import dotenv from "dotenv";
 import { GoogleGenAI } from "@google/genai";
+import { Agent, setGlobalDispatcher } from "undici";
 import { rulesKB } from "./src/data/rulesKB.js"; // Note: esbuild handles ts resolution
 import { entityCatalogSummary, getRelevantEntitySections } from "./src/data/knowledgeIndex.js";
 
 dotenv.config();
+
+// Configura un dispatcher global de undici con límites de tiempo más amplios (5 minutos)
+// para evitar que consultas largas o de gran tamaño de prompt lancen HeadersTimeoutError en Node.js
+try {
+  const globalAgent = new Agent({
+    headersTimeout: 300000,
+    bodyTimeout: 300000,
+    connectTimeout: 300000
+  });
+  setGlobalDispatcher(globalAgent);
+} catch (e) {
+  console.warn("No se pudo configurar el dispatcher global de undici:", e);
+}
 
 const app = express();
 const PORT = 3000;
@@ -183,7 +197,7 @@ ${entityDetailString ? `\n=== FICHAS DETALLADAS RELEVANTES A LA CONSULTA ACTUAL 
 
     // Call google genai
     const response = await ai.models.generateContent({
-      model: "gemini-3.5-flash",
+      model: "gemini-3.6-flash",
       contents: formattedContents,
       config: {
         systemInstruction: systemInstruction,

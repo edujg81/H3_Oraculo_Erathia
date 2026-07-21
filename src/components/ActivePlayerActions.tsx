@@ -224,7 +224,7 @@ export function ActivePlayerActions({
                   }`}
                   title={actionsBlocked ? "Inicia el tiempo total para habilitar acciones" : activePlayer.actionRecruitUsed ? "No disponible (ficha 'Reclutar' ya usada)" : "Paga 10 de Oro y gasta la ficha de Acción 'Reclutar' para contratar el 2º Héroe"}
                 >
-                  Reclutar 2º Héroe (-10 🪙)
+                  Reclutar 2º Héroe (-10 🟡)
                 </button>
               </div>
 
@@ -339,10 +339,11 @@ export function ActivePlayerActions({
           ) : (
             <button
               type="button"
-              disabled={actionsBlocked || !canAffordMageGuild}
+              disabled={actionsBlocked || !canAffordMageGuild || activePlayer.actionBuildUsed}
               onClick={() => {
                 if (actionsBlocked) return;
                 if (!canAffordMageGuild) return;
+                if (activePlayer.actionBuildUsed) return;
                 setPlayers(prev => prev.map((p, idx) => {
                   if (idx === activePlayerIndex) {
                     return {
@@ -351,7 +352,8 @@ export function ActivePlayerActions({
                       materials: Math.max(0, (p.materials ?? 0) - 2),
                       valuables: Math.max(0, (p.valuables ?? 0) - 1),
                       hasMageGuild: true,
-                      actionMageGuildUsed: true
+                      actionMageGuildUsed: true,
+                      actionBuildUsed: true
                     };
                   }
                   return p;
@@ -361,11 +363,21 @@ export function ActivePlayerActions({
               className={`p-2.5 rounded-xl border text-left transition-all flex flex-col justify-between min-h-[58px] ${
                 actionsBlocked
                   ? 'border-slate-900 bg-slate-950/10 text-slate-650 cursor-not-allowed opacity-50'
+                  : activePlayer.actionBuildUsed
+                  ? 'border-red-950 bg-red-950/10 text-red-400 opacity-60 cursor-not-allowed'
                   : canAffordMageGuild
                   ? 'border-amber-500/40 bg-amber-500/10 text-amber-300 hover:bg-amber-500/20 hover:border-amber-400 cursor-pointer shadow-sm'
                   : 'border-slate-800 bg-slate-900/10 text-slate-500 cursor-not-allowed opacity-75'
               }`}
-              title={actionsBlocked ? "Inicia el tiempo total para habilitar acciones" : canAffordMageGuild ? "Comprar Cofradía de Magos (Coste: 4 Oros, 2 Materiales, 1 Objeto de valor)" : "No tienes recursos suficientes para comprar la Cofradía de Magos (Coste: 4 🟡, 2 🪵, 1 🔮)"}
+              title={
+                actionsBlocked
+                  ? "Inicia el tiempo total para habilitar acciones"
+                  : activePlayer.actionBuildUsed
+                  ? "No disponible (ficha 'Construir' ya usada)"
+                  : canAffordMageGuild
+                  ? "Comprar Cofradía de Magos (Coste: 4 Oros, 2 Materiales, 1 Objeto de valor, gasta ficha de construir)"
+                  : "No tienes recursos suficientes para comprar la Cofradía de Magos (Coste: 4 🟡, 2 🪵, 1 🔮)"
+              }
             >
               <div className="flex items-center gap-1.5 w-full">
                 <div className="w-5 h-5 rounded bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-[10px] shrink-0">

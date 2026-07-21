@@ -340,10 +340,22 @@ export default function ChatAdvisor({
         })
       });
 
-      const data = await response.json();
-
       if (!response.ok) {
-        throw new Error(data.error || 'Error al conectar con Sandro el Sabio.');
+        let errorMsg = 'Error al conectar con Sandro el Sabio.';
+        try {
+          const data = await response.json();
+          errorMsg = data.error || errorMsg;
+        } catch {
+          errorMsg = `Error del servidor (Código ${response.status}).`;
+        }
+        throw new Error(errorMsg);
+      }
+
+      let data;
+      try {
+        data = await response.json();
+      } catch {
+        throw new Error('La respuesta del servidor no pudo ser procesada (formato no válido).');
       }
 
       const assistantMsg: Message = {
