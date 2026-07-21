@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import { 
-  HelpCircle, Swords, Users, ShieldAlert, Sparkles, Trophy, Coins, Scroll, AlertCircle, ArrowRight, RefreshCw, Layers
+  HelpCircle, Swords, Users, ShieldAlert, Sparkles, Trophy, Coins, Scroll, AlertCircle, ArrowRight, RefreshCw, Layers, Shield
 } from 'lucide-react';
 
 interface GamePrepModeProps {
-  prepMode: 'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo';
-  setPrepMode: React.Dispatch<React.SetStateAction<'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo'>>;
+  prepMode: 'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo' | 'campodebatalla';
+  setPrepMode: React.Dispatch<React.SetStateAction<'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo' | 'campodebatalla'>>;
   isSidebar?: boolean;
 }
 
 export function GamePrepMode({ prepMode, setPrepMode, isSidebar = false }: GamePrepModeProps) {
   const [showEliminationRules, setShowEliminationRules] = useState(false);
+  const [tournamentSubTab, setTournamentSubTab] = useState<'resumen' | 'mapa' | 'puntuacion' | 'reglas'>('resumen');
+  const [battlefieldVariant, setBattlefieldVariant] = useState<'aventura' | 'escaramuza'>('aventura');
 
   const activeModeStyle = isSidebar 
     ? 'border-amber-600 bg-amber-500/10 text-amber-400 font-bold' 
@@ -48,7 +50,8 @@ export function GamePrepMode({ prepMode, setPrepMode, isSidebar = false }: GameP
           { id: 'torneo', label: 'Torneo', icon: Trophy },
           { id: 'cooperativo', label: 'Cooperativo', icon: Users },
           { id: 'campaña', label: 'Campaña', icon: Sparkles },
-          { id: 'alianza', label: 'Alianza', icon: Layers }
+          { id: 'alianza', label: 'Alianza', icon: Layers },
+          { id: 'campodebatalla', label: 'Campo de Batalla', icon: Shield }
         ].map(mode => {
           const Icon = mode.icon;
           return (
@@ -101,37 +104,132 @@ export function GamePrepMode({ prepMode, setPrepMode, isSidebar = false }: GameP
         )}
 
         {prepMode === 'torneo' && (
-          <div className="space-y-3 animate-fadeIn">
+          <div className="space-y-4 animate-fadeIn">
+            {/* Header */}
             <div className="bg-slate-950/60 p-3 rounded-xl border border-slate-800/80 flex justify-between items-center">
               <div className="flex items-center gap-2">
                 <Trophy className="w-4 h-4 text-amber-500" />
-                <span className="font-semibold text-slate-300 text-xs">Modo Torneo 1v1 Balanceado</span>
+                <span className="font-semibold text-slate-300 text-xs">Modo Torneo 1v1 Balanceado (Reglamento Oficial 35b)</span>
               </div>
               <span className="text-amber-500 font-mono text-[10px] bg-amber-950/40 px-2 py-0.5 rounded border border-amber-900/30 uppercase">E-Sports</span>
             </div>
-            
-            <ul className="text-slate-400 space-y-2 list-none pl-1">
-              <li className="flex items-start gap-2.5 text-xs">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
-                <span><strong>Fórmula Simétrica:</strong> Diseñado estrictamente para 2 jugadores con un límite de <strong>9 rondas completas</strong> de juego.</span>
-              </li>
-              <li className="flex items-start gap-2.5 text-xs">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
-                <span><strong>Cronómetro Táctico:</strong> Pool de 3 minutos por turno. El exceso de tiempo consumido penaliza restando de forma inmediata 1 Ficha de Movimiento en la siguiente fase de aventura.</span>
-              </li>
-              <li className="flex items-start gap-2.5 text-xs">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
-                <span><strong>Draft de Elección y Veto (Pick & Ban):</strong> Los jugadores eligen y prohíben facciones, héroes y cartas antes de preparar el atlas de manera balanceada.</span>
-              </li>
-              <li className="flex items-start gap-2.5 text-xs">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
-                <span><strong>Mazo de División (Split Decks):</strong> Los artefactos se dividen en 3 mazos físicos (Menores, Mayores y Reliquias), y los Hechizos en 2 mazos (Básicos y Expertos) para escalabilidad justa según la posición en el mapa.</span>
-              </li>
-              <li className="flex items-start gap-2.5 text-xs">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
-                <span><strong>Condición de Victoria:</strong> Derrotar al héroe principal enemigo, capturar su Metrópolis, o acumular mayor cantidad de puntos de victoria oficiales tras expirar las 9 rondas.</span>
-              </li>
-            </ul>
+
+            {/* Tournament Sub-tabs */}
+            <div className="flex bg-slate-950 p-1 rounded-xl border border-slate-850">
+              {[
+                { id: 'resumen', label: 'Resumen' },
+                { id: 'mapa', label: '1. Mapa' },
+                { id: 'puntuacion', label: '2. Puntos' },
+                { id: 'reglas', label: '3. Reglas Pro' }
+              ].map(tab => (
+                <button
+                  key={tab.id}
+                  type="button"
+                  onClick={() => setTournamentSubTab(tab.id as any)}
+                  className={`flex-1 py-1.5 text-[10px] font-bold uppercase rounded-lg transition-all cursor-pointer text-center ${
+                    tournamentSubTab === tab.id
+                      ? 'bg-amber-600/20 text-amber-400 font-bold border border-amber-900/30'
+                      : 'text-slate-500 hover:text-slate-300'
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+
+            {/* SUBTAB CONTENT: RESUMEN */}
+            {tournamentSubTab === 'resumen' && (
+              <ul className="text-slate-400 space-y-2.5 list-none pl-1">
+                <li className="flex items-start gap-2.5 text-xs">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                  <span><strong>Fórmula Simétrica:</strong> Diseñado estrictamente para 2 jugadores con un límite de <strong>9 rondas completas</strong> de juego.</span>
+                </li>
+                <li className="flex items-start gap-2.5 text-xs">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                  <span><strong>Cronómetro Táctico:</strong> Pool de 3 minutos por turno. El exceso de tiempo consumido penaliza restando de forma inmediata 1 Ficha de Movimiento en la siguiente fase de aventura.</span>
+                </li>
+                <li className="flex items-start gap-2.5 text-xs">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                  <span><strong>Draft de Elección y Veto (Pick & Ban):</strong> Los jugadores eligen y prohíben facciones, héroes y cartas antes de preparar el atlas de manera balanceada.</span>
+                </li>
+                <li className="flex items-start gap-2.5 text-xs">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                  <span><strong>Mazo de División (Split Decks):</strong> Los artefactos se dividen en 3 mazos físicos (Menores, Mayores y Reliquias), y los Hechizos en 2 mazos (Básicos y Expertos) para escalabilidad justa según la posición en el mapa.</span>
+                </li>
+                <li className="flex items-start gap-2.5 text-xs">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                  <span><strong>Condición de Victoria:</strong> Derrotar al héroe principal enemigo, capturar su Metrópolis, o acumular mayor cantidad de puntos de victoria oficiales tras expirar las 9 rondas.</span>
+                </li>
+              </ul>
+            )}
+
+            {/* SUBTAB CONTENT: MAPA */}
+            {tournamentSubTab === 'mapa' && (
+              <div className="space-y-2 text-xs">
+                <span className="text-[10px] text-slate-500 font-mono block tracking-wider uppercase font-bold">Construcción oficial del mapa de escenario (1v1)</span>
+                <div className="bg-slate-950/40 p-3 rounded-xl border border-slate-850/60 space-y-2 text-slate-350">
+                  <p><strong>1. Orden de Turno:</strong> Ambos lanzan 2 dados de recursos. El ganador elige quién empieza. El segundo jugador obtiene una ficha de moral al comenzar.</p>
+                  <p><strong>2. Loselas Centrales:</strong> Se colocan las losetas centrales/especiales indicadas por la ilustración del escenario de torneo.</p>
+                  <p><strong>3. Rotación Inicial:</strong> El jugador inicial descubre las losetas centrales y las rota como prefiera.</p>
+                  <p><strong>4. Loselas Cercanas (IV-V):</strong> Empezando por el SEGUNDO jugador, se turnan para añadir sus losetas cercanas: junto a una loseta central, y al menos 2 deben incluir un obelisco.</p>
+                  <p><strong>5. Losela Inicial (I):</strong> El jugador inicial coloca su loseta inicial (I) adyacente a una cercana. El otro jugador la coloca en el lado opuesto (la posición más alejada).</p>
+                  <p><strong>6. Loselas Lejanas (II-III):</strong> Por turnos (empezando el jugador inicial), colocan sus losetas lejanas. La primera de cada uno debe ser adyacente a su loseta inicial.</p>
+                  <p className="text-[10px] text-amber-500/70 italic mt-1 font-mono">Nota: Todas las losetas se rotan libremente y se colocan boca arriba.</p>
+                </div>
+              </div>
+            )}
+
+            {/* SUBTAB CONTENT: PUNTUACION */}
+            {tournamentSubTab === 'puntuacion' && (
+              <div className="space-y-2 text-xs">
+                <span className="text-[10px] text-slate-500 font-mono block tracking-wider uppercase font-bold">Distribución Oficial de Puntos de Victoria (PV)</span>
+                <div className="grid grid-cols-2 gap-2 text-slate-350">
+                  <div className="p-2.5 bg-slate-950/50 rounded-xl border border-slate-850/60">
+                    <span className="text-amber-400 font-bold block text-sm">4 PV</span>
+                    <p className="text-[11px] leading-tight text-slate-400 mt-1">Por derrotar al héroe PRINCIPAL del enemigo (una vez, no acumulable).</p>
+                  </div>
+                  <div className="p-2.5 bg-slate-950/50 rounded-xl border border-slate-850/60">
+                    <span className="text-amber-400 font-bold block text-sm">2 PV</span>
+                    <p className="text-[11px] leading-tight text-slate-400 mt-1">Por derrotar al héroe SECUNDARIO del enemigo.</p>
+                  </div>
+                  <div className="p-2.5 bg-slate-950/50 rounded-xl border border-slate-850/60">
+                    <span className="text-amber-400 font-bold block text-sm">1 PV c/u</span>
+                    <p className="text-[11px] leading-tight text-slate-400 mt-1">Por cada mina o asentamiento bajo tu control final.</p>
+                  </div>
+                  <div className="p-2.5 bg-slate-950/50 rounded-xl border border-slate-850/60">
+                    <span className="text-amber-400 font-bold block text-sm">1 PV c/u</span>
+                    <p className="text-[11px] leading-tight text-slate-400 mt-1">Por cada edificio construido en tu ciudad (sin distinción).</p>
+                  </div>
+                  <div className="p-2.5 bg-slate-950/50 rounded-xl border border-slate-850/60">
+                    <span className="text-amber-400 font-bold block text-sm">1 PV por 2</span>
+                    <p className="text-[11px] leading-tight text-slate-400 mt-1">Por cada 2 artefactos en tu mazo (incluye los retirados, red. abajo).</p>
+                  </div>
+                  <div className="p-2.5 bg-slate-950/50 rounded-xl border border-slate-850/60">
+                    <span className="text-amber-400 font-bold block text-sm">1 PV x Nivel</span>
+                    <p className="text-[11px] leading-tight text-slate-400 mt-1">Por cada nivel de experiencia alcanzado por tu héroe principal.</p>
+                  </div>
+                </div>
+                <div className="bg-amber-950/15 border border-amber-900/20 p-2 rounded-lg text-[10px] text-amber-300 leading-tight">
+                  ⭐ Gana el jugador con más Puntos de Victoria totales. El reglamento de torneo no define criterios de desempate secundarios adicionales.
+                </div>
+              </div>
+            )}
+
+            {/* SUBTAB CONTENT: REGLAS PRO */}
+            {tournamentSubTab === 'reglas' && (
+              <div className="space-y-2 text-[11px] text-slate-350 max-h-[220px] overflow-y-auto pr-1">
+                <span className="text-[10px] text-slate-500 font-mono block tracking-wider uppercase font-bold">Reglas de Equilibrio de Competición</span>
+                <div className="space-y-2 pl-1">
+                  <p>🚫 <strong>Habilidad Prohibida:</strong> Se retira la habilidad de <em>Diplomacia</em> de la partida (no se puede reclutar tropas neutrales azur con ella).</p>
+                  <p>🚫 <strong>Artefacto Prohibido:</strong> Se retira el artefacto <em>Reloj de la Hora Aciaga</em>.</p>
+                  <p>🔄 <strong>Mulligan Único:</strong> Al inicio de la ronda 1, puedes barajar tu mano inicial y robar 10 cartas nuevas.</p>
+                  <p>🔮 <strong>Uso de Moral en Búsquedas:</strong> Puedes descartar todo lo robado en un <em>Buscar (X)</em> y volver a buscar. Aplica a artefactos, hechizos, habilidades y mazo.</p>
+                  <p>🎒 <strong>Puntos por Descartes:</strong> Cualquier carta de artefacto retirada del juego se coloca a un lado y SÍ cuenta para los PV finales.</p>
+                  <p>🔭 <strong>Observatorio de Caoba:</strong> Nuevo lugar visitable exclusivo que permite rotar una loseta adyacente libre de héroes.</p>
+                  <p>📦 <strong>Mazos de Tipo (Opcional):</strong> Se separan Artefactos (3 mazos: Menor, Mayor, Reliquia) y Hechizos (2 mazos: Básico, Avanzado) para darlos según la distancia al centro.</p>
+                </div>
+              </div>
+            )}
           </div>
         )}
 
@@ -225,6 +323,90 @@ export function GamePrepMode({ prepMode, setPrepMode, isSidebar = false }: GameP
                 <span><strong>Bloqueo de Señalización (Flaggear):</strong> Queda estrictamente prohibido que un jugador coloque un cubo de facción en una mina, enclave o estructura que ya posea el cubo de su aliado.</span>
               </li>
             </ul>
+          </div>
+        )}
+
+        {prepMode === 'campodebatalla' && (
+          <div className="space-y-4 animate-fadeIn">
+            {/* Header */}
+            <div className="bg-slate-950/60 p-3 rounded-xl border border-slate-800/80 flex justify-between items-center">
+              <div className="flex items-center gap-2">
+                <Shield className="w-4 h-4 text-amber-500 animate-pulse" />
+                <span className="font-semibold text-slate-300 text-xs font-serif">Expansión: Campo de Batalla (1v1)</span>
+              </div>
+              <span className="text-amber-500 font-mono text-[10px] bg-amber-950/40 px-2 py-0.5 rounded border border-amber-900/30 uppercase">Táctico</span>
+            </div>
+
+            {/* Battlefield Sub-tabs */}
+            <div className="flex bg-slate-950 p-1 rounded-xl border border-slate-850">
+              {[
+                { id: 'aventura', label: 'Modo Aventura' },
+                { id: 'escaramuza', label: 'Modo Escaramuza' }
+              ].map(tab => (
+                <button
+                  key={tab.id}
+                  type="button"
+                  onClick={() => setBattlefieldVariant(tab.id as any)}
+                  className={`flex-1 py-1.5 text-[10px] font-bold uppercase rounded-lg transition-all cursor-pointer text-center ${
+                    battlefieldVariant === tab.id
+                      ? 'bg-amber-600/20 text-amber-400 font-bold border border-amber-900/30'
+                      : 'text-slate-500 hover:text-slate-300'
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+
+            {battlefieldVariant === 'aventura' ? (
+              <div className="space-y-3">
+                <p className="text-xs text-slate-400 italic">
+                  Combina la exploración tradicional del mapa de Erathia con combates tácticos expandidos utilizando losetas de obstáculos tridimensionales y terrenos especiales.
+                </p>
+                <ul className="text-slate-400 space-y-2 list-none pl-1">
+                  <li className="flex items-start gap-2.5 text-xs">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                    <span><strong>Tablero de Combate Expandido:</strong> Se usa el tablero grande de combate de la expansión "Battlefield", colocando obstáculos y elementos tácticos al inicio de cada encuentro.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5 text-xs">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                    <span><strong>Modificadores de Terreno:</strong> Los elementos de terreno (charcos, muros, colinas, árboles) otorgan bonificaciones de cobertura a distancia o penalizaciones de movimiento a las tropas.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5 text-xs">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                    <span><strong>Reclutamiento de Campaña:</strong> Las tropas muertas en el campo de batalla regresan al cementerio o taberna según las reglas normales de aventura (compras en Metrópolis).</span>
+                  </li>
+                  <li className="flex items-start gap-2.5 text-xs">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                    <span><strong>Condición de Victoria:</strong> Completar la misión del escenario de aventura o erradicar por completo la facción enemiga del mapa táctico.</span>
+                  </li>
+                </ul>
+              </div>
+            ) : (
+              <div className="space-y-3">
+                <p className="text-xs text-slate-400 italic">
+                  Ideal para partidas rápidas sin fase de mapa de aventura. Los jugadores diseñan ejércitos personalizados con un presupuesto fijo de puntos de oro y se enfrentan directamente en el tablero de combate.
+                </p>
+                <ul className="text-slate-400 space-y-2 list-none pl-1">
+                  <li className="flex items-start gap-2.5 text-xs">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                    <span><strong>Presupuesto de Reclutamiento:</strong> Cada jugador dispone de <strong>30 de Oro</strong> (u otra cantidad acordada) para comprar héroes, cartas de hechizo, habilidades y tropas iniciales directamente de su facción.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5 text-xs">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                    <span><strong>Despliegue Táctico:</strong> Colocación alterna de tropas en las 2 filas traseras de sus respectivas zonas de inicio.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5 text-xs">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                    <span><strong>Combate Inmediato:</strong> Sin fase de recursos ni fase astrológica. La partida consiste exclusivamente en el combate táctico de eliminación.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5 text-xs">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                    <span><strong>Condición de Victoria:</strong> Eliminar todas las unidades del oponente en el tablero de combate o forzar su rendición incondicional.</span>
+                  </li>
+                </ul>
+              </div>
+            )}
           </div>
         )}
       </div>

@@ -111,7 +111,7 @@ export default function App() {
   } = useGameTimer();
 
   // Preparation Mode Selector State
-  const [prepMode, setPrepMode] = useState<'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo'>('enfrentamiento');
+  const [prepMode, setPrepMode] = useState<'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo' | 'campodebatalla'>('enfrentamiento');
 
   // Advanced Settings State
   const [fogOfWar, setFogOfWar] = useState(false);

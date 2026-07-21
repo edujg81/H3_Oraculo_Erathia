@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Compass, RotateCcw, ArrowRight } from 'lucide-react';
+import { Compass, RotateCcw, ArrowRight, Hammer } from 'lucide-react';
 import { Player } from '../types';
 
 interface ActivePlayerActionsProps {
@@ -8,6 +8,7 @@ interface ActivePlayerActionsProps {
   setPlayers: React.Dispatch<React.SetStateAction<Player[]>>;
   toggleMovementPoint: (hero: 'main' | 'sec', index: number) => void;
   toggleActivePlayerAction: (actionKey: 'actionBuildUsed' | 'actionRecruitUsed' | 'actionMageGuildUsed') => void;
+  isTotalRunning: boolean;
 }
 
 export function ActivePlayerActions({
@@ -16,6 +17,7 @@ export function ActivePlayerActions({
   setPlayers,
   toggleMovementPoint,
   toggleActivePlayerAction,
+  isTotalRunning,
 }: ActivePlayerActionsProps) {
   const [showMageGuildSuccess, setShowMageGuildSuccess] = useState(false);
 
@@ -28,10 +30,21 @@ export function ActivePlayerActions({
     (activePlayer.materials ?? 0) >= 2 && 
     (activePlayer.valuables ?? 0) >= 1;
 
+  const actionsBlocked = !isTotalRunning;
+
   return (
     <div id="active-player-actions-card" className="bg-[#0d0a09] border border-slate-800 rounded-3xl p-6 shadow-xl space-y-6 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl pointer-events-none" />
       
+      {actionsBlocked && (
+        <div className="bg-red-950/25 border border-red-900/40 p-4 rounded-2xl flex items-center gap-3 text-red-400 text-xs animate-fadeIn shadow-sm">
+          <span className="text-xl shrink-0">⏳</span>
+          <p className="leading-relaxed">
+            <strong>Acciones bloqueadas:</strong> El cronómetro de la sesión está pausado o no iniciado. Inicia el tiempo total (o el de turno) para poder gastar puntos de movimiento, usar fichas de ciudad o comprar edificios.
+          </p>
+        </div>
+      )}
+
       <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-800/80 pb-4 gap-3">
         <div>
           <span className="text-[10px] text-amber-500/80 font-mono uppercase tracking-widest block font-bold">
@@ -54,7 +67,9 @@ export function ActivePlayerActions({
           </div>
           <button
             type="button"
+            disabled={actionsBlocked}
             onClick={() => {
+              if (actionsBlocked) return;
               setPlayers(prev => prev.map((p, idx) => {
                 if (idx === activePlayerIndex) {
                   return {
@@ -66,8 +81,12 @@ export function ActivePlayerActions({
                 return p;
               }));
             }}
-            className="text-[9px] font-mono bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white px-2 py-0.5 rounded border border-slate-800 flex items-center gap-1 transition-all cursor-pointer"
-            title="Restaurar puntos de movimiento"
+            className={`text-[9px] font-mono bg-slate-900 px-2 py-0.5 rounded border border-slate-800 flex items-center gap-1 transition-all ${
+              actionsBlocked 
+                ? 'text-slate-600 border-slate-900 cursor-not-allowed opacity-50' 
+                : 'hover:bg-slate-800 text-slate-400 hover:text-white cursor-pointer'
+            }`}
+            title={actionsBlocked ? "Inicia el tiempo total para habilitar acciones" : "Restaurar puntos de movimiento"}
           >
             <RotateCcw className="w-2.5 h-2.5" />
             <span>Reiniciar</span>
@@ -88,13 +107,19 @@ export function ActivePlayerActions({
                   <button
                     key={idx}
                     type="button"
-                    onClick={() => toggleMovementPoint('main', idx)}
-                    className={`w-10 h-10 rounded-lg border flex items-center justify-center transition-all cursor-pointer ${
-                      isAvailable
-                        ? 'border-emerald-800 bg-emerald-950/20 text-emerald-400 hover:bg-emerald-950/30 hover:border-emerald-600 shadow-md shadow-emerald-950/20'
-                        : 'border-[#a0522d]/60 bg-[#a0522d]/5 text-[#a0522d] hover:bg-[#a0522d]/10 hover:border-[#a0522d]/80'
+                    disabled={actionsBlocked}
+                    onClick={() => {
+                      if (actionsBlocked) return;
+                      toggleMovementPoint('main', idx);
+                    }}
+                    className={`w-10 h-10 rounded-lg border flex items-center justify-center transition-all ${
+                      actionsBlocked
+                        ? 'border-slate-900 bg-slate-950/10 text-slate-700 cursor-not-allowed opacity-50'
+                        : isAvailable
+                        ? 'border-emerald-800 bg-emerald-950/20 text-emerald-400 hover:bg-emerald-950/30 hover:border-emerald-600 shadow-md shadow-emerald-950/20 cursor-pointer'
+                        : 'border-[#a0522d]/60 bg-[#a0522d]/5 text-[#a0522d] hover:bg-[#a0522d]/10 hover:border-[#a0522d]/80 cursor-pointer'
                     }`}
-                    title={isAvailable ? "Click para gastar punto de movimiento" : "Click para recuperar punto de movimiento"}
+                    title={actionsBlocked ? "Inicia el tiempo total para habilitar acciones" : isAvailable ? "Click para gastar punto de movimiento" : "Click para recuperar punto de movimiento"}
                   >
                     <ArrowRight className="w-5 h-5 stroke-[3.5] transition-transform duration-200" />
                   </button>
@@ -117,13 +142,19 @@ export function ActivePlayerActions({
                     <button
                       key={idx}
                       type="button"
-                      onClick={() => toggleMovementPoint('sec', idx)}
-                      className={`w-10 h-10 rounded-lg border flex items-center justify-center transition-all cursor-pointer ${
-                        isAvailable
-                          ? 'border-emerald-800 bg-emerald-950/20 text-emerald-400 hover:bg-emerald-950/30 hover:border-emerald-600 shadow-md shadow-emerald-950/20'
-                          : 'border-[#a0522d]/60 bg-[#a0522d]/5 text-[#a0522d] hover:bg-[#a0522d]/10 hover:border-[#a0522d]/80'
+                      disabled={actionsBlocked}
+                      onClick={() => {
+                        if (actionsBlocked) return;
+                        toggleMovementPoint('sec', idx);
+                      }}
+                      className={`w-10 h-10 rounded-lg border flex items-center justify-center transition-all ${
+                        actionsBlocked
+                          ? 'border-slate-900 bg-slate-950/10 text-slate-700 cursor-not-allowed opacity-50'
+                          : isAvailable
+                          ? 'border-emerald-800 bg-emerald-950/20 text-emerald-400 hover:bg-emerald-950/30 hover:border-emerald-600 shadow-md shadow-emerald-950/20 cursor-pointer'
+                          : 'border-[#a0522d]/60 bg-[#a0522d]/5 text-[#a0522d] hover:bg-[#a0522d]/10 hover:border-[#a0522d]/80 cursor-pointer'
                       }`}
-                      title={isAvailable ? "Click para gastar punto de movimiento" : "Click para recuperar punto de movimiento"}
+                      title={actionsBlocked ? "Inicia el tiempo total para habilitar acciones" : isAvailable ? "Click para gastar punto de movimiento" : "Click para recuperar punto de movimiento"}
                     >
                       <ArrowRight className="w-5 h-5 stroke-[3.5] transition-transform duration-200" />
                     </button>
@@ -133,7 +164,9 @@ export function ActivePlayerActions({
               <div className="flex justify-between items-center text-[10px] text-slate-400 font-mono -mt-1 px-0.5">
                 <button
                   type="button"
+                  disabled={actionsBlocked}
                   onClick={() => {
+                    if (actionsBlocked) return;
                     setPlayers(prev => prev.map((p, idx) => {
                       if (idx === activePlayerIndex) {
                         return {
@@ -145,8 +178,12 @@ export function ActivePlayerActions({
                       return p;
                     }));
                   }}
-                  className="text-[9px] font-mono text-red-400 hover:text-red-300 bg-red-950/20 border border-red-950/40 hover:border-red-500/50 px-1.5 py-0.5 rounded cursor-pointer transition-all"
-                  title="Marcar como derrotado para eliminarlo del juego (permitirá volver a reclutarlo pagando 10 de Oro)"
+                  className={`text-[9px] font-mono px-1.5 py-0.5 rounded border transition-all ${
+                    actionsBlocked
+                      ? 'border-slate-900 bg-slate-950/20 text-slate-750 cursor-not-allowed opacity-50'
+                      : 'text-red-400 hover:text-red-300 bg-red-950/20 border-red-950/40 hover:border-red-500/50 cursor-pointer'
+                  }`}
+                  title={actionsBlocked ? "Inicia el tiempo total para habilitar acciones" : "Marcar como derrotado para eliminarlo del juego (permitirá volver a reclutarlo pagando 10 de Oro)"}
                 >
                   💀 Derrotado
                 </button>
@@ -162,8 +199,9 @@ export function ActivePlayerActions({
               <div className="py-2">
                 <button
                   type="button"
-                  disabled={activePlayer.actionRecruitUsed}
+                  disabled={actionsBlocked || activePlayer.actionRecruitUsed}
                   onClick={() => {
+                    if (actionsBlocked) return;
                     setPlayers(prev => prev.map((p, idx) => {
                       if (idx === activePlayerIndex) {
                         return {
@@ -177,19 +215,23 @@ export function ActivePlayerActions({
                       return p;
                     }));
                   }}
-                  className={`w-full py-1.5 px-2.5 rounded-lg border text-center text-[11px] font-bold transition-all cursor-pointer ${
-                    activePlayer.actionRecruitUsed
+                  className={`w-full py-1.5 px-2.5 rounded-lg border text-center text-[11px] font-bold transition-all ${
+                    actionsBlocked
+                      ? 'border-slate-900 bg-slate-950/10 text-slate-650 cursor-not-allowed opacity-50'
+                      : activePlayer.actionRecruitUsed
                       ? 'border-slate-850 bg-slate-900/20 text-slate-500 cursor-not-allowed opacity-60'
-                      : 'border-amber-600/30 bg-amber-500/5 text-amber-300 hover:bg-amber-600/10 hover:border-amber-500/60 shadow-sm'
+                      : 'border-amber-600/30 bg-amber-500/5 text-amber-300 hover:bg-amber-600/10 hover:border-amber-500/60 shadow-sm cursor-pointer'
                   }`}
-                  title={activePlayer.actionRecruitUsed ? "No disponible (ficha 'Reclutar' ya usada)" : "Paga 10 de Oro y gasta la ficha de Acción 'Reclutar' para contratar el 2º Héroe"}
+                  title={actionsBlocked ? "Inicia el tiempo total para habilitar acciones" : activePlayer.actionRecruitUsed ? "No disponible (ficha 'Reclutar' ya usada)" : "Paga 10 de Oro y gasta la ficha de Acción 'Reclutar' para contratar el 2º Héroe"}
                 >
                   Reclutar 2º Héroe (-10 🪙)
                 </button>
               </div>
 
               <div className="text-[9px] text-center font-mono leading-tight">
-                {activePlayer.actionRecruitUsed ? (
+                {actionsBlocked ? (
+                  <span className="text-red-500/80">⚠️ Acciones Bloqueadas</span>
+                ) : activePlayer.actionRecruitUsed ? (
                   <span className="text-red-500/80">⚠️ Ficha "Reclutar" ya usada</span>
                 ) : (
                   <span className="text-slate-500">Usa ficha "Reclutar" + 10 Oro</span>
@@ -215,20 +257,26 @@ export function ActivePlayerActions({
           {/* Build Token */}
           <button
             type="button"
-            onClick={() => toggleActivePlayerAction('actionBuildUsed')}
-            className={`p-3 rounded-xl border text-left cursor-pointer transition-all flex items-center gap-3 ${
-              activePlayer.actionBuildUsed
-                ? 'border-red-950 bg-red-950/10 text-red-400 opacity-60'
-                : 'border-amber-600/30 bg-amber-500/5 text-amber-300 hover:border-amber-500/60 shadow-sm'
+            disabled={actionsBlocked}
+            onClick={() => {
+              if (actionsBlocked) return;
+              toggleActivePlayerAction('actionBuildUsed');
+            }}
+            className={`p-3 rounded-xl border text-left transition-all flex items-center gap-3 ${
+              actionsBlocked
+                ? 'border-slate-900 bg-slate-950/10 text-slate-600 cursor-not-allowed opacity-50'
+                : activePlayer.actionBuildUsed
+                ? 'border-red-950 bg-red-950/10 text-red-400 opacity-60 cursor-pointer'
+                : 'border-amber-600/30 bg-amber-500/5 text-amber-300 hover:border-amber-500/60 shadow-sm cursor-pointer'
             }`}
           >
-            <div className={`w-6 h-6 rounded-lg flex items-center justify-center ${activePlayer.actionBuildUsed ? 'bg-red-950 text-red-500' : 'bg-amber-600/20 text-amber-400 animate-pulse'}`}>
+            <div className={`w-6 h-6 rounded-lg flex items-center justify-center ${actionsBlocked ? 'bg-slate-950 text-slate-700' : activePlayer.actionBuildUsed ? 'bg-red-950 text-red-500' : 'bg-amber-600/20 text-amber-400 animate-pulse'}`}>
               🏢
             </div>
             <div className="flex-1 min-w-0">
-              <span className="text-[11px] font-bold block leading-none">Construir</span>
+              <span className="text-[11px] font-bold block leading-none font-sans">Construir</span>
               <span className="text-[9px] text-slate-500 block font-mono mt-1">
-                {activePlayer.actionBuildUsed ? 'GASTADO' : 'DISPONIBLE'}
+                {actionsBlocked ? 'BLOQUEADO' : activePlayer.actionBuildUsed ? 'GASTADO' : 'DISPONIBLE'}
               </span>
             </div>
           </button>
@@ -236,20 +284,26 @@ export function ActivePlayerActions({
           {/* Recruit Token */}
           <button
             type="button"
-            onClick={() => toggleActivePlayerAction('actionRecruitUsed')}
-            className={`p-3 rounded-xl border text-left cursor-pointer transition-all flex items-center gap-3 ${
-              activePlayer.actionRecruitUsed
-                ? 'border-red-950 bg-red-950/10 text-red-400 opacity-60'
-                : 'border-amber-600/30 bg-amber-500/5 text-amber-300 hover:border-amber-500/60 shadow-sm'
+            disabled={actionsBlocked}
+            onClick={() => {
+              if (actionsBlocked) return;
+              toggleActivePlayerAction('actionRecruitUsed');
+            }}
+            className={`p-3 rounded-xl border text-left transition-all flex items-center gap-3 ${
+              actionsBlocked
+                ? 'border-slate-900 bg-slate-950/10 text-slate-600 cursor-not-allowed opacity-50'
+                : activePlayer.actionRecruitUsed
+                ? 'border-red-950 bg-red-950/10 text-red-400 opacity-60 cursor-pointer'
+                : 'border-amber-600/30 bg-amber-500/5 text-amber-300 hover:border-amber-500/60 shadow-sm cursor-pointer'
             }`}
           >
-            <div className={`w-6 h-6 rounded-lg flex items-center justify-center ${activePlayer.actionRecruitUsed ? 'bg-red-950 text-red-500' : 'bg-amber-600/20 text-amber-400 animate-pulse'}`}>
+            <div className={`w-6 h-6 rounded-lg flex items-center justify-center ${actionsBlocked ? 'bg-slate-950 text-slate-700' : activePlayer.actionRecruitUsed ? 'bg-red-950 text-red-500' : 'bg-amber-600/20 text-amber-400 animate-pulse'}`}>
               ⚔️
             </div>
             <div className="flex-1 min-w-0">
               <span className="text-[11px] font-bold block leading-none font-sans">Reclutar</span>
               <span className="text-[9px] text-slate-500 block font-mono mt-1">
-                {activePlayer.actionRecruitUsed ? 'GASTADO' : 'DISPONIBLE'}
+                {actionsBlocked ? 'BLOQUEADO' : activePlayer.actionRecruitUsed ? 'GASTADO' : 'DISPONIBLE'}
               </span>
             </div>
           </button>
@@ -258,29 +312,36 @@ export function ActivePlayerActions({
           {activePlayer.hasMageGuild ? (
             <button
               type="button"
-              onClick={() => toggleActivePlayerAction('actionMageGuildUsed')}
-              className={`p-3 rounded-xl border text-left cursor-pointer transition-all flex items-center gap-3 ${
-                activePlayer.actionMageGuildUsed
-                  ? 'border-red-950 bg-red-950/10 text-red-400 opacity-60'
-                  : 'border-amber-600/30 bg-amber-500/5 text-amber-300 hover:border-amber-500/60 shadow-sm'
+              disabled={actionsBlocked}
+              onClick={() => {
+                if (actionsBlocked) return;
+                toggleActivePlayerAction('actionMageGuildUsed');
+              }}
+              className={`p-3 rounded-xl border text-left transition-all flex items-center gap-3 ${
+                actionsBlocked
+                  ? 'border-slate-900 bg-slate-950/10 text-slate-600 cursor-not-allowed opacity-50'
+                  : activePlayer.actionMageGuildUsed
+                  ? 'border-red-950 bg-red-950/10 text-red-400 opacity-60 cursor-pointer'
+                  : 'border-amber-600/30 bg-amber-500/5 text-amber-300 hover:border-amber-500/60 shadow-sm cursor-pointer'
               }`}
-              title={activePlayer.actionMageGuildUsed ? "Ficha de acción 'Libro de Hechizos' ya usada" : "Gasta la ficha 'Libro de Hechizos' para realizar una búsqueda de hechizos"}
+              title={actionsBlocked ? "Inicia el tiempo total para habilitar acciones" : activePlayer.actionMageGuildUsed ? "Ficha de acción 'Libro de Hechizos' ya usada" : "Gasta la ficha 'Libro de Hechizos' para realizar una búsqueda de hechizos"}
             >
-              <div className={`w-6 h-6 rounded-lg flex items-center justify-center ${activePlayer.actionMageGuildUsed ? 'bg-red-950 text-red-500' : 'bg-amber-600/20 text-amber-400 animate-pulse'}`}>
+              <div className={`w-6 h-6 rounded-lg flex items-center justify-center ${actionsBlocked ? 'bg-slate-950 text-slate-700' : activePlayer.actionMageGuildUsed ? 'bg-red-950 text-red-500' : 'bg-amber-600/20 text-amber-400 animate-pulse'}`}>
                 🔮
               </div>
               <div className="flex-1 min-w-0">
                 <span className="text-[11px] font-bold block leading-none">Libro Hechizos</span>
                 <span className="text-[9px] text-slate-500 block font-mono mt-1">
-                  {activePlayer.actionMageGuildUsed ? 'GASTADO' : 'DISPONIBLE'}
+                  {actionsBlocked ? 'BLOQUEADO' : activePlayer.actionMageGuildUsed ? 'GASTADO' : 'DISPONIBLE'}
                 </span>
               </div>
             </button>
           ) : (
             <button
               type="button"
-              disabled={!canAffordMageGuild}
+              disabled={actionsBlocked || !canAffordMageGuild}
               onClick={() => {
+                if (actionsBlocked) return;
                 if (!canAffordMageGuild) return;
                 setPlayers(prev => prev.map((p, idx) => {
                   if (idx === activePlayerIndex) {
@@ -298,11 +359,13 @@ export function ActivePlayerActions({
                 setShowMageGuildSuccess(true);
               }}
               className={`p-2.5 rounded-xl border text-left transition-all flex flex-col justify-between min-h-[58px] ${
-                canAffordMageGuild
+                actionsBlocked
+                  ? 'border-slate-900 bg-slate-950/10 text-slate-650 cursor-not-allowed opacity-50'
+                  : canAffordMageGuild
                   ? 'border-amber-500/40 bg-amber-500/10 text-amber-300 hover:bg-amber-500/20 hover:border-amber-400 cursor-pointer shadow-sm'
                   : 'border-slate-800 bg-slate-900/10 text-slate-500 cursor-not-allowed opacity-75'
               }`}
-              title={canAffordMageGuild ? "Comprar Cofradía de Magos (Coste: 4 Oros, 2 Materiales, 1 Objeto de valor)" : "No tienes recursos suficientes para comprar la Cofradía de Magos (Coste: 4 🟡, 2 🪵, 1 🔮)"}
+              title={actionsBlocked ? "Inicia el tiempo total para habilitar acciones" : canAffordMageGuild ? "Comprar Cofradía de Magos (Coste: 4 Oros, 2 Materiales, 1 Objeto de valor)" : "No tienes recursos suficientes para comprar la Cofradía de Magos (Coste: 4 🟡, 2 🪵, 1 🔮)"}
             >
               <div className="flex items-center gap-1.5 w-full">
                 <div className="w-5 h-5 rounded bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-[10px] shrink-0">
@@ -310,10 +373,12 @@ export function ActivePlayerActions({
                 </div>
                 <span className="text-[10px] font-bold block leading-none font-sans uppercase tracking-tight">Comprar Cofradía</span>
               </div>
-              <div className="flex items-center gap-1 mt-1 text-[9px] font-mono font-medium text-slate-400">
+              <div className="flex items-center gap-1.5 mt-1 text-[9px] font-mono font-medium text-slate-400 flex-wrap">
                 <span>Coste:</span>
                 <span className={(activePlayer.gold ?? 0) >= 4 ? "text-amber-400 font-bold" : "text-red-500/80 font-bold"}>4🟡</span>
-                <span className={(activePlayer.materials ?? 0) >= 2 ? "text-amber-400 font-bold" : "text-red-500/80 font-bold"}>2🪵</span>
+                <span className={(activePlayer.materials ?? 0) >= 2 ? "text-amber-400 font-bold inline-flex items-center gap-0.5" : "text-red-500/80 font-bold inline-flex items-center gap-0.5"}>
+                  2<Hammer className="w-2.5 h-2.5 text-orange-500 shrink-0" />
+                </span>
                 <span className={(activePlayer.valuables ?? 0) >= 1 ? "text-amber-400 font-bold" : "text-red-500/80 font-bold"}>1🔮</span>
               </div>
             </button>

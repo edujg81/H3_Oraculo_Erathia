@@ -391,7 +391,17 @@ Los jugadores pueden ganar o perder Moral a través de varios efectos del juego.
 • Árbol del Conocimiento (Tree of Knowledge): El héroe puede pagar 3 Objetos de valor o 10 de Oro para subir 2 rangos de Exp al instante.
 • Molino (Windmill): Entrega 1 Objeto de valor de forma gratuita de un tipo determinado.
 • Molino de Agua (Waterwheel): Entrega 3 de Oro de forma inmediata al héroe.
-• Choza de la Bruja (Witch Hut): El héroe puede adquirir de forma aleatoria una carta de Habilidad de la baraja principal pagando 5 de Oro, sin consumir nivel de experiencia.
+• Choza de la Bruja (Witch Hut): El héroe puede adquirir de forma aleatoria una carta de Habilidad de la baraja principal pagando 5 de Oro, sin consumir nivel de experiencia. Solo se puede visitar una vez por partida.
+• Erudito / Scholar (lugar del mapa, expansión Fortaleza): Lanza 1 dado de ataque; según el resultado, roba la carta de Estadística elegida (o retira una de tu mano), o roba 2 cartas de Habilidad y quédate 1 (descarta la otra), o roba 2 cartas de Hechizo y quédate 1 (descarta la otra).
+• Aserradero / Sawmill (mina, expansión Murallas y Metas Ampliadas): Funciona como cualquier otra mina; produce pasivamente 2 Materiales de Construcción por Ronda de Recursos.
+• Universidad (Metas Ampliadas, distinta de la Universidad Militar): Visitable. Paga 6 de Oro para buscar (4) en el descarte de cartas de Habilidad.
+• Mercado Negro (Metas Ampliadas): Revisitable. Mira las 4 cartas superiores del descarte de artefactos y compra una: 5 de Oro si es menor, 7 si es mayor, 10 si es reliquia.
+• Mercado del Tiempo (Metas Ampliadas): Visitable. Retira una carta de tu mano y, a cambio, busca (2) en el mazo de habilidades, hechizos o artefactos (tú eliges cuál).
+• Prisión (Metas Ampliadas): Visitable. Ganas un héroe secundario y colocas su miniatura en esta zona; si ya tenías uno, ganas 3 de Oro en su lugar.
+• Biblioteca de la Iluminación (Metas Ampliadas): Revisitable. Paga 3 de Oro para retirar 1 carta de Estadística de tu mano o descarte y sustituirla por cualquier otra carta de Estadística; puedes hacerlo hasta dos veces por visita.
+• Fuerte de la Colina (Metas Ampliadas): Visitable. Refuerza inmediatamente una unidad de bronce o plata con un descuento de 3 de Oro en su coste de refuerzo (mínimo 0).
+• Taberna (Metas Ampliadas): Revisitable. Paga 7 de Oro para ganar un héroe secundario y obligar a un jugador enemigo a descartar 1 carta al azar de su mano.
+• Eje Estelar (expansión Inferno): Señalizable. Retira una carta de Estadística de tu mano y sustitúyela por una Carta de Característica Potenciada del mismo tipo (efecto único, no exige gastar Experto). No retires cubos de facción enemigos al visitarlo; una vez visitado por una facción, pasa a ser zona vacía solo para esa facción.
 
 2. REVISITABLES (Puedes regresar múltiples veces, sea moviéndote o pagando 1 PM si te encuentras ya ahí):
 • Mercadillo (Trading Post): Te permite intercambiar u ofrecer recursos según la Tabla de Comercio oficial, o destruir una carta innecesaria de tu mano (excluyendo cartas iniciales o flechas mágicas) a cambio de 1 de Oro.
@@ -933,53 +943,67 @@ Los Héroes de la IA disponen de un mazo simplificado sin recursos ni tablero de
     id: "faction_mission_books_compendium",
     title: "33. Compendio de Libros de Misiones de Facciones (Faction Mission Books)",
     category: "modes",
-    content: `Cada una de las 10 facciones cuenta con su libro de misiones oficial (Mission Book) que describe sus escenarios únicos (Clash / Cooperativo / Alianza) y su campaña histórica asimétrica:
+    content: `Nombres de campaña y escenarios verificados directamente contra los Libros de Misiones oficiales en español.
 
---- JUEGO BASE (The Restoration of Erathia) ---
+--- JUEGO BASE  ---
 
-1. CASTILLO (Castle) - Libro de Misiones de "¡Larga Vida a la Reina!":
-• Mapas Únicos: "Land Grab" (Reclamación de Tierras - 2P Clash), "Resource War" (Guerra de Recursos - 2-3P Clash), "The Holy Grail" (El Santo Grial - 2-3P Clash), "Allied Front" (Frente Aliado - 3-4P Alianza).
-• Misión de Campaña I: "Una Nueva Alianza" (A New Alliance): Pacta con las colonias de Grifos en las altas cumbres para consolidar tropas imperiales.
-• Misión de Campaña II: "Limpiando la Frontera" (Clearing the Border): Pacifica los caminos del east, derrotando rebeldes antes de la Ronda 12.
-• Misión de Campaña III: "Fiebre del Oro" (Gold Rush): Amasa una fortuna inmensa de oro en los valles templados para financiar el asedio real.
+1. CASTILLO - Libro de Misiones básico. Campaña en solitario "Larga Vida a la Reina" (héroe: Catherine o Rion; enemigo: Mazmorra)":
+  • Misión de Campaña I: "De Regreso al Hogar": (8 rondas) — libera al general Rion capturando la ciudad de Mazmorra.
+  • Misión de Campaña II: "Ángeles Guardianes": (10 rondas) — derrota a dos señores enemigos de la Mazmorra.
+  • Misión de Campaña III: "La Liberación de Steadwick": (13 rondas) — derrota al ejército final en la utopía del dragón.
+- Escenarios independientes (Enfrentamiento): 
+  • "El Retiro de los Monjes" (2 jugadores, 7 rondas, victoria por combate final entre héroes).
+  • "Un Mundo Feliz" (2-3 jugadores, 8-9 rondas, victoria por controlar 5+ minas).
+  • "Todos para Uno" (3 jugadores, 11 rondas, escenario de grial).
+- Escenarios independientes (Cooperativo): 
+  • "Los Campeones de Gelea" (2-3 jugadores, 11 rondas, cada facción debe colocar un cubo en la utopía del dragón).
+  • "Misión Maldita" (2-3 jugadores, 8-14 rondas según dificultad, limpiar el mazo de unidades neutrales de la utopía del dragón).
 
-2. MAZMORRA (Dungeon) - Libro de Misiones de "Los Señores de Nighon":
-• Mapas Únicos: "Tomb Raiders" (Saqueadores de Tumbas - 2P Clash), "Clash of Queens" (Duelo de Reinas - 2P Clash asimétrico Superficie/Subterráneo).
-• Misión de Campaña I: "Infiltración Profunda" (Deep Infiltration): Cruza pasajes subterráneos eludiendo patrullas imperiales para abrir un portal secundario.
-• Misión de Campaña II: "Los Túneles del Oro" (Gold Tunnels): Captura y flaggea ricas minas de oro subterráneas defendidas por temibles contempladores.
-• Misión de Campaña III: "Guardián de la Mazmorra" (Dungeon Guardian): Despierta al Dragón Negro ancestral en el foso volcánico central para aniquilar las fuerzas arcanas.
+2. MAZMORRA - Su campaña en solitario "La Sangre del Dragón" (héroe: Mutare o Alamar; enemigo: Castillo) se encuentra en el Libro de Misiones de Metas Ampliadas (Stretch Goals), junto con las campañas de Necrópolis y Torre.
+  • Misión de Campaña I: "Limpieza de Aspirantes": (11 rondas) — derrota a dos héroes enemigos de Castillo.
+  • Misión de Campaña II: "Sangre del Padre Dragón": (11 rondas) — derrota al ejército enemigo en la utopía del dragón.
+  • Misión de Campaña III: "Sed de Sangre": (10 rondas) — sobrevive a todos los ataques de los héroes enemigos.
 
-3. NECRÓPOLIS (Necropolis) - Libro de Misiones de "La Sombra de Sandro":
-• Mapas Únicos: "The Hunt" (La Caza - 1-2P Solo/Coop contra Dragón), "Brave New World" (Un Mundo Feliz - 2P Coop para colonizar archipiélago).
-• Misión de Campaña I: "La Ambición de Sandro" (Sandro's Ambition): Reúne fragmentos malditos y llévalos a la Colina del Esqueleto para forjar la Capa del Rey No-Muerto.
-• Misión de Campaña II: "La Cosecha Nocturna" (Night Harvest): Invade enclaves agrarios neutrales para levantar regimientos masivos de esqueletos de forma automática.
-• Misión de Campaña III: "El Trono del Rey Esqueleto" (The Skeletal Throne): Enfréntate y vence a los Caballeros de la Muerte disidentes para consolidar el control de Deyja.
+3. NECRÓPOLIS - Campaña "El Ascenso del Nigromante" (héroe: Sandro o Tamika; enemigos variados), en el Libro de Misiones de Metas Ampliadas.
+  • Misión de Campaña I: "Objetivo": (8 rondas) — derrota a ambos ejércitos enemigos.
+  • Misión de Campaña II: "Maestro": (10 rondas) — derrota a ambos ejércitos enemigos.
+  • Misión de Campaña III: "Duque Alarice": (11 rondas) — Derrota a todos los héroes enemigos y gana el combate en la utopía del dragón.
 
 --- FACCIONES DE EXPANSIONES ---
 
-4. MURALLAS (Rampart) - Libro de Misiones de "Valles Élficos":
-• Mapas Únicos: "Clear the Woods" (Despejar Bosques - 2P Clash), "The Dragon's Eye" (El Ojo del Dragón - 2P Coop por gemas de dragón verde).
-• Misión de Campaña I: "El Despertar" (The Awakening): Defiende los claros sagrados de AvLee ante patrullas de Necrópolis; erige viviendas élficas antes de la ronda 9.
-• Misión de Campaña II: "La Cacería del Unicornio" (Unicorn Hunt): Encuentra y amansa al Unicornio Sagrado para purificar los valles infectados de plaga necromántica.
-• Misión de Campaña III: "El Bastión de las Hojas" (Leaf Bastion): Fortifica la ciudad con Acantilados de Dragón Dorado para resistir un violento asedio de Mazmorra.
+4. MURALLAS - Libro de Misiones de Murallas. Campaña "La Venganza se Sirve Fría" (héroe: Gelu/Gem; enemigo: Necrópolis):
+  • Misión de Campaña I: "En Busca de un Asesino": (11 rondas).
+  • Misión de Campaña II: "Paz Definitiva": (13 rondas).
+  • Misión de Campaña III: "Agentes de la Venganza": (12 rondas).
+- Escenarios independientes (Alianza): 
+  • "El Desafío" (4 jugadores, 11-14 rondas, escenario de grial).
+- Escenarios independientes (Enfrentamiento): 
+  • "Oro Enano" (2-3 jugadores, 10 rondas, victoria por acumular 75 de oro).
 
-5. FORTALEZA (Fortress) - Libro de Misiones de "Domando la Ciénaga":
-• Mapas Únicos: "Swamp Skirmish" (Escaramuza - 2P Clash en lodo), "Taming the Beast" (Domando la Bestia - 2P Coop para pacificar Hidras salvajes).
-• Misión de Campaña I: "La Rebelión del Pantano" (Swamp Revolt): Tazar une a gnolls y lizardmen para destruir las alcabalas e interceptores de Castillo.
-• Misión de Campaña II: "Entre Dos Fuegos" (Between Two Fires): Resiste en tu metrópolis el asalto de pinza simultáneo de dos ejércitos de la IA (Castillo e Inferno).
-• Misión de Campaña III: "La Guarida de las Hidras de Caos": Navega el río central y desciende al Templo Olvidado para reclamar la Hidra de Caos como unidad legendaria.
+5. FORTALEZA - Libro de Misiones de Fortaleza. Campaña "Jugando con Fuego" (héroe: Adrienne o Wystan; enemigo: Necrópolis):
+  • Misión de Campaña I: "Cosecha de Ciudades": (13 rondas).
+  • Misión de Campaña II: "La Marcha de los No Muertos": (12 rondas).
+  • Misión de Campaña III: "El Incendio de Tatalia": (14 rondas).
+- Escenarios independientes (Alianza): 
+  • "Arrogancia" (4 jugadores, escenario de grial).
+- Escenarios independientes (Enfrentamiento): 
+  • "En Busca del Grial" (2-3 jugadores, escenario de grial).
 
-6. TORRE (Tower) - Libro de Misiones de "El Ascenso Alquímico":
-• Mapas Únicos: "Alchemical Duel" (Duelo Alquímico - 2P Clash por mercurio), "Arcane Secrets" (Secretos Arcanos - 2P Coop descifrando manuscritos helados).
-• Misión de Campaña I: "Nubes de Magos" (Mage Clouds): Junta riquezas de Oro para construir la Cofradía de Magos Nivel IV e invocar Titanes arcanos.
-• Misión de Campaña II: "El Secreto del Alquimista" (The Alchemist's Secret): Consigue azufre y mercurio en glaciares para reactivar Gólems de Hierro inmunes a conjuros.
-• Misión de Campaña III: "El Portal de las Tormentas" (The Storm Portal): Defiende el portal de transmutación durante 5 rondas contra hordas elementales enfurecidas.
+6. TORRE - Su campaña en solitario "El Matadragones" (héroe: Dracon o Solmyr) está en el Libro de Misiones de Metas Ampliadas.
+  • Misión de Campaña I: "Dragones de Cristal": (9 rondas).
+  • Misión de Campaña II: "Dragones Herrumbrosos": (11 rondas, requiere expansión Fortaleza).
+  • Misión de Campaña III: "Dragones Hada" (13 rondas, requiere expansión Murallas).
+  • Misión de Campaña IV: "Dragones Azures": (11 rondas).
 
-7. INFIERNO (Inferno) - Libro de Misiones de "Dominio del Inframundo":
-• Mapas Únicos: "Hellish Incursion" (Incursión - 2P Clash en baldosa inflamable), "Devilish Pact" (Pacto Diabólico - 2P Coop para corromper templos de Castillo).
-• Misión de Campaña I: "Invasión de Azufre" (Sulfur Incursion): Abre 3 Portales del Abismo en fronteras humanas para invocar hordas de diablillos en la ronda 9.
-• Misión de Campaña II: "Cosecha de Almas" (Soul Harvest): Asalta villas y consagra prisioneros para saciar la sed de recursos de los Archidiablos.
-• Misión de Campaña III: "El Trono de Fuego Infernal" (Hellfire Throne): Lucha contra el Arcángel Guardián guiando a tus tropas sobre ríos de lava ardiente destructivos.
+7. INFIERNO (Inferno) - Libro de Misiones de Inferno. No incluye campaña en solitario; solo escenarios independientes:
+  • Misión de Campaña I: 
+  • Misión de Campaña II: 
+  • Misión de Campaña III: 
+- Escenarios independientes (Alianza): 
+  • "El Cuento de las Dos Tierras" (4 jugadores, 11-13 rondas, victoria por control territorial o captura de ciudad).
+- Escenarios independientes (Enfrentamiento): 
+  • "Destino Manifiesto" (3 jugadores, 12-14 rondas)
+  • "Carpe Diem" (2 jugadores, 14 rondas, escenario de Ciudad Aleatoria).
 
 8. BASTIÓN (Stronghold) - Libro de Misiones de "El Festival de la Vida":
 • Mapas Únicos: "Savage Lands" (Tierras Salvajes - 2P Clash de ataque potenciado), "Tribal Unity" (Unidad Tribal - 2P Coop para unificar clanes orcos).
@@ -2099,5 +2123,122 @@ Mapa: igual al anterior más 1 loseta central (VII-VIII) con la zona de la utop�
 
 ## 3. HERENCIA INESPERADA
 Mapa: 2 losetas iniciales (I) + 2 cercanas con obelisco (una por jugador) + 2 cercanas sin obelisco + 2 centrales (VI-VII) con las zonas del grial y la utopía del dragón + 6 lejanas (II-III). Mismos recursos/ingresos/edificios/unidades iniciales. Regla especial: al visitar un obelisco, elige entre (a) lanzar 1 dado de recursos y 1 de tesoro y quedarte con el resultado de uno de los dos, o (b) buscar(2) en el mazo de artefactos. No se puede visitar la zona del grial hasta haber visitado 2 obeliscos diferentes, o que otro héroe ya haya cogido la ficha una vez; conseguirla cuesta 2 PM. Un jugador gana 3 PV adicionales al final del escenario si controla la utopía del dragón Y tiene la ficha de grial. Condición de victoria: al final de cualquier ronda en que alguien controle la utopía del dragón Y tenga la ficha de grial, se juega 1 ronda más y termina la partida. Si esto no ocurre antes del final de la ronda 14, la partida acaba igualmente y se cuentan los PV.`
+  },
+  {
+    id: "designers_commentary_faq",
+    title: "36. FAQ Oficial del Diseñador (Respuesta Astrológica / Designer's Commentary)",
+    category: "faq",
+    content: `Aclaraciones oficiales publicadas por Archon Studio ante dudas frecuentes de jugadores. Complementan (no sustituyen) el reglamento base.
+
+JERARQUÍA DE REGLAS: Ante un conflicto, prevalecen en este orden: cartas en juego > cartas de unidad > tableros de ciudad > libros de misión > libro de reglas.
+
+MECÁNICAS GENERALES:
+• No se reciben ingresos de producción en la 1ª ronda; solo los recursos iniciales del escenario.
+• En modo Alianza, los equipos se activan alternadamente; dentro de un equipo, los jugadores deciden en cada ronda quién va primero.
+• Si un escenario no indica dónde colocar una miniatura, se coloca por defecto en la ciudad o loseta inicial.
+• Al entrar en una zona es obligatorio resolverla (empezando por el combate, si lo hay).
+• Volver a usar los efectos de una zona ya visitada (p. ej. tras renovarse por un evento) exige gastar 1 PM de nuevo, aunque el héroe ya esté ahí.
+• Señalizar un asentamiento ya señalizado por otro exige elegir un bonificador de la lista, pero sin el extra de "primera captura"; no se puede señalizar un asentamiento ya controlado por ti o tu aliado.
+• Las líneas finas de una loseta separan zonas transitables; las líneas gruesas bloquean el paso salvo que una regla o carta lo permita explícitamente.
+• En escenarios con grial, si hay dos zonas de grial solo existe una ficha: una vez recogida, la otra zona pasa a considerarse vacía (aunque siga pudiendo requerir combate al entrar).
+• Para quitarte la moral negativa, la única vía es ganar moral positiva (la nueva ficha positiva sustituye/anula la negativa). Necrópolis nunca gana ni pierde moral.
+• Una carta de moral que da +1 a ataque/defensa/poder de combate se juega antes de empezar el combate y solo se aplica al primer ataque o defensa que se resuelva; se descarta justo después de aplicarse.
+
+HÉROES:
+• Las estadísticas y habilidad inicial de la carta de héroe solo sirven para construir el mazo inicial; no se "usan" después. Las 3 cartas de especialidad se añaden en los niveles I, IV y VI.
+• Pueden coexistir 2 héroes en la misma loseta, pero nunca en la misma zona; se puede atravesar una zona con otro héroe (propio o aliado) pero no terminar el movimiento ahí.
+• El héroe secundario nunca gana experiencia: si un efecto le daría Exp, se ignora esa parte (el resto del efecto sí se aplica).
+• Cada 2 puntos de Exp = 1 nivel de héroe.
+• Las cartas de especialidad que mencionan un tipo genérico (p. ej. "dragones" en las de Mutare) afectan a toda unidad cuyo nombre contenga esa palabra.
+• Los PM del héroe principal (3) y del secundario (2) se llevan por separado y se pueden repartir libremente entre turnos.
+• Es posible superar el límite normal de 3 usos de Experto por ronda gracias a artefactos u otros efectos.
+
+CIUDAD:
+• Puedes construir la cofradía de magos y usar la ficha de libro de hechizos en la MISMA ronda solo si no la usas dos veces (construir + comprar hechizos son la misma acción de ficha, limitada a una vez por ronda); sí conservas los hechizos que la cofradía entrega al construirse.
+• Capturar la ciudad de otra facción no permite usar sus edificios salvo que el escenario lo indique.
+• La ficha de población permite, una vez por ronda, reclutar/reforzar tantas unidades como puedas pagar, o reclutar un héroe secundario (acciones excluyentes entre sí en esa ronda: unidades O héroe secundario).
+• El PM extra de la Alcaldía se puede asignar a cualquiera de tus héroes, a tu elección.
+
+COMBATE:
+• Si una carta pide elegir varios objetivos, quien la juega decide con libertad (siempre que respete el texto de la carta); la palabra "hasta" hace la elección opcional en vez de obligatoria.
+• Sí existe "fuego amigo": hechizos/habilidades de área (Anillo Gélido, Inferno, Bola de Fuego, liches, dragones dorados...) pueden dañar a tus propias unidades si son las únicas adyacentes.
+• Las cartas con símbolo de efecto instantáneo se pueden jugar tras un ataque y antes del contraataque.
+• Puedes reclutar/reforzar unidades justo antes de un combate contra otro jugador, si aún no usaste la ficha de población esa ronda.
+• Durante un asedio, el defensor elige en cuál de las 4 casillas centrales del tablero de combate coloca la carta de puerta.
+• El combate rápido de un héroe secundario se calcula según el NIVEL DEL HÉROE PRINCIPAL (los secundarios no tienen nivel propio).
+• El hechizo Resurrección debe lanzarse en el momento exacto en que los PS de una unidad llegan a 0; si esto ocurre durante un ataque, la unidad resucitada no contraataca (el ataque original queda anulado).
+• Los hechizos ignoran la Defensa por completo: aplican una cantidad fija de daño y no se ven afectados por el dado de ataque (que solo se tira para ataques de unidades).
+• Las habilidades que "ignoran contraataques" se aplican a TODOS los ataques de esa unidad en la ronda, no solo al primero.
+• La Tienda de Auxilio se puede usar antes de que la unidad enemiga contraataque, hasta una vez por ronda.
+• Cualquier daño de al menos 1 punto (incluido el de hechizos) retira la ficha de parálisis de una unidad, aunque provenga de un aliado.
+• Si un combate contra unidades neutrales termina sin que ningún bando pierda todas sus unidades y no se paga PM para prolongarlo, el héroe se retira automáticamente a la última zona visitada; al reentrar la zona se roban unidades neutrales nuevas.
+• "Adyacente" en el tablero de combate 4×5 es solo ortogonal (no diagonal); en el tablero grande de Campo de Batalla sí cuentan como adyacentes las casillas que comparten borde.
+• El hechizo Terremoto solo afecta a obstáculos de muralla/puerta, no a otros obstáculos. El hechizo Retirar Obstáculo no puede retirar unidades, pero sí murallas, puertas y muros de fuego.
+• El obstáculo creado por el hechizo Muro de Fuego, a diferencia de otros obstáculos, no impide la entrada de unidades en esa zona (solo aplica su efecto de daño).
+
+UNIDADES (ejemplos de rulings frecuentes):
+• Un ataque múltiple de una unidad exige tirar el dado de ataque por cada golpe por separado; los efectos instantáneos solo modifican el primer ataque de esa activación.
+• Los efectos Pasivos de las cartas de unidad SOLO funcionan durante el combate, nunca en el mapa (p. ej. Pegasos no reduce el poder de hechizos enemigos fuera de combate).
+• Un dragón que ataca en línea a 2 unidades solo recibe contraataque de la unidad adyacente a él.
+• El hechizo Bendición hace ignorar el resultado del dado de ataque, por lo que NO activa habilidades que dependen de resolver ese dado (p. ej. la defensa extra de los Zombis).
+• Habilidades que anulan/ignoran hechizos (p. ej. Dragones Negros en su cara "manada") se aplican también a los hechizos propios del jugador que los controla.
+
+CARTAS:
+• Las cartas de especialidad que imitan hechizos NO son hechizos: no cuentan para el límite de un hechizo por ronda ni se benefician de escuelas de magia u otros modificadores exclusivos de hechizos.
+• Una carta de conocimiento solo puede recuperar cartas de HECHIZO del descarte; nunca cartas de especialidad.
+• Solo se puede tener 1 carta de efecto permanente activa a la vez (mecánica introducida en Murallas); jugar otra obliga a descartar la anterior primero.
+• Cuando una carta pide descartar cierto número de cartas, la propia carta que se está jugando NO cuenta en ese recuento.
+• Si coinciden una carta de Anuncio Astrológico y una de Evento (expansión Fortaleza), se resuelven simultáneamente si es posible; si no, primero el Anuncio Astrológico (por orden de turno desde el jugador inicial) y después el Evento (en sentido horario desde quien la robó).
+• Diplomacia solo permite reclutar unidades de una categoría (bronce/plata/oro/azur) si tienes la vivienda del nivel correspondiente.
+• Una carta con el símbolo de Necrópolis, si la roba otra facción, puede enseñarse y descartarse para robar otra, o quedarse en el mazo sin poder usarla nunca.
+
+DIFERENCIAS CON EL VIDEOJUEGO ORIGINAL (dudas frecuentes de quienes conocen el videojuego):
+• No hace falta volver a la ciudad para reclutar: se puede reclutar desde cualquier punto del mapa, una vez por ronda.
+• Cada Choza de la Bruja solo se puede visitar una vez por partida (no ilimitadas veces como en el videojuego).
+• Solo se puede reclutar 1 héroe secundario adicional (no varios), y ya está disponible en el momento de reclutarlo.
+• La ficha de moral positiva NO otorga una activación extra de unidad (a diferencia del videojuego); solo permite una de las 3 acciones del reglamento base.
+• La habilidad Resistencia sí puede anular cualquier hechizo enemigo (más flexible que en el videojuego).
+• Solo Nigromancia está restringida a una facción concreta (Necrópolis); el resto de hechizos y efectos son universales salvo que la carta indique lo contrario.
+• Por norma general se lanza 1 hechizo por ronda de combate, salvo que un efecto (p. ej. cartas de conocimiento en su versión Experto) amplíe ese límite.`
+  },
+  {
+    id: "inferno_mechanics_scenarios",
+    title: "38. Expansión Inferno: Mecánicas Nuevas y Escenarios Independientes",
+    category: "modes",
+    content: `MECÁNICAS NUEVAS:
+• Carta de Característica Potenciada: versión de una carta de Estadística con un único efecto (sin distinguir básico/avanzado), por lo que usarla nunca consume tu límite de Experto. Se obtienen sustituyendo una carta de Estadística normal en un Eje Estelar, o mediante ciertos artefactos, habilidades y anuncios astrológicos.
+• Inmunidad de los Efrits: tanto la unidad de facción Efrits como la unidad neutral homónima ignoran el daño (no otros efectos) de hechizos de la escuela de fuego.
+
+ESCENARIOS INDEPENDIENTES (no forman parte de una campaña; utilizables sueltos):
+
+Modo Alianza — "El Cuento de las Dos Tierras" (4 jugadores, 2 vs 2, 11-13 rondas): Mapa con 2 áreas de inicio (una por equipo). Victoria: la alianza controla 12 losetas al final de una ronda, o captura y mantiene una ciudad enemiga 2 rondas. Visitar un obelisco da moral positiva. Contrarreloj: en las rondas 4 y 9 todos lanzan y resuelven 1 dado de recursos.
+
+Modo Enfrentamiento — "Destino Manifiesto" (3 jugadores, 12-14 rondas): cada jugador empieza con vivienda de bronce y cofradía de magos. Victoria: controlar 7 losetas al final de una ronda, o capturar y mantener una ciudad enemiga 2 rondas (todos los que cumplan la condición ganan). Contrarreloj: en las rondas 4 y 9 cada héroe gana 1 PM.
+
+Modo Enfrentamiento — "Carpe Diem" (2 jugadores, 14 rondas): incluye una loseta central con Ciudad Aleatoria. Victoria: conquistar la Ciudad Aleatoria de la loseta central (si nadie lo logra antes del final de la ronda 14, empate). Un héroe en la loseta central no puede entrar en la loseta inicial enemiga. Contrarreloj: en las rondas 3, 6 y 9 el héroe principal del segundo jugador gana 1 PM.
+
+Regla común a los 3 escenarios: se recomienda (opcional) retirar o ignorar cartas que permitan atravesar bordes amarillos del mapa (p. ej. Alas de Ángel), para mantener el equilibrio de las zonas de inicio bloqueadas.`
+  },
+  {
+    id: "sg_campaigns_reference",
+    title: "37. Referencia de Escenarios: Campañas de Metas Ampliadas (Mazmorra, Necrópolis, Torre)",
+    category: "modes",
+    content: `Ficha de referencia rápida (sin narrativa/lore) de las campañas en solitario de la expansión "Metas Ampliadas". Introducen las Cartas de Efecto Permanente y las Escuelas de Magia (aire/fuego/tierra/agua) como mecánicas nuevas, además de reglas para jugar con miniaturas (si robas una unidad neutral duplicada, ya en tu ejército, o de una facción controlada por un jugador, descártala y roba otra).
+
+CAMPAÑA DE LA MAZMORRA — "La Sangre del Dragón" (héroe: Mutare/Alamar):
+1. Limpieza de Aspirantes (11 rondas): Victoria = derrotar a los 2 héroes enemigos (Caomham y Preuet). Derrota = perder cualquier combate. Nivel de experiencia máximo del héroe: 4. No se pueden construir viviendas de oro ni reclutar un 2º héroe.
+2. Sangre del Padre Dragón (11 rondas): Victoria = derrotar al ejército en la utopía del dragón (derrotar al héroe rival es opcional). Derrota = que el enemigo llegue antes a la utopía del dragón. La dificultad de todos los combates del mapa sube +1 desde la ronda 1.
+3. Sed de Sangre (10 rondas): Victoria = sobrevivir a los ataques de 4 héroes enemigos consecutivos (3 señores + Ordwald). Derrota = perder cualquier combate. Se pueden reclutar dragones (máx. 2) en la utopía del dragón; no se pueden usar mantícoras.
+
+CAMPAÑA DE LA NECRÓPOLIS — "El Ascenso del Nigromante" (héroe: Sandro/Tamika):
+1. Objetivo (8 rondas): Victoria = derrotar a los 2 héroes enemigos (Shiva y Jeddite). Nivel de experiencia máximo del héroe: 4.
+2. Maestro (10 rondas): Victoria = derrotar a los 2 héroes enemigos (Ivor y Ethric). Derrota también si pierdes tu ciudad. Nivel de experiencia máximo del héroe: 5.
+3. Duque Alarice (11 rondas): Victoria = derrotar a todos los héroes enemigos (Thorgrim, Melodia, duque Alarice) y ganar el combate final en la utopía del dragón.
+
+CAMPAÑA DE LA TORRE — "El Matadragones" (héroe: Dracon/Solmyr):
+1. Dragones de Cristal (9 rondas): Victoria = visitar un obelisco y ganar el combate que aparece ahí.
+2. Dragones Herrumbrosos (11 rondas, requiere expansión Fortaleza): Victoria = capturar todas las minas y el estanque de gemas, derrotando a los ejércitos que las defienden.
+3. Dragones Hada (13 rondas, requiere expansión Murallas): Victoria = capturar todos los asentamientos del mapa y ganar el combate final en la Caja de Pandora.
+4. Dragones Azures (11 rondas): Victoria = visitar los 3 obeliscos (cada uno con un combate distinto: cristal, negros, azures) y después derrotar al ejército final en la utopía del dragón. Tras controlar el primer obelisco, la dificultad de todos los combates del mapa sube +1.`
   }
 ];

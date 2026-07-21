@@ -38,8 +38,8 @@ interface GameTimerProps {
   setSelectedFaction: React.Dispatch<React.SetStateAction<string>>;
   FACTIONS: Array<{ id: string; name: string; color: string }>;
   handleSetPlayerCount: (count: number) => void;
-  prepMode: 'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo';
-  setPrepMode: React.Dispatch<React.SetStateAction<'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo'>>;
+  prepMode: 'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo' | 'campodebatalla';
+  setPrepMode: React.Dispatch<React.SetStateAction<'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo' | 'campodebatalla'>>;
 }
 
 export default function GameTimer({
@@ -56,6 +56,7 @@ export default function GameTimer({
   setIsTotalRunning,
   turnLimit,
   turnSeconds,
+  setTurnSeconds,
   isTurnRunning,
   setIsTurnRunning,
   handleNextTurn,
@@ -250,9 +251,34 @@ export default function GameTimer({
             </button>
             <button
               type="button"
-              onClick={() => { setTotalSeconds(0); setIsTotalRunning(false); }}
+              onClick={() => {
+                setTotalSeconds(0);
+                setIsTotalRunning(false);
+                setRound(1);
+                setActivePlayerIndex(0);
+                setTurnSeconds(turnLimit);
+                setIsTurnRunning(false);
+                setPlayers(prev => prev.map(p => ({
+                  ...p,
+                  gold: 15,
+                  materials: 3,
+                  valuables: 1,
+                  actionBuildUsed: false,
+                  actionRecruitUsed: false,
+                  actionMageGuildUsed: false,
+                  goldGen: 10,
+                  materialsGen: 2,
+                  valuablesGen: 1,
+                  mainHeroMove: 3,
+                  secHeroMove: 2,
+                  hasSecHero: false,
+                  hasMageGuild: false,
+                  incomeCollectedRound: undefined,
+                  moral: 'neutral'
+                })));
+              }}
               className="px-2 bg-slate-950 border border-slate-800 rounded-xl text-[10px] font-mono text-slate-500 hover:text-red-400 cursor-pointer transition"
-              title="Resetear cronómetro de sesión"
+              title="Resetear partida completa (dejar todo a su estado inicial)"
             >
               Rst
             </button>
@@ -326,7 +352,13 @@ export default function GameTimer({
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               <button
                 type="button"
-                onClick={() => setIsTurnRunning(!isTurnRunning)}
+                onClick={() => {
+                  const nextTurnRunning = !isTurnRunning;
+                  setIsTurnRunning(nextTurnRunning);
+                  if (nextTurnRunning && !isTotalRunning) {
+                    setIsTotalRunning(true);
+                  }
+                }}
                 className={`py-3 px-4 rounded-xl text-xs font-bold cursor-pointer transition-all flex items-center justify-center gap-2 shadow-md ${
                   isTurnRunning 
                     ? 'bg-amber-700 hover:bg-amber-800 text-white hover:shadow-amber-950/20' 
@@ -403,6 +435,7 @@ export default function GameTimer({
               setPlayers={setPlayers}
               toggleMovementPoint={toggleMovementPoint}
               toggleActivePlayerAction={toggleActivePlayerAction}
+              isTotalRunning={isTotalRunning}
             />
           )}
 

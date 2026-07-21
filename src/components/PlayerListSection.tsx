@@ -15,7 +15,7 @@ interface PlayerListSectionProps {
   selectedFaction: string;
   setSelectedFaction: React.Dispatch<React.SetStateAction<string>>;
   FACTIONS: Array<{ id: string; name: string; color: string }>;
-  prepMode: 'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo';
+  prepMode: 'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo' | 'campodebatalla';
   hasGameStarted: boolean;
 }
 

@@ -29,6 +29,8 @@ export function useGameTimer() {
       }, 1000);
     } else {
       if (interval) clearInterval(interval);
+      // Cuando se pausa el tiempo total, se debe pausar también el turno activo
+      setIsTurnRunning(false);
     }
     return () => {
       if (interval) clearInterval(interval);

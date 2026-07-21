@@ -635,10 +635,10 @@ export default function HeroesViewer() {
                                 </span>
                                 <div className="min-w-0">
                                   <span className="text-[10px] uppercase font-mono text-slate-200 font-semibold block tracking-wider mb-0.5">
-                                    Busca (2) en Habilidades
+                                    Se Busca (2) en el Mazo de Habilidades
                                   </span>
-                                  <p className="text-[11px] text-slate-400 leading-relaxed">
-                                    Añade <strong className="text-amber-400 font-medium">una</strong> carta a tu mano y devuelve la otra al descarte de Habilidades.
+                                  <p className="text-[11px] text-slate-400 leading-relaxed font-sans">
+                                    Busca (2) cartas en el <strong className="text-amber-400 font-semibold">Mazo de Habilidades</strong> para añadir <strong className="text-amber-400 font-semibold">1 carta de Habilidad</strong> a tu Mazo (añade una a tu mano/mazo y devuelve la otra al descarte).
                                   </p>
                                 </div>
                               </div>

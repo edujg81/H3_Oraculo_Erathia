@@ -53,14 +53,14 @@ export interface RuleSection {
   category: 'general' | 'setup' | 'combat' | 'faq' | 'components' | 'modes' | 'map' | 'town' | 'magic' | 'heroes' | 'units' | 'skills';
 }
 
-export function getPlayerLimit(mode: 'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo'): number {
+export function getPlayerLimit(mode: 'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo' | 'campodebatalla'): number {
   switch (mode) {
     case 'campaña':
       return 1;
     case 'torneo':
+    case 'campodebatalla':
       return 2;
     case 'enfrentamiento':
-      return 3;
     case 'cooperativo':
       return 3;
     case 'alianza':
