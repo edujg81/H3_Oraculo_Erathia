@@ -5,6 +5,7 @@ import { ALL_BOARD_GAME_SKILLS } from './skillsData';
 import { townsData, TownData } from './townsData';
 import { SPELLS_DATA } from './spellsData';
 import { LOCATIONS_DATA } from './locationsData';
+import { WAR_MACHINES } from './warMachinesData';
 
 /**
  * Este módulo transforma las bases de datos "de UI" (heroesData, unitsData,
@@ -312,6 +313,38 @@ function buildLocationsCatalogIndex(): string {
 }
 
 // ---------------------------------------------------------------------------
+// MÁQUINAS DE GUERRA
+// ---------------------------------------------------------------------------
+
+function buildWarMachinesKB(): RuleSection[] {
+  return WAR_MACHINES.map((wm) => {
+    const content = `Coste en Herrería: ${wm.costBlacksmith} Oros
+Coste en Fábrica: ${wm.costFactory} Oros
+Puntos de Estructura: ${wm.hp}
+Momento de activación (Timing): ${wm.timing}
+Expansión: ${wm.expansion}
+Efecto base permanente: ${wm.baseEffect}
+Habilidad asociada: ${wm.associatedSkill}
+Efecto habilidad nivel Básico: ${wm.skillNormalEffect}
+Efecto habilidad nivel Experto: ${wm.skillExpertEffect}`;
+
+    const id = `warmachine-${slugify(wm.name)}`;
+    registerAliases(id, [wm.name, wm.id, wm.associatedSkill !== 'Ninguna' ? wm.associatedSkill : '']);
+
+    return {
+      id,
+      title: `Máquina de Guerra: ${wm.name}`,
+      content,
+      category: 'combat' as const,
+    };
+  });
+}
+
+function buildWarMachinesCatalogIndex(): string {
+  return WAR_MACHINES.map(wm => `- ${wm.name} (${wm.expansion}, Habilidad asociada: ${wm.associatedSkill})`).join('\n');
+}
+
+// ---------------------------------------------------------------------------
 // EXPORTS
 // ---------------------------------------------------------------------------
 
@@ -321,6 +354,7 @@ export const skillsKB = buildSkillsKB();
 export const townsKB = buildTownsKB();
 export const spellsKB = buildSpellsKB();
 export const locationsKB = buildLocationsKB();
+export const warMachinesKB = buildWarMachinesKB();
 
 /** Todas las secciones "extra" (no-reglas) disponibles, para búsqueda por palabra clave. */
 export const extraEntitySections: RuleSection[] = [
@@ -330,6 +364,7 @@ export const extraEntitySections: RuleSection[] = [
   ...townsKB,
   ...spellsKB,
   ...locationsKB,
+  ...warMachinesKB,
 ];
 
 /**
@@ -353,7 +388,11 @@ ${buildTownsCatalogIndex()}
 ${buildSpellsCatalogIndex()}
 
 === ÍNDICE DE LUGARES DEL MAPA POR TIPO ===
-${buildLocationsCatalogIndex()}`;
+${buildLocationsCatalogIndex()}
+
+=== ÍNDICE DE MÁQUINAS DE GUERRA ===
+${buildWarMachinesCatalogIndex()}`;
+
 
 /**
  * Devuelve las secciones detalladas (héroes/unidades/habilidades/ciudades)
