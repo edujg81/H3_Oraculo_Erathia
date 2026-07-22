@@ -29,7 +29,7 @@ export const SPELLS_DATA: LocalSpellCard[] = [
     "name": "Escudo aéreo",
     "school": "Aire",
     "type": "Básica",
-    "effect": "Continuo: Hasta el final del combate, la unidad seleccionada gana * cuando es atacada por una unidad a distancia.",
+    "effect": "En Curso: Hasta el final del combate, la unidad seleccionada gana * cuando es atacada por una unidad a distancia.",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Aire).",
     "isBoostable": true,
     "powerLevels": {
@@ -49,11 +49,179 @@ export const SPELLS_DATA: LocalSpellCard[] = [
     }
   },
   {
+    "id": "anti_magic",
+    "name": "Antimagia",
+    "school": "Tierra",
+    "type": "Básica",
+    "effect": "En Curso: Hasta el final del combate, la unidad * seleccionada no puede ser el objetivo de hechizos.",
+    "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Tierra).",
+    "isBoostable": true,
+    "powerLevels": {
+      "0": "* Bronce.",
+      "1": "* Bronce o Plata.",
+      "2": "* Bronce o Plata u Oro."
+    },
+    "boosterEffect": "Instantáneo: +1 Poder",
+    "flavorText": "Un hechizo místico de la Escuela de Aire codificado en los sagrados pergaminos de Erathia.",
+    "notes": "Sigue las reglas generales de lanzamiento descritas en el manual oficial.",
+    "colorTheme": {
+      "bg": "from-cyan-950/40 to-slate-900/80",
+      "border": "border-cyan-800/50",
+      "glow": "shadow-[0_0_15px_rgba(6,182,212,0.1)]",
+      "text": "text-cyan-400",
+      "accent": "bg-cyan-500/10 text-cyan-300 border-cyan-500/30"
+    }
+  },
+  {
+    "id": "chain_lightning",
+    "name": "Rayo en cadena",
+    "school": "Aire",
+    "type": "Avanzada",
+    "effect": "Activación: Selecciona una unidad y las 2 unidades más cercanas a ella.\nDistribuye * Heridas, empezando por la primera unidad seleccionada.",
+    "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Aire).",
+    "isBoostable": true,
+    "powerLevels": {
+      "0": "* 1/1/1 Heridas.",
+      "2": "* 2/1/1 Heridas.",
+      "4": "* 3/2/1 Heridas."
+    },
+    "boosterEffect": "Instantáneo: +1 Poder",
+    "flavorText": "Un relámpago devastador salta de unidad en unidad, calcinando todo a su paso.",
+    "notes": "El <damage> de Relámpago en Cadena también se aplica a unidades aliadas. Si varias unidades se encuentran a la misma distancia del objetivo de este hechizo, el lanzador elige cuál de ellas recibe el segundo daño y cuál el tercero.",
+    "colorTheme": {
+      "bg": "from-cyan-950/40 to-slate-900/80",
+      "border": "border-cyan-800/50",
+      "glow": "shadow-[0_0_15px_rgba(6,182,212,0.1)]",
+      "text": "text-cyan-400",
+      "accent": "bg-cyan-500/10 text-cyan-300 border-cyan-500/30"
+    }
+  },
+  {
+    "id": "counterstrike",
+    "name": "Contragolpe",
+    "school": "Aire",
+    "type": "Avanzada",
+    "effect": "Instantáneo: Retira el cubo negro de la carta de unidad * seleccionada; la unidad puede contraatacar de nuevo:",
+    "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Aire).",
+    "isBoostable": true,
+    "powerLevels": {
+      "0": "* Bronce.",
+      "2": "* Bronce o Plata.",
+      "4": "* Bronce o Plata u Oro."
+    },
+    "boosterEffect": "Instantáneo: +1 Poder",
+    "flavorText": "Un hechizo místico de la Escuela de Tierra codificado en los sagrados pergaminos de Erathia.",
+    "notes": "Sigue las reglas generales de lanzamiento descritas en el manual oficial.",
+    "colorTheme": {
+      "bg": "from-emerald-950/40 to-slate-900/80",
+      "border": "border-emerald-800/50",
+      "glow": "shadow-[0_0_15px_rgba(16,185,129,0.1)]",
+      "text": "text-emerald-400",
+      "accent": "bg-emerald-500/10 text-emerald-300 border-emerald-500/30"
+    }
+  },
+  {
+    "id": "dimension_door",
+    "name": "Puerta dimensional",
+    "school": "Aire",
+    "type": "Avanzada",
+    "effect": "Mapa: Mueve a un héroe hasta * zona(s).\nIgnora cualquier obstáculo y zona entre medias y resuelve la última de forma normal.",
+    "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Aire).",
+    "isBoostable": true,
+    "powerLevels": {
+      "0": "* 1.",
+      "2": "* 2.",
+      "4": "* 3."
+    },
+    "boosterEffect": "Instantáneo: +1 Poder",
+    "flavorText": "Un hechizo místico de la Escuela de Aire codificado en los sagrados pergaminos de Erathia.",
+    "notes": "La Puerta Dimensional sólo puede mover al Héroe del lanzador, no a un Héroe controlado por cualquier otro jugador. Puede utilizarse para saltar zonas bloqueadas.",
+    "colorTheme": {
+      "bg": "from-cyan-950/40 to-slate-900/80",
+      "border": "border-cyan-800/50",
+      "glow": "shadow-[0_0_15px_rgba(6,182,212,0.1)]",
+      "text": "text-cyan-400",
+      "accent": "bg-cyan-500/10 text-cyan-300 border-cyan-500/30"
+    }
+  },
+  {
+    "id": "disrupting_ray",
+    "name": "Rayo disruptor",
+    "school": "Aire",
+    "type": "Básica",
+    "effect": "En Curso: Hasta el final del combate, la unidad * seleccionada no puede usar su habilidad especial.",
+    "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Aire).",
+    "isBoostable": true,
+    "powerLevels": {
+      "0": "* Bronce.",
+      "1": "* Bronce o Plata.",
+      "2": "* Bronce o Plata u Oro."
+    },
+    "boosterEffect": "Instantáneo: +1 Poder",
+    "flavorText": "Un hechizo místico de la Escuela de Tierra codificado en los sagrados pergaminos de Erathia.",
+    "notes": "Sigue las reglas generales de lanzamiento descritas en el manual oficial.",
+    "colorTheme": {
+      "bg": "from-emerald-950/40 to-slate-900/80",
+      "border": "border-emerald-800/50",
+      "glow": "shadow-[0_0_15px_rgba(16,185,129,0.1)]",
+      "text": "text-emerald-400",
+      "accent": "bg-emerald-500/10 text-emerald-300 border-emerald-500/30"
+    }
+  },
+  {
+    "id": "earthquake",
+    "name": "Terremoto",
+    "school": "Tierra",
+    "type": "Básica",
+    "effect": "Instantáneo: Durante el asedio de una ciudad:",
+    "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Tierra).",
+    "isBoostable": true,
+    "powerLevels": {
+      "0": "Retira 1 obstáculo de puerta o muralla de tu elección.",
+      "1": "Retira 2 obstáculos de puerta o muralla de tu elección..",
+      "2": "Cada unidad adyacente a un obstáculo de muralla o puerta sufre 1 Herida. Retira todos los obstáculos de puerta y muralla."
+    },
+    "boosterEffect": "Instantáneo: +1 Poder",
+    "flavorText": "Un hechizo místico de la Escuela de Tierra codificado en los sagrados pergaminos de Erathia.",
+    "notes": "Sigue las reglas generales de lanzamiento descritas en el manual oficial.",
+    "colorTheme": {
+      "bg": "from-emerald-950/40 to-slate-900/80",
+      "border": "border-emerald-800/50",
+      "glow": "shadow-[0_0_15px_rgba(16,185,129,0.1)]",
+      "text": "text-emerald-400",
+      "accent": "bg-emerald-500/10 text-emerald-300 border-emerald-500/30"
+    }
+  },
+  {
+    "id": "fortune",
+    "name": "Fortuna",
+    "school": "Aire",
+    "type": "Básica",
+    "effect": "Instantáneo: Vuelve a lanzar un dado de tesoro, recurso o ataque *.\nResuelve el resultado de tu elección.",
+    "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Tierra).",
+    "isBoostable": true,
+    "powerLevels": {
+      "0": "* 1 vez.",
+      "1": "* 2 veces.",
+      "2": "* 3 veces."
+    },
+    "boosterEffect": "Instantáneo: +1 Poder",
+    "flavorText": "Un hechizo místico de la Escuela de Tierra codificado en los sagrados pergaminos de Erathia.",
+    "notes": "Esta carta debe jugarse antes de lanzar el dado. No puede jugarse después de haber tirado el dado y de conocer el resultado de la tirada.",
+    "colorTheme": {
+      "bg": "from-emerald-950/40 to-slate-900/80",
+      "border": "border-emerald-800/50",
+      "glow": "shadow-[0_0_15px_rgba(16,185,129,0.1)]",
+      "text": "text-emerald-400",
+      "accent": "bg-emerald-500/10 text-emerald-300 border-emerald-500/30"
+    }
+  },
+  {
     "id": "berserk",
     "name": "Furia asesina",
     "school": "Fuego",
     "type": "Avanzada",
-    "effect": "Continuo: Selecciona una unidad *. Durante su activación, la unidad debe atacar a la unidad más cercana o moverse hacia la unidad más cercana y atacarla.",
+    "effect": "En Curso: Selecciona una unidad *. Durante su activación, la unidad debe atacar a la unidad más cercana o moverse hacia la unidad más cercana y atacarla.",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Fuego).",
     "isBoostable": true,
     "powerLevels": {
@@ -74,19 +242,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "bless",
-    "name": "Bendecir (Bless)",
+    "name": "Bendición",
     "school": "Agua",
     "type": "Básica",
-    "effect": "Aumenta el daño físico de la unidad aliada seleccionada al máximo.",
+    "effect": "Instantáneo: La unidad Terrestre o Voladora seleccionada:",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Agua).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "Ignora la tirada del dado de ataque.",
+      "1": "Ignora la tirada del dado de ataque y gana +1 Ataque.",
+      "2": "Ignora la tirada del dado de ataque y gana +2 Ataque."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Los dioses de la guerra bendicen las armas aliadas, garantizando golpes de máxima contundencia.",
@@ -153,39 +318,13 @@ export const SPELLS_DATA: LocalSpellCard[] = [
       "accent": "bg-red-500/10 text-red-300 border-red-500/30"
     }
   },
-  {
-    "id": "chain_lightning",
-    "name": "Relámpago en Cadena (Chain Lightning)",
-    "school": "Aire",
-    "type": "Avanzada",
-    "effect": "Descarga eléctrica en cadena que golpea secuencialmente a tres unidades adyacentes.",
-    "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Aire).",
-    "isBoostable": false,
-    "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
-    },
-    "boosterEffect": "Instantáneo: +1 Poder",
-    "flavorText": "Un relámpago devastador salta de unidad en unidad, calcinando todo a su paso.",
-    "notes": "El <damage> de Relámpago en Cadena también se aplica a unidades aliadas. Si varias unidades se encuentran a la misma distancia del objetivo de este hechizo, el lanzador elige cuál de ellas recibe el segundo daño y cuál el tercero.",
-    "colorTheme": {
-      "bg": "from-cyan-950/40 to-slate-900/80",
-      "border": "border-cyan-800/50",
-      "glow": "shadow-[0_0_15px_rgba(6,182,212,0.1)]",
-      "text": "text-cyan-400",
-      "accent": "bg-cyan-500/10 text-cyan-300 border-cyan-500/30"
-    }
-  },
+  
   {
     "id": "clone",
     "name": "Clon",
     "school": "Agua",
     "type": "Avanzada",
-    "effect": "Continuo: Coloca una ficha de Clon sobre una unidad aliada * y otra en un espacio vacío adyacente a esa unidad. La unidad clonada actúa como la original pero solo tiene 1 Punto de Salud.",
+    "effect": "En Curso: Coloca una ficha de Clon sobre una unidad aliada * y otra en un espacio vacío adyacente a esa unidad. La unidad clonada actúa como la original pero solo tiene 1 Punto de Salud.",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado.",
     "isBoostable": true,
     "powerLevels": {
@@ -204,48 +343,19 @@ export const SPELLS_DATA: LocalSpellCard[] = [
       "accent": "bg-sky-500/10 text-sky-300 border-sky-500/30"
     }
   },
-  {
-    "id": "counterstrike",
-    "name": "Contraataque (Counterstrike)",
-    "school": "Tierra",
-    "type": "Avanzada",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
-    "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Tierra).",
-    "isBoostable": false,
-    "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
-    },
-    "boosterEffect": "Instantáneo: +1 Poder",
-    "flavorText": "Un hechizo místico de la Escuela de Tierra codificado en los sagrados pergaminos de Erathia.",
-    "notes": "Sigue las reglas generales de lanzamiento descritas en el manual oficial.",
-    "colorTheme": {
-      "bg": "from-emerald-950/40 to-slate-900/80",
-      "border": "border-emerald-800/50",
-      "glow": "shadow-[0_0_15px_rgba(16,185,129,0.1)]",
-      "text": "text-emerald-400",
-      "accent": "bg-emerald-500/10 text-emerald-300 border-emerald-500/30"
-    }
-  },
+  
   {
     "id": "cure",
-    "name": "Curar (Cure)",
+    "name": "Curación",
     "school": "Agua",
     "type": "Básica",
-    "effect": "Elimina todos los efectos negativos y cura puntos de vida de la unidad seleccionada.",
+    "effect": "Instantáneo: Retira cualquier efecto o Parálisis de la unidad seleccionada y retira de esta unidad hasta:",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Agua).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "1 Herida.",
+      "1": "2 Heridas.",
+      "2": "3 Heridas."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Luz divina purificadora que cicatriza heridas y disuelve maldiciones oscuras.",
@@ -285,48 +395,19 @@ export const SPELLS_DATA: LocalSpellCard[] = [
       "accent": "bg-red-500/10 text-red-300 border-red-500/30"
     }
   },
-  {
-    "id": "dimension_door",
-    "name": "Puerta dimensional (Dimension Door)",
-    "school": "Aire",
-    "type": "Avanzada",
-    "effect": "Hechizo de mapa. Permite teletransportar al héroe a una loseta adyacente del mapa de aventura.",
-    "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Aire).",
-    "isBoostable": false,
-    "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
-    },
-    "boosterEffect": "Instantáneo: +1 Poder",
-    "flavorText": "Un hechizo místico de la Escuela de Aire codificado en los sagrados pergaminos de Erathia.",
-    "notes": "La Puerta Dimensional sólo puede mover al Héroe del lanzador, no a un Héroe controlado por cualquier otro jugador. Puede utilizarse para saltar zonas bloqueadas.",
-    "colorTheme": {
-      "bg": "from-cyan-950/40 to-slate-900/80",
-      "border": "border-cyan-800/50",
-      "glow": "shadow-[0_0_15px_rgba(6,182,212,0.1)]",
-      "text": "text-cyan-400",
-      "accent": "bg-cyan-500/10 text-cyan-300 border-cyan-500/30"
-    }
-  },
+  
   {
     "id": "dispel",
-    "name": "Disipar (Dispel)",
+    "name": "Disipar",
     "school": "Agua",
     "type": "Básica",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
+    "effect": "Instantáneo: Retira todos los efectos En Curso de un espacio o de una unidad * y del espacio que ocupa.",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Agua).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "* Bronce.",
+      "1": "* Bronce o Plata.",
+      "2": "* Bronce o Plata u Oro."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Un hechizo místico de la Escuela de Agua codificado en los sagrados pergaminos de Erathia.",
@@ -337,60 +418,6 @@ export const SPELLS_DATA: LocalSpellCard[] = [
       "glow": "shadow-[0_0_15px_rgba(14,165,233,0.1)]",
       "text": "text-sky-400",
       "accent": "bg-sky-500/10 text-sky-300 border-sky-500/30"
-    }
-  },
-  {
-    "id": "disrupting_ray",
-    "name": "Rayo disruptor (Disrupting Ray)",
-    "school": "Tierra",
-    "type": "Básica",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
-    "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Tierra).",
-    "isBoostable": false,
-    "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
-    },
-    "boosterEffect": "Instantáneo: +1 Poder",
-    "flavorText": "Un hechizo místico de la Escuela de Tierra codificado en los sagrados pergaminos de Erathia.",
-    "notes": "Sigue las reglas generales de lanzamiento descritas en el manual oficial.",
-    "colorTheme": {
-      "bg": "from-emerald-950/40 to-slate-900/80",
-      "border": "border-emerald-800/50",
-      "glow": "shadow-[0_0_15px_rgba(16,185,129,0.1)]",
-      "text": "text-emerald-400",
-      "accent": "bg-emerald-500/10 text-emerald-300 border-emerald-500/30"
-    }
-  },
-  {
-    "id": "earthquake",
-    "name": "Terremoto (Earthquake)",
-    "school": "Tierra",
-    "type": "Básica",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
-    "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Tierra).",
-    "isBoostable": false,
-    "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
-    },
-    "boosterEffect": "Instantáneo: +1 Poder",
-    "flavorText": "Un hechizo místico de la Escuela de Tierra codificado en los sagrados pergaminos de Erathia.",
-    "notes": "Sigue las reglas generales de lanzamiento descritas en el manual oficial.",
-    "colorTheme": {
-      "bg": "from-emerald-950/40 to-slate-900/80",
-      "border": "border-emerald-800/50",
-      "glow": "shadow-[0_0_15px_rgba(16,185,129,0.1)]",
-      "text": "text-emerald-400",
-      "accent": "bg-emerald-500/10 text-emerald-300 border-emerald-500/30"
     }
   },
   {
@@ -476,19 +503,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "fly",
-    "name": "Volar (Fly)",
+    "name": "Vuelo",
     "school": "Aire",
     "type": "Avanzada",
-    "effect": "Hechizo de mapa. Permite al héroe cruzar obstáculos intransitables y terrenos difíciles volando.",
+    "effect": "En Curso: Durante este turno, tu héroe puede atravesar zonas bloqueadas (pero no puede acabar su movimiento en ellas) y:",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Aire).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "Sin efecto adicional.",
+      "2": "+1 Punto de Movimiento.",
+      "4": "+2 Puntos de Movimiento."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Un hechizo místico de la Escuela de Aire codificado en los sagrados pergaminos de Erathia.",
@@ -506,7 +530,7 @@ export const SPELLS_DATA: LocalSpellCard[] = [
     "name": "Campo de fuerza",
     "school": "Tierra",
     "type": "Básica",
-    "effect": "Continuo: Coloca 1 ficha de campo de fuerza sobre un espacio vacío. Cuenta como un obstáculo hasta el final de:",
+    "effect": "En Curso: Coloca 1 ficha de campo de fuerza sobre un espacio vacío. Cuenta como un obstáculo hasta el final de:",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Tierra).",
     "isBoostable": true,
     "powerLevels": {
@@ -527,19 +551,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "forgetfulness",
-    "name": "Olvido (Forgetfulness)",
+    "name": "Olvido",
     "school": "Agua",
     "type": "Básica",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
+    "effect": "En Curso: Durante su próxima activación, una unidad A Distancia * de tu elección no puede Atacar.",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Agua).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "* Bronce.",
+      "1": "* Bronce o Plata.",
+      "2": "* Bronce o Plata u Oro."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Un hechizo místico de la Escuela de Agua codificado en los sagrados pergaminos de Erathia.",
@@ -550,33 +571,6 @@ export const SPELLS_DATA: LocalSpellCard[] = [
       "glow": "shadow-[0_0_15px_rgba(14,165,233,0.1)]",
       "text": "text-sky-400",
       "accent": "bg-sky-500/10 text-sky-300 border-sky-500/30"
-    }
-  },
-  {
-    "id": "fortune",
-    "name": "Fortuna (Fortune)",
-    "school": "Tierra",
-    "type": "Básica",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
-    "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Tierra).",
-    "isBoostable": false,
-    "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
-    },
-    "boosterEffect": "Instantáneo: +1 Poder",
-    "flavorText": "Un hechizo místico de la Escuela de Tierra codificado en los sagrados pergaminos de Erathia.",
-    "notes": "Esta carta debe jugarse antes de lanzar el dado. No puede jugarse después de haber tirado el dado y de conocer el resultado de la tirada.",
-    "colorTheme": {
-      "bg": "from-emerald-950/40 to-slate-900/80",
-      "border": "border-emerald-800/50",
-      "glow": "shadow-[0_0_15px_rgba(16,185,129,0.1)]",
-      "text": "text-emerald-400",
-      "accent": "bg-emerald-500/10 text-emerald-300 border-emerald-500/30"
     }
   },
   {
@@ -608,19 +602,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "frost_ring",
-    "name": "Anillo de frío (Frost Ring)",
+    "name": "Anillo gélido",
     "school": "Agua",
     "type": "Avanzada",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
+    "effect": "Activación: Elige como objetivo una casilla en el tablero de combate, 2 unidades adyacentes a este espacio sufren:",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Agua).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "1 Herida.",
+      "2": "2 Heridas.",
+      "4": "3 Heridas."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Un hechizo místico de la Escuela de Agua codificado en los sagrados pergaminos de Erathia.",
@@ -635,19 +626,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "haste",
-    "name": "Celeridad (Haste)",
+    "name": "Celeridad",
     "school": "Aire",
     "type": "Básica",
-    "effect": "Hasta el final del combate, incrementa la iniciativa de la unidad seleccionada.",
+    "effect": "En Curso: Hasta el final del combate, la unidad seleccionada gana:",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Aire).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "+1 Iniciativa.",
+      "1": "+2 Iniciativa.",
+      "2": "+3 Iniciativa."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Las corrientes de aire aceleran el paso de las tropas en el fragor de la batalla.",
@@ -662,19 +650,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "implosion",
-    "name": "Implosión (Implosion)",
+    "name": "Implosión",
     "school": "Tierra",
     "type": "Avanzada",
-    "effect": "Aplastamiento gravitacional masivo que causa un inmenso daño directo a una unidad.",
+    "effect": "Activación: La unidad seleccionada sufre:",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Tierra).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "1": "2 Heridas.",
+      "3": "4 Heridas.",
+      "5": "6 Heridas."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Las fuerzas gravitacionales se colapsan sobre sí mismas, aplastando al objetivo de forma fulminante.",
@@ -719,7 +704,7 @@ export const SPELLS_DATA: LocalSpellCard[] = [
     "name": "Mina",
     "school": "Fuego",
     "type": "Avanzada",
-    "effect": "Continuo: Baraja y coloca aleatoriamente hasta * fichas de mina en los espacios vacíos elegidos. Después, puedes dar la vuelta a las fichas para ver lo que hay en el otro lado.",
+    "effect": "En Curso: Baraja y coloca aleatoriamente hasta * fichas de mina en los espacios vacíos elegidos. Después, puedes dar la vuelta a las fichas para ver lo que hay en el otro lado.",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Fuego).",
     "isBoostable": true,
     "powerLevels": {
@@ -740,19 +725,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "lightning_bolt",
-    "name": "Rayo (Lightning Bolt)",
+    "name": "Relámpago",
     "school": "Aire",
     "type": "Básica",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
+    "effect": "Activación: La unidad seleccionada sufre:",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Aire).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "2 Heridas.",
+      "1": "3 Heridas.",
+      "2": "4 Heridas."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Un arco de electricidad pura desciende del cielo con un estallido ensordecedor.",
@@ -771,7 +753,7 @@ export const SPELLS_DATA: LocalSpellCard[] = [
     "school": "Todos",
     "isAllSchools": true,
     "type": "Básica",
-    "effect": "Activación: La unidad seleccionada sufre:.",
+    "effect": "Activación: La unidad seleccionada sufre:",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado.",
     "isBoostable": true,
     "powerLevels": {
@@ -816,19 +798,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "mirth",
-    "name": "Alegría (Mirth)",
+    "name": "Alborozo",
     "school": "Agua",
     "type": "Avanzada",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
+    "effect": "En Curso: Puedes volver a lanzar una vez cada uno de tus dados de ataque. Durante:",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Agua).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "Esta activación.",
+      "2": "Esta ronda de combate.",
+      "4": "Este combate."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Un hechizo místico de la Escuela de Agua codificado en los sagrados pergaminos de Erathia.",
@@ -870,19 +849,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "prayer",
-    "name": "Plegaria (Prayer)",
-    "school": "Tierra",
+    "name": "Plegaria",
+    "school": "Agua",
     "type": "Avanzada",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
-    "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Tierra).",
-    "isBoostable": false,
+    "effect": "Instantáneo: La unidad seleccionada gana * Ataque, Defensa o Iniciativa.",
+    "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Agua).",
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "* +1.",
+      "2": "* +2.",
+      "4": "* +3."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Un hechizo místico de la Escuela de Tierra codificado en los sagrados pergaminos de Erathia.",
@@ -897,19 +873,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "precision",
-    "name": "Precisión (Precision)",
+    "name": "Precisión",
     "school": "Aire",
     "type": "Básica",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
+    "effect": "Instantáneo: Cuando ataques a una unidad no adyacente, la unidad A Distancia seleccionada ignora los penalizadores de combate y gana:",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Aire).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "+1 Ataque.",
+      "1": "+2 Ataque.",
+      "2": "+3 Ataque."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Un hechizo místico de la Escuela de Aire codificado en los sagrados pergaminos de Erathia.",
@@ -1019,7 +992,7 @@ export const SPELLS_DATA: LocalSpellCard[] = [
     "name": "Arenas movedizas",
     "school": "Tierra",
     "type": "Básica",
-    "effect": "Continuo: Baraja hasta * fichas de arenas movedizas y colócalas boca abajo en los espacios vacíos elegidos. Siempre podrás mirar tus fichas una vez colocadas.",
+    "effect": "En Curso: Baraja hasta * fichas de arenas movedizas y colócalas boca abajo en los espacios vacíos elegidos. Siempre podrás mirar tus fichas una vez colocadas.",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Tierra).",
     "isBoostable": true,
     "powerLevels": {
@@ -1040,19 +1013,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "remove_obstacle",
-    "name": "Eliminar obstáculo (Remove Obstacle)",
+    "name": "Retirar obstáculo",
     "school": "Tierra",
     "type": "Básica",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
+    "effect": "Instantáneo: Retira * obstáculos (excepto unidades) del tablero de combate.",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Tierra).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "* 1.",
+      "1": "* 2.",
+      "2": "* 3."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Un hechizo místico de la Escuela de Tierra codificado en los sagrados pergaminos de Erathia.",
@@ -1067,19 +1037,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "resurrection",
-    "name": "Resurrección (Resurrection)",
+    "name": "Resurrección",
     "school": "Tierra",
     "type": "Avanzada",
-    "effect": "Devuelve a la vida a miembros caídos de la unidad seleccionada de forma permanente durante el combate.",
+    "effect": "Instantáneo: Cancela un ataque que vaya a reducir los Puntos de Salud de tu unidad * a 0. Puedes lanzar este hechizo inmediatamente después del ataque de la unidad enemiga.",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Tierra).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "* Bronce.",
+      "2": "* Bronce o Plata.",
+      "4": "* Bronce o PLata u Oro."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "El poder curativo de la tierra restaura la fuerza vital de los guerreros caídos.",
@@ -1118,19 +1085,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "shield",
-    "name": "Blindaje (Shield)",
+    "name": "Escudo",
     "school": "Tierra",
     "type": "Básica",
-    "effect": "Aumenta la defensa física de la unidad aliada seleccionada reduciendo el daño recibido.",
+    "effect": "Instantáneo: La unidad defensora gana * contra una unidad Terrestre o Voladora.",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Tierra).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "+1 Defensa.",
+      "1": "+2 Defensa.",
+      "2": "+3 Defensa."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Un escudo translúcido de energía pura amortigua los impactos físicos enemigos.",
@@ -1172,19 +1136,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "slow",
-    "name": "Ralentizar (Slow)",
+    "name": "Lentitud",
     "school": "Tierra",
     "type": "Básica",
-    "effect": "Hasta el final del combate, reduce notablemente la iniciativa de la unidad enemiga seleccionada.",
+    "effect": "En Curso: Hasta el final del combate, la unidad seleccionada sufre:",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Tierra).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "-1 Iniciativa.",
+      "1": "-2 Iniciativa.",
+      "2": "-3 Iniciativa."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "La tierra se aferra a los pies de tus enemigos, ralentizando cada uno de sus movimientos.",
@@ -1199,19 +1160,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "sorrow",
-    "name": "Tristeza (Sorrow)",
+    "name": "Pesar",
     "school": "Tierra",
     "type": "Avanzada",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
+    "effect": "Instantáneo: Cuando una unidad * esté a punto de activarse, ignora su activación.",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Tierra).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "* Bronce.",
+      "2": "* Bronce o Plata.",
+      "4": "* Bronce o Plata u Oro."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Un hechizo místico de la Escuela de Tierra codificado en los sagrados pergaminos de Erathia.",
@@ -1226,19 +1184,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "stone_skin",
-    "name": "Piel de piedra (Stone Skin)",
+    "name": "Piel de piedra",
     "school": "Tierra",
     "type": "Básica",
-    "effect": "Petrifica ligeramente la piel de la unidad, otorgando una gran resistencia al daño físico.",
+    "effect": "Instantáneo: La unidad seleccionada gana:",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Tierra).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "+1 Defensa.",
+      "1": "+2 Defensa.",
+      "2": "+3 Defensa."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "La piel del objetivo adquiere la dureza del granito, absorbiendo con facilidad los golpes.",
@@ -1349,19 +1304,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "teleport",
-    "name": "Teletransporte (Teleport)",
+    "name": "Teletransporte",
     "school": "Agua",
     "type": "Avanzada",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
+    "effect": "Activación: Durante el combate, mueve una unidad aliada * a cualquier espacio vacío, ignorando al moverse cualquier obstáculo o efecto.",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Agua).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "* Bronce.",
+      "1": "* Bronce o Plata.",
+      "2": "* Bronce o Plata u Oro."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Un hechizo místico de la Escuela de Agua codificado en los sagrados pergaminos de Erathia.",
@@ -1376,19 +1328,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "town_portal",
-    "name": "Portal de la ciudad (Town Portal)",
+    "name": "Portal a la ciudad",
     "school": "Tierra",
     "type": "Avanzada",
-    "effect": "Hechizo de mapa. Permite teletransportar al héroe de vuelta a la ciudad aliada más cercana.",
+    "effect": "Mapa: Mueve a tu héroe a cualquier ciudad o asentamiento que controles y:",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Tierra).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "Sin efecto adicional.",
+      "2": "+1 Punto de Movimiento.",
+      "4": "+2 Puntos de Movimientos."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Abre una fisura espacial que transporta instantáneamente al héroe de regreso al bastión aliado.",
@@ -1403,19 +1352,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "view_air",
-    "name": "Ver el aire (View Air)",
+    "name": "Ver aire",
     "school": "Aire",
     "type": "Básica",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
+    "effect": "Mapa: Gana:",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Aire).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "3 Oros.",
+      "1": "2 Materiales de construcción.",
+      "2": "1 Objeto de valor."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Un hechizo místico de la Escuela de Aire codificado en los sagrados pergaminos de Erathia.",
@@ -1430,19 +1376,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "view_earth",
-    "name": "Ver la tierra (View Earth)",
+    "name": "Ver tierra",
     "school": "Tierra",
     "type": "Básica",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
+    "effect": "Instantáneo: Elige una mina enemiga a * zonas.\nSustituye el cubo de su propietario por el tuyo.",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Tierra).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "* 1.",
+      "1": "* 2.",
+      "2": "* 3."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Un hechizo místico de la Escuela de Tierra codificado en los sagrados pergaminos de Erathia.",
@@ -1458,10 +1401,10 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   {
     "id": "visions",
     "name": "Visiones (Visions)",
-    "school": "Aire",
+    "school": "Fuego",
     "type": "Básica",
     "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
-    "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Aire).",
+    "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Fuego).",
     "isBoostable": false,
     "powerLevels": {
       "0": "Efecto estático: Este hechizo no aumenta con Poder.",
@@ -1508,19 +1451,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "weakness",
-    "name": "Debilidad (Weakness)",
+    "name": "Debilidad",
     "school": "Agua",
     "type": "Básica",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
+    "effect": "Instantáneo: La unidad seleccionada sufre (hasta un mínimo de 0):",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Agua).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "-1 Ataque.",
+      "1": "-2 Ataque.",
+      "2": "-3 Ataque."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Un hechizo místico de la Escuela de Agua codificado en los sagrados pergaminos de Erathia.",

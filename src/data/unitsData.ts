@@ -258,11 +258,11 @@ export const UNIT_DETAILS: {
   // Castillo
   "Alabarderos": {
     basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'Melé', abilities: [], customCost: { gold: 2, materials: 0, valuable: 0 } },
-    elite: { atk: 3, def: 1, hp: 2, ini: 5, type: 'Melé', abilities: ["Pasivo: Cuando esta unidad sea el objetivo de un ataque, puedes descartar una carta para ignorar el resultado del dado de ataque."], customCost: { gold: 3, materials: 0, valuable: 0 } }
+    elite: { atk: 3, def: 1, hp: 2, ini: 5, type: 'Melé', abilities: ["Pasiva: Cuando esta unidad sea el objetivo de un ataque, puedes descartar una carta para ignorar el resultado del dado de ataque."], customCost: { gold: 3, materials: 0, valuable: 0 } }
   },
   "Tiradores": {
     basic: { atk: 2, def: 0, hp: 2, ini: 4, type: 'a Distancia', abilities: [], customCost: { gold: 3, materials: 0, valuable: 0 } },
-    elite: { atk: 2, def: 0, hp: 2, ini: 6, type: 'a Distancia', abilities: ["Al Atacar: Si un objetivo no está adyacente, vuelve a atacarlo."], customCost: { gold: 5, materials: 0, valuable: 0 } }
+    elite: { atk: 2, def: 0, hp: 2, ini: 6, type: 'a Distancia', abilities: ["Ataque: Si un objetivo no está adyacente, vuelve a atacarlo."], customCost: { gold: 5, materials: 0, valuable: 0 } }
   },
   "Grifos": {
     basic: { atk: 2, def: 0, hp: 4, ini: 6, type: 'Voladora', abilities: ["Contraataque: Esta unidad puede llevar a cabo una cantidad ilimitada de contraataques."], customCost: { gold: 4, materials: 0, valuable: 0 } },
@@ -270,19 +270,19 @@ export const UNIT_DETAILS: {
   },
   "Cruzados": {
     basic: { atk: 3, def: 2, hp: 4, ini: 5, type: 'Melé', abilities: [], customCost: { gold: 6, materials: 0, valuable: 0 } },
-    elite: { atk: 4, def: 2, hp: 4, ini: 6, type: 'Melé', abilities: ["Al Atacar: Puedes volver a tirar los 0 en el dado de ataque de esta unidad."], customCost: { gold: 10, materials: 0, valuable: 0 } }
+    elite: { atk: 4, def: 2, hp: 4, ini: 6, type: 'Melé', abilities: ["Ataque: Puedes volver a tirar los 0 en el dado de ataque de esta unidad."], customCost: { gold: 10, materials: 0, valuable: 0 } }
   },
   "Fanáticos": {
     basic: { atk: 3, def: 1, hp: 5, ini: 5, type: 'a Distancia', abilities: [], customCost: { gold: 8, materials: 0, valuable: 0 } },
-    elite: { atk: 4, def: 1, hp: 5, ini: 7, type: 'a Distancia', abilities: ["Pasivo: Ignora la penalización de combate contra unidades adyacentes."], customCost: { gold: 12, materials: 0, valuable: 0 } }
+    elite: { atk: 4, def: 1, hp: 5, ini: 7, type: 'a Distancia', abilities: ["Pasiva: Ignora la penalización de combate contra unidades adyacentes."], customCost: { gold: 12, materials: 0, valuable: 0 } }
   },
   "Campeones": {
     basic: { atk: 5, def: 2, hp: 7, ini: 7, type: 'Melé', abilities: ["Mapa: Si tu héroe está en una zona con establos, el coste de refuerzo de esta unidad se reduce en 6 Oros."], customCost: { gold: 12, materials: 0, valuable: 0 } },
-    elite: { atk: 6, def: 2, hp: 7, ini: 9, type: 'Melé', abilities: ["Al Atacar: Si esta unidad termina su movimiento en un espacio diferente al inicial, puedes volver a tirar un dado de ataque."], customCost: { gold: 20, materials: 0, valuable: 1 } }
+    elite: { atk: 6, def: 2, hp: 7, ini: 9, type: 'Melé', abilities: ["Ataque: Si esta unidad termina su movimiento en un espacio diferente al inicial, puedes volver a tirar un dado de ataque."], customCost: { gold: 20, materials: 0, valuable: 1 } }
   },
   "Arcángeles": {
-    basic: { atk: 6, def: 3, hp: 8, ini: 12, type: 'Voladora', abilities: ["Pasivo: Cuando se inicie un combate, roba 1 carta."], customCost: { gold: 20, materials: 0, valuable: 1 } },
-    elite: { atk: 7, def: 3, hp: 10, ini: 18, type: 'Voladora', abilities: ["Pasivo: Una vez por combate. Cancela un ataque que fuese a reducir a 0 los Puntos de Salud otra unidad a 0."], customCost: { gold: 30, materials: 0, valuable: 2 } }
+    basic: { atk: 6, def: 3, hp: 8, ini: 12, type: 'Voladora', abilities: ["Pasiva: Cuando se inicie un combate, roba 1 carta."], customCost: { gold: 20, materials: 0, valuable: 1 } },
+    elite: { atk: 7, def: 3, hp: 10, ini: 18, type: 'Voladora', abilities: ["Pasiva: Una vez por combate. Cancela un ataque que fuese a reducir a 0 los Puntos de Salud otra unidad a 0."], customCost: { gold: 30, materials: 0, valuable: 2 } }
   },
 
   // Necrópolis
@@ -291,62 +291,62 @@ export const UNIT_DETAILS: {
     elite: { atk: 3, def: 1, hp: 2, ini: 5, type: 'Melé', abilities: [], customCost: { gold: 3, materials: 0, valuable: 0 } }
   },
   "Zombis": {
-    basic: { atk: 2, def: 1, hp: 3, ini: 3, type: 'Melé', abilities: ["Pasivo: Si el atacante resuelve un +1 en el dado de ataque, obtén +1 Defensa."], customCost: { gold: 3, materials: 0, valuable: 0 } },
-    elite: { atk: 2, def: 1, hp: 3, ini: 4, type: 'Melé', abilities: ["Pasivo: Si el atacante resuelve un 0 o un +1 en el dado de ataque, obtén +1 Defensa."], customCost: { gold: 4, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 1, hp: 3, ini: 3, type: 'Melé', abilities: ["Pasiva: Si el atacante resuelve un +1 en el dado de ataque, obtén +1 Defensa."], customCost: { gold: 3, materials: 0, valuable: 0 } },
+    elite: { atk: 2, def: 1, hp: 3, ini: 4, type: 'Melé', abilities: ["Pasiva: Si el atacante resuelve un 0 o un +1 en el dado de ataque, obtén +1 Defensa."], customCost: { gold: 4, materials: 0, valuable: 0 } }
   },
   "Espectros": {
     basic: { atk: 3, def: 0, hp: 3, ini: 5, type: 'Voladora', abilities: ["Activación: Retira hasta 1 Herida de esta unidad."], customCost: { gold: 4, materials: 0, valuable: 0 } },
     elite: { atk: 3, def: 0, hp: 5, ini: 7, type: 'Voladora', abilities: ["Activación: Retira hasta 1 Herida de esta unidad y después descarta 1 carta al azar de la mano del enemigo."], customCost: { gold: 6, materials: 0, valuable: 0 } }
   },
   "Vampiros": {
-    basic: { atk: 4, def: 1, hp: 4, ini: 6, type: 'Voladora', abilities: ["Al Atacar: Ignora el contraataque."], customCost: { gold: 8, materials: 0, valuable: 0 } },
-    elite: { atk: 5, def: 1, hp: 4, ini: 9, type: 'Voladora', abilities: ["Al Atacar: Ignora el contraataques. Después retira hasta 2 Heridas a esta unidad."], customCost: { gold: 12, materials: 0, valuable: 0 } },
+    basic: { atk: 4, def: 1, hp: 4, ini: 6, type: 'Voladora', abilities: ["Ataque: Ignora el contraataque."], customCost: { gold: 8, materials: 0, valuable: 0 } },
+    elite: { atk: 5, def: 1, hp: 4, ini: 9, type: 'Voladora', abilities: ["Ataque: Ignora el contraataques. Después retira hasta 2 Heridas a esta unidad."], customCost: { gold: 12, materials: 0, valuable: 0 } },
   },
   "Liches": {
     basic: { atk: 3, def: 1, hp: 5, ini: 6, type: 'a Distancia', abilities: [], customCost: { gold: 8, materials: 0, valuable: 0 } },
-    elite: { atk: 4, def: 1, hp: 5, ini: 7, type: 'a Distancia', abilities: ["Al Atacar: Elige una unidad adyacente al objetivo y atácala. Para este ataque tu Ataque es 2."], customCost: { gold: 14, materials: 0, valuable: 0 } }
+    elite: { atk: 4, def: 1, hp: 5, ini: 7, type: 'a Distancia', abilities: ["Ataque: Elige una unidad adyacente al objetivo y atácala. Para este ataque tu Ataque es 2."], customCost: { gold: 14, materials: 0, valuable: 0 } }
   },
   "Caballeros del terror": {
-    basic: { atk: 5, def: 2, hp: 7, ini: 7, type: 'Melé', abilities: ["Al Atacar: Al contraatacar después de este ataque, el enemigo lanza 2 dados de ataque y resuelve el resultado menor."], customCost: { gold: 12, materials: 0, valuable: 0 } },
-    elite: { atk: 6, def: 2, hp: 7, ini: 9, type: 'Melé', abilities: ["Al Atacar: Si resuelves un 0 o un +1 en el dado de ataque, aumenta el valor total del ataque de esta unidad en un +1 adicional."], customCost: { gold: 20, materials: 0, valuable: 1 } }
+    basic: { atk: 5, def: 2, hp: 7, ini: 7, type: 'Melé', abilities: ["Ataque: Al contraatacar después de este ataque, el enemigo lanza 2 dados de ataque y resuelve el resultado menor."], customCost: { gold: 12, materials: 0, valuable: 0 } },
+    elite: { atk: 6, def: 2, hp: 7, ini: 9, type: 'Melé', abilities: ["Ataque: Si resuelves un 0 o un +1 en el dado de ataque, aumenta el valor total del ataque de esta unidad en un +1 adicional."], customCost: { gold: 20, materials: 0, valuable: 1 } }
   },
   "Dragones fantasma": {
     basic: { atk: 6, def: 3, hp: 8, ini: 9, type: 'Voladora', abilities: ["Activación: Descarta la ficha Moral Positiva del enemigo."], customCost: { gold: 19, materials: 0, valuable: 1 } },
-    elite: { atk: 7, def: 3, hp: 9, ini: 14, type: 'Voladora', abilities: ["Activación: Descarta la ficha Moral Positiva del enemigo.", "Al Atacar: Gana +1 Ataque."], customCost: { gold: 32, materials: 0, valuable: 2 } }
+    elite: { atk: 7, def: 3, hp: 9, ini: 14, type: 'Voladora', abilities: ["Activación: Descarta la ficha Moral Positiva del enemigo.", "Ataque: Gana +1 Ataque."], customCost: { gold: 32, materials: 0, valuable: 2 } }
   },
 
   // Mazmorra
   "Trogloditas": {
     basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'Melé', abilities: [], customCost: { gold: 2, materials: 0, valuable: 0 } },
-    elite: { atk: 3, def: 1, hp: 2, ini: 5, type: 'Melé', abilities: ["Pasivo: Esta unidad ignora el efecto Parálisis."], customCost: { gold: 3, materials: 0, valuable: 0 } }
+    elite: { atk: 3, def: 1, hp: 2, ini: 5, type: 'Melé', abilities: ["Pasiva: Esta unidad ignora el efecto Parálisis."], customCost: { gold: 3, materials: 0, valuable: 0 } }
   },
   "Arpías": {
-    basic: { atk: 2, def: 0, hp: 3, ini: 6, type: 'Voladora', abilities: ["Al Atacar: Después del contraataque del enemigo, esta unidad puede volver al espacio desde el que se ha movido para atacar."], customCost: { gold: 3, materials: 0, valuable: 0 } },
-    elite: { atk: 3, def: 0, hp: 3, ini: 9, type: 'Voladora', abilities: ["Al Atacar: Ignora el contraataque. Esta unidad puede volver al espacio desde el que se ha movido para atacar."], customCost: { gold: 5, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 0, hp: 3, ini: 6, type: 'Voladora', abilities: ["Ataque: Después del contraataque del enemigo, esta unidad puede volver al espacio desde el que se ha movido para atacar."], customCost: { gold: 3, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 0, hp: 3, ini: 9, type: 'Voladora', abilities: ["Ataque: Ignora el contraataque. Esta unidad puede volver al espacio desde el que se ha movido para atacar."], customCost: { gold: 5, materials: 0, valuable: 0 } }
   },
   "Ojos maléficos": {
     basic: { atk: 3, def: 0, hp: 3, ini: 5, type: 'a Distancia', abilities: [], customCost: { gold: 4, materials: 0, valuable: 0 } },
-    elite: { atk: 3, def: 1, hp: 3, ini: 7, type: 'a Distancia', abilities: ["Pasivo: Ignora la penalización de combate contra unidades adyacentes."], customCost: { gold: 6, materials: 0, valuable: 0 } }
+    elite: { atk: 3, def: 1, hp: 3, ini: 7, type: 'a Distancia', abilities: ["Pasiva: Ignora la penalización de combate contra unidades adyacentes."], customCost: { gold: 6, materials: 0, valuable: 0 } }
   },
   "Medusas": {
     basic: { atk: 3, def: 1, hp: 4, ini: 5, type: 'a Distancia', abilities: ["Contraataque: Después del contraataque, lanza un dado de ataque; si sacas 0, el objetivo queda Parálizado."], customCost: { gold: 6, materials: 0, valuable: 0 } },
-    elite: { atk: 4, def: 1, hp: 4, ini: 6, type: 'a Distancia', abilities: ["Pasivo: Ignora la penalización de combate contra unidades adyacentes.", "Contraataque: El objetivo queda Parálizado."], customCost: { gold: 12, materials: 0, valuable: 0 } }
+    elite: { atk: 4, def: 1, hp: 4, ini: 6, type: 'a Distancia', abilities: ["Pasiva: Ignora la penalización de combate contra unidades adyacentes.", "Contraataque: El objetivo queda Parálizado."], customCost: { gold: 12, materials: 0, valuable: 0 } }
   },
   "Minotauros": {
-    basic: { atk: 4, def: 2, hp: 4, ini: 6, type: 'Melé', abilities: ["Al Atacar: Si resuelves un -1 en el dado de ataque, roba una carta."], customCost: { gold: 8, materials: 0, valuable: 0 } },
-    elite: { atk: 5, def: 2, hp: 4, ini: 8, type: 'Melé', abilities: ["Al Atacar: Si resuelves un -1 en el dado de ataque, roba una carta."], customCost: { gold: 14, materials: 0, valuable: 0 } }
+    basic: { atk: 4, def: 2, hp: 4, ini: 6, type: 'Melé', abilities: ["Ataque: Si resuelves un -1 en el dado de ataque, roba una carta."], customCost: { gold: 8, materials: 0, valuable: 0 } },
+    elite: { atk: 5, def: 2, hp: 4, ini: 8, type: 'Melé', abilities: ["Ataque: Si resuelves un -1 en el dado de ataque, roba una carta."], customCost: { gold: 14, materials: 0, valuable: 0 } }
   },
   "Mantícoras": {
     basic: { atk: 5, def: 1, hp: 6, ini: 7, type: 'Voladora', abilities: [], customCost: { gold: 10, materials: 0, valuable: 0 } },
-    elite: { atk: 5, def: 1, hp: 6, ini: 11, type: 'Voladora', abilities: ["Al Atacar: Durante este ataque, ignora el valor de Defensa de la carta de la unidad objetivo."], customCost: { gold: 18, materials: 0, valuable: 1 } }
+    elite: { atk: 5, def: 1, hp: 6, ini: 11, type: 'Voladora', abilities: ["Ataque: Durante este ataque, ignora el valor de Defensa de la carta de la unidad objetivo."], customCost: { gold: 18, materials: 0, valuable: 1 } }
   },
   "Mantícoras (Alternativa)": {
-    basic: { atk: 4, def: 1, hp: 7, ini: 8, type: 'Voladora', abilities: ["Al Atacar: Coloca 1 cubo de facción sobre el objetivo. Cuando se active, retira el cubo para infligir 1 Herida."], customCost: { gold: 12, materials: 0, valuable: 0 } },
-    elite: { atk: 4, def: 2, hp: 7, ini: 11, type: 'Voladora', abilities: ["Pasivo: Después de cada ataque, coloca 1 cubo de facción sobre el objetivo. Cuando se active, retira el cubo para infligir 1 Herida."], customCost: { gold: 18, materials: 0, valuable: 1 } }
+    basic: { atk: 4, def: 1, hp: 7, ini: 8, type: 'Voladora', abilities: ["Ataque: Coloca 1 cubo de facción sobre el objetivo. Cuando se active, retira el cubo para infligir 1 Herida."], customCost: { gold: 12, materials: 0, valuable: 0 } },
+    elite: { atk: 4, def: 2, hp: 7, ini: 11, type: 'Voladora', abilities: ["Pasiva: Después de cada ataque, coloca 1 cubo de facción sobre el objetivo. Cuando se active, retira el cubo para infligir 1 Herida."], customCost: { gold: 18, materials: 0, valuable: 1 } }
   },
   "Dragones negros": {
-    basic: { atk: 6, def: 3, hp: 8, ini: 11, type: 'Voladora', abilities: ["Pasivo: Reduce el Daño de Hechizo recibido por esta unidad en 2 (hasta un mínimo de 0)."], customCost: { gold: 19, materials: 0, valuable: 1 } },
-    elite: { atk: 8, def: 3, hp: 8, ini: 15, type: 'Voladora', abilities: ["Pasivo: Ignora cualquier efecto de Hechizo y Daño de especialidad."], customCost: { gold: 33, materials: 0, valuable: 2 } }
+    basic: { atk: 6, def: 3, hp: 8, ini: 11, type: 'Voladora', abilities: ["Pasiva: Reduce el Daño de Hechizo recibido por esta unidad en 2 (hasta un mínimo de 0)."], customCost: { gold: 19, materials: 0, valuable: 1 } },
+    elite: { atk: 8, def: 3, hp: 8, ini: 15, type: 'Voladora', abilities: ["Pasiva: Ignora cualquier efecto de Hechizo y Daño de especialidad."], customCost: { gold: 33, materials: 0, valuable: 2 } }
   },
 
   // Murallas
@@ -355,28 +355,28 @@ export const UNIT_DETAILS: {
     elite: { atk: 3, def: 0, hp: 3, ini: 8, type: 'Melé', abilities: [], customCost: { gold: 3, materials: 0, valuable: 0 } }
   },
   "Enanos": {
-    basic: { atk: 2, def: 1, hp: 3, ini: 3, type: 'Melé', abilities: ["Pasivo: Si esta unidad es objetivo de cualquier carta de hechizo o especialidad, lanza 1 dado de ataque.\nSi sacas un +1, ignora el efecto de la carta."], customCost: { gold: 3, materials: 0, valuable: 0 } },
-    elite: { atk: 3, def: 1, hp: 3, ini: 5, type: 'Melé', abilities: ["Pasivo: Si esta unidad es objetivo de cualquier carta de hechizo o especialidad, lanza 1 dado de ataque.\nSi sacas un +1, ignora el efecto de la carta."], customCost: { gold: 4, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 1, hp: 3, ini: 3, type: 'Melé', abilities: ["Pasiva: Si esta unidad es objetivo de cualquier carta de hechizo o especialidad, lanza 1 dado de ataque.\nSi sacas un +1, ignora el efecto de la carta."], customCost: { gold: 3, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 1, hp: 3, ini: 5, type: 'Melé', abilities: ["Pasiva: Si esta unidad es objetivo de cualquier carta de hechizo o especialidad, lanza 1 dado de ataque.\nSi sacas un +1, ignora el efecto de la carta."], customCost: { gold: 4, materials: 0, valuable: 0 } }
   },
   "Elfos": {
     basic: { atk: 2, def: 1, hp: 3, ini: 6, type: 'a Distancia', abilities: [], customCost: { gold: 4, materials: 0, valuable: 0 } },
-    elite: { atk: 3, def: 1, hp: 3, ini: 7, type: 'a Distancia', abilities: ["Al Atacar: Si una unidad objetivo no está adyacente, vuélvela a atacar si sacas un -1 o un 0."], customCost: { gold: 7, materials: 0, valuable: 0 } }
+    elite: { atk: 3, def: 1, hp: 3, ini: 7, type: 'a Distancia', abilities: ["Ataque: Si una unidad objetivo no está adyacente, vuélvela a atacar si sacas un -1 o un 0."], customCost: { gold: 7, materials: 0, valuable: 0 } }
   },
   "Pegasos": {
     basic: { atk: 3, def: 0, hp: 5, ini: 8, type: 'Voladora', abilities: [], customCost: { gold: 6, materials: 0, valuable: 0 } },
-    elite: { atk: 4, def: 0, hp: 6, ini: 12, type: 'Voladora', abilities: ["Pasivo: El Poder de todos los hechizos enemigos se reduce en 1 (hasta un mínimo de 0)."], customCost: { gold: 10, materials: 0, valuable: 0 } }
+    elite: { atk: 4, def: 0, hp: 6, ini: 12, type: 'Voladora', abilities: ["Pasiva: El Poder de todos los hechizos enemigos se reduce en 1 (hasta un mínimo de 0)."], customCost: { gold: 10, materials: 0, valuable: 0 } }
   },
   "Dendroides": {
     basic: { atk: 4, def: 2, hp: 5, ini: 3, type: 'Melé', abilities: [], customCost: { gold: 8, materials: 0, valuable: 0 } },
-    elite: { atk: 4, def: 2, hp: 6, ini: 4, type: 'Melé', abilities: ["Pasivo: Las unidades enemigas que empiecen su activación adyacentes a esta unidad no pueden moverse."], customCost: { gold: 15, materials: 0, valuable: 0 } }
+    elite: { atk: 4, def: 2, hp: 6, ini: 4, type: 'Melé', abilities: ["Pasiva: Las unidades enemigas que empiecen su activación adyacentes a esta unidad no pueden moverse."], customCost: { gold: 15, materials: 0, valuable: 0 } }
   },
   "Unicornios": {
-    basic: { atk: 5, def: 1, hp: 8, ini: 7, type: 'Melé', abilities: ["Pasivo: Reduce el Daño de Hechizos sufridos por esta unidad en 1 (hasta un mínimo de 0)."], customCost: { gold: 11, materials: 0, valuable: 0 } },
-    elite: { atk: 6, def: 1, hp: 8, ini: 9, type: 'Melé', abilities: ["Pasivo: Reduce el Daño de Hechizos sufridos por esta unidad y unidades adyacentes aliadas en 1 (hasta un mínimo de 0)."], customCost: { gold: 18, materials: 0, valuable: 1 } }
+    basic: { atk: 5, def: 1, hp: 8, ini: 7, type: 'Melé', abilities: ["Pasiva: Reduce el Daño de Hechizos sufridos por esta unidad en 1 (hasta un mínimo de 0)."], customCost: { gold: 11, materials: 0, valuable: 0 } },
+    elite: { atk: 6, def: 1, hp: 8, ini: 9, type: 'Melé', abilities: ["Pasiva: Reduce el Daño de Hechizos sufridos por esta unidad y unidades adyacentes aliadas en 1 (hasta un mínimo de 0)."], customCost: { gold: 18, materials: 0, valuable: 1 } }
   },
   "Dragones dorados": {
-    basic: { atk: 5, def: 3, hp: 9, ini: 10, type: 'Voladora', abilities: ["Al Atacar: Ataca a 2 espacios en fila. El primer ataque se resuelve de forma normal y el segundo con 2 Ataque."], customCost: { gold: 22, materials: 0, valuable: 1 } },
-    elite: { atk: 6, def: 3, hp: 10, ini: 16, type: 'Voladora', abilities: ["Al Atacar: Ataca a 2 espacios en fila. El primer ataque se resuelve normalmente y el segundo tiene 3 Ataque."], customCost: { gold: 30, materials: 0, valuable: 2 } }
+    basic: { atk: 5, def: 3, hp: 9, ini: 10, type: 'Voladora', abilities: ["Ataque: Ataca a 2 espacios en fila. El primer ataque se resuelve de forma normal y el segundo con 2 Ataque."], customCost: { gold: 22, materials: 0, valuable: 1 } },
+    elite: { atk: 6, def: 3, hp: 10, ini: 16, type: 'Voladora', abilities: ["Ataque: Ataca a 2 espacios en fila. El primer ataque se resuelve normalmente y el segundo tiene 3 Ataque."], customCost: { gold: 30, materials: 0, valuable: 2 } }
   },
 
   // Torre
@@ -393,16 +393,16 @@ export const UNIT_DETAILS: {
     elite: { atk: 3, def: 2, hp: 3, ini: 5, type: 'Melé', abilities: ["Pasiva: Esta unidad reduce cualquier Daño que reciba de hechizos en 2, hasta un mínimo de 0."], customCost: { gold: 7, materials: 0, valuable: 0 } }
   },
   "Magos": {
-    basic: { atk: 3, def: 0, hp: 4, ini: 5, type: 'a Distancia', abilities: ["Al Atacar: Ignora penalizaciones de combate."], customCost: { gold: 6, materials: 0, valuable: 0 } },
-    elite: { atk: 4, def: 1, hp: 4, ini: 6, type: 'a Distancia', abilities: ["Al Atacar: Ignora penalizaciones de combate.", "Activación: Añade +1 Poder al primer hechizo que lances esta ronda."], customCost: { gold: 11, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 0, hp: 4, ini: 5, type: 'a Distancia', abilities: ["Ataque: Ignora penalizaciones de combate."], customCost: { gold: 6, materials: 0, valuable: 0 } },
+    elite: { atk: 4, def: 1, hp: 4, ini: 6, type: 'a Distancia', abilities: ["Ataque: Ignora penalizaciones de combate.", "Activación: Añade +1 Poder al primer hechizo que lances esta ronda."], customCost: { gold: 11, materials: 0, valuable: 0 } }
   },
   "Genios": {
     basic: { atk: 3, def: 1, hp: 6, ini: 7, type: 'Voladora', abilities: ["Alternativa: Descarta 3 cartas de tu mazo y devuelve a tu mano un Hechizo descartado de esta forma."], customCost: { gold: 8, materials: 0, valuable: 0 } },
-    elite: { atk: 4, def: 1, hp: 6, ini: 8, type: 'Voladora', abilities: ["Al Atacar: Descarta hasta 3 cartas de tu mazo y devuelve a tu mano un Hechizo descartado de esta forma."], customCost: { gold: 12, materials: 0, valuable: 0 } }
+    elite: { atk: 4, def: 1, hp: 6, ini: 8, type: 'Voladora', abilities: ["Ataque: Descarta hasta 3 cartas de tu mazo y devuelve a tu mano un Hechizo descartado de esta forma."], customCost: { gold: 12, materials: 0, valuable: 0 } }
   },
   "Nagas": {
-    basic: { atk: 5, def: 2, hp: 7, ini: 6, type: 'Melé', abilities: ["Al Atacar: Ignora contraataques."], customCost: { gold: 13, materials: 0, valuable: 0 } },
-    elite: { atk: 6, def: 2, hp: 7, ini: 8, type: 'Melé', abilities: ["Al Atacar: Ignora contraataques."], customCost: { gold: 18, materials: 0, valuable: 1 } }
+    basic: { atk: 5, def: 2, hp: 7, ini: 6, type: 'Melé', abilities: ["Ataque: Ignora contraataques."], customCost: { gold: 13, materials: 0, valuable: 0 } },
+    elite: { atk: 6, def: 2, hp: 7, ini: 8, type: 'Melé', abilities: ["Ataque: Ignora contraataques."], customCost: { gold: 18, materials: 0, valuable: 1 } }
   },
   "Titanes": {
     basic: { atk: 6, def: 3, hp: 8, ini: 7, type: 'Melé', abilities: ["Pasiva: Esta unidad ignora cualquier efecto Contínuo."], customCost: { gold: 18, materials: 0, valuable: 1 } },
@@ -412,15 +412,15 @@ export const UNIT_DETAILS: {
   // Inferno
   "Familiares": {
     basic: { atk: 2, def: 1, hp: 2, ini: 5, type: 'Melé', abilities: [], customCost: { gold: 2, materials: 0, valuable: 0 } },
-    elite: { atk: 3, def: 1, hp: 2, ini: 7, type: 'Melé', abilities: ["Pasivo: Cuando un enemigo lanza un Hechizo de su mano, debe descartar 1 carta de la mano."], customCost: { gold: 3, materials: 0, valuable: 0 } }
+    elite: { atk: 3, def: 1, hp: 2, ini: 7, type: 'Melé', abilities: ["Pasiva: Cuando un enemigo lanza un Hechizo de su mano, debe descartar 1 carta de la mano."], customCost: { gold: 3, materials: 0, valuable: 0 } }
   },
   "Magogs": {
     basic: { atk: 2, def: 0, hp: 2, ini: 4, type: 'a Distancia', abilities: [], customCost: { gold: 3, materials: 0, valuable: 0 } },
-    elite: { atk: 2, def: 0, hp: 3, ini: 6, type: 'a Distancia', abilities: ["Al Atacar: Cuando los magogs atacan a un objetivo que no está adyacente a ellos, hacen 1 Herida a una unidad adyacente al objetivo."], customCost: { gold: 5, materials: 0, valuable: 0 } }
+    elite: { atk: 2, def: 0, hp: 3, ini: 6, type: 'a Distancia', abilities: ["Ataque: Cuando los magogs atacan a un objetivo que no está adyacente a ellos, hacen 1 Herida a una unidad adyacente al objetivo."], customCost: { gold: 5, materials: 0, valuable: 0 } }
   },
   "Cerberos": {
     basic: { atk: 3, def: 0, hp: 4, ini: 7, type: 'Melé', abilities: [], customCost: { gold: 4, materials: 0, valuable: 0 } },
-    elite: { atk: 3, def: 1, hp: 5, ini: 8, type: 'Melé', abilities: ["Al Atacar: Ignora contraataques. Además, hace 1 Herida a otra unidad enemiga adyacente a los cerberos."], customCost: { gold: 7, materials: 0, valuable: 0 } }
+    elite: { atk: 3, def: 1, hp: 5, ini: 8, type: 'Melé', abilities: ["Ataque: Ignora contraataques. Además, hace 1 Herida a otra unidad enemiga adyacente a los cerberos."], customCost: { gold: 7, materials: 0, valuable: 0 } }
   },
   "Demonios": {
     basic: { atk: 3, def: 2, hp: 4, ini: 5, type: 'Melé', abilities: [], customCost: { gold: 6, materials: 0, valuable: 0 } },
@@ -431,12 +431,12 @@ export const UNIT_DETAILS: {
     elite: { atk: 5, def: 1, hp: 6, ini: 7, type: 'Melé', abilities: ["Alternativo: Una vez por cada combate en el que hayas perdido una unidad. Invoca o refuerza <<unos pocos>> demonios (en el tablero)."], customCost: { gold: 15, materials: 0, valuable: 0 } }
   },
   "Efrits": {
-    basic: { atk: 5, def: 1, hp: 7, ini: 9, type: 'Voladora', abilities: ["Pasivo: Ignora el Daño del hechizo Flecha mágica."], customCost: { gold: 12, materials: 0, valuable: 0 } },
-    elite: { atk: 6, def: 1, hp: 7, ini: 13, type: 'Voladora', abilities: ["Pasivo: Ignora cualquier Daño de la Flecha mágica y hechizos de la escuela de fuego."], customCost: { gold: 18, materials: 0, valuable: 1 } }
+    basic: { atk: 5, def: 1, hp: 7, ini: 9, type: 'Voladora', abilities: ["Pasiva: Ignora el Daño del hechizo Flecha mágica."], customCost: { gold: 12, materials: 0, valuable: 0 } },
+    elite: { atk: 6, def: 1, hp: 7, ini: 13, type: 'Voladora', abilities: ["Pasiva: Ignora cualquier Daño de la Flecha mágica y hechizos de la escuela de fuego."], customCost: { gold: 18, materials: 0, valuable: 1 } }
   },
   "Archidiablos": {
-    basic: { atk: 6, def: 3, hp: 8, ini: 11, type: 'Voladora', abilities: ["Al Atacar: Ignora contraataques."], customCost: { gold: 22, materials: 0, valuable: 1 } },
-    elite: { atk: 7, def: 3, hp: 9, ini: 15, type: 'Voladora', abilities: ["Al Atacar: Ignora contraataques.","Pasivo: Al moverse, los archidiablos se pueden mover a cualquier espacio vacío."], customCost: { gold: 30, materials: 0, valuable: 2 } }
+    basic: { atk: 6, def: 3, hp: 8, ini: 11, type: 'Voladora', abilities: ["Ataque: Ignora contraataques."], customCost: { gold: 22, materials: 0, valuable: 1 } },
+    elite: { atk: 7, def: 3, hp: 9, ini: 15, type: 'Voladora', abilities: ["Ataque: Ignora contraataques.","Pasiva: Al moverse, los archidiablos se pueden mover a cualquier espacio vacío."], customCost: { gold: 30, materials: 0, valuable: 2 } }
   },
 
   // Bastión
@@ -446,7 +446,7 @@ export const UNIT_DETAILS: {
   },
   "Incursores lupinos": {
     basic: { atk: 2, def: 0, hp: 3, ini: 7, type: 'Melé', abilities: [], customCost: { gold: 3, materials: 0, valuable: 0 } },
-    elite: { atk: 2, def: 0, hp: 4, ini: 8, type: 'Melé', abilities: ["Al Atacar: Ataca este objetivo otra vez. El segundo ataque se produce después de que el objetivo contraataque (si es posible)."], customCost: { gold: 5, materials: 0, valuable: 0 } }
+    elite: { atk: 2, def: 0, hp: 4, ini: 8, type: 'Melé', abilities: ["Ataque: Ataca este objetivo otra vez. El segundo ataque se produce después de que el objetivo contraataque (si es posible)."], customCost: { gold: 5, materials: 0, valuable: 0 } }
   },
   "Orcos": {
     basic: { atk: 2, def: 1, hp: 4, ini: 4, type: 'a Distancia', abilities: [], customCost: { gold: 4, materials: 0, valuable: 0 } },
@@ -458,15 +458,15 @@ export const UNIT_DETAILS: {
   },
   "Aves de trueno": {
     basic: { atk: 4, def: 1, hp: 5, ini: 9, type: 'Voladora', abilities: [], customCost: { gold: 8, materials: 0, valuable: 0 } },
-    elite: { atk: 4, def: 1, hp: 6, ini: 11, type: 'Voladora', abilities: ["Pasivo: Justo después del ataque de esta unidad y antes de un contraataque, tira 1 dado de ataque; con un <<0> o <<+1>>, inflige 1 Herida al objetivo."], customCost: { gold: 14, materials: 0, valuable: 0 } }
+    elite: { atk: 4, def: 1, hp: 6, ini: 11, type: 'Voladora', abilities: ["Pasiva: Justo después del ataque de esta unidad y antes de un contraataque, tira 1 dado de ataque; con un <<0> o <<+1>>, inflige 1 Herida al objetivo."], customCost: { gold: 14, materials: 0, valuable: 0 } }
   },
   "Cíclopes": {
     basic: { atk: 5, def: 0, hp: 6, ini: 6, type: 'a Distancia', abilities: ["Alternativo: Esta unidad puede destruir un muro o la puerta."], customCost: { gold: 13, materials: 0, valuable: 0 } },
     elite: { atk: 5, def: 1, hp: 7, ini: 8, type: 'a Distancia', abilities: ["Alternativo: Esta unidad puede destruir un muro, puerta o torre de arqueros."], customCost: { gold: 17, materials: 0, valuable: 1 } },
   },
   "Behemoths": {
-    basic: { atk: 6, def: 2, hp: 9, ini: 6, type: 'Melé', abilities: ["Al Atacar: Disminuye la Defensa del objetivo en 1 (hasta un mínimo de 0)."], customCost: { gold: 19, materials: 0, valuable: 1 } },
-    elite: { atk: 7, def: 2, hp: 10, ini: 9, type: 'Melé', abilities: ["Al Atacar: Disminuye la Defensa del objetivo en 2 (hasta un mínimo de 0). Después del ataque, pon 1 ficha de corrosión en el objetivo."], customCost: { gold: 29, materials: 0, valuable: 2 } },
+    basic: { atk: 6, def: 2, hp: 9, ini: 6, type: 'Melé', abilities: ["Ataque: Disminuye la Defensa del objetivo en 1 (hasta un mínimo de 0)."], customCost: { gold: 19, materials: 0, valuable: 1 } },
+    elite: { atk: 7, def: 2, hp: 10, ini: 9, type: 'Melé', abilities: ["Ataque: Disminuye la Defensa del objetivo en 2 (hasta un mínimo de 0). Después del ataque, pon 1 ficha de corrosión en el objetivo."], customCost: { gold: 29, materials: 0, valuable: 2 } },
   },
 
   // Fortaleza
@@ -479,34 +479,34 @@ export const UNIT_DETAILS: {
     elite: { atk: 3, def: 0, hp: 3, ini: 5, type: 'a Distancia', abilities: [], customCost: { gold: 5, materials: 0, valuable: 0 } }
   },
   "Libélulas": {
-    basic: { atk: 3, def: 0, hp: 3, ini: 8, type: 'Voladora', abilities: ["Al Atacar: Retira todos los efectos Continuos que el enemigo ha jugado sobre el objetivo."], customCost: { gold: 4, materials: 0, valuable: 0 } },
-    elite: { atk: 3, def: 1, hp: 3, ini: 12, type: 'Voladora', abilities: ["Al Atacar: Retira todos los efectos Continuos que el enemigo ha jugado sobre el objetivo. Si el objetivo contraataca, sufre -1 Ataque."], customCost: { gold: 7, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 0, hp: 3, ini: 8, type: 'Voladora', abilities: ["Ataque: Retira todos los efectos Continuos que el enemigo ha jugado sobre el objetivo."], customCost: { gold: 4, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 1, hp: 3, ini: 12, type: 'Voladora', abilities: ["Ataque: Retira todos los efectos Continuos que el enemigo ha jugado sobre el objetivo. Si el objetivo contraataca, sufre -1 Ataque."], customCost: { gold: 7, materials: 0, valuable: 0 } }
   },
   "Basiliscos": {
-    basic: { atk: 4, def: 1, hp: 4, ini: 5, type: 'Melé', abilities: ["Al Atacar: Con un resultado -1 en el dado de ataque la unidad atacada recibe una ficha Parálisis."], customCost: { gold: 6, materials: 0, valuable: 0 } },
-    elite: { atk: 4, def: 1, hp: 5, ini: 7, type: 'Melé', abilities: ["Al Atacar: Con un resultado -1 en el dado de ataque la unidad atacada recibe una ficha Parálisis."], customCost: { gold: 9, materials: 0, valuable: 0 } }
+    basic: { atk: 4, def: 1, hp: 4, ini: 5, type: 'Melé', abilities: ["Ataque: Con un resultado -1 en el dado de ataque la unidad atacada recibe una ficha Parálisis."], customCost: { gold: 6, materials: 0, valuable: 0 } },
+    elite: { atk: 4, def: 1, hp: 5, ini: 7, type: 'Melé', abilities: ["Ataque: Con un resultado -1 en el dado de ataque la unidad atacada recibe una ficha Parálisis."], customCost: { gold: 9, materials: 0, valuable: 0 } }
   },
   "Gorgonas": {
     basic: { atk: 4, def: 2, hp: 5, ini: 5, type: 'Melé', abilities: [], customCost: { gold: 9, materials: 0, valuable: 0 } },
-    elite: { atk: 5, def: 2, hp: 5, ini: 6, type: 'Melé', abilities: ["Al Atacar: Después del ataque, lanza 2 dados de ataque; si sacas un doble 0, reduce los Puntos de Salud de la unidad objetivo a 0."], customCost: { gold: 14, materials: 0, valuable: 0 } }
+    elite: { atk: 5, def: 2, hp: 5, ini: 6, type: 'Melé', abilities: ["Ataque: Después del ataque, lanza 2 dados de ataque; si sacas un doble 0, reduce los Puntos de Salud de la unidad objetivo a 0."], customCost: { gold: 14, materials: 0, valuable: 0 } }
   },
   "Wyverns": {
-    basic: { atk: 5, def: 1, hp: 8, ini: 7, type: 'Voladora', abilities: ["Al Atacar: Coloca 1 cubo de facción sobre el objetivo. Al comienzo de su activación retíralo para infligirle 1 Herida."], customCost: { gold: 12, materials: 0, valuable: 0 } },
-    elite: { atk: 6, def: 1, hp: 8, ini: 11, type: 'Voladora', abilities: ["Al Atacar: Coloca 2 cubos de facción sobre el objetivo. Al comienzo de cada activación, retira 1 para infligirle 1 Herida."], customCost: { gold: 18, materials: 0, valuable: 1 } }
+    basic: { atk: 5, def: 1, hp: 8, ini: 7, type: 'Voladora', abilities: ["Ataque: Coloca 1 cubo de facción sobre el objetivo. Al comienzo de su activación retíralo para infligirle 1 Herida."], customCost: { gold: 12, materials: 0, valuable: 0 } },
+    elite: { atk: 6, def: 1, hp: 8, ini: 11, type: 'Voladora', abilities: ["Ataque: Coloca 2 cubos de facción sobre el objetivo. Al comienzo de cada activación, retira 1 para infligirle 1 Herida."], customCost: { gold: 18, materials: 0, valuable: 1 } }
   },
   "Hidras": {
-    basic: { atk: 6, def: 3, hp: 8, ini: 5, type: 'Melé', abilities: ["Al Atacar: Ignora el contraataque."], customCost: { gold: 20, materials: 0, valuable: 1 } },
-    elite: { atk: 7, def: 3, hp: 10, ini: 7, type: 'Melé', abilities: ["Al Atacar: Ignora el contraataque. Esta unidad ataca a hasta 2 unidades enemigas adyacentes."], customCost: { gold: 28, materials: 0, valuable: 2 } }
+    basic: { atk: 6, def: 3, hp: 8, ini: 5, type: 'Melé', abilities: ["Ataque: Ignora el contraataque."], customCost: { gold: 20, materials: 0, valuable: 1 } },
+    elite: { atk: 7, def: 3, hp: 10, ini: 7, type: 'Melé', abilities: ["Ataque: Ignora el contraataque. Esta unidad ataca a hasta 2 unidades enemigas adyacentes."], customCost: { gold: 28, materials: 0, valuable: 2 } }
   },
 
   // Conflujo
   "Hadas": {
     basic: { atk: 2, def: 0, hp: 2, ini: 7, type: 'Melé', abilities: [], customCost: { gold: 2, materials: 0, valuable: 0 } },
-    elite: { atk: 2, def: 0, hp: 4, ini: 9, type: 'Melé', abilities: ["Al Atacar: Ignora los contraataques."], customCost: { gold: 4, materials: 0, valuable: 0 } }
+    elite: { atk: 2, def: 0, hp: 4, ini: 9, type: 'Melé', abilities: ["Ataque: Ignora los contraataques."], customCost: { gold: 4, materials: 0, valuable: 0 } }
   },
   "Elementales de la tormenta": {
     basic: { atk: 2, def: 0, hp: 3, ini: 7, type: 'a Distancia', abilities: [], customCost: { gold: 3, materials: 0, valuable: 0 } },
-    elite: { atk: 2, def: 0, hp: 5, ini: 8, type: 'a Distancia', abilities: ["Al Atacar: Añade +1 Potencia al primer hechizo de magia de aire que lances durante esta activación."], customCost: { gold: 5, materials: 0, valuable: 0 } }
+    elite: { atk: 2, def: 0, hp: 5, ini: 8, type: 'a Distancia', abilities: ["Ataque: Añade +1 Potencia al primer hechizo de magia de aire que lances durante esta activación."], customCost: { gold: 5, materials: 0, valuable: 0 } }
   },
   "Elementales de hielo": {
     basic: { atk: 2, def: 1, hp: 4, ini: 5, type: 'a Distancia', abilities: [], customCost: { gold: 4, materials: 0, valuable: 0 } },
@@ -521,60 +521,60 @@ export const UNIT_DETAILS: {
     elite: { atk: 5, def: 2, hp: 5, ini: 6, type: 'Melé', abilities: ["Activación: Añade +1 Potencia al primer hechizo de magia tierra que lances durante esta activación."], customCost: { gold: 13, materials: 0, valuable: 0 } }
   },
   "Elementales mágicos": {
-    basic: { atk: 4, def: 2, hp: 7, ini: 7, type: 'Melé', abilities: ["Al Atacar: Ignora los contraataques.\nAtaca a todas las unidades adyacentes."], customCost: { gold: 13, materials: 0, valuable: 0 } },
-    elite: { atk: 5, def: 2, hp: 7, ini: 9, type: 'Melé', abilities: ["Al Atacar: Ignora los contraataques.\nAtaca todas las unidades enemigas adyacentes.\nPasivo: Ignora cualquier efecto de Hechizo y Daño de especialidad."], customCost: { gold: 19, materials: 0, valuable: 1 } },
+    basic: { atk: 4, def: 2, hp: 7, ini: 7, type: 'Melé', abilities: ["Ataque: Ignora los contraataques.\nAtaca a todas las unidades adyacentes."], customCost: { gold: 13, materials: 0, valuable: 0 } },
+    elite: { atk: 5, def: 2, hp: 7, ini: 9, type: 'Melé', abilities: ["Ataque: Ignora los contraataques.\nAtaca todas las unidades enemigas adyacentes.\nPasiva: Ignora cualquier efecto de Hechizo y Daño de especialidad."], customCost: { gold: 19, materials: 0, valuable: 1 } },
   },
   "Fénix": {
-    basic: { atk: 6, def: 2, hp: 7, ini: 12, type: 'Voladora', abilities: ["Pasivo: Una vez por combate. Cuando los PS de esta unidad se reduzcan a 0, ponlos en 1. Pasivo: Innmunes a los Hechizos de magia de fuego."], customCost: { gold: 21, materials: 0, valuable: 1 } },
-    elite: { atk: 7, def: 2, hp: 8, ini: 18, type: 'Voladora', abilities: ["Al Atacar: Ataca 2 espacios en una línea. El primer ataque se resuelve normalmente y el segundo tiene 2 Ataque.\nPasivo: Inmunes a los Hechizos de magia de fuego."], customCost: { gold: 29, materials: 0, valuable: 2 } }
+    basic: { atk: 6, def: 2, hp: 7, ini: 12, type: 'Voladora', abilities: ["Pasiva: Una vez por combate. Cuando los PS de esta unidad se reduzcan a 0, ponlos en 1. Pasiva: Innmunes a los Hechizos de magia de fuego."], customCost: { gold: 21, materials: 0, valuable: 1 } },
+    elite: { atk: 7, def: 2, hp: 8, ini: 18, type: 'Voladora', abilities: ["Ataque: Ataca 2 espacios en una línea. El primer ataque se resuelve normalmente y el segundo tiene 2 Ataque.\nPasiva: Inmunes a los Hechizos de magia de fuego."], customCost: { gold: 29, materials: 0, valuable: 2 } }
   },
 
   // Invocaciones (Summons)
   "Elementales de aire": {
-    basic: { atk: 2, def: 0, hp: 4, ini: 8, type: 'Melé', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de aire.\nEsta unidad inflige daño elemental."] },
-    elite: { atk: 3, def: 0, hp: 4, ini: 8, type: 'Melé', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de aire.\nEsta unidad inflige daño elemental."] }
+    basic: { atk: 2, def: 0, hp: 4, ini: 8, type: 'Melé', abilities: ["Pasiva: Inmunes a la Flecha mágica y a los Hechizos de magia de aire.\nEsta unidad inflige daño elemental."] },
+    elite: { atk: 3, def: 0, hp: 4, ini: 8, type: 'Melé', abilities: ["Pasiva: Inmunes a la Flecha mágica y a los Hechizos de magia de aire.\nEsta unidad inflige daño elemental."] }
   },
   "Elementales de agua": {
-    basic: { atk: 2, def: 0, hp: 5, ini: 6, type: 'Melé', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de agua.\nEsta unidad inflige daño elemental."] },
-    elite: { atk: 3, def: 0, hp: 5, ini: 6, type: 'Melé', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de agua.\nEsta unidad inflige daño elemental."] }
+    basic: { atk: 2, def: 0, hp: 5, ini: 6, type: 'Melé', abilities: ["Pasiva: Inmunes a la Flecha mágica y a los Hechizos de magia de agua.\nEsta unidad inflige daño elemental."] },
+    elite: { atk: 3, def: 0, hp: 5, ini: 6, type: 'Melé', abilities: ["Pasiva: Inmunes a la Flecha mágica y a los Hechizos de magia de agua.\nEsta unidad inflige daño elemental."] }
   },
   "Elementales de fuego": {
-    basic: { atk: 2, def: 1, hp: 4, ini: 5, type: 'Melé', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de fuego.\nEsta unidad inflige daño elemental."] },
-    elite: { atk: 3, def: 1, hp: 4, ini: 5, type: 'Melé', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de fuego.\nEsta unidad inflige daño elemental."] }
+    basic: { atk: 2, def: 1, hp: 4, ini: 5, type: 'Melé', abilities: ["Pasiva: Inmunes a la Flecha mágica y a los Hechizos de magia de fuego.\nEsta unidad inflige daño elemental."] },
+    elite: { atk: 3, def: 1, hp: 4, ini: 5, type: 'Melé', abilities: ["Pasiva: Inmunes a la Flecha mágica y a los Hechizos de magia de fuego.\nEsta unidad inflige daño elemental."] }
   },
   "Elementales de tierra": {
-    basic: { atk: 2, def: 2, hp: 2, ini: 5, type: 'Melé', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de tierra.\nEsta unidad inflige daño elemental."] },
-    elite: { atk: 3, def: 2, hp: 2, ini: 5, type: 'Melé', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de tierra.\nEsta unidad inflige daño elemental."] }
+    basic: { atk: 2, def: 2, hp: 2, ini: 5, type: 'Melé', abilities: ["Pasiva: Inmunes a la Flecha mágica y a los Hechizos de magia de tierra.\nEsta unidad inflige daño elemental."] },
+    elite: { atk: 3, def: 2, hp: 2, ini: 5, type: 'Melé', abilities: ["Pasiva: Inmunes a la Flecha mágica y a los Hechizos de magia de tierra.\nEsta unidad inflige daño elemental."] }
   },
 
   // Cala
   "Oceánidos": {
     basic: { atk: 2, def: 0, hp: 3, ini: 6, type: 'Voladora', abilities: [], customCost: { gold: 2, materials: 0, valuable: 0 } },
-    elite: { atk: 3, def: 0, hp: 3, ini: 8, type: 'Voladora', abilities: ["Pasivo: Ignora todos los efectos y Daño de un Hechizo de magia de agua."], customCost: { gold: 3, materials: 0, valuable: 0 } }
+    elite: { atk: 3, def: 0, hp: 3, ini: 8, type: 'Voladora', abilities: ["Pasiva: Ignora todos los efectos y Daño de un Hechizo de magia de agua."], customCost: { gold: 3, materials: 0, valuable: 0 } }
   },
   "Marineros": {
     basic: { atk: 2, def: 1, hp: 3, ini: 5, type: 'Melé', abilities: [], customCost: { gold: 3, materials: 0, valuable: 0 } },
-    elite: { atk: 2, def: 1, hp: 5, ini: 6, type: 'Melé', abilities: ["Pasivo: Una vez por combate, cuando esta unidad retira una unidad del combate, gana 2 Oros."], customCost: { gold: 5, materials: 0, valuable: 0 } }
+    elite: { atk: 2, def: 1, hp: 5, ini: 6, type: 'Melé', abilities: ["Pasiva: Una vez por combate, cuando esta unidad retira una unidad del combate, gana 2 Oros."], customCost: { gold: 5, materials: 0, valuable: 0 } }
   },
   "Lobos de mar": {
-    basic: { atk: 2, def: 0, hp: 4, ini: 6, type: 'a Distancia', abilities: ["Pasivo: Ignora la penalización de combate contra unidades adyacentes."], customCost: { gold: 4, materials: 0, valuable: 0 } },
-    elite: { atk: 3, def: 0, hp: 5, ini: 8, type: 'a Distancia', abilities: ["Al Atacar: Ignora los contraataques.\nPasivo: Ignora la penalización de combate contra unidades adyanteces."], customCost: { gold: 6, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 0, hp: 4, ini: 6, type: 'a Distancia', abilities: ["Pasiva: Ignora la penalización de combate contra unidades adyacentes."], customCost: { gold: 4, materials: 0, valuable: 0 } },
+    elite: { atk: 3, def: 0, hp: 5, ini: 8, type: 'a Distancia', abilities: ["Ataque: Ignora los contraataques.\nPasiva: Ignora la penalización de combate contra unidades adyanteces."], customCost: { gold: 6, materials: 0, valuable: 0 } }
   },
   "Ayssids": {
     basic: { atk: 3, def: 1, hp: 5, ini: 9, type: 'Voladora', abilities: [], customCost: { gold: 6, materials: 0, valuable: 0 } },
-    elite: { atk: 3, def: 1, hp: 6, ini: 11, type: 'Voladora', abilities: ["Al Atacar: Si los Puntos de salud del objetivo se reducen a 0, después de resolver el Contraataque (si corresponde), los Ayssids pueden atacar a otra unidad adyacente."], customCost: { gold: 10, materials: 0, valuable: 0 } }
+    elite: { atk: 3, def: 1, hp: 6, ini: 11, type: 'Voladora', abilities: ["Ataque: Si los Puntos de salud del objetivo se reducen a 0, después de resolver el Contraataque (si corresponde), los Ayssids pueden atacar a otra unidad adyacente."], customCost: { gold: 10, materials: 0, valuable: 0 } }
   },
   "Hechiceras": {
     basic: { atk: 3, def: 1, hp: 5, ini: 6, type: 'a Distancia', abilities: ["Alternativo: Coloca una ficha de debilidad <<-2>> sobre cualquier unidad durante 2 rondas de combate."], customCost: { gold: 8, materials: 0, valuable: 0 } },
-    elite: { atk: 4, def: 1, hp: 6, ini: 7, type: 'a Distancia', abilities: ["Al Atacar: Después del ataque, coloca una ficha de Debilidad <<-1>> sobre el objetivo durante 2 rondas de combate."], customCost: { gold: 13, materials: 0, valuable: 0 } }
+    elite: { atk: 4, def: 1, hp: 6, ini: 7, type: 'a Distancia', abilities: ["Ataque: Después del ataque, coloca una ficha de Debilidad <<-1>> sobre el objetivo durante 2 rondas de combate."], customCost: { gold: 13, materials: 0, valuable: 0 } }
   },
   "Nix": {
     basic: { atk: 5, def: 2, hp: 7, ini: 6, type: 'Melé', abilities: [], customCost: { gold: 12, materials: 0, valuable: 0 } },
-    elite: { atk: 6, def: 2, hp: 8, ini: 7, type: 'Melé', abilities: ["Pasivo: Esta unidad no puede recibir más de 4 Heridas de un solo ataque."], customCost: { gold: 20, materials: 0, valuable: 1 } }
+    elite: { atk: 6, def: 2, hp: 8, ini: 7, type: 'Melé', abilities: ["Pasiva: Esta unidad no puede recibir más de 4 Heridas de un solo ataque."], customCost: { gold: 20, materials: 0, valuable: 1 } }
   },
   "Háspidos": {
-    basic: { atk: 5, def: 3, hp: 8, ini: 9, type: 'Melé', abilities: ["Al Atacar: +2 Ataque si, durante este combate, esta unidad se giró del lado de manada al lado de unos pocos."], customCost: { gold: 18, materials: 0, valuable: 1 } },
-    elite: { atk: 7, def: 3, hp: 8, ini: 12, type: 'Melé', abilities: ["Al Atacar: Coloca 2 cubos de facción sobre el objetivo. Al comienzo de cada una de sus activaciones, retira 1 de ellos para inflgir 1 Herida."], customCost: { gold: 30, materials: 0, valuable: 2 } }
+    basic: { atk: 5, def: 3, hp: 8, ini: 9, type: 'Melé', abilities: ["Ataque: +2 Ataque si, durante este combate, esta unidad se giró del lado de manada al lado de unos pocos."], customCost: { gold: 18, materials: 0, valuable: 1 } },
+    elite: { atk: 7, def: 3, hp: 8, ini: 12, type: 'Melé', abilities: ["Ataque: Coloca 2 cubos de facción sobre el objetivo. Al comienzo de cada una de sus activaciones, retira 1 de ellos para inflgir 1 Herida."], customCost: { gold: 30, materials: 0, valuable: 2 } }
   },
 
   // Neutrales
@@ -585,16 +585,16 @@ export const UNIT_DETAILS: {
     basic: { atk: 1, def: 0, hp: 2, ini: 3, type: 'Melé', abilities: ["Mapa: Al comienzo de cada ronda de recursos, gana 3 Oros."], customCost: { gold: 3, materials: 0, valuable: 0 } }
   },
   "Esqueletos (Neutral)": {
-    basic: { atk: 2, def: 0, hp: 3, ini: 4, type: 'Melé', abilities: ["Pasivo: Cuando son derrotados, si controlas un héroe de la Nigromancia, refuerza inmediatamente 1 de tus unidades Bronce."], customCost: { gold: 3, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 0, hp: 3, ini: 4, type: 'Melé', abilities: ["Pasiva: Cuando son derrotados, si controlas un héroe de la Nigromancia, refuerza inmediatamente 1 de tus unidades Bronce."], customCost: { gold: 3, materials: 0, valuable: 0 } }
   },
   "Hadas (Neutral)": {
-    basic: { atk: 2, def: 0, hp: 2, ini: 7, type: 'Voladora', abilities: ["Al Atacar: Ignora el contraataque."], customCost: { gold: 2, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 0, hp: 2, ini: 7, type: 'Voladora', abilities: ["Ataque: Ignora el contraataque."], customCost: { gold: 2, materials: 0, valuable: 0 } }
   },
   "Goblins (Neutral)": {
     basic: { atk: 1, def: 0, hp: 4, ini: 6, type: 'Melé', abilities: [], customCost: { gold: 4, materials: 0, valuable: 0 } }
   },
   "Oceánidos (Neutral)": {
-    basic: { atk: 2, def: 0, hp: 3, ini: 6, type: 'Voladora', abilities: ["Pasivo: Ignora todos los efectos y Daño de un Hechizo de magia de agua."], customCost: { gold: 3, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 0, hp: 3, ini: 6, type: 'Voladora', abilities: ["Pasiva: Ignora todos los efectos y Daño de un Hechizo de magia de agua."], customCost: { gold: 3, materials: 0, valuable: 0 } }
   },
   "Centauros (Neutral)": {
     basic: { atk: 2, def: 0, hp: 5, ini: 7, type: 'Melé', abilities: [], customCost: { gold: 3, materials: 0, valuable: 0 } }
@@ -603,64 +603,64 @@ export const UNIT_DETAILS: {
     basic: { atk: 2, def: 1, hp: 2, ini: 4, type: 'Melé', abilities: [], customCost: { gold: 3, materials: 0, valuable: 0 } }
   },
   "Alabarderos (Neutral)": {
-    basic: { atk: 2, def: 0, hp: 4, ini: 4, type: 'Melé', abilities: ["Pasivo: Considera que las unidades adyacentes aliadas tienen una ficha de defensa."], customCost: { gold: 4, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 0, hp: 4, ini: 4, type: 'Melé', abilities: ["Pasiva: Considera que las unidades adyacentes aliadas tienen una ficha de defensa."], customCost: { gold: 4, materials: 0, valuable: 0 } }
   },
   "Trogloditas (Neutral)": {
-    basic: { atk: 2, def: 1, hp: 3, ini: 6, type: 'Melé', abilities: ["Pasivo: Esta unidad ignora los efectos de Parálisis."], customCost: { gold: 4, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 1, hp: 3, ini: 6, type: 'Melé', abilities: ["Pasiva: Esta unidad ignora los efectos de Parálisis."], customCost: { gold: 4, materials: 0, valuable: 0 } }
   },
   "Familiares (Neutral)": {
-    basic: { atk: 3, def: 1, hp: 2, ini: 7, type: 'Melé', abilities: ["Pasivo: Cuando un enemigo lanza un Hechizo de su mano, debe descartar 1 carta de la mano."], customCost: { gold: 6, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 1, hp: 2, ini: 7, type: 'Melé', abilities: ["Pasiva: Cuando un enemigo lanza un Hechizo de su mano, debe descartar 1 carta de la mano."], customCost: { gold: 6, materials: 0, valuable: 0 } }
   },
   "Jabalíes": {
     basic: { atk: 2, def: 0, hp: 4, ini: 6, type: 'Melé', abilities: [], customCost: { gold: 4, materials: 0, valuable: 0 } }
   },
   "Gárgolas (Neutral)": {
-    basic: { atk: 2, def: 1, hp: 3, ini: 9, type: 'Voladora', abilities: ["Pasivo: Esta unidad ignora el efecto Parálisis."], customCost: { gold: 4, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 1, hp: 3, ini: 9, type: 'Voladora', abilities: ["Pasiva: Esta unidad ignora el efecto Parálisis."], customCost: { gold: 4, materials: 0, valuable: 0 } }
   },
   "Enanos (Neutral)": {
-    basic: { atk: 2, def: 1, hp: 4, ini: 3, type: 'Melé', abilities: ["Pasivo: Si la unidad es objetivo de una carta de hechizo o especialidad, lanza 1 dado de ataque. Con un +1, ignora su efecto."], customCost: { gold: 4, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 1, hp: 4, ini: 3, type: 'Melé', abilities: ["Pasiva: Si la unidad es objetivo de una carta de hechizo o especialidad, lanza 1 dado de ataque. Con un +1, ignora su efecto."], customCost: { gold: 4, materials: 0, valuable: 0 } }
   },
   "Hombres lagarto (Neutral)": {
     basic: { atk: 2, def: 0, hp: 4, ini: 5, type: 'a Distancia', abilities: [], customCost: { gold: 4, materials: 0, valuable: 0 } }
   },
   "Duende": {
-    basic: { atk: 2, def: 0, hp: 3, ini: 5, type: 'Melé', abilities: ["Al Atacar: Lanza 2 dados de ataque y resuelve el resultado mayor."], customCost: { gold: 4, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 0, hp: 3, ini: 5, type: 'Melé', abilities: ["Ataque: Lanza 2 dados de ataque y resuelve el resultado mayor."], customCost: { gold: 4, materials: 0, valuable: 0 } }
   },
   "Zombis (Neutral)": {
-    basic: { atk: 2, def: 0, hp: 4, ini: 3, type: 'Melé', abilities: ["Pasivo: Si el atacante resuelve un 0 o un +1 en el dado de ataque, obtén +1 Defensa."], customCost: { gold: 5, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 0, hp: 4, ini: 3, type: 'Melé', abilities: ["Pasiva: Si el atacante resuelve un 0 o un +1 en el dado de ataque, obtén +1 Defensa."], customCost: { gold: 5, materials: 0, valuable: 0 } }
   },
   "Arpías (Neutral)": {
-    basic: { atk: 2, def: 0, hp: 4, ini: 8, type: 'Voladora', abilities: ["Al Atacar: Ignora el contraataque. Esta unidad puede volver al espacio desde el que se movió para atacar."], customCost: { gold: 5, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 0, hp: 4, ini: 8, type: 'Voladora', abilities: ["Ataque: Ignora el contraataque. Esta unidad puede volver al espacio desde el que se movió para atacar."], customCost: { gold: 5, materials: 0, valuable: 0 } }
   },
   "Medianos": {
-    basic: { atk: 2, def: 0, hp: 3, ini: 6, type: 'a Distancia', abilities: ["Al Atacar: Lanza 2 dados de ataque y resuelve el resultado mayor. Ignora los penalizadores de combate."], customCost: { gold: 5, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 0, hp: 3, ini: 6, type: 'a Distancia', abilities: ["Ataque: Lanza 2 dados de ataque y resuelve el resultado mayor. Ignora los penalizadores de combate."], customCost: { gold: 5, materials: 0, valuable: 0 } }
   },
   "Marineros (Neutral)": {
     basic: { atk: 2, def: 1, hp: 3, ini: 5, type: 'Melé', abilities: [], customCost: { gold: 5, materials: 0, valuable: 0 } }
   },
   "Elemental de aire": {
-    basic: { atk: 2, def: 0, hp: 3, ini: 7, type: 'Melé', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de aire. Esta unidad inflige daño elemental."], customCost: { gold: 7, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 0, hp: 3, ini: 7, type: 'Melé', abilities: ["Pasiva: Inmunes a la Flecha mágica y a los Hechizos de magia de aire. Esta unidad inflige daño elemental."], customCost: { gold: 7, materials: 0, valuable: 0 } }
   },
   "Elementales de la tormenta (Neutral)": {
-    basic: { atk: 2, def: 0, hp: 3, ini: 7, type: 'a Distancia', abilities: ["Pasivo: Inmune a la Flecha mágica y a los Hechizos de magia de aire. Esta unidad inflige daño elemental."], customCost: { gold: 5, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 0, hp: 3, ini: 7, type: 'a Distancia', abilities: ["Pasiva: Inmune a la Flecha mágica y a los Hechizos de magia de aire. Esta unidad inflige daño elemental."], customCost: { gold: 5, materials: 0, valuable: 0 } }
   },
   "Incursores lupinos (Neutral)": {
-    basic: { atk: 2, def: 0, hp: 3, ini: 7, type: 'Melé', abilities: ["Al Atacar: Ataca este objetivo otra vez. El segundo ataque se produce después de que el objetivo contraataque (si es posible)."], customCost: { gold: 6, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 0, hp: 3, ini: 7, type: 'Melé', abilities: ["Ataque: Ataca este objetivo otra vez. El segundo ataque se produce después de que el objetivo contraataque (si es posible)."], customCost: { gold: 6, materials: 0, valuable: 0 } }
   },
   "Tiradores (Neutral)": {
-    basic: { atk: 2, def: 0, hp: 3, ini: 5, type: 'a Distancia', abilities: ["Al Atacar: Si un objetivo no está adyacente, vuelve a atacarlo."], customCost: { gold: 7, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 0, hp: 3, ini: 5, type: 'a Distancia', abilities: ["Ataque: Si un objetivo no está adyacente, vuelve a atacarlo."], customCost: { gold: 7, materials: 0, valuable: 0 } }
   },
   "Magogs (Neutral)": {
-    basic: { atk: 2, def: 0, hp: 4, ini: 6, type: 'a Distancia', abilities: ["Al Atacar: Cuando los magogs atacan a un objetivo que no está adyacente a ellos, hacen 1 Herida a una unidad adyacente al objetivo."], customCost: { gold: 8, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 0, hp: 4, ini: 6, type: 'a Distancia', abilities: ["Ataque: Cuando los magogs atacan a un objetivo que no está adyacente a ellos, hacen 1 Herida a una unidad adyacente al objetivo."], customCost: { gold: 8, materials: 0, valuable: 0 } }
   },
   "Saqueadores": {
     basic: { atk: 2, def: 1, hp: 3, ini: 6, type: 'Melé', abilities: ["Mapa: Una vez en tu turno mira la carta superior de cualquier mazo y colócala en la parte superior/inferior de ese mazo."], customCost: { gold: 5, materials: 0, valuable: 0 } }
   },
   "Gólems de hierro (Neutral)": {
-    basic: { atk: 2, def: 1, hp: 4, ini: 3, type: 'Melé', abilities: ["Pasivo: Reduce en 2 el Daño de los hechizos (hata un mínimo de 0)."], customCost: { gold: 6, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 1, hp: 4, ini: 3, type: 'Melé', abilities: ["Pasiva: Reduce en 2 el Daño de los hechizos (hata un mínimo de 0)."], customCost: { gold: 6, materials: 0, valuable: 0 } }
   },
   "Ojos maléficos (Neutral)": {
-    basic: { atk: 2, def: 1, hp: 3, ini: 6, type: 'a Distancia', abilities: ["Pasivo: Ignora la penalización de combate contra unidades adyacentes."], customCost: { gold: 6, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 1, hp: 3, ini: 6, type: 'a Distancia', abilities: ["Pasiva: Ignora la penalización de combate contra unidades adyacentes."], customCost: { gold: 6, materials: 0, valuable: 0 } }
   },
   "Espectros (Neutral)": {
     basic: { atk: 2, def: 0, hp: 4, ini: 7, type: 'Voladora', abilities: ["Activación: Retira hasta 2 Heridas de esta unidad."], customCost: { gold: 7, materials: 0, valuable: 0 } }
@@ -669,34 +669,34 @@ export const UNIT_DETAILS: {
     basic: { atk: 2, def: 1, hp: 4, ini: 4, type: 'a Distancia', abilities: [], customCost: { gold: 7, materials: 0, valuable: 0 } }
   },
   "Elementales de hielo (Neutral)": {
-    basic: { atk: 2, def: 1, hp: 3, ini: 5, type: 'a Distancia', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de agua. Esta unidad inflige daño elemental."], customCost: { gold: 7, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 1, hp: 3, ini: 5, type: 'a Distancia', abilities: ["Pasiva: Inmunes a la Flecha mágica y a los Hechizos de magia de agua. Esta unidad inflige daño elemental."], customCost: { gold: 7, materials: 0, valuable: 0 } }
   },
   "Lobos de mar (Neutral)": {
-    basic: { atk: 2, def: 0, hp: 4, ini: 6, type: 'a Distancia', abilities: ["Pasivo: Ignora la penalización de combate contra unidades adyacentes."], customCost: { gold: 7, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 0, hp: 4, ini: 6, type: 'a Distancia', abilities: ["Pasiva: Ignora la penalización de combate contra unidades adyacentes."], customCost: { gold: 7, materials: 0, valuable: 0 } }
   },
   "Elfos (Neutral)": {
-    basic: { atk: 2, def: 1, hp: 3, ini: 6, type: 'a Distancia', abilities: ["Al Atacar: Si una unidad objetivo no está adyacente, vuélvela a atacar si sacas un -1 o un 0."], customCost: { gold: 7, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 1, hp: 3, ini: 6, type: 'a Distancia', abilities: ["Ataque: Si una unidad objetivo no está adyacente, vuélvela a atacar si sacas un -1 o un 0."], customCost: { gold: 7, materials: 0, valuable: 0 } }
   },
   "Libélulas (Neutral)": {
-    basic: { atk: 3, def: 0, hp: 3, ini: 8, type: 'Voladora', abilities: ["Al Atacar: Los contraataques contra las libélulas sufre -1 Ataque."], customCost: { gold: 7, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 0, hp: 3, ini: 8, type: 'Voladora', abilities: ["Ataque: Los contraataques contra las libélulas sufre -1 Ataque."], customCost: { gold: 7, materials: 0, valuable: 0 } }
   },
   "Grifos (Neutral)": {
     basic: { atk: 3, def: 0, hp: 4, ini: 8, type: 'Voladora', abilities: ["Contraataque: Esta unidad puede llevar a cabo una cantidad ilimitada de contraataques."], customCost: { gold: 7, materials: 0, valuable: 0 } }
   },
   "Cerberos (Neutral)": {
-    basic: { atk: 2, def: 0, hp: 5, ini: 8, type: 'Melé', abilities: ["Al Atacar: Ignora contraataques. Además, hace 1 Herida a otra unidad enemiga adyacente a los cerberos."], customCost: { gold: 10, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 0, hp: 5, ini: 8, type: 'Melé', abilities: ["Ataque: Ignora contraataques. Además, hace 1 Herida a otra unidad enemiga adyacente a los cerberos."], customCost: { gold: 10, materials: 0, valuable: 0 } }
   },
   "Momias": {
-    basic: { atk: 3, def: 1, hp: 4, ini: 5, type: 'Melé', abilities: ["Al Atacar: Ignora el resultado del dado de ataque.", "Pasivo: Cuando esta unidad reciba un ataque, coloca el dado de ataque de tu oponente por la cara -1."], customCost: { gold: 8, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 1, hp: 4, ini: 5, type: 'Melé', abilities: ["Ataque: Ignora el resultado del dado de ataque.", "Pasiva: Cuando esta unidad reciba un ataque, coloca el dado de ataque de tu oponente por la cara -1."], customCost: { gold: 8, materials: 0, valuable: 0 } }
   },
   "Vampiros (Neutral)": {
-    basic: { atk: 3, def: 0, hp: 5, ini: 8, type: 'Voladora', abilities: ["Al Atacar: Ignora el contraataque del enemigo. Después retira hasta 2 Heridas a esta unidad."], customCost: { gold: 9, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 0, hp: 5, ini: 8, type: 'Voladora', abilities: ["Ataque: Ignora el contraataque del enemigo. Después retira hasta 2 Heridas a esta unidad."], customCost: { gold: 9, materials: 0, valuable: 0 } }
   },
   "Ayssids (Neutral)": {
-    basic: { atk: 3, def: 1, hp: 5, ini: 9, type: 'Voladora', abilities: ["Al Atacar: Si los puntos de Salud del objetivo se reducen a 0, después de resolver el Contraataque (si corresponde), los Ayssids pueden atacar a otra unidad adyacente."], customCost: { gold: 9, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 1, hp: 5, ini: 9, type: 'Voladora', abilities: ["Ataque: Si los puntos de Salud del objetivo se reducen a 0, después de resolver el Contraataque (si corresponde), los Ayssids pueden atacar a otra unidad adyacente."], customCost: { gold: 9, materials: 0, valuable: 0 } }
   },
   "Elemental de agua": {
-    basic: { atk: 2, def: 1, hp: 4, ini: 5, type: 'Melé', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de agua. Esta unidad inflige daño elemental."], customCost: { gold: 10, materials: 0, valuable: 0 } }
+    basic: { atk: 2, def: 1, hp: 4, ini: 5, type: 'Melé', abilities: ["Pasiva: Inmunes a la Flecha mágica y a los Hechizos de magia de agua. Esta unidad inflige daño elemental."], customCost: { gold: 10, materials: 0, valuable: 0 } }
   },
   "Sátiros": {
     basic: { atk: 3, def: 0, hp: 5, ini: 7, type: 'Melé', abilities: ["Mapa: Una vez por turno. Tira 1 dado de ataque. Con +1, gana Moral positiva."], customCost: { gold: 10, materials: 0, valuable: 0 } }
@@ -705,67 +705,67 @@ export const UNIT_DETAILS: {
     basic: { atk: 3, def: 1, hp: 4, ini: 7, type: 'Melé', abilities: ["Mapa: Al final de tu turno, mueve tu miniatura de héroe a una zona vacía adyacente."], customCost: { gold: 10, materials: 0, valuable: 0 } }
   },
   "Tiradores certeros": {
-    basic: { atk: 3, def: 0, hp: 6, ini: 9, type: 'a Distancia', abilities: ["Al Atacar: Ignora las penalizaciones de combate."], customCost: { gold: 10, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 0, hp: 6, ini: 9, type: 'a Distancia', abilities: ["Ataque: Ignora las penalizaciones de combate."], customCost: { gold: 10, materials: 0, valuable: 0 } }
   },
   "Ogros (Neutral)": {
     basic: { atk: 3, def: 2, hp: 4, ini: 4, type: 'Melé', abilities: ["Alternativo: Coloca una ficha +2 Ataque en la unidad Melé o Voladora que elijas durante 2 rondas de combate."], customCost: { gold: 10, materials: 0, valuable: 0 } }
   },
   "Elementales de energía (Neutral)": {
-    basic: { atk: 3, def: 1, hp: 4, ini: 5, type: 'Voladora', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de fuego. Esta unidad inflige daño elemental."], customCost: { gold: 11, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 1, hp: 4, ini: 5, type: 'Voladora', abilities: ["Pasiva: Inmunes a la Flecha mágica y a los Hechizos de magia de fuego. Esta unidad inflige daño elemental."], customCost: { gold: 11, materials: 0, valuable: 0 } }
   },
   "Cruzados (Neutral)": {
-    basic: { atk: 3, def: 2, hp: 4, ini: 5, type: 'Melé', abilities: ["Pasivo: Durante cualquier ataque, lanza 2 dados de ataque y resuelve el resultado mayor."], customCost: { gold: 11, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 2, hp: 4, ini: 5, type: 'Melé', abilities: ["Pasiva: Durante cualquier ataque, lanza 2 dados de ataque y resuelve el resultado mayor."], customCost: { gold: 11, materials: 0, valuable: 0 } }
   },
   "Medusas (Neutral)": {
-    basic: { atk: 3, def: 1, hp: 4, ini: 6, type: 'a Distancia', abilities: ["Pasivo: Ignora la penalización de combate contra unidades adyacentes.", "Contraataque: El objetivo queda Paralizado."], customCost: { gold: 11, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 1, hp: 4, ini: 6, type: 'a Distancia', abilities: ["Pasiva: Ignora la penalización de combate contra unidades adyacentes.", "Contraataque: El objetivo queda Paralizado."], customCost: { gold: 11, materials: 0, valuable: 0 } }
   },
   "Magos (Neutral)": {
-    basic: { atk: 3, def: 0, hp: 5, ini: 6, type: 'a Distancia', abilities: ["Al Atacar: Ignora las penalizaciones de combate. Cuando la unidad ataca, el enemigo descarta una carta al azar o una con Potencia."], customCost: { gold: 11, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 0, hp: 5, ini: 6, type: 'a Distancia', abilities: ["Ataque: Ignora las penalizaciones de combate. Cuando la unidad ataca, el enemigo descarta una carta al azar o una con Potencia."], customCost: { gold: 11, materials: 0, valuable: 0 } }
   },
   "Fangarm": {
-    basic: { atk: 3, def: 1, hp: 5, ini: 8, type: 'Melé', abilities: ["Pasivo: Ignora todos los efectos de Hechizo y de especialidad distintos de Daño."], customCost: { gold: 11, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 1, hp: 5, ini: 8, type: 'Melé', abilities: ["Pasiva: Ignora todos los efectos de Hechizo y de especialidad distintos de Daño."], customCost: { gold: 11, materials: 0, valuable: 0 } }
   },
   "Gólems de acero": {
-    basic: { atk: 3, def: 2, hp: 3, ini: 5, type: 'Melé', abilities: ["Pasivo: Reduce el Daño sufrido por esta unidad de Hechizo o especialidad en 2, hasta un mínimo de 0."], customCost: { gold: 12, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 2, hp: 3, ini: 5, type: 'Melé', abilities: ["Pasiva: Reduce el Daño sufrido por esta unidad de Hechizo o especialidad en 2, hasta un mínimo de 0."], customCost: { gold: 12, materials: 0, valuable: 0 } }
   },
   "Basiliscos (Neutral)": {
-    basic: { atk: 4, def: 1, hp: 4, ini: 5, type: 'Melé', abilities: ["Al Atacar: Después de atacar, lanza 1 dado de ataque. Si sacas un 0, Paraliza tu objetivo."], customCost: { gold: 12, materials: 0, valuable: 0 } }
+    basic: { atk: 4, def: 1, hp: 4, ini: 5, type: 'Melé', abilities: ["Ataque: Después de atacar, lanza 1 dado de ataque. Si sacas un 0, Paraliza tu objetivo."], customCost: { gold: 12, materials: 0, valuable: 0 } }
   },
   "Dendroides (Neutral)": {
-    basic: { atk: 3, def: 2, hp: 6, ini: 3, type: 'Melé', abilities: ["Pasivo: Las unidades enemigas que empiecen su activación adyacentes a esta unidad no pueden moverse."], customCost: { gold: 12, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 2, hp: 6, ini: 3, type: 'Melé', abilities: ["Pasiva: Las unidades enemigas que empiecen su activación adyacentes a esta unidad no pueden moverse."], customCost: { gold: 12, materials: 0, valuable: 0 } }
   },
   "Demonios (Neutral)": {
     basic: { atk: 3, def: 0, hp: 8, ini: 6, type: 'Melé', abilities: [], customCost: { gold: 13, materials: 0, valuable: 0 } }
   },
   "Elemental de fuego": {
-    basic: { atk: 3, def: 1, hp: 3, ini: 6, type: 'Melé', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de fuego. Esta unidad inflige daño elemental."], customCost: { gold: 13, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 1, hp: 3, ini: 6, type: 'Melé', abilities: ["Pasiva: Inmunes a la Flecha mágica y a los Hechizos de magia de fuego. Esta unidad inflige daño elemental."], customCost: { gold: 13, materials: 0, valuable: 0 } }
   },
   "Hechiceras (Neutral)": {
-    basic: { atk: 3, def: 1, hp: 5, ini: 6, type: 'a Distancia', abilities: ["Al Atacar: Después del ataque, coloca una ficha de Debilidad <<-1>> sobre el objetivo durante 2 rondas de combate."], customCost: { gold: 13, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 1, hp: 5, ini: 6, type: 'a Distancia', abilities: ["Ataque: Después del ataque, coloca una ficha de Debilidad <<-1>> sobre el objetivo durante 2 rondas de combate."], customCost: { gold: 13, materials: 0, valuable: 0 } }
   },
   "Genios (Neutral)": {
-    basic: { atk: 3, def: 1, hp: 4, ini: 9, type: 'Voladora', abilities: ["Al Atacar: Cuando ataca a efrits, esta unidad gana +1 Ataque."], customCost: { gold: 11, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 1, hp: 4, ini: 9, type: 'Voladora', abilities: ["Ataque: Cuando ataca a efrits, esta unidad gana +1 Ataque."], customCost: { gold: 11, materials: 0, valuable: 0 } }
   },
   "Minotauros (Neutral)": {
-    basic: { atk: 3, def: 2, hp: 4, ini: 7, type: 'Melé', abilities: ["Al Atacar: Vuelve a tirar el resultado -1 del dado de ataque de esta unidad."], customCost: { gold: 11, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 2, hp: 4, ini: 7, type: 'Melé', abilities: ["Ataque: Vuelve a tirar el resultado -1 del dado de ataque de esta unidad."], customCost: { gold: 11, materials: 0, valuable: 0 } }
   },
   "Fanáticos (Neutral)": {
-    basic: { atk: 3, def: 0, hp: 5, ini: 5, type: 'a Distancia', abilities: ["Pasivo: Ignora las penalizaciones de combate contra unidades adyacentes."], customCost: { gold: 12, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 0, hp: 5, ini: 5, type: 'a Distancia', abilities: ["Pasiva: Ignora las penalizaciones de combate contra unidades adyacentes."], customCost: { gold: 12, materials: 0, valuable: 0 } }
   },
   "Liches (Neutral)": {
-    basic: { atk: 3, def: 0, hp: 6, ini: 7, type: 'a Distancia', abilities: ["Al Atacar: Elige una unidad adyacente al objetivo y atácala. Para este ataque tu Ataque es 2."], customCost: { gold: 12, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 0, hp: 6, ini: 7, type: 'a Distancia', abilities: ["Ataque: Elige una unidad adyacente al objetivo y atácala. Para este ataque tu Ataque es 2."], customCost: { gold: 12, materials: 0, valuable: 0 } }
   },
   "Gorgonas (Neutral)": {
-    basic: { atk: 4, def: 2, hp: 4, ini: 5, type: 'Melé', abilities: ["Al Atacar: Después del ataque, lanza 2 dados de ataque. Si sacas dos -1, reduce a 0 los Puntos de Salud de la unidad atacada."], customCost: { gold: 13, materials: 0, valuable: 0 } }
+    basic: { atk: 4, def: 2, hp: 4, ini: 5, type: 'Melé', abilities: ["Ataque: Después del ataque, lanza 2 dados de ataque. Si sacas dos -1, reduce a 0 los Puntos de Salud de la unidad atacada."], customCost: { gold: 13, materials: 0, valuable: 0 } }
   },
   "Aves de trueno (Neutral)": {
-    basic: { atk: 3, def: 0, hp: 6, ini: 9, type: 'Voladora', abilities: ["Pasivo: Justo después del ataque de esta unidad y antes de un contraataque, tira 1 daod de ataque; con un <<0>> o <<+1>>, inflige 1 Herida al objetivo."], customCost: { gold: 13, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 0, hp: 6, ini: 9, type: 'Voladora', abilities: ["Pasiva: Justo después del ataque de esta unidad y antes de un contraataque, tira 1 daod de ataque; con un <<0>> o <<+1>>, inflige 1 Herida al objetivo."], customCost: { gold: 13, materials: 0, valuable: 0 } }
   },
   "Elementales de magma (Neutral)": {
-    basic: { atk: 3, def: 2, hp: 4, ini: 4, type: 'Melé', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de tierra. Esta unidad inflige daño elemental."], customCost: { gold: 14, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 2, hp: 4, ini: 4, type: 'Melé', abilities: ["Pasiva: Inmunes a la Flecha mágica y a los Hechizos de magia de tierra. Esta unidad inflige daño elemental."], customCost: { gold: 14, materials: 0, valuable: 0 } }
   },
   "Pegasos (Neutral)": {
-    basic: { atk: 3, def: 0, hp: 5, ini: 8, type: 'Voladora', abilities: ["Pasivo: Cuando un enemigo lanza un Hechizo debe descartar 1 carta adicional con Poder de la mano."], customCost: { gold: 14, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 0, hp: 5, ini: 8, type: 'Voladora', abilities: ["Pasiva: Cuando un enemigo lanza un Hechizo debe descartar 1 carta adicional con Poder de la mano."], customCost: { gold: 14, materials: 0, valuable: 0 } }
   },
   "Señores del abismo (Neutral)": {
     basic: { atk: 4, def: 1, hp: 5, ini: 7, type: 'Melé', abilities: [], customCost: { gold: 15, materials: 0, valuable: 0 } }
@@ -774,88 +774,88 @@ export const UNIT_DETAILS: {
     basic: { atk: 4, def: 0, hp: 7, ini: 7, type: 'Melé', abilities: ["Activación: Retira hasta 3 Heridas de esta unidad."], customCost: { gold: 13, materials: 0, valuable: 0 } }
   },
   "Gólems de oro": {
-    basic: { atk: 3, def: 2, hp: 6, ini: 5, type: 'Melé', abilities: ["Pasivo: Reduce en 2 el Daño de los hechizos (hasta un mínimo de 0)."], customCost: { gold: 14, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 2, hp: 6, ini: 5, type: 'Melé', abilities: ["Pasiva: Reduce en 2 el Daño de los hechizos (hasta un mínimo de 0)."], customCost: { gold: 14, materials: 0, valuable: 0 } }
   },
   "Hechiceros": {
     basic: { atk: 4, def: 1, hp: 5, ini: 8, type: 'a Distancia', abilities: ["Activación: Retira hasta 2 Heridas de una unidad aliada. De lo contrario, los hechiceros ganan +1 Ataque."], customCost: { gold: 16, materials: 0, valuable: 0 } }
   },
   "Gólems de diamante": {
-    basic: { atk: 4, def: 2, hp: 6, ini: 6, type: 'Melé', abilities: ["Pasivo: Reduce en 3 el Daño de los hechizos (hasta un mínimo de 0)."], customCost: { gold: 16, materials: 0, valuable: 0 } }
+    basic: { atk: 4, def: 2, hp: 6, ini: 6, type: 'Melé', abilities: ["Pasiva: Reduce en 3 el Daño de los hechizos (hasta un mínimo de 0)."], customCost: { gold: 16, materials: 0, valuable: 0 } }
   },
   "Nagas (Neutral)": {
-    basic: { atk: 5, def: 1, hp: 6, ini: 6, type: 'Melé', abilities: ["Al Atacar: Ignora contraataques."], customCost: { gold: 16, materials: 0, valuable: 0 } }
+    basic: { atk: 5, def: 1, hp: 6, ini: 6, type: 'Melé', abilities: ["Ataque: Ignora contraataques."], customCost: { gold: 16, materials: 0, valuable: 0 } }
   },
   "Wyverns (Neutral)": {
-    basic: { atk: 4, def: 1, hp: 7, ini: 8, type: 'Voladora', abilities: ["Al Atacar: Después de atacar, lanza 1 dado de ataque. Si sacas un 0, haz 1 Herida a la unidad objetivo."], customCost: { gold: 17, materials: 0, valuable: 0 } }
+    basic: { atk: 4, def: 1, hp: 7, ini: 8, type: 'Voladora', abilities: ["Ataque: Después de atacar, lanza 1 dado de ataque. Si sacas un 0, haz 1 Herida a la unidad objetivo."], customCost: { gold: 17, materials: 0, valuable: 0 } }
   },
   "Mantícoras (Neutral)": {
-    basic: { atk: 4, def: 1, hp: 7, ini: 8, type: 'Voladora', abilities: ["Pasivo: Si el resultado del dado de ataque del enemigo es 0 o +1, gana +1 Defensa."], customCost: { gold: 18, materials: 0, valuable: 0 } }
+    basic: { atk: 4, def: 1, hp: 7, ini: 8, type: 'Voladora', abilities: ["Pasiva: Si el resultado del dado de ataque del enemigo es 0 o +1, gana +1 Defensa."], customCost: { gold: 18, materials: 0, valuable: 0 } }
   },
   "Campeones (Neutral)": {
-    basic: { atk: 4, def: 2, hp: 6, ini: 8, type: 'Melé', abilities: ["Al Atacar: Lanza 2 dados de ataque y aplica ambos resultados.", "Pasiva: Vuelve a tirar los -1 de esta unidad."], customCost: { gold: 18, materials: 0, valuable: 0 } }
+    basic: { atk: 4, def: 2, hp: 6, ini: 8, type: 'Melé', abilities: ["Ataque: Lanza 2 dados de ataque y aplica ambos resultados.", "Pasiva: Vuelve a tirar los -1 de esta unidad."], customCost: { gold: 18, materials: 0, valuable: 0 } }
   },
   "Unicornios (Neutral)": {
     basic: { atk: 5, def: 1, hp: 7, ini: 7, type: 'Melé', abilities: ["Contrataque: El objetivo queda Paralizado."], customCost: { gold: 18, materials: 0, valuable: 0 } }
   },
   "Caballeros del terror (Neutral)": {
-    basic: { atk: 5, def: 1, hp: 7, ini: 7, type: 'Melé', abilities: ["Pasivo: Cuando esta unidad sufre un contraataque, gana +1 Defensa."], customCost: { gold: 18, materials: 0, valuable: 0 } }
+    basic: { atk: 5, def: 1, hp: 7, ini: 7, type: 'Melé', abilities: ["Pasiva: Cuando esta unidad sufre un contraataque, gana +1 Defensa."], customCost: { gold: 18, materials: 0, valuable: 0 } }
   },
   "Elementales mágicos (Neutral)": {
-    basic: { atk: 3, def: 1, hp: 7, ini: 7, type: 'Melé', abilities: ["Pasivo: Inmunes a la Flecha mágica. Esta unidad inflige daño elemental."], customCost: { gold: 19, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 1, hp: 7, ini: 7, type: 'Melé', abilities: ["Pasiva: Inmunes a la Flecha mágica. Esta unidad inflige daño elemental."], customCost: { gold: 19, materials: 0, valuable: 0 } }
   },
   "Cíclopes (Neutral)": {
     basic: { atk: 5, def: 1, hp: 6, ini: 8, type: 'a Distancia', abilities: ["Alternativo: Esta unidad puede destruir un muro, puerta o torre de arqueros."], customCost: { gold: 19, materials: 0, valuable: 0 } }
   },
   "Nix (Neutral)": {
-    basic: { atk: 5, def: 1, hp: 7, ini: 6, type: 'Melé', abilities: ["Pasivo: Esta unidad no puede recibir más de 5 Heridas de un solo ataque."], customCost: { gold: 20, materials: 0, valuable: 0 } }
+    basic: { atk: 5, def: 1, hp: 7, ini: 6, type: 'Melé', abilities: ["Pasiva: Esta unidad no puede recibir más de 5 Heridas de un solo ataque."], customCost: { gold: 20, materials: 0, valuable: 0 } }
   },
   "Efrits (Neutral)": {
-    basic: { atk: 4, def: 2, hp: 6, ini: 13, type: 'Voladora', abilities: ["Pasivo: Ignora cualquier Herida de la Flecha mágica y hechizos de la escuela de fuego."], customCost: { gold: 20, materials: 0, valuable: 0 } }
+    basic: { atk: 4, def: 2, hp: 6, ini: 13, type: 'Voladora', abilities: ["Pasiva: Ignora cualquier Herida de la Flecha mágica y hechizos de la escuela de fuego."], customCost: { gold: 20, materials: 0, valuable: 0 } }
   },
   "Elemental de tierra": {
-    basic: { atk: 3, def: 2, hp: 5, ini: 4, type: 'Melé', abilities: ["Pasivo: Inmunes a la Flecha mágica y a los Hechizos de magia de tierra. Esta unidad inflige daño elemental."], customCost: { gold: 16, materials: 0, valuable: 0 } }
+    basic: { atk: 3, def: 2, hp: 5, ini: 4, type: 'Melé', abilities: ["Pasiva: Inmunes a la Flecha mágica y a los Hechizos de magia de tierra. Esta unidad inflige daño elemental."], customCost: { gold: 16, materials: 0, valuable: 0 } }
   },
   "Archidiablos (Neutral)": {
-    basic: { atk: 5, def: 2, hp: 7, ini: 10, type: 'Voladora', abilities: ["Al Atacar: Cuando esta unidad ataca a arcángeles, gana +2 Ataque."], customCost: { gold: 23, materials: 0, valuable: 0 } }
+    basic: { atk: 5, def: 2, hp: 7, ini: 10, type: 'Voladora', abilities: ["Ataque: Cuando esta unidad ataca a arcángeles, gana +2 Ataque."], customCost: { gold: 23, materials: 0, valuable: 0 } }
   },
   "Háspidos (Neutral)": {
-    basic: { atk: 5, def: 2, hp: 6, ini: 9, type: 'Melé', abilities: ["Al Atacar: Coloca 1 cubo de facción sobre el objetivo. Cuando se active, retira el cubo para infligir 1 Herida."], customCost: { gold: 25, materials: 0, valuable: 0 } }
+    basic: { atk: 5, def: 2, hp: 6, ini: 9, type: 'Melé', abilities: ["Ataque: Coloca 1 cubo de facción sobre el objetivo. Cuando se active, retira el cubo para infligir 1 Herida."], customCost: { gold: 25, materials: 0, valuable: 0 } }
   },
   "Behemoths (Neutral)": {
-    basic: { atk: 5, def: 1, hp: 8, ini: 9, type: 'Melé', abilities: ["Al Atacar: Disminuye la Defensa del objetivo en 2 (hasta un mínimo de 0). Después del ataque, pon 1 ficha de corrosión en el objetivo."], customCost: { gold: 26, materials: 0, valuable: 0 } }
+    basic: { atk: 5, def: 1, hp: 8, ini: 9, type: 'Melé', abilities: ["Ataque: Disminuye la Defensa del objetivo en 2 (hasta un mínimo de 0). Después del ataque, pon 1 ficha de corrosión en el objetivo."], customCost: { gold: 26, materials: 0, valuable: 0 } }
   },
   "Dragones fantasma (Neutral)": {
-    basic: { atk: 5, def: 2, hp: 6, ini: 9, type: 'Voladora', abilities: ["Al Atacar: Después del ataque, lanza 1 dado de ataque; si el resultado es 0, el objetivo debe alejarse 1 espacio inmediatamente."], customCost: { gold: 28, materials: 0, valuable: 0 } }
+    basic: { atk: 5, def: 2, hp: 6, ini: 9, type: 'Voladora', abilities: ["Ataque: Después del ataque, lanza 1 dado de ataque; si el resultado es 0, el objetivo debe alejarse 1 espacio inmediatamente."], customCost: { gold: 28, materials: 0, valuable: 0 } }
   },
   "Arcángeles (Neutral)": {
-    basic: { atk: 5, def: 2, hp: 7, ini: 10, type: 'Voladora', abilities: ["Al Atacar: Cuando ataque a los archidiablos, esta unidad gana +2 Ataque."], customCost: { gold: 29, materials: 0, valuable: 0 } }
+    basic: { atk: 5, def: 2, hp: 7, ini: 10, type: 'Voladora', abilities: ["Ataque: Cuando ataque a los archidiablos, esta unidad gana +2 Ataque."], customCost: { gold: 29, materials: 0, valuable: 0 } }
   },
   "Dragones negros (Neutral)": {
-    basic: { atk: 5, def: 2, hp: 7, ini: 9, type: 'Voladora', abilities: ["Al Atacar: Ataca a 2 espacios en fila. El primer ataque se resuelve de forma normal y el segundo con 2 Ataque."], customCost: { gold: 30, materials: 0, valuable: 0 } }
+    basic: { atk: 5, def: 2, hp: 7, ini: 9, type: 'Voladora', abilities: ["Ataque: Ataca a 2 espacios en fila. El primer ataque se resuelve de forma normal y el segundo con 2 Ataque."], customCost: { gold: 30, materials: 0, valuable: 0 } }
   },
   "Fénix (Neutral)": {
-    basic: { atk: 6, def: 2, hp: 7, ini: 12, type: 'Voladora', abilities: ["Pasivo: Una vez por combate. Cuando los PS de esta unidad se reduzcan a 0, ponlos en 1.\nPasivo: Inmunes a los Hechizos de magia de fuego."], customCost: { gold: 32, materials: 0, valuable: 0 } }
+    basic: { atk: 6, def: 2, hp: 7, ini: 12, type: 'Voladora', abilities: ["Pasiva: Una vez por combate. Cuando los PS de esta unidad se reduzcan a 0, ponlos en 1.\nPasiva: Inmunes a los Hechizos de magia de fuego."], customCost: { gold: 32, materials: 0, valuable: 0 } }
   },
   "Titanes (Neutral)": {
-    basic: { atk: 6, def: 2, hp: 10, ini: 10, type: 'a Distancia', abilities: ["Pasivo: Ignora el penalizador de combate contra unidades adyacentes.", "Al Atacar: Cuando ataque dragones negros, esta unidad ganar +2 Ataque."], customCost: { gold: 39, materials: 0, valuable: 0 } }
+    basic: { atk: 6, def: 2, hp: 10, ini: 10, type: 'a Distancia', abilities: ["Pasiva: Ignora el penalizador de combate contra unidades adyacentes.", "Ataque: Cuando ataque dragones negros, esta unidad ganar +2 Ataque."], customCost: { gold: 39, materials: 0, valuable: 0 } }
   },
   "Hidras (Neutral)": {
-    basic: { atk: 7, def: 3, hp: 8, ini: 5, type: 'Melé', abilities: ["Al Atacar: Ignora contraataques. Esta unidad ataca a hasta 2 unidades enemigas adyacentes."], customCost: { gold: 40, materials: 0, valuable: 0 } }
+    basic: { atk: 7, def: 3, hp: 8, ini: 5, type: 'Melé', abilities: ["Ataque: Ignora contraataques. Esta unidad ataca a hasta 2 unidades enemigas adyacentes."], customCost: { gold: 40, materials: 0, valuable: 0 } }
   },
   "Dragones dorados (Neutral)": {
-    basic: { atk: 6, def: 3, hp: 9, ini: 10, type: 'Voladora', abilities: ["Al Atacar: Ataca a 2 espacios en fila. El primera ataque se resuelve normalmente y el segundo tiene 3 Ataque."], customCost: { gold: 42, materials: 0, valuable: 0 } }
+    basic: { atk: 6, def: 3, hp: 9, ini: 10, type: 'Voladora', abilities: ["Ataque: Ataca a 2 espacios en fila. El primera ataque se resuelve normalmente y el segundo tiene 3 Ataque."], customCost: { gold: 42, materials: 0, valuable: 0 } }
   },
   "Dragones hada": {
     basic: { atk: 5, def: 2, hp: 8, ini: 15, type: 'Voladora', abilities: ["Activación: La unidad seleccionada sufre 2 Heridas.\nEste es un Hechizo que no cuenta para el límite de hechizos."], customCost: { gold: 35, materials: 0, valuable: 2 } }
   },
   "Dragones herrumbrosos": {
-    basic: { atk: 7, def: 3, hp: 10, ini: 17, type: 'Voladora', abilities: ["Al Atacar: Si sacas -1 en el dado de ataque, Reduce en 2 la Defensa de la unidad atacada hasta un mínimo de 0."], customCost: { gold: 38, materials: 0, valuable: 1 } }
+    basic: { atk: 7, def: 3, hp: 10, ini: 17, type: 'Voladora', abilities: ["Ataque: Si sacas -1 en el dado de ataque, Reduce en 2 la Defensa de la unidad atacada hasta un mínimo de 0."], customCost: { gold: 38, materials: 0, valuable: 1 } }
   },
   "Dragones de cristal": {
     basic: { atk: 7, def: 3, hp: 9, ini: 16, type: 'Melé', abilities: ["Mapa: Al comienzo de cada ronda de recursos, gana 2 Objetos de valor."], customCost: { gold: 40, materials: 0, valuable: 2 } }
   },
   "Dragones azures": {
-    basic: { atk: 8, def: 3, hp: 10, ini: 19, type: 'Voladora', abilities: ["Al Atacar: Si resuelves un -1 en el dado de ataque, el objetivo queda Paralizado.", "Pasivo: Ignora los efectos de Hechizo y el Daño de la especialidad."], customCost: { gold: 45, materials: 0, valuable: 2 } }
+    basic: { atk: 8, def: 3, hp: 10, ini: 19, type: 'Voladora', abilities: ["Ataque: Si resuelves un -1 en el dado de ataque, el objetivo queda Paralizado.", "Pasiva: Ignora los efectos de Hechizo y el Daño de la especialidad."], customCost: { gold: 45, materials: 0, valuable: 2 } }
   },
 
   // Banco de Criaturas
@@ -875,13 +875,13 @@ export const UNIT_DETAILS: {
     basic: { atk: 2, def: 0, hp: 3, ini: 5, type: 'Voladora', abilities: ["No-muerto: Inmune a los efectos de moral.", "Pasiva: Siempre que esta unidad ataque, el enemigo debe descartar 1 carta de su mano (si es posible)."] }
   },
   "Vampiros (Cripta)": {
-    basic: { atk: 2, def: 0, hp: 3, ini: 6, type: 'Voladora', abilities: ["No-muerto: Inmune a los efectos de moral.", "Al Atacar: Después del ataque, elimina todas las Heridas de esta unidad."] }
+    basic: { atk: 2, def: 0, hp: 3, ini: 6, type: 'Voladora', abilities: ["No-muerto: Inmune a los efectos de moral.", "Ataque: Después del ataque, elimina todas las Heridas de esta unidad."] }
   },
    "Medusas (Almacén)": {
-    basic: { atk: 3, def: 0, hp: 3, ini: 6, type: 'a Distancia', abilities: ["Al Atacar: Ignora el contraataque. Si esta unidad está apilada, el objetivo sufre Parálisis."] }
+    basic: { atk: 3, def: 0, hp: 3, ini: 6, type: 'a Distancia', abilities: ["Ataque: Ignora el contraataque. Si esta unidad está apilada, el objetivo sufre Parálisis."] }
   },
   "Nagas (Banco)": {
-    basic: { atk: 4, def: 1, hp: 5, ini: 6, type: 'Melé', abilities: ["Al Atacar: Ignora los contraataques."] }
+    basic: { atk: 4, def: 1, hp: 5, ini: 6, type: 'Melé', abilities: ["Ataque: Ignora los contraataques."] }
   },
   "Dragón Negro (Utopía)": {
     basic: { atk: 5, def: 2, hp: 5, ini: 9, type: 'Voladora', abilities: ["Pasiva: Mientras esta unidad esté apilada, obtiene +3 de Ataque."] }

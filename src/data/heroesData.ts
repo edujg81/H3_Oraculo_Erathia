@@ -86,13 +86,13 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 2, def: 2, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Tiro con arco',
-        normal: 'Continuo: Durante esta ronda de combate, tus unidades a distancia ganan +1 Ataque si el objetivo no es una unidad adyacente.',
-        expert: 'Continuo: Hasta el final de la siguiente ronda de combate, todas tus unidades a distancia ganan +1 Iniciativa y +1 Ataque si el objetivo no es una unidad adyacente.'
+        normal: 'En Curso: Durante esta ronda de combate, tus unidades a distancia ganan +1 Ataque si el objetivo no es una unidad adyacente.',
+        expert: 'En Curso: Hasta el final de la siguiente ronda de combate, todas tus unidades a distancia ganan +1 Iniciativa y +1 Ataque si el objetivo no es una unidad adyacente.'
       },
       specialty: {
         name: 'Especialidad: Tiradores',
         cards: [
-          { level: 1, name: 'Tiradores I', effect: 'Continuo: Para este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Tiradores.' },
+          { level: 1, name: 'Tiradores I', effect: 'En Curso: Para este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Tiradores.' },
           { level: 4, name: 'Tiradores IV', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa\nEl efecto se duplica para la unidad de Tiradores.' },
           { level: 6, name: 'Tiradores VI', effect: 'Activación: Activa una de tus unidades a distancia, incluso si esa unidad ya ha sido activada (después continúa con la activación de la unidad actual).\n— O —\nInstantáneo: Roba 2 cartas.' }
         ]
@@ -177,7 +177,7 @@ export const FACTION_HEROES: FactionHeroesData = {
         name: 'Especialidad: Balista',
         cards: [
           { level: 1, name: 'Balista I', effect: 'Mapa: Paga 5 Oros para ganarr una balista.\n— O —\nInstantáneo: Activa tu balista (si tienes una).' },
-          { level: 4, name: 'Balista IV', effect: 'Continuo: Puedes jugar esta carta al comienzo del combate. Para este combate, ganas una balista adicional, incluso si ya tienes una. Descarta la balista después de este combate\n— O —\nInstantáneo: Roba 1 carta.' },
+          { level: 4, name: 'Balista IV', effect: 'En Curso: Puedes jugar esta carta al comienzo del combate. Para este combate, ganas una balista adicional, incluso si ya tienes una. Descarta la balista después de este combate\n— O —\nInstantáneo: Roba 1 carta.' },
           { level: 6, name: 'Balista VI', effect: 'Instantáneo: Elige 2 unidades enemigas.\nCada una de estas unidades sufre 2 Heridas.' }
         ]
       },
@@ -200,7 +200,7 @@ export const FACTION_HEROES: FactionHeroesData = {
         name: 'Especialidad: Caballeros del terror',
         cards: [
           { level: 1, name: 'Caballeros del terror I', effect: 'Instantáneo: Reduce en 1 el Daño de los contraataques del enemigo.\nEl efecto se duplica para la unidad de caballeros del terror.' },
-          { level: 4, name: 'Caballeros del terror IV', effect: 'Continuo: Durante este combate, cuando una unidad enemiga contraataque a esta unidad, lanza 2 dados de ataque y resuelve el resultado más bajo.' },
+          { level: 4, name: 'Caballeros del terror IV', effect: 'En Curso: Durante este combate, cuando una unidad enemiga contraataque a esta unidad, lanza 2 dados de ataque y resuelve el resultado más bajo.' },
           { level: 6, name: 'Caballeros del terror VI', effect: 'Instantáneo: Reduce en 2 el Daño de los contraataque del enemigo.\nEl efecto se duplica para la unidad de caballeros del terror.' }
         ]
       },
@@ -221,8 +221,8 @@ export const FACTION_HEROES: FactionHeroesData = {
         name: 'Especialidad: Liches',
         cards: [
           { level: 1, name: 'Liches I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad de Liches.' },
-          { level: 4, name: 'Liches IV', effect: 'Continuo: Para este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Liches.' },
-          { level: 6, name: 'Liches VI', effect: 'Continuo: Para este combate, tu unidad de Liches inflige daño elemental.\n— O —\nInstantáneo: +2 Ataque.' }
+          { level: 4, name: 'Liches IV', effect: 'En Curso: Para este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Liches.' },
+          { level: 6, name: 'Liches VI', effect: 'En Curso: Para este combate, tu unidad de Liches inflige daño elemental.\n— O —\nInstantáneo: +2 Ataque.' }
         ]
       },
       lore: 'Un caballero de la muerte cuya obsesión por la lichería le llevó a fundirse con las energías del sepulcro, convirtiéndose en el protector absoluto de las órdenes de magos esqueléticos.',
@@ -284,8 +284,8 @@ export const FACTION_HEROES: FactionHeroesData = {
         name: 'Especialidad: Caballeros del terror',
         cards: [
           { level: 1, name: 'Caballeros del terror I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad de caballeros del terror.' },
-          { level: 4, name: 'Caballeros del terror IV', effect: 'Continuo: Durante este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de caballeros del terror.' },
-          { level: 6, name: 'Caballeros del terror VI', effect: 'Continuo: Durante este combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de caballeros del terror.' }
+          { level: 4, name: 'Caballeros del terror IV', effect: 'En Curso: Durante este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de caballeros del terror.' },
+          { level: 6, name: 'Caballeros del terror VI', effect: 'En Curso: Durante este combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de caballeros del terror.' }
         ]
       },
       lore: 'Una letal general de Deyja que adiestra a los jinetes negros con una disciplina sanguinaria, convirtiéndolos en la vanguardia más temida de las tierras baldías.',
@@ -391,8 +391,8 @@ export const FACTION_HEROES: FactionHeroesData = {
         name: 'Especialidad: Arpías',
         cards: [
           { level: 1, name: 'Arpías I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad de Arpías.' },
-          { level: 4, name: 'Arpías IV', effect: 'Continuo: Para este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Arpías.' },
-          { level: 6, name: 'Arpías VI', effect: 'Continuo: La unidad seleccionada gana +2 Ataque.\nEl efecto se duplica para la unidad de Arpías.' }
+          { level: 4, name: 'Arpías IV', effect: 'En Curso: Para este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Arpías.' },
+          { level: 6, name: 'Arpías VI', effect: 'En Curso: La unidad seleccionada gana +2 Ataque.\nEl efecto se duplica para la unidad de Arpías.' }
         ]
       },
       lore: 'Una cruel, pragmática y experimentada comandante de Nighon que adiestra a las arpías de las profundidades para convertirlas en garras implacables de asalto. Su liderazgo convierte a estas criaturas salvajes en una fuerza militar organizada y letal.',
@@ -412,8 +412,8 @@ export const FACTION_HEROES: FactionHeroesData = {
         name: 'Especialidad: Dragones',
         cards: [
           { level: 1, name: 'Dragones I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl effecto se duplica para la unidad de dragones.' },
-          { level: 4, name: 'Dragones IV', effect: 'Continuo: Durante este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de dragones.' },
-          { level: 6, name: 'Dragones VI', effect: 'Continuo: Durante este combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de dragones.' }
+          { level: 4, name: 'Dragones IV', effect: 'En Curso: Durante este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de dragones.' },
+          { level: 6, name: 'Dragones VI', effect: 'En Curso: Durante este combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de dragones.' }
         ]
       },
       lore: 'Consumida por un ansia insaciable de dominación absoluta, Mutare bebió la sangre de un dragón mitológico en un ritual arcano para transformarse en una temible y legendaria señora de dragones, gobernando Nighon con puño de hierro y fuego.',
@@ -477,8 +477,8 @@ export const FACTION_HEROES: FactionHeroesData = {
         name: 'Especialidad: Unicornios',
         cards: [
           { level: 1, name: 'Unicornios I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad de unicornios.' },
-          { level: 4, name: 'Unicornios IV', effect: 'Continuo: Durante este combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de unicornios.' },
-          { level: 6, name: 'Unicornios VI', effect: 'Continuo: Durante este combate, la unidad seleccionada reduce en 1 cualquier Daño recibido de hechizos (hasta un mínimo de 0).\nEl efecto se duplica para la unidad de unicornios.' }
+          { level: 4, name: 'Unicornios IV', effect: 'En Curso: Durante este combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de unicornios.' },
+          { level: 6, name: 'Unicornios VI', effect: 'En Curso: Durante este combate, la unidad seleccionada reduce en 1 cualquier Daño recibido de hechizos (hasta un mínimo de 0).\nEl efecto se duplica para la unidad de unicornios.' }
         ]
       },
       lore: 'Un explorador enano que posee una afinidad mística inigualable con los unicornios de AvLee, liderándolos con presteza y elegancia divina en defensa de los claros sagrados.',
@@ -491,15 +491,15 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 1, def: 3, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Tiro con arco',
-        normal: 'Continuo: Durante esta ronda de combate, tus unidades a distancia ganan +1 Ataque si el objetivo no es una unidad adyacente.',
-        expert: 'Continuo: Hasta el final de la siguiente ronda de combate, todas tus unidades a distancia ganan +1 Iniciativa y +1 Ataque si el objetivo no es una unidad adyacente.'
+        normal: 'En Curso: Durante esta ronda de combate, tus unidades a distancia ganan +1 Ataque si el objetivo no es una unidad adyacente.',
+        expert: 'En Curso: Hasta el final de la siguiente ronda de combate, todas tus unidades a distancia ganan +1 Iniciativa y +1 Ataque si el objetivo no es una unidad adyacente.'
       },
       specialty: {
         name: 'Especialidad: Tiradores certeros',
         cards: [
           { level: 1, name: 'Tiradores certeros I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEDuplica el efecto para los elfos y la unidad de tiradores certeros.' },
           { level: 4, name: 'Tiradores certeros IV', effect: 'Mapa: Si tienes la carta de la manada de elfos, descártala. Busca en el mazo de unidades neutrales Plata una carta Francotiradores y añádela a tu mazo de unidades. Sólo puedes controlar 1 unidad de este tipo.\n— O —\nInstantáneo: Roba una carta.' },
-          { level: 6, name: 'Tiradores certeros VI', effect: 'Continuo: Durante este Combate, la Iniciativa de la unidad seleccionada aumenta en 2.\nDuplica el efecto para los elfos y la unidad de tiradores certeros.' }
+          { level: 6, name: 'Tiradores certeros VI', effect: 'En Curso: Durante este Combate, la Iniciativa de la unidad seleccionada aumenta en 2.\nDuplica el efecto para los elfos y la unidad de tiradores certeros.' }
         ]
       },
       lore: 'Un héroe legendario de sangre mestiza, capitán de la prestigiosa Guardia Forestal de AvLee y custodio designado de la devastadora Espada de Armagedón.',
@@ -520,7 +520,7 @@ export const FACTION_HEROES: FactionHeroesData = {
         cards: [
           { level: 1, name: 'Primeros auxilios I', effect: 'Instantáneo: Recibe una carta Tienda de primeros auxilios del mazo de máquinas de guerra gratis.\n— O —\nInstantáneo: Si ya tienes una Tienda de primeros auxilios, roba 1 carta.' },
           { level: 4, name: 'Primeros auxilios IV', effect: 'Instantáneo: Retira 2 Heridas de una de tus unidades.' },
-          { level: 6, name: 'Primeros auxilios VI', effect: 'Continuo: Durante este combate, duplica el efecto de tu Tienda de primeros auxilios.' }
+          { level: 6, name: 'Primeros auxilios VI', effect: 'En Curso: Durante este combate, duplica el efecto de tu Tienda de primeros auxilios.' }
         ]
       },
       lore: 'Una valiente hechicera refugiada de Enroth que abrazó las enseñanzas pacifistas de los druidas en AvLee, sanando las heridas físicas y espirituales del campo de batalla.',
@@ -541,7 +541,7 @@ export const FACTION_HEROES: FactionHeroesData = {
         cards: [
           { level: 1, name: 'Elfos I', effect: 'Instantáneo: Pon todos los dados de la siguiente tirada de ataque en <<0>>.' },
           { level: 4, name: 'Elfos IV', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\nEl efecto se duplica para una unidad a distancia.' },
-          { level: 6, name: 'Elfos VI', effect: 'Continuo: Para este combate, la Vida de la unidad seleccionada aumenta en 2.\n— O —\nInstantáneo: En lugar de tirar los dados, coloca todos los dados de tu turada en los valores que elijas.' }
+          { level: 6, name: 'Elfos VI', effect: 'En Curso: Para este combate, la Vida de la unidad seleccionada aumenta en 2.\n— O —\nInstantáneo: En lugar de tirar los dados, coloca todos los dados de tu turada en los valores que elijas.' }
         ]
       },
       lore: 'Un curtido y astuto explorador elfo que comanda las huestes de arqueros de AvLee, dotado de un ojo infalible y reflejos felinos inigualables.',
@@ -554,8 +554,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 0, def: 2, power: 1, knowledge: 2 },
       initialSkill: {
         name: 'Suerte',
-        normal: 'Continuo: Puedes volver a lanzar un dado de tesoro y de recurso una vez durante este turno.',
-        expert: 'Continuo: Puedes volver a lanzar tantos dados como quieras una vez durante este turno.'
+        normal: 'En Curso: Puedes volver a lanzar un dado de tesoro y de recurso una vez durante este turno.',
+        expert: 'En Curso: Puedes volver a lanzar tantos dados como quieras una vez durante este turno.'
       },
       specialty: {
         name: 'Especialidad: Fortuna',
@@ -603,7 +603,7 @@ export const FACTION_HEROES: FactionHeroesData = {
         name: 'Especialidad: Tiradores certeros',
         cards: [
           { level: 1, name: 'Tiradores certeros I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad de Elfos o Tiradores certeros.' },
-          { level: 4, name: 'Tiradores certeros IV', effect: 'Continuo: Para este Combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Elfos o Tiradores certeros.' },
+          { level: 4, name: 'Tiradores certeros IV', effect: 'En Curso: Para este Combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Elfos o Tiradores certeros.' },
           { level: 6, name: 'Tiradores certeros VI', effect: 'Instantáneo: Juega esta carta al comienzo del combate. Busca una unidad de Tiradores certeros en el mazo de unidades neutrales Plata (o su pila de descarte) y añádela a tu ejército para este combate (descártala después)\n— O —\nInstantáneo: Roba 1 carta.' }
         ]
       },
@@ -625,9 +625,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Celeridad',
         cards: [
-          { level: 1, name: 'Celeridad I', effect: 'Continuo: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 3.' },
-          { level: 4, name: 'Celeridad IV', effect: 'Continuo: La unidad seleccionada obtiene +1 Ataque.\nEl efecto se duplica si la unidad atacada tiene mayor Iniciativa.' },
-          { level: 6, name: 'Celeridad VI', effect: 'Continuo: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 3.\nEsta unidad gana +1 Defensa contra ataques realizados por unidades con menor Iniciativa.' }
+          { level: 1, name: 'Celeridad I', effect: 'En Curso: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 3.' },
+          { level: 4, name: 'Celeridad IV', effect: 'En Curso: La unidad seleccionada obtiene +1 Ataque.\nEl efecto se duplica si la unidad atacada tiene mayor Iniciativa.' },
+          { level: 6, name: 'Celeridad VI', effect: 'En Curso: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 3.\nEsta unidad gana +1 Defensa contra ataques realizados por unidades con menor Iniciativa.' }
         ]
       },
       lore: 'Una maga de Bracada dotada de un carisma deslumbrante que convence a monstruos errantes de unirse a su causa, acelerando el paso de sus tropas con magia de aire.',
@@ -648,7 +648,7 @@ export const FACTION_HEROES: FactionHeroesData = {
         cards: [
           { level: 1, name: 'Hechiceros I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica en unidades de magos y hechiceros.' },
           { level: 4, name: 'Hechiceros IV', effect: 'Mapa: Si tienes una manada de hechiceros, descarta su carta. A continuación, busca en el mazo de unidades neutrales Oro una carta Hechiceros y añádela a tu mazo de unidades. Sólo puedes controlar 1 unidad de hechiceros.\n— O —\nInstantáneo: Roba una carta.' },
-          { level: 6, name: 'Hechiceros VI', effect: 'Continuo: Durante este combate, la Iniciativa de la unidad que selecciones aumenta en 2.\nEl efecto se duplica en unidades de magos y hechiceros.' }
+          { level: 6, name: 'Hechiceros VI', effect: 'En Curso: Durante este combate, la Iniciativa de la unidad que selecciones aumenta en 2.\nEl efecto se duplica en unidades de magos y hechiceros.' }
         ]
       },
       lore: 'Un talentoso mago de Bracada célebre por su obsesión de convertirse en el mayor cazador de dragones de la historia, adiestrando a los Encantadores más poderosos.',
@@ -667,7 +667,7 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Genios',
         cards: [
-          { level: 1, name: 'Genios I', effect: 'Continuo: Durante este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de genios.' },
+          { level: 1, name: 'Genios I', effect: 'En Curso: Durante este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de genios.' },
           { level: 4, name: 'Genios IV', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad de genios.' },
           { level: 6, name: 'Genios VI', effect: 'Instantáneo: La unidad que selecciones gana +2 Defensa.\nEl efecto se duplica para la unidad de genios.' }
         ]
@@ -688,7 +688,7 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Gólems',
         cards: [
-          { level: 1, name: 'Gólems I', effect: 'Continuo: Durante este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para cualquier unidad de gólems.' },
+          { level: 1, name: 'Gólems I', effect: 'En Curso: Durante este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para cualquier unidad de gólems.' },
           { level: 4, name: 'Gólems IV', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para cualquier unidad de gólems.' },
           { level: 6, name: 'Gólems VI', effect: 'Instantáneo: La unidad que selecciones gana +2 Ataque.\nEl efecto se duplica para cualquier unidad de gólems.' }
         ]
@@ -754,7 +754,7 @@ export const FACTION_HEROES: FactionHeroesData = {
         name: 'Especialidad: Ansia de Sangre',
         cards: [
           { level: 1, name: 'Ansia de Sangre I', effect: 'Instantáneo: La unidad melé o voladora seleccionada gana +2 Ataque. Coloca un cubo negro sobre esta unidad.' },
-          { level: 4, name: 'Ansia de Sangre IV', effect: 'Continuo: Para este combate, el Ataque de la unidad melé o voladora seleccionada aumenta en 2 y su Iniciativa en 1. Coloca un cubo negro sobre esta unidad.' },
+          { level: 4, name: 'Ansia de Sangre IV', effect: 'En Curso: Para este combate, el Ataque de la unidad melé o voladora seleccionada aumenta en 2 y su Iniciativa en 1. Coloca un cubo negro sobre esta unidad.' },
           { level: 6, name: 'Ansia de Sangre VI', effect: 'Instantáneo: La unidad melé o voladora seleccionada gana +3 Ataque e ignora los contraataques. Coloca un cubo negro sobre esta unidad.' }
         ]
       },
@@ -775,7 +775,7 @@ export const FACTION_HEROES: FactionHeroesData = {
         name: 'Especialidad: Cerberos',
         cards: [
           { level: 1, name: 'Cerberos I', effect: 'Instantáneo: Tu unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: Tu unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad de cerberos.' },
-          { level: 4, name: 'Cerberos IV', effect: 'Continuo: Durante este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de cerberos.' },
+          { level: 4, name: 'Cerberos IV', effect: 'En Curso: Durante este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de cerberos.' },
           { level: 6, name: 'Cerberos VI', effect: 'Instantáneo: Tu unidad que selecciones gana +2 Ataque.\nEl efecto se duplica para la unidad de cerberos.' }
         ]
       },
@@ -817,8 +817,8 @@ export const FACTION_HEROES: FactionHeroesData = {
         name: 'Especialidad: Efrits',
         cards: [
           { level: 1, name: 'Efrits I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad de efrits.' },
-          { level: 4, name: 'Efrits IV', effect: 'Continuo: Hasta el final del combate, cuando la unidad seleccionada sea atacada por una unidad Melé o Voladora, el atacante sufre 1 Herida.' },
-          { level: 6, name: 'Efrits VI', effect: 'Continuo: Hasta el final del Combate, cuando la unidad seleccionada sea atacada por una unidad Melé o Voladora, el atacante sufre 1 Herida.\nEl efecto se duplica para la unidad de efrits.' }
+          { level: 4, name: 'Efrits IV', effect: 'En Curso: Hasta el final del combate, cuando la unidad seleccionada sea atacada por una unidad Melé o Voladora, el atacante sufre 1 Herida.' },
+          { level: 6, name: 'Efrits VI', effect: 'En Curso: Hasta el final del Combate, cuando la unidad seleccionada sea atacada por una unidad Melé o Voladora, el atacante sufre 1 Herida.\nEl efecto se duplica para la unidad de efrits.' }
         ]
       },
       lore: 'Un brutal y colérico demonio que somete a los efreets más salvajes a su estricta disciplina militar, convirtiéndolos en escudos vivientes de fuego.',
@@ -860,7 +860,7 @@ export const FACTION_HEROES: FactionHeroesData = {
         cards: [
           { level: 1, name: 'Hechicería I', effect: 'Instantáneo: Juega esta carta después de lanzar un Hechizo, y a continuación roba 1 carta.\n— O —\nInstantáneo: +1 Potencia.' },
           { level: 4, name: 'Hechicería IV', effect: 'Instantáneo: El próximo Hechizo que lances no cuenta para el límite.\n— O —\nInstantáneo: +2 Potencia.' },
-          { level: 6, name: 'Hechicería VI', effect: 'Continuo: Hasta el final de la ronda de combate, después de lanzar un Hechizo, roba 1 carta.\nInstantáneo: +2 Potencia.' }
+          { level: 6, name: 'Hechicería VI', effect: 'En Curso: Hasta el final de la ronda de combate, después de lanzar un Hechizo, roba 1 carta.\nInstantáneo: +2 Potencia.' }
         ]
       },
       lore: 'Un refinado y calculador hereje que extrae poder místico directamente del núcleo del caos, amplificando cada conjuro con efectos corrosivos de gran intensidad.',
@@ -881,9 +881,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Ofensa',
         cards: [
-          { level: 1, name: 'Ofensa I', effect: 'Continuo: Para este combate, la unidad seleccionada obtiene +1 Ataque.' },
-          { level: 4, name: 'Ofensa IV', effect: 'Continuo: La unidad seleccionada gana +1 Ataque. Puedes descartar 1 carta adicional para ganar +1 Ataque adicional.' },
-          { level: 6, name: 'Ofensa VI', effect: 'Continuo: Para este combate, cada carta que juegues puede otorgar "Instantáneo: +1 Ataque" en lugar de su efecto normal.' }
+          { level: 1, name: 'Ofensa I', effect: 'En Curso: Para este combate, la unidad seleccionada obtiene +1 Ataque.' },
+          { level: 4, name: 'Ofensa IV', effect: 'En Curso: La unidad seleccionada gana +1 Ataque. Puedes descartar 1 carta adicional para ganar +1 Ataque adicional.' },
+          { level: 6, name: 'Ofensa VI', effect: 'En Curso: Para este combate, cada carta que juegues puede otorgar "Instantáneo: +1 Ataque" en lugar de su efecto normal.' }
         ]
       },
       lore: 'El bárbaro más famoso de Antagarich, un guerrero temerario que confía únicamente en la fuerza de su brazo y el filo de su hacha.',
@@ -896,14 +896,14 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 2, def: 1, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Logística',
-        normal: 'Continuo: Al final de tu turno, mueve la miniatura de tu héroe a una zona vacía adyacente.',
+        normal: 'En Curso: Al final de tu turno, mueve la miniatura de tu héroe a una zona vacía adyacente.',
         expert: 'Instantáneo: Tu héroe gana +1 de movimiento.'
       },
       specialty: {
         name: 'Especialidad: Logística',
         cards: [
           { level: 1, name: 'Logística I', effect: 'Instantáneo: Extiende tu combate contra un ejército neutral durante otra ronda (sin gastar PM).' },
-          { level: 4, name: 'Logística IV', effect: 'Mapa: Tu héroe principal gana 1 PM.\n— O —\nContinuo: Para este combate, la Iniciativa de todas tus unidades aumenta en 1.' },
+          { level: 4, name: 'Logística IV', effect: 'Mapa: Tu héroe principal gana 1 PM.\n— O —\nEn Curso: Para este combate, la Iniciativa de todas tus unidades aumenta en 1.' },
           { level: 6, name: 'Logística VI', effect: 'Mapa: Tu héroe principal gana 1 PM y puede moverse a través de zonas bloqueadas durante este turno.\n— O —\nInstantáneo: Roba 2 cartas.' }
         ]
       },
@@ -923,9 +923,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Lentitud',
         cards: [
-          { level: 1, name: 'Lentitud I', effect: 'Continuo: Para este combate, la Iniciativa de la unidad seleccionada se reduce en 2, hasta un mínimo de 1.' },
+          { level: 1, name: 'Lentitud I', effect: 'En Curso: Para este combate, la Iniciativa de la unidad seleccionada se reduce en 2, hasta un mínimo de 1.' },
           { level: 4, name: 'Lentitud IV', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\nEl efecto se duplica si la Iniciativa de la unidad es mayor que la Iniciativa de la unidad atacada.' },
-          { level: 6, name: 'Lentitud VI', effect: 'Continuo: Para este combate, la Iniciativa de la unidad seleccionada se reduce en 4, hasta un mínimo de 1.' }
+          { level: 6, name: 'Lentitud VI', effect: 'En Curso: Para este combate, la Iniciativa de la unidad seleccionada se reduce en 4, hasta un mínimo de 1.' }
         ]
       },
       lore: 'Una estratega bárbara de intelecto gélido, famosa por ralentizar el ímpetu de las cargas enemigas y asfixiar su movilidad antes de desatar la furia de su tribu.',
@@ -945,8 +945,8 @@ export const FACTION_HEROES: FactionHeroesData = {
         name: 'Especialidad: Aves de Trueno',
         cards: [
           { level: 1, name: 'Aves de Trueno I', effect: 'Instantáneo: La unidad seleccionada gana +1 de Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad de Aves de Trueno.' },
-          { level: 4, name: 'Aves de Trueno IV', effect: 'Continuo: Para este combate, la unidad seleccionada gana +1 Vida.\nEl efecto se duplica para la unidad de Aves de Trueno.' },
-          { level: 6, name: 'Aves de Trueno VI', effect: 'Continuo: Para este combate, la unidad seleccionada gana +2 Iniciativa.\nEl efecto se duplica para la unidad de Aves de Trueno.' }
+          { level: 4, name: 'Aves de Trueno IV', effect: 'En Curso: Para este combate, la unidad seleccionada gana +1 Vida.\nEl efecto se duplica para la unidad de Aves de Trueno.' },
+          { level: 6, name: 'Aves de Trueno VI', effect: 'En Curso: Para este combate, la unidad seleccionada gana +2 Iniciativa.\nEl efecto se duplica para la unidad de Aves de Trueno.' }
         ]
       },
       lore: 'Una jinete bárbara indómita criada en las cimas escarpadas de Krewlod, capaz de silbar en la frecuencia de las tormentas y guiar a las colosales Aves del Trueno.',
@@ -966,7 +966,7 @@ export const FACTION_HEROES: FactionHeroesData = {
         name: 'Especialidad: Ofensa',
         cards: [
           { level: 1, name: 'Ofensa I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: Roba 1 carta.' },
-          { level: 4, name: 'Ofensa IV', effect: 'Continuo: Para este combate, la unidad seleccionada gana +1 Ataque.' },
+          { level: 4, name: 'Ofensa IV', effect: 'En Curso: Para este combate, la unidad seleccionada gana +1 Ataque.' },
           { level: 6, name: 'Ofensa VI', effect: 'Instantáneo: La unidad seleccionada gana +3 Ataque.' }
         ]
       },
@@ -987,8 +987,8 @@ export const FACTION_HEROES: FactionHeroesData = {
         name: 'Especialidad: Cíclopes',
         cards: [
           { level: 1, name: 'Cíclopes I', effect: 'Instantáneo: La unidad seleccionada gana +1 de Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad de Cíclopes.' },
-          { level: 4, name: 'Cíclopes IV', effect: 'Continuo: Para este Combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Cíclopes..' },
-          { level: 6, name: 'Cíclopes VI', effect: 'Continuo: Para este Combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Cíclopes.' }
+          { level: 4, name: 'Cíclopes IV', effect: 'En Curso: Para este Combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Cíclopes..' },
+          { level: 6, name: 'Cíclopes VI', effect: 'En Curso: Para este Combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Cíclopes.' }
         ]
       },
       lore: 'Nacido de una madre genio de Bracada y un padre bárbaro de Krewlod, Yog renunció por completo a sus refinados estudios mágicos para abrazar la gloriosa y salvaje senda de la fuerza.',
@@ -1009,9 +1009,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Magia de fuego',
         cards: [
-          { level: 1, name: 'Magia de fuego I', effect: 'Continuo: Durante este combate, todos tus hechizos de la escuela de magia de fuego reciben +1 Potencia.' },
+          { level: 1, name: 'Magia de fuego I', effect: 'En Curso: Durante este combate, todos tus hechizos de la escuela de magia de fuego reciben +1 Potencia.' },
           { level: 4, name: 'Magia de fuego IV', effect: 'Instantáneo: Busca(3) en tu mazo y después devuelve las cartas del descarte al mazo y barájalo.' },
-          { level: 6, name: 'Magia de fuego VI', effect: 'Continuo: Durante este combate, todos tus hechizos de la escuela de magia de fuego reciben +2 Potencia.' }
+          { level: 6, name: 'Magia de fuego VI', effect: 'En Curso: Durante este combate, todos tus hechizos de la escuela de magia de fuego reciben +2 Potencia.' }
         ]
       },
       lore: 'Una bruja única de Tatalia que rompió los tabúes de su pueblo para dominar la magia del fuego, utilizándola para defender su hogar.',
@@ -1031,8 +1031,8 @@ export const FACTION_HEROES: FactionHeroesData = {
         name: 'Especialidad: Basiliscos',
         cards: [
           { level: 1, name: 'Basiliscos I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad de basiliscos.' },
-          { level: 4, name: 'Basiliscos IV', effect: 'Continuo: Durante este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de basiliscos.' },
-          { level: 6, name: 'Basiliscos VI', effect: 'Continuo: Durante este combate, la Iniciativa de la unidad seleccionada aumenta en 2.\nEl efecto se duplica para la unidad de basiliscos.' }
+          { level: 4, name: 'Basiliscos IV', effect: 'En Curso: Durante este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de basiliscos.' },
+          { level: 6, name: 'Basiliscos VI', effect: 'En Curso: Durante este combate, la Iniciativa de la unidad seleccionada aumenta en 2.\nEl efecto se duplica para la unidad de basiliscos.' }
         ]
       },
       lore: 'Un célebre domador de bestias capaz de guiar a los basiliscos salvajes del pantano para que petrifiquen a ejércitos enteros.',
@@ -1052,8 +1052,8 @@ export const FACTION_HEROES: FactionHeroesData = {
         name: 'Especialidad: Balista',
         cards: [
           { level: 1, name: 'Balista I', effect: 'Mapa: Paga 5 Oros para ganar una balista.\n— O —\nInstantáneo: Activa tu balista (si tienes una).' },
-          { level: 4, name: 'Balista IV', effect: 'Continuo: La unidad seleccionada sufre 1 Herida.\nInstantáneo: Descarta tu balista para inflingir 2 Heridas en la unidad seleccionada.' },
-          { level: 6, name: 'Balista VI', effect: 'Continuo: Puedes jugar esta carta al comienzo del combate. Para este combate, puedes elegir objetivos para tu balista (si tienes una).\nInstantáneo: Descarta tu balista para inflingir 3 Heridas en la unidad seleccionada.' }
+          { level: 4, name: 'Balista IV', effect: 'En Curso: La unidad seleccionada sufre 1 Herida.\nInstantáneo: Descarta tu balista para inflingir 2 Heridas en la unidad seleccionada.' },
+          { level: 6, name: 'Balista VI', effect: 'En Curso: Puedes jugar esta carta al comienzo del combate. Para este combate, puedes elegir objetivos para tu balista (si tienes una).\nInstantáneo: Descarta tu balista para inflingir 3 Heridas en la unidad seleccionada.' }
         ]
       },
       lore: 'Gerwulf es un experto en maquinaria de guerra que prefiere la potencia de las balistas portátiles sobre los conjuros arcanos.',
@@ -1074,7 +1074,7 @@ export const FACTION_HEROES: FactionHeroesData = {
         cards: [
           { level: 1, name: 'Piel de piedra I', effect: 'Instantáneo: La unidad seleccionada gana +1 Defensa y +1 Defensa adicional si está adyacente al atacante.' },
           { level: 4, name: 'Piel de piedra IV', effect: 'Activación: Todas tus unidades ganan una ficha de defensa.' },
-          { level: 6, name: 'Piel de piedra VI', effect: 'Continuo: Para este combate, tus fichas de defensa proporcionan la Defensa extra en una tirada de <<0>> o <<1>>. Cuando se juega esta carta, coloca una ficha de defensa en todas tus unidades.' }
+          { level: 6, name: 'Piel de piedra VI', effect: 'En Curso: Para este combate, tus fichas de defensa proporcionan la Defensa extra en una tirada de <<0>> o <<1>>. Cuando se juega esta carta, coloca una ficha de defensa en todas tus unidades.' }
         ]
       },
       lore: 'Una bruja compasiva y mística del pantano, experta en hechizos protectores de la tierra y en el cuidado de los heridos en combate.',
@@ -1094,7 +1094,7 @@ export const FACTION_HEROES: FactionHeroesData = {
         name: 'Especialidad: Basiliscos',
         cards: [
           { level: 1, name: 'Basiliscos I', effect: 'Instantáneo: La unidad seleccionada gana +1 de Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad de basiliscos.' },
-          { level: 4, name: 'Basiliscos IV', effect: 'Continuo: Para este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de basiliscos.' },
+          { level: 4, name: 'Basiliscos IV', effect: 'En Curso: Para este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de basiliscos.' },
           { level: 6, name: 'Basiliscos VI', effect: 'Instantáneo: La unidad seleccionada usa su habilidad especial independientemente del resultado requerido de la tirada.\n— O —\nInstantáneo: La unidad seleccionada gana +2 Ataque.' }
         ]
       },
@@ -1115,7 +1115,7 @@ export const FACTION_HEROES: FactionHeroesData = {
         name: 'Especialidad: Héroe de guerra',
         cards: [
           { level: 1, name: 'Héroe de guerra I', effect: 'Instantáneo: +2 Ataque.' },
-          { level: 4, name: 'Héroe de guerra IV', effect: 'Continuo: Durante este combate, la unidad seleccionada gana +1 Ataque.' },
+          { level: 4, name: 'Héroe de guerra IV', effect: 'En Curso: Durante este combate, la unidad seleccionada gana +1 Ataque.' },
           { level: 6, name: 'Héroe de guerra VI', effect: 'Mapa: Retira 1 carta/descarta 3 cartas de tu mano para robar una carta de artefacto de la parte superior del mazo de artefactos.' }
         ]
       },
@@ -1129,15 +1129,15 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 0, def: 4, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Tiro con arco',
-        normal: 'Continuo: Durante esta ronda de combate, tus unidades a distancia ganan +1 Ataque si el objetivo no es una unidad adyacente.',
-        expert: 'Continuo: Hasta el final de la siguiente ronda de combate, todas tus unidades a distancia ganan +1 Iniciativa y +1 Ataque si el objetivo no es una unidad adyacente.'
+        normal: 'En Curso: Durante esta ronda de combate, tus unidades a distancia ganan +1 Ataque si el objetivo no es una unidad adyacente.',
+        expert: 'En Curso: Hasta el final de la siguiente ronda de combate, todas tus unidades a distancia ganan +1 Iniciativa y +1 Ataque si el objetivo no es una unidad adyacente.'
       },
       specialty: {
         name: 'Especialidad: Hombres lagarto',
         cards: [
           { level: 1, name: 'Hombres lagarto I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad de hombres lagarto.' },
-          { level: 4, name: 'Hombres lagarto IV', effect: 'Continuo: Durante este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de hombres lagarto.' },
-          { level: 6, name: 'Hombres lagarto VI', effect: 'Continuo: Durante este combate, la Iniciativa de la unidad seleccionada aumenta en 2.\nEl efecto se duplica para la unidad de hombres lagarto.' }
+          { level: 4, name: 'Hombres lagarto IV', effect: 'En Curso: Durante este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de hombres lagarto.' },
+          { level: 6, name: 'Hombres lagarto VI', effect: 'En Curso: Durante este combate, la Iniciativa de la unidad seleccionada aumenta en 2.\nEl efecto se duplica para la unidad de hombres lagarto.' }
         ]
       },
       lore: 'Un sigiloso oficial de la Fortaleza que comanda a los mejores batallones de arqueros lagarto de las marismas.',
@@ -1180,8 +1180,8 @@ export const FACTION_HEROES: FactionHeroesData = {
         name: 'Especialidad: Elementales de magma',
         cards: [
           { level: 1, name: 'Elementales de magma I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad de Elementales de magma.' },
-          { level: 4, name: 'Elementales de magma IV', effect: 'Continuo: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Elementales de magma.' },
-          { level: 6, name: 'Elementales de magma VI', effect: 'Instantáneo: La unidad seleccionada gana +2 Ataque.\n— O —\nContinuo: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 3.' }
+          { level: 4, name: 'Elementales de magma IV', effect: 'En Curso: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Elementales de magma.' },
+          { level: 6, name: 'Elementales de magma VI', effect: 'Instantáneo: La unidad seleccionada gana +2 Ataque.\n— O —\nEn Curso: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 3.' }
         ]
       },
       lore: 'Un viajero rústico de constitución mineral que lidera a los seres de tierra y magma del plano elemental de Conflujo.',
@@ -1200,9 +1200,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Muro de fuego',
         cards: [
-          { level: 1, name: 'Muro de fuego I', effect: 'Continuo: Para este Combate, coloca esta carta o una ficha de muro de fuego en un espacio vacío del tablero de combate. Aplica 1 Herida a cualquier unidad que comience su turno aquí o que se detenga aquí, y a cualquier unidad melé o a distancia que lo atraviese.' },
+          { level: 1, name: 'Muro de fuego I', effect: 'En Curso: Para este Combate, coloca esta carta o una ficha de muro de fuego en un espacio vacío del tablero de combate. Aplica 1 Herida a cualquier unidad que comience su turno aquí o que se detenga aquí, y a cualquier unidad melé o a distancia que lo atraviese.' },
           { level: 4, name: 'Muro de fuego IV', effect: 'Instantáneo: Toma una carta de tu pila de descarte y llévatela a la mano.\n— O —\nInstantáneo: +2 Potencia.' },
-          { level: 6, name: 'Muro de fuego VI', effect: 'Continuo: Para este Combate, coloca esta carta o una ficha de muro de fuego en un espacio vacío del tablero de combate. Aplica 3 Heridas a cualquier unidad que comience su turno aquí o que se detenga aquí, y a cualquier unidad melé o a distancia que lo atraviese.' }
+          { level: 6, name: 'Muro de fuego VI', effect: 'En Curso: Para este Combate, coloca esta carta o una ficha de muro de fuego en un espacio vacío del tablero de combate. Aplica 3 Heridas a cualquier unidad que comience su turno aquí o que se detenga aquí, y a cualquier unidad melé o a distancia que lo atraviese.' }
         ]
       },
       lore: 'Una temperamental hechicera que domina las esferas ígneas y los muros incandescentes de Conflujo.',
@@ -1215,14 +1215,14 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 3, def: 1, power: 1, knowledge: 1 },
       initialSkill: {
         name: 'Logística',
-        normal: 'Continuo: Al final de tu turno, mueve la miniatura de tu héroe a una zona vacía adyacente.',
+        normal: 'En Curso: Al final de tu turno, mueve la miniatura de tu héroe a una zona vacía adyacente.',
         expert: 'Instantáneo: Tu héroe gana +1 de movimiento.'
       },
       specialty: {
         name: 'Especialidad: Elementales mágicos',
         cards: [
           { level: 1, name: 'Elementales mágicos I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad de Elementales mágicos.' },
-          { level: 4, name: 'Elementales mágicos IV', effect: 'Continuo: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Elementales mágicos.' },
+          { level: 4, name: 'Elementales mágicos IV', effect: 'En Curso: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Elementales mágicos.' },
           { level: 6, name: 'Elementales mágicos VI', effect: 'Instantáneo: La unidad seleccionada gana +2 Ataque.\n— O —\nInstantáneo: +2 Potencia.' }
         ]
       },
@@ -1242,9 +1242,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Elementales',
         cards: [
-          { level: 1, name: 'Elementales I', effect: 'Continuo: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Elementales.' },
+          { level: 1, name: 'Elementales I', effect: 'En Curso: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Elementales.' },
           { level: 4, name: 'Elementales IV', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad de Elementales.' },
-          { level: 6, name: 'Elementales VI', effect: 'Continuo: Para este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Elementales.' }
+          { level: 6, name: 'Elementales VI', effect: 'En Curso: Para este combate, la Vida de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Elementales.' }
         ]
       },
       lore: 'Una decidida viajera que lidera a los seres psíquicos de Conflujo mediante proyecciones de su propia mente.',
@@ -1280,8 +1280,8 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 2, def: 0, power: 1, knowledge: 2 },
       initialSkill: {
         name: 'Suerte',
-        normal: 'Continuo: Puedes volver a lanzar un dado de tesoro y de recurso una vez durante este turno.',
-        expert: 'Continuo: Puedes volver a lanzar tantos dados como quieras una vez durante este turno.'
+        normal: 'En Curso: Puedes volver a lanzar un dado de tesoro y de recurso una vez durante este turno.',
+        expert: 'En Curso: Puedes volver a lanzar tantos dados como quieras una vez durante este turno.'
       },
       specialty: {
         name: 'Especialidad: Curación',
@@ -1308,8 +1308,8 @@ export const FACTION_HEROES: FactionHeroesData = {
         name: 'Especialidad: Hechiceras',
         cards: [
           { level: 1, name: 'Hechiceras I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad de Hechiceras.' },
-          { level: 4, name: 'Hechiceras IV', effect: 'Continuo: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Hechiceras.' },
-          { level: 6, name: 'Hechiceras VI', effect: 'Instantáneo: La unidad seleccionada gana +2 Ataque.\n— O —\nContinuo: Coloca una ficha de debilidad <<-2>> sobre cualquier unidad durante 2 rondas de combate.' }
+          { level: 4, name: 'Hechiceras IV', effect: 'En Curso: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Hechiceras.' },
+          { level: 6, name: 'Hechiceras VI', effect: 'Instantáneo: La unidad seleccionada gana +2 Ataque.\n— O —\nEn Curso: Coloca una ficha de debilidad <<-2>> sobre cualquier unidad durante 2 rondas de combate.' }
         ]
       },
       lore: 'Una de las navegantes más respetadas, experta en coordinar a las hechiceras de Regnan para debilitar la mente del enemigo.',
@@ -1329,8 +1329,8 @@ export const FACTION_HEROES: FactionHeroesData = {
         name: 'Especialidad: Oceánidos',
         cards: [
           { level: 1, name: 'Oceánidos I', effect: 'Instantáneo: La unidad seleccionada gana +1 Ataque.\n— O —\nInstantáneo: La unidad seleccionada gana +1 Defensa.\n______\nEl efecto se duplica para la unidad de Oceánidos.' },
-          { level: 4, name: 'Oceánidos IV', effect: 'Continuo: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Oceánidos.' },
-          { level: 6, name: 'Oceánidos VI', effect: 'Continuo: La unidad seleccionada gana +2 Ataque.\nEl efecto se duplica para la unidad de Oceánidos.' }
+          { level: 4, name: 'Oceánidos IV', effect: 'En Curso: Para este combate, la Iniciativa de la unidad seleccionada aumenta en 1.\nEl efecto se duplica para la unidad de Oceánidos.' },
+          { level: 6, name: 'Oceánidos VI', effect: 'En Curso: La unidad seleccionada gana +2 Ataque.\nEl efecto se duplica para la unidad de Oceánidos.' }
         ]
       },
       lore: 'Una intrépida capitana pirata que cabalga las olas junto a las veloces ninfas oceánidas, liderando asaltos coordinados en la costa.',
@@ -1364,7 +1364,7 @@ export const FACTION_HEROES: FactionHeroesData = {
       stats: { atk: 3, def: 0, power: 2, knowledge: 1 },
       initialSkill: {
         name: 'Logística',
-        normal: 'Continuo: Al final de tu turno, mueve la miniatura de tu héroe a una zona vacía adyacente.',
+        normal: 'En Curso: Al final de tu turno, mueve la miniatura de tu héroe a una zona vacía adyacente.',
         expert: 'Instantáneo: Tu héroe gana +1 de movimiento.'
       },
       specialty: {
@@ -1391,9 +1391,9 @@ export const FACTION_HEROES: FactionHeroesData = {
       specialty: {
         name: 'Especialidad: Olvido',
         cards: [
-          { level: 1, name: 'Olvido I', effect: 'Continuo: Durante su siguiente activación, una unidad a distancia de nivel Bronce o Plata no puede atacar.\n— O —\nInstantáneo: Roba 1 carta.' },
-          { level: 4, name: 'Olvido IV', effect: 'Continuo: Durante su siguiente activación, una unidad a distancia de nivel Bronce, Plata u Oro no puede atacar.\n— O —\nInstantáneo: +2 Potencia.' },
-          { level: 6, name: 'Olvido VI', effect: 'Continuo: Durante su siguiente activación, una unidad Bronce, Plata u Oro no puede atacar.\n— O —\nInstantáneo: +2 Potencia.' }
+          { level: 1, name: 'Olvido I', effect: 'En Curso: Durante su siguiente activación, una unidad a distancia de nivel Bronce o Plata no puede atacar.\n— O —\nInstantáneo: Roba 1 carta.' },
+          { level: 4, name: 'Olvido IV', effect: 'En Curso: Durante su siguiente activación, una unidad a distancia de nivel Bronce, Plata u Oro no puede atacar.\n— O —\nInstantáneo: +2 Potencia.' },
+          { level: 6, name: 'Olvido VI', effect: 'En Curso: Durante su siguiente activación, una unidad Bronce, Plata u Oro no puede atacar.\n— O —\nInstantáneo: +2 Potencia.' }
         ]
       },
       lore: 'Un enigmático navegante que conoce los secretos del hipnotismo de las profundidades, sumiendo la mente de los arqueros rivales en el olvido.',

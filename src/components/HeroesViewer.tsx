@@ -38,15 +38,259 @@ function getHeroBaseFilename(heroName: string, factionId?: string): string {
   return filename;
 }
 
-// Helper to match a hero's detail against actual globbed local assets (e.g. clerigo_adela.jpg, iona.jpg, caballero_catherine.jpg)
+const PORTRAIT_FILENAMES = [
+  "adalid_ajit.jpg",
+  "adalid_arlach.jpg",
+  "adalid_dace.jpg",
+  "adalid_damacon.jpg",
+  "adalid_gunnar.jpg",
+  "adalid_kydoimos.jpg",
+  "adalid_lorelei.jpg",
+  "adalid_mutare.jpg",
+  "adalid_mutare_drake.jpg",
+  "adalid_shakti.jpg",
+  "adalid_synca.jpg",
+  "adalid_tarnum.jpg",
+  "alquimista_fafner.jpg",
+  "alquimista_iona.jpg",
+  "alquimista_josephine.jpg",
+  "alquimista_neela.jpg",
+  "alquimista_piquedram.jpg",
+  "alquimista_rissa.jpg",
+  "alquimista_thane.jpg",
+  "alquimista_torosar.jpg",
+  "amaestrador_alkin.jpg",
+  "amaestrador_alkin_hota.jpg",
+  "amaestrador_areshak.jpg",
+  "amaestrador_broghild.jpg",
+  "amaestrador_bron.jpg",
+  "amaestrador_drakon.jpg",
+  "amaestrador_gerwulf.jpg",
+  "amaestrador_korbac.jpg",
+  "amaestrador_pactal.jpg",
+  "amaestrador_tarnum.jpg",
+  "amaestrador_tazar.jpg",
+  "amaestrador_wystan.jpg",
+  "artificer_agar.jpg",
+  "artificer_bertram.jpg",
+  "artificer_celestine.jpg",
+  "artificer_eanswythe.jpg",
+  "artificer_elderian.jpg",
+  "artificer_frederick.jpg",
+  "artificer_todd.jpg",
+  "artificer_umender.jpg",
+  "artificer_victoria.jpg",
+  "artificer_wrathmont.jpg",
+  "artificer_ziph.jpg",
+  "barbaro_boragus.jpg",
+  "barbaro_crag_hack.jpg",
+  "barbaro_gretchin.jpg",
+  "barbaro_gurnisson.jpg",
+  "barbaro_jabarkas.jpg",
+  "barbaro_kilgor.jpg",
+  "barbaro_krellion.jpg",
+  "barbaro_shiva.jpg",
+  "barbaro_tarnum.jpg",
+  "barbaro_tyraxor.jpg",
+  "barbaro_yog.jpg",
+  "bruja_adrienne.jpg",
+  "bruja_andra.jpg",
+  "bruja_kinkeria.jpg",
+  "bruja_merist.jpg",
+  "bruja_mirlanda.jpg",
+  "bruja_rosic.jpg",
+  "bruja_styg.jpg",
+  "bruja_tiva.jpg",
+  "bruja_verdish.jpg",
+  "bruja_voy.jpg",
+  "brujo_alamar.jpg",
+  "brujo_athe.jpg",
+  "brujo_darkstorn.jpg",
+  "brujo_deemer.jpg",
+  "brujo_geon.jpg",
+  "brujo_jaegar.jpg",
+  "brujo_jeddite.jpg",
+  "brujo_malekith.jpg",
+  "brujo_miseria.jpg",
+  "brujo_sephinroth.jpg",
+  "caballero_beatrice.jpg",
+  "caballero_catherine.jpg",
+  "caballero_christian.jpg",
+  "caballero_edric.jpg",
+  "caballero_general_kendal.jpg",
+  "caballero_lord_haart.jpg",
+  "caballero_muerte_charna.jpg",
+  "caballero_muerte_clavius.jpg",
+  "caballero_muerte_galthran.jpg",
+  "caballero_muerte_isra.jpg",
+  "caballero_muerte_lord_haart.jpg",
+  "caballero_muerte_moandor.jpg",
+  "caballero_muerte_ranloo.jpg",
+  "caballero_muerte_straker.jpg",
+  "caballero_muerte_tamika.jpg",
+  "caballero_muerte_vokial.jpg",
+  "caballero_orrin.jpg",
+  "caballero_queen_catherine.jpg",
+  "caballero_roland.jpg",
+  "caballero_sir_mullich.jpg",
+  "caballero_sorsha.jpg",
+  "caballero_sylvia.jpg",
+  "caballero_tarnum.jpg",
+  "caballero_tyris.jpg",
+  "caballero_valeska.jpg",
+  "caballero_young_christian.jpg",
+  "caminante_planos_erdamon.jpg",
+  "caminante_planos_fiur.jpg",
+  "caminante_planos_ignissa.jpg",
+  "caminante_planos_kalt.jpg",
+  "caminante_planos_lacus.jpg",
+  "caminante_planos_monere.jpg",
+  "caminante_planos_pasis.jpg",
+  "caminante_planos_thunar.jpg",
+  "capitan_anabel.jpg",
+  "capitan_bidley.jpg",
+  "capitan_cassiopeia.jpg",
+  "capitan_corkes.jpg",
+  "capitan_derek.jpg",
+  "capitan_elmore.jpg",
+  "capitan_illor.jpg",
+  "capitan_jeremy.jpg",
+  "capitan_leena.jpg",
+  "capitan_miriam.jpg",
+  "capitan_tark.jpg",
+  "clerigo_adela.jpg",
+  "clerigo_adelaide.jpg",
+  "clerigo_caitlin.jpg",
+  "clerigo_cuthbert.jpg",
+  "clerigo_ingham.jpg",
+  "clerigo_lyonis.jpg",
+  "clerigo_rion.jpg",
+  "clerigo_sanya.jpg",
+  "demoniaco_calh.jpg",
+  "demoniaco_fiona.jpg",
+  "demoniaco_ignatius.jpg",
+  "demoniaco_marius.jpg",
+  "demoniaco_nymus.jpg",
+  "demoniaco_octavia.jpg",
+  "demoniaco_pyre.jpg",
+  "demoniaco_rashka.jpg",
+  "demoniaco_xeron.jpg",
+  "druida_aeris.jpg",
+  "druida_alagar.jpg",
+  "druida_coronius.jpg",
+  "druida_elleshar.jpg",
+  "druida_gem.jpg",
+  "druida_malcom.jpg",
+  "druida_melodia.jpg",
+  "druida_ordwald.jpg",
+  "druida_sorceress_gem.jpg",
+  "druida_tarnum.jpg",
+  "druida_uland.jpg",
+  "elementalista_aenain.jpg",
+  "elementalista_brissa.jpg",
+  "elementalista_ciele.jpg",
+  "elementalista_gelare.jpg",
+  "elementalista_grindan.jpg",
+  "elementalista_inteus.jpg",
+  "elementalista_labetha.jpg",
+  "elementalista_luna.jpg",
+  "elementalista_tarnum.png",
+  "guardabosques_clancy.jpg",
+  "guardabosques_gelu.jpg",
+  "guardabosques_giselle.jpg",
+  "guardabosques_ivor.jpg",
+  "guardabosques_jenova.jpg",
+  "guardabosques_kyrre.jpg",
+  "guardabosques_mephala.jpg",
+  "guardabosques_ryland.jpg",
+  "guardabosques_thorgrim.jpg",
+  "guardabosques_ufretin.jpg",
+  "hechicero_aine.jpg",
+  "hechicero_astral.jpg",
+  "hechicero_cyra.jpg",
+  "hechicero_daremyth.jpg",
+  "hechicero_dracon.jpg",
+  "hechicero_halon.jpg",
+  "hechicero_serena.jpg",
+  "hechicero_solmyr.jpg",
+  "hechicero_tarnum.jpg",
+  "hechicero_theodorus.jpg",
+  "hechicero_yog.jpg",
+  "hereje_ash.jpg",
+  "hereje_axsis.jpg",
+  "hereje_ayden.jpg",
+  "hereje_calid.jpg",
+  "hereje_olema.jpg",
+  "hereje_xarfax.jpg",
+  "hereje_xyron.jpg",
+  "hereje_zydar.jpg",
+  "mercenary_boyd.jpg",
+  "mercenary_dury.jpg",
+  "mercenary_floribert.jpg",
+  "mercenary_henrietta.jpg",
+  "mercenary_jangaard.jpg",
+  "mercenary_melchior.jpg",
+  "mercenary_morton.jpg",
+  "mercenary_murdoch.jpg",
+  "mercenary_sam.jpg",
+  "mercenary_stina.jpg",
+  "mercenary_tancred.jpg",
+  "mercenary_tavin.jpg",
+  "mercenary_valquest.jpg",
+  "mercenary_winzells.jpg",
+  "mercenary_wynona.jpg",
+  "mystic_calypso.jpg",
+  "mystic_calyx.jpg",
+  "mystic_dryadon.jpg",
+  "mystic_nephreth.jpg",
+  "mystic_nixara.jpg",
+  "mystic_osirion.jpg",
+  "mystic_pharun.jpg",
+  "mystic_thalassa.jpg",
+  "navegador_andal.jpg",
+  "navegador_astra.jpg",
+  "navegador_casmetra.jpg",
+  "navegador_dargem.jpg",
+  "navegador_eovacius.jpg",
+  "navegador_manfred.jpg",
+  "navegador_spint.jpg",
+  "navegador_zilare.jpg",
+  "nigromante_aislinn.jpg",
+  "nigromante_finneas.jpg",
+  "nigromante_nagash.jpg",
+  "nigromante_nimbus.jpg",
+  "nigromante_sandro.jpg",
+  "nigromante_sandro_in_disguise.jpg",
+  "nigromante_septienna.jpg",
+  "nigromante_thant.jpg",
+  "nigromante_vidomina.jpg",
+  "nigromante_xsi.jpg",
+  "taumaturgo_dessa.jpg",
+  "taumaturgo_gird.jpg",
+  "taumaturgo_gundula.jpg",
+  "taumaturgo_oris.jpg",
+  "taumaturgo_saurug.jpg",
+  "taumaturgo_terek.jpg",
+  "taumaturgo_vey.jpg",
+  "taumaturgo_vey_hota.jpg",
+  "taumaturgo_zog.jpg",
+  "taumaturgo_zubin.jpg",
+  "warden_clover.jpg",
+  "warden_finian.jpg",
+  "warden_lorcan.jpg",
+  "warden_naima.jpg",
+  "warden_rashid.jpg",
+  "warden_tariq.jpg",
+  "warden_vail.jpg",
+  "warden_wilbur.jpg",
+];
+
+// Helper to match a hero's detail against actual local assets (e.g. clerigo_adela.jpg, iona.jpg, caballero_catherine.jpg)
 function getHeroPortrait(
-  heroPortraits: Record<string, string>,
   heroName: string,
   className: string,
   factionId: string
 ): string | undefined {
-  if (!heroPortraits) return undefined;
-
   // Normalize inputs
   const cleanHeroName = heroName
     .toLowerCase()
@@ -71,7 +315,7 @@ function getHeroPortrait(
   // Get base name from overrides (e.g. caballero_tarnum, etc.)
   const baseName = getHeroBaseFilename(heroName, factionId).toLowerCase();
 
-  // We want to find a file in heroPortraits that match our candidates.
+  // We want to find a file in our static list that matches our candidates.
   // Let's build candidates for the filename without extension:
   const candidates = new Set<string>();
 
@@ -99,33 +343,28 @@ function getHeroPortrait(
     candidates.add(`${englishClass}_${cleanHeroName}`);
   }
 
-  // Search through heroPortraits keys.
-  // We extract the filename (with or without extension) from each key and compare.
-  const portraitKeys = Object.keys(heroPortraits);
-
   for (const candidate of candidates) {
     const targetJpg = `${candidate}.jpg`;
     const targetPng = `${candidate}.png`;
     const targetJpeg = `${candidate}.jpeg`;
 
-    const foundKey = portraitKeys.find(key => {
-      const filePart = key.substring(key.lastIndexOf('/') + 1).toLowerCase();
-      return filePart === targetJpg || filePart === targetPng || filePart === targetJpeg;
+    const foundFile = PORTRAIT_FILENAMES.find(filename => {
+      const lowerFile = filename.toLowerCase();
+      return lowerFile === targetJpg || lowerFile === targetPng || lowerFile === targetJpeg;
     });
 
-    if (foundKey) {
-      return heroPortraits[foundKey];
+    if (foundFile) {
+      return new URL(`../assets/images/thumbs/${foundFile}`, import.meta.url).href;
     }
   }
 
-  // Fallback: search if the key contains the cleanHeroName at all
-  const fallbackKey = portraitKeys.find(key => {
-    const filePart = key.substring(key.lastIndexOf('/') + 1).toLowerCase();
-    return filePart.includes(cleanHeroName);
+  // Fallback: search if the file contains the cleanHeroName at all
+  const fallbackFile = PORTRAIT_FILENAMES.find(filename => {
+    return filename.toLowerCase().includes(cleanHeroName);
   });
 
-  if (fallbackKey) {
-    return heroPortraits[fallbackKey];
+  if (fallbackFile) {
+    return new URL(`../assets/images/thumbs/${fallbackFile}`, import.meta.url).href;
   }
 
   return undefined;
@@ -289,16 +528,8 @@ export default function HeroesViewer() {
     return 0;
   };
 
-  const heroPortraits = import.meta.glob(
-    "../assets/images/thumbs/*",
-    {
-        eager: true,
-        import: "default",
-    }
-  ) as Record<string, string>;
-
   const selectedHeroImage = selectedHero
-    ? getHeroPortrait(heroPortraits, selectedHero.name, selectedHero.className, selectedFaction)
+    ? getHeroPortrait(selectedHero.name, selectedHero.className, selectedFaction)
     : undefined;
 
   return (
@@ -383,7 +614,7 @@ export default function HeroesViewer() {
               <div className="space-y-2">
                 {availableHeroes.map((hero) => {
                   const isHeroSelected = selectedHero?.name === hero.name;
-                  const heroImage = getHeroPortrait(heroPortraits, hero.name, hero.className, selectedFaction);
+                  const heroImage = getHeroPortrait(hero.name, hero.className, selectedFaction);
                   return (
                     <button
                       key={hero.name}

@@ -70,8 +70,8 @@ export const ALL_BOARD_GAME_SKILLS: BoardGameSkill[] = [
   },
   {
     name: 'Tiro con arco',
-    normal: 'Continuo: Durante esta ronda de combate, tus unidades a distancia ganan +1 Ataque si el objetivo no es una unidad adyacente.',
-    expert: 'Continuo: Hasta el final de la siguiente ronda de combate, todas tus unidades a distancia ganan +1 Iniciativa y +1 Ataque si el objetivo no es una unidad adyacente.',
+    normal: 'En Curso: Durante esta ronda de combate, tus unidades a distancia ganan +1 Ataque si el objetivo no es una unidad adyacente.',
+    expert: 'En Curso: Hasta el final de la siguiente ronda de combate, todas tus unidades a distancia ganan +1 Iniciativa y +1 Ataque si el objetivo no es una unidad adyacente.',
     category: 'Combate' as const,
     description: 'Incrementa la letalidad, iniciativa y precisión táctica de tus unidades a distancia.'
   },
@@ -154,15 +154,15 @@ export const ALL_BOARD_GAME_SKILLS: BoardGameSkill[] = [
   },
   {
     name: 'Logística',
-    normal: 'Continuo: Al final de tu turno, mueve la miniatura de tu héroe a una zona vacía adyacente.',
+    normal: 'En Curso: Al final de tu turno, mueve la miniatura de tu héroe a una zona vacía adyacente.',
     expert: 'Instantáneo: Tu héroe gana +1 de movimiento.',
     category: 'Aventura' as const,
     description: 'Incrementa el alcance y dinamismo de tus marchas tácticas sobre el mapa de aventura.'
   },
   {
     name: 'Suerte',
-    normal: 'Continuo: Puedes volver a lanzar un dado de tesoro y de recurso una vez durante este turno.',
-    expert: 'Continuo: Puedes volver a lanzar tantos dados como quieras una vez durante este turno.',
+    normal: 'En Curso: Puedes volver a lanzar un dado de tesoro y de recurso una vez durante este turno.',
+    expert: 'En Curso: Puedes volver a lanzar tantos dados como quieras una vez durante este turno.',
     category: 'Combate' as const,
     description: 'Invoca la buena fortuna para mitigar la aleatoriedad de los dados en momentos clave.'
   },

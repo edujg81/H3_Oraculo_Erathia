@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Compass, RotateCcw, ArrowRight, Hammer } from 'lucide-react';
+import { Compass, RotateCcw, ArrowRight, Hammer, Coins, Crown } from 'lucide-react';
 import { Player } from '../types';
 
 interface ActivePlayerActionsProps {
@@ -224,7 +224,9 @@ export function ActivePlayerActions({
                   }`}
                   title={actionsBlocked ? "Inicia el tiempo total para habilitar acciones" : activePlayer.actionRecruitUsed ? "No disponible (ficha 'Reclutar' ya usada)" : "Paga 10 de Oro y gasta la ficha de Acción 'Reclutar' para contratar el 2º Héroe"}
                 >
-                  Reclutar 2º Héroe (-10 🟡)
+                  <span className="inline-flex items-center justify-center gap-1">
+                    Reclutar 2º Héroe (-10 <Coins className="w-3.5 h-3.5 text-amber-500 shrink-0" />)
+                  </span>
                 </button>
               </div>
 
@@ -376,7 +378,7 @@ export function ActivePlayerActions({
                   ? "No disponible (ficha 'Construir' ya usada)"
                   : canAffordMageGuild
                   ? "Comprar Cofradía de Magos (Coste: 4 Oros, 2 Materiales, 1 Objeto de valor, gasta ficha de construir)"
-                  : "No tienes recursos suficientes para comprar la Cofradía de Magos (Coste: 4 🟡, 2 🪵, 1 🔮)"
+                  : "No tienes recursos suficientes para comprar la Cofradía de Magos (Coste: 4 Oros, 2 Materiales, 1 Valioso)"
               }
             >
               <div className="flex items-center gap-1.5 w-full">
@@ -387,11 +389,15 @@ export function ActivePlayerActions({
               </div>
               <div className="flex items-center gap-1.5 mt-1 text-[9px] font-mono font-medium text-slate-400 flex-wrap">
                 <span>Coste:</span>
-                <span className={(activePlayer.gold ?? 0) >= 4 ? "text-amber-400 font-bold" : "text-red-500/80 font-bold"}>4🟡</span>
+                <span className={`inline-flex items-center gap-0.5 ${(activePlayer.gold ?? 0) >= 4 ? "text-amber-400 font-bold" : "text-red-500/80 font-bold"}`}>
+                  4<Coins className="w-2.5 h-2.5 text-amber-500 shrink-0" />
+                </span>
                 <span className={(activePlayer.materials ?? 0) >= 2 ? "text-amber-400 font-bold inline-flex items-center gap-0.5" : "text-red-500/80 font-bold inline-flex items-center gap-0.5"}>
                   2<Hammer className="w-2.5 h-2.5 text-orange-500 shrink-0" />
                 </span>
-                <span className={(activePlayer.valuables ?? 0) >= 1 ? "text-amber-400 font-bold" : "text-red-500/80 font-bold"}>1🔮</span>
+                <span className={`inline-flex items-center gap-0.5 ${(activePlayer.valuables ?? 0) >= 1 ? "text-amber-400 font-bold" : "text-red-500/80 font-bold"}`}>
+                  1<Crown className="w-2.5 h-2.5 text-purple-500 shrink-0" />
+                </span>
               </div>
             </button>
           )}

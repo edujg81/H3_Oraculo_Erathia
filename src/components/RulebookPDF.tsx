@@ -33,7 +33,7 @@ const compendiumUnits: CompendiumUnit[] = [
     basicStats: "⚔️3 🛡️1 ⚡5 ❤️5",
     eliteStats: "⚔️4 🛡️1 ⚡7 ❤️5",
     type: "a Distancia",
-    abilities: "Básico: Ninguna. Élite: Pasivo: Ignora la penalización de combate contra unidades adyacentes."
+    abilities: "Básico: Ninguna. Élite: Pasiva: Ignora la penalización de combate contra unidades adyacentes."
   },
   {
     name: "Arcángeles",
@@ -43,7 +43,7 @@ const compendiumUnits: CompendiumUnit[] = [
     basicStats: "⚔️6 🛡️3 ⚡12 ❤️8",
     eliteStats: "⚔️7 🛡️3 ⚡18 ❤️10",
     type: "Voladora",
-    abilities: "Básico: Pasivo: Cuando se inicie un combate, roba 1 carta. Élite: Pasivo: Una vez por combate. Cancela un ataque que fuese a reducir a 0 los Puntos de Salud otra unidad a 0."
+    abilities: "Básico: Pasiva: Cuando se inicie un combate, roba 1 carta. Élite: Pasiva: Una vez por combate. Cancela un ataque que fuese a reducir a 0 los Puntos de Salud otra unidad a 0."
   },
   // 2. NECROPOLIS
   {
@@ -64,7 +64,7 @@ const compendiumUnits: CompendiumUnit[] = [
     basicStats: "⚔️3 🛡️1 ⚡6 ❤️5",
     eliteStats: "⚔️4 🛡️1 ⚡7 ❤️5",
     type: "a Distancia",
-    abilities: "Básico: Ninguna. Élite: Al Atacar: Elige una unidad adyacente al objetivo y atácala. Para este ataque tu Ataque es 2."
+    abilities: "Básico: Ninguna. Élite: Ataque: Elige una unidad adyacente al objetivo y atácala. Para este ataque tu Ataque es 2."
   },
   {
     name: "Dragones fantasma",
@@ -74,7 +74,7 @@ const compendiumUnits: CompendiumUnit[] = [
     basicStats: "⚔️6 🛡️3 ⚡9 ❤️8",
     eliteStats: "⚔️7 🛡️3 ⚡14 ❤️9",
     type: "Voladora",
-    abilities: "Básico: Activación: Descarta la ficha Moral Positiva del enemigo. Élite: Activación: Descarta la ficha Moral Positiva del enemigo. Al Atacar: Gana +1 Ataque."
+    abilities: "Básico: Activación: Descarta la ficha Moral Positiva del enemigo. Élite: Activación: Descarta la ficha Moral Positiva del enemigo. Ataque: Gana +1 Ataque."
   },
   // 3. MAZMORRA
   {
@@ -85,7 +85,7 @@ const compendiumUnits: CompendiumUnit[] = [
     basicStats: "⚔️3 🛡️0 ⚡5 ❤️3",
     eliteStats: "⚔️3 🛡️1 ⚡7 ❤️3",
     type: "a Distancia",
-    abilities: "Básico: Ninguna. Élite: Pasivo: Ignora la penalización de combate contra unidades adyacentes."
+    abilities: "Básico: Ninguna. Élite: Pasiva: Ignora la penalización de combate contra unidades adyacentes."
   },
   {
     name: "Minotauros",
@@ -95,7 +95,7 @@ const compendiumUnits: CompendiumUnit[] = [
     basicStats: "⚔️4 🛡️2 ⚡6 ❤️4",
     eliteStats: "⚔️5 🛡️2 ⚡8 ❤️4",
     type: "Melé",
-    abilities: "Al Atacar: Si resuelves un -1 en el dado de ataque, roba una carta."
+    abilities: "Ataque: Si resuelves un -1 en el dado de ataque, roba una carta."
   },
   {
     name: "Dragones negros",
@@ -105,7 +105,7 @@ const compendiumUnits: CompendiumUnit[] = [
     basicStats: "⚔️6 🛡️3 ⚡11 ❤️8",
     eliteStats: "⚔️8 🛡️3 ⚡15 ❤️8",
     type: "Voladora",
-    abilities: "Básico: Pasivo: Reduce el Daño de Hechizo recibido por esta unidad en 2 (hasta un mínimo de 0). Élite: Pasivo: Ignora cualquier efecto de Hechizo y Daño de especialidad."
+    abilities: "Básico: Pasiva: Reduce el Daño de Hechizo recibido por esta unidad en 2 (hasta un mínimo de 0). Élite: Pasiva: Ignora cualquier efecto de Hechizo y Daño de especialidad."
   },
   // 4. MURALLAS
   {
@@ -116,7 +116,7 @@ const compendiumUnits: CompendiumUnit[] = [
     basicStats: "⚔️2 🛡️1 ⚡6 ❤️3",
     eliteStats: "⚔️3 🛡️1 ⚡7 ❤️3",
     type: "a Distancia",
-    abilities: "Básico: Ninguna. Élite: Al Atacar: Si una unidad objetivo no está adyacente, vuélvela a atacar si sacas un -1 o un 0."
+    abilities: "Básico: Ninguna. Élite: Ataque: Si una unidad objetivo no está adyacente, vuélvela a atacar si sacas un -1 o un 0."
   },
   {
     name: "Dendroides",
@@ -126,7 +126,7 @@ const compendiumUnits: CompendiumUnit[] = [
     basicStats: "⚔️4 🛡️2 ⚡3 ❤️5",
     eliteStats: "⚔️4 🛡️2 ⚡4 ❤️6",
     type: "Melé",
-    abilities: "Básico: Ninguna. Élite: Pasivo: Las unidades enemigas que empiecen su activación adyacentes a esta unidad no pueden moverse."
+    abilities: "Básico: Ninguna. Élite: Pasiva: Las unidades enemigas que empiecen su activación adyacentes a esta unidad no pueden moverse."
   },
   {
     name: "Dragones dorados",
@@ -136,7 +136,7 @@ const compendiumUnits: CompendiumUnit[] = [
     basicStats: "⚔️5 🛡️3 ⚡10 ❤️9",
     eliteStats: "⚔️6 🛡️3 ⚡16 ❤️10",
     type: "Voladora",
-    abilities: "Básico: Al Atacar: Ataca a 2 espacios en fila. El primer ataque se resuelve de forma normal y el segundo con 2 Ataque. Élite: Al Atacar: Ataca a 2 espacios en fila. El primer ataque se resuelve normalmente y el segundo tiene 3 Ataque."
+    abilities: "Básico: Ataque: Ataca a 2 espacios en fila. El primer ataque se resuelve de forma normal y el segundo con 2 Ataque. Élite: Ataque: Ataca a 2 espacios en fila. El primer ataque se resuelve normalmente y el segundo tiene 3 Ataque."
   },
   // 5. TORRE
   {
@@ -157,7 +157,7 @@ const compendiumUnits: CompendiumUnit[] = [
     basicStats: "⚔️3 🛡️1 ⚡7 ❤️6",
     eliteStats: "⚔️4 🛡️1 ⚡8 ❤️6",
     type: "Voladora",
-    abilities: "Básico: Alternativa: Descarta 3 cartas de tu mazo y devuelve a tu mano un Hechizo descartado de esta forma. Élite: Al Atacar: Descarta hasta 3 cartas de tu mazo y devuelve a tu mano un Hechizo descartado de esta forma."
+    abilities: "Básico: Alternativa: Descarta 3 cartas de tu mazo y devuelve a tu mano un Hechizo descartado de esta forma. Élite: Ataque: Descarta hasta 3 cartas de tu mazo y devuelve a tu mano un Hechizo descartado de esta forma."
   },
   {
     name: "Titanes",
@@ -178,7 +178,7 @@ const compendiumUnits: CompendiumUnit[] = [
     basicStats: "⚔️3 🛡️0 ⚡7 ❤️4",
     eliteStats: "⚔️3 🛡️1 ⚡8 ❤️5",
     type: "Melé",
-    abilities: "Básico: Ninguna. Élite: Al Atacar: Ignora contraataques. Además, hace 1 Herida a otra unidad enemiga adyacente a los cerberos."
+    abilities: "Básico: Ninguna. Élite: Ataque: Ignora contraataques. Además, hace 1 Herida a otra unidad enemiga adyacente a los cerberos."
   },
   {
     name: "Señores del abismo",
@@ -198,7 +198,7 @@ const compendiumUnits: CompendiumUnit[] = [
     basicStats: "⚔️6 🛡️3 ⚡11 ❤️8",
     eliteStats: "⚔️7 🛡️3 ⚡15 ❤️9",
     type: "Voladora",
-    abilities: "Básico: Al Atacar: Ignora contraataques. Élite: Al Atacar: Ignora contraataques. Pasivo: Al moverse, los archidiablos se pueden mover a cualquier espacio vacío."
+    abilities: "Básico: Ataque: Ignora contraataques. Élite: Ataque: Ignora contraataques. Pasiva: Al moverse, los archidiablos se pueden mover a cualquier espacio vacío."
   },
   // 7. BASTION
   {
@@ -219,7 +219,7 @@ const compendiumUnits: CompendiumUnit[] = [
     basicStats: "⚔️4 🛡️1 ⚡9 ❤️5",
     eliteStats: "⚔️4 🛡️1 ⚡11 ❤️6",
     type: "Voladora",
-    abilities: "Básico: Ninguna. Élite: Pasivo: Justo después del ataque de esta unidad y antes de un contraataque, tira 1 dado de ataque; con un <<0> o <<+1>>, inflige 1 Herida al objetivo."
+    abilities: "Básico: Ninguna. Élite: Pasiva: Justo después del ataque de esta unidad y antes de un contraataque, tira 1 dado de ataque; con un <<0> o <<+1>>, inflige 1 Herida al objetivo."
   },
   {
     name: "Behemoths",
@@ -229,7 +229,7 @@ const compendiumUnits: CompendiumUnit[] = [
     basicStats: "⚔️6 🛡️2 ⚡6 ❤️9",
     eliteStats: "⚔️7 🛡️2 ⚡9 ❤️10",
     type: "Melé",
-    abilities: "Básico: Al Atacar: Disminuye la Defensa del objetivo en 1 (hasta un mínimo de 0). Élite: Al Atacar: Disminuye la Defensa del objetivo en 2 (hasta un mínimo de 0). Después del ataque, pon 1 ficha de corrosión en el objetivo."
+    abilities: "Básico: Ataque: Disminuye la Defensa del objetivo en 1 (hasta un mínimo de 0). Élite: Ataque: Disminuye la Defensa del objetivo en 2 (hasta un mínimo de 0). Después del ataque, pon 1 ficha de corrosión en el objetivo."
   },
   // 8. FORTALEZA
   {
@@ -240,7 +240,7 @@ const compendiumUnits: CompendiumUnit[] = [
     basicStats: "⚔️3 🛡️0 ⚡8 ❤️3",
     eliteStats: "⚔️3 🛡️1 ⚡12 ❤️3",
     type: "Voladora",
-    abilities: "Básico: Al Atacar: Retira todos los efectos Continuos que el enemigo ha jugado sobre el objetivo. Élite: Al Atacar: Retira todos los efectos Continuos que el enemigo ha jugado sobre el objetivo. Si el objetivo contraataca, sufre -1 Ataque."
+    abilities: "Básico: Ataque: Retira todos los efectos Continuos que el enemigo ha jugado sobre el objetivo. Élite: Ataque: Retira todos los efectos Continuos que el enemigo ha jugado sobre el objetivo. Si el objetivo contraataca, sufre -1 Ataque."
   },
   {
     name: "Gorgonas",
@@ -250,7 +250,7 @@ const compendiumUnits: CompendiumUnit[] = [
     basicStats: "⚔️4 🛡️2 ⚡5 ❤️5",
     eliteStats: "⚔️5 🛡️2 ⚡6 ❤️5",
     type: "Melé",
-    abilities: "Básico: Ninguna. Élite: Al Atacar: Después del ataque, lanza 2 dados de ataque; si sacas un doble 0, reduce los Puntos de Salud de la unidad objetivo a 0."
+    abilities: "Básico: Ninguna. Élite: Ataque: Después del ataque, lanza 2 dados de ataque; si sacas un doble 0, reduce los Puntos de Salud de la unidad objetivo a 0."
   },
   {
     name: "Hidras",
@@ -260,7 +260,7 @@ const compendiumUnits: CompendiumUnit[] = [
     basicStats: "⚔️6 🛡️3 ⚡5 ❤️8",
     eliteStats: "⚔️7 🛡️3 ⚡7 ❤️10",
     type: "Melé",
-    abilities: "Básico: Al Atacar: Ignora el contraataque. Élite: Al Atacar: Ignora el contraataque. Esta unidad ataca a hasta 2 unidades enemigas adyacentes."
+    abilities: "Básico: Ataque: Ignora el contraataque. Élite: Ataque: Ignora el contraataque. Esta unidad ataca a hasta 2 unidades enemigas adyacentes."
   },
   // 9. CONFLUJO
   {
@@ -291,7 +291,7 @@ const compendiumUnits: CompendiumUnit[] = [
     basicStats: "⚔️6 🛡️2 ⚡12 ❤️7",
     eliteStats: "⚔️7 🛡️2 ⚡18 ❤️8",
     type: "Voladora",
-    abilities: "Básico: Pasivo: Una vez por combate. Cuando los PS de esta unidad se reduzcan a 0, ponlos en 1. Pasivo: Inmunes a los Hechizos de magia de fuego. Élite: Al Atacar: Ataca 2 espacios en una línea. El primer ataque se resuelve normalmente y el segundo tiene 2 Ataque. Pasivo: Inmunes a los Hechizos de magia de fuego."
+    abilities: "Básico: Pasiva: Una vez por combate. Cuando los PS de esta unidad se reduzcan a 0, ponlos en 1. Pasiva: Inmunes a los Hechizos de magia de fuego. Élite: Ataque: Ataca 2 espacios en una línea. El primer ataque se resuelve normalmente y el segundo tiene 2 Ataque. Pasiva: Inmunes a los Hechizos de magia de fuego."
   },
   // 10. CALA
   {
@@ -302,7 +302,7 @@ const compendiumUnits: CompendiumUnit[] = [
     basicStats: "⚔️2 🛡️0 ⚡6 ❤️4",
     eliteStats: "⚔️3 🛡️0 ⚡8 ❤️5",
     type: "a Distancia",
-    abilities: "Básico: Pasivo: Ignora la penalización de combate contra unidades adyacentes. Élite: Al Atacar: Ignora los contraataques. Pasivo: Ignora la penalización de combate contra unidades adyacentes."
+    abilities: "Básico: Pasiva: Ignora la penalización de combate contra unidades adyacentes. Élite: Ataque: Ignora los contraataques. Pasiva: Ignora la penalización de combate contra unidades adyacentes."
   },
   {
     name: "Hechiceras",
@@ -312,7 +312,7 @@ const compendiumUnits: CompendiumUnit[] = [
     basicStats: "⚔️3 🛡️1 ⚡6 ❤️5",
     eliteStats: "⚔️4 🛡️1 ⚡7 ❤️6",
     type: "a Distancia",
-    abilities: "Básico: Alternativo: Coloca una ficha de debilidad <<-2>> sobre cualquier unidad durante 2 rondas de combate. Élite: Al Atacar: Después del ataque, coloca una ficha de Debilidad <<-1>> sobre el objetivo durante 2 rondas de combate."
+    abilities: "Básico: Alternativo: Coloca una ficha de debilidad <<-2>> sobre cualquier unidad durante 2 rondas de combate. Élite: Ataque: Después del ataque, coloca una ficha de Debilidad <<-1>> sobre el objetivo durante 2 rondas de combate."
   },
   {
     name: "Háspidos",
@@ -322,7 +322,7 @@ const compendiumUnits: CompendiumUnit[] = [
     basicStats: "⚔️5 🛡️3 ⚡9 ❤️8",
     eliteStats: "⚔️7 🛡️3 ⚡12 ❤️8",
     type: "Melé",
-    abilities: "Básico: Al Atacar: +2 Ataque si, durante este combate, esta unidad se giró del lado de manada al lado de unos pocos. Élite: Al Atacar: Coloca 2 cubos de facción sobre el objetivo. Al comienzo de cada una de sus activaciones, retira 1 de ellos para infligir 1 Herida."
+    abilities: "Básico: Ataque: +2 Ataque si, durante este combate, esta unidad se giró del lado de manada al lado de unos pocos. Élite: Ataque: Coloca 2 cubos de facción sobre el objetivo. Al comienzo de cada una de sus activaciones, retira 1 de ellos para infligir 1 Herida."
   }
 ];
 
@@ -2190,8 +2190,8 @@ export default function RulebookPDF() {
                 </tr>
                 <tr>
                   <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">9. Tiro con arco (Archery)</td>
-                  <td className="px-3 py-2 border border-slate-800">Continuo: Durante esta ronda de combate, tus unidades a distancia ganan +1 Ataque si el objetivo no es adyacente.</td>
-                  <td className="px-3 py-2 border border-slate-800">Continuo: Hasta el final de la siguiente ronda, tus unidades a distancia ganan +1 Iniciativa y +1 Ataque si el objetivo no es adyacente.</td>
+                  <td className="px-3 py-2 border border-slate-800">En Curso: Durante esta ronda de combate, tus unidades a distancia ganan +1 Ataque si el objetivo no es adyacente.</td>
+                  <td className="px-3 py-2 border border-slate-800">En Curso: Hasta el final de la siguiente ronda, tus unidades a distancia ganan +1 Iniciativa y +1 Ataque si el objetivo no es adyacente.</td>
                 </tr>
                 <tr>
                   <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">10. Armero (Armorer)</td>
@@ -2250,13 +2250,13 @@ export default function RulebookPDF() {
                 </tr>
                 <tr>
                   <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">21. Logística (Logistics)</td>
-                  <td className="px-3 py-2 border border-slate-800">Continuo: Al final de tu turno, mueve la miniatura de tu Héroe a una zona vacía adyacente.</td>
+                  <td className="px-3 py-2 border border-slate-800">En Curso: Al final de tu turno, mueve la miniatura de tu Héroe a una zona vacía adyacente.</td>
                   <td className="px-3 py-2 border border-slate-800">Instantáneo: Tu Héroe gana +1 Punto de Movimiento (PM) de forma inmediata.</td>
                 </tr>
                 <tr>
                   <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">22. Suerte (Luck)</td>
-                  <td className="px-3 py-2 border border-slate-800">Continuo: Puedes volver a lanzar un dado de tesoro y de recurso una vez durante este turno.</td>
-                  <td className="px-3 py-2 border border-slate-800">Continuo: Puedes volver a lanzar tantos dados como quieras una vez durante este turno.</td>
+                  <td className="px-3 py-2 border border-slate-800">En Curso: Puedes volver a lanzar un dado de tesoro y de recurso una vez durante este turno.</td>
+                  <td className="px-3 py-2 border border-slate-800">En Curso: Puedes volver a lanzar tantos dados como quieras una vez durante este turno.</td>
                 </tr>
                 <tr>
                   <td className="px-3 py-2 font-semibold text-amber-200 border border-slate-800 font-mono">23. Misticismo (Mysticism)</td>
