@@ -3,6 +3,8 @@ import { FACTION_HEROES, HeroDetails } from './heroesData';
 import { FACTION_UNITS, UNIT_DETAILS, UnitStats } from './unitsData';
 import { ALL_BOARD_GAME_SKILLS } from './skillsData';
 import { townsData, TownData } from './townsData';
+import { SPELLS_DATA } from './spellsData';
+import { LOCATIONS_DATA } from './locationsData';
 
 /**
  * Este módulo transforma las bases de datos "de UI" (heroesData, unitsData,
@@ -228,6 +230,88 @@ function buildTownsCatalogIndex(): string {
 }
 
 // ---------------------------------------------------------------------------
+// HECHIZOS
+// ---------------------------------------------------------------------------
+
+function buildSpellsKB(): RuleSection[] {
+  return SPELLS_DATA.map((spell) => {
+    const powerLevelsText = Object.entries(spell.powerLevels)
+      .map(([lvl, txt]) => `  - Nivel de Poder ${lvl}: ${txt}`)
+      .join('\n');
+
+    const content = `Escuela de Magia: ${spell.school}${spell.isAllSchools ? ' (Válido para las 4 escuelas)' : ''}
+Tipo: ${spell.type}
+Efecto: ${spell.effect.replace(/\n/g, ' ')}
+Resolución / Valor: ${spell.valueText}
+Potenciable: ${spell.isBoostable ? 'Sí' : 'No'}${spell.boosterEffect ? ` | Efecto Potenciador: ${spell.boosterEffect}` : ''}
+Efectos por Nivel de Poder:
+${powerLevelsText}
+Trasfondo: ${spell.flavorText}${spell.notes ? `\nNotas oficiales de reglas: ${spell.notes}` : ''}`;
+
+    const id = `spell-${slugify(spell.name)}`;
+    registerAliases(id, [spell.name, spell.id]);
+
+    return {
+      id,
+      title: `Hechizo: ${spell.name} (Escuela: ${spell.school}, Tipo: ${spell.type})`,
+      content,
+      category: 'magic' as const,
+    };
+  });
+}
+
+function buildSpellsCatalogIndex(): string {
+  const bySchool: Record<string, string[]> = {};
+  SPELLS_DATA.forEach((s) => {
+    const schoolKey = s.school;
+    if (!bySchool[schoolKey]) bySchool[schoolKey] = [];
+    bySchool[schoolKey].push(`${s.name} (${s.type})`);
+  });
+
+  return Object.entries(bySchool)
+    .map(([school, spells]) => `- Escuela de ${school}: ${spells.join(', ')}`)
+    .join('\n');
+}
+
+// ---------------------------------------------------------------------------
+// LUGARES DEL MAPA
+// ---------------------------------------------------------------------------
+
+function buildLocationsKB(): RuleSection[] {
+  return LOCATIONS_DATA.map((loc) => {
+    const content = `Tipo de lugar: ${loc.type}
+Zonas donde aparece: ${loc.zones.join(', ')}
+Efecto: ${loc.effect}
+Reglas y notas: ${loc.rulesNotes}`;
+
+    const id = `location-${slugify(loc.name)}`;
+    const cleanName = loc.name.replace(/\s*\([^)]*\)\s*$/, '').trim();
+    const englishName = loc.name.match(/\(([^)]+)\)/)?.[1]?.trim();
+    registerAliases(id, [loc.name, cleanName, englishName, loc.id]);
+
+    return {
+      id,
+      title: `Lugar del mapa: ${loc.name} (${loc.type})`,
+      content,
+      category: 'map' as const,
+    };
+  });
+}
+
+function buildLocationsCatalogIndex(): string {
+  const byType: Record<string, string[]> = {};
+  LOCATIONS_DATA.forEach((loc) => {
+    const typeKey = loc.type;
+    if (!byType[typeKey]) byType[typeKey] = [];
+    byType[typeKey].push(loc.name);
+  });
+
+  return Object.entries(byType)
+    .map(([type, locs]) => `- ${type}: ${locs.join(', ')}`)
+    .join('\n');
+}
+
+// ---------------------------------------------------------------------------
 // EXPORTS
 // ---------------------------------------------------------------------------
 
@@ -235,9 +319,18 @@ export const heroesKB = buildHeroesKB();
 export const unitsKB = buildUnitsKB();
 export const skillsKB = buildSkillsKB();
 export const townsKB = buildTownsKB();
+export const spellsKB = buildSpellsKB();
+export const locationsKB = buildLocationsKB();
 
 /** Todas las secciones "extra" (no-reglas) disponibles, para búsqueda por palabra clave. */
-export const extraEntitySections: RuleSection[] = [...heroesKB, ...unitsKB, ...skillsKB, ...townsKB];
+export const extraEntitySections: RuleSection[] = [
+  ...heroesKB,
+  ...unitsKB,
+  ...skillsKB,
+  ...townsKB,
+  ...spellsKB,
+  ...locationsKB,
+];
 
 /**
  * Catálogo compacto (solo nombres) de todo lo indexado. Se incluye SIEMPRE
@@ -254,7 +347,13 @@ ${buildUnitsCatalogIndex()}
 ${buildSkillsCatalogIndex()}
 
 === ÍNDICE DE CIUDADES ===
-${buildTownsCatalogIndex()}`;
+${buildTownsCatalogIndex()}
+
+=== ÍNDICE DE HECHIZOS POR ESCUELA DE MAGIA ===
+${buildSpellsCatalogIndex()}
+
+=== ÍNDICE DE LUGARES DEL MAPA POR TIPO ===
+${buildLocationsCatalogIndex()}`;
 
 /**
  * Devuelve las secciones detalladas (héroes/unidades/habilidades/ciudades)

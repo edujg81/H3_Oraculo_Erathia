@@ -62,7 +62,7 @@ export const SPELLS_DATA: LocalSpellCard[] = [
       "2": "* Bronce o Plata u Oro."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
-    "flavorText": "Un hechizo místico de la Escuela de Aire codificado en los sagrados pergaminos de Erathia.",
+    "flavorText": "Un hechizo místico de la Escuela de Tierra codificado en los sagrados pergaminos de Erathia.",
     "notes": "Sigue las reglas generales de lanzamiento descritas en el manual oficial.",
     "colorTheme": {
       "bg": "from-cyan-950/40 to-slate-900/80",
@@ -110,14 +110,14 @@ export const SPELLS_DATA: LocalSpellCard[] = [
       "4": "* Bronce o Plata u Oro."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
-    "flavorText": "Un hechizo místico de la Escuela de Tierra codificado en los sagrados pergaminos de Erathia.",
+    "flavorText": "Un hechizo místico de la Escuela de Aire codificado en los sagrados pergaminos de Erathia.",
     "notes": "Sigue las reglas generales de lanzamiento descritas en el manual oficial.",
     "colorTheme": {
-      "bg": "from-emerald-950/40 to-slate-900/80",
-      "border": "border-emerald-800/50",
-      "glow": "shadow-[0_0_15px_rgba(16,185,129,0.1)]",
-      "text": "text-emerald-400",
-      "accent": "bg-emerald-500/10 text-emerald-300 border-emerald-500/30"
+      "bg": "from-cyan-950/40 to-slate-900/80",
+      "border": "border-cyan-800/50",
+      "glow": "shadow-[0_0_15px_rgba(6,182,212,0.1)]",
+      "text": "text-cyan-400",
+      "accent": "bg-cyan-500/10 text-cyan-300 border-cyan-500/30"
     }
   },
   {
@@ -158,14 +158,14 @@ export const SPELLS_DATA: LocalSpellCard[] = [
       "2": "* Bronce o Plata u Oro."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
-    "flavorText": "Un hechizo místico de la Escuela de Tierra codificado en los sagrados pergaminos de Erathia.",
+    "flavorText": "Un hechizo místico de la Escuela de Aire codificado en los sagrados pergaminos de Erathia.",
     "notes": "Sigue las reglas generales de lanzamiento descritas en el manual oficial.",
     "colorTheme": {
-      "bg": "from-emerald-950/40 to-slate-900/80",
-      "border": "border-emerald-800/50",
-      "glow": "shadow-[0_0_15px_rgba(16,185,129,0.1)]",
-      "text": "text-emerald-400",
-      "accent": "bg-emerald-500/10 text-emerald-300 border-emerald-500/30"
+      "bg": "from-cyan-950/40 to-slate-900/80",
+      "border": "border-cyan-800/50",
+      "glow": "shadow-[0_0_15px_rgba(6,182,212,0.1)]",
+      "text": "text-cyan-400",
+      "accent": "bg-cyan-500/10 text-cyan-300 border-cyan-500/30"
     }
   },
   {
@@ -198,7 +198,7 @@ export const SPELLS_DATA: LocalSpellCard[] = [
     "school": "Aire",
     "type": "Básica",
     "effect": "Instantáneo: Vuelve a lanzar un dado de tesoro, recurso o ataque *.\nResuelve el resultado de tu elección.",
-    "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Tierra).",
+    "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Aire).",
     "isBoostable": true,
     "powerLevels": {
       "0": "* 1 vez.",
@@ -206,14 +206,14 @@ export const SPELLS_DATA: LocalSpellCard[] = [
       "2": "* 3 veces."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
-    "flavorText": "Un hechizo místico de la Escuela de Tierra codificado en los sagrados pergaminos de Erathia.",
+    "flavorText": "Un hechizo místico de la Escuela de Aire codificado en los sagrados pergaminos de Erathia.",
     "notes": "Esta carta debe jugarse antes de lanzar el dado. No puede jugarse después de haber tirado el dado y de conocer el resultado de la tirada.",
     "colorTheme": {
-      "bg": "from-emerald-950/40 to-slate-900/80",
-      "border": "border-emerald-800/50",
-      "glow": "shadow-[0_0_15px_rgba(16,185,129,0.1)]",
-      "text": "text-emerald-400",
-      "accent": "bg-emerald-500/10 text-emerald-300 border-emerald-500/30"
+      "bg": "from-cyan-950/40 to-slate-900/80",
+      "border": "border-cyan-800/50",
+      "glow": "shadow-[0_0_15px_rgba(6,182,212,0.1)]",
+      "text": "text-cyan-400",
+      "accent": "bg-cyan-500/10 text-cyan-300 border-cyan-500/30"
     }
   },
   {
@@ -266,19 +266,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "blind",
-    "name": "Cegar (Blind)",
+    "name": "Ceguera",
     "school": "Fuego",
     "type": "Básica",
-    "effect": "Ciega a la unidad enemiga, impidiendo que actúe o contraataque hasta que sea atacada.",
+    "effect": "Activación: Coloca una ficha de Parálisis en la unidad seleccionada *.",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Fuego).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "* Bronce.",
+      "1": "* Bronce o Plata.",
+      "2": "* Bronce o Plata u Oro."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Luz cegadora que sume a la unidad en una oscuridad absoluta, dejándola indefensa.",
@@ -293,19 +290,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "bloodlust",
-    "name": "Ansia de sangre (Bloodlust)",
+    "name": "Ansia de sangre",
     "school": "Fuego",
     "type": "Básica",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
+    "effect": "Instantáneo: La unidad Terrestre o Voladora seleccionada gana:",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Fuego).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "+1 Ataque.",
+      "1": "+2 Ataque.",
+      "2": "+3 Ataque."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Un hechizo místico de la Escuela de Fuego codificado en los sagrados pergaminos de Erathia.",
@@ -370,19 +364,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "curse",
-    "name": "Maldición (Curse)",
+    "name": "Maldición",
     "school": "Fuego",
     "type": "Básica",
-    "effect": "Reduce el daño físico de la unidad enemiga al mínimo.",
+    "effect": "Instantáneo: La unidad seleccionada sufre (hasta un mínimo de 0):",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Fuego).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "-1 Defensa.",
+      "1": "-2 Defensa.",
+      "2": "-3 Defensa."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Nubes de infortunio envuelven al enemigo, haciendo que sus ataques sean débiles y erráticos.",
@@ -422,19 +413,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "fire_shield",
-    "name": "Escudo de fuego (Fire Shield)",
+    "name": "Escudo de fuego",
     "school": "Fuego",
     "type": "Avanzada",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
+    "effect": "En Curso: Cuando la unidad objetivo sufra un ataque de una unidad adyacente durante esta ronda de combate, la unidad atacante recibe:",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Fuego).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "1 Herida.",
+      "2": "2 Heridas.",
+      "4": "3 Heridas."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Un hechizo místico de la Escuela de Fuego codificado en los sagrados pergaminos de Erathia.",
@@ -449,19 +437,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "fire_wall",
-    "name": "Muro de fuego (Fire Wall)",
+    "name": "Muro de fuego",
     "school": "Fuego",
     "type": "Básica",
-    "effect": "Crea una barrera de fuego en la reja de batalla que daña a quienes la comiencen o crucen.",
+    "effect": "En Curso: Durante este combate, coloca esta carta en un espacio vacío del tablero de combate. Inflige * a cualquier unidad que se detenga aquí y a cualquier unidad Melé o a Distancia que pase por aquí.",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Fuego).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "* 1 Herida.",
+      "2": "* 2 Heridas.",
+      "4": "* 3 Heridas."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Un hechizo místico de la Escuela de Fuego codificado en los sagrados pergaminos de Erathia.",
@@ -476,19 +461,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "fireball",
-    "name": "Bola de fuego (Fireball)",
+    "name": "Bola de fuego",
     "school": "Fuego",
     "type": "Avanzada",
-    "effect": "Lanza una bola de fuego explosiva que daña a todas las unidades en un área de efecto.",
+    "effect": "Activación: Selecciona 2 espacios adyacentes. Inflige * Heridas a las unidades en estos espacios.",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Fuego).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "* 1 Herida.",
+      "2": "* 2 Heridas.",
+      "4": "* 3 Heridas."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Una esfera de fuego abrasador explota al impactar, quemando múltiples regimientos.",
@@ -575,19 +557,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "frenzy",
-    "name": "Frenesí (Frenzy)",
+    "name": "Frenesí",
     "school": "Fuego",
     "type": "Avanzada",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
+    "effect": "Instantáneo: Esta unidad ignora la Defensa de la unidad * atacada.",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Fuego).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "* Bronce.",
+      "2": "* Bronce o Plata.",
+      "4": "* Bronce o Plata u Oro."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Un hechizo místico de la Escuela de Fuego codificado en los sagrados pergaminos de Erathia.",
@@ -674,19 +653,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "inferno",
-    "name": "Infierno (Inferno)",
+    "name": "Inferno",
     "school": "Fuego",
     "type": "Avanzada",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
+    "effect": "Activación: Selecciona un espacio. Ahora lanza un dado de ataque *. Todas las unidades en este espacio y espacios adyacentes sufren 1 Herida por cada +1 que hayas sacado.",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Fuego).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "* 1 vez.",
+      "1": "* 2 veces.",
+      "2": "* 4 veces."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Un hechizo místico de la Escuela de Fuego codificado en los sagrados pergaminos de Erathia.",
@@ -822,19 +798,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "misfortune",
-    "name": "Infortunio (Misfortune)",
+    "name": "Infortunio",
     "school": "Fuego",
     "type": "Básica",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
+    "effect": "Instantáneo: Se activa inmediatamente cuando la * unidad enemiga seleccionada está atacando. Anula un resultado del dado de ataque o un Ataque adicional de cualquier carta.",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Fuego).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "* Bronce.",
+      "1": "* Bronce o Plata.",
+      "2": "* Bronce o Plata u Oro."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Un hechizo místico de la Escuela de Fuego codificado en los sagrados pergaminos de Erathia.",
@@ -861,14 +834,14 @@ export const SPELLS_DATA: LocalSpellCard[] = [
       "4": "* +3."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
-    "flavorText": "Un hechizo místico de la Escuela de Tierra codificado en los sagrados pergaminos de Erathia.",
+    "flavorText": "Un hechizo místico de la Escuela de Agua codificado en los sagrados pergaminos de Erathia.",
     "notes": "La oración solo aumenta uno de los tres valores, el lanzador puede elegir cuál. La oración se puede lanzar en cualquier momento durante el combate como un instante .De esta manera, un jugador puede aumentar la iniciativa de una unidad fuera de su turno, lo que hace que la orden de giro se ajuste de inmediato.",
     "colorTheme": {
-      "bg": "from-emerald-950/40 to-slate-900/80",
-      "border": "border-emerald-800/50",
-      "glow": "shadow-[0_0_15px_rgba(16,185,129,0.1)]",
-      "text": "text-emerald-400",
-      "accent": "bg-emerald-500/10 text-emerald-300 border-emerald-500/30"
+      "bg": "from-sky-950/40 to-slate-900/80",
+      "border": "border-sky-800/50",
+      "glow": "shadow-[0_0_15px_rgba(14,165,233,0.1)]",
+      "text": "text-sky-400",
+      "accent": "bg-sky-500/10 text-sky-300 border-sky-500/30"
     }
   },
   {
@@ -1014,10 +987,10 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   {
     "id": "remove_obstacle",
     "name": "Retirar obstáculo",
-    "school": "Tierra",
+    "school": "Agua",
     "type": "Básica",
     "effect": "Instantáneo: Retira * obstáculos (excepto unidades) del tablero de combate.",
-    "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Tierra).",
+    "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Agua).",
     "isBoostable": true,
     "powerLevels": {
       "0": "* 1.",
@@ -1109,19 +1082,16 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "slayer",
-    "name": "Asesino (Slayer)",
+    "name": "Matagigantes",
     "school": "Fuego",
     "type": "Avanzada",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
+    "effect": "Instantáneo: Cuando ataques a una unidad Oro, lanza un dado de ataque * y aplica todos los resultados (excepto un -1). Después de resolver este Ataque, roba 1 carta.",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Fuego).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "* 2 veces.",
+      "2": "* 4 veces.",
+      "4": "* 6 veces."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
     "flavorText": "Un hechizo místico de la Escuela de Fuego codificado en los sagrados pergaminos de Erathia.",
@@ -1400,29 +1370,26 @@ export const SPELLS_DATA: LocalSpellCard[] = [
   },
   {
     "id": "visions",
-    "name": "Visiones (Visions)",
+    "name": "Visiones",
     "school": "Fuego",
     "type": "Básica",
-    "effect": "Aplica efectos tácticos o estratégicos en la ronda de combate o mapa de aventura según el reglamento oficial.",
+    "effect": "Instantáneo: Roba * de cualquier mazo de unidades neutrales. Descarta las que quieras y después devuelve el resto de cartas al mazo en cualquier orden.",
     "valueText": "Resolución del hechizo según el nivel de Poder acumulado (Fuego).",
-    "isBoostable": false,
+    "isBoostable": true,
     "powerLevels": {
-      "0": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "1": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "2": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "3": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "4": "Efecto estático: Este hechizo no aumenta con Poder.",
-      "5": "Efecto estático: Este hechizo no aumenta con Poder."
+      "0": "* 1 carta.",
+      "1": "* 2 cartas.",
+      "2": "* 3 cartas."
     },
     "boosterEffect": "Instantáneo: +1 Poder",
-    "flavorText": "Un hechizo místico de la Escuela de Aire codificado en los sagrados pergaminos de Erathia.",
+    "flavorText": "Un hechizo místico de la Escuela de Fuego codificado en los sagrados pergaminos de Erathia.",
     "notes": "Sigue las reglas generales de lanzamiento descritas en el manual oficial.",
     "colorTheme": {
-      "bg": "from-cyan-950/40 to-slate-900/80",
-      "border": "border-cyan-800/50",
-      "glow": "shadow-[0_0_15px_rgba(6,182,212,0.1)]",
-      "text": "text-cyan-400",
-      "accent": "bg-cyan-500/10 text-cyan-300 border-cyan-500/30"
+      "bg": "from-red-950/40 to-slate-900/80",
+      "border": "border-red-800/50",
+      "glow": "shadow-[0_0_15px_rgba(239,68,68,0.1)]",
+      "text": "text-red-400",
+      "accent": "bg-red-500/10 text-red-300 border-red-500/30"
     }
   },
   {
