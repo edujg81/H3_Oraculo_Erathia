@@ -18,6 +18,7 @@ import { RuleSection } from '../types';
  * 13. Expansión Conflujo y Libro de Misiones (HoMM-Conflux-Mission-Book_ESP.pdf, v1.0 ESP)
  * 14. Expansión Cala y Libro de Misiones (HoMM-Cove-Mission-Book_ESP.pdf, v1.0 ESP)
  * 15. Contenido Adicional / Metas Ampliadas 2 (HoMM-SG2-Mission-Book_ESP.pdf, v1.0 ESP)
+ * 16. Expansión Batallas Navales y Libro de Misiones (HoMM-Naval-Battles-Mission-Book_ESP.pdf, v1.0 ESP)
  *
  * Compendio completo e indexado de reglas, componentes, mecánicas, construcciones,
  * modos de juego y campañas oficiales en español de España.
@@ -2284,10 +2285,109 @@ MISIÓN 3: CUSTODIOS DE LOS PESARES (13 Rondas):
 
 3. Ciudad Aleatoria (Señalizable):
    - Al descubrirse, se asigna a una facción no jugada. Genera +10 Oro al capturarse y +10 Oro pasivo por ronda. Se asedia sin utilizar la carta de Torre de Arqueros.`
+  },
+
+  // =========================================================================
+  // EXPANSIÓN BATALLAS NAVALES Y LIBRO DE MISIONES (NAVAL BATTLES)
+  // =========================================================================
+  {
+    id: "batallas-navales-01-combate-naval-y-habilidades-potenciadas",
+    title: "Batallas Navales 1. Combate Naval en Neopreno y Sistema de Cartas/Fichas de Habilidad Potenciada",
+    category: "components",
+    content: `NUEVO CONTENIDO Y MECÁNICAS DE LA EXPANSIÓN BATALLAS NAVALES (NAVAL BATTLES):
+
+TABLEROS DE COMBATE DE NEOPRENO Y COMBATE NAVAL:
+• Tablero Doble Cara: Incluye un tablero de combate estándar por una cara y el tablero especial de Combate Naval por la otra.
+• Reglas Especiales del Tablero Naval:
+  - Espacios Centrales Eliminados: Las dos casillas centrales del tablero no existen.
+  - Unidades Terrestres (<Ground>): Tienen prohibido atravesar las casillas centrales eliminadas; deben bordear el tablero obligatoriamente por el flanco izquierdo o derecho.
+  - Unidades Voladoras (<Flying>): Pueden volar sobre las casillas eliminadas como si existieran, pero NO pueden finalizar su movimiento sobre ellas ni abandonar los límites del tablero.
+
+SISTEMA DE HABILIDADES POTENCIADAS (CARTAS Y FICHAS):
+• Ficha de Habilidad Potenciada: Se puede obtener como recompensa en ciertos lugares o eventos. Se coloca en la carta de héroe hasta usarse.
+• Uso de la Ficha: En el momento en que obtienes una nueva carta de habilidad (al subir de nivel o por Búsqueda), puedes descartar una ficha de habilidad potenciada para tomar la carta equivalente del Mazo de Habilidades Potenciadas en lugar de la carta estándar.
+• Características de las Cartas Potenciadas:
+  - Poseen un único efecto mejorado directo que NO requiere gastar el símbolo de Experto (<Expert>).
+  - Exclusividad: Solo existe 1 copia de cada habilidad potenciada en el mazo. Si un jugador la toma, impide que los rivales obtengan esa misma versión.
+  - Cartas Específicas de Facción: Si robas una habilidad con símbolo de facción (ej. Necrópolis) que tu facción no puede usar, puedes revelarla, descartarla y robar otra en su lugar.`
+  },
+  {
+    id: "batallas-navales-02-bancos-de-criaturas-mecanica-y-catalogo",
+    title: "Batallas Navales 2. Bancos de Criaturas: Reglas de Despliegue, Fichas de Pila y Catálogo Completo (Barco Abandonado, Pirámide, Utopía del Dragón, etc.)",
+    category: "components",
+    content: `MECÁNICA Y CATÁLOGO COMPLETO DE BANCOS DE CRIATURAS:
+
+MECÁNICA DE BANCOS DE CRIATURAS Y FICHAS DE PILA:
+• Reemplazo de Casillas Bloqueadas: Al descubrir una loseta cercana (IV-V) o lejana (II-III), puedes sustituir una de sus casillas bloqueadas con una Ficha de Banco de Criaturas del montón correspondiente.
+• Preparación del Combate: Despliega hasta 5 unidades aliadas en la zona verde vs 4 unidades neutrales prefijadas del banco en la zona roja.
+• Dificultad y Fichas de Pila (Stack Tokens): Según la dificultad de la partida, asigna fichas de pila al azar a las tropas neutrales (Fácil: 1, Normal: 2, Difícil: 3, Imposible: 4).
+  - Modificadores de Ficha de Pila: Otorgan +1 Ataque, +1 Defensa, +1 PS o +2 Iniciativa a la unidad afectada.
+  - Mecánica de Daño Apilado: Funciona similar a reforzar tropas. Al recibir daño igual a sus PS máximos, pierde 1 ficha de pila y limpia todo el daño acumulado antes de aplicar el daño sobrante.
+  - Sin Límite de Rondas: No hay combate rápido, no cuesta PM alargar el combate ni se gana Experiencia (EXP), pero otorga botines masivos de recursos y bonus extra por cada unidad apilada derrotada.
+
+CATÁLOGO COMPLETO DE LOS 12 BANCOS DE CRIATURAS:
+1. Barco Abandonado: 4 Elementales de Agua. Recompensa: Moral Negativa + 7 Oro. Extra: +2 Oro por unidad apilada y Busca X en hechizos.
+2. Pirámide: 2 Gólems de Oro, 2 Gólems de Diamante. Recompensa: Busca (5) en hechizos. Extra: Por cada manada, retira 1 carta de mano/descarte y busca (5) en esa baraja.
+3. Naufragio: 4 Espectros. Recompensa: Moral Negativa + 5 Oro. Extra: +2 Oro por unidad apilada y Busca X en artefactos.
+4. Colmena de Libélulas: 4 Libélulas. Recompensa: 1 unidad Libélula (si había >=2 apiladas, ganas Libélulas apiladas).
+5. Depósitos de Medusas: 4 Medusas. Recompensa: 6 Oro + 1 Objeto de Valor. Extra: +3 Oro o +1 Objeto de Valor por unidad apilada.
+6. Tesorería Enana: 4 Enanos. Recompensa: 7 Oro. Extra: +3 Oro por unidad apilada.
+7. Conservatorio de Grifos: 4 Grifos. Recompensa: 1 unidad Grifos (si >=2 apiladas, Grifos apilados).
+8. Banco de Nagas: 4 Nagas. Recompensa: 6 Oro + 2 Objetos de Valor. Extra: +6 Oro + 1 Objeto de Valor por unidad apilada.
+9. Cripta: 1 Esqueleto, 1 Zombi, 1 Espectro, 1 Vampiro. Recompensa: 6 Oro. Extra: +2 Oro por unidad apilada.
+10. Tesoro de los Diablillos: 4 Familiares. Recompensa: 3 Oro. Extra: +1 Oro por unidad apilada.
+11. Reservas del Cíclope: 4 Cíclopes. Recompensa: 8 Materiales + 2 Objetos de Valor. Extra: +2 Materiales + 1 Objeto de Valor por unidad apilada.
+12. Utopía del Dragón: 1 Dragón Negro, 1 Dragón Dorado, 1 Dragón de Cristal, 1 Dragón Hada. Recompensa: 40 Oro + Busca (3) en artefactos. Extra: Busca (5) en artefactos o hechizos por cada unidad apilada.`
+  },
+  {
+    id: "batallas-navales-03-escenarios-oficiales-y-modo-solitario",
+    title: "Batallas Navales 3. Escenarios Oficiales: 'Invasión Bárbara' (Cooperativo), 'El Pantano de Tentáculos de Gorlam' (Enfrentamiento) e 'Isla de Fuego' (Solitario)",
+    category: "modes",
+    content: `ESCENARIOS OFICIALES DE LA EXPANSIÓN BATALLAS NAVALES:
+
+1. INVASIÓN BÁRBARA (Modo Cooperativo 2-4 Jugadores, Duración: 11 Rondas):
+   - Ciudad Enemiga Central: Ocupada por Bastión (3 manadas Bronce + 2 pocas Oro). Bloqueada hasta descubrir todas las cercanas y visitar todos los obeliscos.
+   - Obelisco: Otorga 1 Ficha de Habilidad Potenciada al visitarlo.
+   - Victoria: Que un héroe de CADA facción jugadora entre en la Ciudad Enemiga, gane el combate y coloque su cubo de facción.
+
+2. EL PANTANO DE TENTÁCULOS DE GORLAM (Modo Enfrentamiento 2j, Duración: 14 Rondas):
+   - Bancos de Criaturas: Vencer un combate en cualquier banco de criaturas otorga 1 Ficha de Habilidad Potenciada adicional.
+   - Inundación de Borde (Rondas 4, 5, 6, 10, 11, 12): Las minas en bordes del mapa no generan ingresos y cualquier combate iniciado en bordes se resuelve obligatoriamente con el tablero de Combate Naval.
+   - Victoria: Al final de una ronda, controlar 6 o más minas simultáneamente.
+
+3. ISLA DE FUEGO (Modo Solitario 1 Jugador vs Diablo Memphos, Duración: 16 Rondas):
+   - Generación Forzada de Bancos: Al descubrir losetas se asignan bancos específicos (Lejana -> Tesoro Diablillos; Cercana 1 -> Conservatorio Grifos; Cercana 2 -> Banco Nagas; Cercana 3 -> Pirámide; Cercana 4 -> Utopía del Dragón).
+   - Ganar en banco de criaturas concede 1 Ficha de Habilidad Potenciada.
+   - Integración Narrativa: Los lugares activan párrafos del Libro de Misiones (§1 - §29).
+   - Victoria: Ganar un combate en TODOS los bancos de criaturas del mapa.`
+  },
+  {
+    id: "batallas-navales-04-lugares-historia-y-parrafos-narrativos",
+    title: "Batallas Navales 4. Sistema de Párrafos Narrativos e Interacciones (§1 al §29) para el Modo Solitario",
+    category: "modes",
+    content: `SISTEMA DE PÁRRAFOS NARRATIVOS DEL MODO SOLITARIO (§1 - §29):
+
+INSTRUCCIONES DE ACCESO POR LUGAR DEL MAPA:
+• Molino de Agua: Primera visita lee §1.
+• Cabaña de la Bruja: Primera visita lee §2; segunda visita lee §13; visita con ficha de defensa lee §23.
+• Mercadillo: Primera visita lee §3; visita con palabra clave 'Trabajo' lee §8.
+• Jardín Místico (Loseta F5): Primera visita lee §4.
+
+RESUMEN DE RRAMAS NARRATIVAS Y PALABRAS CLAVE:
+- Molino (§1, §14, §27): Ayudar a reparar la rueda cuesta 2 Materiales y otorga Búsqueda (3) en artefactos; rechazar genera Moral Negativa.
+- Misión de las Brujas (§2, §5, §7, §9, §11, §13, §16, §18, §19, §21, §23, §26, §29):
+  * Aceptar ayudar a la Vieja Bruja registra 'Pacto' (§7).
+  * Matar a la Joven Bruja genera 'Crimen' (§5). Entregar la cabeza a la Vieja Bruja concede 2 Morales Negativas y Búsqueda (3) en hechizos 3 veces (§9).
+  * Escuchar a la Joven Bruja (§21) permite aliarse con ella contra la Vieja Bruja registrando 'Verruga' (§29) para un ataque conjunto con Moral Positiva y Búsqueda (5) de hechizos (§19).
+- Apuesta y Trabajo del Mercadillo (§3, §6, §8, §12, §15, §17, §22, §25):
+  * Aceptar el 'Trabajo' (§17) concede un artefacto y te exige llevarlo a otro mercadillo (§8) para cobrar 10 Oro.
+  * Juego de Dados (§12): Apuestas de Oro con tiradas de dado de ataque (-1, 0, +1) con premios de Objetos de Valor o pérdidas de Oro.
+- Encuentro con el Duende (§4, §10, §20, §24, §28): Pedir la olla de oro conduce a intentos de robo (-5 Oro o toda la bolsa en §28) o intimidación exitosa (+10 Oro en §10).`
   }
 ];
 
 export const rulesKB = reglasCombinadas;
+
 
 
 
