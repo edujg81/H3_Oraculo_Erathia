@@ -13,6 +13,11 @@ import { RuleSection } from '../types';
  * 8. Respuesta Astrológica - FAQ y Comentarios de Diseñadores (HoMM-Designer's-Commentary_ESP.pdf, v1.0 ESP)
  * 9. Libro de Misiones del Juego Base (HoMM-Mission-Book_ESP.pdf, v1.0 ESP)
  * 10. Suplemento del Reglamento / Escenario Introductorio (HoMM-Rulebook Supplement-WEB_ESP.pdf, v1.0 ESP)
+ * 11. Manual de Reglas Reescrito (Heroes3_Espanol_Rules_Rewrite_1_3.pdf, v1.3 ESP)
+ * 12. Expansión Bastión y Libro de Misiones (HoMM-Stronghold-Mission-Book_ESP.pdf, v1.0 ESP)
+ * 13. Expansión Conflujo y Libro de Misiones (HoMM-Conflux-Mission-Book_ESP.pdf, v1.0 ESP)
+ * 14. Expansión Cala y Libro de Misiones (HoMM-Cove-Mission-Book_ESP.pdf, v1.0 ESP)
+ * 15. Contenido Adicional / Metas Ampliadas 2 (HoMM-SG2-Mission-Book_ESP.pdf, v1.0 ESP)
  *
  * Compendio completo e indexado de reglas, componentes, mecánicas, construcciones,
  * modos de juego y campañas oficiales en español de España.
@@ -1639,10 +1644,652 @@ LISTA Y EFECTOS DE UBICACIONES DEL MAPA:
 15. Molino (Visitable): Otorga +1 Objeto de Valor.
 16. Santuario (Revisitable): Zona de paz. Los héroes no pueden ser atacados mientras permanezcan en este campo.
 17. Establos (Revisitable): Otorga +1 PM adicional válido únicamente durante el turno actual.`
+  },
+
+  // =========================================================================
+  // MANUAL DE REGLAS REESCRITO V1.3 (HERMANNI "HEEGU" KARPPELA)
+  // =========================================================================
+  {
+    id: "reescritura-01-principios-y-prioridades",
+    title: "Reescritura 1. Prioridad Oficial de Componentes, Jerarquía de Reglas y Preparación Unificada",
+    category: "general",
+    content: `PRINCIPIOS Y JERARQUÍA DE REGLAS DE LA REESCRITURA OFICIAL (v1.3):
+
+ORDEN DE PRIORIDAD EN CASO DE CONFLICTO:
+Si se produce una contradicción entre componentes o textos de regla, la prioridad es estricta:
+1. Cartas de Jugador (Cartas en mano o jugadas)
+2. Cartas de Unidad (Habilidades impresas en las cartas de tropa)
+3. Tableros de Ciudad (Reglas específicas de cada bastión)
+4. Libro de Misiones (Condiciones y reglas de escenario)
+5. Libro de Reglas General (El reglamento impreso / reescrito)
+
+PRINCIPIOS GENERALES Y GLOSARIO UNIFICADO:
+• Mayúsculas y Términos Técnicos: Los componentes, tipos de cartas y estados del juego comienzan siempre con mayúscula para diferenciarse del texto narrativo.
+• Prioridad de Cartas Activas: Cualquier efecto temporal 'En Curso' (Ongoing) o 'Permanente' prevalece sobre la regla básica mientras permanezca en juego.
+• Unicidad de Cartas Permanentes: Solo se permite tener 1 carta Permanente activa a la vez por jugador. Jugar una nueva carta Permanente exige descartar la anterior.
+
+PREPARACIÓN UNIFICADA DE PARTIDA (22 PASOS):
+1. Seleccionar Escenario del Libro de Misiones (ej. 'Un Mundo Feliz').
+2. Escoger Facción e identificar Héroe Principal.
+3. Tomar componentes de facción (Carta de Héroe, 2 Figuras, 7 Losetas de Edificio, Tablero de Ciudad, 7 Cartas de Unidad, 3 Especialidades, 1 Habilidad Inicial, 20 Cubos de Facción, Fichas de Construcción, Población, Libro de Hechizos y 3 Fichas de PM).
+4. Colocar 1 Cubo de Facción en Nivel 1 del registro del héroe.
+5. Colocar Losetas de Mapa según el diagrama del escenario.
+6. Ajustar ingresos iniciales con Cubos de Facción en el Tablero de Ciudad y tomar la reserva inicial de recursos.
+7. Construir Mazo Inicial de Fuerza y Magia (9 cartas): Características según la Carta de Héroe + Habilidad Inicial + Especialidad Nivel 1 + 1 Flecha Mágica (si es Héroe de Fuerza) o 2 Flechas Mágicas (si es Héroe de Magia).
+8. Crear Mazos Generales de Habilidades, Artefactos y Hechizos con sus respectivas Pilas de Descarte visibles.
+9. Definir Dificultad del Escenario y cobrar el bonus inicial correspondiente.
+10. Determinar Jugador Inicial: Lanza 2 dados de recurso. El jugador inicial NUNCA cambia durante la partida.`
+  },
+  {
+    id: "reescritura-02-heroes-mazo-experiencia",
+    title: "Reescritura 2. Lógica Integrada de Héroes (Principal y Secundario), Subida de Nivel y Gestión de Mazo",
+    category: "general",
+    content: `REGLAS UNIFICADAS DE HÉROES, EXPERIENCIA Y CONSTRUCCIÓN DE MAZO:
+
+HÉROE PRINCIPAL VS HÉROE SECUNDARIO:
+1. Héroe Principal:
+   - Representado por figura, Carta de Héroe y Mazo de Fuerza y Magia.
+   - Dispone de 3 Puntos de Movimiento (PM) por turno.
+   - Gana Experiencia (EXP) y sube del Nivel 1 al 7. Es el único que utiliza el Mazo.
+2. Héroe Secundario:
+   - Requiere Ficha de Población + 10 de Oro. Aparece en una Ciudad o Asentamiento controlado.
+   - Dispone de 2 Puntos de Movimiento (PM) por turno (2 fichas de movimiento dedicadas).
+   - NO tiene Carta de Héroe, NO gana Experiencia y NO puede jugar cartas del Mazo.
+   - Comparte el mismo Nivel que el Héroe Principal a efectos de resolver Combates Rápidos.
+   - Si es atacado por un héroe enemigo, el jugador puede decidir su derrota instantánea para no arriesgar sus unidades. Si cae derrotado, es eliminado y puede reclutarse de nuevo con la Ficha de Población.
+
+EFECTOS DETALLADOS POR SUBIDA DE NIVEL:
+• Nivel 1: Límite de Mano = 4. Añade la 1ª Carta de Especialidad al Mazo.
+• Nivel 2: Búsqueda (2) en Mazo de Habilidades. Permite usar 1 Efecto Experto (Corona) por ronda.
+• Nivel 3: Límite de Mano = 5. Búsqueda (2) en Mazo de Habilidades.
+• Nivel 4: Gana la 2ª Carta de Especialidad. Permite usar 2 Efectos Expertos por ronda.
+• Nivel 5: Límite de Mano = 6. Búsqueda (2) en Mazo de Habilidades.
+• Nivel 6: Gana la 3ª Carta de Especialidad. Permite usar 3 Efectos Expertos por ronda.
+• Nivel 7: Límite de Mano = 7. Búsqueda (2) en Mazo de Habilidades.
+
+GESTIÓN DEL MAZO DE FUERZA Y MAGIA:
+• Cartas Ganadas: Cualquier carta de habilidad, hechizo o artefacto ganada se añade DIRECTAMENTE a la mano.
+• Búsqueda (X): Mirar las X cartas superiores de un mazo, elegir 1 y descartar las demás, O BASTA con coger la carta visible de la Pila de Descartes.
+• Barajar Descarte: Cuando debas robar y tu mazo esté vacío, baraja la pila de descartes para formar el nuevo mazo.`
+  },
+  {
+    id: "reescritura-03-combate-ia-y-asedio",
+    title: "Reescritura 3. Combate Táctico Integrado, Algoritmo de la IA y Reglas de Asedio y Cobertura",
+    category: "combat",
+    content: `REGLAS COMPLETA DE COMBATE TÁCTICO, IA AUTOMATIZADA Y ASEDIO URBANO:
+
+DESPLIEGUE Y ESTRUCTURA DE COMBATE:
+• Tablero 4×5 con 2 líneas de Retaguardia, 2 de Vanguardia/Frente y 1 Fila Central.
+• Límite de Tropas: Máximo 5 cartas de unidad desplegadas por combate.
+• Orden de Activación por Iniciativa: Las unidades se activan en orden decreciente de Iniciativa. En empates, se alterna empezando por el jugador atacante.
+
+PENALIZACIONES Y MOVIMIENTO DE UNIDADES:
+• Terrestres (Ground): Mueven hasta 3 casillas ortogonales y atacan objetivos adyacentes. Bloqueadas por obstáculos o tropas.
+• Voladoras (Flying): Mueven hasta 3 casillas ignorando obstáculos y atacan adyacente.
+• A Distancia (Ranged): Disparan a cualquier enemigo y luego mueven 1 casilla (o mueven 1 casilla sin disparar).
+  - Penalización de Combate (Tirar 2 dados de ataque y elegir el peor resultado): Aplica si disparan a un enemigo adyacente O si ambas unidades están en la Retaguardia opuesta.
+
+ALGORITMO AUTOMATIZADO DE LA IA EN COMBATE (CAMPAÑA / COOPERATIVO):
+• Unidades Terrestres y Voladoras de la IA: Priorizan tropas del mismo nivel; si no hay, buscan el nivel inferior descendente (hasta Bronce); si no hay, buscan nivel superior ascendente.
+• Unidades A Distancia de la IA: Priorizan tropas a distancia enemigas del mismo nivel, luego menor nivel, luego mayor nivel. Si no hay tropas a distancia, atacan terrestres/voladoras siguiendo la misma jerarquía.
+• Desempate: Se ataca a la unidad válida más cercana.
+
+REGLAS DE ASEDIO CON CIUDADELA:
+• Defender sin Héroe: El defensor puede pagar 8 Oro para defender su ciudad con sus tropas si el héroe no está presente.
+• Fortificaciones (Muros y Puerta): Colocadas en la fila central. Las tropas terrestres/voladoras pueden destruir un muro/puerta atacándolo adyacente (éxito automático sin dados).
+• Cobertura Defensiva: Las tropas situadas tras un Muro o Puerta intacto reciben -1 al daño recibido por proyectiles a distancia.
+• Torre de Arqueros: Unidad a distancia adicional del defensor fuera del tablero. Se destruye automáticamente cuando caen todos los muros y la puerta.`
+  },
+  {
+    id: "reescritura-04-reglas-opcionales-y-comercio",
+    title: "Reescritura 4. Tabla de Reglas Opcionales y Variantes, Mercado, Comercio y Fin de Escenario",
+    category: "modes",
+    content: `TABLA DE REGLAS OPCIONALES, MERCADO Y CONDICIONES DE ELIMINACIÓN:
+
+TABLA DE REGLAS OPCIONALES (MODIFICADORES DE DIFICULTAD):
+1. Opciones para AUMENTAR la dificultad:
+   - Las ciudades no producen recursos al señalarse, pero se pueden usar edificios de ciudades capturadas.
+   - Prohibido relanzar dados con moral positiva o habilidades.
+   - Dados de tesoro y recurso solo otorgan 1 unidad de recurso.
+   - Sin bonus inicial de preparación.
+2. Opciones para REDUCIR la dificultad:
+   - Empezar la partida con un Héroe Secundario gratis.
+   - Todas las unidades infligen un mínimo de 1 de daño en su ataque.
+   - Minas y Asentamientos otorgan el doble de producción de recursos.
+   - Intercambio libre de recursos en cualquier momento, Mercadillo pasa a ser Visitable y roba 1 artefacto gratis.
+   - Continuar rondas de combate no consume Puntos de Movimiento (PM).
+3. Variantes de Juego:
+   - Dado de ataque no inflige daño (+1/-1/0) pero sigue activando habilidades.
+   - Resolver carta de Astrólogos también al inicio de las Rondas de Recursos.
+   - Eliminar por completo las cartas de Astrólogos del juego.
+   - Limpiar y retirar cubos negros de casillas Visitables en las rondas 4, 8 y 12.
+   - Enviar las cartas ganadas directamente al mazo de descarte en vez de a la mano.
+
+MERCADO Y COMERCIO ENTRE JUGADORES:
+• Mercadillo: Permite intercambiar recursos según la Tabla de Comercio O eliminar 1 carta de la mano por +1 Oro (no se pueden eliminar especialidades, estadísticas, habilidad inicial ni Flecha Mágica).
+• Comercio en Alianza y Cooperativo: Los aliados pueden intercambiar recursos libremente fuera de combate. Pueden comerciar Hechizos y Artefactos de la mano si sus héroes ocupan casillas adyacentes (intercambio 1 por 1).
+
+CONDICIONES DE ELIMINACIÓN Y FIN DE ESCENARIO:
+• Eliminación por Pérdida Territorial: Jugar 3 rondas completas sin controlar ninguna ciudad ni asentamiento.
+• Eliminación por Derrota Total: Perder un combate con tu Héroe Principal cuando no conserves ciudades ni asentamientos.
+• Condición de Victoria por Cubos: En partidas de 3+ jugadores, arrebatar un Cubo de Facción a cada oponente otorga la victoria inmediata.`
+  },
+  {
+    id: "reescritura-05-catalogo-localizaciones-completo",
+    title: "Reescritura 5. Compendio Completo Integrado de Localizaciones del Mapa (Visitables, Revisitables y Señalizables)",
+    category: "components",
+    content: `COMPENDIO COMPLETO DE CASILLAS Y ESTRUCTURAS DEL MAPA:
+
+CASILLAS VISITABLES (Un solo uso, se marcan con Cubo Negro):
+• Piedra del Aprendizaje: +1 Experiencia (EXP) al héroe principal.
+• Manantial Mágico: Mira las 3 primeras cartas de tu descarte, recupera 1 a tu mano y devuelve las demás arriba.
+• Jardín Místico: Elige entre ganar +2 Oro o +1 Objeto de Valor.
+• Observatorio de Caoba: Descubre y voltea una loseta de mapa adyacente.
+• Santuario del Encantamiento / Gesto Mágico: Realiza Búsqueda (2) en el mazo de hechizos.
+• Templo: Otorga 1 Ficha de Moral Positiva.
+• Fuente de la Juventud: Otorga +1 PM y +1 Ficha de Moral Positiva.
+• Caja de Pandora: Lanza 1 dado de ataque: (+1) Gana 2 Artefactos; (0) Gana 1 Artefacto; (-1) Enfrenta combate Nivel III.
+• Molino de Agua: Otorga +3 Oro.
+• Molino: Otorga +1 Objeto de Valor (Nota: corrección de errata en loseta N3).
+• Árbol del Conocimiento: Paga 3 Objetos de Valor o 10 Oro para ganar +2 EXP.
+• Tumba del Guerrero: Búsqueda (2) en mazo de artefactos dos veces. Otorga 2 fichas de moral negativa.
+• Escolar: Lanza 1 dado de ataque: (+1) Gana o elimina carta de característica; (0) Búsqueda (2) en habilidades; (-1) Búsqueda (2) en hechizos.
+• Mercado del Tiempo: Elimina 1 carta de la mano y realiza Búsqueda (2) en Habilidades, Hechizos o Artefactos.
+• Colina Fortificada: Refuerza inmediatamente 1 unidad de Bronce o Plata con un descuento de -3 Oro.
+• Prisión: Gana un Héroe Secundario gratis (si ya lo posees, gana 3 Oro).
+• Universidad: Paga 6 Oro para hacer Búsqueda (4) en el mazo de descarte de habilidades.
+
+CASILLAS REVISITABLES (Múltiples usos pagando 1 PM):
+• Biblioteca: Paga 3 Oro para eliminar 1 carta de característica de tu mano o descarte y reemplazarla por otra. (Hasta 2 veces por visita).
+• Mercado Negro: Revisa las 4 cartas superiores del descarte de artefactos. Compra: Menor (5 Oro), Mayor (7 Oro), Reliquia (10 Oro).
+• Santuario: Zona de paz absoluta. Los héroes no pueden ser atacados en esta casilla.
+• Taberna: Paga 7 Oro para reclutar Héroe Secundario y descarta 1 carta aleatoria de la mano de un enemigo.
+• Mercadillo: Intercambia recursos, elimina cartas por +1 Oro o compra Máquinas de Guerra.
+• Fábrica: Permite comprar Máquinas de Guerra.
+• Establos: Otorga +1 PM adicional válido únicamente durante el turno actual.
+
+CASILLAS SEÑALIZABLES (Captura con Cubo de Facción):
+• Ciudad: Bastión de facción. Proporciona control territorial y defensas de asedio.
+• Minas: Aumentan el marcador de producción del recurso indicado en +1 (+2 en minas dobles). Otorgan producción inmediata al capturarse por 1ª vez.
+• Asentamientos: Permiten elegir entre subir +1 la producción de recursos (con ganancia inmediata si es 1ª vez) O reforzar una unidad de Bronce/Plata a mitad de coste (o gratis si es 1ª vez).
+• Obelisco: Concede beneficios o avances hacia el Grial según las reglas del escenario.
+• Utopía del Dragón: Desafío de alto nivel que otorga grandes recompensas según el escenario.
+• Eje Estelar: Permite eliminar 1 carta de característica de la mano y reemplazarla por su versión Potenciada (Empowered) del mismo tipo.
+• Ciudad Aleatoria: Ciudad neutral protegida por tropas de una facción sin usar. Capturarla aumenta los ingresos de Oro en +10.`
+  },
+
+  // =========================================================================
+  // EXPANSIÓN BASTIÓN Y LIBRO DE MISIONES (STRONGHOLD)
+  // =========================================================================
+  {
+    id: "bastion-01-mecanicas-y-elementos",
+    title: "Bastión 1. Nuevos Elementos y Mecánicas: Mapa Subterráneo, Pergaminos de Hechizos, Arenas Movedizas y Fichas Especiales",
+    category: "components",
+    content: `NUEVO CONTENIDO Y MECÁNICAS DE LA EXPANSIÓN BASTIÓN (STRONGHOLD):
+
+LOSETAS DE MAPA SUBTERRÁNEO Y PUERTA SUBTERRÁNEA:
+• Transición de Nivel: Para moverte entre la superficie y el nivel subterráneo debes utilizar el hechizo 'Puerta Subterránea' o el hechizo 'Portal de Ciudad'. Ningún otro efecto de carta permite el desplazamiento entre ambos planos.
+• Ficha de Puerta Subterránea: Consta de dos mitades unidas: la 'Entrada' (en la loseta de origen) y la 'Salida' (en la loseta subterránea adyacente). Reemplaza la ubicación original de la casilla.
+• Moverse a través de la Puerta: Mover la figura del héroe de la entrada a la salida no consume Puntos de Movimiento (PM) adicionales (ambas casillas cubiertas por la ficha se tratan como un único espacio). Una vez revelados ambos extremos, el tránsito funciona libremente en ambos sentidos.
+
+FICHAS DE TIEMPO:
+• Utilizadas para contabilizar la duración de efectos Continuos (Ongoing).
+• Se colocan sobre la carta o ficha correspondiente. Al final de cada ronda, reduce su valor en 1. Cuando la ficha llega a 0, el efecto concluye y se descarta la carta.
+
+CARTAS DE PERGAMINO DE HECHIZOS (20 CARTAS NUEVAS):
+• Preparación: 10 cartas se barajan en el mazo de artefactos y el resto forma un mazo de reserva de pergaminos.
+• Activación: Al obtener un pergamino, colócalo junto a tu carta de héroe y roba las 2 cartas superiores del mazo de hechizos, situándolas boca abajo sobre él.
+• Reglas Especiales de Uso:
+  1. Un hechizo lanzado desde un pergamino NO cuenta para el límite de 1 hechizo por ronda (puedes lanzar 1 de la mano y 1 del pergamino en la misma ronda de combate).
+  2. Solo puede usarse en su nivel de poder más débil (no se puede potenciar con SpellPower).
+  3. No se puede descartar para potenciar otro hechizo.
+  4. Puede venderse en un Mercadillo por 2 Oro por cada carta de hechizo contenida en el pergamino.
+• Límite: Máximo 2 pergaminos de hechizos activos simultáneamente por héroe.
+
+HECHIZO ARENAS MOVEDIZAS Y FICHAS TÁCTICAS:
+• Arenas Movedizas: Según el SpellPower invertido (2, 4 o 6 fichas), se colocan fichas boca abajo en casillas vacías del tablero de combate (la mitad vacías y la otra mitad con el icono de trampa). Cuando una unidad entra en una casilla con trampa, se revela la ficha; si muestra el icono, el movimiento y la activación de la unidad terminan inmediatamente.
+• Fichas de Ataque: Otorgan +1 Ataque o +2 Ataque a la unidad. Límite de 1 ficha de ataque por unidad a la vez.
+• Fichas de Corrosión: Reducen la Defensa de la unidad afectada en 1 (hasta un mínimo de 0). Permanecen sobre la unidad hasta el final del combate.`
+  },
+  {
+    id: "bastion-02-modo-alianza-y-escenarios",
+    title: "Bastión 2. Modo Alianza (2v2) y Escenarios: 'Guerra de los Poderosos', 'Guardián de la Mazmorra' y 'Túneles de los Enanos'",
+    category: "modes",
+    content: `MODO ALIANZA (2 CONTRA 2) Y ESCENARIOS DESTACADOS:
+
+REGLAS GENERALES DEL MODO ALIANZA (2v2):
+• Formación de Equipos: 2 alianzas de 2 jugadores prefijadas al inicio de la partida.
+• Intercambio de Artefactos: Permitido entre aliados si sus héroes ocupan casillas adyacentes.
+• Intercambio de Recursos: Se pueden transferir recursos libremente entre aliados en cualquier momento durante el turno de cualquier miembro del equipo, sin necesidad de estar en casillas adyacentes.
+• Restricción Territorial: Prohibido señalizar o capturar lugares que ya estén señalizados por tu propio compañero de alianza.
+• Fin del Escenario: Los aliados comparten íntegramente las condiciones de victoria y derrota.
+
+ESCENARIO 1: GUERRA DE LOS PODEROSOS (Modo Alianza 2v2, 13 Rondas):
+• La facción Mazmorra está bloqueada (su ciudad inicial actúa como objetivo neutral subterráneo con guarnición de nivel VI).
+• Victoria: Capturar la ciudad subterránea y mantenerla 1 ronda O capturar una ciudad enemiga y mantenerla durante las 2 rondas siguientes.
+
+ESCENARIO 2: GUARDIÁN DE LA MAZMORRA (Modo Enfrentamiento 1v1, 12 Rondas):
+• Obligatorio que un jugador utilice la facción Mazmorra.
+• Prohibido reclutar Héroes Secundarios.
+• Obeliscos: Visitar un obelisco permite realizar Búsqueda (2) en Habilidades, Artefactos o Hechizos.
+• Evento Contrarreloj (Rondas 3, 6, 9): El héroe del segundo jugador gana +1 PM adicional.
+• Victoria: Capturar la ciudad enemiga o derrotar al héroe del oponente.
+
+ESCENARIO 3: TÚNELES DE LOS ENANOS (Modo Cooperativo 2-3 Jugadores, 10-12 Rondas):
+• Transferencia Directa: Los jugadores pueden regalarse Materiales y Objetos de Valor libremente sin pasar por un Mercadillo (el Oro no se puede transferir).
+• Descubrimiento Central: Para revelar la loseta central, los jugadores deben abonar colectivamente 2 Oro, 2 Materiales y 2 Objetos de Valor por cada jugador en la partida.
+• Combate Nivel VII en Loseta Central: Cada jugador debe ganar su propio combate de nivel VII; tras vencer, el héroe victorioso es retirado del mapa. Se gana la partida cuando todos los aliados derrotan sus respectivos combates.`
+  },
+  {
+    id: "bastion-03-reglas-campana-ia-avanzada",
+    title: "Bastión 3. Reglas Avanzadas de Campaña e Inteligencia Artificial (Transición de Mazo, IA Bajo Asedio y Hechizos Complejos)",
+    category: "modes",
+    content: `MECÁNICAS AVANZADAS DE CAMPAÑA E IA EN COMBATE:
+
+GESTIÓN DEL MAZO DE FUERZA Y MAGIA ENTRE ESCENARIOS:
+1. Retirar del mazo las cartas de característica y la especialidad Nivel 1.
+2. Eliminar el resto de cartas de especialidad del héroe.
+3. Elegir 5 cartas adicionales del mazo actual (hechizos, habilidades, artefactos) para añadirlas al mazo inicial del nuevo escenario.
+4. El héroe vuelve a Nivel 1 de experiencia. Los pergaminos de hechizos NO se conservan entre misiones.
+5. Cambio de Héroe: Si cambias de campeón en la misma facción, reemplazas las características y la especialidad Nivel 1 por las del nuevo héroe y ajustas el mazo para no superar 4 copias de Flecha Mágica ni duplicar la habilidad inicial.
+
+IA EN COMBATE DE ASEDIO (TORRE DE ARQUEROS, MUROS Y PUERTA):
+• Torre de Arqueros de la IA: Actúa como unidad A Distancia de Nivel Plata (). Prioriza atacar a unidades A Distancia del jugador por orden de nivel (mismo nivel, luego inferior, luego superior). Si no hay arqueros, ataca unidades Terrestres/Voladoras más cercanas a la eliminación.
+• Despliegue de Fortificaciones: La IA sitúa la Puerta frente a la unidad Terrestre con mayor Iniciativa. Por defecto, las tropas de la IA no atacan los muros salvo que no puedan volar por encima o cruzar por la puerta, en cuyo caso defienden.
+
+TÁCTICAS DE HECHIZOS COMPLEJOS PARA LA IA:
+• Ataque en Área (Bola de Fuego, Rayo en Cadena): Apunta a agrupaciones del jugador con mayor presencia de unidades de alto nivel o más dañadas.
+• Defensa Instantánea (Piel de Piedra): Aplica la ficha de defensa a la unidad de la IA con el valor de Defensa más alto.
+• Curación (Curación): Elimina el daño acumulado de la unidad de la IA de mayor nivel que esté herida.
+• Debilitamiento (Debilidad): Lanza el hechizo sobre la unidad del jugador que vaya a realizar un contraataque contra la unidad activa de la IA.`
+  },
+  {
+    id: "bastion-04-campana-bastion-hermandad-barbara",
+    title: "Bastión 4. Campaña de Bastión 'Hermandad Bárbara' (Crag Hack y Yog vs Nigromantes de Deyja)",
+    category: "modes",
+    content: `CAMPAÑA BASTIÓN: 'HERMANDAD BÁRBARA' (Yog y Crag Hack):
+
+MISIÓN 1: COSECHA (10 Rondas):
+- Héroe Principal: Yog (Bastión). Enfrenta a las hechiceras nigromantes Isra y Aislinn (Necrópolis).
+- Evento Cabaña del Vidente: Encuentro con la lich cautiva Xsi. Permite elegir entre sacrificar tropas para construir gratis la vivienda de nivel Oro O ganar 20 Oro + artefacto defensivo.
+- Evento 'Las Tierras Putrefactas' (Ronda 4): Obliga a descartar la mano, otorga moral negativa y limpia los cubos negros del mapa para permitir revistar ubicaciones.
+- Combate Final con Aislinn: La IA se atrincherar con una Torre de Arqueros rodeada por 3 muros en una esquina del tablero táctico.
+- Victoria: Derrotar a los ejércitos de Isra y Aislinn.
+
+MISIÓN 2: RECUPERAR A LEGIÓN (10 Rondas):
+- Héroe Principal: Crag Hack (Bastión).
+- Restricción de Reclutamiento: Prohibido reclutar tropas de las viviendas de la ciudad de Bastión.
+- Reclutamiento Neutral Especial: En rondas de recursos o al visitar obeliscos, roba 2 cartas del mazo de tropas neutrales de la vivienda correspondiente para reclutar 1 pagando su coste.
+- Mazo de Legión: Formado por 5 artefactos (Brazos, Cabeza, Piernas, Escarcela y Torso de Legión). Vencer ejércitos de la IA te otorga Búsqueda (2) en el mazo de Legión + 1 EXP + 5 Oro.
+- Victoria: Reunir 3 cartas de 'Legión' en tu mazo.
+
+MISIÓN 3: SECRETOS REVELADOS (13 Rondas):
+- Enemigos de la IA: Jefes Orcos, Atacantes Nigromantes, Nimbus y Moandor.
+- Bloqueo Subterráneo: Entrada a la puerta subterránea prohibida hasta señalizar la zona central del mapa.
+- Oleadas Contrarreloj (Rondas 1, 4 y 8): Invasiones de atacantes nigromantes en la loseta inicial de Mazmorra.
+- Combate Final con Moandor: Activa la habilidad 'Tiro con arco' para potenciar a sus arqueros no-muertos.
+- Victoria: Vencer en todos los combates contra ejércitos enemigos.`
+  },
+  {
+    id: "bastion-05-nuevas-ubicaciones-bastion",
+    title: "Bastión 5. Nuevas Ubicaciones del Mapa de la Expansión Bastión (Reservas del Cíclope, Puerta Subterránea, Pergamino de Hechizos)",
+    category: "components",
+    content: `CATÁLOGO DE NUEVAS UBICACIONES DEL MAPA (EXPANSIÓN BASTIÓN):
+
+1. Reservas del Cíclope (Visitable):
+   - Al preparar el encuentro neutral, en lugar de robar 1 unidad Azur (), busca 2 cartas de Cíclopes (Plata ) en la pila de descartes o mazo neutral de nivel Plata y agrégalas al ejército enemigo.
+   - Recompensa por Victoria: Tira y resuelve 4 dados de recursos (ReDie).
+
+2. Puerta Subterránea (Revisitable):
+   - Conecta la superficie con el nivel subterráneo. Moverse entre la entrada y la salida se realiza en un solo paso de movimiento dentro del mismo turno.
+
+3. Pergamino de Hechizos (Visitable):
+   - Al visitar la casilla, roba 1 carta de Pergamino de Hechizos, colócala junto a tu carta de héroe y roba las 2 cartas superiores del mazo de hechizos para situarlas boca abajo sobre ella.`
+  },
+
+  // =========================================================================
+  // EXPANSIÓN CONFLUJO Y LIBRO DE MISIONES (CONFLUX)
+  // =========================================================================
+  {
+    id: "conflujo-01-mecanicas-y-elementos",
+    title: "Conflujo 1. Nuevas Mecánicas y Elementos: Losetas Elementales, Monolitos, Invocación, Daño Elemental y Cartas Permanentes",
+    category: "components",
+    content: `NUEVO CONTENIDO Y MECÁNICAS DE LA EXPANSIÓN CONFLUJO (CONFLUX):
+
+LOSETAS DE MAPA ELEMENTALES:
+• Cada loseta elemental está vinculada a una Escuela de Magia (Fuego, Agua, Aire o Tierra).
+• Bonificador de Escuela: Todos los hechizos pertenecientes a esa Escuela de Magia que lance un héroe en dicha loseta ven aumentado su SpellPower (Poder de Hechizo) en +1.
+
+FICHAS DE MONOLITO (TELETRANSPORTE MAPADO):
+• Monolito Unidireccional: Permite viajar únicamente desde el monolito de 'Entrada' hacia el monolito de 'Salida' correspondiente. Prohibido usar la salida para regresar.
+• Monolito Bidireccional: Permite el tránsito libre en ambos sentidos entre las dos fichas emparejadas.
+• Regla de Reemplazo: La ficha de monolito sustituye la ubicación original de la casilla (no se puede colocar sobre casillas bloqueadas u objetivos del escenario).
+
+MECÁNICA DE INVOCACIÓN (INVOCAR / HECHIZOS DE INVOCACIÓN):
+• Mazo de Unidades Invocadas: Mazo especial de 8 cartas de Elementales (Fuego, Agua, Aire, Tierra).
+• Proceso de Invocación: El hechizo o habilidad permite colocar una unidad invocada en una casilla vacía elegida del tablero táctico.
+• Potenciación por SpellPower: Según el SpellPower invertido, invocas una unidad por su lado no reforzado ('Unas pocas') o reforzado ('Manada').
+• Activación en Combate: La unidad invocada se activa en la misma ronda si su Iniciativa es menor o igual que la de la unidad activa en ese momento. De lo contrario, se considera ya activada esa ronda.
+• Descarte al Finalizar: La unidad invocada y su Ficha de Invocación se descartan al terminar el combate (no se añade al mazo permanente salvo regla explícita).
+
+DAÑO ELEMENTAL Y REGLAS DE MAGIA:
+• Daño Elemental: Se resuelve mediante un ataque normal de la unidad, pero el daño resultante funciona como daño por hechizo e IGNOA la Defensa (Defense) del objetivo.
+• Inmunidades Elementales: Ciertas unidades ignoran el daño o los efectos de hechizos o escuelas de magia específicas.
+• Cartas Permanentes (Perm): Otorgan bonificadores o condiciones continuas. Se colocan frente al jugador hasta descartarse o ser reemplazadas. Un héroe solo puede tener 1 carta Permanente activa a la vez.`
+  },
+  {
+    id: "conflujo-02-escenarios-alianza-enfrentamiento-cooperativo",
+    title: "Conflujo 2. Escenarios Oficiales: 'Un Mal Día' (Alianza 2v2), 'Diluvio' (Enfrentamiento 3j) y 'Demasiados Monstruos' (Cooperativo)",
+    category: "modes",
+    content: `ESCENARIOS OFICIALES DE LA EXPANSIÓN CONFLUJO:
+
+1. UN MAL DÍA (Modo Alianza 2v2, Duración: 16 Rondas):
+   - Preparación: 4 iniciales, 6 cercanas, 8 lejanas. Monolitos unidireccionales conectan las áreas.
+   - Recursos e Ingresos: Inicio con 11 Oro, 3 Materiales, 1 Objeto de Valor. Ingresos: «10» Oro, «0» Mat, «0» Obj.
+   - Reglas Especiales: Sin bonificador inicial. Los equipos eligen áreas de inicio de 2 jugadores.
+   - Victoria: Derrotar al héroe principal de cada oponente al menos una vez O bloquear simultáneamente ambos monolitos de salida enemigos al final de una ronda.
+
+2. DILUVIO (Modo Enfrentamiento 3 Jugadores, Duración: 10 Rondas):
+   - Ciudad Neutral Central: Ocupada por una facción no utilizada (3 manadas Bronce, 2 manadas Plata, 2 unas pocas Oro - Dificultad VI).
+   - Obelisco: Visitar un obelisco permite eliminar 1 carta de habilidad de tu mano o descarte.
+   - Eventos Contrarreloj (Rondas 3, 5, 7, 9): Permitido comerciar recursos como en Mercadillo durante la ronda.
+   - Victoria: Capturar la ciudad central y mantener su control hasta el final de la siguiente ronda.
+
+3. DEMASIADOS MONSTRUOS (Modo Cooperativo 2-3 Jugadores, Duración: 11-16 Rondas según Dificultad):
+   - Estructura por Sectores: Mapa dividido en 3 sectores principales. Para usar un monolito y saltar del Sector 1 al Sector 2, los jugadores deben haber descubierto todas las losetas y ganado todos los combates de su zona del Sector 1. De igual modo para pasar del Sector 2 al 3.
+   - Obelisco: Otorga 1 tirada de dado de recurso +1 PM adicional. Prohibido transferir Oro entre aliados.
+   - Victoria: Completar y limpiar la totalidad de combates del mapa entero antes de consumir el límite de rondas.`
+  },
+  {
+    id: "conflujo-03-reglas-campana-e-ia",
+    title: "Conflujo 3. Reglas Especiales de Campaña e Inteligencia Artificial (Invocaciones e IA con Hechizos Complejos)",
+    category: "modes",
+    content: `REGLAS AVANZADAS DE CAMPAÑA E IA EN LA EXPANSIÓN CONFLUJO:
+
+INVOCACIONES POR LA IA EN COMBATE:
+• Posicionamiento: Cuando la IA invoca una unidad, la coloca en el primer espacio libre de la línea de frente contando desde la izquierda.
+• Mecánica de Acumulación (Cubos de Invocación): Cada vez que se activa la habilidad de invocación de la IA, coloca un cubo de facción sobre la carta. Al alcanzar 2 cubos, la IA lanza la invocación con SpellPower 4.
+
+TÁCTICAS AMPLIADAS DE LA IA PARA HECHIZOS ELEMENTALES:
+• Hechizos de Área (Bola de Fuego, Rayo en Cadena): Priorizan atacar agrupaciones del jugador con mayor número de tropas de alto nivel o más dañadas.
+• Escudo de Fuego (Mejora de Ronda): Si más de la mitad de tropas de la IA ya han actuado, reserva el hechizo para la primera activación de la siguiente ronda.
+• Debilidad (Reducción de Ataque): La IA lanza el hechizo sobre la unidad del jugador que vaya a ejecutar un contraataque directo contra la tropa activa de la IA.`
+  },
+  {
+    id: "conflujo-04-campana-maestros-de-los-elementos",
+    title: "Conflujo 4. Campaña de Conflujo 'Maestros de los Elementos' (Tarnum en los 4 Planos Elementales)",
+    category: "modes",
+    content: `CAMPAÑA CONFLUJO: 'MAESTROS DE LOS ELEMENTOS' (Tarnum):
+
+MISIÓN 1: CAMINATA DIFÍCIL SOBRE LAS NUBES (13 Rondas):
+- Viaje al Plano del Aire. Bloqueo Mágico: Prohibido usar o conservar cartas de Invocar Elementales y Magia de las 4 escuelas (al robarse, se descartan y roba otra). Límite de nivel: Nivel 4.
+- Elección de Facción Secundaria (Ronda 1): Permite tomar el tablero y tropas de otra facción para reclutar.
+- Victoria: Derrotar a Fiur y a los Guardianes del Señor del Aire.
+
+MISIÓN 2: BAILANDO EN EL AGUA Y EL FUEGO (16 Rondas):
+- Planos de Agua y Fuego. Límite de nivel: Nivel 5.
+- Transición entre Planos: Derrotar a los Guardianes del Señor del Agua abre las losetas del Plano de Fuego e incrementa la dificultad de todo el mapa en +1.
+- Victoria: Señalizar o limpiar todas las ubicaciones en las losetas elementales de agua y fuego.
+
+MISIÓN 3: LUGAR DIFÍCIL (10 Rondas):
+- Plano de Tierra. Terreno Pesado: El héroe sufre -1 PM en las rondas 1 y 3.
+- Exigencia de Tributo (Rondas 7 y 9): En la ronda 7 se exige reunir 8 Materiales y 4 Objetos de Valor; en la ronda 9 se pagan obligatoriamente (de lo contrario, derrota).
+- Victoria: Derrotar al Primer Señor Supremo y al Segundo Señor Supremo de Mazmorra.
+
+MISIÓN 4: MAESTRO DE LOS ELEMENTOS (14 Rondas):
+- Enfrentamiento Final: Tarnum contra los 4 Señores Elementales (Aire, Tierra, Fuego y Agua).
+- Batallas Supremas: Al acceder a la última casilla no vacía de cada loseta elemental, se combate inmediatamente al Señor Elemental correspondiente y el héroe gana +2 PM.
+- Victoria: Vencer en combate a los 4 Señores Elementales.`
+  },
+  {
+    id: "conflujo-05-nuevas-ubicaciones-conflujo",
+    title: "Conflujo 5. Catálogo de Nuevas Ubicaciones del Mapa (Conflujo Elemental, Anillo del Hada y Monolitos)",
+    category: "components",
+    content: `CATÁLOGO DE NUEVAS UBICACIONES DEL MAPA (EXPANSIÓN CONFLUJO):
+
+1. Conflujo Elemental (Visitable):
+   - Al entrar en este lugar, por cada vivienda construida en tu ciudad, roba del mazo neutral correspondiente hasta revelar una carta de 'Elementales'. Puedes reclutar 1 de estas unidades pagando su coste de reclutamiento.
+
+2. Anillo del Hada (Visitable):
+   - Al entrar, elimina 1 carta de tu mano y realiza Búsqueda (2) en el mazo perteneciente a esa carta (no aplicable a características, habilidad inicial ni especialidades).
+
+3. Monolito Unidireccional (Revisitable):
+   - Permite teletransportar al héroe desde la entrada a la salida. No se puede utilizar el portal de salida para volver a la entrada.
+
+4. Monolito Bidireccional (Revisitable):
+   - Permite teletransportar al héroe entre ambos monolitos emparejados en cualquier dirección.`
+  },
+
+  // =========================================================================
+  // EXPANSIÓN CALA Y LIBRO DE MISIONES (COVE)
+  // =========================================================================
+  {
+    id: "cala-01-mecanicas-y-elementos",
+    title: "Cala 1. Nuevas Mecánicas y Elementos: Mapa Marino, Torbellino, Debilidad, Clonación y Máquinas de Guerra",
+    category: "components",
+    content: `NUEVO CONTENIDO Y MECÁNICAS DE LA EXPANSIÓN CALA (COVE / REGNA):
+
+LOSETAS DE MAPA MARINO Y NAVEGACIÓN:
+• Moverse entre Zonas Marinas y Terrestres:
+  - Movimiento TIERRA → TIERRA o MAR → MAR: Estándar (1 PM).
+  - Movimiento MAR → TIERRA: Estándar (1 PM).
+  - Movimiento TIERRA → MAR (Embarque): Al entrar en una casilla de agua desde una casilla de tierra, el movimiento del héroe FINALIZA INMEDIATAMENTE para el resto del turno. No pierde los Puntos de Movimiento (PM) restantes no gastados (puede usarlos para prolongar el combate si la casilla tiene enemigos), pero no puede desplazarse a más casillas ese turno ni siquiera con efectos de cartas.
+
+FICHA DE TORBELLINO (REMOLINOS MARINOS):
+• Conexión Marítima: Enlaza casillas de mar con fichas de remolino. Reemplaza la ubicación original de la casilla.
+• Mecánica de Teletransporte Aleatorio: Al entrar en una ficha de remolino, tira 1 dado de ataque (-1, 0, +1) para determinar a qué remolino del mapa es transportado el héroe (si sale el mismo remolino de origen, repite la tirada).
+• Coste de Navegación Peligrosa: Viajar a través de un torbellino elimina 1 unidad del ejército del héroe (podrá ser reclutada nuevamente más tarde).
+
+FICHA DE DEBILIDAD Y HECHIZO DE CLONACIÓN:
+• Ficha de Debilidad: Reduce en -1 o -2 el valor de Ataque de la unidad afectada. Límite de 1 ficha de debilidad por unidad a la vez.
+• Ficha de Clonación (Hechizo 'Clonación'):
+  - Coloca una ficha de clonación en una unidad aliada y otra en una casilla vacía adyacente para representar el Clon.
+  - Estadísticas del Clon: Mantiene el Ataque, la Iniciativa y la Habilidad Especial de la unidad original.
+  - Vulnerabilidad del Clon: Tiene solo 1 PS (Puntos de Salud) y 0 Defensa (no aumentable por cartas). Recibir 1 punto de daño por ataque o hechizo lo destruye inmediatamente. No hereda bonificadores jugados en la unidad original.
+  - Si la unidad original es eliminada, el clon se destruye automáticamente.
+
+MÁQUINAS DE GUERRA:
+• Adquisición: Se compran en la Fábrica de Máquinas de Guerra o en el Mercadillo (+3 o +4 Oro más caro y consume la visita completa al Mercadillo).
+• Son cartas de tipo Permanente (Perm) que se colocan frente al jugador.`
+  },
+  {
+    id: "cala-02-escenarios-alianza-enfrentamiento",
+    title: "Cala 2. Escenarios Oficiales: 'Estrecho de las Tormentas' (Alianza 2v2), 'Con Espada y Fuego' y 'Archipiélago Ardiente' (Enfrentamiento)",
+    category: "modes",
+    content: `ESCENARIOS OFICIALES DE LA EXPANSIÓN CALA:
+
+1. ESTRECHO DE LAS TORMENTAS (Modo Alianza 2v2, Duración: 14 Rondas):
+   - Preparación: Mapa dominado por losetas marinas y fichas de remolino.
+   - Bonus de Inicio Especial: Permite reclutar un Héroe Secundario por 5 Oro (salvo en Dificultad Imposible).
+   - Reglas Especiales: Prohibido rendirse con el Héroe Principal en combate (solo los Héroes Secundarios pueden rendirse). Los recursos entre aliados solo pueden enviarse durante el turno propio.
+   - Victoria: Capturar una ciudad enemiga durante 2 rondas consecutivas O derrotar a ambos héroes principales enemigos.
+
+2. CON ESPADA Y FUEGO (Modo Enfrentamiento 1v1, Duración: 11 Rondas):
+   - Restricciones: Prohibido reclutar Héroes Secundarios.
+   - Eventos Contrarreloj (Rondas 3, 6, 9): Permiten a los jugadores intercambiar recursos como si visitaran un Mercadillo.
+   - Victoria: Capturar la ciudad del oponente o derrotar a su héroe principal.
+
+3. ARCHIPIÉLAGO ARDIENTE (Modo Enfrentamiento 3 Jugadores, Duración: 13 Rondas):
+   - Desafío de Nivel VII Central: Defender por tropas neutrales de una facción no utilizada (3 manadas Bronce, 2 manadas Plata, 2 unas pocas Oro - Dificultad VI/VII).
+   - Regla de Múltiples Ganadores: Tras ser derrotado el ejército neutral Nivel VII por primera vez, no se coloca cubo negro. Todos los demás jugadores que derroten dicho combate en su siguiente turno también comparten la victoria.
+   - Evento Contrarreloj (Rondas 3, 6, 9): Otorga la opción de relanzar un dado o tirar 1 dado de recursos.`
+  },
+  {
+    id: "cala-03-campana-terror-de-los-mares",
+    title: "Cala 3. Campaña de Cala 'Terror de los Mares' (Jeremy, Bidley y Casmetra vs Dargem)",
+    category: "modes",
+    content: `CAMPAÑA CALA: 'TERROR DE LOS MARES' (Jeremy, Bidley y Casmetra):
+
+MISIÓN 1: EVENMORN (13 Rondas):
+- Héroe Principal: Jeremy (Cala). Enfrenta a los ejércitos enemigos de Drakon y Nimbus.
+- Recompensa Urbana: Capturar cualquier ciudad otorga 10 Oro y limpia los cubos negros de todas las ubicaciones del mapa para poder visitarlas de nuevo.
+- Eventos de la Cabaña del Vidente: Caza del dragón (+15 Oro, +2 Objetos de Valor y Búsqueda 2 de artefactos) o Sacerdotisa del mar (sacrifica oceánidos por Búsqueda 3 de hechizos).
+- Victoria: Controlar las ciudades de Necrópolis y Castillo simultáneamente.
+
+MISIÓN 2: EN BUSCA DEL CUERNO (13 Rondas):
+- Dos Héroes en Acción: Jeremy y Bidley (Héroe Secundario gratuito tras capturar la mina inicial).
+- Mecánica de Manos de Cartas Dividida: El segundo héroe comparte el mazo de fuerza y magia. Cuando agotas tus PM, robas hasta tu límite o la mitad según cuál sea menor.
+- Laberinto de la Serpiente Subterráneo: Bidley explora túneles con notas de diario secretas y enfrenta la guarnición de la Prisión y a los Guardianes del Cuerno.
+- Victoria: Derrotar al ejército de Gerwulf y a los Guardianes del Cuerno.
+
+MISIÓN 3: TRAICIÓN (12 Rondas):
+- Enfrentamiento Final contra el Traidor Dargem en la Fortaleza Regnana.
+- Restricción Territorial: No se pueden capturar minas ni asentamientos para aumentar producción; en su lugar, se recibe el doble o triple del bonificador inmediato al señalizarlas y se coloca un cubo negro.
+- Batalla en la Fortaleza de Regna: Asedio masivo con Muros, Puerta, Torre de Arqueros y Encantadores protegidos.
+- Victoria: Señalizar la Utopía del Dragón en la fortaleza central.`
+  },
+  {
+    id: "cala-04-nuevas-ubicaciones-marinas",
+    title: "Cala 4. Catálogo Completo de Nuevas Ubicaciones Marinas del Mapa (Naufragios, Pecio, Sirena, Cofre Marino, Templo del Mar, etc.)",
+    category: "components",
+    content: `CATÁLOGO DE NUEVAS UBICACIONES MARINAS DEL MAPA (EXPANSIÓN CALA):
+
+1. Barco Abandonado (Visitable):
+   - Permite realizar Búsqueda (2) en el mazo de artefactos. Si lo haces, ganas además +2 Oro.
+
+2. Naufragio (Visitable):
+   - Tira y resuelve 2 dados de recursos (ReDie).
+
+3. Pecio (Visitable):
+   - Otorga +2 Materiales de Construcción.
+
+4. Barril Marino (Visitable):
+   - Tira y resuelve 1 dado de recursos (ReDie).
+
+5. Superviviente de Naufragio (Visitable):
+   - Realiza Búsqueda (2) en el mazo de artefactos.
+
+6. Sirena (Visitable):
+   - Otorga +1 PM adicional para el turno actual y 1 Ficha de Moral Positiva.
+
+7. Cofre Marino (Visitable):
+   - Tira 1 dado de ataque: (+1) Busca (1) Artefacto; (0) Gana 5 Oro; (-1) Sin recompensa.
+
+8. Restos de Naufragio (Visitable):
+   - Tira 1 dado de ataque: (+1) Tira y resuelve 2 dados de recursos; (0) Tira y resuelve 1 dado de recursos; (-1) Sin recompensa.
+
+9. Templo del Mar (Visitable):
+   - Elige entre ganar +10 Oro O buscar (2) Artefactos.
+
+10. Boya (Visitable):
+    - Otorga 1 Ficha de Moral Positiva.
+
+11. Tumba (Visitable):
+    - Otorga 1 Ficha de Moral Negativa, +3 Oro y Búsqueda (1) en el mazo de artefactos.
+
+12. Santuario del Gesto Mágico (Visitable):
+    - Realiza Búsqueda (2) en el mazo de hechizos.
+
+13. Santuario del Encantamiento Mágico (Visitable):
+    - Paga 3 Oro para realizar Búsqueda (2) en el mazo de hechizos.`
+  },
+
+  // =========================================================================
+  // CONTENIDO ADICIONAL / METAS AMPLIADAS 2 (STRETCH GOALS 2)
+  // =========================================================================
+  {
+    id: "sg2-01-elementos-y-preparacion-avanzada",
+    title: "Stretch Goals 2: Nuevos Elementos, Cartas de Ciudad, Caja de Pandora, Mina de Hechizo, Campo de Fuerza y Preparación Avanzada",
+    category: "components",
+    content: `CONTENIDO ADICIONAL Y PREPARACIÓN AVANZADA (STRETCH GOALS 2):
+
+CARTAS DE CIUDAD Y SELECCIÓN ALEATORIA DE FACCIONES:
+• Mazo de 10 Cartas de Ciudad: Cada carta representa una de las facciones. Permiten aleatorizar o realizar draft de facciones al inicio de la partida.
+• Método Draft de Facciones: Reparte 2 cartas de ciudad al primer jugador; elige 1 y pasa la otra al siguiente jugador, quien roba 1 más del mazo y repite el proceso.
+
+CIUDAD ALEATORIA Y FICHA DE CAMPO DE FUERZA:
+• Ciudad Aleatoria (Señalizable): Se determina robando una carta del mazo de ciudad (de facciones no jugadas). Defendida por 1 manada Bronce (), 2 manadas Plata () y 2 unas pocas Oro ().
+  - Sin Torre de Arqueros durante este asedio.
+  - Recompensa por Captura: +10 Oro inmediato y +10 Oro de ingresos pasivos por ronda de recursos.
+• Ficha de Campo de Fuerza: Representa un obstáculo para el hechizo 'Campo de Fuerza'. Solo las unidades Voladoras (<Flying>) pueden desplazarse a través de casillas que contengan esta ficha.
+
+CARTAS DE CAJA DE PANDORA Y HECHIZO DE MINA:
+• Mazo de Caja de Pandora (20 Cartas): Mazo opcional que sustituye los efectos de dados de la casilla de Caja de Pandora. Al visitar el lugar, puedes robar 1 carta y resolverla en lugar del efecto habitual.
+• Hechizo de Mina (Trap Tokens): Según el SpellPower (2, 4 o 6 fichas), se colocan fichas boca abajo en el tablero de combate (la mitad vacías y la otra mitad con 2 de daño). Cuando una unidad entra en una casilla con trampa, se revela la ficha; si muestra el símbolo de daño, sufre 2 de daño inmediato.
+
+MODOS DE PREPARACIÓN AVANZADA Y REGLAS VARIANTES:
+1. Cartas del Caos: Al descartar una carta, elimínala y roba la carta superior de ese mazo a tu pila de descartes (las características y especialidades se descartan normalmente). Si devuelves un hechizo con Conocimiento, el hechizo se elimina y recibes uno nuevo del mazo.
+2. Reserva de Oro (Gestión de Ejército y Recompra):
+   - Los recursos de reclutamiento van a un 'Fondo Reservado' bloqueado.
+   - Venta y Reemplazo: Al usar la ficha de población, puedes vender unidades reclutadas o recuperarlas al morir/reducirse a 'Unas Pocas', devolviendo todo su coste gastado en Oro u Objetos de Valor desde el Fondo Reservado al Fondo No Gastado.
+3. Draft Inicial de Cartas (3+ Jugadores):
+   - Cada héroe recibe su habilidad inicial y especialidad Nivel 1.
+   - Roba 2 cartas de Artefactos, Habilidades y Hechizos (6 cartas total), retén 1 de cada y pasa las 5 restantes al jugador de la izquierda. Repite hasta agotar y luego invierte el sentido (hacia la derecha) hasta formar un mazo de 12 cartas seleccionadas (más tarde refinado a mazo inicial de 9 cartas).
+4. Reclutamiento por Ejército Neutral: En lugar de reclutar unidades de facción, por cada vivienda roba 2 cartas del mazo neutral del nivel correspondiente y recluta 1 de ellas.`
+  },
+  {
+    id: "sg2-02-escenarios-enfrentamiento-sg2",
+    title: "Stretch Goals 2: Escenarios de Enfrentamiento ('Ascensión', 'Islas Esmeralda', 'Reino del Caos', 'Pérdida de la Inocencia' y 'El Trébol Carmesí')",
+    category: "modes",
+    content: `ESCENARIOS DE ENFRENTAMIENTO ADICIONALES (STRETCH GOALS 2):
+
+1. ASCENSIÓN (Modo 4 Jugadores, Equipos 2v2, 10 Rondas):
+   - Estructura: Sin héroes secundarios. Aliados en la misma mitad del mapa.
+   - Duelos Finales (Ronda 10): La partida concluye con una serie de 3 batallas individuales entre ambos equipos. El equipo con tirada de dado de ataque más alta elige el primer cruce de duelistas. Gana el equipo con al menos 2 duelos victoriosos.
+
+2. ISLAS ESMERALDA (Modo 4 Jugadores, 16 Rondas):
+   - Navegación Marítima: Si el héroe inicia su turno en una loseta marina, tira 1 dado de ataque (-1, 0, +1) y gana Puntos de Movimiento (PM) adicionales iguales al resultado.
+   - Eliminación Directa: Perder la ciudad elimina inmediatamente a todos los héroes del jugador.
+
+3. REINO DEL CAOS (Modo 2 o 4 Jugadores, 14 Rondas):
+   - Utopía del Dragón Central: Defendida por un ejército de la IA de una facción aleatoria.
+   - Tirada del Caos (Inicio de Turno): Cada jugador tira 1 dado de ataque; con un «-1», la IA lanza un hechizo destructivo contra tus unidades (Flecha Mágica descarte de unidad, Rayo descarte de Plata/Bronce, Celeridad +1 PM al héroe, Rayo Disruptivo anula habilidades de neutrales I-V).
+
+4. PÉRDIDA DE LA INOCENCIA (Modo 3 Jugadores, 11 Rondas):
+   - Disputa del Grial: Transportar el Grial reduce los PM del héroe en -1.
+   - Caída del Grial: Si el héroe con el Grial se rinde o es derrotado por tropas neutrales o enemigas, la ficha del Grial cae en la casilla donde ocurrió el combate. Derrotar al héroe portador permite arrebatarle el Grial.
+   - Victoria: Quedar como único jugador vivo O llevar la ficha del Grial a tu ciudad.
+
+5. EL TRÉBOL CARMESÍ (Modo 2 a 4 Jugadores, 14 Rondas):
+   - Monolitos Interconectados: Todos los monolitos bidireccionales del mapa están conectados en red.
+   - Reglas de Eliminación Muerte Súbita: Prohibida la retirada. Perder la ciudad o ver derrotado al héroe principal elimina al jugador de la partida.
+   - Victoria: Jugador que haya eliminado al mayor número de rivales al final de la ronda 14.`
+  },
+  {
+    id: "sg2-03-campana-inferno-creadores-de-pesares",
+    title: "Stretch Goals 2: Campaña de Inferno 'Creadores de Pesares' (Xex, Xyron, Fiona y Xeron vs AvLee, Bracada y Conflujo)",
+    category: "modes",
+    content: `CAMPAÑA INFERNO: 'CREADORES DE PESARES' (Xex, Xyron, Fiona, Xeron):
+
+MISIÓN 1: UN PLAN DIABÓLICO (12 Rondas):
+- Facción: Inferno (Xex). Enfrenta a los exploradores de Murallas y a la Reina de los Dragones Dorados.
+- Regla de Persecución: Los exploradores de las Murallas avanzan 2 PM por el camino más corto hacia la Utopía del Dragón.
+- Derrota: Si cualquier explorador de Murallas alcanza la casilla de la Reina de los Dragones Dorados antes que tú.
+- Victoria: Derrotar al ejército de la Reina de los Dragones Dorados.
+
+MISIÓN 2: GOLPEA EL HIERRO MIENTRAS ESTÉ FRÍO (13 Rondas):
+- Invasión contra Steadwick. Enemigo: General Kendal y oleadas de la Vanguardia de Ironfist.
+- Tropas Retardantes (Defensa Urbana de Emergencia): Permite reclutar una reserva de guarnición del mazo de tropas neutrales para defender tus ciudades en ausencia del héroe.
+- Obeliscos de la Misión: Visitar un obelisco exige pagar 5 Oro y 1 Objeto de Valor a cambio de +1 PM y colocar un cubo de facción.
+- Victoria: Señalizar todos los obeliscos del mapa y capturar la ciudad de Castillo (Steadwick).
+
+MISIÓN 3: CUSTODIOS DE LOS PESARES (13 Rondas):
+- Emboscada Planar a los Héroes de Conflujo (Océano Eterno, Guardias de Cristal, Custodios del Fuego).
+- Modificadores de Dificultad Dinámicos: En la ronda 1 la dificultad del mapa baja 1 nivel (IV->III, V->IV). En la ronda 9 la dificultad de loseta elemental sube 1 nivel (IV->V, V->VI).
+- Combates Obligatorios: Se debe haber derrotado al menos a 1 héroe enemigo antes de terminar la ronda 9, y a 2 héroes antes de la ronda 11.
+- Victoria: Derrotar a los tres héroes de la IA.`
+  },
+  {
+    id: "sg2-04-nuevas-ubicaciones-sg2",
+    title: "Stretch Goals 2: Catálogo de Nuevas Ubicaciones del Mapa (Mina: Aserradero, Reserva de Cíclopes y Ciudad Aleatoria)",
+    category: "components",
+    content: `CATÁLOGO DE NUEVAS UBICACIONES DEL MAPA (STRETCH GOALS 2):
+
+1. Mina: Aserradero (Señalizable):
+   - Funciona como una mina terrestre. Al capturarla de forma neutral otorga su beneficio directo de inmediato y genera +2 Materiales de Construcción de ingresos pasivos al inicio de cada ronda de recursos.
+
+2. Reserva de Cíclopes (Visitable):
+   - Desafío táctico: Al preparar el combate neutral, en lugar de robar 1 unidad Azur (), busca 2 cartas de Cíclopes (Plata ) en la pila de descartes o mazo neutral y añádelas al ejército enemigo.
+   - Recompensa por Victoria: Tira y resuelve 4 dados de recursos (ReDie).
+
+3. Ciudad Aleatoria (Señalizable):
+   - Al descubrirse, se asigna a una facción no jugada. Genera +10 Oro al capturarse y +10 Oro pasivo por ronda. Se asedia sin utilizar la carta de Torre de Arqueros.`
   }
 ];
 
 export const rulesKB = reglasCombinadas;
+
+
 
 
 
