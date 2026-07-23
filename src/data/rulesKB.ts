@@ -1,6 +1,7 @@
 import { RuleSection } from '../types';
+import { reglasCombinadas } from './reglasCombinadas';
 
-export const rulesKB: RuleSection[] = [
+const baseRulesKB: RuleSection[] = [
   {
     id: "overview_factions",
     title: "1. Descripción General del Juego y las 10 Facciones de Erathia",
@@ -2038,3 +2039,5 @@ II. EXPLORACIÓN BAJO TIERRA:
 • Exploración en la Oscuridad: Las losetas subterráneas no pueden ser reveladas mediante búsquedas de superficie estándar (Scouting); exigen entrar físicamente en el subsuelo para ser desveladas. En estas profundidades abundan los ejércitos de oro de la facción de Mazmorra y los bancos de criaturas como la "Utopía del Dragón".`
   }
 ];
+
+export const rulesKB: RuleSection[] = [...baseRulesKB, ...reglasCombinadas];

@@ -1,14 +1,19 @@
 import { RuleSection } from '../types';
 
 /**
- * REGLAS COMBINADAS - REGLAMENTO OFICIAL DE HEROES OF MIGHT AND MAGIC III: EL JUEGO DE MESA
- * Fuente Oficial: Archon Studio (HoMM-Rulebook_ESP.pdf, Versión 1.0 ESP)
+ * REGLAS COMBINADAS - REGLAMENTO OFICIAL Y EXPANSIONES
+ * Fuentes Oficiales Archon Studio / Ubisoft:
+ * 1. Libro de Reglas Base (HoMM-Rulebook_ESP.pdf, v1.0 ESP)
+ * 2. Expansión Murallas y Libro de Misiones (HoMM-Rampart-Mission-Book_ESP.pdf, v1.0 ESP)
  *
- * Indexación completa y detallada del Libro de Reglas base, estructurada siguiendo
- * exactamente la tabla de contenidos oficial (Capítulos 1 al 15 + Ayuda de Juego).
+ * Compendio completo e indexado de reglas, componentes, mecánicas, construcciones,
+ * modos de juego y campañas oficiales en español de España.
  */
 
 export const reglasCombinadas: RuleSection[] = [
+  // =========================================================================
+  // LIBRO DE REGLAS BASE
+  // =========================================================================
   {
     id: "cap-1-componentes",
     title: "1. Lista de Componentes del Juego Base",
@@ -347,6 +352,171 @@ SÍMBOLOS EN EL MAPA Y EFECTOS:
 RECUERDO RÁPIDO DE ACCIONES DE MORAL:
 - Moral Positiva: Robar 1 carta, volver a lanzar 1 dado, o descartar/robar el mismo número de cartas.
 - Moral Negativa: Si ya posees moral negativa y recibes otra, descarta todas tus cartas al final del turno. (Necrópolis ignora la moral).`
+  },
+
+  // =========================================================================
+  // EXPANSIÓN MURALLAS (RAMPART) Y LIBRO DE MISIONES
+  // =========================================================================
+  {
+    id: "rampart-01-componentes",
+    title: "Murallas 1. Lista de Componentes de la Expansión Murallas",
+    category: "components",
+    content: `COMPONENTES INCLUIDOS EN LA EXPANSIÓN MURALLAS (RAMPART):
+
+LOSETAS Y TABLEROS:
+- 7 Losetas de mapa (1 inicial [I], 3 lejanas [II-III], 2 cercanas [IV-V], 1 central [VI-VII])
+- 1 Tablero de ciudad de la facción Murallas (Rampart)
+- 1 Libro de misiones de Murallas (28 páginas)
+- 1 Ayuda de juego
+
+MINIATURAS Y CARTAS:
+- 2 Miniaturas de héroe (Gem y Gelu)
+- 7 Miniaturas de unidad (Centauros, Enanos, Elfos, Pegasos, Dendroides, Unicornios, Dragones Dorados)
+- 1 Carta de héroe a doble cara (Gem / Gelu)
+- 7 Cartas de unidad de Murallas (a doble cara)
+- 7 Losetas de edificio de ciudad de Murallas
+- 2 Cartas de unidad neutral
+- 3 Cartas de anuncio astrológico
+- 8 Cartas de artefacto
+- 20 Cartas de hechizo
+- 4 Cartas de habilidad
+- 6 Cartas de especialidad de héroe
+- 12 Cartas de Máquina de Guerra (Balista, Catapulta, Carro de Municiones, Tienda de Primeros Auxilios, etc.)
+- 7 Cartas de característica (1 Ataque, 3 Defensa, 1 Poder, 2 Conocimiento)
+
+FICHAS Y RECURSOS:
+- 9 Fichas de oro (3 de "1", 3 de "3", 3 de "10")
+- 6 Fichas de materiales de construcción (3 de "1", 3 de "3")
+- 4 Fichas de objetos de valor (3 de "1", 1 de "3")
+- 1 Ficha de construcción, 1 de población, 1 de libro de hechizos, 1 de moral
+- 30 Cubos acrílicos (10 negros, 20 verdes)`
+  },
+  {
+    id: "rampart-02-nuevos-elementos",
+    title: "Murallas 2. Nuevos Elementos: Efectos Permanentes, Máquinas de Guerra y Mapa",
+    category: "combat",
+    content: `NUEVAS MECÁNICAS E INTRODUCCIONES DE LA EXPANSIÓN:
+
+1. CARTAS DE EFECTO PERMANENTE (Icono Infinito ∞):
+   - Otorgan un bonificador pasivo o condición continua.
+   - Al jugarse, la carta se coloca frente al jugador y permanece activa hasta descartarse o sustituirse.
+   - Cada héroe solo puede tener 1 carta de efecto permanente activa a la vez.
+   - Permiten usar efectos básicos o avanzados (según el nivel del héroe), pero no se apilan entre sí.
+
+2. MÁQUINAS DE GUERRA (Balista, Catapulta, Carro de Municiones, Tienda de Primeros Auxilios):
+   - Se compran en la Fábrica de Máquinas de Guerra o en el Mercadillo.
+   - Comprar una máquina de guerra en un Mercadillo impide realizar otras acciones en esa visita y cuesta 3 de oro adicionales sobre su precio de fábrica.
+
+3. NUEVAS LOCALIZACIONES DEL MAPA:
+   - Fábrica de Máquinas de Guerra (Re-visitable): Permite comprar máquinas de guerra.
+   - Aserradero (Mina - Señalizable): Produce pasivamente 2 Materiales de Construcción por ronda de recursos.`
+  },
+  {
+    id: "rampart-03-modo-alianza",
+    title: "Murallas 3. Reglamento Oficial del Modo Alianza (2 contra 2)",
+    category: "modes",
+    content: `REGLAS ADICIONALES PARA PARTIDAS EN EQUIPO (2v2):
+
+REQUISITOS Y REGLAS DE ALIANZA:
+- Requiere 4 jugadores formando 2 alianzas de 2 jugadores.
+- Cada jugador elige su facción al inicio. La alianza dura todo el escenario.
+- Intercambio de Artefactos: Dos héroes aliados pueden intercambiarse artefactos de la mano si se encuentran en zonas adyacentes.
+- Intercambio Libre de Recursos: Los miembros de la misma alianza pueden transferir y compartir recursos libremente durante el turno de cualquiera de ellos, sin importar la posición de sus héroes en el mapa.
+- Control de Zonas: Un jugador no puede señalizar ni capturar un lugar que ya esté señalizado por su compañero de alianza.
+
+CONDICIONES DE FIN DE ESCENARIO:
+- Los héroes aliados comparten la victoria o la derrota por igual. No hay recuento individual de puntos.`
+  },
+  {
+    id: "rampart-04-escenario-el-desafio",
+    title: "Murallas 4. Escenario Alianza: 'El Desafío' (4 Jugadores)",
+    category: "modes",
+    content: `ESCENARIO ALIANZA 'EL DESAFÍO':
+
+NARRATIVA: El rey va a morir y desafía a quien construya el Grial en la capital Osha a convertirse en su sucesor.
+- Jugadores: 4 (2v2). Duración: 11-14 rondas.
+- Preparación del Mapa: 4 losetas iniciales (I), 8 lejanas (II-III), 8 cercanas (IV-V con 4 obeliscos), 2 centrales (VI-VII con 1 grial).
+
+RECURSOS E INGRESOS INICIALES:
+- Suministros: 16 Oro, 4 Materiales, 1 Objeto de Valor.
+- Ingresos: 10 Oro, 0 Materiales, 0 Objetos de Valor.
+- Edificio inicial: Vivienda de Bronce. Tropas iniciales: 2 manadas de Bronce de menor coste.
+
+REGLAS DEL ESCENARIO:
+- Visitar un Obelisco permite lanzar 2 dados de tesoro y resolver 1.
+- No se puede acceder a la zona del Grial hasta que la alianza haya visitado al menos 4 obeliscos diferentes.
+- Excavar la Ficha de Grial requiere gastar 2 PM en la zona del Grial.
+- Si el héroe con el Grial es derrotado en combate o se rinde, la ficha de Grial cae en esa zona o pasa al vencedor.
+- Entregar el Grial en la ciudad otorga +5 de ingresos de Oro.
+- Victoria: Conseguir la ficha de Grial y llevarla a la ciudad natal de tu facción.`
+  },
+  {
+    id: "rampart-05-escenario-oro-enano",
+    title: "Murallas 5. Escenario Enfrentamiento: 'Oro Enano' (2-3 Jugadores)",
+    category: "modes",
+    content: `ESCENARIO ENFRENTAMIENTO 'ORO ENANO':
+
+NARRATIVA: Fiebre del oro tras el hallazgo del minero enano Invis Smythers.
+- Jugadores: 2 o 3. Duración: 10 rondas.
+
+RECURSOS E INGRESOS INICIALES:
+- Suministros: 15 Oro, 3 Materiales, 1 Objeto de Valor.
+- Ingresos: 10 Oro, 2 Materiales, 0 Objetos de Valor.
+- Tropas iniciales: 1 manada de Bronce de mayor coste.
+
+REGLAS ESPECIALES:
+- Prohibido el uso de cartas que otorguen recursos directos (se descartan y se roba otra al buscar).
+- Solo los héroes principales pueden reclamar el Grial.
+- La Ficha de Grial concede 15 Oro inmediatos y +5 de ingresos al llegar a la ciudad.
+- Evento contrarreloj: En las rondas 2, 4, 6, 8 y 10, retira todos los cubos negros de los molinos y molinos de agua.
+- Victoria: Acumular 75 de Oro en tu reserva al final de cualquier ronda.`
+  },
+  {
+    id: "rampart-06-campana-mision-1",
+    title: "Murallas 6. Campaña 'La Venganza se Sirve Fría' - Misión 1: En Busca de un Asesino",
+    category: "modes",
+    content: `CAMPAÑA DE LAS MURALLAS - ESCENARIO 1: EN BUSCA DE UN ASESINO
+
+HISTORIA: Asesinato de lord Falorel (descubierto como un señor vampiro infiltrado de Deyja) y la invasión de Soledare.
+- Héroe Principal del Jugador: Gelu (Facción Murallas). Duración: 11 rondas.
+- Enemigos de la IA (Necrópolis): Aislinn, Galthran y el Ejército de la Ciudad.
+
+REGLAS Y EVENTOS DESTACADOS:
+- Visitar un obelisco por primera vez activa el rescate o ruinas de Soledare.
+- Derrotar ejércitos enemigos otorga 2 Objetos de Valor.
+- Evento Ronda 7: La dificultad de todos los combates del mapa aumenta en +1.
+- Victoria: Derrotar a todos los ejércitos enemigos de la Necrópolis.`
+  },
+  {
+    id: "rampart-07-campana-mision-2",
+    title: "Murallas 7. Campaña 'La Venganza se Sirve Fría' - Misión 2: Paz Definitiva",
+    category: "modes",
+    content: `CAMPAÑA DE LAS MURALLAS - ESCENARIO 2: PAZ DEFINITIVA
+
+HISTORIA: La druida Gem investiga el asesinato de lord Fayette, resucitado por los nigromantes como un Caballero del Terror.
+- Héroe Principal del Jugador: Gem (Facción Murallas). Duración: 13 rondas.
+- Enemigos de la IA (Necrópolis): Guardias de lord Fayette y Lord Fayette.
+
+REGLAS Y EVENTOS DESTACADOS:
+- En la zona de ciudad de la loseta de Necrópolis, lucha contra la guarnición con 3 murallas y 1 puerta.
+- Teletransporte Místico: Los obeliscos de las losetas cercanas de Necrópolis y Mazmorra están interconectados y teletransportan al héroe de una a otra.
+- Victoria: Derrotar a lord Fayette para liberar su alma.`
+  },
+  {
+    id: "rampart-08-campana-mision-3",
+    title: "Murallas 8. Campaña 'La Venganza se Sirve Fría' - Misión 3: Agentes de la Venganza",
+    category: "modes",
+    content: `CAMPAÑA DE LAS MURALLAS - ESCENARIO 3: AGENTES DE LA VENGANZA
+
+HISTORIA: Gem y Gelu unen sus fuerzas para invadir Deyja y detener el complot del nigromante Sandro antes de que complete un artefacto destructivo.
+- Héroes del Jugador: Gem y Gelu. Duración: 12 rondas.
+- Enemigos de la IA: Charna, Galthran y Vidomina.
+
+REGLAS Y EVENTOS DESTACADOS:
+- Dificultad Aumentada: Todos los combates en losetas de Necrópolis tienen +1 a la dificultad de zona.
+- Combate Final en el Castillo Crypthome (Utopía del Dragón): Enfrentamiento masivo contra Vidomina. La manada de esqueletos enemiga equipa las cartas de especialidad de Sandro y realiza un ataque gratuito.
+- Gelu o Gem otorgan bonificaciones directas de daño al inicio de la batalla final.
+- Victoria: Derrotar al ejército enemigo en la Utopía del Dragón.`
   }
 ];
 
