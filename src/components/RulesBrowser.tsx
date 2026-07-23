@@ -4,8 +4,7 @@ import { RuleSection } from '../types';
 import { 
   Search, BookOpen, Layers, Swords, MessageSquareCode, Package, Compass, 
   Map, Home, Sparkles, HelpCircle, Coins, Trees, Hammer, Gem, Flame, Shield, Star,
-  Zap, Plus, Droplet,
-Heart
+  Zap, Plus, Droplet, Heart, Award, ExternalLink
 } from 'lucide-react';
 
 function highlightKeywords(text: string): React.ReactNode {
@@ -326,7 +325,7 @@ function highlightKeywords(text: string): React.ReactNode {
   });
 }
 
-function parseFormattedText(text: string): React.ReactNode {
+function parseFormattedText(text: string, onNavigateTab?: (tab: string) => void): React.ReactNode {
   const lines = text.split('\n');
   const elements: React.ReactNode[] = [];
   
@@ -358,6 +357,27 @@ function parseFormattedText(text: string): React.ReactNode {
 
   lines.forEach((line, index) => {
     const trimmed = line.trim();
+
+    // Check if line contains a tab link markdown: [Text](tab:skills)
+    const tabLinkMatch = trimmed.match(/\[([^\]]+)\]\(tab:([a-z_]+)\)/);
+    if (tabLinkMatch) {
+      flushFaqCard(index);
+      const linkText = tabLinkMatch[1];
+      const targetTab = tabLinkMatch[2];
+      elements.push(
+        <div key={index} className="my-3">
+          <button
+            onClick={() => onNavigateTab?.(targetTab)}
+            className="px-4 py-2.5 bg-amber-600 hover:bg-amber-500 text-white rounded-xl font-bold text-xs sm:text-sm inline-flex items-center gap-2 transition duration-200 shadow-lg hover:shadow-amber-900/50 cursor-pointer border border-amber-400/40"
+          >
+            <Award className="w-4 h-4 text-amber-200" />
+            <span>{linkText}</span>
+            <ExternalLink className="w-3.5 h-3.5 text-amber-200 ml-1" />
+          </button>
+        </div>
+      );
+      return;
+    }
     
     // Check if we are starting a Q or A
     const isQ = trimmed.startsWith('P:') || trimmed.startsWith('**P:**') || trimmed.startsWith('#### P:');
@@ -414,9 +434,11 @@ function parseFormattedText(text: string): React.ReactNode {
 }
 
 export default function RulesBrowser({ 
-  onSelectSection
+  onSelectSection,
+  onNavigateTab
 }: { 
   onSelectSection?: (section: RuleSection) => void;
+  onNavigateTab?: (tab: string) => void;
 }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -509,10 +531,50 @@ export default function RulesBrowser({
                   <h4 className="text-base sm:text-lg font-serif font-medium text-amber-200 tracking-tight flex items-center gap-2">
                     <span>📚</span> {section.title}
                   </h4>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 flex-wrap">
                     <span className="px-2 py-0.5 rounded text-[10px] font-mono uppercase bg-slate-800 text-amber-400 border border-amber-900/30">
                       {section.category}
                     </span>
+                    {onNavigateTab && (section.category === 'skills' || section.id === 'deck_building_and_secondary_skills') && (
+                      <button
+                        onClick={() => onNavigateTab('skills')}
+                        className="px-2.5 py-1 bg-amber-600 hover:bg-amber-500 text-white rounded text-xs transition duration-200 cursor-pointer font-bold flex items-center gap-1 shadow-sm"
+                        title="Ir al visor completo de habilidades"
+                      >
+                        <Award className="w-3.5 h-3.5 text-amber-200" />
+                        <span>Ver 32 Habilidades ➔</span>
+                      </button>
+                    )}
+                    {onNavigateTab && (section.category === 'magic' || section.id === 'magic_system_and_spells_catalog' || section.category === 'spells') && (
+                      <button
+                        onClick={() => onNavigateTab('spells')}
+                        className="px-2.5 py-1 bg-amber-600 hover:bg-amber-500 text-white rounded text-xs transition duration-200 cursor-pointer font-bold flex items-center gap-1 shadow-sm"
+                        title="Ir al visor completo de hechizos"
+                      >
+                        <Sparkles className="w-3.5 h-3.5 text-amber-200" />
+                        <span>Ver Hechizos ➔</span>
+                      </button>
+                    )}
+                    {onNavigateTab && (section.category === 'map' || section.id === 'adventure_map_tiles_and_locations' || section.category === 'locations') && (
+                      <button
+                        onClick={() => onNavigateTab('locations')}
+                        className="px-2.5 py-1 bg-amber-600 hover:bg-amber-500 text-white rounded text-xs transition duration-200 cursor-pointer font-bold flex items-center gap-1 shadow-sm"
+                        title="Ir al visor completo de lugares del mapa"
+                      >
+                        <Compass className="w-3.5 h-3.5 text-amber-200" />
+                        <span>Ver Lugares del Mapa ➔</span>
+                      </button>
+                    )}
+                    {onNavigateTab && (section.category === 'units' || section.id === 'units_war_machines_and_creature_banks') && (
+                      <button
+                        onClick={() => onNavigateTab('units')}
+                        className="px-2.5 py-1 bg-amber-600 hover:bg-amber-500 text-white rounded text-xs transition duration-200 cursor-pointer font-bold flex items-center gap-1 shadow-sm"
+                        title="Ir al visor completo de unidades"
+                      >
+                        <Swords className="w-3.5 h-3.5 text-amber-200" />
+                        <span>Ver Unidades ➔</span>
+                      </button>
+                    )}
                     {onSelectSection && (
                       <button
                         onClick={() => onSelectSection(section)}
@@ -525,7 +587,7 @@ export default function RulesBrowser({
                 </div>
                 
                 <div className="space-y-1 font-sans text-sm text-slate-300 leading-relaxed">
-                  {parseFormattedText(section.content)}
+                  {parseFormattedText(section.content, onNavigateTab)}
                 </div>
               </div>
             ))

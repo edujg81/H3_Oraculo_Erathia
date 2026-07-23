@@ -372,6 +372,7 @@ export default function App() {
               <div className="space-y-4">
                 <RulesBrowser 
                   onSelectSection={handleSelectSectionFromRules} 
+                  onNavigateTab={(tab) => setActiveTab(tab as any)}
                 />
               </div>
             )}

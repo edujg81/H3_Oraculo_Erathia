@@ -251,30 +251,138 @@ TIPOS DE EFECTOS EN CARTAS:
 • Continuos (Ongoing): Duran hasta consumir su efecto o hasta el inicio del siguiente turno del jugador.
 • Permanentes: Permanecen en mesa otorgando ventajas continuas. Límite estricto de 1 carta permanente activa a la vez por héroe.
 
-CATÁLOGO UNIFICADO DE LAS 32 HABILIDADES SECUNDARIAS:
+CATÁLOGO COMPLETO DE LAS 32 HABILIDADES SECUNDARIAS OFICIALES:
 Cada carta de habilidad posee un Efecto Básico (gratuito) y un Efecto Experto (requiere gastar un uso de Experto):
 
-1. Nigromancia (Necromancy - Exclusivo Necrópolis): Básico: Tras ganar combate, refuerza tropas o alista esqueletos pagando mitad coste. Experto: Refuerza tropas o alista esqueletos gratis.
-2. Ofensa (Offense): Básico: +1 Ataque a una unidad. Experto: +2 Ataque a una unidad o +1 a todas.
-3. Defensa (Armorer / Defense): Básico: +1 Defensa a una unidad. Experto: +2 Defensa a una unidad.
-4. Liderazgo (Leadership): Básico: Gana 1 Ficha de Moral Positiva. Experto: Gana 1 Moral Positiva y roba 1 carta.
-5. Sabiduría (Wisdom): Básico: Reduce coste de comprar hechizos en 2 de oro. Experto: Reduce coste en 3 de oro y Busca (3) en Hechizos.
-6. Misticismo (Mysticism): Básico: Al lanzar un hechizo, recupera 1 Poder. Experto: Recupera 2 Poderes o roba 1 carta.
-7. Logística (Logistics): Básico: +1 Punto de Movimiento (PM). Experto: +2 Puntos de Movimiento (PM).
-8. Balística (Ballistics): Básico: En asedio, la catapulta realiza +1 ataque. Experto: En asedio, la catapulta inflige +2 de daño.
-9. Navegación (Navigation): Básico: +1 PM en agua y evita daño de remolino. Experto: +2 PM en agua y gana 1 dado de tesoro.
-10. Arquería (Archery): Básico: +1 Ataque a tropas a distancia. Experto: +2 Ataque a tropas a distancia o ignora penalización de distancia.
-11. Botánica / Fincas (Estates): Básico: Gana +2 de Oro en ronda de recursos. Experto: Gana +4 de Oro o +1 Material.
-12. Táctica (Tactics): Básico: Reposiciona 1 unidad en despliegue. Experto: Reposiciona 2 unidades o otorga +1 Iniciativa.
-13. Resistencia (Resistance): Básico: Cancela 1 hechizo enemigo reduciendo su daño en 2. Experto: Cancela hechizo o inmuniza a una unidad.
-14. Hechicería (Sorcery): Básico: +1 al Poder de hechizos de combate. Experto: +2 al Poder de hechizos de combate.
-15. Inteligencia (Intelligence): Básico: Aumenta tu límite de mano en +1 este turno. Experto: Aumenta límite de mano en +2 y roba 1 carta.
-16. Aprendizaje (Learning): Básico: Gana 1 Exp adicional tras combate. Experto: Gana 2 Exp adicionales.
-17. Detección / Exploración (Scouting): Básico: Revela loseta adyacente gratis. Experto: Revela loseta y gana 1 dado de recursos.
-18. Diplomacia (Diplomacy): Básico: Recluta 1 unidad neutral bronce/plata pagando su coste. Experto: Recluta unidad neutral con descuento.
-19. Primeros Auxilios (First Aid): Básico: Cura 2 heridas a una unidad en combate. Experto: Cura 4 heridas o resucita 1 unidad "Unas pocas".
-20. Táctica de Asedio (Siegecraft): Básico: Ignora protección de muros en asedio. Experto: Destruye 1 muro automáticamente.
-... Y el resto del compendio oficial de las 32 habilidades.`
+1. Magia de aire [Magia]:
+   • Básico: Permanente: +1 Poder para hechizos de la escuela de magia de aire.
+   • Experto: Cuando lances un Hechizo de la escuela de aire, puedes descartar esta carta y ganar +3 Poder.
+
+2. Magia de tierra [Magia]:
+   • Básico: Permanente: +1 Poder para hechizos de la escuela de magia de tierra.
+   • Experto: Cuando lances un Hechizo de la escuela de tierra, puedes descartar esta carta y ganar +3 Poder.
+
+3. Magia de fuego [Magia]:
+   • Básico: Permanente: +1 Poder para hechizos de la escuela de magia de fuego.
+   • Experto: Cuando lances un Hechizo de la escuela de fuego, puedes descartar esta carta y ganar +3 Poder.
+
+4. Magia de agua [Magia]:
+   • Básico: Permanente: +1 Poder para hechizos de la escuela de magia de agua.
+   • Experto: Cuando lances un Hechizo de la escuela de agua, puedes descartar esta carta y ganar +3 Poder.
+
+5. Magia básica del aire [Magia]:
+   • Básico: Permanente: En lugar de buscar en el mazo de hechizos, encuentra el primer Hechizo de magia de aire que haya en él y llévate el Hechizo a la mano. A continuación, vuelve a barajar el mazo.
+   • Experto: Instantáneo: +3 Poder para un Hechizo de magia de aire.
+
+6. Magia básica de la tierra [Magia]:
+   • Básico: Permanente: En lugar de buscar en el mazo de hechizos, encuentra el primer Hechizo de magia de tierra que haya en él y llévate el Hechizo a la mano. A continuación, vuelve a barajar el mazo.
+   • Experto: Instantáneo: +3 Potencia para un Hechizo de magia de tierra.
+
+7. Magia básica del fuego [Magia]:
+   • Básico: Permanente: En lugar de buscar en el mazo de hechizos, encuentra el primer Hechizo de magia de fuego que haya en él y llévate el Hechizo a la mano. A continuación, vuelve a barajar el mazo.
+   • Experto: Instantáneo: +3 Potencia para un Hechizo de magia de fuego.
+
+8. Magia básica del agua [Magia]:
+   • Básico: Permanente: En lugar de buscar en el mazo de hechizos, encuentra el primer Hechizo de magia de agua que haya en él y llévate el Hechizo a la mano. A continuación, vuelve a barajar el mazo.
+   • Experto: Instantáneo: +3 Potencia para un Hechizo de magia de agua.
+
+9. Tiro con arco [Combate]:
+   • Básico: En Curso: Durante esta ronda de combate, tus unidades a distancia ganan +1 Ataque si el objetivo no es una unidad adyacente.
+   • Experto: En Curso: Hasta el final de la siguiente ronda de combate, todas tus unidades a distancia ganan +1 Iniciativa y +1 Ataque si el objetivo no es una unidad adyacente.
+
+10. Armero [Combate]:
+   • Básico: Instantáneo: +1 Defensa. Después, roba 1 carta.
+   • Experto: Instantáneo: +2 Defensa. Después, roba 1 carta.
+
+11. Artillería [Combate]:
+   • Básico: Instantáneo: Inflige 1 Herida a la unidad enemiga con menor Iniciativa.
+   • Experto: Instantáneo: Al utilizar la carta Balista, resuelve su efecto 3 veces contra el mismo objetivo.
+
+12. Balística [Combate]:
+   • Básico: Instantáneo: Juega esta carta durante un asedio. Destruye 1 muralla o puerta.
+   • Experto: Instantáneo: Juega esta carta durante un asedio. Destruye la Torre de arqueros.
+
+13. Diplomacia [Apoyo]:
+   • Básico: Mapa: Por cada vivienda que tengas, roba 1 carta de la unidad neutral correspondiente. Podrás reclutar una de estas unidades si pagas su coste de reclutamiento.
+   • Experto: Instantáneo: Ignora el combate con unidades neutrales en una zona cuya dificultad de la zona sea igual al nivel de tu héroe. Visita la zona. Tu héroe no gana experiencia.
+
+14. Vista de águila / Ojo de lince [Desarrollo]:
+   • Básico: Instantáneo: Roba cartas del mazo de hechizos hasta que encuentres una carta de hechizo básico. Llévatela a la mano o descártala. Devuelve el resto al mazo y barájalo.
+   • Experto: Instantáneo: Roba cartas del mazo de hechizos hasta que encuentres una carta de hechizo avanzado. Llévatela a la mano o descártala. Devuelve el resto al mazo y barájalo.
+
+15. Patrimonio [Economía]:
+   • Básico: Instantáneo: Gana 3 Oros.
+   • Experto: Instantáneo: Gana 6 Oros.
+
+16. Primeros auxilios [Apoyo]:
+   • Básico: Instantáneo: Retira 1 Herida de una de tus unidades.
+   • Experto: Instantáneo: Cuando utilices la carta Tienda de primeros auxilios, resuelve su efecto 3 veces contra el mismo objetivo.
+
+17. Inteligencia / Espionaje [Magia]:
+   • Básico: Instantáneo: Al comienzo de la ronda de combate, juega una carta de hechizo. Durante la ronda de combate sigues pudiendo jugar solo una carta de hechizo.
+   • Experto: Instantáneo: Al comienzo de la ronda de combate, juega una carta de hechizo. Este hechizo no cuenta para el límite de hechizos por ronda de combate.
+
+18. Interferencia [Apoyo]:
+   • Básico: Instantáneo: +1 Defensa. Este efecto se puede utilizar para reducir el Daño de un Hechizo.
+   • Experto: Instantáneo: +2 Defensa. Este efecto se puede utilizar para reducir el Daño de un Hechizo.
+
+19. Liderazgo [Combate]:
+   • Básico: Instantáneo: Gana una ficha de Moral Positiva.
+   • Experto: Instantáneo: Roba 2 cartas. Después, gana una ficha de Moral Positiva.
+
+20. Aprendizaje [Desarrollo]:
+   • Básico: Instantáneo: Juégala cuando el héroe esté a punto de subir de level. Aumenta su nivel de experiencia en medio nivel adicional.
+   • Experto: Instantáneo: Juégala cuando el héroe esté a punto de subir de level. Aumenta su nivel de experiencia en un nivel adicional y después retira esta carta.
+
+21. Logística [Aventura]:
+   • Básico: En Curso: Al final de tu turno, mueve la miniatura de tu héroe a una zona vacía adyacente.
+   • Experto: Instantáneo: Tu héroe gana +1 de movimiento.
+
+22. Suerte [Combate]:
+   • Básico: En Curso: Puedes volver a lanzar un dado de tesoro y de recurso una vez durante este turno.
+   • Experto: En Curso: Puedes volver a lanzar tantos dados como quieras una vez durante este turno.
+
+23. Misticismo [Magia]:
+   • Básico: Instantáneo: Juega esta carta inmediatamente después de lanzar un hechizo. En vez de descartar la carta de hechizo, devuélvela a tu mano.
+   • Experto: Instantáneo: Juega esta carta inmediatamente después de lanzar un hechizo. En vez de descartar la carta de Hechizo y el resto de las cartas que juegues con ella, devuélvelas a tu mano.
+
+24. Nigromancia [Apoyo]:
+   • Básico: Mapa: Juégalo después de ganar un combate que no sea un combate rápido. Refuerza una de tus unidades Bronce o Plata por la mitad del coste en Oro (redondeado hacia abajo).
+   • Experto: Mapa: Juégalo después de ganar un combate que no sea un combate rápido. Refuerza cualquiera de tus unidades por la mitad del coste en Oro (redondeado hacia abajo).
+
+25. Ofensa [Combate]:
+   • Básico: Instantáneo: +1 Ataque. Después, roba 1 carta.
+   • Experto: Instantáneo: +2 Ataque. Después, roba 1 carta.
+
+26. Orientación [Aventura]:
+   • Básico: Mapa: Este turno, tu héroe puede moverse por zonas con unidades neutrales y héroes enemigos, pero, si acaba en una de estas zonas, empezará el combate.
+   • Experto: Mapa: Tu héroe puede atravesar bordes amarillos y zonas bloqueadas, pero no puede acabar su movimiento en ellas.
+
+27. Resistencia [Apoyo]:
+   • Básico: Instantáneo: Juega esta carta inmediatamente después de que el enemigo lance un hechizo. Si ha lanzado el hechizo con 1 Potencia o menos, ignora el efecto de la carta de hechizo.
+   • Experto: Instantáneo: Juega esta carta inmediatamente después de que el enemigo lance un hechizo. Ignora el efecto de la carta de hechizo.
+
+28. Erudito [Desarrollo]:
+   • Básico: Instantáneo: Elige 1 carta de tu descarte y añádela a tu mano.
+   • Experto: Mapa: Retira hasta 2 cartas de característica de tu mano o del descarte. Coge 2 cartas de característica potenciada y colócalas en la parte superior de tu descarte. Retira el Erudito.
+
+29. Exploración [Aventura]:
+   • Básico: Instantáneo: Juega esta carta cuando vayas a buscar para buscar(3).
+   • Experto: Instantáneo: Juega esta carta cuando vayas a buscar para buscar(5).
+
+30. Hechicería [Magia]:
+   • Básico: Instantáneo: +1 Potencia. Después, roba 1 carta.
+   • Experto: Instantáneo: +2 Potencia. Después, roba 1 carta.
+
+31. Táctica [Combate]:
+   • Básico: Instantáneo: Al comienzo del combate, intercambia la posición de 2 de tus unidades.
+   • Experto: Activación: Durante el combate, intercambia la posición de 2 de tus unidades.
+
+32. Sabiduría [Desarrollo]:
+   • Básico: Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(3) en vez de buscar(2).
+   • Experto: Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(4) en vez de buscar(2).
+
+👉 **[Abrir el Visor Completo de las 32 Habilidades Secundarias ➔](tab:skills)**`
   },
 
   // =========================================================================
@@ -306,25 +414,78 @@ LÍMITES Y PERGAMINOS DE HECHIZO:
   - Se conjura al nivel de Poder mínimo impreso sin coste, pero NO se puede potenciar con Poder adicional.
   - Se pueden vender en el Puesto de Comercio por 2 Monedas de Oro por cada hechizo contenido.
 
-CATÁLOGO UNIFICADO DE HECHIZOS OFICIALES:
-1. Bola de Fuego (Fireball - Fuego): Inflige daño de área a una unidad objetivo y a sus casillas adyacentes según Poder.
-2. Rayo (Lightning Bolt - Aire): Inflige daño eléctrico directo de alto impacto a una unidad objetivo.
-3. Cadena de Rayos (Chain Lightning - Aire): Golpea a una unidad principal y encadena daño decreciente a unidades contiguas.
-4. Implosión (Implosion - Tierra): Hechizo experto de daño masivo a un solo objetivo.
-5. Bendición (Bless - Agua): Otorga el máximo resultado en las tiradas del Dado de Ataque a la unidad afectada.
-6. Maldición (Curse - Fuego): Fuerza a la unidad enemiga a aplicar el resultado mínimo (-1) en sus tiradas de dado.
-7. Piel de Piedra (Stone Skin - Tierra): Otorga +1 a +3 de Defensa o coloca una Ficha de Defensa en la unidad.
-8. Escudo de Fuego (Fire Shield - Fuego): Retribuye daño de fuego a cualquier enemigo que ataque en melé a la unidad protegida.
-9. Curación (Cure - Agua): Elimina heridas acumuladas y remueve estados negativos (Parálisis, Debilidad).
-10. Debilidad (Weakness - Agua): Coloca Ficha de Debilidad (-1 o -2 Ataque) en la unidad enemiga.
-11. Portal a la Ciudad (Town Portal - Tierra): Teletransporta al héroe de vuelta a una Ciudad o Asentamiento propio.
-12. Caminar sobre el Agua / Hazaña (Water Walk - Agua): Permite al héroe cruzar casillas de agua o ríos sin usar barco.
-13. Invocación de Elementales (Summon Elementals - Conflujo): Invoca tropas elementales (Aire, Fuego, Tierra, Agua) al tablero de combate.
-14. Muro de Fuego (Fire Wall - Fuego): Coloca Ficha de Muro de Fuego que daña a quien la cruce.
-15. Campo de Fuerza (Force Field - Agua): Despliega una barrera física de 2 casillas que bloquea tropas terrestres.
-16. Arenas Movedizas (Quicksand - Tierra): Sembrado de fichas ocultas que detienen el avance enemigo.
-17. Minas Terrestres (Land Mine - Fuego): Coloca fichas de mina que explotan infligiendo 2 heridas directas.
-18. Clonación (Clone - Agua): Crea una Ficha de Clon de una unidad aliada con 1 PS y 0 Defensa.`
+CATÁLOGO COMPLETO DE HECHIZOS OFICIALES POR ESCUELA DE MAGIA:
+
+🌪️ ESCUELA DE MAGIA DE AIRE:
+1. Celeridad [Básica]: En Curso: Aumenta la Iniciativa de la unidad seleccionada (+1 / +2 / +3 según Poder).
+2. Contragolpe [Avanzada]: Instantáneo: Retira el cubo negro de activación de contraataque; la unidad puede contraatacar de nuevo.
+3. Escudo aéreo [Básica]: En Curso: La unidad seleccionada gana Defensa (+1 / +2 / +3) al ser atacada por una unidad a distancia.
+4. Espejo mágico [Avanzada]: Instantáneo: Redirige un hechizo enemigo dirigido a tu unidad hacia un nuevo objetivo.
+5. Fortuna [Básica]: Instantáneo: Permite volver a lanzar dados de tesoro, recurso o ataque (1 / 2 / 3 veces).
+6. Invocar elemental de aire [Avanzada]: Activación: Invoca unidades de elementales de aire en un espacio vacío.
+7. Precisión [Básica]: Instantáneo: La unidad a distancia ignora penalizadores no adyacentes y gana Ataque (+1 / +2 / +3).
+8. Protección de aire [Avanzada]: Instantáneo: Cancela e ignora el efecto de un hechizo de la escuela de aire enemigo.
+9. Puerta dimensional [Avanzada]: Mapa: Mueve al héroe a través de zonas (1 / 2 / 3) ignorando obstáculos intermediarios.
+10. Rayo en cadena [Avanzada]: Activación: Daño eléctrico en cadena a la unidad objetivo y a las 2 unidades más cercanas.
+11. Rayo disruptor [Básica]: En Curso: La unidad seleccionada no puede usar su habilidad especial durante todo el combate.
+12. Relámpago [Básica]: Activación: Inflige daño eléctrico directo (2 / 3 / 4 Heridas) a la unidad seleccionada.
+13. Ver aire [Básica]: Mapa: Otorga recursos de aventura inmediatos (3 Oros / 2 Materiales / 1 Objeto de valor).
+14. Vuelo [Avanzada]: En Curso: El héroe atraviesa zonas bloqueadas y gana Puntos de Movimiento (+0 / +1 / +2).
+
+💧 ESCUELA DE MAGIA DE AGUA:
+1. Alborozo [Avanzada]: En Curso: Permite volver a lanzar dados de ataque durante una activación, ronda o combate.
+2. Anillo gélido [Avanzada]: Activación: Inflige daño por congelación (1 / 2 / 3 Heridas) a 2 unidades adyacentes a la casilla elegida.
+3. Bendición [Básica]: Instantáneo: La unidad ignora la tirada del dado de ataque obteniendo el valor máximo (+0 / +1 / +2 Ataque).
+4. Clon [Avanzada]: En Curso: Duplica una unidad aliada; el clon actúa igual pero tiene únicamente 1 Punto de Salud.
+5. Curación [Básica]: Instantáneo: Retira efectos o parálisis y remueve Heridas (1 / 2 / 3) de la unidad aliada.
+6. Debilidad [Básica]: Instantáneo: Reduce el Ataque (-1 / -2 / -3) de la unidad enemiga seleccionada.
+7. Disipar [Básica]: Instantáneo: Anula y retira todos los efectos En Curso activos sobre una unidad y su casilla.
+8. Invocar elemental de agua [Avanzada]: Activación: Invoca unidades de elementales de agua en un espacio vacío.
+9. Olvido [Básica]: En Curso: Impide que una unidad a distancia enemiga pueda atacar en su próxima activación.
+10. Paso acuático [Avanzada]: Mapa: Permite al héroe cruzar del mapa terrestre al marino sin barco y otorga movimiento (+0 / +1 / +2).
+11. Plegaria [Avanzada]: Instantáneo: Incrementa el Ataque, Defensa o Iniciativa (+1 / +2 / +3) de la unidad seleccionada.
+12. Protección de agua [Avanzada]: Instantáneo: Cancela e ignora el efecto de un hechizo de la escuela de agua enemigo.
+13. Retirar obstáculo [Básica]: Instantáneo: Elimina obstáculos físicos (muros, puertas, barreras) del tablero de combate.
+14. Teletransporte [Avanzada]: Activación: Traslada una unidad aliada a cualquier espacio vacío del tablero sin restricción.
+
+🔥 ESCUELA DE MAGIA DE FUEGO:
+1. Ansia de sangre [Básica]: Instantáneo: Otorga bonificación de Ataque (+1 / +2 / +3) a la unidad terrestre o voladora.
+2. Bola de fuego [Avanzada]: Activación: Explota infligiendo daño (1 / 2 / 3 Heridas) a 2 casillas adyacentes elegidas.
+3. Ceguera [Básica]: Activación: Coloca una ficha de Parálisis en la unidad seleccionada dejándola inactiva.
+4. Escudo de fuego [Avanzada]: En Curso: Devuelve daño (1 / 2 / 3 Heridas) a cualquier unidad adyacente que ataque a la protegida.
+5. Frenesí [Avanzada]: Instantáneo: El ataque de la unidad seleccionada ignora por completo la Defensa enemiga.
+6. Furia asesina [Avanzada]: En Curso: La unidad entra en frenesí obligándola a atacar o avanzar a la unidad más cercana.
+7. Infortunio [Básica]: Instantáneo: Anula un resultado de dado de ataque o un bonus de ataque enemigo cuando ataca.
+8. Inferno [Avanzada]: Activación: Lanza dados de ataque infligiendo daño masivo a la casilla objetivo y adyacentes.
+9. Invocar elemental de fuego [Avanzada]: Activación: Invoca unidades de elementales de fuego en un espacio vacío.
+10. Maldición [Básica]: Instantáneo: Reduce la Defensa (-1 / -2 / -3) de la unidad enemiga seleccionada.
+11. Matagigantes [Avanzada]: Instantáneo: Otorga múltiples tiradas de ataque devastadoras al atacar unidades de tier Oro.
+12. Mina [Avanzada]: En Curso: Despliega fichas de minas ocultas en el tablero que explotan al paso de tropas enemigas.
+13. Muro de fuego [Básica]: En Curso: Crea una barrera de llamas que inflige daño (1 / 2 / 3 Heridas) a quien la cruce.
+14. Protección de fuego [Avanzada]: Instantáneo: Cancela e ignora el efecto de un hechizo de la escuela de fuego enemigo.
+15. Sacrificio [Avanzada]: Activación: Transfiere Puntos de Salud de una unidad a otra para resucitar o sanar tropas.
+16. Visiones [Básica]: Instantáneo: Examina y reordena las cartas de unidades neutrales de cualquier mazo.
+
+🌿 ESCUELA DE MAGIA DE TIERRA:
+1. Antimagia [Básica]: En Curso: Otorga inmunidad completa impidiendo que la unidad sea objetivo de hechizos.
+2. Arenas movedizas [Básica]: En Curso: Oculta fichas de arenas movedizas en el tablero que inmovilizan a las tropas.
+3. Campo de fuerza [Básica]: En Curso: Despliega un obstáculo físico de campo de fuerza que bloquea el paso.
+4. Escudo [Básica]: Instantáneo: Incrementa la Defensa (+1 / +2 / +3) contra ataques de unidades terrestres o voladoras.
+5. Implosión [Avanzada]: Activación: Aplasta al objetivo infligiendo daño gravitacional masivo (2 / 4 / 6 Heridas).
+6. Invocar elemental de tierra [Avanzada]: Activación: Invoca unidades de elementales de tierra en un espacio vacío.
+7. Lentitud [Básica]: En Curso: Reduce la Iniciativa (-1 / -2 / -3) de la unidad enemiga durante todo el combate.
+8. Pesar [Avanzada]: Instantáneo: Cancela e ignora por completo la próxima activación de una unidad enemiga.
+9. Piel de piedra [Básica]: Instantáneo: Aumenta la Defensa (+1 / +2 / +3) de la unidad seleccionada.
+10. Portal a la ciudad [Avanzada]: Mapa: Teletransporta al héroe de inmediato a cualquier ciudad o asentamiento aliado.
+11. Protección de tierra [Avanzada]: Instantáneo: Cancela e ignora el efecto de un hechizo de la escuela de tierra enemigo.
+12. Resurrección [Avanzada]: Instantáneo: Anula un ataque letal salvando a la unidad aliada que iba a ser reducida a 0 PS.
+13. Terremoto [Básica]: Instantáneo: Destruye muros/puertas en asedios e inflige daño a tropas contiguas.
+14. Ver tierra [Básica]: Instantáneo: Reclama una mina enemiga a distancia sustituyendo el cubo de control por el tuyo.
+
+🌟 HECHIZO UNIVERSAL (TODAS LAS ESCUELAS):
+1. Flecha mágica [Básica]: Activación: Inflige daño mágico directo (1 / 2 / 3 Heridas). Pertenece a las 4 escuelas de magia (el lanzador elige la escuela al conjurarlo).
+
+👉 **[Abrir el Visor Completo de Hechizos ➔](tab:spells)**`
   },
 
   // =========================================================================
@@ -437,7 +598,9 @@ CATÁLOGO UNIFICADO DE UBICACIONES DEL MAPA:
 • Fuerte en la Colina: Refuerza tropas con descuento de -3 de oro.
 • Taberna: Paga 7g para contratar Héroe Secundario y hace descartar 1 carta a un enemigo.
 • Eje de las Estrellas: Reemplaza 1 carta de característica por su versión Potenciada.
-• Ubicaciones Marítimas: Cofre del Mar, Restos Flotantes, Sirena, Boya, Barco Abandonado, Naufragio, Templo del Mar, Náufrago Superviviente, Tumba Marina, Barril Marítimo.`
+• Ubicaciones Marítimas: Cofre del Mar, Restos Flotantes, Sirena, Boya, Barco Abandonado, Naufragio, Templo del Mar, Náufrago Superviviente, Tumba Marina, Barril Marítimo.
+
+👉 **[Abrir el Visor Completo de Lugares del Mapa ➔](tab:locations)**`
   },
 
   // =========================================================================
@@ -490,7 +653,9 @@ CATÁLOGO OFICIAL DE LOS 12 BANCOS DE CRIATURAS:
 9. Cripta: 1 Esqueleto, 1 Zombi, 1 Espectro, 1 Vampiro. Recompensa: 6 Monedas de Oro.
 10. Tesoro de los Diablillos: 4 Familiares. Recompensa: 3 Monedas de Oro.
 11. Reservas del Cíclope: 4 Cíclopes. Recompensa: 8 Materiales + 2 Objetos de Valor.
-12. Utopía del Dragón: 1 Dragón Negro, 1 Dragón Dorado, 1 Dragón de Cristal, 1 Dragón Hada. Recompensa: 40 Oro + Busca (3) en Artefactos.`
+12. Utopía del Dragón: 1 Dragón Negro, 1 Dragón Dorado, 1 Dragón de Cristal, 1 Dragón Hada. Recompensa: 40 Oro + Busca (3) en Artefactos.
+
+👉 **[Abrir el Visor Completo de Unidades de Combate y Reclutamiento ➔](tab:units)**`
   },
 
   // =========================================================================
@@ -682,20 +847,20 @@ TABLA OFICIAL DE AJUSTES OPCIONALES DE DIFICULTAD:
     category: "faq",
     content: `PREGUNTAS FRECUENTES (FAQ) Y ACLARACIONES OFICIALES DE REGLAS:
 
-¿Se pueden jugar varios hechizos en el mismo turno?
-En la fase de mapa puedes jugar múltiples hechizos de mapa si dispones de ellos. Sin embargo, en combate táctico existe un límite estricto de 1 Hechizo Primario por ronda de combate por jugador (los hechizos jugados desde Pergaminos de Hechizo no cuentan para este límite).
+P: ¿Se pueden jugar varios hechizos en el mismo turno?
+R: En la fase de mapa puedes jugar múltiples hechizos de mapa si dispones de ellos. Sin embargo, en combate táctico existe un límite estricto de 1 Hechizo Primario por ronda de combate por jugador (los hechizos jugados desde Pergaminos de Hechizo no cuentan para este límite).
 
-¿Cómo funciona la reducción de daño por Defensa?
-La Defensa de la unidad defensora reduce directamente el daño final del ataque físico. Sin embargo, la Defensa NO reduce el daño recibido por Hechizos, daño de Muro de Fuego, Minas Terrestres o Daño Elemental de Conflujo.
+P: ¿Cómo funciona la reducción de daño por Defensa?
+R: La Defensa de la unidad defensora reduce directamente el daño final del ataque físico. Sin embargo, la Defensa NO reduce el daño recibido por Hechizos, daño de Muro de Fuego, Minas Terrestres o Daño Elemental de Conflujo.
 
-¿Qué ocurre si se destruyen todas mis tropas en combate?
-Si tu Mazo de Unidades se queda sin tropas tras un combate, repones de forma gratuita e inmediata tu mazo con las unidades iniciales del escenario. Las unidades de facción derrotadas siempre pueden volver a reclutarse mediante la Ficha de Población.
+P: ¿Qué ocurre si se destruyen todas mis tropas en combate?
+R: Si tu Mazo de Unidades se queda sin tropas tras un combate, repones de forma gratuita e inmediata tu mazo con las unidades iniciales del escenario. Las unidades de facción derrotadas siempre pueden volver a reclutarse mediante la Ficha de Población.
 
-¿Se pierden las cartas de Artefacto o Hechizo al morir un Héroe Principal?
-No. El héroe derrotado se desplaza a una Ciudad o Asentamiento propio, paga 5 Monedas de Oro al vencedor, entrega 1 Cubo de Facción y conserva todo su Mazo de Fuerza y Magia intacto.
+P: ¿Se pierden las cartas de Artefacto o Hechizo al morir un Héroe Principal?
+R: No. El héroe derrotado se desplaza a una Ciudad o Asentamiento propio, paga 5 Monedas de Oro al vencedor, entrega 1 Cubo de Facción y conserva todo su Mazo de Fuerza y Magia intacto.
 
-¿Qué diferencia a las tropas de un Banco de Criaturas?
-Las unidades de bancos de criaturas no tienen rango/tier (Bronce, Plata, Oro). No les afectan hechizos o habilidades que dependan del tier (como Berserk). Además, la IA las ataca siempre en último lugar.
+P: ¿Qué diferencia a las tropas de un Banco de Criaturas?
+R: Las unidades de bancos de criaturas no tienen rango/tier (Bronce, Plata, Oro). No les afectan hechizos o habilidades que dependan del tier (como Berserk). Además, la IA las ataca siempre en último lugar.
 
 FE DE ERRATAS OFICIALES:
 • Molino de Viento (Windmill) en la loseta #N3: Debido a una errata de imprenta muestra un "?". La regla oficial establece que otorga "+1 Objeto de Valor" de forma inmediata.
