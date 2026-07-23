@@ -19,6 +19,7 @@ import { RuleSection } from '../types';
  * 14. Expansión Cala y Libro de Misiones (HoMM-Cove-Mission-Book_ESP.pdf, v1.0 ESP)
  * 15. Contenido Adicional / Metas Ampliadas 2 (HoMM-SG2-Mission-Book_ESP.pdf, v1.0 ESP)
  * 16. Expansión Batallas Navales y Libro de Misiones (HoMM-Naval-Battles-Mission-Book_ESP.pdf, v1.0 ESP)
+ * 17. Manual de Reglas Reescrito Compendium v2.0 Dev (Heroes3_Rules_Rewrite_2_0_dev.pdf, 2026 ESP/ENG)
  *
  * Compendio completo e indexado de reglas, componentes, mecánicas, construcciones,
  * modos de juego y campañas oficiales en español de España.
@@ -2383,10 +2384,142 @@ RESUMEN DE RRAMAS NARRATIVAS Y PALABRAS CLAVE:
   * Aceptar el 'Trabajo' (§17) concede un artefacto y te exige llevarlo a otro mercadillo (§8) para cobrar 10 Oro.
   * Juego de Dados (§12): Apuestas de Oro con tiradas de dado de ataque (-1, 0, +1) con premios de Objetos de Valor o pérdidas de Oro.
 - Encuentro con el Duende (§4, §10, §20, §24, §28): Pedir la olla de oro conduce a intentos de robo (-5 Oro o toda la bolsa en §28) o intimidación exitosa (+10 Oro en §10).`
+  },
+
+  // =========================================================================
+  // MANUAL DE REGLAS REESCRITO V2.0 DEV (RULES REWRITE COMPENDIUM 2.0)
+  // =========================================================================
+  {
+    id: "reescritura2-01-modo-torneo-y-puntos-de-victoria",
+    title: "Reescritura 2.0 Dev: Modo Torneo 1v1 y Sistema de Puntuación de Puntos de Victoria (PV)",
+    category: "modes",
+    content: `REGLAS OFICIALES DEL MODO TORNEO 1V1 (COMPENDIO REESCRITO V2.0 DEV):
+
+PREPARACIÓN Y AJUSTES DE TORNEO:
+• Cartas Removidas: Se eliminan del juego la carta de habilidad 'Diplomacia' y la carta de artefacto 'Reloj de la Hora Aciaga' antes de formar sus respectivos mazos.
+• Orden Inicial: Ambos jugadores tiran 2 dados de ataque. El resultado más alto decide quién comienza.
+• Compensación al Segundo Jugador: El segundo jugador recibe 1 Ficha de Moral Positiva al inicio de la partida.
+
+CONSTRUCCIÓN DRAFT DEL MAPA DE TORNEO (LOS ETAS BOCA ARRIBA):
+1. Losetas Centrales: El jugador inicial coloca las losetas centrales según el mapa del escenario, descubriéndolas y orientándolas libremente.
+2. Colocación de Losetas Cercanas (IV-V):
+   - Comenzando por el segundo jugador, alternan la colocación de losetas cercanas boca arriba (deben conectarse a una loseta central si es posible).
+   - Todo escenario de torneo debe incluir al menos 2 losetas cercanas con la ubicación Obelisco.
+3. Posición de Losetas Iniciales (I):
+   - El primer jugador coloca su loseta inicial adyacente a al menos 1 loseta cercana.
+   - El segundo jugador sitúa su loseta inicial en el extremo opuesto del mapa (a la máxima distancia en losetas del rival).
+4. Colocación de Losetas Lejanas (II-III):
+   - Cada jugador debe colocar su primera loseta lejana adyacente a su loseta inicial.
+   - Las losetas lejanas restantes se colocan alternadamente boca arriba siguiendo las reglas normales.
+
+REGLAS ADICIONALES DURANTE LA PARTIDA DE TORNEO:
+• Mulligan en Ronda 1: Al inicio de la primera ronda, cada jugador puede barajar su mano de cartas de vuelta al mazo de Fuerza y Magia y robar una nueva mano inicial por única vez.
+• Fichas de Moral para Repetición de Búsqueda: Los jugadores pueden gastar una Ficha de Moral Positiva para descartar todas las cartas reveladas durante cualquier acción de Búsqueda (Search) y repetir la Búsqueda de nuevo.
+• Preservación de Artefactos Eliminados: Si eliminas cartas de artefacto durante la partida, consérvalas al lado de tu mazo, ya que contarán para la puntuación final de Puntos de Victoria.
+• Observatorio de Sequoias (Efecto Alternativo): En Torneo, permite girar una loseta adyacente no ocupada por un héroe siguiendo las reglas estándar de colocación.
+
+TABLA COMPLETA DE PUNTUACIÓN DE PUNTOS DE VICTORIA (PV):
+- 1 PV por cada Mina o Asentamiento bajo tu control.
+- 1 PV por cada Edificio construido en tu Ciudad.
+- 1 PV por cada 2 Cartas de Artefacto en tu mazo (incluidas las cartas eliminadas conservadas).
+- 1 PV por cada Nivel alcanzado por tu Héroe Principal.
+- 2 PV por cada Héroe Secundario enemigo derrotado.
+- 4 PV por derrotar al Héroe Principal enemigo (una sola vez por partida).
+- X PV por cualquier objetivo adicional especificado en la descripción del escenario.`
+  },
+  {
+    id: "reescritura2-02-expansion-campo-de-batalla",
+    title: "Reescritura 2.0 Dev: Expansión Campo de Batalla (Modo Aventura, Modo Escaramuza y Combate Táctico Hexagonal)",
+    category: "modes",
+    content: `EXPANSIÓN CAMPO DE BATALLA (BATTLEFIELD EXPANSION - COMPENDIO V2.0 DEV):
+
+SISTEMA DE JUEGO SIN MAPA DE EXPLORACIÓN:
+
+1. MODO AVENTURA (ADVENTURE MODE):
+   - Estructura: Se divide en la Fase de Aventura (duración elegida: Corta 9 rondas, Media 13 rondas, Larga 16 rondas) y el Combate Final.
+   - Cartas de Aventura (Evento y Combate):
+     * Evento: Resuelve el texto impreso.
+     * Combate: Eliges un Nivel de Poder de Combate declarado (3 niveles disponibles). Seleccionas 2 de tus unidades y tiras 1 dado de ataque por cada una, sumando sus valores de Ataque base. Si alcanzas o superas el valor declarado, ganas la Recompensa Básica + Recompensa de Batalla. Si no lo alcanzas, ganas solo la Recompensa Básica y la unidad queda Aturdida (Stunned) para el próximo combate.
+   - Gestión de Mazo en Aventura: Las cartas útiles solo en combate (hechizos, especialidades) van directamente al mazo para el combate final. Cartas de recursos o descuentos (Fincas, Sabiduría) se apartan, se usan una vez y se eliminan del juego.
+
+2. MODO ESCARAMUZA (SKIRMISH MODE):
+   - Sin fase de aventura. Selección directa de nivel de héroe, especialidades, habilidades, artefactos, hechizos y tropas según la duración:
+     * Partida Corta: Héroe Nivel III, Especialidad Nivel I, 2 Habilidades, 1 Artefacto, 1-2 Hechizos, Tropas Bronce/Plata 'Unas pocas'.
+     * Partida Media: Héroe Nivel V, Especialidades Nivel I y IV, 3 Habilidades, 2 Artefactos, 2-4 Hechizos, Tropas Bronce/Plata 'Manada'.
+     * Partida Larga: Héroe Nivel VII, Todas las Especialidades, 4 Habilidades, 3 Artefactos, 3-5 Hechizos, Todas las Tropas (Bronce, Plata, Oro) 'Manada'.
+
+3. COMBATE TÁCTICO EN EL TABLERO HEXAGONAL DE CAMPO DE BATALLA:
+   - Despliegue de Obstáculos: Fichas de Efecto, Obstáculo y Muro/Puerta. Ningún obstáculo puede colocarse adyacente a otro obstáculo ni a la zona de despliegue del rival. Las miniaturas de unidades también cuentan como obstáculos.
+   - Reglas Tácticas Hexagonales:
+     * Movimiento de Unidades: El alcance de movimiento es igual a su valor de Iniciativa (ej. Iniciativa 8 mueve hasta 8 hexágonos).
+     * Tropas a Distancia: Pueden mover O atacar, pero no ambas acciones en la misma activación.
+     * Penalización a Distancia: Se aplica si atacan a un enemigo adyacente O a una distancia de 8 o más hexágonos.
+     * Empates de Iniciativa: Se activa una unidad del jugador con la Ficha de Iniciativa y luego se alternan. La ficha rota al rival tras resolver ese rango de iniciativa.
+     * Recuperación de Fin de Ronda (Aventura/Escaramuza): Recuperas 1 uso de Experto gastado (hasta tu límite de héroe) y robas 2 cartas de tu mazo.
+
+4. TABLERO DE CAMPO DE BATALLA EN PARTIDAS REGULARES (PvP / ASEDIO):
+   - Permite desplegar hasta 7 unidades por jugador en combates PvP.
+   - Reglas de Asedio: Las unidades defensoras solo pueden cruzar la Puerta a través de sus dos casillas centrales. Las unidades atacantes pueden golpear la puerta desde cualquiera de sus 4 casillas.`
+  },
+  {
+    id: "reescritura2-03-variantes-de-reglas-y-mazos-separados",
+    title: "Reescritura 2.0 Dev: Variantes de Reglas Oficiales (Cartas del Caos, Reserva de Oro, Draft Inicial, Mazos Separados y Ajustes de Dificultad)",
+    category: "general",
+    content: `VARIANTES DE REGLAS Y RECOMENDACIONES DE DISEÑADORES (REESCRITURA V2.0 DEV):
+
+1. VARIANTEDECARTAS DEL CAOS:
+   - En lugar de descartar una carta jugada, elimínala del juego y roba la carta superior de su mazo correspondiente a tu pila de descartes (las cartas de Estadística y Especialidad se descartan normalmente).
+
+2. VARIANTE DE RESERVA DE ORO (GOLD POOL):
+   - Fondo Reservado: Los recursos invertidos en reclutar o reforzar tropas no se devuelven a la caja, sino a una pila llamada 'Fondo Reservado'.
+   - Reembolso y Venta: Al usar la ficha de población, puedes vender unidades o recuperar sus costes (en Oro u Objetos de Valor) desde el Fondo Reservado al 'Fondo No Gastado' si la tropa muere o se reduce de Manada a Unas Pocas.
+
+3. VARIANTE DE DRAFT INICIAL (3+ JUGADORES):
+   - Selección de Mazo por Draft: Cada jugador roba 2 cartas de los mazos de Artefactos, Habilidades y Hechizos (6 cartas total), se queda con 1 de cada tipo y pasa las 5 restantes al jugador de la izquierda/derecha alternativamente hasta reunir 12 cartas en draft, que luego se refinan junto a las características en un mazo inicial preparado de 9 cartas.
+
+4. VARIANTE DE MAZOS SEPARADOS DE ARTEFACTOS Y HECHIZOS:
+   - Separación por Niveles:
+     * Artefactos divididos en 3 mazos: Menor, Mayor y Reliquia.
+     * Hechizos divididos en 2 mazos: Básico y Experto.
+   - Disponibilidad según la Loseta del Héroe:
+     * Losetas I y II-III: Mazo Menor / Mazo Básico.
+     * Losetas IV-V: Mazos Menor y Mayor / Mazos Básico y Experto.
+     * Losetas VI-VII: Mazos Menor, Mayor y Reliquia / Mazos Básico y Experto.
+
+5. TABLA DE AJUSTES OPCIONALES DE DIFICULTAD:
+   - Para Aumentar Dificultad: Ciudades no producen recursos al ser señalizadas (solo dan uso de edificios); prohibido relanzar dados; dados de tesoro/recursos solo otorgan 1 recurso; sin bonificador inicial.
+   - Para Reducir Dificultad: Iniciar con Héroe Secundario gratuito; todas las tropas infligen al menos 1 de daño garantizado al atacar; minas/asentamientos producen el doble de ingresos; alargar combate no cuesta PM.`
+  },
+  {
+    id: "reescritura2-04-compendio-de-palabras-clave-y-fichas",
+    title: "Reescritura 2.0 Dev: Compendio Consolidado de Palabras Clave y Fichas de Componente (Invocaciones, Fichas en Tropas, Obstáculos Tácticos y Permanentes)",
+    category: "components",
+    content: `GLOSARIO CONSOLIDADO DE PALABRAS CLAVE Y FICHAS DE COMPONENTE (REESCRITURA V2.0 DEV):
+
+1. MECÁNICAS DE INVOCACIÓN (SUMMONING):
+   - Invocación de Elementales (Conflujo): Invocados mediante hechizos a casillas libres con lado 'Unas pocas' o 'Manada' según SpellPower. No se añaden al mazo de unidades permanente.
+   - Invocación de Demonios (Inferno - Amo del Abismo / Pit Lords): Invoca o refuerza unidades de Demonios en combate. Tras la batalla, los Demonios invocados SE AÑADEN a tu mazo de unidades permanente.
+
+2. FICHAS DE MODIFICACIÓN DE ESTADÍSTICAS EN UNIDADES (TOKENS ON UNITS):
+   - Ficha de Debilidad (Weakness Token): Aplica -1 o -2 al valor de Ataque de la unidad (max 1 ficha por unidad).
+   - Ficha de Ataque (Attack Token): Otorga +1 o +2 al valor de Ataque de la unidad (max 1 ficha por unidad).
+   - Ficha de Corrosión (Corrosion Token): Reduce la Defensa de la unidad en -1 (mínimo 0) hasta el final del combate.
+   - Fichas de Pila / Unidades Apiladas (Stack Tokens / Creature Banks): Modifican estadísticas (+1 Ataque, +1 Defensa, +1 PS o +2 Iniciativa). Al recibir daño letal, se descarta 1 ficha de pila y la unidad se cura por completo antes de aplicar el daño excedente.
+
+3. OBSTÁCULOS TÁCTICOS Y HECHIZOS ESPECIALES:
+   - Muro de Fuego (Fire Wall Token - Luna / Conflujo): Ficha de obstáculo que inflige daño al ser atravesada.
+   - Campo de Fuerza (Force Field Token): Obstáculo físico que bloquea el paso de tropas terrestres; solo las unidades Voladoras (<Flying>) pueden atravesarlo.
+   - Arenas Movedizas (Quicksand Token): Fichas ocultas (-1 o vacías) que detienen inmediatamente el movimiento y la activación de la unidad al ser pisadas.
+   - Minas Terrestres (Land Mine Token): Fichas ocultas (2 de daño o vacías) que infligen 2 de daño a la tropa al entrar en la casilla.
+   - Fichas de Clonación (Clone Token): Crea una copia de una unidad con 1 PS y 0 Defensa. Cualquier daño recibido destruye el clon.
+
+4. CARTAS PERMANENTES (PERMANENT CARDS):
+   - Efectos continuos en mesa (Máquinas de Guerra, Escuelas de Magia, etc.). Límite de 1 carta permanente activa simultáneamente por héroe.`
   }
 ];
 
 export const rulesKB = reglasCombinadas;
+
 
 
 
