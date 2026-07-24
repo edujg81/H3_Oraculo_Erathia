@@ -6,6 +6,7 @@ import { townsData, TownData } from './townsData';
 import { SPELLS_DATA } from './spellsData';
 import { LOCATIONS_DATA } from './locationsData';
 import { WAR_MACHINES } from './warMachinesData';
+import { reglasCombinadas } from './reglasCombinadas';
 
 /**
  * Este módulo transforma las bases de datos "de UI" (heroesData, unitsData,
@@ -75,7 +76,7 @@ Trasfondo: ${hero.lore}${hero.quote ? `\nCita: "${hero.quote}"` : ''}`;
         id: `hero-${factionId}-${slugify(hero.name)}`,
         title: `Héroe: ${hero.name} (${factionName})`,
         content,
-        category: 'heroes',
+        category: 'héroes',
       });
       registerAliases(`hero-${factionId}-${slugify(hero.name)}`, [hero.name]);
     });
@@ -141,7 +142,7 @@ ${details.elite ? formatUnitStatsBlock('Versión élite', details.elite) : '(Est
       id: `unit-${slugify(unitName)}`,
       title: `Unidad: ${unitName}`,
       content,
-      category: 'units',
+      category: 'unidades',
     });
     const cleanName = unitName.replace(/\s*\([^)]*\)\s*$/, '').trim();
     registerAliases(`unit-${slugify(unitName)}`, [unitName, cleanName]);
@@ -174,7 +175,7 @@ function buildSkillsKB(): RuleSection[] {
 Descripción: ${skill.description}
 Nivel Normal: ${skill.normal}
 Nivel Experto: ${skill.expert}`,
-      category: 'skills' as const,
+      category: 'habilidades' as const,
     };
   });
 }
@@ -219,7 +220,7 @@ Unidades reclutables:
       id,
       title: `Ciudad: ${town.townName} (${town.factionName})`,
       content,
-      category: 'town' as const,
+      category: 'ciudad' as const,
     };
   });
 }
@@ -256,7 +257,7 @@ Trasfondo: ${spell.flavorText}${spell.notes ? `\nNotas oficiales de reglas: ${sp
       id,
       title: `Hechizo: ${spell.name} (Escuela: ${spell.school}, Tipo: ${spell.type})`,
       content,
-      category: 'magic' as const,
+      category: 'magia' as const,
     };
   });
 }
@@ -294,7 +295,7 @@ Reglas y notas: ${loc.rulesNotes}`;
       id,
       title: `Lugar del mapa: ${loc.name} (${loc.type})`,
       content,
-      category: 'map' as const,
+      category: 'mapa' as const,
     };
   });
 }
@@ -335,13 +336,44 @@ Efecto habilidad nivel Experto: ${wm.skillExpertEffect}`;
       id,
       title: `Máquina de Guerra: ${wm.name}`,
       content,
-      category: 'combat' as const,
+      category: 'combate' as const,
     };
   });
 }
 
 function buildWarMachinesCatalogIndex(): string {
   return WAR_MACHINES.map(wm => `- ${wm.name} (${wm.expansion}, Habilidad asociada: ${wm.associatedSkill})`).join('\n');
+}
+
+// ---------------------------------------------------------------------------
+// REGLAS COMBINADAS Y EXPANSIONES
+// ---------------------------------------------------------------------------
+
+function buildReglasCombinadasKB(): RuleSection[] {
+  reglasCombinadas.forEach((section) => {
+    const titleClean = section.title.replace(/^[\d.]+\s*/, '').trim();
+    const keywords = section.title
+      .split(/[\s:,\-()/'"]+/)
+      .map((w) => w.trim())
+      .filter((w) => w.length >= 4 && !['para', 'como', 'sobre', 'entre', 'modo', 'tabla', 'libro'].includes(w.toLowerCase()));
+
+    const aliases = [
+      section.title,
+      titleClean,
+      section.id,
+      ...keywords,
+    ];
+
+    registerAliases(section.id, aliases);
+  });
+
+  return reglasCombinadas;
+}
+
+function buildReglasCombinadasCatalogIndex(): string {
+  return reglasCombinadas
+    .map((s) => `- ${s.title}`)
+    .join('\n');
 }
 
 // ---------------------------------------------------------------------------
@@ -355,6 +387,7 @@ export const townsKB = buildTownsKB();
 export const spellsKB = buildSpellsKB();
 export const locationsKB = buildLocationsKB();
 export const warMachinesKB = buildWarMachinesKB();
+export const reglasCombinadasKB = buildReglasCombinadasKB();
 
 /** Todas las secciones "extra" (no-reglas) disponibles, para búsqueda por palabra clave. */
 export const extraEntitySections: RuleSection[] = [
@@ -365,6 +398,7 @@ export const extraEntitySections: RuleSection[] = [
   ...spellsKB,
   ...locationsKB,
   ...warMachinesKB,
+  ...reglasCombinadasKB,
 ];
 
 /**
@@ -391,7 +425,10 @@ ${buildSpellsCatalogIndex()}
 ${buildLocationsCatalogIndex()}
 
 === ÍNDICE DE MÁQUINAS DE GUERRA ===
-${buildWarMachinesCatalogIndex()}`;
+${buildWarMachinesCatalogIndex()}
+
+=== COMPENDIO DE REGLAS COMBINADAS Y EXPANSIONES ===
+${buildReglasCombinadasCatalogIndex()}`;
 
 
 /**

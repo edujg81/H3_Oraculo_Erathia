@@ -32,7 +32,7 @@ export const reglasCombinadas: RuleSection[] = [
   {
     id: "cap-1-componentes",
     title: "1. Lista de Componentes del Juego Base",
-    category: "components",
+    category: "componentes",
     content: `LISTA OFICIAL DE COMPONENTES DE HEROES OF MIGHT AND MAGIC III: THE BOARD GAME (JUEGO BASE):
 
 LIBROS Y AYUDAS:
@@ -77,7 +77,7 @@ DADOS Y FICHAS:
   {
     id: "cap-2-resumen-modos",
     title: "2. Resumen del Juego y Modos de Juego",
-    category: "modes",
+    category: "modos",
     content: `DESCRIPCIÓN GENERAL Y MODOS DE JUEGO:
 
 En las tierras de Antagarich, los héroes exploran paisajes indómitos, recuperan artefactos, descubren asentamientos y reclutan criaturas. Cada partida forma parte de un escenario o campaña con su propio mapa, condiciones de victoria y reglas.
@@ -102,7 +102,7 @@ MODOS DE JUEGO PRINCIPALES:
   {
     id: "cap-3-preparacion-y-orden",
     title: "3. Preparación de la Partida, Rondas y Turnos",
-    category: "setup",
+    category: "preparación",
     content: `PREPARACIÓN DE LA PARTIDA Y ESTRUCTURA DE RONDAS:
 
 PASOS DE PREPARACIÓN DE LA PARTIDA:
@@ -129,7 +129,7 @@ TURNOS DE LOS JUGADORES:
   {
     id: "cap-4-heroes",
     title: "4. Reglamento de Héroes: Principal, Secundario y Niveles",
-    category: "heroes",
+    category: "héroes",
     content: `TIPOS DE HÉROES Y DESARROLLO DE NIVEL:
 
 HÉROE PRINCIPAL:
@@ -156,7 +156,7 @@ EFECTOS DE NIVEL (Niveles 1 a 7):
   {
     id: "cap-5-construccion-mazo",
     title: "5. Construcción del Mazo, Cartas y Cofradía de Magos",
-    category: "magic",
+    category: "magia",
     content: `CONSTRUCCIÓN DEL MAZO DE FUERZA Y MAGIA Y TIPOS DE CARTAS:
 
 Mazo Inicial: 9 cartas (características base del héroe + Flecha Mágica + Habilidad Nivel 1 + Especialidad Nivel 1).
@@ -203,7 +203,7 @@ Intercambio de recursos: Se realiza en el Mercadillo o mediante eventos siguiend
   {
     id: "cap-7-ciudad",
     title: "7. Desarrollo Urbano: Edificios y Asedios",
-    category: "town",
+    category: "ciudad",
     content: `GESTIÓN DE LA CIUDAD Y ASEDIO DE ASENTAMIENTOS:
 
 EDIFICIOS Y SUS FUNCIONES:
@@ -223,7 +223,7 @@ ASEDIOS Y CAPTURA DE CIUDADES:
   {
     id: "cap-8-elementos-mapa",
     title: "8. Elementos del Mapa: Losetas, Lugares, Asentamientos y Minas",
-    category: "map",
+    category: "mapa",
     content: `EXPLORACIÓN DEL MAPA DE AVENTURA:
 
 LOSETAS DE MAPA:
@@ -248,7 +248,7 @@ CATEGORÍAS DE LUGARES EN EL MAPA:
   {
     id: "cap-9-unidades",
     title: "9. Unidades, Estadísticas, Categorías y Neutrales",
-    category: "units",
+    category: "unidades",
     content: `REGLAMENTO COMPLETO DE UNIDADES Y EJÉRCITO:
 
 CARA DE LA CARTA Y ESTADÍSTICAS:
@@ -270,7 +270,7 @@ CATEGORÍAS DE UNIDADES Y REQUISITOS DE EDIFICIO:
   {
     id: "cap-10-combate",
     title: "10. Reglamento Táctico de Combate",
-    category: "combat",
+    category: "combate",
     content: `SISTEMA TÁCTICO DE COMBATE EN TABLERO 4 × 5:
 
 PREPARACIÓN DEL COMBATE:
@@ -293,7 +293,7 @@ FINAL DEL COMBATE Y EXPERIENCIA:
   {
     id: "cap-11-ia",
     title: "11. Reglamento del Jugador Automático (IA / Solitario)",
-    category: "modes",
+    category: "modos",
     content: `REGLAS DE ACTUACIÓN Y COMBATE DE LA IA:
 
 MAZO Y DIFICULTAD DE LA IA:
@@ -312,7 +312,7 @@ REGLAS DE MOVIMIENTO DE LA IA EN EL MAPA (3 PM por turno):
   {
     id: "cap-12-opciones-dificultad",
     title: "12. Opciones de Juego, Dificultad y Comercio",
-    category: "modes",
+    category: "modos",
     content: `OPCIONES DE CONFIGURACIÓN Y TABLAS OFICIALES:
 
 NIVELES DE DIFICULTAD Y BONIFICADORES INICIALES:
@@ -375,7 +375,7 @@ RECUERDO RÁPIDO DE ACCIONES DE MORAL:
   {
     id: "rampart-01-componentes",
     title: "Murallas 1. Lista de Componentes de la Expansión Murallas",
-    category: "components",
+    category: "componentes",
     content: `COMPONENTES INCLUIDOS EN LA EXPANSIÓN MURALLAS (RAMPART):
 
 LOSETAS Y TABLEROS:
@@ -409,7 +409,7 @@ FICHAS Y RECURSOS:
   {
     id: "rampart-02-nuevos-elementos",
     title: "Murallas 2. Nuevos Elementos: Efectos Permanentes, Máquinas de Guerra y Mapa",
-    category: "combat",
+    category: "combate",
     content: `NUEVAS MECÁNICAS E INTRODUCCIONES DE LA EXPANSIÓN:
 
 1. CARTAS DE EFECTO PERMANENTE (Icono Infinito ∞):
@@ -429,7 +429,7 @@ FICHAS Y RECURSOS:
   {
     id: "rampart-03-modo-alianza",
     title: "Murallas 3. Reglamento Oficial del Modo Alianza (2 contra 2)",
-    category: "modes",
+    category: "modos",
     content: `REGLAS ADICIONALES PARA PARTIDAS EN EQUIPO (2v2):
 
 REQUISITOS Y REGLAS DE ALIANZA:
@@ -445,7 +445,7 @@ CONDICIONES DE FIN DE ESCENARIO:
   {
     id: "rampart-04-escenario-el-desafio",
     title: "Murallas 4. Escenario Alianza: 'El Desafío' (4 Jugadores)",
-    category: "modes",
+    category: "modos",
     content: `ESCENARIO ALIANZA 'EL DESAFÍO':
 
 NARRATIVA: El rey va a morir y desafía a quien construya el Grial en la capital Osha a convertirse en su sucesor.
@@ -468,7 +468,7 @@ REGLAS DEL ESCENARIO:
   {
     id: "rampart-05-escenario-oro-enano",
     title: "Murallas 5. Escenario Enfrentamiento: 'Oro Enano' (2-3 Jugadores)",
-    category: "modes",
+    category: "modos",
     content: `ESCENARIO ENFRENTAMIENTO 'ORO ENANO':
 
 NARRATIVA: Fiebre del oro tras el hallazgo del minero enano Invis Smythers.
@@ -489,7 +489,7 @@ REGLAS ESPECIALES:
   {
     id: "rampart-06-campana-mision-1",
     title: "Murallas 6. Campaña 'La Venganza se Sirve Fría' - Misión 1: En Busca de un Asesino",
-    category: "modes",
+    category: "modos",
     content: `CAMPAÑA DE LAS MURALLAS - ESCENARIO 1: EN BUSCA DE UN ASESINO
 
 HISTORIA: Asesinato de lord Falorel (descubierto como un señor vampiro infiltrado de Deyja) y la invasión de Soledare.
@@ -505,7 +505,7 @@ REGLAS Y EVENTOS DESTACADOS:
   {
     id: "rampart-07-campana-mision-2",
     title: "Murallas 7. Campaña 'La Venganza se Sirve Fría' - Misión 2: Paz Definitiva",
-    category: "modes",
+    category: "modos",
     content: `CAMPAÑA DE LAS MURALLAS - ESCENARIO 2: PAZ DEFINITIVA
 
 HISTORIA: La druida Gem investiga el asesinato de lord Fayette, resucitado por los nigromantes como un Caballero del Terror.
@@ -520,7 +520,7 @@ REGLAS Y EVENTOS DESTACADOS:
   {
     id: "rampart-08-campana-mision-3",
     title: "Murallas 8. Campaña 'La Venganza se Sirve Fría' - Misión 3: Agentes de la Venganza",
-    category: "modes",
+    category: "modos",
     content: `CAMPAÑA DE LAS MURALLAS - ESCENARIO 3: AGENTES DE LA VENGANZA
 
 HISTORIA: Gem y Gelu unen sus fuerzas para invadir Deyja y detener el complot del nigromante Sandro antes de que complete un artefacto destructivo.
@@ -540,7 +540,7 @@ REGLAS Y EVENTOS DESTACADOS:
   {
     id: "sg-01-componentes",
     title: "Metas Ampliadas 1. Lista de Componentes y Nuevas Localizaciones",
-    category: "components",
+    category: "componentes",
     content: `COMPONENTES Y NUEVOS LUGARES DE LAS METAS AMPLIADAS (STRETCH GOALS):
 
 LOSETAS Y COMPONENTES:
@@ -564,7 +564,7 @@ NUEVOS LUGARES DEL MAPA (Páginas 41-42):
   {
     id: "sg-02-escuelas-magia-miniaturas",
     title: "Metas Ampliadas 2. Escuelas de Magia, Efectos Permanentes y Reglas de Miniaturas",
-    category: "magic",
+    category: "magia",
     content: `NUEVAS MECÁNICAS DE JUEGO (METAS AMPLIADAS):
 
 ESCUELAS DE MAGIA (Aire, Fuego, Tierra, Agua):
@@ -582,7 +582,7 @@ REGLAS ADICIONALES PARA MINIATURAS DE UNIDAD EN TABLERO:
   {
     id: "sg-03-campana-dungeon",
     title: "Metas Ampliadas 3. Campaña Mazmorra: 'La Sangre del Dragón' (Mutare)",
-    category: "modes",
+    category: "modos",
     content: `CAMPAÑA DE LA MAZMORRA: LA SANGRE DEL DRAGÓN (3 Escenarios):
 
 PROTAGONISTA: La señora Mutare busca el legendario Vial de Sangre de Dragón para transformarse en dragón y dominar Nighon.
@@ -607,7 +607,7 @@ ESCENARIO 3: SED DE SANGRE (10 Rondas)
   {
     id: "sg-04-campana-necropolis",
     title: "Metas Ampliadas 4. Campaña Necrópolis: 'El Ascenso del Nigromante' (Sandro)",
-    category: "modes",
+    category: "modos",
     content: `CAMPAÑA DE LA NECRÓPOLIS: EL ASCENSO DEL NIGROMANTE (3 Escenarios):
 
 PROTAGONISTA: Sandro el Nigromante avanza hacia Deyja reuniendo artefactos legendarios (Capa del Rey No Muerto y Armadura de los Malditos) contra su antiguo maestro Ethric.
@@ -632,7 +632,7 @@ ESCENARIO 3: DUQUE ALARICE (11 Rondas)
   {
     id: "sg-05-campana-tower",
     title: "Metas Ampliadas 5. Campaña Torre: 'Matadragones' (Dracon)",
-    category: "modes",
+    category: "modos",
     content: `CAMPAÑA DE LA TORRE: EL MATADRAGONES (4 Escenarios):
 
 PROTAGONISTA: Dracon realiza las pruebas preparadas por su madre para convertirse en el matadragones definitivo, enfrentándose a las wyrms más letales.
@@ -660,7 +660,7 @@ ESCENARIO 4: DRAGONES AZURES (11 Rondas)
   {
     id: "fortress-01-componentes",
     title: "Fortaleza 1. Lista de Componentes de la Expansión Fortaleza",
-    category: "components",
+    category: "componentes",
     content: `COMPONENTES INCLUIDOS EN LA EXPANSIÓN FORTALEZA (FORTRESS):
 
 LOSETAS Y TABLEROS:
@@ -713,7 +713,7 @@ FICHAS Y RECURSOS:
   {
     id: "fortress-03-modo-alianza-arrogancia",
     title: "Fortaleza 3. Modo Alianza y Escenario 'Arrogancia' (4 Jugadores)",
-    category: "modes",
+    category: "modos",
     content: `ESCENARIO ALIANZA 'ARROGANCIA':
 
 NARRATIVA: Cuatro culturas vivían en paz hasta que las ambiciones de conquista desataron la guerra mundial.
@@ -736,7 +736,7 @@ REGLAS DEL ESCENARIO:
   {
     id: "fortress-04-modo-enfrentamiento-grial",
     title: "Fortaleza 4. Escenario Enfrentamiento: 'En Busca del Grial' (2-3 Jugadores)",
-    category: "modes",
+    category: "modos",
     content: `ESCENARIO ENFRENTAMIENTO 'EN BUSCA DEL GRIAL':
 
 NARRATIVA: Búsqueda competitiva del grial perdido en las ciénagas antes de que caiga en manos enemigas.
@@ -756,7 +756,7 @@ REGLAS ESPECIALES:
   {
     id: "fortress-05-campana-mision-1",
     title: "Fortaleza 5. Campaña 'Jugando con Fuego' - Misión 1: Cosecha de Ciudades",
-    category: "modes",
+    category: "campaña",
     content: `CAMPAÑA DE LA FORTALEZA - ESCENARIO 1: COSECHA DE CIUDADES
 
 HISTORIA: La bruja de fuego Adrienne regresa a Tatalia y descubre que la secta ilegal de Lord Haart está masacrando y resucitando a los aldeanos.
@@ -774,7 +774,7 @@ REGLAS Y EVENTOS DESTACADOS:
   {
     id: "fortress-06-campana-mision-2",
     title: "Fortaleza 6. Campaña 'Jugando con Fuego' - Misión 2: La Marcha de los No Muertos",
-    category: "modes",
+    category: "campaña",
     content: `CAMPAÑA DE LA FORTALEZA - ESCENARIO 2: LA MARCHA DE LOS NO MUERTOS
 
 HISTORIA: Lord Haart instala guardias de no muertos en las viviendas de Tatalia para convertir cada nuevo recluta en soldados esqueleto. Adrienne debe desmantelar su red de levantamientos.
@@ -790,7 +790,7 @@ REGLAS Y EVENTOS DESTACADOS:
   {
     id: "fortress-07-campana-mision-3",
     title: "Fortaleza 7. Campaña 'Jugando con Fuego' - Misión 3: El Incendio de Tatalia",
-    category: "modes",
+    category: "campaña",
     content: `CAMPAÑA DE LA FORTALEZA - ESCENARIO 3: EL INCENDIO DE TATALIA
 
 HISTORIA: Confrontación definitiva contra Lord Haart y sus dos seguidores no muertos para purificar Tatalia con fuego primordial.
@@ -812,7 +812,7 @@ REGLAS Y EVENTOS DESTACADOS:
   {
     id: "inferno-01-componentes",
     title: "Inferno 1. Lista de Componentes de la Expansión Inferno",
-    category: "components",
+    category: "componentes",
     content: `COMPONENTES INCLUIDOS EN LA EXPANSIÓN INFERNO:
 
 LOSETAS Y TABLEROS:
@@ -847,7 +847,7 @@ FICHAS Y RECURSOS:
   {
     id: "inferno-02-nuevos-elementos",
     title: "Inferno 2. Nuevos Elementos: Cartas de Característica Potenciada, Invocar e Inmunidad de los Efrits",
-    category: "combat",
+    category: "combate",
     content: `NUEVAS MECÁNICAS E INTRODUCCIONES DE LA EXPANSIÓN INFERNO:
 
 1. CARTAS DE CARACTERÍSTICA POTENCIADA (20 Cartas):
@@ -869,7 +869,7 @@ FICHAS Y RECURSOS:
   {
     id: "inferno-03-lugares-mapa",
     title: "Inferno 3. Nuevas Localizaciones: Eje Estelar y Ciudad Aleatoria",
-    category: "map",
+    category: "lugares",
     content: `NUEVAS LOCALIZACIONES DEL MAPA (EXPANSIÓN INFERNO):
 
 1. EJE ESTELAR (Señalizable):
@@ -884,7 +884,7 @@ FICHAS Y RECURSOS:
   {
     id: "inferno-04-modo-alianza-dos-tierras",
     title: "Inferno 4. Escenario Alianza: 'El Cuento de las Dos Tierras' (4 Jugadores)",
-    category: "modes",
+    category: "escenario",
     content: `ESCENARIO ALIANZA 'EL CUENTO DE LAS DOS TIERRAS':
 
 NARRATIVA: Conflicto total entre los continentes Este y Oeste de Varesburg.
@@ -905,7 +905,7 @@ REGLAS ESPECIALES DEL ESCENARIO:
   {
     id: "inferno-05-modo-enfrentamiento-destino-carpe-diem",
     title: "Inferno 5. Escenarios Enfrentamiento: 'Destino Manifiesto' (3 Jugadores) y 'Carpe Diem' (2 Jugadores)",
-    category: "modes",
+    category: "escenario",
     content: `ESCENARIOS DE MODO ENFRENTAMIENTO (EXPANSIÓN INFERNO):
 
 1. DESTINO MANIFIESTO (3 Jugadores, 12-14 Rondas):
@@ -931,7 +931,7 @@ REGLAS ESPECIALES DEL ESCENARIO:
   {
     id: "torneo-01-construccion-y-puntuacion",
     title: "Torneo 1. Modo Torneo: Construcción del Mapa de Escenario y Sistema de Puntuación (PV)",
-    category: "modes",
+    category: "modos",
     content: `REGLAMENTO OFICIAL DEL MODO TORNEO (COMPETITIVO 1v1):
 
 PASOS PARA CONSTRUIR EL MAPA DE ESCENARIO DE TORNEO:
@@ -958,7 +958,7 @@ Ganador: El jugador con mayor puntuación acumulada de PV.`
   {
     id: "torneo-02-reglas-adicionales-opcionales",
     title: "Torneo 2. Reglas Adicionales, Cartas Excluidas, Observatorio de Caoba y Reglas Opcionales",
-    category: "modes",
+    category: "modos",
     content: `REGLAS ADICIONALES Y OPCIONALES PARA ESCENARIOS DE TORNEO:
 
 REGLAS ADICIONALES DE TORNEO (Aplica a todos los escenarios competitivos):
@@ -985,7 +985,7 @@ REGLAS OPCIONALES DE TORNEO (Ajuste de Mazos por Rango de Zona):
   {
     id: "torneo-03-escenarios-oficiales",
     title: "Torneo 3. Escenarios Oficiales de Torneo: 'Última Oportunidad', 'La Gran Carrera' y 'Herencia Inesperada'",
-    category: "modes",
+    category: "escenario",
     content: `ESCENARIOS OFICIALES DE TORNEO (1v1):
 
 1. ÚLTIMA OPORTUNIDAD (1v1, Duración: 8 Rondas):
@@ -1016,7 +1016,7 @@ REGLAS OPCIONALES DE TORNEO (Ajuste de Mazos por Rango de Zona):
   {
     id: "torneo-04-creador-escenarios",
     title: "Torneo 4. Creador de Escenarios Personalizados (Guía de 13 Pasos)",
-    category: "modes",
+    category: "modos",
     content: `GUÍA PASO A PASO PARA EL DISEÑO DE ESCENARIOS PERSONALIZADOS:
 
 PASOS DE CREACIÓN DE UN ESCENARIO:
@@ -1041,7 +1041,7 @@ PASOS DE CREACIÓN DE UN ESCENARIO:
   {
     id: "batalla-01-componentes",
     title: "Campo de Batalla 1. Lista de Componentes de la Expansión Campo de Batalla",
-    category: "components",
+    category: "componentes",
     content: `COMPONENTES INCLUIDOS EN LA EXPANSIÓN CAMPO DE BATALLA (BATTLEFIELD):
 
 TABLEROS Y REGLAMENTOS:
@@ -1061,7 +1061,7 @@ MAZOS Y CARTAS:
   {
     id: "batalla-02-preparacion-y-mazos-moral",
     title: "Campo de Batalla 2. Preparación y Mazos de Moral Positiva/Negativa",
-    category: "combat",
+    category: "combate",
     content: `PREPARACIÓN DEL CAMPO DE BATALLA Y SISTEMA DE MAZOS DE MORAL:
 
 PREPARACIÓN GENERAL:
@@ -1081,7 +1081,7 @@ Sustituyen a las fichas de moral en los modos Aventura y Escaramuzas (u opcional
   {
     id: "batalla-03-modo-aventura",
     title: "Campo de Batalla 3. Modo Aventura: Rondas, Cartas de Aventura y Rondas Astrológicas",
-    category: "modes",
+    category: "modos",
     content: `REGLAS DEL MODO AVENTURA (SUSTITUCIÓN DE MAPA POR MAZO):
 
 MODO AVENTURA (1v1 Competitivo):
@@ -1108,7 +1108,7 @@ Al finalizar la última ronda, se disputa la batalla táctica en el tablero de c
   {
     id: "batalla-04-modo-escaramuzas",
     title: "Campo de Batalla 4. Modo Escaramuzas: Plantillas Tácticas (Grande, Medio y Pequeño)",
-    category: "modes",
+    category: "modos",
     content: `REGLAS DEL MODO ESCARAMUZAS (BATALLA TÁCTICA DIRECTA):
 
 En el Modo Escaramuzas se omite la fase de aventura y se entra de forma inmediata al combate utilizando plantillas predeterminadas según la escala:
@@ -1135,7 +1135,7 @@ Derrotar a todas las unidades desplegadas por el oponente en el tablero de campo
   {
     id: "batalla-05-tactica-y-asaltos",
     title: "Campo de Batalla 5. Reglas de Combate en Tablero, Obstáculos, Iniciativa y Asedio",
-    category: "combat",
+    category: "combate",
     content: `REGLAS TÁCTICAS DE COMBATE EN EL TABLERO DE CAMPO DE BATALLA:
 
 DESPLIEGUE Y OBSTÁCULOS:
@@ -1200,7 +1200,7 @@ DESARROLLO Y MANEJO DE HÉROES:
   {
     id: "faq-02-ciudad-y-combate",
     title: "FAQ Diseñadores 2. Construcción de Ciudad y Reglas Tácticas de Combate",
-    category: "combat",
+    category: "combate",
     content: `RESPUESTAS Y ACLARACIONES OFICIALES DE LOS DISEÑADORES (CIUDAD Y COMBATE):
 
 GESTIÓN DE LA CIUDAD:
@@ -1236,7 +1236,7 @@ REGLAS TÁCTICAS DE COMBATE:
   {
     id: "faq-03-unidades-y-cartas",
     title: "FAQ Diseñadores 3. Habilidades Únicas de Unidades y Lógica de Cartas",
-    category: "combat",
+    category: "combate",
     content: `RESPUESTAS Y ACLARACIONES OFICIALES DE LOS DISEÑADORES (UNIDADES Y CARTAS):
 
 HABILIDADES ESPECIALES DE UNIDADES:
@@ -1299,7 +1299,7 @@ DIFERENCIAS PRINCIPALES ENTRE EL VIDEOJUEGO DE PC Y EL JUEGO DE MESA:
   {
     id: "misiones-01-preparacion-y-modos",
     title: "Misiones 1. Preparación del Escenario y Reglas Universales de Enfrentamiento",
-    category: "modes",
+    category: "preparación",
     content: `PREPARACIÓN GENERAL DEL ESCENARIO Y MODO ENFRENTAMIENTO:
 
 PASOS PARA PREPARAR UN ESCENARIO:
@@ -1320,7 +1320,7 @@ CONDICIONES UNIVERSALES DE VICTORIA Y ELIMINACIÓN EN MODO ENFRENTAMIENTO (2-3 J
   {
     id: "misiones-02-escenarios-enfrentamiento",
     title: "Misiones 2. Escenarios de Enfrentamiento: 'El Retiro de los Monjes', 'Un Mundo Feliz' y 'Todos para Uno'",
-    category: "modes",
+    category: "escenario",
     content: `ESCENARIOS COMPETITIVOS DEL MODO ENFRENTAMIENTO:
 
 1. EL RETIRO DE LOS MONJES (2 Jugadores, Duración: 7 Rondas):
@@ -1355,7 +1355,7 @@ CONDICIONES UNIVERSALES DE VICTORIA Y ELIMINACIÓN EN MODO ENFRENTAMIENTO (2-3 J
   {
     id: "misiones-03-modo-cooperativo",
     title: "Misiones 3. Modo Cooperativo y Escenarios: 'Los Campeones de Gelea' y 'Misión Maldita'",
-    category: "modes",
+    category: "modos",
     content: `REGLAS GENERALES Y ESCENARIOS COOPERATIVOS:
 
 MECÁNICAS COOPERATIVAS GENERALES (2-3 Jugadores):
@@ -1387,7 +1387,7 @@ MECÁNICAS COOPERATIVAS GENERALES (2-3 Jugadores):
   {
     id: "misiones-04-modo-campana-castillo",
     title: "Misiones 4. Modo Campaña en Solitario y Campaña del Castillo ('Larga Vida a la Reina')",
-    category: "modes",
+    category: "campaña",
     content: `REGLAS DE CAMPAÑA EN SOLITARIO Y CAMPAÑA DEL CASTILLO:
 
 REGLAS DE CAMPAÑA EN SOLITARIO:
@@ -1489,7 +1489,7 @@ BONIFICADORES INICIALES SEGÚN DIFICULTAD DE ESCENARIO:
   {
     id: "suplemento-01-descripcion-y-preparacion",
     title: "Suplemento 1. Escenario Introductorio Tutorial: Configuración y Mazos Iniciales (Necrópolis vs Mazmorra)",
-    category: "modes",
+    category: "preparación",
     content: `GUÍA Y CONFIGURACIÓN DEL ESCENARIO INTRODUCTORIO TUTORIAL:
 
 DESCRIPCIÓN GENERAL DEL ESCENARIO INTRODUCTORIO:
@@ -1592,7 +1592,7 @@ SUBIDAS DE NIVEL, TAMAÑO DE MANO Y EXPERTO:
   {
     id: "suplemento-04-combate-avanzado-y-asedio",
     title: "Suplemento 4. Reglas Tácticas de Combate, Unidades (Terrestres/Voladoras/Distancia) y Asedio Urbano",
-    category: "combat",
+    category: "combate",
     content: `REGLAS TÁCTICAS AVANZADAS DE COMBATE Y MECÁNICAS DE ASEDIO:
 
 GESTIÓN DE COMBATE Y LÍMITES DE TIEMPO:
@@ -1620,7 +1620,7 @@ MECÁNICAS DE ASEDIO A CIUDADES:
   {
     id: "suplemento-05-catalogo-de-ubicaciones",
     title: "Suplemento 5. Catálogo Completo de Ubicaciones del Mapa (Visitables, Revisitables y Señalizables)",
-    category: "components",
+    category: "lugares",
     content: `CATÁLOGO OFICIAL DE CAMPOS Y UBICACIONES DEL MAPA:
 
 CLASIFICACIÓN DE CAMPOS:
@@ -1685,7 +1685,7 @@ PREPARACIÓN UNIFICADA DE PARTIDA (22 PASOS):
   {
     id: "reescritura-02-heroes-mazo-experiencia",
     title: "Reescritura 2. Lógica Integrada de Héroes (Principal y Secundario), Subida de Nivel y Gestión de Mazo",
-    category: "general",
+    category: "héroes",
     content: `REGLAS UNIFICADAS DE HÉROES, EXPERIENCIA Y CONSTRUCCIÓN DE MAZO:
 
 HÉROE PRINCIPAL VS HÉROE SECUNDARIO:
@@ -1717,7 +1717,7 @@ GESTIÓN DEL MAZO DE FUERZA Y MAGIA:
   {
     id: "reescritura-03-combate-ia-y-asedio",
     title: "Reescritura 3. Combate Táctico Integrado, Algoritmo de la IA y Reglas de Asedio y Cobertura",
-    category: "combat",
+    category: "combate",
     content: `REGLAS COMPLETA DE COMBATE TÁCTICO, IA AUTOMATIZADA Y ASEDIO URBANO:
 
 DESPLIEGUE Y ESTRUCTURA DE COMBATE:
@@ -1745,7 +1745,7 @@ REGLAS DE ASEDIO CON CIUDADELA:
   {
     id: "reescritura-04-reglas-opcionales-y-comercio",
     title: "Reescritura 4. Tabla de Reglas Opcionales y Variantes, Mercado, Comercio y Fin de Escenario",
-    category: "modes",
+    category: "modos",
     content: `TABLA DE REGLAS OPCIONALES, MERCADO Y CONDICIONES DE ELIMINACIÓN:
 
 TABLA DE REGLAS OPCIONALES (MODIFICADORES DE DIFICULTAD):
@@ -1779,7 +1779,7 @@ CONDICIONES DE ELIMINACIÓN Y FIN DE ESCENARIO:
   {
     id: "reescritura-05-catalogo-localizaciones-completo",
     title: "Reescritura 5. Compendio Completo Integrado de Localizaciones del Mapa (Visitables, Revisitables y Señalizables)",
-    category: "components",
+    category: "lugares",
     content: `COMPENDIO COMPLETO DE CASILLAS Y ESTRUCTURAS DEL MAPA:
 
 CASILLAS VISITABLES (Un solo uso, se marcan con Cubo Negro):
@@ -1826,7 +1826,7 @@ CASILLAS SEÑALIZABLES (Captura con Cubo de Facción):
   {
     id: "bastion-01-mecanicas-y-elementos",
     title: "Bastión 1. Nuevos Elementos y Mecánicas: Mapa Subterráneo, Pergaminos de Hechizos, Arenas Movedizas y Fichas Especiales",
-    category: "components",
+    category: "componentes",
     content: `NUEVO CONTENIDO Y MECÁNICAS DE LA EXPANSIÓN BASTIÓN (STRONGHOLD):
 
 LOSETAS DE MAPA SUBTERRÁNEO Y PUERTA SUBTERRÁNEA:
@@ -1856,7 +1856,7 @@ HECHIZO ARENAS MOVEDIZAS Y FICHAS TÁCTICAS:
   {
     id: "bastion-02-modo-alianza-y-escenarios",
     title: "Bastión 2. Modo Alianza (2v2) y Escenarios: 'Guerra de los Poderosos', 'Guardián de la Mazmorra' y 'Túneles de los Enanos'",
-    category: "modes",
+    category: "escenario",
     content: `MODO ALIANZA (2 CONTRA 2) Y ESCENARIOS DESTACADOS:
 
 REGLAS GENERALES DEL MODO ALIANZA (2v2):
@@ -1885,7 +1885,7 @@ ESCENARIO 3: TÚNELES DE LOS ENANOS (Modo Cooperativo 2-3 Jugadores, 10-12 Ronda
   {
     id: "bastion-03-reglas-campana-ia-avanzada",
     title: "Bastión 3. Reglas Avanzadas de Campaña e Inteligencia Artificial (Transición de Mazo, IA Bajo Asedio y Hechizos Complejos)",
-    category: "modes",
+    category: "modos",
     content: `MECÁNICAS AVANZADAS DE CAMPAÑA E IA EN COMBATE:
 
 GESTIÓN DEL MAZO DE FUERZA Y MAGIA ENTRE ESCENARIOS:
@@ -1908,7 +1908,7 @@ TÁCTICAS DE HECHIZOS COMPLEJOS PARA LA IA:
   {
     id: "bastion-04-campana-bastion-hermandad-barbara",
     title: "Bastión 4. Campaña de Bastión 'Hermandad Bárbara' (Crag Hack y Yog vs Nigromantes de Deyja)",
-    category: "modes",
+    category: "campaña",
     content: `CAMPAÑA BASTIÓN: 'HERMANDAD BÁRBARA' (Yog y Crag Hack):
 
 MISIÓN 1: COSECHA (10 Rondas):
@@ -1935,7 +1935,7 @@ MISIÓN 3: SECRETOS REVELADOS (13 Rondas):
   {
     id: "bastion-05-nuevas-ubicaciones-bastion",
     title: "Bastión 5. Nuevas Ubicaciones del Mapa de la Expansión Bastión (Reservas del Cíclope, Puerta Subterránea, Pergamino de Hechizos)",
-    category: "components",
+    category: "lugares",
     content: `CATÁLOGO DE NUEVAS UBICACIONES DEL MAPA (EXPANSIÓN BASTIÓN):
 
 1. Reservas del Cíclope (Visitable):
@@ -1955,7 +1955,7 @@ MISIÓN 3: SECRETOS REVELADOS (13 Rondas):
   {
     id: "conflujo-01-mecanicas-y-elementos",
     title: "Conflujo 1. Nuevas Mecánicas y Elementos: Losetas Elementales, Monolitos, Invocación, Daño Elemental y Cartas Permanentes",
-    category: "components",
+    category: "componentes",
     content: `NUEVO CONTENIDO Y MECÁNICAS DE LA EXPANSIÓN CONFLUJO (CONFLUX):
 
 LOSETAS DE MAPA ELEMENTALES:
@@ -1982,7 +1982,7 @@ DAÑO ELEMENTAL Y REGLAS DE MAGIA:
   {
     id: "conflujo-02-escenarios-alianza-enfrentamiento-cooperativo",
     title: "Conflujo 2. Escenarios Oficiales: 'Un Mal Día' (Alianza 2v2), 'Diluvio' (Enfrentamiento 3j) y 'Demasiados Monstruos' (Cooperativo)",
-    category: "modes",
+    category: "escenario",
     content: `ESCENARIOS OFICIALES DE LA EXPANSIÓN CONFLUJO:
 
 1. UN MAL DÍA (Modo Alianza 2v2, Duración: 16 Rondas):
@@ -2005,7 +2005,7 @@ DAÑO ELEMENTAL Y REGLAS DE MAGIA:
   {
     id: "conflujo-03-reglas-campana-e-ia",
     title: "Conflujo 3. Reglas Especiales de Campaña e Inteligencia Artificial (Invocaciones e IA con Hechizos Complejos)",
-    category: "modes",
+    category: "modos",
     content: `REGLAS AVANZADAS DE CAMPAÑA E IA EN LA EXPANSIÓN CONFLUJO:
 
 INVOCACIONES POR LA IA EN COMBATE:
@@ -2020,7 +2020,7 @@ TÁCTICAS AMPLIADAS DE LA IA PARA HECHIZOS ELEMENTALES:
   {
     id: "conflujo-04-campana-maestros-de-los-elementos",
     title: "Conflujo 4. Campaña de Conflujo 'Maestros de los Elementos' (Tarnum en los 4 Planos Elementales)",
-    category: "modes",
+    category: "campaña",
     content: `CAMPAÑA CONFLUJO: 'MAESTROS DE LOS ELEMENTOS' (Tarnum):
 
 MISIÓN 1: CAMINATA DIFÍCIL SOBRE LAS NUBES (13 Rondas):
@@ -2046,7 +2046,7 @@ MISIÓN 4: MAESTRO DE LOS ELEMENTOS (14 Rondas):
   {
     id: "conflujo-05-nuevas-ubicaciones-conflujo",
     title: "Conflujo 5. Catálogo de Nuevas Ubicaciones del Mapa (Conflujo Elemental, Anillo del Hada y Monolitos)",
-    category: "components",
+    category: "lugares",
     content: `CATÁLOGO DE NUEVAS UBICACIONES DEL MAPA (EXPANSIÓN CONFLUJO):
 
 1. Conflujo Elemental (Visitable):
@@ -2068,7 +2068,7 @@ MISIÓN 4: MAESTRO DE LOS ELEMENTOS (14 Rondas):
   {
     id: "cala-01-mecanicas-y-elementos",
     title: "Cala 1. Nuevas Mecánicas y Elementos: Mapa Marino, Torbellino, Debilidad, Clonación y Máquinas de Guerra",
-    category: "components",
+    category: "componentes",
     content: `NUEVO CONTENIDO Y MECÁNICAS DE LA EXPANSIÓN CALA (COVE / REGNA):
 
 LOSETAS DE MAPA MARINO Y NAVEGACIÓN:
@@ -2097,7 +2097,7 @@ MÁQUINAS DE GUERRA:
   {
     id: "cala-02-escenarios-alianza-enfrentamiento",
     title: "Cala 2. Escenarios Oficiales: 'Estrecho de las Tormentas' (Alianza 2v2), 'Con Espada y Fuego' y 'Archipiélago Ardiente' (Enfrentamiento)",
-    category: "modes",
+    category: "escenario",
     content: `ESCENARIOS OFICIALES DE LA EXPANSIÓN CALA:
 
 1. ESTRECHO DE LAS TORMENTAS (Modo Alianza 2v2, Duración: 14 Rondas):
@@ -2119,7 +2119,7 @@ MÁQUINAS DE GUERRA:
   {
     id: "cala-03-campana-terror-de-los-mares",
     title: "Cala 3. Campaña de Cala 'Terror de los Mares' (Jeremy, Bidley y Casmetra vs Dargem)",
-    category: "modes",
+    category: "campaña",
     content: `CAMPAÑA CALA: 'TERROR DE LOS MARES' (Jeremy, Bidley y Casmetra):
 
 MISIÓN 1: EVENMORN (13 Rondas):
@@ -2143,7 +2143,7 @@ MISIÓN 3: TRAICIÓN (12 Rondas):
   {
     id: "cala-04-nuevas-ubicaciones-marinas",
     title: "Cala 4. Catálogo Completo de Nuevas Ubicaciones Marinas del Mapa (Naufragios, Pecio, Sirena, Cofre Marino, Templo del Mar, etc.)",
-    category: "components",
+    category: "lugares",
     content: `CATÁLOGO DE NUEVAS UBICACIONES MARINAS DEL MAPA (EXPANSIÓN CALA):
 
 1. Barco Abandonado (Visitable):
@@ -2192,7 +2192,7 @@ MISIÓN 3: TRAICIÓN (12 Rondas):
   {
     id: "sg2-01-elementos-y-preparacion-avanzada",
     title: "Stretch Goals 2: Nuevos Elementos, Cartas de Ciudad, Caja de Pandora, Mina de Hechizo, Campo de Fuerza y Preparación Avanzada",
-    category: "components",
+    category: "componentes",
     content: `CONTENIDO ADICIONAL Y PREPARACIÓN AVANZADA (STRETCH GOALS 2):
 
 CARTAS DE CIUDAD Y SELECCIÓN ALEATORIA DE FACCIONES:
@@ -2222,7 +2222,7 @@ MODOS DE PREPARACIÓN AVANZADA Y REGLAS VARIANTES:
   {
     id: "sg2-02-escenarios-enfrentamiento-sg2",
     title: "Stretch Goals 2: Escenarios de Enfrentamiento ('Ascensión', 'Islas Esmeralda', 'Reino del Caos', 'Pérdida de la Inocencia' y 'El Trébol Carmesí')",
-    category: "modes",
+    category: "escenario",
     content: `ESCENARIOS DE ENFRENTAMIENTO ADICIONALES (STRETCH GOALS 2):
 
 1. ASCENSIÓN (Modo 4 Jugadores, Equipos 2v2, 10 Rondas):
@@ -2250,7 +2250,7 @@ MODOS DE PREPARACIÓN AVANZADA Y REGLAS VARIANTES:
   {
     id: "sg2-03-campana-inferno-creadores-de-pesares",
     title: "Stretch Goals 2: Campaña de Inferno 'Creadores de Pesares' (Xex, Xyron, Fiona y Xeron vs AvLee, Bracada y Conflujo)",
-    category: "modes",
+    category: "campaña",
     content: `CAMPAÑA INFERNO: 'CREADORES DE PESARES' (Xex, Xyron, Fiona, Xeron):
 
 MISIÓN 1: UN PLAN DIABÓLICO (12 Rondas):
@@ -2274,7 +2274,7 @@ MISIÓN 3: CUSTODIOS DE LOS PESARES (13 Rondas):
   {
     id: "sg2-04-nuevas-ubicaciones-sg2",
     title: "Stretch Goals 2: Catálogo de Nuevas Ubicaciones del Mapa (Mina: Aserradero, Reserva de Cíclopes y Ciudad Aleatoria)",
-    category: "components",
+    category: "lugares",
     content: `CATÁLOGO DE NUEVAS UBICACIONES DEL MAPA (STRETCH GOALS 2):
 
 1. Mina: Aserradero (Señalizable):
@@ -2294,7 +2294,7 @@ MISIÓN 3: CUSTODIOS DE LOS PESARES (13 Rondas):
   {
     id: "batallas-navales-01-combate-naval-y-habilidades-potenciadas",
     title: "Batallas Navales 1. Combate Naval en Neopreno y Sistema de Cartas/Fichas de Habilidad Potenciada",
-    category: "components",
+    category: "componentes",
     content: `NUEVO CONTENIDO Y MECÁNICAS DE LA EXPANSIÓN BATALLAS NAVALES (NAVAL BATTLES):
 
 TABLEROS DE COMBATE DE NEOPRENO Y COMBATE NAVAL:
@@ -2315,7 +2315,7 @@ SISTEMA DE HABILIDADES POTENCIADAS (CARTAS Y FICHAS):
   {
     id: "batallas-navales-02-bancos-de-criaturas-mecanica-y-catalogo",
     title: "Batallas Navales 2. Bancos de Criaturas: Reglas de Despliegue, Fichas de Pila y Catálogo Completo (Barco Abandonado, Pirámide, Utopía del Dragón, etc.)",
-    category: "components",
+    category: "unidades",
     content: `MECÁNICA Y CATÁLOGO COMPLETO DE BANCOS DE CRIATURAS:
 
 MECÁNICA DE BANCOS DE CRIATURAS Y FICHAS DE PILA:
@@ -2343,7 +2343,7 @@ CATÁLOGO COMPLETO DE LOS 12 BANCOS DE CRIATURAS:
   {
     id: "batallas-navales-03-escenarios-oficiales-y-modo-solitario",
     title: "Batallas Navales 3. Escenarios Oficiales: 'Invasión Bárbara' (Cooperativo), 'El Pantano de Tentáculos de Gorlam' (Enfrentamiento) e 'Isla de Fuego' (Solitario)",
-    category: "modes",
+    category: "escenario",
     content: `ESCENARIOS OFICIALES DE LA EXPANSIÓN BATALLAS NAVALES:
 
 1. INVASIÓN BÁRBARA (Modo Cooperativo 2-4 Jugadores, Duración: 11 Rondas):
@@ -2365,7 +2365,7 @@ CATÁLOGO COMPLETO DE LOS 12 BANCOS DE CRIATURAS:
   {
     id: "batallas-navales-04-lugares-historia-y-parrafos-narrativos",
     title: "Batallas Navales 4. Sistema de Párrafos Narrativos e Interacciones (§1 al §29) para el Modo Solitario",
-    category: "modes",
+    category: "modos",
     content: `SISTEMA DE PÁRRAFOS NARRATIVOS DEL MODO SOLITARIO (§1 - §29):
 
 INSTRUCCIONES DE ACCESO POR LUGAR DEL MAPA:
@@ -2392,7 +2392,7 @@ RESUMEN DE RRAMAS NARRATIVAS Y PALABRAS CLAVE:
   {
     id: "reescritura2-01-modo-torneo-y-puntos-de-victoria",
     title: "Reescritura 2.0 Dev: Modo Torneo 1v1 y Sistema de Puntuación de Puntos de Victoria (PV)",
-    category: "modes",
+    category: "modos",
     content: `REGLAS OFICIALES DEL MODO TORNEO 1V1 (COMPENDIO REESCRITO V2.0 DEV):
 
 PREPARACIÓN Y AJUSTES DE TORNEO:
@@ -2430,7 +2430,7 @@ TABLA COMPLETA DE PUNTUACIÓN DE PUNTOS DE VICTORIA (PV):
   {
     id: "reescritura2-02-expansion-campo-de-batalla",
     title: "Reescritura 2.0 Dev: Expansión Campo de Batalla (Modo Aventura, Modo Escaramuza y Combate Táctico Hexagonal)",
-    category: "modes",
+    category: "modos",
     content: `EXPANSIÓN CAMPO DE BATALLA (BATTLEFIELD EXPANSION - COMPENDIO V2.0 DEV):
 
 SISTEMA DE JUEGO SIN MAPA DE EXPLORACIÓN:
@@ -2493,7 +2493,7 @@ SISTEMA DE JUEGO SIN MAPA DE EXPLORACIÓN:
   {
     id: "reescritura2-04-compendio-de-palabras-clave-y-fichas",
     title: "Reescritura 2.0 Dev: Compendio Consolidado de Palabras Clave y Fichas de Componente (Invocaciones, Fichas en Tropas, Obstáculos Tácticos y Permanentes)",
-    category: "components",
+    category: "componentes",
     content: `GLOSARIO CONSOLIDADO DE PALABRAS CLAVE Y FICHAS DE COMPONENTE (REESCRITURA V2.0 DEV):
 
 1. MECÁNICAS DE INVOCACIÓN (SUMMONING):
@@ -2517,8 +2517,6 @@ SISTEMA DE JUEGO SIN MAPA DE EXPLORACIÓN:
    - Efectos continuos en mesa (Máquinas de Guerra, Escuelas de Magia, etc.). Límite de 1 carta permanente activa simultáneamente por héroe.`
   }
 ];
-
-export const rulesKB = reglasCombinadas;
 
 
 

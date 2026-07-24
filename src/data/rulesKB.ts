@@ -1,6 +1,6 @@
 import { RuleSection } from '../types';
 
-export const rulesKB: RuleSection[] = [
+export const baseRulesKB: RuleSection[] = [
   // =========================================================================
   // 1. INTRODUCCIÓN GENERAL Y FACCIONES
   // =========================================================================
@@ -30,7 +30,7 @@ El juego cuenta con un total de 10 facciones oficiales que abarcan el juego base
   {
     id: "components_dice_tokens_cards",
     title: "2. Componentes del Juego: Tableros, Losetas, Dados, Fichas y Tipos de Cartas",
-    category: "components",
+    category: "componentes",
     content: `COMPONENTES FÍSICOS Y ELEMENTOS DE JUEGO:
 
 TABLEROS Y LOSETAS:
@@ -86,7 +86,7 @@ TIPOS DE CARTAS DEL JUEGO:
   {
     id: "game_setup_and_difficulty",
     title: "3. Preparación de la Partida y Selección de Dificultad",
-    category: "setup",
+    category: "preparación",
     content: `PASOS OFICIALES DE PREPARACIÓN DE LA PARTIDA (SETUP):
 
 1. Seleccionar Escenario del Libro de Misiones.
@@ -186,7 +186,7 @@ IV. LAS TRES ACCIONES DEL JUGADOR DURANTE EL TURNO:
   {
     id: "heroes_system_and_progression",
     title: "5. Sistema de Héroes: Héroe Principal vs Secundario, Anatomía y Progresión de Nivel",
-    category: "heroes",
+    category: "héroes",
     content: `SISTEMA DE HÉROES Y PROGRESIÓN DE NIVEL:
 
 HÉROE PRINCIPAL VS HÉROE SECUNDARIO:
@@ -235,7 +235,7 @@ SISTEMA DE HABILIDADES POTENCIADAS Y FICHAS POTENCIADAS:
   {
     id: "deck_building_and_secondary_skills",
     title: "6. Construcción del Mazo de Fuerza y Magia y Catálogo de Habilidades Secundarias",
-    category: "skills",
+    category: "habilidades",
     content: `CONSTRUCCIÓN DEL MAZO Y HABILIDADES SECUNDARIAS:
 
 REGLAS GENERALES DEL MAZO DE FUERZA Y MAGIA:
@@ -391,7 +391,7 @@ Cada carta de habilidad posee un Efecto Básico (gratuito) y un Efecto Experto (
   {
     id: "magic_system_and_spells_catalog",
     title: "7. Sistema de Magia, Las 4 Escuelas y Catálogo de Hechizos",
-    category: "magic",
+    category: "magia",
     content: `SISTEMA DE MAGIA Y REGLAS DE CONJURO:
 
 LAS 4 ESCUELAS DE MAGIA:
@@ -494,7 +494,7 @@ CATÁLOGO COMPLETO DE HECHIZOS OFICIALES POR ESCUELA DE MAGIA:
   {
     id: "resources_economy_and_town_building",
     title: "8. Economía de Recursos, Desarrollo Urbano y Comercio",
-    category: "town",
+    category: "ciudad",
     content: `ECONOMÍA DE RECURSOS, CONSTRUCCIÓN Y COMERCIO:
 
 LOS TRES RECURSOS DEL IMPERIO:
@@ -547,7 +547,7 @@ Al visitar un Puesto de Comercio se puede realizar una de las siguientes operaci
   {
     id: "adventure_map_tiles_and_locations",
     title: "9. El Mapa de Aventura: Losetas, Navegación y Catálogo Unificado de Ubicaciones",
-    category: "map",
+    category: "mapa",
     content: `EL MAPA DE AVENTURA, NAVEGACIÓN Y LOSETAS:
 
 ANATOMÍA Y COLOCACIÓN DE LOSETAS DE MAPA:
@@ -609,7 +609,7 @@ CATÁLOGO UNIFICADO DE UBICACIONES DEL MAPA:
   {
     id: "units_war_machines_and_creature_banks",
     title: "10. Unidades de Combate, Máquinas de Guerra y Bancos de Criaturas",
-    category: "units",
+    category: "unidades",
     content: `UNIDADES DE COMBATE, MÁQUINAS DE GUERRA Y BANCOS DE CRIATURAS:
 
 ANATOMÍA DE LA CARTA DE UNIDAD:
@@ -664,7 +664,7 @@ CATÁLOGO OFICIAL DE LOS 12 BANCOS DE CRIATURAS:
   {
     id: "tactical_combat_and_siege",
     title: "11. Combate Táctico, Asedio y Combate Naval",
-    category: "combat",
+    category: "combate",
     content: `REGLAS DE COMBATE TÁCTICO, ASEDIO Y COMBATE NAVAL:
 
 INICIO DE COMBATE Y COMBATE RÁPIDO (QUICK COMBAT):
@@ -708,7 +708,7 @@ COMBATE NAVAL (TABLERO DE NEOPRENO NAVAL):
   {
     id: "ai_rules_and_solo_coop_mode",
     title: "12. Reglas de Inteligencia Artificial (IA), Modo Solitario y Cooperativo",
-    category: "modes",
+    category: "modos",
     content: `REGLAS DE INTELIGENCIA ARTIFICIAL (IA) Y MODO COOPERATIVO:
 
 ÁMBITO DE APLICACIÓN DE LA IA:
@@ -751,7 +751,7 @@ MAZOS Y HECHIZOS DE LA IA:
   {
     id: "game_modes_tournaments_and_battlefield",
     title: "13. Modos de Juego, Misiones, Modo Torneo 1v1 y Expansión Campo de Batalla",
-    category: "modes",
+    category: "modos",
     content: `MODOS DE JUEGO, TORNEOS Y EXPANSIÓN CAMPO DE BATALLA:
 
 MODOS OFICIALES DE JUEGO:
@@ -869,3 +869,5 @@ WIKI OFICIAL DE LA COMUNIDAD:
 Para consultas detalladas de cartas específicas e interacciones complejas, se puede consultar la Fan-Made Wiki oficial: https://en.homm3bg.wiki/`
   }
 ];
+
+export const rulesKB: RuleSection[] = baseRulesKB;

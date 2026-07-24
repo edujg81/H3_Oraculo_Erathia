@@ -50,7 +50,7 @@ export interface RuleSection {
   id: string;
   title: string;
   content: string;
-  category: 'general' | 'setup' | 'combat' | 'faq' | 'components' | 'modes' | 'map' | 'town' | 'magic' | 'heroes' | 'units' | 'skills' | 'spells' | 'cards' | 'locations';
+  category: 'general' | 'preparación' | 'combate' | 'faq' | 'componentes' | 'modos' | 'mapa' | 'ciudad' | 'magia' | 'héroes' | 'unidades' | 'habilidades' | 'cartas' | 'campaña' | 'escenario' | 'artefactos';
 }
 
 export function getPlayerLimit(mode: 'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo' | 'campodebatalla'): number {
