@@ -445,7 +445,7 @@ CONDICIONES DE FIN DE ESCENARIO:
   {
     id: "rampart-04-escenario-el-desafio",
     title: "Murallas 4. Escenario Alianza: 'El Desafío' (4 Jugadores)",
-    category: "modos",
+    category: "escenario",
     content: `ESCENARIO ALIANZA 'EL DESAFÍO':
 
 NARRATIVA: El rey va a morir y desafía a quien construya el Grial en la capital Osha a convertirse en su sucesor.
@@ -468,7 +468,7 @@ REGLAS DEL ESCENARIO:
   {
     id: "rampart-05-escenario-oro-enano",
     title: "Murallas 5. Escenario Enfrentamiento: 'Oro Enano' (2-3 Jugadores)",
-    category: "modos",
+    category: "escenario",
     content: `ESCENARIO ENFRENTAMIENTO 'ORO ENANO':
 
 NARRATIVA: Fiebre del oro tras el hallazgo del minero enano Invis Smythers.
@@ -489,7 +489,7 @@ REGLAS ESPECIALES:
   {
     id: "rampart-06-campana-mision-1",
     title: "Murallas 6. Campaña 'La Venganza se Sirve Fría' - Misión 1: En Busca de un Asesino",
-    category: "modos",
+    category: "campaña",
     content: `CAMPAÑA DE LAS MURALLAS - ESCENARIO 1: EN BUSCA DE UN ASESINO
 
 HISTORIA: Asesinato de lord Falorel (descubierto como un señor vampiro infiltrado de Deyja) y la invasión de Soledare.
@@ -505,7 +505,7 @@ REGLAS Y EVENTOS DESTACADOS:
   {
     id: "rampart-07-campana-mision-2",
     title: "Murallas 7. Campaña 'La Venganza se Sirve Fría' - Misión 2: Paz Definitiva",
-    category: "modos",
+    category: "campaña",
     content: `CAMPAÑA DE LAS MURALLAS - ESCENARIO 2: PAZ DEFINITIVA
 
 HISTORIA: La druida Gem investiga el asesinato de lord Fayette, resucitado por los nigromantes como un Caballero del Terror.
@@ -520,7 +520,7 @@ REGLAS Y EVENTOS DESTACADOS:
   {
     id: "rampart-08-campana-mision-3",
     title: "Murallas 8. Campaña 'La Venganza se Sirve Fría' - Misión 3: Agentes de la Venganza",
-    category: "modos",
+    category: "campaña",
     content: `CAMPAÑA DE LAS MURALLAS - ESCENARIO 3: AGENTES DE LA VENGANZA
 
 HISTORIA: Gem y Gelu unen sus fuerzas para invadir Deyja y detener el complot del nigromante Sandro antes de que complete un artefacto destructivo.
@@ -582,7 +582,7 @@ REGLAS ADICIONALES PARA MINIATURAS DE UNIDAD EN TABLERO:
   {
     id: "sg-03-campana-dungeon",
     title: "Metas Ampliadas 3. Campaña Mazmorra: 'La Sangre del Dragón' (Mutare)",
-    category: "modos",
+    category: "campaña",
     content: `CAMPAÑA DE LA MAZMORRA: LA SANGRE DEL DRAGÓN (3 Escenarios):
 
 PROTAGONISTA: La señora Mutare busca el legendario Vial de Sangre de Dragón para transformarse en dragón y dominar Nighon.
@@ -607,7 +607,7 @@ ESCENARIO 3: SED DE SANGRE (10 Rondas)
   {
     id: "sg-04-campana-necropolis",
     title: "Metas Ampliadas 4. Campaña Necrópolis: 'El Ascenso del Nigromante' (Sandro)",
-    category: "modos",
+    category: "campaña",
     content: `CAMPAÑA DE LA NECRÓPOLIS: EL ASCENSO DEL NIGROMANTE (3 Escenarios):
 
 PROTAGONISTA: Sandro el Nigromante avanza hacia Deyja reuniendo artefactos legendarios (Capa del Rey No Muerto y Armadura de los Malditos) contra su antiguo maestro Ethric.
@@ -632,7 +632,7 @@ ESCENARIO 3: DUQUE ALARICE (11 Rondas)
   {
     id: "sg-05-campana-tower",
     title: "Metas Ampliadas 5. Campaña Torre: 'Matadragones' (Dracon)",
-    category: "modos",
+    category: "campaña",
     content: `CAMPAÑA DE LA TORRE: EL MATADRAGONES (4 Escenarios):
 
 PROTAGONISTA: Dracon realiza las pruebas preparadas por su madre para convertirse en el matadragones definitivo, enfrentándose a las wyrms más letales.
@@ -713,7 +713,7 @@ FICHAS Y RECURSOS:
   {
     id: "fortress-03-modo-alianza-arrogancia",
     title: "Fortaleza 3. Modo Alianza y Escenario 'Arrogancia' (4 Jugadores)",
-    category: "modos",
+    category: "escenario",
     content: `ESCENARIO ALIANZA 'ARROGANCIA':
 
 NARRATIVA: Cuatro culturas vivían en paz hasta que las ambiciones de conquista desataron la guerra mundial.
@@ -736,7 +736,7 @@ REGLAS DEL ESCENARIO:
   {
     id: "fortress-04-modo-enfrentamiento-grial",
     title: "Fortaleza 4. Escenario Enfrentamiento: 'En Busca del Grial' (2-3 Jugadores)",
-    category: "modos",
+    category: "escenario",
     content: `ESCENARIO ENFRENTAMIENTO 'EN BUSCA DEL GRIAL':
 
 NARRATIVA: Búsqueda competitiva del grial perdido en las ciénagas antes de que caiga en manos enemigas.
@@ -869,7 +869,7 @@ FICHAS Y RECURSOS:
   {
     id: "inferno-03-lugares-mapa",
     title: "Inferno 3. Nuevas Localizaciones: Eje Estelar y Ciudad Aleatoria",
-    category: "lugares",
+    category: "mapa",
     content: `NUEVAS LOCALIZACIONES DEL MAPA (EXPANSIÓN INFERNO):
 
 1. EJE ESTELAR (Señalizable):
@@ -1355,7 +1355,7 @@ CONDICIONES UNIVERSALES DE VICTORIA Y ELIMINACIÓN EN MODO ENFRENTAMIENTO (2-3 J
   {
     id: "misiones-03-modo-cooperativo",
     title: "Misiones 3. Modo Cooperativo y Escenarios: 'Los Campeones de Gelea' y 'Misión Maldita'",
-    category: "modos",
+    category: "escenario",
     content: `REGLAS GENERALES Y ESCENARIOS COOPERATIVOS:
 
 MECÁNICAS COOPERATIVAS GENERALES (2-3 Jugadores):
@@ -1620,7 +1620,7 @@ MECÁNICAS DE ASEDIO A CIUDADES:
   {
     id: "suplemento-05-catalogo-de-ubicaciones",
     title: "Suplemento 5. Catálogo Completo de Ubicaciones del Mapa (Visitables, Revisitables y Señalizables)",
-    category: "lugares",
+    category: "mapa",
     content: `CATÁLOGO OFICIAL DE CAMPOS Y UBICACIONES DEL MAPA:
 
 CLASIFICACIÓN DE CAMPOS:
@@ -1779,7 +1779,7 @@ CONDICIONES DE ELIMINACIÓN Y FIN DE ESCENARIO:
   {
     id: "reescritura-05-catalogo-localizaciones-completo",
     title: "Reescritura 5. Compendio Completo Integrado de Localizaciones del Mapa (Visitables, Revisitables y Señalizables)",
-    category: "lugares",
+    category: "mapa",
     content: `COMPENDIO COMPLETO DE CASILLAS Y ESTRUCTURAS DEL MAPA:
 
 CASILLAS VISITABLES (Un solo uso, se marcan con Cubo Negro):
@@ -1935,7 +1935,7 @@ MISIÓN 3: SECRETOS REVELADOS (13 Rondas):
   {
     id: "bastion-05-nuevas-ubicaciones-bastion",
     title: "Bastión 5. Nuevas Ubicaciones del Mapa de la Expansión Bastión (Reservas del Cíclope, Puerta Subterránea, Pergamino de Hechizos)",
-    category: "lugares",
+    category: "mapa",
     content: `CATÁLOGO DE NUEVAS UBICACIONES DEL MAPA (EXPANSIÓN BASTIÓN):
 
 1. Reservas del Cíclope (Visitable):
@@ -2046,7 +2046,7 @@ MISIÓN 4: MAESTRO DE LOS ELEMENTOS (14 Rondas):
   {
     id: "conflujo-05-nuevas-ubicaciones-conflujo",
     title: "Conflujo 5. Catálogo de Nuevas Ubicaciones del Mapa (Conflujo Elemental, Anillo del Hada y Monolitos)",
-    category: "lugares",
+    category: "mapa",
     content: `CATÁLOGO DE NUEVAS UBICACIONES DEL MAPA (EXPANSIÓN CONFLUJO):
 
 1. Conflujo Elemental (Visitable):
@@ -2143,7 +2143,7 @@ MISIÓN 3: TRAICIÓN (12 Rondas):
   {
     id: "cala-04-nuevas-ubicaciones-marinas",
     title: "Cala 4. Catálogo Completo de Nuevas Ubicaciones Marinas del Mapa (Naufragios, Pecio, Sirena, Cofre Marino, Templo del Mar, etc.)",
-    category: "lugares",
+    category: "mapa",
     content: `CATÁLOGO DE NUEVAS UBICACIONES MARINAS DEL MAPA (EXPANSIÓN CALA):
 
 1. Barco Abandonado (Visitable):
@@ -2274,7 +2274,7 @@ MISIÓN 3: CUSTODIOS DE LOS PESARES (13 Rondas):
   {
     id: "sg2-04-nuevas-ubicaciones-sg2",
     title: "Stretch Goals 2: Catálogo de Nuevas Ubicaciones del Mapa (Mina: Aserradero, Reserva de Cíclopes y Ciudad Aleatoria)",
-    category: "lugares",
+    category: "mapa",
     content: `CATÁLOGO DE NUEVAS UBICACIONES DEL MAPA (STRETCH GOALS 2):
 
 1. Mina: Aserradero (Señalizable):
