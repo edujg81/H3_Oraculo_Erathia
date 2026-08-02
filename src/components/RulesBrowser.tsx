@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import { rulesKB } from '../data/rulesKB';
+//import { rulesKB } from '../data/rulesKB';
+import { reglasCombinadas } from '../data/reglasCombinadas';
 import { RuleSection } from '../types';
 import { 
   Search, BookOpen, Layers, Swords, MessageSquareCode, Package, Compass, 
@@ -464,7 +465,8 @@ export default function RulesBrowser({
   ];
 
   const filteredSections = useMemo(() => {
-    return rulesKB.filter(section => {
+    //return rulesKB.filter(section => {
+    return reglasCombinadas.filter(section => {
       // 1. Matches Category
       const matchesCategory = selectedCategory === 'all' || section.category === selectedCategory;
       

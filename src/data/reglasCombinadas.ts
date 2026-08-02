@@ -30,60 +30,60 @@ export const reglasCombinadas: RuleSection[] = [
   // LIBRO DE REGLAS BASE
   // =========================================================================
   {
-    id: "cap-1-componentes",
-    title: "1. Lista de Componentes del Juego Base",
+    id: "cap_01_componentes",
+    title: "1. Lista de Componentes",
     category: "componentes",
-    content: `LISTA OFICIAL DE COMPONENTES DE HEROES OF MIGHT AND MAGIC III: THE BOARD GAME (JUEGO BASE):
-
-LIBROS Y AYUDAS:
-- 1 Libro de reglas (Versión 1.0 ESP)
-- 1 Libro de misiones (Escenarios)
-- 1 Libro de torneo
-- 3 Ayudas de juego de consulta rápida
-
-LOSETAS Y TABLEROS:
-- 20 Losetas de mapa (3 losetas iniciales [I], 9 losetas lejanas [II-III], 6 losetas cercanas [IV-V], 2 losetas centrales [VI-VII])
-- 3 Tableros de ciudad (Castillo, Mazmorra, Necrópolis)
-- 1 Tablero de combate táctico (cuadrícula 4 × 5)
-- 1 Marcador de rondas (16 casillas)
-
-MINIATURAS Y CARTAS:
-- 6 Miniaturas de héroe (2 por facción: Héroe principal y secundario)
-- 3 Cartas de héroe a doble cara
-- 21 Cartas de unidad de facción (a doble cara: "unas pocas" / "manada")
-- 41 Cartas de unidad neutral (bronce, plata, oro, azur)
-- 30 Cartas de habilidad
-- 32 Cartas de artefacto (menor, mayor, reliquia)
-- 46 Cartas de hechizo (escuelas de Fuego, Agua, Aire y Tierra)
-- 18 Cartas de especialidad de héroe
-- 24 Cartas de característica (Ataque, Defensa, Poder, Conocimiento)
-- 20 Cartas de héroe IA
-- 3 Cartas de muralla, 1 carta de puerta y 1 carta de torre de arqueros (para asedios)
-- 19 Cartas de anuncio astrológico
-
-DADOS Y FICHAS:
-- 2 Dados de ataque rojos (-1 a +1)
-- 3 Dados de recursos
-- 3 Dados de tesoro
-- 33 Fichas de oro
-- 21 Fichas de materiales de construcción
-- 16 Fichas de objetos de valor
-- 3 Fichas de construcción, 3 de población y 3 de libro de hechizos
-- 17 Fichas de movimiento
-- 15 Fichas de daño y 6 de parálisis/defensa
-- 2 Fichas de moral y 1 ficha de grial
-- 100 Cubos acrílicos (20 azules, 20 morados, 20 grises, 40 negros)`
+    content: `LISTA OFICIAL DE COMPONENTES DE HEROES OF MIGHT AND MAGIC III: THE BOARD GAME
+    
+(JUEGO BASE)
+	LIBROS Y AYUDAS:
+	- 1 Libro de reglas (Versión 1.0 ESP)
+	- 1 Libro de misiones (Escenarios)
+	- 1 Libro de torneo
+	- 3 Ayudas de juego de consulta rápida
+	
+	LOSETAS Y TABLEROS:
+	- 20 Losetas de mapa (3 losetas iniciales [I], 9 losetas lejanas [II-III], 6 losetas cercanas [IV-V], 2 losetas centrales [VI-VII])
+	- 3 Tableros de ciudad (Castillo, Mazmorra, Necrópolis)
+	- 1 Tablero de combate táctico (cuadrícula 4 × 5)
+	- 1 Marcador de rondas (16 casillas)
+	
+	MINIATURAS Y CARTAS:
+	- 6 Miniaturas de héroe (2 por facción: Héroe principal y secundario)
+	- 3 Cartas de héroe a doble cara
+	- 21 Cartas de unidad de facción (a doble cara: "unas pocas" / "manada")
+	- 41 Cartas de unidad neutral (bronce, plata, oro, azur)
+	- 30 Cartas de habilidad
+	- 32 Cartas de artefacto (menor, mayor, reliquia)
+	- 46 Cartas de hechizo (escuelas de Fuego, Agua, Aire y Tierra)
+	- 18 Cartas de especialidad de héroe
+	- 24 Cartas de característica (Ataque, Defensa, Poder, Conocimiento)
+	- 20 Cartas de héroe IA
+	- 3 Cartas de muralla, 1 carta de puerta y 1 carta de torre de arqueros (para asedios)
+	- 19 Cartas de anuncio astrológico
+    
+ 	DADOS Y FICHAS:
+	- 2 Dados de ataque rojos (-1 a +1)
+	- 3 Dados de recursos
+	- 3 Dados de tesoro
+	- 33 Fichas de oro
+	- 21 Fichas de materiales de construcción
+	- 16 Fichas de objetos de valor
+	- 3 Fichas de construcción, 3 de población y 3 de libro de hechizos
+	- 17 Fichas de movimiento
+	- 15 Fichas de daño y 6 de parálisis/defensa
+	- 2 Fichas de moral y 1 ficha de grial
+	- 100 Cubos acrílicos (20 azules, 20 morados, 20 grises, 40 negros)`
   },
   {
-    id: "cap-2-resumen-modos",
+    id: "cap_02_resumen_modos",
     title: "2. Resumen del Juego y Modos de Juego",
     category: "modos",
     content: `DESCRIPCIÓN GENERAL Y MODOS DE JUEGO:
 
-En las tierras de Antagarich, los héroes exploran paisajes indómitos, recuperan artefactos, descubren asentamientos y reclutan criaturas. Cada partida forma parte de un escenario o campaña con su propio mapa, condiciones de victoria y reglas.
+En las tierras de Antagarich, los héroes exploran paisajes indómitos, recuperan artefactos, descubren asentamientos y reclutan criaturas. Cada partida forma parte de un escenario o campaña con su propio mapa, condiciones de victoria y reglas. Cada facción ofrece varios héroes con habilidades y mazos propios, lo que aporta rejugabilidad.
 
 MODOS DE JUEGO PRINCIPALES:
-
 1. ENFRENTAMIENTO (1v1, 2-3 jugadores):
    - Modo competitivo directo entre 2 y 3 jugadores.
    - Selecciona un escenario de Enfrentamiento y vence a tus rivales antes de que te derroten.
@@ -97,98 +97,155 @@ MODOS DE JUEGO PRINCIPALES:
    - Los compañeros de equipo comparten objetivos y coordinan estrategias en el mapa.
 
 4. COOPERATIVO (2-3 jugadores):
-   - Partidas cooperativas en las que todos los jugadores comparten el mismo objetivo contra el juego.`
+   - Partidas cooperativas en las que todos los jugadores comparten el mismo objetivo contra el juego.
+
+Además de estos 4 modos, el Libro de Torneo aporta un quinto modo, el Modo Torneo, pensado específicamente para partidas 1 contra 1 con puntuación por objetivos (ver capítulo "Modo Torneo: Construcción del Mapa de Escenario y Puntuación").`
   },
   {
-    id: "cap-3-preparacion-y-orden",
+    id: "cap_03_preparacion_y_turnos",
     title: "3. Preparación de la Partida, Rondas y Turnos",
     category: "preparación",
     content: `PREPARACIÓN DE LA PARTIDA Y ESTRUCTURA DE RONDAS:
 
 PASOS DE PREPARACIÓN DE LA PARTIDA:
-1. Elegir escenario del libro de misiones (ej. "Un nuevo mundo").
-2. Escoger facción (Castillo, Mazmorra o Necrópolis) y Héroe Principal.
-3. Extraer componentes de facción (carta de héroe, miniaturas, losetas de edificio, tablero de ciudad, cartas de unidad, especialidad, habilidad, cubos y fichas de acción).
-4. Colocar cubo de facción en el nivel 1 de la carta de héroe.
-5. Preparar mapa según diagrama del escenario y colocar tableros de ciudad con losetas de edificios iniciales.
-6. Configurar mazo inicial de fuerza y magia: cartas de característica de la carta de héroe + Flecha mágica (1 si es Fuerza, 2 si es Magia) + cartas de habilidad y especialidad de Nivel 1.
-7. Preparar mazos neutrales (bronce, plata, oro, azur), mazo de astrología, marcador de rondas (cubo negro en casilla 1) y tablero de combate.
-8. Determinar jugador inicial (nombrar 5 unidades neutrales o tirada de dado de ataque).
+1. Elige un escenario (para la primera partida se recomienda "Un Nuevo Mundo").
+2. Escoge una facción disponible (si hay desacuerdo, lanzad un dado de recursos y gana el resultado más alto). El juego base ofrece 3 facciones (Castillo, Mazmorra, Necrópolis), cada una con habilidades únicas y color propio.
+3. Elige uno de los héroes de tu facción como héroe principal.
+4. Saca de la caja los componentes de tu facción: 1 carta de héroe a doble cara, 2 miniaturas de héroe, 7 losetas de edificio de ciudad, 1 tablero de ciudad, 7 cartas de unidad a doble cara, 3 cartas de especialidad de héroe, 1 carta de habilidad (según héroe), 20 cubos de facción, 1 ficha de construcción, 1 de población, 1 de libro de hechizos y 3 fichas de movimiento.
+5. Coloca un cubo de tu facción en la casilla "1" del marcador de nivel de la carta de héroe (nivel 1).
+6. Prepara la disposición de losetas de mapa según el escenario y el número de jugadores.
+7. Coloca el tablero de ciudad y las losetas de edificio ya construidas según el escenario.
+8. Establece tus ingresos iniciales colocando cubos de facción en el marcador de ingresos del tablero de ciudad; coloca las fichas de población, construcción y libro de hechizos en sus huecos.
+9-10. Agrupa las fichas de recursos y hazte con los recursos iniciales del escenario; separa el resto en montones comunes.
+11. Divide las cartas de característica en 4 montones (ataque, defensa, poder, conocimiento) y toma la cantidad indicada en tu carta de héroe: este es tu mazo inicial de fuerza y magia.
+12. Si tu héroe principal es de fuerza, añade 1 copia de Flecha Mágica a tu mazo; si es de magia, añade 2 copias.
+13. Añade las cartas de habilidad y especialidad de nivel 1 de tu héroe a tu mazo inicial.
+14. Baraja tu mazo inicial y colócalo boca abajo junto a tu carta de héroe.
+15. Separa las cartas de habilidad, artefacto y hechizo en 3 mazos boca abajo, cada uno con su primera carta formando un descarte visible.
+16. Elige la dificultad inicial y aplica sus bonificadores (ver Opciones de Juego).
+17. Separa las unidades neutrales en 4 mazos por categoría (bronce, plata, oro, azur), barajados y con espacio para sus descartes.
+18. Coloca el tablero de combate cerca del mapa; aparta las unidades iniciales que indique el escenario; coloca el marcador de rondas con un cubo negro en la casilla 1.
+19. Baraja las cartas de anuncio astrológico y colócalas boca abajo cerca del marcador de rondas.
+20. Rota tu loseta inicial como prefieras y coloca tu miniatura de héroe en la zona de la ciudad.
+21. Empieza el jugador que nombre 5 unidades neutrales de Heroes of Might and Magic III, o alternativamente el que saque el resultado más alto en un dado de ataque.
 
-ORDEN DE LAS RONDAS:
-Las rondas se alternan en el marcador de rondas:
-- Ronda de Recursos: Todos los jugadores cobran ingresos de sus ciudades, asentamientos y minas.
-- Ronda Astrológica: Se roba y resuelve una carta de Anuncio Astrológico con efectos globales para la ronda.
+ORDEN DE LAS RONDAS: se alternan dos tipos de ronda cada vez que todos los jugadores completan su turno:
+• Ronda de Recursos: al comienzo, todos los jugadores obtienen ingresos de edificios, asentamientos y minas bajo su control, según el marcador de ingresos.
+• Ronda Astrológica: al comienzo, se roba y resuelve una carta de anuncio astrológico en voz alta (con diversos efectos y duraciones).
+El marcador de rondas avanza 1 casilla cada vez que todos los jugadores terminan su turno. Algunos escenarios incluyen eventos contrarreloj que se activan en rondas o condiciones específicas.
 
-TURNOS DE LOS JUGADORES:
-- Al comienzo del turno, ajusta tu mano robando o descartando hasta tu límite de mano actual.
-- Acciones de Ciudad (1 vez por ronda): Usar ficha de Construcción, Población o Libro de Hechizos.
-- Acciones de Moral: Gastar 1 ficha de moral positiva para robar 1 carta, descartar/robar el mismo número, o repetir tirada de dado. (La Necrópolis ignora moral).
-- Acciones de Movimiento: Gastar PM para mover al héroe (1 zona por PM), entablar combate, descubrir losetas ocultas o colocar losetas lejanas.`
+CARTAS DE EVENTO (introducidas en la expansión Fortaleza): un tercer tipo de evento, junto a las cartas de anuncio astrológico y los eventos contrarreloj. Al comienzo de cada Ronda de Recursos (excepto la primera), una vez repartidos los ingresos, se roba y resuelve 1 carta de evento; el jugador inicial roba la primera, y en la siguiente Ronda de Recursos le toca al siguiente jugador en sentido horario. Reglas de uso: solo se emplean en escenarios multijugador (si la acción no implica a otros jugadores, cada uno la realiza en sentido horario); si la carta no indica el orden, se resuelve en sentido horario empezando por quien la robó; si las acciones no están relacionadas entre sí, los jugadores pueden resolverlas simultáneamente; tras resolver el evento, la carta se baraja de nuevo en su mazo.
+
+TURNOS DE LOS JUGADORES: al comienzo de tu turno te conviertes en jugador activo; puedes descartar y robar cartas libremente hasta el límite de mano de tu nivel (si ya estás en el límite, no robas ni descartas). A lo largo del turno realizas acciones de ciudad, moral y movimiento.
+
+ACCIONES DE CIUDAD: cada una se puede usar una vez por ronda (en tu turno, en el de otro jugador, o antes de un combate, pero nunca durante él); tras usarla, da la vuelta a su ficha, que se recupera al inicio de la siguiente ronda:
+• Ficha de construcción: amplía tu ciudad.
+• Ficha de población: recluta y refuerza unidades, o recluta un héroe secundario.
+• Ficha de libro de hechizos: compra hechizos en la cofradía de magos.
+
+ACCIONES DE MORAL: al ganar moral positiva, coloca 1 ficha (máximo 1 a la vez); se puede usar en cualquier momento, incluso en combate, para: robar 1 carta de tu mazo de fuerza y magia, descartar cualquier cantidad de cartas y robar el mismo número, o volver a tirar 1 dado. Si tu héroe recibe moral negativa, debes descartar tu ficha positiva si la tienes; si no, recibes 1 ficha negativa (máximo 1). Si ya tenías una ficha negativa y recibirías otra, descartas toda tu mano al final del turno en su lugar. Si un héroe con moral negativa gana moral positiva, en vez de recibir la ficha positiva simplemente descarta la negativa. La facción Necrópolis ignora todos los efectos de moral.
+
+ACCIONES DE MOVIMIENTO: tus héroes se mueven tantas veces como quieras mientras tengas PM (el héroe principal empieza con 3). Cada PM gastado permite: mover 1 zona en cualquier dirección, continuar combatiendo contra unidades neutrales 1 ronda adicional, descubrir una loseta oculta adyacente, o colocar una nueva loseta lejana (II-III) de tu reserva. Marca el gasto dando la vuelta a las fichas de movimiento (cara marrón visible).
+
+PREGUNTAS FRECUENTES: 
+- El orden de prioridad de las reglas, de mayor a menor autoridad, es: cartas en juego → cartas de unidad → tableros de ciudad → libros de misión → libro de reglas.
+- No se reciben ingresos de producción en la primera ronda, solo los recursos iniciales del escenario.
+- En Alianza, los equipos se activan alternadamente; dentro de un equipo, se puede decidir cada ronda quién empieza.
+- Si un escenario no indica dónde colocar una miniatura, se coloca en la ciudad o loseta inicial por defecto.
+- Al entrar en una zona es obligatorio resolverla (empezando por el combate, si lo hay).
+- Volver a usar los efectos de una zona ya visitada (p. ej. tras renovarse por un evento, o en un mercadillo) exige gastar 1 PM de nuevo, aunque el héroe ya esté ahí.
+- Señalizar un asentamiento ya señalizado por otro jugador exige elegir un bonificador de la lista, pero sin el extra de "primera captura"; no se puede señalizar un asentamiento ya controlado por ti o tu aliado.
+- Las líneas finas de una loseta separan zonas transitables; las líneas gruesas bloquean el paso salvo que una regla o carta lo permita explícitamente.
+- Si un escenario tiene dos zonas de grial, solo existe 1 ficha: una vez recogida, la otra zona pasa a considerarse vacía (aunque siga exigiendo combate al entrar).
+- Para quitarte la moral negativa, la vía más sencilla es ganar moral positiva (artefactos, habilidades, lugares del mapa); si ya tienes moral negativa y ganas positiva, descartas la ficha negativa en su lugar. Necrópolis nunca se ve afectada por la moral.
+- Los héroes de magia no son necesariamente más poderosos que los de fuerza al principio: tienen más hechizos, pero menos cartas de uso ilimitado como ataque/defensa, y sus hechizos suelen requerir cartas adicionales de refuerzo.
+- Una carta de moral que da +1 a ataque/defensa/poder de combate se juega antes de empezar el combate y solo se aplica al primer ataque o defensa que se resuelva (la tercera opción se refiere al Modo Aventura de la expansión Campo de Batalla); se descarta justo después de aplicarse.`
   },
   {
-    id: "cap-4-heroes",
-    title: "4. Reglamento de Héroes: Principal, Secundario y Niveles",
+    id: "cap_04_heroes",
+    title: "4. Héroes",
     category: "héroes",
-    content: `TIPOS DE HÉROES Y DESARROLLO DE NIVEL:
+    content: `Existen héroes de fuerza y héroes de magia; cada facción tiene al menos uno de cada tipo. "Héroe del jugador" se refiere tanto al principal como al secundario.
 
-HÉROE PRINCIPAL:
-- Representado por miniatura y carta de héroe.
-- Tiene 3 Puntos de Movimiento (PM) por turno.
-- Es el único que utiliza el mazo de fuerza y magia, gana experiencia (EXP) y sube de nivel (del 1 al 7).
-- La carta de héroe detalla: Nombre, Clase, Tipo (Fuerza/Magia), Color de facción, Ataque, Defensa, Poder Mágico, Conocimiento, Habilidad Inicial y Especialidad.
+HÉROE PRINCIPAL: representado por su miniatura y carta de héroe. Tiene 3 PM, es el único que puede usar el mazo de fuerza y magia del jugador y ganar experiencia para subir de nivel (empieza en nivel 1, máximo nivel 7). Se gana experiencia derrotando unidades neutrales y héroes enemigos con dificultad/nivel igual o mayor al tuyo; algunos lugares del mapa y el dado de tesoro (cara "experiencia") también otorgan experiencia.
 
-HÉROES SECUNDARIOS:
-- Reclutable por 10 de oro usando la ficha de Población si posees ciudad o asentamiento.
-- Usa la segunda miniatura de facción, posee 2 PM y no tiene carta de héroe propia.
-- No gana experiencia ni usa el mazo de fuerza y magia. En combate lucha con tus cartas de unidad.
-- Si es derrotado, se retira de la partida y entrega un cubo de facción al vencedor; se puede volver a reclutar en tu siguiente turno.
+HÉROES SECUNDARIOS: si controlas una ciudad o asentamiento, puedes reclutar al héroe secundario de tu facción pagando 10 de Oro con la ficha de población. Usa la miniatura restante, se mueve por el mapa (cada jugador controla máx. 2 héroes a la vez), no tiene carta de héroe propia, no gana experiencia y tiene 2 PM. Si recibe cartas, van a tu mano igual que con el principal. En combate usa tus unidades pero NUNCA cartas de tu mano o mazo de fuerza y magia. Si se encuentra con un héroe enemigo, puedes elegir combatir o retirarlo de la partida. Si es derrotado, se retira pero puede volver a reclutarse en tu próximo turno; quien lo derrota recibe un cubo de facción del perdedor.
 
-EFECTOS DE NIVEL (Niveles 1 a 7):
-- Nivel 1: Límite de mano 4. Añade 1.ª carta de especialidad.
-- Nivel 2: Busca (2) en mazo de habilidades. Permite jugar 1 efecto avanzado por ronda.
-- Nivel 3: Límite de mano 5. Busca (2) en mazo de habilidades.
-- Nivel 4: Añade 2.ª carta de especialidad. Permite jugar 2 efectos avanzados por ronda.
-- Nivel 5: Límite de mano 6. Busca (2) en mazo de habilidades.
-- Nivel 6: Añade 3.ª carta de especialidad. Permite jugar 3 efectos avanzados por ronda.
-- Nivel 7: Límite de mano 7. Busca (2) en mazo de habilidades.`
+INFORMACIÓN DE LA CARTA DE HÉROE: Nombre, Clase, Tipo, Color de facción, Ataque, Defensa, Poder, Conocimiento, Habilidad inicial, Especialidad, Marcador de nivel. Ataque/Defensa/Poder/Conocimiento determinan cuántas cartas de cada tipo añades a tu mazo inicial. Especialidad del héroe: indica qué carta de especialidad añade al mazo al comienzo y al subir de nivel (no cuenta para el límite de hechizos).
+
+EFECTOS DE NIVEL (marcador de nivel, límite de mano y usos de Experto por ronda):
+• Nivel 1: límite de mano 4. Añade la 1ª carta de especialidad.
+• Nivel 2: busca (2) en el mazo de habilidades; puedes jugar 1 efecto avanzado (Experto) por ronda.
+• Nivel 3: límite de mano 5. Busca (2) en habilidades.
+• Nivel 4: añade la 2ª carta de especialidad; permite jugar 2 efectos avanzados por ronda.
+• Nivel 5: límite de mano 6. Busca (2) en habilidades.
+• Nivel 6: añade la 3ª carta de especialidad; permite jugar 3 efectos avanzados por ronda.
+• Nivel 7: límite de mano 7. Busca (2) en habilidades.
+Los niveles dorados (I, IV, VI) dan carta de especialidad; los plateados (II, III, V, VII) permiten buscar(2) en habilidades. Usa cubos negros en la carta de héroe para marcar cuántos efectos avanzados puedes usar esa ronda.
+
+PREGUNTAS FRECUENTES:
+- Las características y la habilidad inicial de la carta de héroe solo sirven para construir tu mazo inicial, no se usan para nada más después.
+- Sí puedes tener 2 héroes en la misma loseta (pero nunca en la misma zona); puedes atravesar una zona con otro héroe propio o aliado, pero no terminar tu movimiento ahí; entrar en la zona de un héroe enemigo inicia combate.
+- El héroe secundario nunca gana experiencia (ignora esa parte de cualquier efecto, aunque sí recibe cartas o recursos normalmente).
+- Cada 2 puntos de experiencia = 1 nivel de héroe.
+- Las cartas de especialidad que mencionan un tipo genérico (p. ej. "dragones" en las de Mutare) afectan a toda unidad cuyo nombre contenga esa palabra.
+- Los PM del héroe principal (3) y del secundario (2) se llevan por separado y se pueden repartir libremente entre ambos en tu turno.
+- Sí es posible superar el límite normal de usos de Experto por ronda gracias a artefactos u otros efectos de cartas.`
   },
   {
-    id: "cap-5-construccion-mazo",
-    title: "5. Construcción del Mazo, Cartas y Cofradía de Magos",
-    category: "magia",
+    id: "cap_05_construccion_mazo",
+    title: "5. Construcción del Mazo",
+    category: "general",
     content: `CONSTRUCCIÓN DEL MAZO DE FUERZA Y MAGIA Y TIPOS DE CARTAS:
+    
+El mazo inicial tiene 9 cartas: características, habilidad, hechizo y la especialidad del héroe elegido. Salvo que se indique lo contrario, cualquier carta que recibas (explorando o comprando) va directa a tu mano.
 
-Mazo Inicial: 9 cartas (características base del héroe + Flecha Mágica + Habilidad Nivel 1 + Especialidad Nivel 1).
-
-TIPOS DE EFECTOS EN CARTAS:
-- Instantáneos (Rayo): Se resuelven de inmediato.
-- De Activación (Flecha): Se juegan durante la activación de tu unidad antes de atacar.
-- De Mapa (Mundo): No se pueden usar en combate.
-- Continuos (Bucle): Duran hasta consumirse o hasta el comienzo del próximo turno del jugador.
+REGLAS GENERALES DE LAS CARTAS:
+1. Al "buscar (X)" en un mazo (habilidades/artefactos/hechizos), mira las X cartas superiores, añade 1 a tu mano y descarta el resto; o, en vez de mirarlas, coge directamente la carta superior de ese descarte.
+2. Cada mazo (habilidad/artefacto/hechizo) tiene su propio descarte identificable.
+3. Si el juego indica retirar una carta de la partida, devuélvela a la caja.
+4. Tipos de efectos en cartas:
+	- Instantáneos (Rayo): Se resuelven de inmediato.
+	- De Activación (Flecha): Se juegan durante la activación de tu unidad antes de atacar.
+	- De Mapa (Mundo): No se pueden usar en combate.
+	- Continuos (Bucle): Duran hasta consumirse o hasta el comienzo del próximo turno del jugador, lo que ocurra antes.
+5. Tras usar una carta, se descarta (o cuando concluya su efecto continuo).
+6. Si tu mazo de fuerza y magia se agota, baraja el descarte para formar uno nuevo.
 
 CATEGORÍAS DE CARTAS:
-1. Cartas de Habilidad y Característica:
-   - Tienen efecto básico y efecto avanzado (icono de corona). Requieren nivel de héroe suficiente para efectos avanzados.
-   - Las cartas de facción específica (ej. Necromancia para Necrópolis) solo pueden ser jugadas por dicha facción.
-2. Cartas de Artefacto:
-   - Divididos en Menores, Mayores y Reliquias. Se obtienen explorando, derrotando enemigos o mediante dados de tesoro.
-3. Cartas de Hechizo y Cofradía de Magos:
-   - No tienen coste inicial, pero se fortalecen añadiendo cartas de Poder Mágico/descarte.
-   - Máximo 1 hechizo por ronda de combate.
-   - Al construir la Cofradía de Magos en la ciudad, busca (2) dos veces en el mazo de hechizos.
-   - En rondas posteriores se pueden comprar hechizos adicionales pagando el coste de ciudad con la ficha de Libro de Hechizos.`
+1. CARTAS DE HABILIDAD Y CARACTERÍSTICA: cada una tiene un efecto básico y uno avanzado (Experto), limitado por el nivel del héroe. Las cartas específicas de facción se pueden añadir a cualquier mazo pero solo las usa la facción correspondiente; si buscas una que no puedes usar, puedes revelarla, descartarla y robar otra. Solo Necrópolis puede usar las cartas marcadas con su símbolo.
+2. CARTAS DE ARTEFACTO: 3 niveles (menor, mayor, reliquia); se barajan en un único mazo al comienzo. Afectan combate, recursos, moral y robo de cartas. Se obtienen explorando el mapa o con el dado de tesoro.
+3. CARTAS DE HECHIZO: sin coste inicial, pero se pueden reforzar con más poder (el poder añadido no se guarda para hechizos futuros). Solo se lanza 1 hechizo por ronda de combate, pero se puede reforzar con tantas cartas como se quiera (descartando otras cartas de hechizo en mano, o usando una carta de artefacto/habilidad/poder). Se obtienen construyendo una cofradía de magos o explorando el mapa.
+4. CARTAS DE EFECTO PERMANENTE (introducidas en la expansión Murallas): ofrecen un bonificador o condición cumplible que permanece en juego frente al jugador hasta que se descarta o se sustituye por otra carta de efecto permanente; cada héroe solo puede tener 1 activa a la vez. Mientras está en juego, se pueden seguir usando tanto su efecto básico como el avanzado, pero no se acumulan entre sí (usar el avanzado no añade también el básico).
+5. CARTA DE CARACTERÍSTICA POTENCIADA (introducida en la expansión Inferno): funciona como una carta de característica normal, pero solo tiene 1 efecto (no distingue básico/avanzado) y por tanto nunca exige gastar un uso de Experto. Se obtiene visitando un Eje Estelar (ver capítulo 8, Elementos del Mapa), o mediante ciertas cartas de artefacto, habilidad y anuncio astrológico de esa expansión.
+6. CARTAS DE PERGAMINO DE HECHIZOS (introducidas en la expansión Bastión): conjunto de 20 cartas nuevas; durante la preparación, 10 se barajan dentro del propio mazo de artefactos y las otras 10 quedan aparte formando el mazo de pergaminos de hechizos, usado cuando un lugar o efecto de escenario lo requiera. Al obtener una carta de pergamino de hechizos, colócala junto a tu carta de héroe y roba las 2 cartas superiores del mazo de hechizos, colocándolas boca abajo sobre ella (a partir de entonces se tratan como una sola unidad). Puedes mirar y usar esos hechizos como cualquier otro, con 4 excepciones: (1) no cuentan para tu límite de 1 hechizo por ronda de combate, así que puedes lanzar también uno de tu mano esa misma ronda; (2) solo puedes usar su efecto más débil, sin reforzarlo con Poder de ningún origen; (3) no se pueden usar para reforzar otro hechizo; (4) puedes vender un pergamino junto con sus hechizos en un mercadillo por 2 de Oro por cada hechizo que contenga. Solo puedes tener 2 pergaminos de hechizos en juego a la vez; si obtienes un tercero, decide cuál de los dos anteriores descartar. Cuando se usa o vende el último hechizo de un pergamino, su carta vuelve al mazo de pergaminos de hechizos preparado al inicio del escenario.
+7. CARTAS Y FICHAS DE HABILIDAD POTENCIADA (introducidas en la expansión Batallas Navales): las cartas de habilidad potenciada funcionan igual que una carta de habilidad normal, pero con un único efecto que no exige gastar tu límite de Experto. Solo hay 1 copia de cada habilidad potenciada, así que el primer jugador que la consiga impide a los demás obtenerla. Cuando ganes una carta de habilidad nueva (subiendo de nivel, visitando un lugar, o de cualquier otra forma), puedes gastar 1 ficha de habilidad potenciada para llevarte la versión potenciada de esa misma habilidad en su lugar, devolviendo la carta normal a su mazo. Las fichas de habilidad potenciada se obtienen como recompensa en ciertos lugares del mapa o escenarios; se colocan en tu carta de héroe al conseguirlas y se descartan al usarlas.
+8. CARTAS DE CIUDAD (introducidas en la expansión Contenido Adicional): mazo de 10 cartas, una por cada facción del juego (aparta las de expansiones que no tengas). Sirven para 2 cosas: (1) aleatorizar la elección de facción al inicio de la partida —reparte 2 cartas por jugador y que cada uno elija una, o bien reparte 2 al primer jugador para que elija una y pase la otra al siguiente (que roba 1 más del mazo y repite el proceso) hasta que todos tengan facción—; (2) determinar qué facción defiende una Ciudad Aleatoria (ver capítulo 8, Elementos del Mapa).
+9. CARTAS DE CAJA DE PANDORA (introducidas en la expansión Contenido Adicional): mazo de 20 cartas. Al visitar el lugar "Caja de Pandora", puedes robar 1 carta de este mazo y resolverla en vez del efecto normal del lugar (marcando igualmente la zona como visitada con un cubo negro).
+
+CONSTRUIR UNA COFRADÍA DE MAGOS: al construirla, busca(2) dos veces en el mazo de hechizos (si empiezas la partida con ella ya construida, esas cartas van directas al mazo, no a la mano). Para comprar más hechizos, paga el coste del tablero de ciudad para buscar(2); solo 1 vez por ronda, dando la vuelta a la ficha de libro de hechizos tras usarla. No se puede comprar hechizos la misma ronda en que se construye la cofradía.
+
+ESCUELAS DE MAGIA (introducidas en la expansión Metas Ampliadas): cada carta de hechizo pertenece a una de las 4 escuelas (aire, fuego, tierra, agua), identificable por el borde alrededor de su símbolo. Flecha Mágica pertenece a las 4 escuelas a la vez, pero solo puede beneficiarse del bonificador de una escuela concreta cada vez que se lanza.
+
+PREGUNTAS FRECUENTES:
+- Coloca las cartas con efecto continuo cerca de tu carta de héroe (o de la unidad afectada) para recordar que siguen activas; solo se descartan cuando se usan o dejan de tener efecto (una carta de conocimiento puede recuperar del descarte una carta de hechizo, pero nunca una carta de especialidad).
+- Las cartas de especialidad que imitan hechizos NO son hechizos: pueden reforzarse con cartas de poder, pero no cuentan para el límite de 1 hechizo por ronda ni se ven afectadas por bonificadores exclusivos de hechizos (como las escuelas de magia).
+- El nombre de una carta de especialidad no obliga a usarla sobre la unidad del mismo nombre (aunque suele ser más potente así).
+- Nigromancia solo puede usarla un héroe de Necrópolis; si otra facción la roba, puede enseñarla y descartarla para robar otra carta de habilidad, o quedársela en el mazo sin poder usarla nunca.
+- El descuento de Nigromancia solo reduce el Oro a la mitad (redondeando hacia abajo), no otros recursos.
+- Cuando una carta pide descartar cierto número de cartas, la propia carta que se está jugando NO cuenta en ese recuento (primero se resuelve el efecto, comprobando el orden de acciones de la carta, y solo después se descarta la carta jugada).
+- Si coinciden una carta de anuncio astrológico y una de evento (expansión Fortaleza), se resuelven simultáneamente si es posible; si no, primero el anuncio astrológico por orden de turno desde el jugador inicial, y después el evento en sentido horario desde quien lo robó.
+- Sí se pueden jugar cartas de efecto instantáneo en el mapa (aunque solo algunas dan bonificador útil fuera de combate, como las que dan recursos, reducen coste de reclutamiento o dan PM).
+- Las cartas de hechizo con efecto instantáneo se pueden devolver con una carta de conocimiento y volver a jugar sin problema; las de efecto continuo se descartan al concluir su efecto, por lo que no se puede repetir esa misma copia (pero sí jugar una segunda copia distinta de esa misma carta continua).
+- Diplomacia solo permite reclutar unidades de la categoría para la que tengas la vivienda correspondiente.
+- La rareza de un artefacto se distingue por el borde de su carta; la de un hechizo, por la cantidad de símbolos de escuela de magia en sus esquinas (1 = básico, 4 = avanzado; Flecha Mágica tiene 4 símbolos distintos porque pertenece a las 4 escuelas).
+- Cada carta se puede usar 1 vez antes de pasar a tu descarte; cuando el mazo se agota, baraja el descarte para formar uno nuevo.`
   },
   {
-    id: "cap-6-recursos",
+    id: "cap_06_recursos",
     title: "6. Tipos de Recursos y Dado de Recursos",
     category: "general",
-    content: `RECURSOS Y DADO DE SUMINISTROS:
-
-LOS 3 TIPOS DE RECURSOS:
-1. Oro: Moneda principal usada para construir edificios, reclutar unidades y comprar hechizos.
-2. Materiales de Construcción: Requeridos para edificaciones urbanas y estructuras avanzadas.
-3. Objetos de Valor: Recursos raros (cristal, gemas, mercurio) consumidos por unidades de élite (Oro/Azur) y magias superiores.
+    content: `Existen 3 tipos de recursos: Oro, Materiales de Construcción y Objetos de Valor, necesarios para ampliar la ciudad, reclutar unidades y comprar hechizos. Se consiguen en asentamientos y minas controladas, con artefactos, o lanzando dados de recursos.
 
 RESULTADOS DEL DADO DE RECURSOS:
 - 2 Materiales de construcción
@@ -198,1454 +255,775 @@ RESULTADOS DEL DADO DE RECURSOS:
 - 3 de Oro
 - 6 de Oro
 
-Intercambio de recursos: Se realiza en el Mercadillo o mediante eventos siguiendo la Tabla de Comercio.`
+En mercadillos o por ciertos eventos, se pueden intercambiar recursos o retirar una carta (ver Tabla de Comercio en Opciones de Juego).`
   },
   {
-    id: "cap-7-ciudad",
-    title: "7. Desarrollo Urbano: Edificios y Asedios",
+    id: "cap_07_ciudad",
+    title: "7. Ciudad: Edificios y Asedios",
     category: "ciudad",
-    content: `GESTIÓN DE LA CIUDAD Y ASEDIO DE ASENTAMIENTOS:
-
-EDIFICIOS Y SUS FUNCIONES:
-- Alcaldía: Otorga ingresos adicionales de oro por ronda de recursos o habilidad pasiva de facción.
-- Ciudadela: Permite reforzar unidades (de "unas pocas" a "manada"). Añade murallas, puerta y torre de arqueros cuando tu ciudad es asediada.
-- Viviendas de Unidades (Niveles 1, 2 y 3): Desbloquean reclutamiento de unidades de Bronce (Nivel 1), Plata (Nivel 2) y Oro (Nivel 3).
-- Cofradía de Magos: Permite buscar e incorporar cartas de hechizo a tu mazo.
-- Edificios Específicos de Facción: Otorgan bonificaciones únicas propias de cada pueblo.
+    content: `Cada facción tiene su ciudad, con edificios propios:
+• Alcaldía: durante la ronda de recursos, ingresos adicionales o habilidad específica de facción.
+• Ciudadela: permite reforzar cartas de unidad (de "unas pocas" a "manada"); añade murallas, puerta y torre de arqueros en un asedio.
+• Viviendas de unidades: permiten reclutar unidades; más viviendas desbloquean categorías superiores, en el orden bronce → plata → oro.
+• Cofradía de magos: lugar donde comprar hechizos.
+• Edificios de facción: efectos únicos según la facción.
 
 REGLAS DE CONSTRUCCIÓN:
-- Máximo 1 edificio por ronda pagando su coste y girando la ficha de Construcción.
+- Solo se puede construir 1 vez por ronda, pagando el coste y dando la vuelta a la ficha de construcción (se recupera al inicio de la próxima ronda). 
+- Coloca la loseta de edificio correspondiente en el tablero de ciudad.
 
-ASEDIOS Y CAPTURA DE CIUDADES:
-- Si asedias un asentamiento o ciudad enemiga desprotegida, el defensor puede pagar 8 de oro para transportar solo a su ejército a defender la plaza (sin héroe principal ni mazo de mano).
-- Al capturar una ciudad enemiga, sustituyes su cubo por uno de tu facción. No puedes reclutar unidades ni usar edificios de otras facciones en ciudades capturadas.`
+CAPTURA Y ASEDIO: mientras exploras, puedes capturar asentamientos neutrales y asediar ciudades enemigas moviendo tu héroe sobre ellos. 
+- Si asedias la ciudad/asentamiento de otro jugador, el defensor puede pagar 8 de Oro para defenderse con su ejército si no está presente en la zona (transporta solo el ejército, no el héroe principal, por lo que no puede usar cartas de mano en ese combate; tras el combate, el ejército vuelve al lugar del héroe). 
+- Si capturas una ciudad enemiga, coloca tu cubo de facción sobre ella y recupera un cubo de facción del propietario anterior (relevante para condiciones de victoria). En una ciudad capturada no se pueden usar sus edificios ni habilidades (incluida reclutar). 
+- Si un enemigo captura tu ciudad, tú sigues pudiendo usar sus edificios y habilidades.
+
+PREGUNTAS FRECUENTES:
+- Puedes construir una cofradía de magos incluso durante el turno de otro jugador (por ejemplo, antes de que te ataquen), pero no puedes usar la ficha de libro de hechizos para comprar hechizos justo después de construirla esa misma ronda, ya que ambas acciones cuentan como la misma acción de cofradía (limitada a 1 vez por ronda); sí conservas los hechizos que la cofradía entrega al construirse.
+- Si capturas la ciudad de otra facción, no puedes usar sus edificios salvo que el escenario indique lo contrario.
+- La ficha de población permite, 1 vez por ronda, reclutar un héroe secundario, o reclutar y reforzar tus unidades tantas veces como puedas pagar (estas dos últimas acciones se pueden repetir libremente esa ronda).
+- Si la Alcaldía te da PM adicional, decides tú a qué héroe se lo asignas.`
   },
   {
-    id: "cap-8-elementos-mapa",
-    title: "8. Elementos del Mapa: Losetas, Lugares, Asentamientos y Minas",
+    id: "cap_08_elementos_mapa",
+    title: "8. Elementos del Mapa",
     category: "mapa",
     content: `EXPLORACIÓN DEL MAPA DE AVENTURA:
 
 LOSETAS DE MAPA:
-- Compuestas por 7 zonas hexagonales.
+- Cada loseta tiene 7 zonas; algunas indican dificultad (I-VII, ver tabla) y las unidades neutrales que pueden encontrarse.
+- Zonas rodeadas de línea amarilla continua están bloqueadas (no se puede entrar). 
+- Las zonas marcadas con símbolo de dado de tesoro permiten lanzarlo y obtener: 1 dado de recursos, 2 dados de recursos (eliges uno), medio nivel de experiencia, o buscar(2) en artefactos.
 - Clasificadas por dificultad en el dorso: Iniciales (I), Lejanas (II-III), Cercanas (IV-V) y Centrales (VI-VII).
-- Al colocar nuevas losetas lejanas, deben situarse adyacentes al héroe y a al menos 2 losetas existentes con camino válido.
+- Al colocar nuevas losetas lejanas, deben situarse adyacentes al héroe y a al menos 2 losetas existentes con camino válido. 
 
-TIRADA EN DADO DE TESORO (En zonas marcadas con cofre):
-- Dado de recursos: Tira 1 dado de recursos.
-- 2 Dados de recursos: Tira 2 dados de recursos y elige uno.
-- ½ Nivel de experiencia: Gana medio nivel de EXP.
-- Artefacto: Busca (2) en el mazo de artefactos.
+LOSETAS DE MAPA SUBTERRÁNEO (introducidas en la expansión Bastión): funcionan como cualquier otra loseta, salvo que no se puede pasar de una loseta de superficie a una subterránea (ni viceversa) sin usar una Puerta Subterránea o un hechizo de portal de ciudad; ningún otro efecto de movimiento de carta permite ese cruce. Las losetas con puerta subterránea se indican en el diseño de mapa del escenario. Al descubrir una de estas losetas, elige una zona adyacente en la loseta de superficie (la "entrada") y coloca la ficha de puerta subterránea mitad en ella y mitad en un campo adyacente de la loseta subterránea (la "salida"), reemplazando esas zonas por completo (nunca sobre zonas bloqueadas, otras fichas, ni zonas requeridas para una condición de victoria). Cuando un héroe entra en la zona de "entrada", se descubre la loseta subterránea (si no lo estaba) y se elige su "salida" de la misma forma; el héroe se traslada de inmediato de una zona a la otra sin gastar PM adicional, tratándose ambas zonas como un único lugar a partir de entonces (transitable en ambos sentidos).
 
-CATEGORÍAS DE LUGARES EN EL MAPA:
-1. Visitables (Cubo negro): Un solo uso. (Ej. Piedra de aprendizaje [+1 EXP], Árbol de la sabiduría, Cabaña de la bruja, Templo, Fuente de la juventud, Tumba del guerrero, Jardín místico, Molino de agua, Molino).
-2. Re-visitables (Acceso recurrente): (Ej. Establos [+1 PM], Santuario [zona de protección], Mercadillo [comercio], Manantial mágico).
-3. Señalizables (Cubo de color):
-   - Asentamientos: Otorgan +5 oro, +2 materiales, +1 objeto de valor o reforzar 1 unidad por la mitad del coste.
-   - Minas: Producen minerales (2 materiales), alquimista/cristal/gemas (1 objeto de valor) o mina de oro (5 oro). La primera señalización otorga ingresos instantáneos.
-   - Obeliscos: Efectos según escenario y búsqueda del Grial.`
+LOSETAS DE MAPA MARINO (introducidas en la expansión Cala): se descubren y colocan igual que cualquier otra loseta, pero moverse por ellas es distinto. Algunas losetas marinas mezclan zonas de tierra y de mar. Te mueves con normalidad entre dos zonas del mismo tipo (mar↔mar o tierra↔tierra) y también al entrar en una zona de tierra desde una de mar. Sin embargo, cuando tu héroe entra en una zona de mar desde una zona de tierra, su movimiento termina para el resto del turno: no pierde ningún PM no gastado y aún puede usarlos para otras acciones (como prolongar el combate que resulte de esa zona), pero no puede volver a moverse ese turno, ni siquiera con ayuda de cartas.
+
+BARCO (miniatura opcional, introducida en la expansión Contenido Adicional): puedes sustituir tu miniatura de héroe por la de un barco justo después de entrar en una zona de mar, colocando tu cubo de facción sobre el barco para recordar a qué héroe representa. Cuando ese héroe entra en una zona de tierra desde el mar, deja la miniatura de barco a un lado y recupera tu miniatura de héroe.
+
+FICHA DE TORBELLINO (introducida en la expansión Cala): funciona igual que un monolito, pero solo en losetas de mar. Marca una zona conectada con otro torbellino de otra loseta; al descubrir una loseta marina con torbellino, coloca la ficha en la zona que indique el diseño del escenario (nunca sobre zonas bloqueadas, otras fichas, ni zonas necesarias para una condición de victoria). Cada ficha muestra un número correspondiente a un resultado del dado de ataque. Si hay 3 fichas de torbellino en el mapa, al entrar en una de ellas se lanza el dado de ataque para determinar a cuál de las otras dos te lleva (si el resultado apunta al mismo torbellino en el que acabas de entrar, repite la tirada). Cada viaje por torbellino te cuesta perder 1 unidad de tu ejército (que podrás volver a reclutar más adelante).
+
+LOSETAS DE MAPA ELEMENTALES (introducidas en la expansión Confluencia): cada una está asociada a una escuela de magia (fuego, agua, aire o tierra). Todos los hechizos de esa escuela que lance un héroe estando en esa loseta ven aumentado su Poder en 1.
+
+FICHAS DE MONOLITO (introducidas en la expansión Confluencia): marcan una zona que conecta con otro monolito de otra loseta, permitiendo viajar entre ambos. Al descubrir una loseta con monolito, colócala según las reglas normales y luego coloca la ficha en la zona que indique el diseño del mapa del escenario (la ficha reemplaza por completo esa zona; nunca se coloca sobre zonas bloqueadas, otras fichas, ni zonas necesarias para una condición de victoria). Hay 2 tipos: unidireccional (solo se puede viajar desde el monolito de entrada al de salida, nunca al revés) y bidireccional (se puede ir y volver entre ambos libremente). Entrar en la zona de un monolito traslada de inmediato al héroe al monolito emparejado, sin gastar PM adicional.
+
+CATEGORÍAS DE LUGARES:
+• Visitable: al visitarla, coloca un cubo negro (si ya tiene uno, se considera zona vacía).
+• Señalizable: se pueden poseer/controlar con tu cubo de facción; otro jugador puede sustituir tu cubo por el suyo para tomar el control; un héroe aliado con tu cubo la trata como zona vacía.
+• Revisitable: se puede visitar varias veces, recibiendo el efecto cada vez, sin colocar cubo.
+
+LOSETAS DE MAPA DE ESCENARIO: cada escenario usa una combinación de losetas centrales y/o cercanas (con los enemigos más fuertes y mejor botín), mezcladas y bocabajo hasta descubrirse. Algunos escenarios dan una reserva individual de losetas lejanas (II-III) por jugador, añadidas al explorar. COLOCACIÓN: solo se puede añadir una loseta si queda adyacente al héroe y a al menos 2 losetas más, con un camino válido de alcance (aunque pueda haber zonas bloqueadas adyacentes); las losetas se pueden rotar al colocarlas.
+
+LISTA DE LUGARES DEL MAPA (juego base):
+• Ciudad (Señalizable): zona inicial de un jugador; capturarla da un bonificador según el escenario.
+• Molino de Agua (Visitable): +3 de Oro.
+• Molino (Visitable): +1 Material de Construcción.
+• Jardín Místico (Visitable): elige +2 de Oro o +1 Material de Construcción.
+• Santuario del Gesto Mágico (Visitable): busca(2) en hechizos.
+• Árbol de la Sabiduría (Visitable): paga 3 Materiales o 10 de Oro para ganar 2 de experiencia.
+• Santuario del Encantamiento Mágico (Visitable): paga 3 de Oro para buscar(2) en hechizos.
+• Observatorio de Caoba (Visitable): descubre una loseta adyacente.
+• Piedra de Aprendizaje (Visitable): tu héroe principal gana 1 de experiencia.
+• Cabaña de la Bruja (Visitable): retira 1 carta de habilidad de tu mano, o mira la superior del mazo de habilidades y añádela a tu mano o a su descarte.
+• Templo (Visitable): ficha de moral positiva.
+• Estáblos (Revisitable): +1 PM adicional.
+• Tumba del Guerrero (Visitable): busca(2) en artefactos dos veces, después recibe moral negativa dos veces.
+• Utopía del Dragón (Señalizable): efectos según el escenario.
+• Fuente de la Juventud (Visitable): el héroe gana 1 PM adicional este turno y ficha de moral positiva.
+• Manantial Mágico (Visitable): mira las 3 cartas superiores de tu descarte, añade 1 a tu mano y devuelve el resto en cualquier orden.
+• Mercadillo (Revisitable): intercambia recursos o retira una carta.
+• Símbolo de Tesoro / Artefacto / Recursos (Visitable): lanza la cantidad indicada de dados correspondientes y resuelve uno.
+• Grial (Visitable): ganas ficha de grial.
+• Santuario (Revisitable): los héroes presentes no pueden ser atacados por otros héroes; ocupada por un héroe, otros no pueden entrar pero sí atravesarla.
+• Zona Bloqueada: terreno inaccesible, de borde amarillo grueso.
+• Obelisco (Señalizable): efectos según el escenario; no se retiran cubos enemigos al visitarlo; se convierte en zona vacía tras la primera visita de cada facción.
+• Asentamiento (Señalizable): al señalizar, elige un bonificador (+5 Oro, +2 Materiales, +1 Objeto de Valor, o refuerza una unidad de bronce/plata a mitad de coste); el primero en señalizarlo también recibe el bonificador elegido o puede reforzar una unidad, además del ingreso normal. Este extra es de un solo uso.
+• Mina (Señalizable): si nadie la ha capturado antes, recibes sus recursos de inmediato; produce pasivamente cada Ronda de Recursos según el tipo: Mina de Minerales 2 Materiales; Laboratorio de Alquimista/Mina de Cristal/Estanque de Gemas 1 Objeto de Valor; Mina de Oro 5 de Oro. Siempre protegida por unidades neutrales hasta que se señaliza.
+
+LUGARES NUEVOS DE LA EXPANSIÓN MURALLAS (Rampart):
+• Mina: Aserradero (Señalizable): funciona como cualquier otra mina; produce pasivamente 2 Materiales de Construcción por Ronda de Recursos.
+• Fábrica de Máquinas de Guerra (Revisitable): permite a los héroes comprar cartas de Máquina de Guerra al coste indicado en la propia carta.
+• Mercadillo, efecto ampliado: además de intercambiar recursos o retirar una carta, en esta expansión también permite comprar una Máquina de Guerra; si se compra aquí en vez de en la Fábrica, esa visita no permite ninguna otra acción del mercadillo y la máquina cuesta 3 de Oro más que en la Fábrica.
+
+LUGARES NUEVOS DE LA EXPANSIÓN CALA (Cove):
+• Naufragio, Barril Marino (Visitables): tira y resuelve 1 dado de recursos.
+• Barco Abandonado (Visitable): busca(2) en artefactos y gana 2 Objetos de Valor.
+• Pecio (Visitable): gana 2 Objetos de Valor.
+• Superviviente de Naufragio (Visitable): busca(2) en artefactos.
+• Sirena (Visitable): el héroe gana 1 PM adicional este turno y una ficha de moral positiva.
+• Cofre Marino (Visitable): lanza 1 dado de ataque; según el resultado, busca(1) en artefactos, gana 5 de Oro, o no ganas nada.
+• Restos de Naufragio (Visitable): lanza 1 dado de ataque; según el resultado, tira y resuelve 2 dados de recursos, tira y resuelve 1, o no ganas nada.
+• Templo del Mar (Visitable): elige entre 10 de Oro o buscar(2) en artefactos.
+• Boya (Visitable): gana una ficha de moral positiva.
+• Tumba (Visitable): gana una ficha de moral negativa, 3 de Oro y busca(1) en artefactos.
+• La Caja de Pandora (Visitable): lanza el número indicado de dados de recursos o de tesoro y elige uno para resolver su efecto.
+
+LUGARES NUEVOS DE LA EXPANSIÓN CONFLUENCIA (Conflux):
+• Conflujo Elemental (Visitable): por cada vivienda que tengas, roba del mazo de unidades neutrales correspondiente hasta encontrar una carta de "Elementales"; puedes reclutar una de ellas pagando su coste de reclutamiento. Vuelve a barajar el resto de cartas en sus mazos.
+• Anillo del Hada (Visitable): retira 1 carta de tu mano (no puede ser de característica, habilidad inicial ni especialidad) y busca(2) en el mazo correspondiente a esa carta.
+• Monolito Bidireccional, como lugar (Revisitable): al entrar, mueve a tu héroe a la ubicación del monolito de salida emparejado; puedes usar ese monolito para regresar al de entrada.
+• Monolito Unidireccional, como lugar (Revisitable): al entrar, mueve a tu héroe a la ubicación del monolito de salida emparejado; no puedes usar ese monolito de salida para regresar al de entrada.
+
+LUGARES NUEVOS DE LA EXPANSIÓN BASTIÓN (Stronghold):
+• Reservas del Cíclope (Visitable): al preparar el ejército neutral que custodia este lugar, en vez de robar 1 unidad de oro, se buscan 2 cíclopes concretos (primero en el descarte del mazo de oro, luego en el propio mazo) y se añaden al ejército neutral. Si ganas el combate, lanza y resuelve 4 dados de recursos.
+• Puerta Subterránea, como lugar (Revisitable): al entrar, te mueves de inmediato a la zona conectada en la loseta adyacente (ver mecánica de Losetas de Mapa Subterráneo en el capítulo 8).
+• Pergamino de Hechizos, como lugar (Visitable): al entrar, roba 1 carta de Pergamino de Hechizos y colócala junto a tu carta de héroe (ver capítulo 5, Construcción del Mazo).
+
+LUGARES NUEVOS DE LA EXPANSIÓN INFERNO:
+• Ciudad Aleatoria, mecánica (Señalizable): al descubrir este lugar, toma el mazo de Cartas de Ciudad (10 cartas, una por facción); aparta las que representen facciones ya presentes en la partida, baraja el resto y roba una: a partir de ese momento, la zona queda defendida por unidades de esa facción. Salvo que se indique lo contrario, la defienden 1 manada de oro (el jugador que controla las unidades defensoras elige cuál), 2 manadas de plata y 2 unidades "unas pocas" de bronce; en el asedio no se usa la carta de Torre de Arqueros. Un héroe que entra en la zona inicia un combate de asedio contra esas unidades. Al señalizarla, si nadie la controlaba antes, da 10 de Oro de inmediato y produce pasivamente 10 de Oro cada Ronda de Recursos. Solo se puede usar esta loseta si queda al menos 1 facción sin utilizar en la partida.
+• Eje Estelar (Señalizable): retira una carta de característica de tu mano y sustitúyela por una Carta de Característica Potenciada del mismo tipo. No se retiran cubos de facción enemigos al visitarlo (puede haber varios cubos en la zona); una vez visitado por una facción, pasa a ser zona vacía solo para esa facción.
+
+LUGARES NUEVOS DE LA EXPANSIÓN FORTALEZA (Fortress):
+• Erudito (Visitable): lanza 1 dado de ataque; según el resultado, roba la carta de característica elegida (o retira una de tu mano), o roba 2 cartas de habilidad y quédate 1 (descarta la otra), o roba 2 cartas de hechizo y quédate 1 (descarta la otra).
+
+LUGARES NUEVOS DE LA EXPANSIÓN METAS AMPLIADAS (Stretch Goals):
+• Universidad (Visitable): paga 6 de Oro para buscar(4) en el descarte del mazo de habilidades.
+• Mercado Negro (Revisitable): mira las 4 cartas superiores del descarte de artefactos y compra una: 5 de Oro si es menor, 7 si es mayor, 10 si es reliquia.
+• Mercado del Tiempo (Visitable): retira una carta de tu mano y, a cambio, busca(2) en el mazo de habilidades, hechizos o artefactos (a tu elección).
+• Prisión (Visitable): ganas un héroe secundario y colocas su miniatura en esta zona; si ya tenías uno, ganas 3 de Oro en su lugar.
+• Biblioteca de la Iluminación (Revisitable): paga 3 de Oro para retirar 1 carta de característica de tu mano o descarte y sustituirla por cualquier otra carta de característica; puedes hacerlo hasta 2 veces por visita.
+• Fuerte de la Colina (Visitable): refuerza inmediatamente una de tus unidades («unas pocas» o «manada»); el coste de refuerzo se reduce en 3 de Oro (mínimo 0).
+• Taberna (Revisitable): paga 7 de Oro para ganar un héroe secundario y obligar a un jugador enemigo a descartar 1 carta al azar de su mano.`
   },
   {
-    id: "cap-9-unidades",
-    title: "9. Unidades, Estadísticas, Categorías y Neutrales",
+    id: "cap_09_unidades",
+    title: "9. Unidades",
     category: "unidades",
-    content: `REGLAMENTO COMPLETO DE UNIDADES Y EJÉRCITO:
+    content: `Cada facción tiene acceso a 7 unidades distintas. Se empieza con la cara "unas pocas"; pagando el coste de refuerzo se da la vuelta a la cara "manada". Todos los jugadores llevan su propio mazo de unidades reclutadas. Máximo 5 unidades a la vez en el tablero de combate. Si una unidad es derrotada, se retira del mazo (recuperable volviendo a reclutarla); tras el combate, las supervivientes vuelven a tu mazo. Reclutar/reforzar requiere la ficha de población; se puede repetir tantas veces como se quiera y se tengan recursos, dando la vuelta a la ficha al terminar. Si pierdes todas tus unidades (en combate o por retirada), se sustituyen por las unidades iniciales del escenario.
 
-CARA DE LA CARTA Y ESTADÍSTICAS:
-- Las cartas tienen dos caras: "Unas pocas" (básica) y "Manada" (reforzada).
-- Atributos: Ataque, Defensa, Puntos de Salud (PS), Iniciativa, Coste de Reclutamiento y Coste de Refuerzo.
-- Límite de ejército en combate: Máximo 5 unidades desplegadas simultáneamente.
+Ataque: daño que hace la unidad. Puntos de Salud (PS): daño máximo antes de morir; una unidad reforzada que recibe daño igual/superior a sus PS da la vuelta a "unas pocas" y aplica el resto del daño a los nuevos PS; en "unas pocas", recibir daño igual/mayor a sus PS la retira del tablero. Tras el combate se cura todo el daño de las supervivientes (salvo que hayan pasado de "manada" a "unas pocas", lo que persiste hasta reforzarlas de nuevo).
+Defensa: reduce el daño de ataques (no aplica a hechizos ni otros efectos).
+Puntos de Salud: cantidad de heridas que puede soportar la unidad para ser derrotada.
+Iniciativa: determina el orden de activación (mayor = antes).
 
-CATEGORÍAS DE MOVIMIENTO Y ATAQUE DE UNIDADES:
-- Terrestre: Se mueve hasta 3 espacios y ataca cuerpo a cuerpo a unidades adyacentes.
-- Voladora: Se mueve hasta 3 espacios ignorando obstáculos de combate y ataca cuerpo a cuerpo.
-- A distancia: Se mueve hasta 1 espacio (sin atacar tras mover). Ataca a cualquier distancia salvo si tiene enemigos adyacentes o ataca a la retaguardia enemiga estando en la suya (-1 al dado de ataque o penalización de combate de tirar 2 dados y elegir el menor).
+HABILIDAD ESPECIAL, tipos: Activación (al activarse la unidad), Acción de Ataque (al atacar, solo en el primer ataque si ataca varias veces), Otra Acción (sustituye a la acción normal), Pasiva (se resuelve al cumplirse condiciones), Contraatacar (al contraatacar).
 
-CATEGORÍAS DE UNIDADES Y REQUISITOS DE EDIFICIO:
-- Bronce (Tier 1): Requieren Vivienda de Nivel 1. (Castillo: Alabarderos, Arqueros, Grifos / Mazmorra: Trogloditas, Arpías, Ojos Maléficos / Necrópolis: Esqueletos, Zombis, Espectros).
-- Plata (Tier 2): Requieren Vivienda de Nivel 2. (Castillo: Cruzados, Fanáticos / Mazmorra: Medusas, Minotauros / Necrópolis: Vampiros, Liches).
-- Oro (Tier 3): Requieren Vivienda de Nivel 3. (Castillo: Campeones, Arcángeles / Mazmorra: Mantícoras, Dragones Negros / Necrópolis: Caballeros del Terror, Dragones Fantasma).
-- Azures (Neutrales Nivel 4): Las más poderosas. Se reclutan únicamente mediante la habilidad Diplomacia teniendo Vivienda Nivel 3.`
+TIPOS DE UNIDADES:
+• Terrestre: Se mueve hasta 3 espacios y ataca cuerpo a cuerpo a unidades adyacentes.
+• Voladora: igual, pero ignora obstáculos de combate.
+• A Distancia: ataca y se mueve hasta 1 espacio, pero no ataca tras moverse; puede atacar cualquier unidad si no tiene enemigos adyacentes, pero sufre penalización (-1, se lanzan 2 dados de ataque y se escoge el menor) si ataca a una adyacente o en retaguardia enemiga estando ella también en retaguardia; penalización adicional (-1) si el objetivo está protegido por muralla/puerta enemiga. Si al activarse ya tiene un enemigo adyacente y decide atacar, su objetivo debe ser obligatoriamente esa unidad adyacente (con la penalización correspondiente); esta misma penalización se aplica también si contraataca estando adyacente.
+
+COSTES DE LAS UNIDADES: cada facción recluta 7 unidades. Cada carta tiene coste de reclutamiento (añadir al mazo, requiere la vivienda del nivel correspondiente) y coste de refuerzo (dar la vuelta a "manada"). Bronce requiere vivienda nivel 1, plata nivel 2, oro nivel 3 (esta última también habilita Diplomacia para reclutar azures).
+
+UNIDADES NEUTRALES: se dividen en 4 mazos por categoría: bronce (más débiles), plata, oro, azur (más poderosas). En combate se roban del mazo correspondiente a la dificultad de la zona. Con la habilidad Diplomacia se pueden reclutar unidades neutrales (con la vivienda del nivel adecuado y pagando su coste); las azures solo se reclutan así.
+
+PREGUNTAS FRECUENTES: 
+- Si una unidad ataca varias veces, se tira 1 dado de ataque por cada ataque por separado (los efectos instantáneos solo modifican el primer ataque de esa activación; en contraataques aplica la misma lógica). 
+- Las cartas que afectan a una unidad no se descartan al darle la vuelta a "unas pocas": permanecen mientras la carta de unidad siga en el tablero o hasta que el efecto concluya. 
+- Cuando una habilidad permite "volver a tirar" un dado (p. ej. cruzados), es opcional, no obligatorio, y se puede repetir en cada resultado no deseado. 
+- Los efectos Pasivos de las cartas de unidad SOLO funcionan durante el combate, nunca en el mapa (y solo afectan a otras unidades si el texto lo indica explícitamente).
+- Un dragón que ataca en línea a 2 unidades solo recibe contraataque de la unidad adyacente a él.
+- El hechizo Bendición hace ignorar el resultado del dado de ataque, por lo que NO activa habilidades que dependan de resolver ese dado (p. ej. la defensa extra de los zombis).
+- La penalización de ataque de la habilidad de las libélulas se aplica solo a 1 contraataque de la unidad atacada.
+- La habilidad de las momias tiene 2 efectos: al atacar, se tira el dado pero no se suma al ataque; al ser atacadas (Pasiva), el dado del atacante se gira para mostrar -1.
+- Ignorar un efecto continuo (p. ej. titanes, gárgolas) significa que la unidad no se ve afectada por ninguna carta con ese símbolo, se juegue en el tablero o contra ella en concreto.
+- La inmunidad de los efrits solo aplica a hechizos, no a cartas de especialidad.
+- Cuando una unidad atacante sufre daño de un efecto como Escudo de Fuego o la especialidad de Rashka, ese daño se aplica en el mismo paso que su propio ataque (incluso si derrota a la defensora); después, la defensora contraataca si procede.
+- Cada ataque de los wyverns coloca 1 cubo en el objetivo; al activarse una unidad con cubos, se retira 1 y se le hace 1 punto de daño (si se salta su activación, no se retira ninguno); los cubos cuentan como efecto y se pueden quitar con Curación.
+- Cuando los dragones fantasma obligan a alejarse, es el jugador que controla la unidad objetivo quien decide a qué casilla vacía y no adyacente se mueve (si no hay ninguna disponible, se queda en su sitio).
+- Si una unidad puede atacar dos veces (p. ej. hidras), cada uno de esos ataques se resuelve como un ataque independiente, con su propia tirada de dado.
+- La habilidad especial de los enanos se activa con cualquier hechizo o carta de especialidad que los tenga como objetivo, incluso si el propio jugador que controla a los enanos es quien juega esa carta sobre ellos.
+- El hechizo Rayo Disruptor sí se puede usar contra una manada de dragones negros neutrales, pero NO contra una manada de dragones negros de facción (su habilidad especial les hace ignorar cualquier efecto de hechizo, incluidos los que lance su propio controlador); contra "unas pocas" dragones negros de facción sí funciona, ya que en esa cara su habilidad solo reduce el daño de hechizos recibido, sin anularlos.
+- El hechizo Alborozo permite repetir dados de ataque según el Poder empleado: con 0 de Poder, puedes repetir 1 dado de ataque, solo durante la activación en la que lanzas el hechizo; con 2 de Poder, puedes repetir cada dado de ataque una vez, durante toda esa ronda de combate; con 4 de Poder, puedes repetir cada dado de ataque una vez hasta el final del combate.
+- La carta de habilidad Aprendizaje se puede jugar en el momento en que tu héroe sube de nivel.`
   },
   {
-    id: "cap-10-combate",
+    id: "cap_10_combate",
     title: "10. Reglamento Táctico de Combate",
     category: "combate",
-    content: `SISTEMA TÁCTICO DE COMBATE EN TABLERO 4 × 5:
+    content: `El combate ocurre al moverse/ser transportado a una zona no visitada con unidades neutrales, o al interactuar con otro jugador (asedio o encuentro de héroes).
 
-PREPARACIÓN DEL COMBATE:
-- Despliegue de hasta 5 unidades en vanguardia y retaguardia.
-- Duración: Combates contra neutrales de bronce, plata u oro duran 1 ronda (prolongable pagando 1 PM por ronda extra). Combates contra neutrales azures y héroes enemigos duran hasta la victoria, rendición o retirada.
+PREPARACIÓN DEL COMBATE: se libra en el tablero de combate 4×5 (retaguardia y vanguardia). Duración: 1 ronda contra unidades neutrales bronce/plata/oro; hasta que un bando gane o se rinda contra azures y héroes enemigos. Si no derrotas a bronce/plata/oro en 1 ronda, puedes pagar 1 PM para prolongar 1 ronda más (repetible mientras tengas PM); si no puedes o quieres, tu héroe se retira, el combate termina y la zona no se considera visitada (las unidades neutrales se descartan y se roban nuevas al reentrar).
 
-TERMINOLOGÍA Y MECÁNICAS DE COMBATE:
-- Orden de Iniciativa: Las unidades actúan en orden decreciente de Iniciativa. A igual iniciativa, activa primero el atacante.
-- Acciones de la Unidad: Moverse, Atacar, Defenderse (gana ficha de defensa) o Esperar.
-- Dado de Ataque: Dado rojo (-1, 0, +1) sumado al valor de Ataque de la unidad.
-- Cálculo de Daño: Daño = (Ataque + Dado de Ataque) - Defensa defensora. El daño se aplica en fichas de heridas.
-- Contraataque: 1 contraataque por ronda de la unidad defensora superviviente adyacente.
-- Obstáculos de combate: Cartas en el tablero, murallas, puertas y torre de arqueros en asedios.
+PREPARACIÓN DE UNIDADES NEUTRALES: coloca libremente hasta 5 de tus unidades; roba de los mazos neutrales según la tabla de dificultad y colócalas en el lado contrario. En solitario/cooperativo: retaguardia en orden decreciente de iniciativa desde la izquierda del jugador activo; vanguardia con voladoras/terrestres igual; empates de iniciativa: prioridad a mayor categoría, luego decide el jugador que controla las neutrales. En Enfrentamiento/Alianza: el jugador que terminó su turno controla las neutrales, colocando preferentemente las de distancia en retaguardia. Las unidades neutrales activas siempre atacan (o se mueven hacia) las unidades del héroe.
 
-FINAL DEL COMBATE Y EXPERIENCIA:
-- Ganar EXP: Si la dificultad/nivel enemigo es menor que tu héroe: 0 EXP. Si es igual: 1 EXP. Si es mayor: 2 EXP. Vencer unidades azures otorga directamente el Nivel 7.
-- Combate Rápido: Si tu héroe supera en 1 o más el nivel de dificultad neutral, las tropas huyen y ganas sin combatir.
-- Rendición/Retirada: Rendirse ante un héroe enemigo cuesta entregar 10 de oro a tu oponente y reaparecer en tu ciudad.`
+PREPARACIÓN HÉROE CONTRA HÉROE: igual que contra neutrales, pero el atacante coloca primero hasta 5 unidades y el defensor después, en el lado opuesto.
+
+TERMINOLOGÍA: Activación (mover y/o atacar; marca con cubo de facción, retíralo al final de ronda); Unidad adyacente (a 1 espacio ortogonal); Ronda de combate (ciclo completo de activación de ambos bandos); Obstáculos de combate (cartas en el tablero: unidades, murallas, puertas — bloquean a no voladoras; terrestres/voladoras adyacentes pueden destruir muros/puertas; el defensor puede atravesar una puerta destruida); Dado de ataque (-1 a +1, se suma al ataque); Contraataque (1 vez por ronda por unidad, con cartas de mano, sin generar otro contraataque; marca con cubo negro); Parálisis (se salta la próxima activación y se retira la ficha; se retira también si recibe daño o ataque antes; puede contraatacar si no lo ha hecho ya); Defensa/ficha de escudo (repite el dado de ataque tras el ataque recibido; +1 defensa adicional si sale +1; se descarta al inicio de la propia activación, impidiendo otra acción de defensa esa activación).
+
+DETALLES ADICIONALES DEL ASEDIO: si la ciudad defensora tiene ciudadela, el defensor recibe también la carta de Torre de Arqueros (además de muralla y puerta), que se coloca fuera del propio tablero de combate. Actúa como una unidad a distancia adicional del bando defensor, pero no se ve afectada por su posición en el tablero (no puede recibir ni realizar contraataques por posicionamiento) y solo puede sufrir daño de hechizos o ataques a distancia; se destruye automáticamente en cuanto caen todas las murallas y la puerta, y no hace falta derrotarla para ganar el asedio como atacante. Las unidades defensoras que estén en la misma columna y detrás de una muralla/puerta en pie reciben -1 al daño que sufran de unidades a distancia atacantes (esta bonificación no se aplica si alguna de las dos unidades implicadas está en la línea central o más allá de ella). Destruir una muralla o puerta con un ataque siempre tiene éxito automáticamente: no se tira el dado de ataque ni se pueden jugar cartas para modificarlo, y no activa las habilidades de Acción de Ataque de quien ataca.
+
+TABLERO DE COMBATE NAVAL (introducido en la expansión Batallas Navales, componente de neopreno con un tablero de combate normal en una cara y uno naval en la otra): opcional para cualquier combate que tenga lugar en una loseta de mar. Su única diferencia respecto al tablero de combate 4×5 habitual es que elimina los 2 espacios centrales: las unidades terrestres deben rodearlos por la izquierda o la derecha; las voladoras pueden sobrevolarlos (sin poder terminar su movimiento ahí ni salir del tablero por ese hueco).
+
+BANCOS DE CRIATURAS (introducidos en la expansión Batallas Navales): lugares de combate opcionales que convierten una zona bloqueada en visitable. Existen fichas de banco de criaturas cercanas y lejanas (identificables por los números romanos de su reverso, iguales a los de las losetas correspondientes); al descubrir una loseta cercana o lejana, puedes sustituir una de sus zonas bloqueadas por una ficha de banco de criaturas del tipo adecuado. Al entrar en esa zona, debes derrotar al ejército neutral que la custodia (reglas de combate propias, ver más abajo); tras ganar, resuelve la recompensa del lugar y márcalo con un cubo negro como cualquier zona visitable. Baraja por separado los montones de fichas cercanas y lejanas antes de la partida.
+
+COMBATE DEL BANCO DE CRIATURAS: coloca hasta 5 de tus unidades en tu zona de despliegue; consulta qué 4 unidades custodian ese banco de criaturas concreto y tómalas del mazo de Cartas de Unidades del Banco de Criaturas (mazo bocarriba, no se baraja, ya que cada banco tiene siempre las mismas 4 unidades garantizadas), colocándolas al azar en la zona de despliegue neutral. Según la dificultad de la partida, añade Fichas de Pila a unidades al azar (máximo 1 por unidad): Fácil 1 ficha, Normal 2, Difícil 3, Imposible 4; cada ficha aumenta en 1 el Ataque, la Defensa o la Iniciativa (o en 2 la Iniciativa) de la unidad que la porta, tal como muestre la ficha, funcionando como una unidad reforzada: al recibir daño igual o mayor que sus PS, descarta 1 ficha de pila y cúrale todo el daño antes de aplicar el resto; sin ficha de pila, muere con normalidad (las cartas derrotadas de este mazo vuelven al propio mazo del banco de criaturas, no se descartan). Al ganar, obtienes la recompensa base del banco más una recompensa extra por cada unidad apilada derrotada; si la recompensa es una unidad, tómala del mazo de Unidades del Banco de Criaturas (y, si esa unidad usa una ficha de pila al entrar en un futuro combate, toma 1 al azar del montón antes de desplegarla). No hay límite de rondas para este combate, ni hace falta gastar PM para prolongarlo; tampoco tiene nivel de dificultad de zona (nunca se produce combate rápido) ni otorga experiencia.
+
+LISTA DE BANCOS DE CRIATURAS (Batallas Navales), con sus 4 unidades guardianas y recompensa base (más un extra por cada unidad apilada derrotada):
+• Naufragio (no cuenta como zona de mar): 4 espectros. Recompensa: moral negativa y 5 de Oro; extra: 2 de Oro + buscar(X) en artefactos (X = unidades apiladas derrotadas).
+• Barco Abandonado (no cuenta como zona de mar): 4 elementales de agua. Recompensa: moral negativa y 7 de Oro; extra: 2 de Oro + buscar(X) en hechizos.
+• Colmena de Libélulas: 4 libélulas. Recompensa: 1 unidad de libélulas (o libélulas apiladas si había 2+ unidades apiladas custodiando el banco).
+• Conservatorio de Grifos: 4 grifos. Recompensa: 1 unidad de grifos (o grifos apilados en las mismas condiciones).
+• Pirámide: 2 gólems de oro, 2 gólems de diamante. Recompensa: buscar(5) en hechizos; extra por unidad apilada: retira 1 carta de tu mano/descarte (hechizo, habilidad o artefacto) y busca(5) en el mazo correspondiente.
+• Depósitos de Medusas: 4 medusas. Recompensa: 6 de Oro y 1 Material; extra: 3 de Oro o 1 Material por unidad apilada.
+• Banco de Nagas: 4 nagas. Recompensa: 6 de Oro y 2 Materiales; extra: 6 de Oro y 1 Material por unidad apilada.
+• Tesorería Enana: 4 enanos. Recompensa: 7 de Oro; extra: 3 de Oro por unidad apilada.
+• Cripta: 1 esqueleto, 1 zombi, 1 espectro, 1 vampiro. Recompensa: 6 de Oro; extra: 2 de Oro por unidad apilada.
+• Tesoro de los Diablillos: 4 familiares. Recompensa: 3 de Oro; extra: 1 de Oro por unidad apilada.
+• Reservas del Cíclope: 4 cíclopes. Recompensa: 8 de Oro y 2 Materiales; extra: 2 de Oro y 1 Material por unidad apilada.
+• Utopía del Dragón (banco de criaturas): 1 dragón negro, 1 dragón dorado, 1 dragón de cristal, 1 dragón hada. Recompensa: 40 de Oro y buscar(3) en artefactos; extra: buscar(5) en artefactos o hechizos por unidad apilada. NOTA: esta "utopía del dragón" de banco de criaturas es distinta de la utopía del dragón de una loseta central; salvo que el escenario lo indique explícitamente, no cuenta para condiciones de victoria basadas en controlar "la utopía del dragón", aunque sí puede contar para condiciones que impliquen visitar todas las zonas de una loseta.
+
+FICHA DE DEBILIDAD (introducida en la expansión Cala): -1 o -2 de Ataque a una unidad, según la cara mostrada. Solo 1 ficha de este tipo por unidad a la vez (si gana otra, el jugador que la controla elige cuál conservar).
+
+FICHA DE CAMPO DE FUERZA (introducida en la expansión Contenido Adicional): marca el efecto del hechizo Campo de Fuerza. Representa un obstáculo que solo las unidades voladoras pueden atravesar. En el tablero de combate 4×5 se coloca 1 ficha en un espacio vacío; en el tablero de la expansión Campo de Batalla se colocan 2 fichas en dos espacios vacíos adyacentes entre sí.
+
+HECHIZO DE MINA (introducido en la expansión Contenido Adicional, variante del hechizo Arenas Movedizas): según el Poder usado, toma 2, 4 o 6 fichas de mina (mitad vacías, mitad con el símbolo de 2 de daño); barájalas bocabajo y colócalas en espacios vacíos del tablero de combate, 1 por espacio (si faltan espacios, descarta las sobrantes; siempre puedes mirar tus propias fichas colocadas). Al entrar una unidad en un espacio con ficha, se revela: si está vacía, continúa su movimiento; si muestra el símbolo de daño, sufre 2 de daño y, si sigue en el tablero, continúa su activación con normalidad. Dos fichas de distintos jugadores pueden ocupar el mismo espacio.
+
+FICHA DE CLONACIÓN (introducida en la expansión Cala, ligada al hechizo Clonación): al lanzar el hechizo, elige una unidad aliada y un espacio vacío adyacente a ella; coloca una ficha de clonación sobre la unidad original y otra en ese espacio, representando el clon. El clon comparte estadísticas y habilidad especial con el original, pero su Ataque es solo 1 y su Defensa es 0 (esta Defensa no se puede aumentar con ningún efecto); si el clon es atacado o recibe aunque sea 1 punto de daño de un hechizo, es destruido. El clon no hereda ningún efecto que se haya jugado sobre la unidad original después de clonarla. Si la unidad original es retirada del tablero, su clon también se retira.
+
+MECÁNICAS ADICIONALES DE INVOCACIÓN Y DAÑO ELEMENTAL (expansión Confluencia):
+• Cartas de Unidades Invocadas: conjunto de 8 cartas que forman un mazo propio, junto a los mazos de unidades neutrales. Cada vez que uses un hechizo de Invocación, toma la carta de unidad específica que indique de este mazo.
+• Hechizos de Invocación: añaden una unidad al tablero durante el combate; según el Poder empleado, invocan la versión "unas pocas" o "manada". La unidad invocada se coloca en un espacio vacío a tu elección y permanece bajo tu mando hasta morir o hasta que acabe el combate (lo que ocurra antes); a diferencia de la Invocación estándar, esta unidad NO se añade a tu mazo tras el combate.
+• Daño Elemental: algunas unidades tienen la habilidad "esta unidad inflige daño elemental": realizan un ataque normal, pero el daño resultante ignora la Defensa de la unidad objetivo, igual que el daño de un hechizo. No se ve afectado por habilidades que reducen el daño de hechizos. La habilidad "Inmune" permite a una unidad ignorar los efectos de una fuente concreta (por ejemplo, una escuela de magia).
+• Fichas de Muro de Fuego: sustituyen a las cartas de especialidad de Luna quien juega en el tablero de la expansión Campo de Batalla; la carta de especialidad se deja aparte como recordatorio y, si se retira o descarta, también se descarta la ficha correspondiente.
+• Fichas de Invocación: marcan qué unidades del tablero fueron invocadas (se colocan sobre su carta y se descartan junto a la unidad al final del combate); también se pueden usar en el tablero de Campo de Batalla en vez de miniaturas.
+
+FICHAS Y HECHIZO NUEVOS DE LA EXPANSIÓN BASTIÓN:
+• Fichas de Tiempo: marcan la duración restante de un efecto continuo. Colócalas sobre la carta/ficha que da el efecto y reduce su valor en 1 al final de cada ronda; cuando no quede ninguna, el efecto termina y se descarta esa carta/ficha.
+• Ficha de Ataque: +1 o +2 de Ataque a una unidad (según su cara); solo 1 por unidad a la vez (si gana otra, el jugador que la controla elige cuál conservar).
+• Ficha de Corrosión: -1 de Defensa a una unidad (mínimo 0); solo 1 por unidad a la vez (descarta la segunda si gana otra); permanece hasta el final del combate salvo que un hechizo u otro efecto la retire antes.
+• Hechizo Arenas Movedizas: según el Poder usado, toma 2, 4 o 6 fichas de un mismo conjunto (mitad vacías, mitad con el símbolo de arenas movedizas); barájalas bocabajo y colócalas en espacios vacíos del tablero de combate (si faltan espacios, descarta las sobrantes; siempre puedes mirar tus propias fichas ya colocadas). Al entrar una unidad en un espacio con ficha, se revela: si está vacía, continúa su movimiento; si muestra el símbolo, su movimiento y activación terminan ahí. Dos fichas de distintos jugadores sí pueden ocupar el mismo espacio.
+
+USO DE CARTAS EN COMBATE: máximo 1 hechizo por ronda de combate. Continuo/Activación: solo durante la activación de tus unidades, antes de atacar. Instantáneo: en cualquier momento salvo entre la tirada de ataque y su resolución (salvo excepción); acaban antes de la próxima acción de esa unidad en la ronda. Continuo: hasta el final del combate o hasta agotarse; se descarta al concluir.
+
+NOTA: la expansión Campo de Batalla modifica algunas de estas reglas de combate (movimiento por iniciativa, ficha de iniciativa para desempates, límite de Experto por ronda en vez de por combate) cuando se juega con su tablero de casillas; ver capítulo "Expansión Campo de Batalla: Uso en Partidas Normales".
+
+ORDEN DE LAS RONDAS DE COMBATE:
+1. Activan las unidades en orden decreciente de iniciativa (empates: activa primero el atacante); solo 1 activación por ronda.
+2. La unidad mueve según su tipo; el jugador decide atacar o defenderse (defender termina la activación y da ficha de defensa).
+3. Antes de atacar, se pueden usar efectos continuos/de activación de la mano.
+4. Antes de la tirada de ataque, ambos bandos pueden jugar efectos instantáneos; se lanza el dado de ataque y se aplica junto a modificadores (p. ej. penalizadores).
+5. Se resuelve el daño: ataque total menos defensa total; si la defensa es mayor o igual, no hay daño; se coloca ficha de daño por punto recibido, dando la vuelta a la carta si corresponde o retirándola.
+6. Si la defensora sobrevive, es adyacente y no ha contraatacado ya esta ronda, contraataca.
+7. Se repite desde el paso 1 hasta que todas se hayan activado.
+8. Final de la ronda de combate.
+Si varias unidades empatan en iniciativa, se activa primero la del atacante y después la del defensor (repitiendo si es necesario).
+
+EXPERIENCIA DE COMBATE: derrotar un héroe enemigo o unidades neutrales otorga experiencia según la dificultad relativa: inferior al nivel del héroe = 0; igual = 1; mayor = 2; encuentros azur = directamente nivel 7 de experiencia. Luchar contra un héroe secundario o un ejército transportado a ciudad/asentamiento no da experiencia.
+
+COMBATE RÁPIDO: si el nivel de tu héroe supera en al menos 1 la dificultad de la zona, las unidades neutrales huyen y superas el encuentro sin combatir.
+
+FINAL DEL COMBATE, 3 formas: rendirse (solo contra otro jugador, antes de mover/atacar con la unidad activa), retirarse (solo contra neutrales no azur, no cuenta como derrota, recuperas tus unidades y vuelves a la última zona visitada), o que un bando pierda todas sus unidades. Rendirse ante un héroe enemigo cuesta 10 de Oro y coloca a tu héroe en cualquier ciudad/asentamiento propio (no se puede rendir/retirar defendiendo una ciudad). Si tu héroe principal es derrotado, entregas 5 de Oro y recibes ficha de moral negativa, colocando a tu héroe en cualquier ciudad/asentamiento propio.
+
+PREGUNTAS FRECUENTES:
+- Si una carta pide elegir varios objetivos, decide quien la juega, siempre respetando su texto; la palabra "hasta" hace la elección opcional en vez de obligatoria.
+- Sí existe "fuego amigo": hechizos/habilidades de área (Anillo Gélido, Inferno, Bola de Fuego, liches, dragones dorados...) pueden dañar a tus propias unidades si son las únicas adyacentes.
+- Las cartas con símbolo de efecto instantáneo se pueden jugar tras un ataque y antes del contraataque, y también durante la activación de una unidad enemiga (siempre antes de la tirada de ataque).
+- Puedes reclutar/reforzar unidades justo antes de un combate contra otro jugador si aún no usaste la ficha de población esa ronda.
+- Durante un asedio, las cartas de muralla/puerta van en la fila central sombreada del tablero de combate; el defensor elige en cuál de esas 4 casillas coloca la puerta.
+- El combate rápido de un héroe secundario se calcula según el NIVEL DEL HÉROE PRINCIPAL.
+- El hechizo Resurrección debe lanzarse justo cuando los PS de una unidad llegan a 0; si esto ocurre durante un ataque, la unidad resucitada no contraataca (el ataque original queda anulado).
+- Los hechizos ignoran la Defensa por completo: aplican una cantidad fija de daño y no se ven afectados por el dado de ataque (que solo se tira para ataques de unidades).
+- Las habilidades que "ignoran contraataques" se aplican a TODOS los ataques de esa unidad en la ronda.
+- La Tienda de Auxilio se puede usar antes de que la unidad enemiga contraataque, hasta 1 vez por ronda (debe usarse antes del ataque, o la unidad tendrá que sobrevivir primero).
+- Cualquier daño de al menos 1 punto (incluido el de hechizos) retira la ficha de parálisis de una unidad, aunque provenga de un aliado; puedes usar hechizos sobre tus propias unidades para quitarles la parálisis.
+- La habilidad especial de los liches funciona contra cualquier unidad adyacente cada vez que atacan.
+- No se pueden llevar a cabo acciones de defensa/movimiento controlando unidades neutrales: siempre deben atacar si hay una unidad a su alcance, o acercarse lo máximo posible si no es posible atacar.
+- El hechizo Retirar Obstáculo no puede retirar unidades, pero sí murallas, puertas y muros de fuego.
+- El obstáculo del hechizo Muro de Fuego, a diferencia de otros, no impide la entrada de una unidad en esa zona.
+- El hechizo Terremoto solo afecta a obstáculos de muralla/puerta.
+- "Adyacente" en el tablero de combate 4×5 es solo ortogonal (no diagonal); en el tablero de la expansión Campo de Batalla sí cuentan como adyacentes las casillas que comparten un borde.
+- Si el hechizo Furia Asesina afecta a tu unidad, eres tú quien elige el objetivo de su ataque siguiendo las instrucciones de la carta (aunque eso te obligue a atacar a una unidad propia).
+- Si pierdes todas tus unidades contra unidades neutrales, tu héroe se mueve a una ciudad/asentamiento bajo tu control y recibe las unidades iniciales del escenario.
+- Si un combate contra unidades neutrales termina sin que ningún bando pierda todas sus unidades y no pagas PM para prolongarlo, tu héroe se retira automáticamente a la última zona visitada, retirando tus unidades del tablero; al reentrar la zona se roban unidades neutrales nuevas. Las unidades con ficha de parálisis SÍ contraatacan si reciben al menos 1 punto de daño, no han contraatacado ya esa ronda y el atacante está adyacente (si el daño viene de una unidad a distancia o un hechizo, solo se retira la ficha, sin contraataque).
+- El máximo de unidades por bando en el tablero de combate es 5; no es obligatorio usarlas todas.
+- La ficha de defensa se descarta al comienzo de la propia activación de la unidad (impidiendo otra acción de defensa esa activación); si la unidad recibe un ataque mientras la tiene, se tira otro dado de ataque tras el del atacante y un +1 añade +1 de defensa.
+- En empates de iniciativa, las unidades del atacante siempre se activan primero (en todos los empates, no solo el primero); el resto alternan; esto aplica solo sin la expansión Campo de Batalla, que amplía estas reglas.
+- Una unidad a distancia con un enemigo adyacente solo puede atacarlo a él o moverse, no a cualquier otro objetivo del tablero.
+- Si retiras la ficha de parálisis de tu unidad justo antes de que se active, se activa con normalidad.`
   },
   {
-    id: "cap-11-ia",
-    title: "11. Reglamento del Jugador Automático (IA / Solitario)",
+    id: "cap_11_jugador_vs_ia",
+    title: "11. Jugador contra IA",
     category: "modos",
-    content: `REGLAS DE ACTUACIÓN Y COMBATE DE LA IA:
+    content: `El modo Campaña usa héroes de IA con 2 mazos: mazo de IA (parecido a habilidad/artefacto, variable según dificultad) y mazo de hechizos.
 
-MAZO Y DIFICULTAD DE LA IA:
-- La IA utiliza un mazo especial con cartas clasificadas por dificultad (Fácil, Normal, Difícil e Imposible).
+REGLAS DE COMBATE DE LA IA: 
+- Mismas reglas de iniciativa (atacante con prioridad en empates); cada activación de la IA roba 1 carta de su mazo de IA y resuelve sus efectos. 
+- Unidades Terrestres y Voladoras atacan preferentemente a la misma categoría; si no es posible, la más cercana a su alcance, priorizando categorías más bajas si no alcanzan la propia. 
+- Unidades a distancia priorizan: otras a distancia de igual categoría → menor categoría → mayor categoría → si no hay a distancia, terrestres/voladoras de igual categoría, la más cercana (el jugador decide entre empates).
 
-REGLAS DE COMBATE DE LA IA:
-- En cada activación de unidad de la IA, roba 1 carta del mazo de la IA y resuelve sus efectos y hechizos.
-- Unidades terrestres y voladoras atacan prioritariamente a unidades del jugador de la misma categoría. Si no es posible, atacan a la más cercana o de categoría inferior.
-- Unidades a distancia de la IA priorizan unidades a distancia enemigas de su misma categoría, luego de menor categoría y finalmente de mayor categoría.
+REGLAS DE MOVIMIENTO DE LA IA EN EL MAPA (con sus 3 PM, en orden): 
+1) si un héroe del jugador está en su loseta, gasta todo el movimiento acercándose para combatir; 
+2) si hay minas/asentamientos señalizables en su loseta, se acerca y los señaliza; 
+3) si ninguna es posible, se mueve hacia la ciudad del jugador; 
+4) repite hasta agotar PM. La IA gana automáticamente cualquier combate contra unidades neutrales; su comportamiento varía según el escenario. Los héroes enemigos se colocan siempre en la ciudad de su facción.
 
-REGLAS DE MOVIMIENTO DE LA IA EN EL MAPA (3 PM por turno):
-1. Comprobar si hay héroe del jugador en la misma loseta -> Moverse hacia él para combatir.
-2. Comprobar si hay minas o asentamientos sin su cubo en la loseta -> Moverse para señalizarlos.
-3. Si 1 y 2 no son posibles -> Moverse hacia la ciudad del jugador.`
+PREPARACIÓN DE UNA CAMPAÑA (Libro de Misiones): cada escenario de campaña se divide en una sección de mecánicas de juego y otra de historia (textos narrativos que se leen en momentos concretos). Antes de empezar: prepara las cartas de unidad de cada héroe enemigo indicadas en la preparación del escenario, para poder colocarlas en el tablero de combate como unidades neutrales cuando llegue el encuentro; crea el mazo de la IA y el mazo de hechizos del escenario, dejando espacio para sus descartes; coloca boca arriba, cerca de esos mazos, las cartas de habilidad especiales que indique el escenario. Al comienzo de cada escenario de campaña, tus ingresos se establecen en «10» de Oro/«0» Materiales/«0» Objetos de Valor (salvo que las reglas especiales del escenario los cambien). El mazo de la IA se compone de 3 tipos de cartas: de magia, de fuerza y de habilidad. Cuando una unidad enemiga se activa, se roba 1 carta del mazo de la IA y se resuelve; si el héroe de la IA lanza un hechizo, se roba del mazo de hechizos; si usa la habilidad especial asignada en la preparación, esa carta NO se descarta (a diferencia de las reglas básicas), pudiendo volver a usarla cuando el mazo de la IA lo indique de nuevo. Todos los eventos contrarreloj del escenario se marcan de antemano con un cubo negro en sus casillas del marcador de rondas; al alcanzar esa ronda, se resuelve el efecto y se retira el cubo. AL ACABAR CADA ESCENARIO DE CAMPAÑA: extrae de tu mazo todas las cartas de característica y la carta de especialidad de nivel 1 (se conservan aparte); retira el resto de cartas de especialidad de la partida; de las cartas restantes de tu mazo, elige 5 y añádelas a las que apartaste — ese conjunto será tu mazo inicial del siguiente escenario; tu héroe vuelve a nivel 1 de experiencia. Anota la lista de cartas de tu mazo inicial; si pierdes el escenario, se reinicia con esa misma lista para reintentarlo.
+
+CAMBIAR DE HÉROE ENTRE MISIONES DE UNA CAMPAÑA: aunque cada campaña recomienda un héroe protagonista (para el que está equilibrada), puedes jugarla con cualquier otro héroe de la misma facción. Si cambias de héroe entre misiones (o al repetir una misión con otro héroe), sustituye todas las cartas de característica y la carta de especialidad de nivel 1 del héroe anterior por las del nuevo héroe. Si el héroe anterior tenía Cartas de Característica Potenciadas (expansión Inferno), puedes retirar cartas de característica normales del mismo tipo del mazo del nuevo héroe y sustituirlas por esas cartas potenciadas. Puedes sustituir cualquier carta del grupo de "5 cartas adicionales no-especialidad" por la habilidad inicial del nuevo héroe (si no tienes ya una copia) y por su Flecha Mágica; nunca puedes tener más de 4 copias de Flecha Mágica en el mazo, aunque el héroe anterior tuviera 5.
+
+PRECISIONES ADICIONALES DE CAMPAÑA (aportadas por la expansión Bastión): no puedes rendirte ante un héroe de la IA. Si la carta de habilidad de un héroe de IA exige robar una carta, roba otra del mazo de IA y resuelve su efecto. Las cartas de IA que aumentan la Defensa (o activan otra que lo haga) permanecen sobre la unidad hasta usarse para defenderse de un ataque, igual que haría un jugador real. El bonificador de preparación de un escenario de campaña sustituye al bonificador inicial de dificultad estándar. Puedes jugar la campaña con cualquier héroe de la misma facción que el recomendado, no solo con el indicado. Si a un ejército de IA no se le asigna explícitamente un mazo de hechizos o habilidad propios, se sobreentiende que comparte el mazo con otros héroes de IA del escenario (barajando de nuevo tras cada combate). Si el mazo de hechizos de IA se vacía a mitad de combate, baraja su descarte para seguir robando; al acabar el combate, se baraja todo junto de nuevo. Si te faltan copias de una carta pedida en la preparación (porque ya está en tu mazo inicial), usa otra equivalente en su lugar; si varios héroes de IA comparten una única copia de una unidad, prepara el resto sin ella y añádesela al ejército de IA justo cuando ese combate se activa. Si la preparación asigna a un héroe de IA una carta de habilidad que tu propio héroe ya tiene, retírala de tu mazo y busca(3) en el mazo de habilidades para compensarte; si le asigna un hechizo no disponible, sustitúyelo por Flecha Mágica; si a tu propio héroe le asignan un hechizo/artefacto/habilidad no disponible, busca(3) en el mazo correspondiente para conseguir otro.
+
+IA EN ASEDIO — TORRE DE ARQUEROS, MURALLAS Y PUERTA: la Torre de Arqueros de la IA se trata como una unidad a distancia de nivel oro a efectos de prioridad de objetivos (prioriza otras a distancia de su mismo nivel; si no hay, a distancia de nivel inferior en orden descendente; si tampoco, a distancia de nivel superior en orden ascendente; si no hay ninguna a distancia, sigue el mismo orden con terrestres/voladoras; en empate, ataca a la más cerca de morir —menor diferencia entre sus PS y el daño ya recibido—; si sigue habiendo empate, decide el jugador). Si la preparación no especifica cómo organizar muros y puerta de la IA, colócalos como lo haría un jugador humano: la puerta frente a la unidad terrestre de mayor Iniciativa. Por defecto, las unidades de IA no atacan los muros (prefieren volar sobre ellos o pasar por la puerta); si no es posible ninguna de las dos cosas, se defienden en su lugar.
+
+REGLAS PARA HECHIZOS COMPLEJOS DE LA IA (aportadas por la expansión Bastión, para hechizos cuyo uso estándar por la IA no está claro): Hechizos de área (Bola de Fuego, Rayo en Cadena): la IA ataca al grupo de 1-2 unidades enemigas adyacentes entre sí que tenga más unidades de nivel alto (en empate, al más cerca de ser destruido; si aun así hay empate, decide el jugador); si no hay grupos adyacentes de unidades del jugador, ataca a unidades no adyacentes a las suyas propias; si tampoco es posible, no lanza el hechizo (se descarta esa carta de IA al fondo del mazo y el hechizo se baraja de nuevo en el mazo de hechizos enemigo). Hechizos de defensa instantánea (Piel de Piedra): se aparta la carta y se coloca una ficha de defensa en la unidad de IA con mayor Defensa (en empate, prioriza mayor nivel, luego mayor daño ya recibido), permaneciendo así hasta que se resuelva esa defensa. Hechizos de curación (Curación): retira el daño de la unidad de IA con más fichas de daño, empezando por el nivel más alto; si ninguna tiene daño, se descarta igual que arriba. Mejoras de una sola ronda (Escudo de Fuego): si más de la mitad de las unidades del mismo nivel o superior ya se activaron esta ronda, la IA pospone el hechizo y lo juega en la primera activación de la ronda siguiente (sin robar carta de IA esa vez). Hechizos que debilitan el ataque (Debilidad): la IA solo lo lanza sobre una unidad enemiga que vaya a contraatacar tras el ataque activo; si no va a haber contraataque, se descarta igual que en los casos anteriores.
+
+PREGUNTAS FRECUENTES:
+- Si el héroe de la IA no puede completar ninguna de sus prioridades de movimiento (por ejemplo, por zonas bloqueadas sin ruta), permanece donde está ese turno.
+- Cuando la IA roba una carta de su propio mazo de IA/hechizos y no puede jugarla por cualquier motivo (por ejemplo, un efecto que no aplica a esa situación), simplemente se descarta sin efecto.
+- Los héroes de la IA no acumulan cartas en mano entre combates: su mazo de IA se resuelve unidad por activación, no como una mano tradicional.`
   },
   {
-    id: "cap-12-opciones-dificultad",
-    title: "12. Opciones de Juego, Dificultad y Comercio",
-    category: "modos",
-    content: `OPCIONES DE CONFIGURACIÓN Y TABLAS OFICIALES:
+    id: "cap_12_opciones_juego",
+    title: "12. Opciones de Juego, Dificultad, Condiciones de Victoria y Comercio",
+    category: "general",
+    content: `TABLA DE REGLAS OPCIONALES (modifican la dificultad):
+Aumenta la dificultad: las ciudades señalizadas no producen recursos (aunque se pueden usar sus edificios); no se puede volver a tirar dados; dados de tesoro/recursos solo dan 1 recurso; sin bonificadores iniciales.
+Disminuye la dificultad: empiezas con un héroe secundario; cada unidad hace al menos 1 punto de daño en un ataque; todas las minas/asentamientos dan el doble de ingresos; puedes intercambiar recursos en cualquier momento y el mercadillo se vuelve visitable dando 1 carta de artefacto.
+Reduce: prolongar el combate ya no cuesta PM.
+Variantes: el dado de ataque deja de afectar al daño (pero sigue interactuando con habilidades); se roba también una carta de anuncio astrológico al inicio de rondas de recursos; no se roban cartas de anuncio astrológico; se retiran los cubos negros de zonas visitables en las rondas 4, 8 y 12; las cartas que irían a tu mano van directas a tu descarte.
 
-NIVELES DE DIFICULTAD Y BONIFICADORES INICIALES:
-- Fácil: Lanza 2 dados de recursos y añade ambos resultados O busca (2) dos veces en el mazo de artefactos.
-- Normal: Lanza 2 dados de recursos y elige uno O busca (2) en el mazo de artefactos.
-- Difícil: Lanza 1 dado de recursos O revela artefactos hasta encontrar 1 artefacto menor.
-- Imposible: Sin bonificadores iniciales.
+DIFICULTAD: se elige en la preparación; afecta a bonificadores iniciales y a la cantidad de unidades neutrales al explorar (baraja el mazo de artefactos tras aplicar la bonificación).
+• Fácil: lanza 2 dados de recursos y suma ambos resultados a tu reserva, o busca(2) dos veces en artefactos.
+• Normal: lanza 2 dados de recursos y suma el resultado elegido, o busca(2) en artefactos.
+• Difícil: lanza 1 dado de recursos y suma el resultado, o revela cartas del mazo de artefactos hasta encontrar 1 artefacto menor.
+• Imposible: sin bonificadores iniciales.
+
+TABLA DEL NIVEL DE DIFICULTAD DE LAS ZONAS (unidades neutrales por nivel de zona I-VII y dificultad Fácil/Normal/Difícil/Imposible; ★=bronce, ☆=plata, dorada=oro, azul=azur):
+Nivel I: 1★ / 1★ / 2★ / 3★.
+Nivel II: 2★ / 2★ / 3★ / 2★+1☆.
+Nivel III: 1★+1☆ / 2★+1☆ / 1★+2☆ / 3☆.
+Nivel IV: 2★+1☆ / 1★+2☆ / 3☆ / 2☆+1oro.
+Nivel V: 2★+1☆+1oro / 1★+2☆+1oro / 2☆+2oro / 1☆+3oro.
+Nivel VI: 2★+2☆+1oro / 1★+2☆+2oro / 2☆+3oro / 1☆+4oro.
+Nivel VII: 1azur / 2azur / 2azur+1oro / 2azur+2oro.
 
 CONDICIONES DE VICTORIA:
-- La más habitual es eliminar a todas las facciones enemigas capturando sus ciudades y asentamientos.
-- Un jugador sin ciudad ni asentamientos durante 3 rondas consecutivas queda eliminado.
+- La más habitual es derrotar a todas las facciones enemigas, capturando todas sus ciudades y asentamientos.
+- Salvo que se indique lo contrario, un jugador sin ciudad ni asentamientos durante 3 rondas completas queda eliminado (también si su héroe principal es derrotado defendiendo una ciudad asediada sin tener más ciudades/asentamientos); un jugador eliminado puede seguir controlando unidades neutrales en combates de otros.
+- Algunos escenarios exigen también recuperar cubos de facción enemigos (derrotar héroes o capturar ciudades iniciales).
+- Si eres el único jugador restante, ganas la partida.
+- En una partida a 3 o más jugadores, también ganas si consigues un cubo de facción de cada uno de los oponentes que sigan en juego (se consigue derrotando a cualquiera de sus héroes o capturando la ciudad de su facción).
+- Salvo que se indique lo contrario, al cumplirse una condición de victoria la partida acaba al final de esa ronda.
 
-TABLA DE COMERCIO EN EL MERCADILLO:
-- Vender 1 Objeto de valor -> Comprar 3 de Oro ó 2 Materiales de construcción.
-- Vender 3 Materiales de construcción -> Comprar 1 de Oro ó 1 Objeto de valor.
-- Vender 6 de Oro -> Comprar 1 Objeto de valor.
-- Vender 2 de Oro -> Comprar 1 Material de construcción.
-- Retirar 1 carta de la mano -> Otorga 1 de Oro.`
+TABLA DE COMERCIO (en un mercadillo, o retirando 1 carta de mano para ganar 1 de Oro; las cartas de especialidad, característica, habilidad inicial y Flecha Mágica no se pueden retirar así):
+• Vender Oro: 6 por 1 Objeto de Valor; 2 por 1 Material de Construcción.
+• Vender Objeto de Valor: 1 por 3 de Oro; 1 por 2 Materiales de Construcción.
+• Vender Material de Construcción: 1 por 1 de Oro; 3 por 1 Objeto de Valor.
+• Vender Pergamino de Hechizos (expansión Bastión): 2 de Oro por cada hechizo que contenga la carta; los hechizos vendidos se retiran de la partida y la carta de pergamino vuelve a su propio mazo.
+Los jugadores aliados pueden comerciar cartas de artefacto/hechizo entre sí, en cualquier combinación de ambos tipos, siempre que den y reciban la misma cantidad total de cartas (con héroes en zonas adyacentes; solo cartas de la mano). En escenarios de Alianza, los aliados también pueden intercambiar recursos libremente en cualquier momento de su turno, salvo durante el combate. En escenarios Cooperativos, los jugadores pueden darse recursos entre sí un número ilimitado de veces durante la misma visita a un mercadillo.`
   },
   {
-    id: "cap-13-14-creditos",
-    title: "13 y 14. Notas y Créditos Oficiales",
-    category: "general",
-    content: `INFORMACIÓN EDITORIAL Y CRÉDITOS OFICIALES:
-
-CRÉDITOS DE DESARROLLO (ARCHON STUDIO & UBISOFT):
-- Diseño de Reglas: Kamil Białkowski, Jacek Karpowicz, Aleksander Kubiak, Jakub S. Olekszyk.
-- Diseño del Modo Solitario: Aleksander Kubiak.
-- Diseño de Reglas de Torneo: Kamil Białkowski.
-- Edición y Arte: Anna Gut, Patryk Kubiak, Iana Vengerova, Tomasz Badalski.
-- Dirección de Marca Ubisoft: Eric Damian-Vernet, Theo Gallego, Vicky Malineau.
-- Edición Española: Spieletexter Ludiversal Translations (Traducción: Lis Díez Bourgoin; Corrección: Jael Herrera Gómez).
-- ©2022 Archon Studio & ©2022 Ubisoft Entertainment.`
-  },
-  {
-    id: "cap-15-ayuda-juego",
-    title: "15. Ayuda de Juego y Glosario de Símbolos del Mapa",
+    id: "cap_13_ayuda_de_juego",
+    title: "13. Ayuda de Juego: Leyenda de Símbolos",
     category: "faq",
     content: `AYUDA DE JUEGO Y SIMBOLOGÍA COMPLETA DEL MANUAL:
 
-SÍMBOLOS EN EL MAPA Y EFECTOS:
-- I-VII: Indica la dificultad de la zona y nivel de unidades neutrales.
-- Cofre: Lanza dado de tesoro y recibe el bonificador.
-- Pico/Pala: Lanza dado de recursos y recibe los recursos.
-- Estrella (Experiencia): Gana la mitad de un nivel de experiencia.
-- Libro: Busca (2) en el mazo de hechizos.
-- Ankh/Artefacto: Busca (2) en el mazo de artefactos.
-- Pluma verde: Gana moral positiva.
-- Pluma negra: Gana moral negativa.
-- Casco/Herradura: Gana +1 Punto de Movimiento (PM) adicional.
+ACCIÓN DE CARTA:
+- Instantáneo (se resuelve de inmediato).
+- Activación (se juega durante la activación de una unidad).
+- de Mapa (no se puede usar en combate).
+- Continuo (dura hasta agotarse o hasta el próximo turno de quien lo jugó, lo primero que ocurra).
+- Permanente (permanece activo hasta que se descarte o se juegue otra carta permanente).
 
-RECUERDO RÁPIDO DE ACCIONES DE MORAL:
-- Moral Positiva: Robar 1 carta, volver a lanzar 1 dado, o descartar/robar el mismo número de cartas.
-- Moral Negativa: Si ya posees moral negativa y recibes otra, descarta todas tus cartas al final del turno. (Necrópolis ignora la moral).`
+ACCIÓN DE UNIDAD: 
+- Activación (al activarse la unidad). 
+- Acción de Ataque (al atacar, solo en el primer ataque si hay varios). 
+- Otra Acción (sustituye la acción normal). 
+- Pasiva (al cumplirse condiciones).
+- Contraatacar (al contraatacar).
+
+ACCIÓN DE MORAL: 
+- Positiva → roba 1 carta, o vuelve a lanzar 1 dado, o descarta y roba la misma cantidad de cartas.
+- Negativa → si ya tenías ficha negativa, descartas toda tu mano al final del turno; si tu héroe con moral negativa recibe moral positiva, descartas la ficha negativa en vez de recibir la positiva.
+- Necrópolis ignora todos los efectos de moral.
+
+SÍMBOLOS EN EL MAPA:
+- números I-VII indican la dificultad de la zona (nivel de unidades neutrales).
+- icono de Cofre = lanza un dado de tesoro y recibe el bonificador indicado.
+- icono de Pico/Pala = lanza un dado de recursos y recibe lo indicado.
+- Estrella (Experiencia) = gana medio nivel de experiencia.
+- icono de Libro = busca(2) en el mazo de hechizos.
+- icono de Ankh/Artefacto = busca(2) en el mazo de artefactos.
+- Ala blanca = gana moral positiva.
+- Ala negra = gana moral negativa.
+- Herradura = gana 1 PM adicional.
+- Interrogación = lugar con efecto especial único (ver su entrada en la Lista de Lugares del Mapa).
+- Un número delante de un símbolo indica repetir la acción esa cantidad de veces (p. ej. "2 dados de tesoro → resuelve 1" = lanza 2 y elige uno).`
   },
 
   // =========================================================================
   // EXPANSIÓN MURALLAS (RAMPART) Y LIBRO DE MISIONES
   // =========================================================================
   {
-    id: "rampart-01-componentes",
-    title: "Murallas 1. Lista de Componentes de la Expansión Murallas",
+    id: "cap_exp_murallas_componentes_mecanicas",
+    title: "Expansión Murallas (Rampart): Componentes y Mecánicas Nuevas",
     category: "componentes",
-    content: `COMPONENTES INCLUIDOS EN LA EXPANSIÓN MURALLAS (RAMPART):
+    content: `La expansión Murallas añade la facción Murallas (elfos y enanos de AvLee) e introduce las cartas de Máquina de Guerra, las Cartas de Efecto Permanente (ver capítulo 5, Construcción del Mazo) y nuevos lugares del mapa (ver capítulo 8, Elementos del Mapa).
 
-LOSETAS Y TABLEROS:
-- 7 Losetas de mapa (1 inicial [I], 3 lejanas [II-III], 2 cercanas [IV-V], 1 central [VI-VII])
-- 1 Tablero de ciudad de la facción Murallas (Rampart)
-- 1 Libro de misiones de Murallas (28 páginas)
-- 1 Ayuda de juego
+COMPONENTES DE LA EXPANSIÓN: 7 losetas de mapa (1 inicial, 3 lejanas, 2 cercanas, 1 central), 1 tablero de ciudad, 1 libro de misiones, 1 ayuda de juego, 2 miniaturas de héroe, 7 miniaturas de unidad, 1 carta de héroe a doble cara, 7 cartas de unidad, 7 losetas de edificio de ciudad, 2 cartas de unidad neutral, 3 cartas de anuncio astrológico, 8 cartas de artefacto, 20 cartas de hechizo, 4 cartas de habilidad, 6 cartas de especialidad, 12 máquinas de guerra, 7 cartas de característica (1 ataque, 3 defensa, 1 poder, 2 conocimiento), 9 fichas de oro, 6 fichas de materiales de construcción, 4 fichas de objetos de valor, 1 ficha de construcción, 1 de población, 1 de libro de hechizos, 1 de moral, y 30 cubos acrílicos (10 negros, 20 verdes).
 
-MINIATURAS Y CARTAS:
-- 2 Miniaturas de héroe (Gem y Gelu)
-- 7 Miniaturas de unidad (Centauros, Enanos, Elfos, Pegasos, Dendroides, Unicornios, Dragones Dorados)
-- 1 Carta de héroe a doble cara (Gem / Gelu)
-- 7 Cartas de unidad de Murallas (a doble cara)
-- 7 Losetas de edificio de ciudad de Murallas
-- 2 Cartas de unidad neutral
-- 3 Cartas de anuncio astrológico
-- 8 Cartas de artefacto
-- 20 Cartas de hechizo
-- 4 Cartas de habilidad
-- 6 Cartas de especialidad de héroe
-- 12 Cartas de Máquina de Guerra (Balista, Catapulta, Carro de Municiones, Tienda de Primeros Auxilios, etc.)
-- 7 Cartas de característica (1 Ataque, 3 Defensa, 1 Poder, 2 Conocimiento)
-
-FICHAS Y RECURSOS:
-- 9 Fichas de oro (3 de "1", 3 de "3", 3 de "10")
-- 6 Fichas de materiales de construcción (3 de "1", 3 de "3")
-- 4 Fichas de objetos de valor (3 de "1", 1 de "3")
-- 1 Ficha de construcción, 1 de población, 1 de libro de hechizos, 1 de moral
-- 30 Cubos acrílicos (10 negros, 20 verdes)`
+MÁQUINA DE GUERRA (nuevo tipo de carta): se consigue en la Fábrica de Máquinas de Guerra o en un Mercadillo (más caro, 3 de Oro extra, y consume toda la visita al mercadillo). El mazo de máquinas de guerra queda al alcance de todos los jugadores. Cada carta indica su nombre, efecto, coste en la fábrica y coste en el mercadillo.`
   },
   {
-    id: "rampart-02-nuevos-elementos",
-    title: "Murallas 2. Nuevos Elementos: Efectos Permanentes, Máquinas de Guerra y Mapa",
-    category: "combate",
-    content: `NUEVAS MECÁNICAS E INTRODUCCIONES DE LA EXPANSIÓN:
-
-1. CARTAS DE EFECTO PERMANENTE (Icono Infinito ∞):
-   - Otorgan un bonificador pasivo o condición continua.
-   - Al jugarse, la carta se coloca frente al jugador y permanece activa hasta descartarse o sustituirse.
-   - Cada héroe solo puede tener 1 carta de efecto permanente activa a la vez.
-   - Permiten usar efectos básicos o avanzados (según el nivel del héroe), pero no se apilan entre sí.
-
-2. MÁQUINAS DE GUERRA (Balista, Catapulta, Carro de Municiones, Tienda de Primeros Auxilios):
-   - Se compran en la Fábrica de Máquinas de Guerra o en el Mercadillo.
-   - Comprar una máquina de guerra en un Mercadillo impide realizar otras acciones en esa visita y cuesta 3 de oro adicionales sobre su precio de fábrica.
-
-3. NUEVAS LOCALIZACIONES DEL MAPA:
-   - Fábrica de Máquinas de Guerra (Re-visitable): Permite comprar máquinas de guerra.
-   - Aserradero (Mina - Señalizable): Produce pasivamente 2 Materiales de Construcción por ronda de recursos.`
-  },
-  {
-    id: "rampart-03-modo-alianza",
-    title: "Murallas 3. Reglamento Oficial del Modo Alianza (2 contra 2)",
+    id: "cap_exp_murallas_alianza_escenarios",
+    title: "Expansión Murallas (Rampart): Modo Alianza y Escenarios Independientes",
     category: "modos",
-    content: `REGLAS ADICIONALES PARA PARTIDAS EN EQUIPO (2v2):
+    content: `MODO ALIANZA — REGLAS ADICIONALES (requiere esta expansión y 4 jugadores, formando una alianza de 2 contra 2):
+• Una alianza es un equipo de 2 jugadores formado al inicio de la partida, que dura el resto del escenario.
+• Cada jugador elige su facción al comienzo del escenario.
+• Los jugadores aliados pueden intercambiarse artefactos si sus héroes están en zonas adyacentes.
+• Los recursos se intercambian libremente entre aliados durante el turno de cualquiera de ellos, sin necesitar adyacencia.
+• Un jugador de una alianza no puede señalizar un lugar que ya haya señalizado su compañero de equipo.
+ACABAR UN ESCENARIO: los héroes aliados comparten condiciones de victoria y derrota; no existe un paso adicional para comparar quién contribuyó más a la victoria.
 
-REQUISITOS Y REGLAS DE ALIANZA:
-- Requiere 4 jugadores forming 2 alianzas de 2 jugadores.
-- Cada jugador elige su facción al inicio. La alianza dura todo el escenario.
-- Intercambio de Artefactos: Dos héroes aliados pueden intercambiarse artefactos de la mano si se encuentran en zonas adyacentes.
-- Intercambio Libre de Recursos: Los miembros de la misma alianza pueden transferir y compartir recursos libremente durante el turno de cualquiera de ellos, sin importar la posición de sus héroes en el mapa.
-- Control de Zonas: Un jugador no puede señalizar ni capturar un lugar que ya esté señalizado por su compañero de alianza.
+ESCENARIO DE ALIANZA — "El Desafío" (4 jugadores, dura 11-14 rondas): el rey ha lanzado un desafío para construir el grial en la capital Osha en 6 meses. Recursos iniciales 16 de Oro/4 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 2 manadas de bronce del menor coste. Al visitar un obelisco, lanza 2 dados de tesoro y resuelve 1. Una alianza no puede visitar la zona del grial hasta visitar al menos 4 obeliscos diferentes o hasta que algún héroe ya haya cogido la ficha; conseguirla cuesta 2 PM en su zona; la ficha aumenta en 5 los ingresos de Oro. Victoria: llevar la ficha de grial a la ciudad de tu facción. Si nadie la consigue al final de la ronda 11, todos pierden; si se consigue, hay hasta la ronda 14 para llevarla a la ciudad.
 
-CONDICIONES DE FIN DE ESCENARIO:
-- Los héroes aliados comparten la victoria o la derrota por igual. No hay recuento individual de puntos.`
+ESCENARIO DE ENFRENTAMIENTO — "Oro Enano" (2-3 jugadores, dura 10 rondas): tras el hallazgo de una veta de 75.000 monedas, los señores locales organizan expediciones. Recursos iniciales 15 de Oro/3 Materiales/1 Objeto de Valor, ingresos «10»/«2»/«0». Cada jugador empieza con 1 manada de bronce del mayor coste. Prohibido usar cartas que den recursos (si se roban, se muestran, descartan y se roba otra). Solo los héroes principales pueden coger la ficha de grial, que da 15 de Oro inmediatos y +5 de ingresos de Oro al llegar a la ciudad. Victoria: tener 75 de Oro al final de una ronda (empate = gana quien tenga más). Si nadie lo logra antes del final de la ronda 10, todos pierden.`
   },
   {
-    id: "rampart-04-escenario-el-desafio",
-    title: "Murallas 4. Escenario Alianza: 'El Desafío' (4 Jugadores)",
-    category: "escenario",
-    content: `ESCENARIO ALIANZA 'EL DESAFÍO':
-
-NARRATIVA: El rey va a morir y desafía a quien construya el Grial en la capital Osha a convertirse en su sucesor.
-- Jugadores: 4 (2v2). Duración: 11-14 rondas.
-- Preparación del Mapa: 4 losetas iniciales (I), 8 lejanas (II-III), 8 cercanas (IV-V con 4 obeliscos), 2 centrales (VI-VII con 1 grial).
-
-RECURSOS E INGRESOS INICIALES:
-- Suministros: 16 Oro, 4 Materiales, 1 Objeto de Valor.
-- Ingresos: 10 Oro, 0 Materiales, 0 Objetos de Valor.
-- Edificio inicial: Vivienda de Bronce. Tropas iniciales: 2 manadas de Bronce de menor coste.
-
-REGLAS DEL ESCENARIO:
-- Visitar un Obelisco permite lanzar 2 dados de tesoro y resolver 1.
-- No se puede acceder a la zona del Grial hasta que la alianza haya visitado al menos 4 obeliscos diferentes.
-- Excavar la Ficha de Grial requiere gastar 2 PM en la zona del Grial.
-- Si el héroe con el Grial es derrotado en combate o se rinde, la ficha de Grial cae en esa zona o pasa al vencedor.
-- Entregar el Grial en la ciudad otorga +5 de ingresos de Oro.
-- Victoria: Conseguir la ficha de Grial y llevarla a la ciudad natal de tu facción.`
-  },
-  {
-    id: "rampart-05-escenario-oro-enano",
-    title: "Murallas 5. Escenario Enfrentamiento: 'Oro Enano' (2-3 Jugadores)",
-    category: "escenario",
-    content: `ESCENARIO ENFRENTAMIENTO 'ORO ENANO':
-
-NARRATIVA: Fiebre del oro tras el hallazgo del minero enano Invis Smythers.
-- Jugadores: 2 o 3. Duración: 10 rondas.
-
-RECURSOS E INGRESOS INICIALES:
-- Suministros: 15 Oro, 3 Materiales, 1 Objeto de Valor.
-- Ingresos: 10 Oro, 2 Materiales, 0 Objetos de Valor.
-- Tropas iniciales: 1 manada de Bronce de mayor coste.
-
-REGLAS ESPECIALES:
-- Prohibido el uso de cartas que otorguen recursos directos (se descartan y se roba otra al buscar).
-- Solo los héroes principales pueden reclamar el Grial.
-- La Ficha de Grial concede 15 Oro inmediatos y +5 de ingresos al llegar a la ciudad.
-- Evento contrarreloj: En las rondas 2, 4, 6, 8 y 10, retira todos los cubos negros de los molinos y molinos de agua.
-- Victoria: Acumular 75 de Oro en tu reserva al final de cualquier ronda.`
-  },
-  {
-    id: "rampart-06-campana-mision-1",
-    title: "Murallas 6. Campaña 'La Venganza se Sirve Fría' - Misión 1: En Busca de un Asesino",
+    id: "cap_exp_murallas_campana",
+    title: "Expansión Murallas (Rampart): Campaña en Solitario — La Venganza se Sirve Fría",
     category: "campaña",
-    content: `CAMPAÑA DE LAS MURALLAS - ESCENARIO 1: EN BUSCA DE UN ASESINO
+    content: `Campaña de 3 misiones para la facción Murallas contra héroes de IA de Necrópolis (referencia de preparación y condiciones; el contenido narrativo de cada misión está en el Libro de Misiones físico).
 
-HISTORIA: Asesinato de lord Falorel (descubierto como un señor vampiro infiltrado de Deyja) y la invasión de Soledare.
-- Héroe Principal del Jugador: Gelu (Facción Murallas). Duración: 11 rondas.
-- Enemigos de la IA (Necrópolis): Aislinn, Galthran y el Ejército de la Ciudad.
+MISIÓN 1 — "En Busca de un Asesino" (11 rondas): héroe Gelu. Recursos iniciales 14 de Oro/4 Materiales, +5 de producción de Oro. Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela. Bonificador a elegir: +2 Objetos de Valor, +4 Materiales, o carta de Máquina de Guerra "Carro de Municiones". Héroes de IA (Necrópolis): Galthran y Aislinn, más el ejército de la ciudad. Victoria: derrotar a todos los ejércitos enemigos. Derrota: perder tu ciudad, perder un combate, o no ganar antes del final de la ronda 11.
 
-REGLAS Y EVENTOS DESTACADOS:
-- Visitar un obelisco por primera vez activa el rescate o ruinas de Soledare.
-- Derrotar ejércitos enemigos otorga 2 Objetos de Valor.
-- Evento Ronda 7: La dificultad de todos los combates del mapa aumenta en +1.
-- Victoria: Derrotar a todos los ejércitos enemigos de la Necrópolis.`
-  },
-  {
-    id: "rampart-07-campana-mision-2",
-    title: "Murallas 7. Campaña 'La Venganza se Sirve Fría' - Misión 2: Paz Definitiva",
-    category: "campaña",
-    content: `CAMPAÑA DE LAS MURALLAS - ESCENARIO 2: PAZ DEFINITIVA
+MISIÓN 2 — "Paz Definitiva" (13 rondas): héroe Gem. Recursos iniciales 12 de Oro/4 Materiales/2 Objetos de Valor, +5 de producción de Oro. Mismos edificios iniciales. Bonificador a elegir: +8 de Oro, +4 Materiales, o buscar(2) dos veces en hechizos. Héroes de IA: guardias de lord Fayette y lord Fayette. Victoria/Derrota: igual patrón, límite ronda 13.
 
-HISTORIA: La druida Gem investiga el asesinato de lord Fayette, resucitado por los nigromantes como un Caballero del Terror.
-- Héroe Principal del Jugador: Gem (Facción Murallas). Duración: 13 rondas.
-- Enemigos de la IA (Necrópolis): Guardias de lord Fayette y Lord Fayette.
+MISIÓN 3 — "Agentes de la Venganza" (12 rondas): héroes Gem y Gelu. Recursos iniciales 14 de Oro/8 Materiales/3 Objetos de Valor, +5 de producción de Oro. Bonificador a elegir: +2 Objetos de Valor, buscar(4) en artefactos, o reforzar 2 unidades. Héroes de IA: Charna, Galthran y Vidomina (esta última no se mueve por el mapa). Victoria: derrotar al ejército enemigo en la utopía del dragón antes del final de la ronda 12.
 
-REGLAS Y EVENTOS DESTACADOS:
-- En la zona de ciudad de la loseta de Necrópolis, lucha contra la guarnición con 3 murallas y 1 puerta.
-- Teletransporte Místico: Los obeliscos de las losetas cercanas de Necrópolis y Mazmorra están interconectados y teletransportan al héroe de una a otra.
-- Victoria: Derrotar a lord Fayette para liberar su alma.`
-  },
-  {
-    id: "rampart-08-campana-mision-3",
-    title: "Murallas 8. Campaña 'La Venganza se Sirve Fría' - Misión 3: Agentes de la Venganza",
-    category: "campaña",
-    content: `CAMPAÑA DE LAS MURALLAS - ESCENARIO 3: AGENTES DE LA VENGANZA
-
-HISTORIA: Gem y Gelu unen sus fuerzas para invadir Deyja y detener el complot del nigromante Sandro antes de que complete un artefacto destructivo.
-- Héroes del Jugador: Gem y Gelu. Duración: 12 rondas.
-- Enemigos de la IA: Charna, Galthran y Vidomina.
-
-REGLAS Y EVENTOS DESTACADOS:
-- Dificultad Aumentada: Todos los combates en losetas de Necrópolis tienen +1 a la dificultad de zona.
-- Combate Final en el Castillo Crypthome (Utopía del Dragón): Enfrentamiento masivo contra Vidomina. La manada de esqueletos enemiga equipa las cartas de especialidad de Sandro y realiza un ataque gratuito.
-- Gelu o Gem otorgan bonificaciones directas de daño al inicio de la batalla final.
-- Victoria: Derrotar al ejército enemigo en la Utopía del Dragón.`
+Regla común a las 3 misiones: los héroes enemigos se mueven después del jugador; se puede entrar en una zona bloqueada si hay un enemigo en ella; derrotar el ejército de un héroe enemigo da +2 Objetos de Valor; la primera vez que el héroe entra en una zona con obelisco se activa un evento de historia (a partir de ahí, cada primera visita a un obelisco lanza 2 dados de tesoro y resuelve 1, a elección del jugador).`
   },
 
   // =========================================================================
   // METAS AMPLIADAS (STRETCH GOALS) Y LIBRO DE MISIONES
   // =========================================================================
   {
-    id: "sg-01-componentes",
-    title: "Metas Ampliadas 1. Lista de Componentes y Nuevas Localizaciones",
+    id: "cap_exp_metas_ampliadas_componentes",
+    title: "Expansión Metas Ampliadas (Stretch Goals): Componentes y Regla de Miniaturas",
     category: "componentes",
-    content: `COMPONENTES Y NUEVOS LUGARES DE LAS METAS AMPLIADAS (STRETCH GOALS):
+    content: `Esta expansión añade 3 campañas en solitario nuevas: "La Sangre del Dragón" (Mazmorra), "El Ascenso del Nigromante" (Necrópolis) y "El Matadragones" (Torre), además de las Escuelas de Magia (ver capítulo 5, Construcción del Mazo) y nuevos lugares del mapa (ver capítulo 8, Elementos del Mapa).
 
-LOSETAS Y COMPONENTES:
-- 15 Losetas de mapa (1 inicial, 10 lejanas, 3 cercanas, 1 central)
-- 1 Tablero de ciudad, 1 libro de misiones, 1 ayuda de juego
-- 2 Miniaturas de héroe, 7 miniaturas de unidad, 7 cartas de héroe a doble cara
-- 28 Cartas de unidad neutral, 11 de artefacto, 7 de hechizo, 11 de habilidad, 42 de especialidad
-- 7 Cartas de característica, 12 fichas de oro, 9 materiales, 8 objetos de valor, 10 fichas de daño
-- 30 Cubos acrílicos (10 negros, 20 azul claro)
+COMPONENTES DE LA EXPANSIÓN: 15 losetas de mapa (1 inicial, 10 lejanas, 3 cercanas, 1 central), 1 tablero de ciudad, 1 libro de misiones, 1 ayuda de juego, 2 miniaturas de héroe, 7 miniaturas de unidad, 7 cartas de héroe a doble cara, 7 cartas de unidad, 7 losetas de edificio de ciudad, 28 cartas de unidad neutral, 4 cartas de anuncio astrológico, 11 cartas de artefacto, 7 cartas de hechizo, 11 cartas de habilidad, 42 cartas de especialidad, 7 cartas de característica (1 ataque, 1 defensa, 2 poder, 3 conocimiento), fichas de oro/materiales/objetos de valor/daño/construcción/población/libro de hechizos/parálisis-defensa/movimiento/moral, y 30 cubos acrílicos (10 negros, 20 azul claro).
 
-NUEVOS LUGARES DEL MAPA (Páginas 41-42):
-- Universidad (Visitable): Paga 6 de Oro para buscar (4) en el descarte de habilidades.
-- Mercado Negro (Re-visitable): Examina las 4 cartas superiores del descarte de artefactos y compra: Menor por 5 Oro, Mayor por 7 Oro, Reliquia por 10 Oro.
-- Mercado del Tiempo (Visitable): Retira 1 carta de tu mano y busca (2) en el mazo de habilidades, hechizos o artefactos.
-- Prisión (Visitable): Otorga 1 héroe secundario gratis (o 3 de Oro si ya tienes uno).
-- Biblioteca de la Iluminación (Re-visitable): Paga 3 de Oro para sustituir 1 carta de característica de mano/descarte por otra.
-- Fuerte de la Colina (Visitable): Permite reforzar 1 unidad de Bronce o Plata reduciendo el coste en 3 de Oro (mínimo 0).
-- Taberna (Re-visitable): Paga 7 de Oro para ganar un héroe secundario y hacer que un oponente descarte 1 carta al azar de su mano.
-- Aserradero (Mina - Señalizable): Otorga pasivamente 2 Materiales de Construcción por ronda.`
+MINIATURAS EN JUEGO (regla opcional): al comienzo de la partida, prepara las miniaturas de las unidades que vayas a utilizar; durante el combate se pueden colocar sobre sus cartas de unidad correspondientes para indicar con claridad su posición en el tablero de combate (las miniaturas de una facción comparten el color del borde de sus cartas). Si se juega con miniaturas, aplica estas reglas adicionales: al robar una carta de unidad neutral, si sale la misma unidad neutral repetida, una que ya tengas en tu ejército, o una unidad de tu propia facción, descártala y roba otra en su lugar; al reclutar unidades neutrales, tampoco se puede reclutar una unidad de una facción controlada por otro jugador ni una ya presente en el ejército de otro jugador (descarta y roba otra).`
   },
   {
-    id: "sg-02-escuelas-magia-miniaturas",
-    title: "Metas Ampliadas 2. Escuelas de Magia, Efectos Permanentes y Reglas de Miniaturas",
-    category: "magia",
-    content: `NUEVAS MECÁNICAS DE JUEGO (METAS AMPLIADAS):
-
-ESCUELAS DE MAGIA (Aire, Fuego, Tierra, Agua):
-- Cada carta de hechizo pertenece a una de las 4 escuelas de magia.
-- Flecha Mágica: Pertenece a todas las escuelas de magia a la vez, pero solo puede beneficiarse del bonificador de una escuela simultáneamente.
-
-CARTAS DE EFECTO PERMANENTE (Icono Infinito ∞):
-- Permanece en mesa frente al jugador tras jugarse.
-- Cada héroe solo puede mantener 1 carta de efecto permanente a la vez.
-
-REGLAS ADICIONALES PARA MINIATURAS DE UNIDAD EN TABLERO:
-- Al robar unidades neutrales en combate: descarta y roba otra si robas la misma unidad neutral más de una vez, una unidad que ya tengas en tu ejército, o una unidad de tu propia facción.
-- Al reclutar neutrales: prohibido reclutar unidades controladas por otro jugador.`
-  },
-  {
-    id: "sg-03-campana-dungeon",
-    title: "Metas Ampliadas 3. Campaña Mazmorra: 'La Sangre del Dragón' (Mutare)",
+    id: "cap_exp_metas_ampliadas_campana_mazmorra",
+    title: "Expansión Metas Ampliadas: Campaña de la Mazmorra — La Sangre del Dragón",
     category: "campaña",
-    content: `CAMPAÑA DE LA MAZMORRA: LA SANGRE DEL DRAGÓN (3 Escenarios):
+    content: `Campaña de 3 misiones para la facción Mazmorra, protagonizada por Mutare (y desde la 2ª misión, opcionalmente Alamar) (referencia de preparación y condiciones; el contenido narrativo está en el Libro de Misiones físico).
 
-PROTAGONISTA: La señora Mutare busca el legendario Vial de Sangre de Dragón para transformarse en dragón y dominar Nighon.
+MISIÓN 1 — "Limpieza de Aspirantes" (11 rondas): héroe Mutare. Sin recursos ni edificios iniciales. Bonificador a elegir: añadir unas pocas medusas, reforzar trogloditas y arpías, o buscar(4) en artefactos. Héroes de IA (Mazmorra): Caomham (no se mueve) y Preuet (se mueve tras el turno del jugador). Reglas: nivel de experiencia máximo 4; no se pueden construir viviendas de oro; no se puede reclutar un 2º héroe; no hay ingresos salvo tras conquistar la ciudad inicial (que da vivienda de bronce, alcaldía y varios recursos); no se gana nada visitando obeliscos. Victoria: derrotar a Caomham y Preuet. Derrota: perder cualquier combate, o no ganar antes del final de la ronda 11.
 
-ESCENARIO 1: LIMPIEZA DE ASPIRANTES (11 Rondas)
-- Héroe: Mutare. Límite Nivel 4. Sin viviendas de Nivel 3.
-- Enemigos IA: Caomham y Preuet.
-- Misión: Capturar la ciudad inicial (guarnición Nivel III) y eliminar a ambos héroes rivales.
+MISIÓN 2 — "Sangre del Padre Dragón" (11 rondas): héroe a elegir entre Mutare o Alamar. Recursos iniciales 14 de Oro/3 Materiales/1 Objeto de Valor, +5 de producción de Oro. Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela. Bonificador a elegir: buscar(3) en artefactos, +4 Materiales, o reforzar ojos maléficos/trogloditas/arpías. Héroe de IA (Castillo, a elegir cuál) más el ejército de dragones guardianes en la utopía del dragón central. Reglas: la dificultad de todos los combates del mapa sube +1 desde la ronda 1; el héroe enemigo va directo a la utopía del dragón por la ruta más corta e ignora al jugador salvo que coincidan en zona; visitar un obelisco impide que se mueva 1 turno. Victoria: derrotar al ejército en la utopía del dragón (el héroe enemigo es opcional). Derrota: que el enemigo llegue antes a la utopía del dragón, o no ganar antes del final de la ronda 11.
 
-ESCENARIO 2: SANGRE DEL PADRE DRAGÓN (11 Rondas)
-- Héroe: Mutare o Alamar.
-- Enemigos IA: Vanguardia de Ordwald (se desplaza veloz hacia la Utopía del Dragón) y Dragones Guardianes.
-- Regla: Visitar obeliscos detiene el avance de la vanguardia enemiga por 1 turno.
-- Victoria: Llegar a la Utopía del Dragón y derrotar a los Dragones Guardianes antes de que Ordwald alcance el lugar.
-
-ESCENARIO 3: SED DE SANGRE (10 Rondas)
-- Héroe: Mutare (tras beber del Vial, transformada en dragón) o Alamar.
-- Enemigos IA: Cuatro señores de Nighon que atacan en oleadas sucesivas hasta llegar a Ordwald.
-- Regla Especial: En la Utopía del Dragón se pueden reclutar dragones azures si se poseen viviendas de Nivel 3.
-- Victoria: Sobrevivir y derrotar a todos los señores enemigos en combate.`
+MISIÓN 3 — "Sed de Sangre" (10 rondas): héroe a elegir entre Mutare o Alamar. Recursos iniciales 20 de Oro/5 Materiales/2 Objetos de Valor, +1 de producción de Materiales y +5 de Oro. Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela. Bonificador a elegir: añadir unos pocos fanáticos, añadir 1 dragón al azar, o reforzar arpías/minotauros/medusas. Héroes de IA (Castillo y Necrópolis): 3 señores y Ordwald, que atacan uno tras otro en ese orden fijo. Reglas: se pueden reclutar dragones en la utopía del dragón (máximo 2, requiere vivienda de oro); no se pueden usar mantícoras; visitar un obelisco inmoviliza a todos los enemigos 1 turno (una vez por obelisco); derrotar a un héroe enemigo da medio nivel de experiencia. Victoria: sobrevivir a los ataques de los 4 héroes enemigos. Derrota: perder cualquier combate.`
   },
   {
-    id: "sg-04-campana-necropolis",
-    title: "Metas Ampliadas 4. Campaña Necrópolis: 'El Ascenso del Nigromante' (Sandro)",
-    category: "campaña",
-    content: `CAMPAÑA DE LA NECRÓPOLIS: EL ASCENSO DEL NIGROMANTE (3 Escenarios):
+    id: "cap_exp_metas_ampliadas_campana_necropolis",
+    title: "Expansión Metas Ampliadas: Campaña de la Necrópolis — El Ascenso del Nigromante",
+    category: "modes",
+    content: `Campaña de 3 misiones para la facción Necrópolis, protagonizada por Sandro o Tamika (referencia de preparación y condiciones; el contenido narrativo está en el Libro de Misiones físico).
 
-PROTAGONISTA: Sandro el Nigromante avanza hacia Deyja reuniendo artefactos legendarios (Capa del Rey No Muerto y Armadura de los Malditos) contra su antiguo maestro Ethric.
+MISIÓN 1 — "Objetivo" (8 rondas): héroe a elegir entre Sandro o Tamika. Recursos iniciales 25 de Oro/3 Materiales/1 Objeto de Valor. Edificio inicial: vivienda de bronce. Bonificador a elegir: reforzar zombis, buscar(3) en artefactos, o robar del mazo de hechizos hasta encontrar uno de daño. Héroes de IA: Shiva y Jeddite. Reglas: nivel de experiencia máximo 4; los héroes enemigos se mueven después del jugador; los obeliscos permiten elegir qué miniatura representa a cada enemigo. Victoria: derrotar ambos ejércitos enemigos. Derrota: perder cualquier combate, o no ganar antes del final de la ronda 8.
 
-ESCENARIO 1: OBJETIVO (8 Rondas)
-- Héroe: Sandro o Tamika. Límite Nivel 4.
-- Enemigos IA: Shiva y Jeddite (utiliza la carta de especialidad Resurrección VI).
-- Victoria: Derrotar a Shiva y Jeddite en combate.
+MISIÓN 2 — "Maestro" (10 rondas): mismo héroe elegido. Recursos iniciales 3 de Oro/2 Materiales. Edificios iniciales: vivienda de bronce, vivienda de plata. Bonificador a elegir: +5 Materiales, +9 de Oro, o construir gratis el edificio "Manto de la Oscuridad". Héroes de IA (Mazmorra y Castillo, a elegir cuáles): Ivor y Ethric. Reglas: los héroes enemigos se mueven después del jugador. Victoria: derrotar ambos ejércitos. Derrota: perder tu ciudad, o no ganar antes del final de la ronda 10.
 
-ESCENARIO 2: MAESTRO (10 Rondas)
-- Héroe: Sandro o Tamika. Límite Nivel 5.
-- Enemigos IA: Ivor y Ethric (su antiguo maestro).
-- Regla Especial: Si Ethric es atacado en su ciudad, cuenta con 3 murallas, puerta y torre de arqueros. Se pueden pagar 10 de Oro para ralentizar su movimiento a 2 zonas/ronda.
-- Victoria: Derrotar a Ivor y Ethric.
-
-ESCENARIO 3: DUQUE ALARICE (11 Rondas)
-- Héroe: Sandro o Tamika.
-- Enemigos IA: Thorgrim, Melodia y el Duque Alarice.
-- Regla Especial: El asentamiento enano aumenta la producción de Oro en +10. En el combate final contra el Duque Alarice, una unidad de Momias enemiga ataca en primer lugar antes de cualquier activación.
-- Victoria: Derrotar a todos los héroes enemigos y triunfar en la Utopía del Dragón.`
+MISIÓN 3 — "Duque Alarice" (11 rondas): mismo héroe elegido. Recursos iniciales 20 de Oro/2 Materiales/4 Objetos de Valor, +2 de producción de Materiales y +5 de Oro. Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela. Bonificador a elegir: añadir unos pocos vampiros, +4 Materiales, o +2 Objetos de Valor. Héroes de IA (Castillo): Thorgrim, Melodia (mismo ejército/mazo que Thorgrim) y el duque Alarice (aparece solo en la historia, no en el mapa). Reglas: los héroes enemigos van directos hacia la miniatura del jugador por la ruta más corta y se mueven después del turno del jugador; derrotar un héroe enemigo da a elegir 6 de Oro o 2 Materiales; los obeliscos dan 10 de Oro y permiten entrar en la utopía del dragón. Victoria: derrotar a todos los héroes enemigos y ganar el combate final en la utopía del dragón. Derrota: perder tu ciudad, o no ganar antes del final de la ronda 11.`
   },
   {
-    id: "sg-05-campana-tower",
-    title: "Metas Ampliadas 5. Campaña Torre: 'Matadragones' (Dracon)",
-    category: "campaña",
-    content: `CAMPAÑA DE LA TORRE: EL MATADRAGONES (4 Escenarios):
+    id: "cap_exp_metas_ampliadas_campana_torre",
+    title: "Expansión Metas Ampliadas: Campaña de la Torre — El Matadragones",
+    category: "modes",
+    content: `Campaña de 4 misiones para la facción Torre, protagonizada por Dracon o Solmyr (referencia de preparación y condiciones; el contenido narrativo está en el Libro de Misiones físico). Las misiones 2 y 3 requieren, respectivamente, las expansiones Fortaleza y Murallas (si no se tienen, se pueden saltar).
 
-PROTAGONISTA: Dracon realiza las pruebas preparadas por su madre para convertirse en el matadragones definitivo, enfrentándose a las wyrms más letales.
+MISIÓN 1 — "Dragones de Cristal" (9 rondas): héroe a elegir. Recursos iniciales 15 de Oro/3 Materiales/1 Objeto de Valor, +5 de producción de Oro. Edificios iniciales: vivienda de bronce, vivienda de plata. Bonificador a elegir: +2 Objetos de Valor, añadir unos pocos gólems de hierro, o reforzar gremlins/gárgolas. Enemigo: ejército de dragones de cristal. Reglas: visitar un obelisco activa un evento especial; no se puede descubrir ninguna loseta cercana antes de descubrir todas las lejanas. Victoria: visitar un obelisco y ganar el combate que aparece ahí. Derrota: perder una batalla, o no ganar antes del final de la ronda 9.
 
-ESCENARIO 1: DRAGONES DE CRISTAL (9 Rondas)
-- Héroes: Dracon o Solmyr (Facción Torre).
-- Misión: Revelar las losetas lejanas, visitar un obelisco y derrotar al ejército de Dragones de Cristal.
+MISIÓN 2 — "Dragones Herrumbrosos" (11 rondas, requiere Fortaleza): héroe a elegir. Recursos iniciales 18 de Oro/1 Material/3 Objetos de Valor. Edificios iniciales: vivienda de bronce, ciudadela. Bonificador a elegir: +5 Objetos de Valor, o reforzar magos. Enemigos: 3 ejércitos sucesivos de dragones herrumbrosos (crecientes en tamaño). Reglas: no se puede entrar en el estanque de gemas hasta capturar 3 minas; derrotar un ejército enemigo da 1 Objeto de Valor y experiencia. Victoria: capturar todas las minas y el estanque de gemas, derrotando a sus defensores. Derrota: perder una batalla, o no ganar antes del final de la ronda 11.
 
-ESCENARIO 2: DRAGONES HERRUMBROSOS (11 Rondas - Requiere Fortaleza)
-- Héroes: Dracon o Solmyr.
-- Misión: Capturar 3 minas infestadas de ácido (sufriendo parálisis y reducción de tropas) y derrotar al ejército final en el Estanque de Gemas.
+MISIÓN 3 — "Dragones Hada" (13 rondas, requiere Murallas): héroe a elegir. Recursos iniciales 15 de Oro/5 Materiales/1 Objeto de Valor, +5 de producción de Oro. Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela. Bonificador a elegir: +4 Materiales, o reforzar magos. Enemigos: 3 ejércitos sucesivos de dragones hada (con trolls en el 2º y 3º). Reglas: tras capturar el primer asentamiento, cada nuevo asentamiento capturado activa un evento de historia. Victoria: capturar todos los asentamientos del mapa y ganar el combate final en la Caja de Pandora. Derrota: perder una batalla, o no ganar antes del final de la ronda 13.
 
-ESCENARIO 3: DRAGONES HADA (13 Rondas - Requiere Murallas)
-- Héroes: Dracon o Solmyr.
-- Misión: Superar las ilusiones del duendecillo Erik, capturar los 4 asentamientos oprimidos y abrir la Caja de Pandora para derrotar a los 3 Dragones Hada.
-
-ESCENARIO 4: DRAGONES AZURES (11 Rondas)
-- Héroes: Dracon o Solmyr.
-- Misión: Visitar los 3 obeliscos derrotando en cada uno a un ejército dragón (Cristal, Negro o Azure) para desbloquear la Utopía del Dragón final y vencer al mítico Dragón Azure.`
+MISIÓN 4 — "Dragones Azures" (11 rondas): héroe a elegir. Recursos iniciales 30 de Oro/4 Materiales/2 Objetos de Valor, +5 de producción de Oro. Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela. Bonificador a elegir: buscar(3) en habilidades, en hechizos, o en artefactos. Enemigos: ejércitos de dragones de cristal, dragones negros y dragones azures, uno en cada uno de los 3 obeliscos del mapa (cada uno se combate solo una vez), más el ejército final en la utopía del dragón. Reglas: tomar un obelisco da a elegir 2 Objetos de Valor o 7 de Oro; tras tomar el primer obelisco, la dificultad de todos los combates del mapa sube +1; no se puede entrar en la utopía del dragón hasta controlar los 3 obeliscos. Victoria: visitar los 3 obeliscos y derrotar después el ejército final en la utopía del dragón. Derrota: perder una batalla, o no ganar antes del final de la ronda 11.`
   },
 
   // =========================================================================
   // EXPANSIÓN FORTALEZA (FORTRESS) Y LIBRO DE MISIONES "JUGANDO CON FUEGO"
   // =========================================================================
   {
-    id: "fortress-01-componentes",
-    title: "Fortaleza 1. Lista de Componentes de la Expansión Fortaleza",
+    id: "cap_exp_fortaleza_componentes",
+    title: "Expansión Fortaleza: Componentes y Cartas de Evento",
     category: "componentes",
-    content: `COMPONENTES INCLUIDOS EN LA EXPANSIÓN FORTALEZA (FORTRESS):
+    content: `Esta expansión añade la facción Fortaleza (gnolls, hombres lagarto y criaturas de las ciénagas de Tatalia), introduce las Cartas de Evento (ver capítulo 3, Preparación de la Partida — Orden de las Rondas) y nuevos lugares del mapa (ver capítulo 8, Elementos del Mapa), además de compartir las Escuelas de Magia con la expansión Metas Ampliadas y las reglas de Modo Alianza con la expansión Murallas.
 
-LOSETAS Y TABLEROS:
-- 7 Losetas de mapa (1 inicial [S5], 3 lejanas [F13, F14, F15], 2 cercanas [N9, N10], 1 central [C1])
-- 1 Tablero de ciudad de la facción Fortaleza (Fortress)
-- 1 Libro de misiones de Fortaleza (28 páginas)
-- 1 Ayuda de juego
-
-MINIATURAS Y CARTAS:
-- 2 Miniaturas de héroe (Adrienne y Wystan)
-- 7 Miniaturas de unidad (Gnolls, Hombres Lagarto, Libélulas, Basiliscos, Gorgonas, Wyverns, Hidras)
-- 1 Carta de héroe a doble cara (Adrienne / Wystan)
-- 7 Cartas de unidad de Fortaleza (a doble cara: "unas pocas" / "manada")
-- 7 Losetas de edificio de ciudad de Fortaleza
-- 2 Cartas de unidad neutral
-- 3 Cartas de anuncio astrológico
-- 8 Cartas de artefacto
-- 20 Cartas de hechizo
-- 4 Cartas de habilidad
-- 6 Cartas de especialidad de héroe
-- 20 Cartas de Evento (Mazo de eventos del mapa)
-- 8 Cartas de característica (4 Defensa, 2 Poder, 2 Conocimiento)
-
-FICHAS Y RECURSOS:
-- 9 Fichas de oro (3 de "1", 3 de "3", 3 de "10")
-- 6 Fichas de materiales de construcción (3 de "1", 3 de "3")
-- 4 Fichas de objetos de valor (3 de "1", 1 de "3")
-- 1 Ficha de construcción, 1 de población, 1 de libro de hechizos, 1 de moral
-- 30 Cubos acrílicos (10 negros, 20 verde oscuro)`
+COMPONENTES DE LA EXPANSIÓN: 7 losetas de mapa (1 inicial, 3 lejanas, 2 cercanas, 1 central), 1 tablero de ciudad, 1 libro de misiones, 1 ayuda de juego, 2 miniaturas de héroe, 7 miniaturas de unidad, 1 carta de héroe a doble cara, 7 cartas de unidad, 7 losetas de edificio de ciudad, 2 cartas de unidad neutral, 3 cartas de anuncio astrológico, 8 cartas de artefacto, 20 cartas de hechizo, 4 cartas de habilidad, 6 cartas de especialidad, 20 cartas de evento, 8 cartas de característica (4 defensa, 2 poder, 2 conocimiento), fichas de oro/materiales/objetos de valor/construcción/población/libro de hechizos/moral, y 30 cubos acrílicos (10 negros, 20 verde oscuro).`
   },
   {
-    id: "fortress-02-nuevos-elementos-eventos",
-    title: "Fortaleza 2. Cartas de Evento y Nuevas Localizaciones (Erudito)",
-    category: "general",
-    content: `NUEVAS MECÁNICAS E INTRODUCCIONES DE LA EXPANSIÓN FORTALEZA:
+    id: "cap_exp_fortaleza_escenarios",
+    title: "Expansión Fortaleza: Escenarios Independientes (Arrogancia y En Busca del Grial)",
+    category: "modes",
+    content: `Esta expansión aporta las reglas completas del Modo Alianza (idénticas a las de la expansión Murallas: equipo de 2 jugadores formado al inicio de la partida, intercambio de artefactos entre héroes en zonas adyacentes, intercambio libre de recursos entre aliados, y prohibición de señalizar un lugar ya señalizado por tu compañero de equipo).
 
-1. CARTAS DE EVENTO (Nuevo tipo de mazo):
-   - Al comienzo de cada ronda de recursos (excepto la primera), tras cobrar ingresos, se roba y resuelve 1 carta de evento.
-   - La primera la roba el jugador inicial y la rotación continúa en sentido horario en rondas posteriores.
-   - Se utilizan únicamente en escenarios multijugador.
-   - Las acciones descritas se ejecutan en sentido horario. Si son acciones independientes, pueden resolverse simultáneamente.
-   - Tras resolver el evento, las cartas no usadas se barajan de nuevo en el mazo de eventos.
+ESCENARIO DE ALIANZA — "Arrogancia" (4 jugadores, dura 12 rondas): recursos iniciales 13 de Oro/4 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 2 unidades "unas pocas" de bronce del mayor coste. Solo un héroe principal puede hacerse con la ficha de grial (aunque haya 2 losetas con grial, solo existe 1 ficha); una alianza no puede visitar su zona hasta visitar al menos 4 obeliscos diferentes o hasta que algún héroe ya la haya cogido; conseguirla cuesta 2 PM en su zona; aumenta en 5 los ingresos de Oro. Al comienzo de las rondas 3, 6 y 9, todos los héroes ganan ficha de moral positiva. Victoria: que una alianza entregue la ficha de grial en una de sus ciudades antes del final de la ronda 12 (si no, todos pierden).
 
-2. NUEVOS LUGARES DEL MAPA:
-   - Erudito (Visitable, Pág. 26): Lanza 1 dado de ataque y resuelve el resultado:
-     • Resultado +1: Roba la carta de característica elegida o retira una de las cartas de característica de tu mano.
-     • Resultado 0: Roba 2 cartas de habilidad, quédate con una y descarta la otra.
-     • Resultado -1: Roba 2 cartas de hechizo, quédate con una y descarta la otra.`
+ESCENARIO DE ENFRENTAMIENTO — "En Busca del Grial" (2-3 jugadores, dura 10-13 rondas): recursos iniciales 16 de Oro/4 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 2 manadas de bronce del menor coste. Mismas reglas de "solo 1 grial existente" y umbral de obeliscos (aquí, 2 obeliscos en vez de 4). Al comienzo de las rondas 3 y 9, todos los héroes ganan +1 PM. Victoria: el héroe principal de un jugador consigue la ficha de grial y la devuelve a la ciudad de su facción antes del final de la ronda 10 (si tiene la ficha pero no ha llegado, dispone hasta la ronda 13 para conseguirlo; si no, pierde).`
   },
   {
-    id: "fortress-03-modo-alianza-arrogancia",
-    title: "Fortaleza 3. Modo Alianza y Escenario 'Arrogancia' (4 Jugadores)",
-    category: "escenario",
-    content: `ESCENARIO ALIANZA 'ARROGANCIA':
-
-NARRATIVA: Cuatro culturas vivían en paz hasta que las ambiciones de conquista desataron la guerra mundial.
-- Jugadores: 4 (2v2). Duración: 12 rondas.
-- Preparación del Mapa: 4 losetas iniciales (I), 8 lejanas (II-III), 8 cercanas (IV-V con 4 obeliscos), 2 centrales (VI-VII con 1 grial).
-
-RECURSOS E INGRESOS INICIALES:
-- Suministros: 13 Oro, 4 Materiales, 1 Objeto de Valor.
-- Ingresos: 10 Oro, 0 Materiales, 0 Objetos de Valor.
-- Tropas iniciales: 2 "unas pocas" de Bronce de mayor coste.
-
-REGLAS DEL ESCENARIO:
-- Solo los héroes principales pueden reclamar la ficha de Grial.
-- La alianza debe visitar al menos 4 obeliscos diferentes antes de poder entrar en la zona del Grial.
-- Excavar la Ficha de Grial exige gastar 2 PM en la zona del Grial.
-- Entregar el Grial en la ciudad otorga +5 a los ingresos de Oro.
-- Evento Contrarreloj: Al comienzo de las rondas 3, 6 y 9, todos los héroes ganan 1 Ficha de Moral positiva.
-- Victoria: Entregar la ficha de Grial en una ciudad de la alianza antes del final de la ronda 12.`
-  },
-  {
-    id: "fortress-04-modo-enfrentamiento-grial",
-    title: "Fortaleza 4. Escenario Enfrentamiento: 'En Busca del Grial' (2-3 Jugadores)",
-    category: "escenario",
-    content: `ESCENARIO ENFRENTAMIENTO 'EN BUSCA DEL GRIAL':
-
-NARRATIVA: Búsqueda competitiva del grial perdido en las ciénagas antes de que caiga en manos enemigas.
-- Jugadores: 2 o 3. Duración: 10-13 rondas.
-
-RECURSOS E INGRESOS INICIALES:
-- Suministros: 16 Oro, 4 Materiales, 1 Objeto de Valor.
-- Ingresos: 10 Oro, 0 Materiales, 0 Objetos de Valor.
-- Tropas iniciales: 2 manadas de Bronce de menor coste.
-
-REGLAS ESPECIALES:
-- Requiere haber visitado al menos 2 obeliscos diferentes para poder acceder a la zona del Grial.
-- Extraer el Grial consume 2 PM. Llevarlo a la ciudad natal otorga +5 de ingresos de Oro.
-- Evento contrarreloj: Al inicio de las rondas 3 y 9, todos los héroes ganan +1 Punto de Movimiento (PM).
-- Victoria: El héroe principal debe recuperar la ficha de Grial y entregarla en la ciudad de su facción antes del fin de la ronda 10 (se extiende a la ronda 13 si un héroe posee el Grial al final de la ronda 10).`
-  },
-  {
-    id: "fortress-05-campana-mision-1",
-    title: "Fortaleza 5. Campaña 'Jugando con Fuego' - Misión 1: Cosecha de Ciudades",
+    id: "cap_exp_fortaleza_campana",
+    title: "Expansión Fortaleza: Campaña en Solitario — Jugando con Fuego",
     category: "campaña",
-    content: `CAMPAÑA DE LA FORTALEZA - ESCENARIO 1: COSECHA DE CIUDADES
+    content: `Campaña de 3 misiones para la facción Fortaleza, protagonizada por Adrienne o Wystan, contra héroes de IA de Necrópolis (referencia de preparación y condiciones; el contenido narrativo de cada misión está en el Libro de Misiones físico).
 
-HISTORIA: La bruja de fuego Adrienne regresa a Tatalia y descubre que la secta ilegal de Lord Haart está masacrando y resucitando a los aldeanos.
-- Héroe del Jugador: Adrienne o Wystan (Facción Fortaleza). Duración: 13 rondas.
-- Enemigos de la IA: "Merodeadores Nocturnos" (Necrópolis).
+MISIÓN 1 — "Cosecha de Ciudades" (13 rondas): héroe a elegir. Recursos iniciales 12 de Oro, sin edificios iniciales. Bonificador a elegir: buscar(3) en artefactos, buscar(3) en hechizos, o +4 Objetos de Valor. Héroe de IA: "Merodeadores Nocturnos" (ejército de vampiros/liches/zombis/momias). Reglas: nivel de experiencia máximo 5 (deja de ganar experiencia al superarlo); sin ingresos ni reclutamiento hasta conquistar la ciudad (dentro de las 4 primeras rondas, o se pierde); se prepara la habilidad Diplomacia como recurso especial de la misión, utilizable sin tener la vivienda correspondiente; visitar un obelisco antes de la ronda 6 no hace nada, después activa un evento de historia. Victoria/Derrota: condiciones ligadas a la historia (cumplir "Algunas cosas nunca cambian"); límite ronda 13.
 
-REGLAS Y EVENTOS DESTACADOS:
-- Límite de Experiencia: Nivel 5 máximo.
-- Al combatir contra neutrales, la primera unidad de Bronce robada se sustituye por Zombis.
-- Captura de la Ciudad de Basdar: Defendida por un ejército neutral Nivel III. Permite refundar la base de operaciones tataliana.
-- Requisitos de Victoria Doble:
-  1. Pagar tributo a los corruptos señores erathianos: 40 Oro, 20 Materiales y 10 Objetos de Valor.
-  2. Entrar en la zona con obelisco para combatir y derrotar al ejército de los Merodeadores Nocturnos (vampiros con +2 de iniciativa) y rescatar al caballero Sir Michael.`
-  },
-  {
-    id: "fortress-06-campana-mision-2",
-    title: "Fortaleza 6. Campaña 'Jugando con Fuego' - Misión 2: La Marcha de los No Muertos",
-    category: "campaña",
-    content: `CAMPAÑA DE LA FORTALEZA - ESCENARIO 2: LA MARCHA DE LOS NO MUERTOS
+MISIÓN 2 — "La Marcha de los No Muertos" (12 rondas): mismo héroe. Recursos iniciales 10 de Oro/3 Materiales/1 Objeto de Valor, +5 de producción de Oro. Edificios iniciales: vivienda de bronce, vivienda de plata. Bonificador a elegir entre 2 combinaciones de unidades iniciales adicionales. Héroe de IA: Nagash (ejército de caballeros del terror/vampiros/espectros/liches). Reglas: la dificultad de todos los combates del mapa sube +1 desde la ronda 3; no se puede entrar en la zona de obelisco hasta señalizar todas las minas y asentamientos (salvo los de las losetas cercanas de Mazmorra); el obelisco de Fortaleza teletransporta al de Mazmorra. Victoria: señalizar todos los asentamientos y minas del mapa antes del final de la ronda 12.
 
-HISTORIA: Lord Haart instala guardias de no muertos en las viviendas de Tatalia para convertir cada nuevo recluta en soldados esqueleto. Adrienne debe desmantelar su red de levantamientos.
-- Héroe del Jugador: Adrienne o Wystan. Duración: 12 rondas.
-- Enemigo de la IA: Nagash (Necrópolis).
-
-REGLAS Y EVENTOS DESTACADOS:
-- Infección Creciente: Las unidades neutrales de Bronce son sustituidas progresivamente por Esqueletos, Zombis y Espectros conforme avanzan las rondas.
-- Obelisco Teletransportador: El obelisco de la loseta cercana de Fortaleza teletransporta al héroe a la zona del obelisco de la loseta cercana de Mazmorra.
-- Combate contra Nagash: Se desencadena al intentar señalizar la segunda localización mística (Nagash cuenta con muralla y puerta en batalla).
-- Victoria: Señalizar (colocar cubo de facción) todos los asentamientos y minas del mapa y vencer al ejército de Nagash.`
-  },
-  {
-    id: "fortress-07-campana-mision-3",
-    title: "Fortaleza 7. Campaña 'Jugando con Fuego' - Misión 3: El Incendio de Tatalia",
-    category: "campaña",
-    content: `CAMPAÑA DE LA FORTALEZA - ESCENARIO 3: EL INCENDIO DE TATALIA
-
-HISTORIA: Confrontación definitiva contra Lord Haart y sus dos seguidores no muertos para purificar Tatalia con fuego primordial.
-- Héroe del Jugador: Adrienne o Wystan. Duración: 14 rondas.
-- Enemigos de la IA: Seguidor 1, Seguidor 2 y Lord Haart.
-
-REGLAS Y EVENTOS DESTACADOS:
-- Dificultad Aumentada: Todos los combates en el mapa tienen +1 a la dificultad de zona.
-- Misiones de los Tomos Elementales:
-  • Tomo de Tierra: Visitar el obelisco y sacrificar un artefacto de Defensa o una unidad de Plata para conseguir el tomo y la capacidad de transmutar artefactos en hechizos.
-  • Tomo de Fuego: Visitar el segundo obelisco y sacrificar un artefacto Reliquia o 4 Objetos de Valor.
-- Enfrentamiento Final contra Lord Haart (Utopía del Dragón): En la primera ronda del combate, Adrienne puede lanzar 1 hechizo de la Escuela de Tierra y 1 de la Escuela de Fuego con el máximo Poder Mágico (sin consumir el límite de hechizos y conservándolos en la mano).
-- Victoria: Visitar ambos obeliscos obteniendo los dos tomos y derrotar a Lord Haart y sus dos seguidores.`
+MISIÓN 3 — "El Incendio de Tatalia" (14 rondas): mismo héroe. Recursos iniciales 15 de Oro/6 Materiales/1 Objeto de Valor, +5 de producción de Oro y +1 de Materiales. Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela. Bonificador a elegir entre 2 combinaciones de unidades iniciales adicionales. Héroes de IA (Necrópolis): 2 seguidores de lord Haart y lord Haart (con dragones negros/fantasma). Reglas: la dificultad de todos los combates del mapa sube +1; los héroes enemigos se mueven antes que el jugador; derrotar el ejército de un héroe enemigo da +2 Objetos de Valor; visitar un obelisco activa un evento especial. Victoria: visitar ambos obeliscos y derrotar a los 3 ejércitos enemigos antes del final de la ronda 14.`
   },
 
   // =========================================================================
   // EXPANSIÓN INFERNO Y LIBRO DE MISIONES
   // =========================================================================
   {
-    id: "inferno-01-componentes",
-    title: "Inferno 1. Lista de Componentes de la Expansión Inferno",
-    category: "componentes",
-    content: `COMPONENTES INCLUIDOS EN LA EXPANSIÓN INFERNO:
-
-LOSETAS Y TABLEROS:
-- 7 Losetas de mapa (1 inicial, 3 lejanas, 2 cercanas, 1 central)
-- 1 Tablero de ciudad de la facción Inferno
-- 1 Libro de misiones de Inferno (16 páginas)
-- 1 Ayuda de juego
-
-MINIATURAS Y CARTAS:
-- 2 Miniaturas de héroe y 1 miniatura de ciudad (Utopía del Infierno / Ciudad de Inferno)
-- 7 Miniaturas de unidad (Familiares, Magogs, Cerberos, Demonios, Señores del Abismo, Efrits, Archidiablos)
-- 2 Cartas de héroe a doble cara
-- 7 Cartas de unidad de Inferno (a doble cara: "unas pocas" / "manada")
-- 7 Losetas de edificio de ciudad de Inferno
-- 7 Cartas de unidad neutral
-- 3 Cartas de anuncio astrológico
-- 4 Cartas de artefacto
-- 6 Cartas de hechizo
-- 5 Cartas de habilidad
-- 12 Cartas de especialidad de héroe
-- 20 Cartas de Característica Potenciada (Ataque, Defensa, Poder, Conocimiento)
-- 7 Cartas de característica (2 Ataque, 2 Defensa, 2 Poder, 1 Conocimiento)
-
-FICHAS Y RECURSOS:
-- 9 Fichas de oro (3 de "1", 3 de "3", 3 de "10")
-- 7 Fichas de materiales de construcción (3 de "1", 4 de "3")
-- 5 Fichas de objetos de valor (3 de "1", 2 de "3")
-- 4 Fichas de daño (2 de "1/2", 2 de "3/5")
-- 1 Ficha de construcción, 1 de población, 1 de libro de hechizos, 1 de moral
-- 30 Cubos acrílicos (10 negros, 20 rojos)`
-  },
-  {
-    id: "inferno-02-nuevos-elementos",
-    title: "Inferno 2. Nuevos Elementos: Cartas de Característica Potenciada, Invocar e Inmunidad de los Efrits",
+    id: "cap_exp_inferno_componentes_mecanicas",
+    title: "Expansión Inferno: Componentes y Mecánicas Nuevas (Invocar, Ciudad Aleatoria, Inmunidad de los Efrits)",
     category: "combate",
-    content: `NUEVAS MECÁNICAS E INTRODUCCIONES DE LA EXPANSIÓN INFERNO:
+    content: `Esta expansión añade la facción Inferno (demonios y criaturas del abismo), introduce la Carta de Característica Potenciada (ver capítulo 5, Construcción del Mazo), la Ciudad Aleatoria y el Eje Estelar (ver capítulo 8, Elementos del Mapa), y comparte las Escuelas de Magia con Metas Ampliadas y las reglas de Modo Alianza con Murallas.
 
-1. CARTAS DE CARACTERÍSTICA POTENCIADA (20 Cartas):
-   - Funcionan de forma similar a las cartas de característica básicas, pero otorgan un único efecto potenciado sin requerir el uso de la categoría Experto.
-   - Se obtienen al visitar la localización 'Eje Estelar', intercambiando una carta de característica de tu mano por la correspondiente carta potenciada del mismo tipo.
-   - También se pueden adquirir mediante cartas de artefacto, habilidades específicas o anuncios astrológicos.
+COMPONENTES DE LA EXPANSIÓN: 7 losetas de mapa (1 inicial, 3 lejanas, 2 cercanas, 1 central), 1 tablero de ciudad, 1 libro de misiones, 1 ayuda de juego, 2 miniaturas de héroe, 1 miniatura de ciudad, 7 miniaturas de unidad, 2 cartas de héroe a doble cara, 7 cartas de unidad, 7 losetas de edificio de ciudad, 7 cartas de unidad neutral, 3 cartas de anuncio astrológico, 4 cartas de artefacto, 6 cartas de hechizo, 5 cartas de habilidad, 12 cartas de especialidad, 7 cartas de característica (2 ataque, 2 defensa, 2 poder, 1 conocimiento), 20 cartas de característica potenciada, fichas de oro/materiales/objetos de valor/daño/construcción/población/libro de hechizos/moral, y 30 cubos acrílicos (10 negros, 20 rojos).
 
-2. MECÁNICA DE INVOCAR:
-   - Permite añadir una nueva unidad al tablero de combate durante una batalla.
-   - La unidad invocada se despliega en un espacio libre adyacente a la unidad que realiza la acción de invocar.
-   - Activación en el turno: Si la iniciativa de la unidad invocada es menor o igual a la de la unidad activa en ese momento, la unidad invocada actuará en la misma ronda. En caso contrario, se considera ya activada para esa ronda.
-   - Tras finalizar el combate, salvo indicación contraria, la unidad invocada se añade permanentemente a tu mazo de unidades.
-   - Regla de Señores del Abismo: Su habilidad de invocación solo se puede usar 1 vez por combate y no puede invocar demonios neutrales. Al reforzar la unidad de demonios invocada no se paga coste de Oro.
+INVOCAR (nuevo tipo de acción de unidad, variante de "Otra Acción"): añade una unidad al tablero de combate durante el combate. La unidad invocada se coloca en cualquier espacio vacío que elijas (no tiene por qué ser adyacente a la unidad que invoca). Si su iniciativa es menor o igual a la de la unidad que la invocó, se activa esa misma ronda; si es mayor, se trata como si ya se hubiera activado esta ronda. Tras el combate, salvo que se indique lo contrario, las unidades invocadas se añaden a tu mazo de unidades. (La habilidad de Invocar de los Señores del Abismo, expansión Inferno, solo se puede usar una vez por combate y no puede invocar demonios del mazo de unidades neutrales; si refuerzas tu unidad de demonios con este efecto, no pagues su coste de refuerzo.)
 
-3. INMUNIDAD DE LOS EFRITS A LA MAGIA DE FUEGO:
-   - Las unidades de Efrits (tanto en versión 'Manada' como unidad neutral) ignoran todo el daño provocado por cartas de hechizo pertenecientes a la Escuela de Magia de Fuego.
-   - Otros efectos secundarios de hechizos de Fuego no relacionados con el daño directo sí afectan a los Efrits.`
+INMUNIDAD DE LOS EFRITS: tanto la unidad de facción Efrits como la unidad neutral homónima ignoran el daño (no el resto de efectos) de los hechizos de la escuela de fuego, identificable por el borde de la carta.`
   },
   {
-    id: "inferno-03-lugares-mapa",
-    title: "Inferno 3. Nuevas Localizaciones: Eje Estelar y Ciudad Aleatoria",
-    category: "mapa",
-    content: `NUEVAS LOCALIZACIONES DEL MAPA (EXPANSIÓN INFERNO):
+    id: "cap_exp_inferno_escenarios",
+    title: "Expansión Inferno: Escenarios Independientes (Alianza y Enfrentamiento)",
+    category: "modos",
+    content: `Esta expansión aporta las reglas completas del Modo Alianza (idénticas a las de Murallas y Fortaleza: equipo de 2 jugadores formado al inicio de la partida, intercambio de artefactos entre héroes en zonas adyacentes, intercambio libre de recursos entre aliados, y prohibición de señalizar un lugar ya señalizado por tu compañero de equipo).
 
-1. EJE ESTELAR (Señalizable):
-   - Al visitar un Eje Estelar, puedes retirar una carta de característica de tu mano y sustituirla por una Carta de Característica Potenciada del mismo tipo.
-   - Múltiples héroes de distintas facciones pueden visitar el mismo Eje Estelar y colocar sus respectivos cubos en la zona. Cuenta como zona vacía para las facciones que ya lo hayan visitado.
+ESCENARIO DE ALIANZA — "El Cuento de las Dos Tierras" (4 jugadores, dura 11-13 rondas): recursos iniciales 14 de Oro/4 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 2 manadas de bronce del menor coste. Hay 2 áreas de inicio (una por equipo). Visitar un obelisco da ficha de moral positiva; los jugadores pueden usar su mazo de fuerza y magia al pagar Oro para defender la ciudad de su facción. Al comienzo de las rondas 4 y 9, todos lanzan y resuelven 1 dado de recursos. Victoria: la alianza controla 12 losetas al final de una ronda, o captura y mantiene una ciudad enemiga 2 rondas. Si se cumple en la ronda 10 u 11, la partida se alarga hasta la 12 o 13 respectivamente; si ambos equipos la cumplen, empate; si ninguno, pierden todos.
 
-2. CIUDAD ALEATORIA (Señalizable / Asedio):
-   - Descubrimiento: Al revelar la loseta con Ciudad Aleatoria, cada jugador tira 2 dados de recurso. El jugador con mayor cantidad de recursos resultantes elige una facción no presente en la partida para defender la plaza.
-   - Guarnición de Asedio: Está defendida por 1 manada de Bronce, 2 manadas de Plata y 2 "unas pocas" de Oro de la facción seleccionada (sin carta de Torre de Arqueros).
-   - Recompensas: El jugador que la señalice por primera vez recibe 10 de Oro inmediatamente. Además, la Ciudad Aleatoria genera +10 de ingresos pasivos de Oro al inicio de cada ronda de recursos.`
-  },
-  {
-    id: "inferno-04-modo-alianza-dos-tierras",
-    title: "Inferno 4. Escenario Alianza: 'El Cuento de las Dos Tierras' (4 Jugadores)",
-    category: "escenario",
-    content: `ESCENARIO ALIANZA 'EL CUENTO DE LAS DOS TIERRAS':
+ESCENARIO DE ENFRENTAMIENTO — "Destino Manifiesto" (3 jugadores, dura 12-14 rondas): recursos iniciales 12 de Oro/4 Materiales, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce, cofradía de magos y 1 manada de bronce del mayor coste. Mismas reglas de obelisco/moral y defensa de ciudad pagando Oro. Al comienzo de las rondas 4 y 9, cada héroe gana +1 PM. Victoria: controlar 7 losetas al final de una ronda, o capturar y mantener una ciudad enemiga 2 rondas (ganan todos los que lo cumplan, pierden los que no). Igual regla de alargar la partida si se cumple en la penúltima/última ronda.
 
-NARRATIVA: Conflicto total entre los continentes Este y Oeste de Varesburg.
-- Jugadores: 4 (2v2). Duración: 11-13 rondas.
-- Preparación del Mapa: 4 losetas iniciales (I), 8 cercanas (IV-V con 4 obeliscos), 8 lejanas (II-III).
+ESCENARIO DE ENFRENTAMIENTO — "Carpe Diem" (2 jugadores, dura 14 rondas): recursos iniciales 10 de Oro/3 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce, cofradía de magos y 1 manada de bronce del mayor coste. Incluye 1 loseta central con Ciudad Aleatoria. Un héroe en la loseta central no puede entrar en la loseta inicial enemiga. Al comienzo de las rondas 3, 6 y 9, el héroe principal del segundo jugador gana +1 PM. Victoria: conquistar la Ciudad Aleatoria de la loseta central antes del final de la ronda 14 (si nadie lo logra, empate).
 
-RECURSOS E INGRESOS INICIALES:
-- Suministros: 14 Oro, 4 Materiales, 1 Objeto de Valor.
-- Ingresos: 10 Oro, 0 Materiales, 0 Objetos de Valor.
-- Edificios e Unidades Iniciales: Vivienda de Bronce y 2 manadas de Bronce de menor coste.
-
-REGLAS ESPECIALES DEL ESCENARIO:
-- Al visitar un obelisco, el héroe gana 1 Ficha de Moral positiva.
-- Los jugadores pueden utilizar su mazo de fuerza y magia pagando oro para defender su ciudad natal.
-- Evento contrarreloj: En las rondas 4 y 9, todos los jugadores lanzan y resuelven 1 dado de recurso.
-- Victoria: La alianza debe controlar 12 losetas al final de una ronda o capturar una ciudad enemiga y mantenerla bajo control durante 2 rondas consecutivas.`
-  },
-  {
-    id: "inferno-05-modo-enfrentamiento-destino-carpe-diem",
-    title: "Inferno 5. Escenarios Enfrentamiento: 'Destino Manifiesto' (3 Jugadores) y 'Carpe Diem' (2 Jugadores)",
-    category: "escenario",
-    content: `ESCENARIOS DE MODO ENFRENTAMIENTO (EXPANSIÓN INFERNO):
-
-1. DESTINO MANIFIESTO (3 Jugadores, 12-14 Rondas):
-   - Narrativa: Dominar las tierras superpobladas para consolidar la hegemonía de tu reino.
-   - Suministros: 12 Oro, 4 Materiales, 0 Objetos de Valor.
-   - Edificios iniciales: Vivienda de Bronce y Cofradía de Magos. Unidades: 1 manada de Bronce de mayor coste.
-   - Reglas: Visitar obeliscos otorga 1 Ficha de Moral. Se puede defender la ciudad con el mazo de fuerza y magia.
-   - Evento contrarreloj: Rondas 4 y 9 (+1 Punto de Movimiento).
-   - Victoria: Controlar 7 losetas al final de una ronda o mantener capturada la ciudad enemiga durante 2 rondas consecutivas.
-
-2. CARPE DIEM (2 Jugadores, 14 Rondas):
-   - Narrativa: Lucha directa por reclamar el trono vacante conquistando la Ciudad Aleatoria central.
-   - Suministros: 10 Oro, 3 Materiales, 1 Objeto de Valor.
-   - Edificios iniciales: Vivienda de Bronce y Cofradía de Magos. Unidades: 1 manada de Bronce de mayor coste.
-   - Reglas: Un héroe en la loseta central no puede entrar directamente en la loseta inicial enemiga.
-   - Evento contrarreloj: Rondas 3, 6 y 9 (+1 Punto de Movimiento para el héroe del segundo jugador).
-   - Victoria: Conquistar la Ciudad Aleatoria situada en la loseta central antes del final de la ronda 14.`
+Regla opcional común a los 3 escenarios: para mantener el equilibrio, se recomienda retirar o ignorar las cartas que permiten atravesar bordes amarillos del mapa (p. ej. Alas de Ángel).`
   },
 
   // =========================================================================
   // LIBRO DE TORNEO (TOURNAMENT BOOK)
   // =========================================================================
   {
-    id: "torneo-01-construccion-y-puntuacion",
-    title: "Torneo 1. Modo Torneo: Construcción del Mapa de Escenario y Sistema de Puntuación (PV)",
+    id: "cap_torneo_mapa_puntuacion",
+    title: "Modo Torneo: Construcción del Mapa de Escenario y Puntuación",
     category: "modos",
-    content: `REGLAMENTO OFICIAL DEL MODO TORNEO (COMPETITIVO 1v1):
+    content: `El Modo Torneo está pensado para partidas 1 contra 1 con una preparación de mapa específica y un sistema de puntos de victoria (PV) al final del escenario.
 
-PASOS PARA CONSTRUIR EL MAPA DE ESCENARIO DE TORNEO:
-1. Determinación de Orden Inicial: Ambos jugadores lanzan 2 dados de recurso. El jugador con mayor cantidad de recursos resultantes elige quién empieza y quién es segundo. El segundo jugador recibe 1 Ficha de Moral al comienzo de la partida.
-2. Losetas Centrales: Colocar las losetas centrales asignadas al escenario en el centro del mapa. El jugador inicial las descubre y las rota libremente.
-3. Colocación de Losetas Cercanas: Comenzando por el segundo jugador, añaden por turnos sus losetas cercanas una a una.
-   a) Siempre que sea posible, las losetas cercanas deben situarse adyacentes a las centrales.
-   b) En cada escenario, al menos 2 losetas cercanas deben incluir un obelisco.
-4. Losetas Iniciales: El jugador inicial coloca su loseta inicial adyacente a al menos una cercana. El segundo jugador coloca la suya en el extremo opuesto del mapa (la posición más alejada por número de losetas).
-5. Colocación de Losetas Lejanas: Empezando por el jugador inicial, añaden por turnos sus losetas lejanas. La primera loseta lejana de cada jugador debe colocarse adyacente a su propia loseta inicial.
-6. Rotación Libre: Todas las losetas se colocan descubiertas y pueden rotarse libremente según las reglas generales de colocación.
+CONSTRUIR EL MAPA DE ESCENARIO: cada escenario de torneo indica una disposición inicial de losetas; el resto se coloca siguiendo las reglas básicas de colocación (ver capítulo 8, Elementos del Mapa), en este orden:
+1. Ambos jugadores lanzan 2 dados de recursos; quien consiga más recursos elige quién empieza y quién es segundo (el segundo jugador recibe 1 ficha de moral positiva al inicio).
+2. Se colocan las losetas centrales que indique el escenario, en el centro de la zona de juego.
+3. El jugador inicial las descubre y las rota como prefiera.
+4. Empezando por el segundo jugador, ambos añaden por turnos, una a una, sus losetas cercanas (si tienen), preferiblemente junto a una loseta central; en cada escenario, al menos 2 losetas cercanas deben incluir un obelisco.
+5. El jugador inicial coloca su loseta inicial adyacente a al menos 1 loseta cercana; el otro jugador coloca la suya en el lado opuesto del mapa (la posición más alejada por número de losetas).
+6. Empezando por el jugador inicial, ambos añaden por turnos sus losetas lejanas: la primera debe quedar adyacente a la loseta inicial propia; el resto sigue las reglas básicas de colocación. Todas las losetas se rotan libremente y se colocan boca arriba.
 
-SISTEMA OFICIAL DE PUNTUACIÓN (PUNTOS DE VICTORIA - PV):
-Al llegar al límite de rondas o al cumplirse la condición de victoria del escenario, la partida finaliza y se contabilizan los PV:
-• +4 PV por derrotar al Héroe Principal enemigo (una sola vez por escenario).
-• +2 PV por derrotar al Héroe Secundario enemigo.
-• +1 PV por cada mina o asentamiento bajo tu control.
-• +1 PV por cada edificio construido en tus ciudades.
-• +1 PV por cada 2 cartas de artefacto en tu mazo de fuerza y magia.
-• +1 PV por cada nivel de experiencia de tu Héroe Principal.
-• +X PV por objetivos adicionales especificados en el escenario.
-Ganador: El jugador con mayor puntuación acumulada de PV.`
+PUNTUACIÓN: cuando el escenario llega al límite de rondas o alguien cumple la condición de victoria, la partida acaba y ambos jugadores cuentan sus puntos de victoria (PV):
+• 4 PV por derrotar al héroe principal enemigo (una vez por escenario).
+• 2 PV por derrotar al héroe secundario enemigo.
+• 1 PV por cada mina o asentamiento controlado.
+• 1 PV por cada edificio en tu ciudad.
+• 1 PV por cada 2 cartas de artefacto en tu mazo de fuerza y magia.
+• 1 PV por cada nivel de experiencia de tu héroe principal.
+• X PV por objetivos adicionales que especifique el escenario.
+Gana el jugador con más puntos de victoria.`
   },
   {
-    id: "torneo-02-reglas-adicionales-opcionales",
-    title: "Torneo 2. Reglas Adicionales, Cartas Excluidas, Observatorio de Caoba y Reglas Opcionales",
+    id: "cap_torneo_reglas_adicionales_opcionales",
+    title: "Modo Torneo: Reglas Adicionales y Opcionales",
     category: "modos",
-    content: `REGLAS ADICIONALES Y OPCIONALES PARA ESCENARIOS DE TORNEO:
+    content: `REGLAS ADICIONALES (se aplican a todos los escenarios de torneo):
+1. Se retira de la partida la carta de habilidad Diplomacia.
+2. Se retira de la partida la carta de artefacto Reloj de la Hora Aciaga.
+3. Al comienzo de la primera ronda, cada jugador puede devolver su mano de cartas al mazo de fuerza y magia, barajarlo y robar una mano nueva.
+4. El segundo jugador empieza con 1 ficha de moral.
+5. Acción adicional con la ficha de moral: durante una acción de buscar (en habilidades, artefactos o hechizos), puedes descartar todas las cartas robadas y volver a buscar la misma cantidad.
+6. Cualquier carta de artefacto retirada de la partida se coloca junto al mazo de fuerza y magia hasta el final de la partida; ese montón cuenta para tus puntos de victoria finales.
+7. Lugar del mapa — Observatorio de Caoba, variante de torneo (Visitable): elige 1 loseta adyacente a esta que no contenga ningún héroe; puedes rotarla como quieras, siguiendo las reglas básicas de colocación de losetas.
 
-REGLAS ADICIONALES DE TORNEO (Aplica a todos los escenarios competitivos):
-1. Cartas Prohibidas/Retiradas de la partida:
-   - Carta de habilidad: Diplomacia (se elimina del mazo).
-   - Carta de artefacto: Reloj de la Hora Aciaga (se elimina del mazo).
-2. Regla de Mulligan Inicial: Al comienzo de la primera ronda, cada jugador puede devolver la mano inicial robada a su mazo de fuerza y magia, barajarlo y robar una mano completamente nueva.
-3. Bonificador del Segundo Jugador: El segundo jugador empieza con 1 Ficha de Moral activa.
-4. Acción Adicional con Ficha de Moral: Durante la acción 'Buscar', puedes gastar 1 Ficha de Moral para descartar todas las cartas recién robadas y volver a buscar el mismo número de cartas en los mazos de artefactos, hechizos o habilidades.
-5. Puntuación de Artefactos Retirados: Cualquier artefacto retirado o consumido se coloca junto a tu mazo de fuerza y magia y contabiliza para la puntuación final de PV.
-6. Nuevo Lugar del Mapa - OBSERVATORIO DE CAOBA (Visitable):
-   - Al visitarlo, elige 1 loseta adyacente que no contenga un héroe y rotala como prefieras, manteniendo siempre una orientación válida según las reglas de colocación.
-
-REGLAS OPCIONALES DE TORNEO (Ajuste de Mazos por Rango de Zona):
-1. División del Mazo de Artefactos (Menores → Mayores → Reliquias):
-   - Losetas Iniciales y Lejanas: Solo se obtienen artefactos Menores.
-   - Losetas Cercanas: Se obtienen artefactos Mayores y Reliquias.
-   - Losetas Centrales: Se pueden obtener artefactos Menores, Mayores y Reliquias.
-2. División del Mazo de Hechizos (Básicos vs Avanzados):
-   - Nota: Flecha Mágica cuenta como hechizo básico.
-   - Losetas Iniciales y Lejanas: Solo se consiguen hechizos Básicos.
-   - Losetas Cercanas y Centrales: Se pueden conseguir hechizos Básicos y Avanzados.`
+REGLAS OPCIONALES (utilizables en cualquier escenario, incluidos los básicos):
+• Divide el mazo de artefactos en 3 (menores, mayores, reliquias; orden de rareza menor→mayor→reliquia): en losetas iniciales y lejanas solo se consiguen artefactos menores; en las cercanas, mayores y reliquias; en el centro, los 3 tipos.
+• Divide el mazo de hechizos en 2 (básicos y avanzados; Flecha Mágica es un hechizo básico): en losetas iniciales y lejanas solo se consiguen hechizos básicos; en las cercanas y centrales, básicos y avanzados.`
   },
   {
-    id: "torneo-03-escenarios-oficiales",
-    title: "Torneo 3. Escenarios Oficiales de Torneo: 'Última Oportunidad', 'La Gran Carrera' y 'Herencia Inesperada'",
-    category: "escenario",
-    content: `ESCENARIOS OFICIALES DE TORNEO (1v1):
+    id: "cap_torneo_escenarios",
+    title: "Escenarios del Libro de Torneo",
+    category: "modos",
+    content: `3 escenarios oficiales para el Modo Torneo (1 contra 1), con condiciones de victoria alternativas al derrocamiento total del rival.
 
-1. ÚLTIMA OPORTUNIDAD (1v1, Duración: 8 Rondas):
-   - Narrativa: Conflicto directo decretado por el rey para establecer un señor definitivo.
-   - Preparación: 2 iniciales (I), 4 cercanas (IV-V con 2 obeliscos), 4 lejanas (II-III).
-   - Suministros: 10 Oro, 3 Materiales, 1 Objeto de Valor. Ingresos: 10 Oro, 0 Mat, 0 Obj.
-   - Edificios y Tropas: Vivienda de Bronce y 3 "unas pocas" de Bronce.
-   - Regla Especial: Visitar un obelisco otorga 1 Ficha de Moral.
-   - Condición de Victoria: Derrotar al Héroe Principal del oponente. Si la ronda 8 concluye sin victoria directa, el ganador se decide por recuento de Puntos de Victoria (PV).
+ESCENARIO 1 — "Última Oportunidad": preparación con 2 losetas iniciales, 4 cercanas (2 con obelisco) y 4 lejanas. Recursos iniciales 10 de Oro/3 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 3 unidades "unas pocas" de bronce. Al visitar un obelisco, se recibe 1 ficha de moral. Victoria: el héroe de un jugador derrota al héroe principal de su oponente (la partida acaba de inmediato y ambos cuentan sus PV). Si nadie lo consigue antes del final de la ronda 8, la partida acaba igualmente y se cuentan los PV.
 
-2. LA GRAN CARRERA (1v1, Duración: 11 Rondas):
-   - Narrativa: Competición por alcanzar la torre donde la princesa está recluida y controlar la Utopía del Dragón.
-   - Preparación: 2 iniciales (I), 4 cercanas (IV-V con 2 obeliscos), 1 central (VII-VIII con Utopía del Dragón), 4 lejanas (II-III).
-   - Suministros: 10 Oro, 3 Materiales, 1 Objeto de Valor. Ingresos: 10 Oro, 0 Mat, 0 Obj.
-   - Regla Especial: Al visitar un obelisco elige 1 de 3 opciones: (a) Ganar 1 Ficha de Moral, (b) Lanzar 1 dado de recurso, o (c) Lanzar 1 dado de tesoro.
-   - Puntuación Adicional: Controlar la Utopía del Dragón al final otorga +3 PV directos.
-   - Condición de Victoria: Capturar por primera vez la Utopía del Dragón activa 1 ronda final extra antes del recuento de PV.
+ESCENARIO 2 — "La Gran Carrera": preparación con 2 losetas iniciales, 4 cercanas (2 con obelisco), 1 central con utopía del dragón y 4 lejanas. Mismos recursos/ingresos/edificios/unidades iniciales que el escenario 1. Al visitar un obelisco, se elige entre 1 de 3 acciones: ganar ficha de moral, lanzar 1 dado de recursos, o lanzar 1 dado de tesoro. Quien controle la utopía del dragón al final de la partida gana 3 PV extra. Victoria: tras capturar la utopía del dragón por primera vez, se juega 1 ronda más y la partida acaba, contando los PV. Si nadie la captura antes del final de la ronda 11, la partida acaba igualmente.
 
-3. HERENCIA INESPERADA (1v1, Duración: 14 Rondas):
-   - Narrativa: Conflicto territorial tras heredar un castillo vecino disputado.
-   - Preparación: 2 iniciales (I), 4 cercanas (2 con obelisco, 2 sin obelisco), 2 centrales (VI-VII con zona del Grial y Utopía del Dragón), 6 lejanas (II-III).
-   - Suministros: 10 Oro, 3 Materiales, 1 Objeto de Valor. Ingresos: 10 Oro, 0 Mat, 0 Obj.
-   - Regla Especial: Al visitar un obelisco elige 1 de 2 opciones: (a) Lanzar 1 dado de recurso + 1 dado de tesoro y elegir 1 resultado, o (b) Buscar (2) en el mazo de artefactos.
-   - Acceso al Grial: Requiere visitar al menos 2 obeliscos diferentes o que el Grial haya sido tomado por un héroe. Excavar el Grial consume 2 PM.
-   - Puntuación Adicional: +3 PV por controlar la Utopía del Dragón / +3 PV por poseer la ficha del Grial.
-   - Condición de Victoria: Capturar la Utopía del Dragón y reclamar el Grial activa 1 ronda final extra antes del recuento definitivo de PV.`
+ESCENARIO 3 — "Herencia Inesperada": preparación con 2 losetas iniciales, 2 cercanas con obelisco (repartida 1 por jugador), 2 cercanas sin obelisco, 2 centrales (con grial y utopía del dragón) y 6 lejanas. Mismos recursos/ingresos/edificios/unidades iniciales. Al visitar un obelisco, se elige entre 2 acciones: lanzar 1 dado de recursos y 1 de tesoro (eligiendo un resultado e ignorando el otro), o buscar(2) en artefactos. No se puede visitar la zona del grial hasta haber visitado 2 obeliscos diferentes, o hasta que otro héroe ya haya cogido la ficha; conseguirla cuesta 2 PM en su zona; si otro héroe te derrota o te rindes teniéndola, la ficha pasa a quien te ha vencido o se queda en la zona de rendición; si un ejército neutral te derrota, la ficha se queda en esa zona. Un jugador gana 3 PV extra al final del escenario si controla la utopía del dragón y si uno de sus héroes tiene la ficha de grial. Victoria: al final de cualquier ronda en que alguien controle la utopía del dragón y tenga la ficha de grial, se juega 1 ronda más y la partida acaba, contando los PV. Si no se cumple antes del final de la ronda 14, la partida acaba igualmente.`
   },
   {
-    id: "torneo-04-creador-escenarios",
-    title: "Torneo 4. Creador de Escenarios Personalizados (Guía de 13 Pasos)",
-    category: "modos",
-    content: `GUÍA PASO A PASO PARA EL DISEÑO DE ESCENARIOS PERSONALIZADOS:
-
-PASOS DE CREACIÓN DE UN ESCENARIO:
-1. Título y Descripción: Asignar un nombre temático y contexto narrativo.
-2. Cantidad de Jugadores: Definir el número de participantes (2 a 3 en juego base, ampliable con expansiones).
-3. Duración del Escenario: Establecer el límite de rondas en el marcador (recomendado máximo 16 rondas).
-4. Diseño e Inventario del Mapa: Asignar al menos 1 loseta inicial (I), 2 cercanas (IV-V) y 2 lejanas (II-III) por jugador para asegurar acceso simétrico a los recursos.
-5. Recursos Iniciales: Definir la reserva inicial (estándar: 15 Oro, 3 Materiales, 1 Objeto de Valor).
-6. Ingresos Iniciales: Fijar los ingresos por ronda (estándar: «10» Oro, «0» Materiales, «0» Objetos de Valor).
-7. Edificios Iniciales: Determinar con qué construcciones urbanas arranca cada jugador (ej. Vivienda Nivel 1, Cofradía de Magos, Alcaldía).
-8. Unidades Iniciales: Seleccionar tropas de partida (estándar: 3 "unas pocas" de Bronce).
-9. Bonificadores Iniciales: Asignar ventajas iniciales en campañas o escenarios asimétricos.
-10. Reglas Especiales del Escenario: Especificar mecánicas únicas en obeliscos, Utopía del Dragón o zonas mágicas.
-11. Condiciones de Victoria: Determinar los criterios de triunfo (eliminación, recolección de recursos, control de zonas o recuento de PV).
-12. Marcador de Rondas: Establecer resoluciones al alcanzar el límite máximo de tiempo.
-13. Eventos Contrarreloj: Diseñar disparadores automáticos en rondas clave (ej. incremento de dificultad, eventos climáticos o refuerzos).`
+    id: "cap_torneo_creador_escenarios",
+    title: "Creador de Escenarios (Guía Oficial para Diseñar Escenarios Propios)",
+    category: "modes",
+    content: `Pasos oficiales para diseñar un escenario propio de Heroes of Might and Magic III: The Board Game:
+1. Dale un nombre y una breve descripción a tu escenario.
+2. Elige la cantidad de jugadores (máximo 3 en el juego base; las expansiones permiten más).
+3. Establece la duración: el marcador de rondas permite hasta 16, aunque no se recomienda superar esa cifra (para partidas más largas, es mejor dividir en varios escenarios como una campaña).
+4. Diseña el mapa: se recomienda, por cada jugador, al menos 1 loseta inicial, 2 cercanas y 2 lejanas; asegúrate de que todos tengan acceso equivalente a los distintos tipos de losetas para que la posición inicial no determine la partida.
+5. Elige los recursos iniciales de los jugadores (por defecto 15 de Oro/3 Materiales/1 Objeto de Valor); puedes variarlos para acelerar/ralentizar el ritmo, o hacerlos asimétricos.
+6. Establece los ingresos iniciales en el marcador (por defecto «10»/«0»/«0»); reducir las losetas lejanas y aumentar los ingresos acelera la partida.
+7. Elige los edificios iniciales disponibles para los jugadores.
+8. Elige las unidades iniciales (por defecto 3 "unas pocas" de bronce, personalizable).
+9. Define bonificadores iniciales adicionales si lo deseas (normalmente reservado a campañas).
+10. Establece las reglas del escenario: qué ocurre en lugares especiales (sobre todo obeliscos y utopía del dragón) y cualquier otro efecto que quieras modificar (consulta Opciones de Juego y las campañas oficiales para inspirarte).
+11. Establece la condición de victoria: puede ser cualquier objetivo (recolectar recursos, capturar un lugar, derrotar a un jugador); pueden existir varias condiciones distintas, incluso una por jugador.
+12. Establece qué ocurre si se alcanza el límite de rondas del marcador.
+13. Establece un evento contrarreloj: qué deben hacer los jugadores al comienzo de ciertas rondas o qué condiciones lo activan.`
   },
 
   // =========================================================================
   // EXPANSIÓN CAMPO DE BATALLA (BATTLEFIELD)
-  // =========================================================================
+  // =========================================================================  
   {
-    id: "batalla-01-componentes",
-    title: "Campo de Batalla 1. Lista de Componentes de la Expansión Campo de Batalla",
+    id: "cap_exp_campo_batalla_componentes",
+    title: "Expansión Campo de Batalla: Componentes y Preparación (Modo Aventura y Escaramuzas)",
     category: "componentes",
-    content: `COMPONENTES INCLUIDOS EN LA EXPANSIÓN CAMPO DE BATALLA (BATTLEFIELD):
+    content: `Esta expansión añade un tablero de combate con casillas (en vez de las zonas del tablero de combate 4×5 del juego base) y dos modos nuevos para partidas 1 contra 1: Aventura y Escaramuzas. Ambos usan las reglas básicas con una serie de cambios (ver capítulo "Expansión Campo de Batalla: Uso en Partidas Normales" para los cambios de combate).
 
-TABLEROS Y REGLAMENTOS:
-- 1 Tablero de Campo de Batalla (cuadrícula hexagonal ampliada)
-- 1 Libro de reglas de Campo de Batalla (16 páginas)
-- 2 Ayudas de juego de consulta rápida
+COMPONENTES: 1 tablero de campo de batalla, 10 fichas de obstáculo (doble cara: efecto, obstáculo, muralla/puerta), 2 ayudas de juego, 50 cartas de aventura, 10 cartas de moral positiva, 10 cartas de moral negativa, 1 ficha de iniciativa.
 
-OBSTÁCULOS Y FICHAS:
-- 10 Fichas de obstáculo a doble cara (Efecto, Obstáculo, Muralla/Puerta)
-- 1 Ficha de iniciativa (para desempatar turnos de unidades en combate)
+MAZO DE MORAL (sustituye a las fichas de moral del juego base en los modos Aventura y Escaramuzas, y se puede usar opcionalmente en partidas normales): baraja ambos mazos por separado y colócalos junto al marcador de rondas. Las cartas marcadas con el símbolo de campo de batalla se retiran o ignoran si se juega una partida normal.
+• Mazo de Moral Positiva: cada vez que ganes moral positiva, descarta 1 carta de moral negativa si tienes alguna; si no, busca(2) en el mazo de moral positiva, quédate 1 boca arriba junto a tu héroe y devuelve el resto al fondo del mazo. Puedes tener hasta 2 cartas de moral positiva a la vez; úsalas cuando quieras para resolver su efecto, devolviéndolas después al fondo del mazo.
+• Mazo de Moral Negativa: al recibir moral negativa, primero descarta 1 carta de moral positiva por cada carta de moral negativa que debas robar; si no tienes suficientes, roba las que falten y colócalas boca arriba junto a tu héroe (se resuelven cuando se cumpla la condición que indiquen); nunca se agotan. Tras resolverse, la carta vuelve al fondo del mazo de moral negativa.
 
-MAZOS Y CARTAS:
-- 50 Cartas de aventura (tipos Combate y Evento)
-- 10 Cartas de moral positiva
-- 10 Cartas de moral negativa`
+PREPARACIÓN DEL MODO AVENTURA (además de la preparación estándar del juego base: elegir facción, mazo inicial, recursos iniciales 15 de Oro/3 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0», retirar las cartas de habilidad Diplomacia y Logística de la partida): coloca el tablero de campo de batalla entre los jugadores; prepara los mazos de aventura, moral positiva y moral negativa; prepara las fichas de obstáculo e iniciativa; ambos jugadores lanzan 2 dados de recursos y quien consiga más empieza.
+
+PREPARACIÓN DEL MODO ESCARAMUZAS (similar, pero sin tablero de ciudad ni ingresos, ya que se salta directamente al combate): cada jugador recibe su carta de héroe, 7 cartas de unidad, 7 miniaturas, 3 cartas de especialidad y 1 carta de habilidad de héroe; se retiran Diplomacia y Logística; se prepara el mazo inicial de fuerza y magia; se coloca el tablero de campo de batalla, los mazos de moral y las fichas de obstáculo/iniciativa; ambos lanzan 2 dados de recursos y quien consiga más empieza.`
   },
   {
-    id: "batalla-02-preparacion-y-mazos-moral",
-    title: "Campo de Batalla 2. Preparación y Mazos de Moral Positiva/Negativa",
-    category: "combate",
-    content: `PREPARACIÓN DEL CAMPO DE BATALLA Y SISTEMA DE MAZOS DE MORAL:
-
-PREPARACIÓN GENERAL:
-- En los modos Aventura y Escaramuzas, se retiran de la partida las cartas de habilidad 'Diplomacia' y 'Logística'.
-- Se coloca el tablero de campo de batalla entre los jugadores, con los mazos de aventura y moral cerca del marcador de rondas.
-- Puesta a punto de recursos iniciales en Modo Aventura: 15 Oro, 3 Materiales, 1 Objeto de Valor. Ingresos: 10 Oro, 0 Materiales, 0 Objetos de Valor.
-
-MAZOS DE MORAL (POSITIVA Y NEGATIVA):
-Sustituyen a las fichas de moral en los modos Aventura y Escaramuzas (u opcionalmente en partidas normales):
-1. Mazo de Moral Positiva:
-   - Al ganar moral positiva, descarta 1 carta de moral negativa activa. Si no tienes, busca (2) en el mazo de moral positiva, pon 1 boca arriba junto a tu héroe y devuelve la otra al fondo del mazo.
-   - Máximo de 2 cartas de moral positiva activas simultáneamente. Se resuelven cuando lo desees para aplicar sus efectos y se devuelven al fondo del mazo.
-2. Mazo de Moral Negativa:
-   - Al recibir moral negativa, descarta 1 carta de moral positiva activa por cada carta negativa que debas robar. Si no posees moral positiva, roba del mazo negativo y déjala boca arriba junto a tu héroe.
-   - Se activan obligatoriamente cuando se produce la condición desencadenante indicada en la carta. Las cartas del mazo negativo nunca se agotan.`
-  },
-  {
-    id: "batalla-03-modo-aventura",
-    title: "Campo de Batalla 3. Modo Aventura: Rondas, Cartas de Aventura y Rondas Astrológicas",
+    id: "cap_exp_campo_batalla_modo_aventura",
+    title: "Expansión Campo de Batalla: Modo Aventura",
     category: "modos",
-    content: `REGLAS DEL MODO AVENTURA (SUSTITUCIÓN DE MAPA POR MAZO):
+    content: `Modo competitivo 1 contra 1 que sustituye el mapa por un mazo de 50 cartas de aventura, usadas para mejorar mazos, ganar recursos y reforzar ejércitos antes de un combate final decisivo en el tablero de campo de batalla. Permite controlar hasta 7 unidades. Se elige la duración: Pequeño (acaba en la ronda 9), Medio (ronda 13) o Grande (ronda 16).
 
-MODO AVENTURA (1v1 Competitivo):
-- Sustituye la exploración del mapa de losetas por un mazo de cartas de Aventura y permite controlar hasta 7 unidades en el ejército.
-- Duración según tamaño elegido: Pequeño (9 rondas), Medio (13 rondas) o Grande (16 rondas).
+Las cartas que dan recursos, movimiento o reducen costes (incluidas cartas de especialidad de héroe) no se añaden al mazo: se dejan junto a la carta de héroe, se usan 1 vez y se retiran de la partida. Los usos de Experto ganados durante las aventuras son de un solo uso; al empezar el combate final se rellena tu límite de Experto normal.
 
-ESTRUCTURA DE LAS RONDAS DE AVENTURA:
-1. Selección de Cartas: El jugador inicial roba 3 cartas de aventura, escoge 1 para sí, pasa las 2 restantes al enemigo (que escoge 1 y descarta la otra).
-2. Resolución o Reserva: Cada jugador resuelve su carta escogida o la guarda boca abajo en su carta de héroe (máximo 1 carta guardada por jugador).
-3. Cartas de Efecto Directo: Cartas (incluidas especialidades de héroe) que otorgan recursos, movimiento o descuentos se usan 1 vez y se retiran.
-4. Rondas Astrológicas: En lugar de revelar anuncio astrológico, los jugadores eligen entre:
-   a) Aumentar en +1 nivel cualquiera de sus marcadores de ingresos.
-   b) Lanzar 1 dado de recurso, aumentar en +1 nivel el ingreso correspondiente y cobrar la ganancia básica inmediata (5 Oro, 2 Materiales o 1 Objeto de Valor).
+ESTRUCTURA DE LAS RONDAS: el jugador inicial (rondas impares) o el segundo jugador (rondas pares) roba 3 cartas de aventura, se queda 1 y pasa las otras 2 al rival, que se queda 1 y descarta la otra. Cada jugador resuelve su carta o la guarda boca abajo sobre su carta de héroe para más adelante (solo se puede guardar 1 a la vez; se puede descartar, jugar o sustituir por otra). Si ambos resuelven su carta en la misma ronda, resuelve primero quien empezó la ronda. Tras robar (pero antes de elegir), se puede usar el efecto de movimiento de una carta ya guardada para devolver cartas al mazo de aventura, barajarlo y volver a robar la misma cantidad. En la última ronda no se roban cartas nuevas (solo se puede jugar la guardada o gastar recursos); después llega el combate final. Se pueden seguir usando las acciones de ciudad con normalidad cada ronda.
 
-RESOLUCIÓN DE CARTAS DE AVENTURA:
-• Cartas de Combate: Elige nivel de poder de combate objetivo. Selecciona 2 unidades de tu ejército, suma sus ataques y lanza 2 dados de ataque rojos.
-  - Éxito (Total >= Poder): Ganas la recompensa básica + la recompensa de batalla.
-  - Fracaso (Total < Poder): Ganas solo la recompensa básica y colocas 1 ficha de Parálisis/Aturdido en 1 de las unidades participantes.
-• Cartas de Evento: Aplica de inmediato el efecto descrito en la carta (los eventos de obelisco escalan con cada carta de obelisco jugada).
+RONDAS ASTROLÓGICAS: en vez de robar una carta de anuncio astrológico, cada jugador elige entre aumentar 1 nivel uno de sus tipos de ingresos, o lanzar 1 dado de recursos y aumentar 1 nivel el ingreso correspondiente además de ganar el ingreso básico de ese recurso (5 de Oro, 2 Materiales o 1 Objeto de Valor).
 
-CONDICIÓN DE VICTORIA EN MODO AVENTURA:
-Al finalizar la última ronda, se disputa la batalla táctica en el tablero de campo de batalla. Gana el jugador que elimine a todas las unidades desplegadas del oponente.`
+RESOLVER CARTAS DE AVENTURA: cada carta es de tipo Combate o Evento.
+• Combate: elige uno de los poderes de combate disponibles en la carta; escoge 2 de tus unidades, suma sus valores de ataque y lanza 2 dados de ataque. Si tu poder de combate total iguala o supera el de la carta, ganas la recompensa básica y la de batalla. Si es menor, ganas solo la recompensa básica y una de las unidades usadas queda con ficha de parálisis (aturdida); si usas una unidad aturdida en un futuro combate de este tipo, no sumes su ataque y retírale la ficha después.
+• Evento: resuelve el efecto indicado (los eventos de obelisco aumentan de intensidad con cada carta de obelisco jugada).
+
+CONDICIÓN DE VICTORIA: gana quien derrote todas las unidades desplegadas por el rival en el combate final del campo de batalla.`
   },
   {
-    id: "batalla-04-modo-escaramuzas",
-    title: "Campo de Batalla 4. Modo Escaramuzas: Plantillas Tácticas (Grande, Medio y Pequeño)",
+    id: "cap_exp_campo_batalla_modo_escaramuzas",
+    title: "Expansión Campo de Batalla: Modo Escaramuzas",
     category: "modos",
-    content: `REGLAS DEL MODO ESCARAMUZAS (BATALLA TÁCTICA DIRECTA):
+    content: `Modo que salta directamente a un combate 1 contra 1 usando una de 3 plantillas predeterminadas de ejército y mazo, sin fase de exploración ni mapa.
 
-En el Modo Escaramuzas se omite la fase de aventura y se entra de forma inmediata al combate utilizando plantillas predeterminadas según la escala:
+GRANDE (héroe nivel 7): añade las 3 cartas de especialidad de héroe; roba 6 cartas de habilidad al azar y quédate con 4 (retira 2); roba 4 cartas de artefacto al azar y quédate con 3 (retira 1); roba 3 cartas de hechizo si eres héroe de fuerza, o 5 si eres héroe de magia. Baraja tu mazo; coloca tus 7 cartas de unidad por la cara "manada".
 
-PLANTILLAS Y CONFIGURACIÓN DE MAZOS:
-1. Escaramuza GRANDE (Héroe Nivel 7):
-   - Incluye todas las cartas de especialidad de tu héroe.
-   - Roba 6 cartas de habilidad (retira 2), 4 cartas de artefacto (retira 1), 3 cartas de hechizo si es de Fuerza o 5 si es de Magia.
-   - Despliega tus 7 cartas de unidad por la cara 'Manada'.
+MEDIO (héroe nivel 5): añade las cartas de especialidad de nivel I y IV; roba 4 cartas de habilidad y quédate con 3 (retira 1); roba 3 cartas de artefacto y quédate con 2 (retira 1); roba 2 cartas de hechizo (fuerza) o 4 (magia). Coloca tus unidades de bronce y plata por la cara "manada".
 
-2. Escaramuza MEDIA (Héroe Nivel 5):
-   - Incluye cartas de especialidad de Nivel I y IV.
-   - Roba 4 cartas de habilidad (retira 1), 3 cartas de artefacto (retira 1), 2 cartas de hechizo si es de Fuerza o 4 si es de Magia.
-   - Despliega tus unidades de Bronce y Plata por la cara 'Manada' (el resto por 'Unas pocas').
+PEQUEÑO (héroe nivel 3): añade la carta de especialidad de nivel I; roba 3 cartas de habilidad y quédate con 2 (retira 1); roba 2 cartas de artefacto y quédate con 1 (retira 1); roba 1 carta de hechizo (fuerza) o 2 (magia). Coloca tus unidades de bronce y plata por la cara "unas pocas".
 
-3. Escaramuza PEQUEÑA (Héroe Nivel 3):
-   - Incluye carta de especialidad de Nivel I.
-   - Roba 3 cartas de habilidad (retira 1), 2 cartas de artefacto (retira 1), 1 carta de hechizo si es de Fuerza o 2 si es de Magia.
-   - Despliega tus unidades de Bronce y Plata por la cara 'Unas pocas'.
-
-CONDICIÓN DE VICTORIA EN ESCARAMUZAS:
-Derrotar a todas las unidades desplegadas por el oponente en el tablero de campo de batalla.`
+Tras preparar tu mazo y ejército según la plantilla elegida, sigue las instrucciones de "Combate en el Campo de Batalla" (colocación de obstáculos, zona de despliegue y unidades). Condición de victoria: gana quien derrote todas las unidades desplegadas por el rival.`
   },
   {
-    id: "batalla-05-tactica-y-asaltos",
-    title: "Campo de Batalla 5. Reglas de Combate en Tablero, Obstáculos, Iniciativa y Asedio",
+    id: "cap_exp_campo_batalla_partidas_normales",
+    title: "Expansión Campo de Batalla: Uso en Partidas Normales (Cambios en las Reglas de Combate)",
     category: "combate",
-    content: `REGLAS TÁCTICAS DE COMBATE EN EL TABLERO DE CAMPO DE BATALLA:
+    content: `El tablero de campo de batalla y sus fichas de obstáculo se pueden usar en cualquier partida normal (recomendado solo para combates entre jugadores; si se usa contra unidades neutrales, se ignora el límite de rondas y no se gasta PM para prolongar el combate, aunque esto alarga bastante la partida).
 
-DESPLIEGUE Y OBSTÁCULOS:
-- Robar Mano: Roba cartas de tu mazo de fuerza y magia hasta tu límite de mano.
-- Colocación de Obstáculos: Fichas a doble cara (Efecto, Obstáculo, Muralla/Puerta). Se colocan por turnos empezando por el atacante/jugador inicial. Ningún obstáculo puede ser adyacente a otro obstáculo ni a la zona de despliegue de un jugador. Las miniaturas cuentan como obstáculos.
-- Muro de Fuego: Se coloca el obstáculo de efecto Muro de Fuego en la casilla y la carta de hechizo cerca del tablero.
+COLOCAR OBSTÁCULOS: las fichas de obstáculo (doble cara: efecto, obstáculo, muralla/puerta) sustituyen a los obstáculos de combate del juego base; las miniaturas de unidad también cuentan como obstáculos. Empezando por el jugador atacante (o el inicial, en Aventura/Escaramuzas), ambos colocan por turnos sus obstáculos elegidos; ninguno puede quedar adyacente a otro obstáculo ni a una zona de despliegue. Los colocados correctamente muestran borde verde; los incorrectos, borde rojo. Para el Muro de Fuego, se coloca su ficha de efecto en una zona vacía y la carta de hechizo se deja cerca del tablero como recordatorio.
 
-MODIFICACIONES AL SISTEMA DE COMBATE:
-1. Movimiento de Unidades: La capacidad de movimiento en casillas es igual a la Iniciativa de la unidad (ej. Iniciativa 8 = movimiento de hasta 8 casillas). Al terminar su activación, se marca con un cubo de facción.
-2. Unidades a Distancia: Pueden moverse y atacar. Sufren penalización de combate (-1 al dado o tirar 2 dados y elegir el peor) si atacan a unidades adyacentes O si la unidad objetivo está a 8 o más casillas de distancia.
-3. Mazo de Fuerza y Magia: El límite de cartas avanzadas jugables se aplica por cada ronda de combate. Al final de la ronda de combate, roba 2 cartas de tu mazo y recupera 1 uso de Experto (sin sobrepasar el límite del héroe).
-4. Ficha de Iniciativa: Se entrega al jugador atacante/inicial al inicio del combate. Se usa para desempatar la activación cuando unidades de ambos bandos tienen la misma iniciativa (actúa primero quien posee la ficha). Al activarse todas las unidades de esa iniciativa, la ficha pasa al oponente.
+COLOCAR UNIDADES: empezando por el jugador atacante (o inicial), se colocan por turnos las unidades en el tablero; al colocar la última, empieza el combate.
 
-REGLAS DE ASEDIO EN EL TABLERO DE BATALLA:
-- Solo se colocan fichas de murallas y puertas en el tablero.
-- Las unidades del defensor pueden atravesar las puertas como casillas libres.
-- Para destruir murallas o puertas, una unidad atacante debe golpearlas desde una casilla adyacente.`
+CAMBIOS EN LAS REGLAS DE COMBATE:
+• Movimiento por iniciativa: cada unidad se mueve tantas casillas como su valor de Iniciativa (p. ej. iniciativa 8 = hasta 8 casillas). Marca con tu cubo de facción cuando termine su activación; se retiran al inicio de la siguiente ronda.
+• Unidades a distancia: pueden moverse o atacar; sufren penalización de combate si atacan a una unidad adyacente o a 8+ casillas de distancia.
+• Ficha de Iniciativa: al inicio del combate la recibe el jugador atacante (o el inicial, en Aventura); sirve para desempatar iniciativa (quien la tiene actúa primero en el empate); tras activarse todas las unidades con esa iniciativa, pasa al otro jugador.
+• Mazo de fuerza y magia: el límite de cartas de nivel avanzado (Experto) se aplica por ronda de combate, no al combate completo. Al final de cada ronda, cada jugador roba 2 cartas de su mazo y recupera 1 uso de Experto (sin superar su límite).
+• Asedio: solo se colocan fichas de muralla y puerta (no obstáculos ni de efecto); las unidades del defensor pueden atravesar la puerta como zona vacía; para destruir muralla/puerta, una unidad debe atacarla desde una casilla adyacente, igual que en el juego base.
+• El resto de reglas de combate del juego base se mantienen sin cambios.
+
+MAZOS DE MORAL EN PARTIDAS NORMALES (opcional): se pueden usar en vez de las fichas de moral del juego base, con la misma mecánica descrita en "Componentes y Preparación", salvo que cada vez que ganes moral positiva o negativa robas 1 carta del mazo correspondiente; si ese mazo está vacío en algún momento, se aplican las reglas básicas de fichas.`
   },
 
   // =========================================================================
   // RESPUESTA ASTROLÓGICA (FAQ Y COMENTARIOS DE LOS DISEÑADORES)
   // =========================================================================
   {
-    id: "faq-01-mecanicas-y-heroes",
-    title: "FAQ Diseñadores 1. Mecánicas de Juego Generales y Lógica de Héroes",
-    category: "general",
-    content: `RESPUESTAS Y ACLARACIONES OFICIALES DE LOS DISEÑADORES (MECÁNICAS Y HÉROES):
-
-ORDEN DE PRIORIDAD DE LAS REGLAS:
-1. Cartas en juego (Efectos activos e instantáneos)
-2. Cartas de unidad (Habilidades especiales de tropas)
-3. Tableros de ciudad
-4. Libros de misión / escenario
-5. Libro de reglas básico
-
-Aclaración: Si un efecto activo interfiere con una regla general, la carta o habilidad específica siempre tiene prioridad sobre el reglamento.
-
-MECÁNICAS DE JUEGO GENERALES:
-• Producción en Ronda 1: En la primera ronda NO se recogen recursos por la producción de la ciudad; solo se reciben los recursos iniciales indicados en la preparación del escenario.
-• Orden de Turnos en Modo Alianza: Los equipos se activan alternadamente. Dentro del turno del equipo, los miembros pueden acordar libremente cuál de ellos actúa primero en cada ronda.
-• Despliegue de Miniaturas por Defecto: Si el escenario no especifica la casilla exacta, las miniaturas se colocan en la ciudad o en la loseta inicial.
-• Obligación de Resolver Zonas: Al entrar en cualquier zona del mapa, es obligatorio resolver la localización, comenzando por el combate si hay tropas neutrales o enemigas.
-• Reutilización de Zonas Refrescadas o Mercadillos: Aunque tu héroe ya se encuentre físicamente en la zona (por un evento o mercadillo), debes gastar 1 Punto de Movimiento (PM) para volver a activar sus efectos.
-• Cofradía de Magos y Búsqueda de Hechizos: Al buscar (X), puedes elegir una carta del descarte de hechizos o robar X cartas al azar de la parte superior del mazo. Los hechizos no deseados se pueden usar para potenciar el Poder de Hechizo de otras cartas.
-• Cartas Adquiridas: Las cartas ganadas o compradas se añaden directamente a tu MANO, no al mazo de descarte.
-• Re-señalizar Asentamientos: Si señalizas un asentamiento ya controlado, puedes cambiar/elegir un bonificador de la lista, pero NO vuelves a recibir la bonificación por señalizarlo por primera vez. Un asentamiento de tu propio bando o de un aliado no se puede volver a señalizar.
-• Líneas del Mapa (Delgadas vs Gruesas): Las líneas delgadas separan zonas transitables. Las líneas gruesas bloquean por completo el camino y el movimiento a menos que una habilidad o regla de escenario permita cruzarlas.
-• Zonas de Grial Renovables: Solo existe 1 ficha física de Grial por escenario. Si hay 2 zonas con símbolo de Grial en el mapa, al recoger la ficha en una de ellas, la otra pasa a ser una zona vacía (aunque requiera resolver combate si hay guardianes).
-• Gestión de Moral Negativa: La forma más directa de eliminar la ficha de moral negativa es ganar moral positiva. En lugar de coger la ficha positiva, descarta la ficha negativa. La facción Necrópolis es completamente inmune a los efectos de moral.
-• Héroes de Fuerza vs Magia: Los héroes de magia empiezan con más hechizos pero tienen menos cartas de uso ilimitado (ataque/defensa). Además, los hechizos consumen cartas adicionales de la mano para aumentar su Poder de Hechizo (Spell Power).
-• Cartas de Moral (+1 Ataque, Defensa o Poder de Combate): Debe jugarse ANTES de que empiece el combate y se aplica únicamente al primer ataque o defensa que resuelvas (o al poder de combate en Modo Aventura).
-
-DESARROLLO Y MANEJO DE HÉROES:
-• Atributos de la Carta de Héroe: Los atributos impresos en la carta de héroe solo sirven para configurar el mazo inicial. No se aplican de forma pasiva durante la partida. La carta de Especialidad Nivel I se añade al mazo inicial, mientras que las cartas de Nivel IV y VI se añaden cuando el héroe alcanza dichos niveles.
-• Dos Héroes en la Misma Loseta: Se permite tener dos héroes propios o aliados en la misma loseta, siempre que estén en zonas distintas. Puedes atravesar una zona con otro héroe aliado, pero no puedes finalizar el movimiento en la misma zona. Si entras en una zona con un héroe enemigo, se inicia el combate.
-• Héroe Secundario y Tesoros/Experiencia: Los héroes secundarios NO pueden ganar experiencia (si obtienen tirada de experiencia, la ignoran). Cualquier carta o recurso que consigan se añade a las reservas del héroe principal.
-• Avance de Experiencia: Por cada 2 puntos de Experiencia (EXP) que gane el héroe principal, sube 1 Nivel en el marcador.
-• Especialidades Generales (Mutare, Josephine, etc.): Las cartas de especialidad que mencionan categorías amplias (ej. 'dragones') benefician a cualquier unidad que contenga esa palabra en su nombre.
-• División de Puntos de Movimiento (PM): Puedes intercalar y dividir las acciones entre el héroe principal (3 PM) y el secundario (2 PM) como prefieras, rastreando sus PM por separado.
-• Límite de Fichas de Experto: Se pueden acumular más de 3 fichas de Experto mediante efectos de artefactos u otras cartas.`
-  },
-  {
-    id: "faq-02-ciudad-y-combate",
-    title: "FAQ Diseñadores 2. Construcción de Ciudad y Reglas Tácticas de Combate",
-    category: "combate",
-    content: `RESPUESTAS Y ACLARACIONES OFICIALES DE LOS DISEÑADORES (CIUDAD Y COMBATE):
-
-GESTIÓN DE LA CIUDAD:
-• Cofradía de Magos durante Ataque Enemigo: Si te van a atacar en el turno enemigo, puedes construir la Cofradía de Magos y obtener de inmediato los hechizos que ofrece al construirse. No obstante, no puedes usar la ficha de Libro de Hechizos en ese mismo turno porque ambas cuentan como la acción de Cofradía (máximo 1/ronda).
-• Edificios de Ciudad Enemiga Capturada: Si capturas la ciudad de otro jugador, no puedes usar sus edificios para reclutar o construir a menos que el escenario indique explícitamente lo contrario.
-• Límite de Reclutamiento y Refuerzo: La ficha de población se usa 1 vez por ronda para reclutar un héroe secundario O bien reclutar/reforzar tropas. Si decides reclutar/reforzar, puedes realizar múltiples compras y refuerzos de unidades en cualquier momento del turno pagando sus costes individuales.
-• Movimiento Adicional de la Alcaldía: El +1 PM otorgado por la Alcaldía se puede asignar libremente al héroe principal o al secundario.
-
-REGLAS TÁCTICAS DE COMBATE:
-• Elección de Múltiples Objetivos: Cuando una carta o habilidad afecta a varios objetivos, el jugador que juega la carta elige a cuáles afecta para maximizar su ventaja.
-• Significado de la palabra 'Hasta': Otorga flexibilidad y permiso (no obligación) para seleccionar menos o más objetivos de los indicados.
-• Fuego Amigo en Hechizos y Habilidades: Hechizos de área (Bola de fuego, Anillo gélido, Inferno) y habilidades de aliento (Dragones, Liches) dañan a unidades aliadas si están adyacentes al objetivo. Debe usarse tácticamente.
-• Cartas Instantáneas entre Ataque y Contraataque: Se pueden jugar cartas con el símbolo de efecto instantáneo inmediatamente después del ataque y antes del contraataque.
-• Reclutamiento Pre-Combate: Puedes reclutar/reforzar unidades justo antes de entablar combate contra otro jugador si aún no has gastado tu ficha de población de la ronda.
-• Ubicación de Puertas y Murallas en Asedio: Se colocan en la fila sombreada central del tablero de combate. El jugador defensor escoge cuál de las 4 casillas de la fila sostiene la carta de Puerta.
-• Combates Rápidos de Héroes Secundarios: Se determinan usando el nivel del héroe principal (ya que el secundario no tiene nivel propio).
-• Hechizo Resurrección y Contraataque: Si una unidad pasa de la cara 'Manada' a 'Unas pocas', Resurrección se activa en el instante en que los PG llegan a 0, anulando el golpe definitivo y evitando que la unidad defensora contraataque.
-• Hechizos y Tirada de Ataque/Defensa: Los hechizos ignoran la defensa de la unidad e infligen el número exacto de fichas de daño indicado. No se tira dado de ataque para potenciar hechizos.
-• Ignorar Contraataques: La habilidad de ignorar contraataques (ej. Duendes) se aplica a TODOS los ataques que realice la unidad en esa ronda.
-• Tienda de Primeros Auxilios: Se usa 1 vez por ronda de combate y debe activarse ANTES de que la unidad reciba el ataque/contraataque para salvarla antes de que sufra el daño.
-• Daño por Hechizo y Parálisis: Sufrir al menos 1 punto de daño por cualquier fuente (incluidos hechizos) retira la ficha de Parálisis de la unidad.
-• Habilidad Especial de los Liches: Su efecto en área funciona en todos sus ataques.
-• Cartas Instantáneas en Turno Enemigo: Se pueden jugar en cualquier momento antes de la tirada de ataque enemiga.
-• Control de Unidades Neutrales: Las unidades neutrales están obligadas a atacar si hay un objetivo al alcance. No pueden defenderse ni alejarse si pueden golpear.
-• Hechizo Retirar Obstáculo: Puede eliminar puertas, murallas y muros de fuego, pero NUNCA unidades militares.
-• Muro de Fuego y Tránsito: A diferencia de otros obstáculos, el Muro de Fuego no impide que una unidad entre en la casilla (sufriendo el daño correspondiente).
-• Hechizo Terremoto: Afecta únicamente a obstáculos de muralla y puerta.
-• Concepto de 'Adyacente': En el tablero de combate estándar es ortogonal exclusivamente. En el tablero de Campo de Batalla (hexagonal) son todas las casillas que comparten un borde.
-• Hechizo Furia Asesina: Quien recibe la Furia Asesina en su unidad elige a quién atacar, pero está obligado a atacar a la unidad más cercana (incluso si es aliada).
-• Derrota contra Neutrales: Si pierdes todas tus unidades contra neutrales, el héroe se retira a una ciudad o asentamiento controlado con las tropas iniciales del escenario.
-• Empate contra Neutrales: Si se activan todas las tropas sin un vencedor y no gastas PM para prolongar, el héroe se retira a la última zona visitada.`
-  },
-  {
-    id: "faq-03-unidades-y-cartas",
-    title: "FAQ Diseñadores 3. Habilidades Únicas de Unidades y Lógica de Cartas",
-    category: "combate",
-    content: `RESPUESTAS Y ACLARACIONES OFICIALES DE LOS DISEÑADORES (UNIDADES Y CARTAS):
-
-HABILIDADES ESPECIALES DE UNIDADES:
-• Ataques Múltiples (ej. Cruzados, Hidras): Cada ataque se resuelve y tira por separado. Las cartas instantáneas solo potencian el primer ataque de la activación.
-• Tarjeta Volteada a 'Unas Pocas': Cualquier carta o modificador aplicado a la unidad permanece en su tarjeta aunque pase de 'Manada' a 'Unas pocas'.
-• Volver a Tirar Dados (Cruzados): La habilidad dice 'puedes', lo que permite aceptar un resultado de 0 o volver a tirar todos los dados de ataque que hayan sacado 0.
-• Habilidades Pasivas en el Mapa: Las habilidades pasivas impresas en las cartas de unidad solo funcionan durante la fase de combate, no en el mapa.
-• Ataque en Línea de Dragones: Atacan a 2 unidades alineadas. El dragón sufre únicamente el contraataque de la unidad directamente adyacente.
-• Hechizo Bendición vs Zombis: Bendición ignora la tirada de dado. Al no resolverse el dado, los Zombis no ganan su defensa especial.
-• Penalización de Libélulas: La penalización de ataque infligida por las libélulas afecta únicamente al contraataque inminente de la unidad alcanzada.
-• Habilidad de las Momias: Al atacar, tiran dado pero ignoran el resultado. Al defender, giran el dado del atacante para mostrar -1.
-• Ignorar Efectos Continuos (Titanes, Gárgolas): Ignoran todas las cartas que contengan el símbolo de efecto continuo (Ongoing).
-• Inmunidad de los Efrits: Son inmunes a HECHIZOS, no a cartas de especialidad de héroe.
-• Escudo de Fuego / Especialidad de Rashka: El atacante sufre el daño reflejado inmediatamente en el mismo paso del ataque (incluso si destruye al defensor).
-• Marcadores de Veneno de Wyverns: Cada ataque coloca un cubo. Al activarse la unidad afectada, retira 1 cubo y sufre 1 de daño. Curación retira todos los cubos.
-• Desplazamiento por Dragones Fantasma: El jugador que controla la unidad objetivo la desplaza 1 casilla libre no adyacente a los dragones.
-
-LÓGICA Y USO DE CARTAS:
-• Cartas de Especialidad vs Hechizos: Las cartas de especialidad imitan hechizos pero NO son hechizos. No consumen el límite de hechizos de la ronda ni se benefician de escuelas de magia.
-• Cartas de Especialidad Novedosas (Sandro / Vidomina IV): Pueden jugarse en el mapa o en combate. Sandro puede asignar 2 de estas cartas a sus esqueletos.
-• Cartas de Especialidad Nombres Específicos (ej. Caballeros del Terror): Se pueden jugar sobre cualquier unidad propia, aunque suelen rendir mejor en la unidad que lleva su nombre.
-• Nigromancia en Tropas Neutrales: La facción Necrópolis solo puede reforzar ('Manada') a sus propias unidades no muertas.
-• Descuento de Nigromancia: Aplica exclusivamente al coste en ORO (reducido a la mitad, redondeando hacia abajo).
-• Momento de Lanzar 'Pesar': Es un efecto instantáneo que debe jugarse ANTES de que la unidad enemiga comience su activación.
-• Rayo Disruptor vs Dragones Negros: No afecta a una 'Manada' de Dragones Negros (inmunes a hechizos), pero SÍ afecta a 'Unas Pocas' de Dragones Negros (que solo reducen daño).
-• Flecha Mágica (Escuelas y Rareza): Pertenece a las 4 escuelas de magia (obtiene beneficio de 1 a la vez) y cuenta como hechizo BÁSICO.
-• Cartas Permanentes Activas: Solo puedes mantener 1 carta permanente activa a la vez por héroe.
-• Coste de Descarte al Jugar Carta: Debes resolver primero el efecto de la carta antes de depositarla en el mazo de descarte.
-• Cartas de Efecto Instantáneo en el Mapa: Se pueden jugar en el mapa, pero efectos orientados a combate directo se desperdician. Son ideales para ganar recursos o movimiento.
-• Recuperar Cartas con Conocimiento: Cartas de Conocimiento solo pueden recuperar cartas de HECHIZO del descarte (nunca especialidades de héroe).`
-  },
-  {
-    id: "faq-04-solitario-y-diferencias-pc",
-    title: "FAQ Diseñadores 4. Modo Solitario (IA) y Diferencias Clave PC vs Juego de Mesa",
-    category: "general",
-    content: `RESPUESTAS Y ACLARACIONES OFICIALES DE LOS DISEÑADORES (SOLITARIO Y DIFERENCIAS PC):
-
-REGLAS DEL MODO SOLITARIO Y HÉROES DE IA:
-• Experiencia por Derrotar IA: Solo recibes la experiencia y recompensas indicadas explícitamente en el escenario. Si no se indica nada, no ganas EXP.
-• Estado Especial de la IA: Se refiere a estados de alteración negativos infligidos a las tropas del jugador (ej. Parálisis/Aturdido).
-• Cartas de Ataque/Defensa de la IA: Se colocan directamente sobre la carta de unidad del ejército de la IA afectada y actúan como un efecto continuo hasta su resolución.
-• Rendición en Campaña Solitario: No es posible rendirse contra la IA. Retirarse de un combate contra tropas neutrales cuenta como derrota en la campaña.
-
-DIFERENCIAS PRINCIPALES ENTRE EL VIDEOJUEGO DE PC Y EL JUEGO DE MESA:
-1. Reclutamiento desde Cualquier Lugar: En el juego de mesa NO es necesario regresar a la ciudad para reclutar unidades. Puedes reclutar desde cualquier zona del mapa una vez por ronda si tienes la ficha de población disponible.
-2. Cabaña de la Bruja: A diferencia de PC, cada Cabaña de la Bruja en la loseta solo se puede visitar 1 SOLA VEZ por partida por jugador.
-3. Héroes Adicionales: El número máximo de héroes adicionales reclutables es 1 (un único Héroe Secundario).
-4. Ficha de Moral Positiva: En el juego de mesa, la moral positiva no otorga un turno/activación extra completo a la unidad; otorga acciones estratégicas especiales de la lista de reglas.
-5. Habilidad Resistencia: Puede utilizarse para anular cualquier hechizo en combate, incluidos hechizos potenciadores que el enemigo lance sobre sus propias tropas.
-6. Habilidad de Enanos: Su resistencia mágica se activa con cualquier hechizo o especialidad que los tome como objetivo, incluso si lo lanza su propio jugador.
-7. Restricciones de Hechizos por Facción: No existen restricciones de facción para aprender o lanzar hechizos (salvo la habilidad exclusiva de Nigromancia).
-8. Categoría de Unidades a Distancia: Si una unidad enemiga se coloca adyacente, la unidad conserva su categoría a distancia, pero queda restringida a realizar ataques cuerpo a cuerpo adyacentes o mover.
-9. Límite de Hechizos por Ronda: El límite estándar es de 1 hechizo por ronda de combate (ampliable mediante cartas de Conocimiento Experto o habilidades).
-10. Reutilización de Cartas y Artefactos: Cada carta se usa 1 vez por ciclo. Al agotarse el mazo de fuerza y magia, se baraja el descarte formando un mazo nuevo, permitiendo volver a robar y usar las cartas.`
+    id: "cap_faq_diferencias_videojuego",
+    title: "Preguntas Frecuentes: Diferencias entre el Videojuego Original y el Juego de Mesa",
+    category: "faq",
+    content: `Bloque de la Respuesta Astrológica (Designer's Commentary) dedicado a aclarar dudas de quienes conocen el videojuego original de Heroes of Might and Magic III y esperan que el juego de mesa funcione igual en todo:
+• No hace falta volver a la ciudad para reclutar unidades: en el juego de mesa se puede reclutar desde cualquier punto del mapa, 1 vez por ronda, con la ficha de población.
+• Cada Choza de la Bruja del mapa solo se puede visitar 1 vez por partida (no un número ilimitado de veces como en el videojuego).
+• Solo se puede reclutar 1 héroe secundario adicional (no varios a la vez), y queda disponible para jugar de inmediato en cuanto lo reclutas.
+• La ficha de moral positiva NO otorga una activación extra de unidad en combate (a diferencia del videojuego); solo permite 1 de las 3 acciones del reglamento base (robar carta, cambiar cartas, o repetir 1 dado).
+• La habilidad Resistencia sí puede anular cualquier hechizo enemigo en el juego de mesa (más flexible que en el videojuego, donde solo protegía frente a ciertos hechizos).
+• Solo Nigromancia está restringida a una facción concreta (Necrópolis); el resto de hechizos y efectos son universales para cualquier facción, salvo que la propia carta indique lo contrario.
+• Por norma general se lanza 1 hechizo por ronda de combate (salvo que un efecto, como algunas cartas de conocimiento en su versión avanzada, amplíe ese límite), a diferencia de la mayor libertad de lanzamiento del videojuego.`
   },
 
   // =========================================================================
   // LIBRO DE MISIONES DEL JUEGO BASE (MISSION BOOK)
   // =========================================================================
   {
-    id: "misiones-01-preparacion-y-modos",
-    title: "Misiones 1. Preparación del Escenario y Reglas Universales de Enfrentamiento",
-    category: "preparación",
-    content: `PREPARACIÓN GENERAL DEL ESCENARIO Y MODO ENFRENTAMIENTO:
+    id: "cap_lm_base_enfrentamiento",
+    title: "Libro de Misiones Básico: Escenarios de Enfrentamiento",
+    category: "modos",
+    content: `3 escenarios competitivos que usan las condiciones de victoria universales del capítulo 12 salvo que se indique lo contrario.
 
-PASOS PARA PREPARAR UN ESCENARIO:
-1. Elección de Escenario: Seleccionar un escenario oficial del libro de misiones o diseñar uno personalizado.
-2. Selección de Facciones y Componentes: Cada jugador escoge su facción y reúne su carta de héroe, tablero de ciudad, miniaturas, cartas de unidad, especialidades y cubos de facción.
-3. Disposición del Mapa: Ensamblar las losetas de mapa indicadas en el diagrama del escenario (incluyendo reservas individuales lejanas II-III si corresponde).
-4. Recursos e Ingresos Iniciales: Ajustar los marcadores de recursos e ingresos según la ficha del escenario.
-5. Edificios y Tropas Iniciales: Colocar los edificios de inicio en el tablero de ciudad y preparar el mazo de ejército.
-6. Eventos Contrarreloj: Colocar cubos negros en las casillas correspondientes del marcador de rondas. Al alcanzar la ronda, se activa y retira el cubo.
-7. Jugador Inicial: Determinar qué jugador comienza la partida.
+ESCENARIO — "El Retiro de los Monjes" (2 jugadores, dura 7 rondas): recursos iniciales 15 de Oro/4 Materiales/2 Objetos de Valor, ingresos «15»/«2»/«1». Cada jugador empieza con vivienda de bronce, ciudadela, cofradía de magos, y 2 unidades "unas pocas" de bronce del mayor coste. Al preparar la cofradía inicial, se busca(3) una vez en vez de buscar(2) dos veces. No se puede reclutar héroe secundario. Al inicio de las rondas de recursos, se puede elegir entre +2 Materiales o +1 Objeto de Valor adicional. Al visitar un obelisco por primera vez, se lanzan 2 dados de recursos y se añaden a la reserva los del dado elegido. Al asediar la ciudad de otro jugador, el defensor no paga Oro para transportar su ejército y puede usar su mazo de fuerza y magia en ese combate. Victoria: vencer al héroe enemigo en combate. Si nadie gana antes del final de la ronda 7, ambos completan su mano y libran un combate final (atacante = mayor experiencia; en empate, quien saque más en 2 dados de recursos).
 
-CONDICIONES UNIVERSALES DE VICTORIA Y ELIMINACIÓN EN MODO ENFRENTAMIENTO (2-3 JUGADORES):
-• Pérdida por Control Territorial: Si un jugador no controla ninguna ciudad ni asentamiento durante 3 rondas consecutivas, queda inmediatamente eliminado.
-• Pérdida en Asedio: Si tu Héroe Principal es derrotado defendiendo tu ciudad asediada y no posees otras ciudades o asentamientos, quedas eliminado.
-• Victoria por Último Superviviente: Si todos los oponentes quedan eliminados, ganas la partida.
-• Victoria por Cubos de Facción (3+ Jugadores): Si consigues un cubo de facción de cada oponente activo (derrotando a sus héroes o capturando sus ciudades), ganas la partida.`
+ESCENARIO — "Un Mundo Feliz" (2-3 jugadores, dura 8-9 rondas): recursos iniciales 15 de Oro/3 Materiales/1 Objeto de Valor, ingresos «10»/«2»/«1». Cada jugador empieza con vivienda de bronce, 1 unidad "unas pocas" de bronce del mayor coste y 1 manada de bronce del menor coste. Al visitar un obelisco por primera vez, se lanzan 2 dados de recursos y se añade 1 resultado a la reserva. Derrotar a otro héroe da 20 de Oro. Victoria: al final de una ronda, si alguien controla 5+ minas, se juega 1 ronda más y gana quien tenga más minas al final (empate total = empate). Si nadie llega a 5 minas antes del final de la ronda 8, gana quien tenga más minas al final de la ronda 9.
+
+ESCENARIO — "Todos para Uno" (3 jugadores, dura 11 rondas): recursos iniciales 10 de Oro, ingresos «15»/«2»/«1». Cada jugador empieza con vivienda de bronce, alcaldía, ciudadela, 1 unidad "unas pocas" de bronce del mayor coste y 1 "unas pocas" de bronce del menor coste. El héroe principal empieza a nivel 3 (busca(2) dos veces en habilidades y añádelas a tu mazo inicial). Al visitar un obelisco, lanza 2 dados de tesoro y resuelve 1. Los jugadores pueden usar su mazo de fuerza y magia al pagar Oro para defender su ciudad. Al capturar la ciudad de un oponente: aumentas tus ingresos en la cantidad que tenía tu oponente, y recibes de inmediato 15 de Oro/2 Materiales/1 Objeto de Valor. Derrotar a un héroe principal da 10 de Oro; si tu héroe principal es derrotado, pierdes el escenario y quedas eliminado. Se ignoran los combates de la zona del grial; no se puede visitar hasta haber visitado 2 obeliscos distintos o hasta que algún héroe ya haya cogido la ficha; conseguirla cuesta 2 PM en su zona; si te derrotan o te rindes con ella, pasa a quien te venció o se queda en la zona de rendición; si te derrota un ejército neutral, se queda en esa zona. Victoria: quedar como único jugador, o depositar el grial en tu ciudad. Si al final de la ronda 11 no hay ganador ni eliminado, todos pierden; si hay 1 eliminado, los 2 restantes completan su mano y libran un combate final.`
   },
   {
-    id: "misiones-02-escenarios-enfrentamiento",
-    title: "Misiones 2. Escenarios de Enfrentamiento: 'El Retiro de los Monjes', 'Un Mundo Feliz' y 'Todos para Uno'",
-    category: "escenario",
-    content: `ESCENARIOS COMPETITIVOS DEL MODO ENFRENTAMIENTO:
+    id: "cap_lm_base_cooperativo",
+    title: "Libro de Misiones Básico: Modo Cooperativo (Reglas Generales y Escenarios)",
+    category: "modos",
+    content: `En las partidas cooperativas todos los jugadores están aliados contra el propio escenario. Al controlar unidades neutrales, se usan las reglas de Combate de la IA (capítulo 11). Al visitar un mercadillo, además de su efecto normal, se puede usar para dar recursos a cualquier jugador. Las condiciones de victoria suelen ser derrotar cierta cantidad de unidades neutrales o controlar ciertos lugares; salvo que se indique lo contrario, al cumplirse la condición la partida acaba de inmediato y todos comparten la victoria.
 
-1. EL RETIRO DE LOS MONJES (2 Jugadores, Duración: 7 Rondas):
-   - Preparación del Mapa: 2 losetas iniciales (I), 2 cercanas (IV-V), 2 lejanas (II-III).
-   - Recursos e Ingresos: Inicio con 15 Oro, 4 Materiales, 2 Objetos de Valor. Ingresos: «15» Oro, «2» Materiales, «1» Objeto de Valor.
-   - Edificios y Tropas: Vivienda Nivel 1, Ciudadela, Cofradía de Magos. Ejército: 2 "unas pocas" de Bronce con mayor coste.
-   - Reglas Especiales:
-     • Cofradía inicial permite buscar (3) una vez (en vez de buscar (2) dos veces).
-     • Se prohíbe reclutar Héroe Secundario.
-     • En rondas de recursos, elige entre +2 Materiales o +1 Objeto de Valor adicional.
-     • Al visitar un obelisco por 1ª vez, lanza 2 dados de recurso y añade 1 resultado.
-     • Al defender tu ciudad de facción, no pagas transporte para trasladar el ejército y puedes usar tu mazo de fuerza y magia.
-   - Victoria: Derrotar al héroe enemigo en combate. En la ronda 7, si no hay vencedor, combate final automático (el de mayor EXP ataca).
+ESCENARIO — "Los Campeones de Gelea" (2-3 jugadores, dura 11 rondas): recursos iniciales 15 de Oro/3 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 3 unidades "unas pocas" de bronce. Incluye 1 loseta central (VII-VIII) con la utopía del dragón. Al visitar un obelisco, lanza 2 dados de tesoro y resuelve 1. No se puede entrar en la utopía del dragón hasta que tu facción haya visitado al menos 2 obeliscos (partida a 2) o 3 (partida a 3); al visitarla por primera vez, coloca ahí tu cubo de facción. Ningún jugador puede atacar a otros héroes ni capturar una mina/asentamiento ya controlado por otro. Victoria: la utopía del dragón tiene un cubo de cada facción. Si al final de la ronda 11 falta algún cubo, todos pierden.
 
-2. UN MUNDO FELIZ (2-3 Jugadores, Duración: 8-9 Rondas):
-   - Preparación (2j): 2 iniciales, 2 cercanas, 4 lejanas (2 por jugador).
-   - Preparación (3j): 3 iniciales, 3 cercanas, 6 lejanas (2 por jugador).
-   - Recursos e Ingresos: Inicio con 15 Oro, 3 Materiales, 1 Objeto de Valor. Ingresos: «10» Oro, «2» Materiales, «1» Objeto de Valor.
-   - Edificios y Tropas: Vivienda Nivel 1. Ejército: 1 "unas pocas" de Bronce de mayor coste + 1 "Manada" de Bronce de menor coste.
-   - Reglas Especiales: Visitar obelisco otorga tirada de 2 dados de recurso (elige 1). Derrotar héroe enemigo otorga 20 Oro.
-   - Evento Contrarreloj (Rondas 3, 6, 9): Refresca (retira cubos negros) de todos los molinos y molinos de agua.
-   - Victoria: Controlar 5 o más minas al final de una ronda activa 1 ronda final. Gana quien controle más minas al terminar.
-
-3. TODOS PARA UNO (3 Jugadores, Duración: 11 Rondas):
-   - Preparación: 3 iniciales, 6 cercanas (3 con obelisco), 1 central con Grial, 6 lejanas (2 por jugador).
-   - Recursos e Ingresos: Inicio con 10 Oro, 0 Mat, 0 Obj. Ingresos: «15» Oro, «2» Mat, «1» Obj.
-   - Edificios y Tropas: Vivienda Nivel 1, Alcaldía, Ciudadela. Ejército: 1 "unas pocas" de Bronce mayor coste + 1 "unas pocas" de Plata menor coste. Héroe empieza a Nivel 3 y busca (2) dos veces en mazo de habilidades.
-   - Reglas Especiales: Obelisco lanza 2 dados de tesoro (elige 1). Capturar ciudad enemiga transfiere sus ingresos e inflige +15 Oro, +2 Mat, +1 Obj al conquistador. Derrotar héroe principal da 10 Oro. Perder héroe principal implica eliminación directa.
-   - Acceso al Grial: Requiere 2 obeliscos y 2 PM en la zona.
-   - Victoria: Depositar el Grial en tu ciudad o ser el último jugador restante en pie.`
+ESCENARIO — "Misión Maldita" (2-3 jugadores; duración según dificultad: Fácil 8, Normal 10, Difícil 12, Imposible 14 rondas): recursos iniciales 6 de Oro/2 Materiales, ingresos «10»/«2»/«1». Cada jugador empieza con vivienda de bronce, vivienda de plata, ciudadela, y 1 unidad "unas pocas" de bronce del menor coste. Incluye 1 loseta central con la utopía del dragón. Antes de empezar, se crea un mazo especial de unidades neutrales para la utopía robando al azar de los 4 mazos por categoría, en cantidad según la dificultad (p. ej. Normal: 4 bronce/5 plata/3 oro/2 azur); al entrar en la utopía se roban 5 cartas de ese mazo especial en vez de los mazos normales (las derrotadas vuelven a su mazo de origen; las supervivientes, de vuelta al mazo de la utopía, barajado). Prolongar el combate contra unidades azur en la utopía cuesta 1 PM por ronda, igual que cualquier otra categoría. Al visitar un obelisco, lanza 1 dado de tesoro y 1 de recursos, elige uno y resuélvelo. No se puede entrar en la utopía hasta visitar 2 obeliscos (partida a 2) o 3 (partida a 3). Ningún jugador puede atacar a otros héroes ni capturar una mina/asentamiento ya controlado. Victoria: derrotar todas las unidades del mazo especial de la utopía antes de que acabe el límite de rondas según la dificultad elegida.`
   },
   {
-    id: "misiones-03-modo-cooperativo",
-    title: "Misiones 3. Modo Cooperativo y Escenarios: 'Los Campeones de Gelea' y 'Misión Maldita'",
-    category: "escenario",
-    content: `REGLAS GENERALES Y ESCENARIOS COOPERATIVOS:
-
-MECÁNICAS COOPERATIVAS GENERALES (2-3 Jugadores):
-- Todos los jugadores están aliados para superar los objetivos del escenario.
-- Las unidades neutrales en combate son gestionadas mediante las reglas de la IA del modo solitario.
-- Los Mercadillos permiten transferir recursos comprados o vendidos a cualquier otro jugador aliado.
-- Prohibición de Agresión: No se permite atacar héroes aliados ni capturar minas/asentamientos de otros jugadores.
-
-1. LOS CAMPEONES DE GELEA (2-3 Jugadores, Duración: 11 Rondas):
-   - Preparación: 2-3 iniciales, 4-6 cercanas (con obeliscos), 1 central con Utopía del Dragón, 4-6 lejanas reservadas.
-   - Recursos e Ingresos: Inicio con 15 Oro, 3 Mat, 1 Obj. Ingresos: «10» Oro, «0» Mat, «0» Obj.
-   - Edificios y Tropas: Vivienda Nivel 1 y 3 "unas pocas" de Bronce.
-   - Reglas Especiales: Obelisco lanza 2 dados de tesoro (elige 1). La Utopía del Dragón exige haber visitado al menos 2 obeliscos (en 2j) o 3 obeliscos (en 3j). Al visitar la Utopía, coloca 1 cubo de tu facción.
-   - Evento Contrarreloj (Rondas 4 y 8): Refresca molinos y molinos de agua.
-   - Victoria: Colocar un cubo de facción de cada jugador en la Utopía del Dragón antes de que concluya la ronda 11.
-
-2. MISIÓN MALDITA (2-3 Jugadores, Ajustable según Dificultad):
-   - Duración por Dificultad: Fácil (8 rondas), Normal (10 rondas), Difícil (12 rondas), Imposible (14 rondas).
-   - Recursos e Ingresos: Inicio con 6 Oro, 2 Mat, 0 Obj. Ingresos: «10» Oro, «2» Mat, «1» Obj.
-   - Edificios y Tropas: Vivienda Bronce, Vivienda Plata, Ciudadela. Ejército: 1 "unas pocas" de Plata con menor coste.
-   - Mazo Personalizado de la Utopía del Dragón:
-     a) Fácil: 5 Bronce, 5 Plata, 3 Oro, 1 Azur
-     b) Normal: 4 Bronce, 5 Plata, 3 Oro, 2 Azur
-     c) Difícil: 2 Bronce, 5 Plata, 5 Oro, 3 Azur
-     d) Imposible: 1 Bronce, 5 Plata, 7 Oro, 4 Azur
-   - Reglas de Combate en Utopía: Al entrar, se roban 5 cartas del mazo de la Utopía. Las tropas derrotadas van a su mazo normal; las supervivientes se devuelven al mazo de la Utopía y se barajan. Prolongar combate contra Azur cuesta 1 PM por ronda.
-   - Victoria: Eliminar por completo a todas las unidades neutrales del mazo personalizado de la Utopía del Dragón.`
-  },
-  {
-    id: "misiones-04-modo-campana-castillo",
-    title: "Misiones 4. Modo Campaña en Solitario y Campaña del Castillo ('Larga Vida a la Reina')",
+    id: "cap_campana_castillo",
+    title: "Campaña del Castillo: Larga Vida a la Reina",
     category: "campaña",
-    content: `REGLAS DE CAMPAÑA EN SOLITARIO Y CAMPAÑA DEL CASTILLO:
+    content: `Campaña de 3 misiones para la facción Castillo, protagonizada por Catherine (y desde la 2ª misión, opcionalmente Rion), contra héroes de IA de Mazmorra (referencia de preparación y condiciones; el contenido narrativo de cada misión está en el Libro de Misiones físico). Es la única campaña incluida en el juego base, sin necesidad de expansiones.
 
-REGLAS DE CAMPAÑA EN SOLITARIO:
-- Héroes Enemigos (IA): Controlados mediante el Mazo de la IA (Magia, Fuerza, Habilidad) y Mazo de Hechizos de la IA. Las habilidades no se descartan al usarse.
-- Ingresos Estándar: «10» Oro, «0» Materiales, «0» Objetos de Valor.
-- Transición entre Escenarios: Conservas las cartas de característica, la especialidad Nivel 1 y escoges 5 cartas del mazo actual para el siguiente escenario. El héroe vuelve a Nivel 1 de experiencia.
+MISIÓN 1 — "De Regreso al Hogar" (8 rondas): héroe Catherine. Recursos iniciales 15 de Oro/1 Material, sin edificios iniciales. Bonificador a elegir: reforzar arqueros y alabarderos, +3 Objetos de Valor, o buscar(3) en artefactos. Héroe de IA: ejército de Mazmorra (nivel IV neutral + unos pocos minotauros). Reglas: tu héroe no gana experiencia a partir de nivel 4; no puedes construir ningún edificio, pero puedes reclutar unidades de bronce y plata (no oro) y reforzarlas sin tener las viviendas necesarias; cada ronda es de recursos, pero solo con ingresos de minas/asentamientos; visitar un obelisco activa un evento especial; el héroe enemigo no se mueve; no controlar una ciudad no implica perder. Victoria: alcanzar la ciudad de Mazmorra, derrotar a su facción presente y liberar a Rion. Derrota: perder un combate, o no capturar la ciudad antes del final de la ronda 8.
 
-CAMPAÑA DEL CASTILLO: 'LARGA VIDA A LA REINA' (Catherine Ironfist):
+MISIÓN 2 — "Ángeles Guardianes" (10 rondas): héroe a elegir entre Catherine o Rion. Recursos iniciales 15 de Oro/3 Materiales/1 Objeto de Valor. Edificio inicial: vivienda de bronce. Bonificador a elegir: añadir hechizo Bendición a la mano, +10 de Oro, o añadir unos pocos fanáticos. Héroes de IA (Mazmorra): primer señor y segundo señor. Reglas: tu héroe no gana experiencia a partir de nivel 5; los héroes enemigos no se mueven; no se puede construir la Gloria de Erathia salvo condición especial del escenario; se lucha primero contra el primer señor, después el segundo. Victoria: derrotar ambos ejércitos enemigos. Derrota: perder un combate, o no derrotarlos antes del final de la ronda 10.
 
-MISIÓN 1: DE REGRESO AL HOGAR (8 Rondas):
-- Preparación: Catherine (Castillo) desembarca para combatir la invasión de Mazmorra. Límite de nivel de héroe: Nivel 4.
-- Reglas Especiales: No se pueden construir edificios en la ciudad, pero se permite reclutar y reforzar unidades de Bronce y Plata libremente.
-- Evento 'Dos Caminos':
-  a) Camino Verde (Praderas): Tránsito normal, bonificadores estándar.
-  b) Camino Nevado: Terreno difícil (-1 PM de movimiento), pero duplica todos los bonificadores de zonas visitadas.
-- Cueva Subterránea de Mazmorra: Entrar requiere superar encuentros con cubos violetas (dificultad = Nivel de héroe + trogloditas). Debes ganar al menos 2 cubos violetas para acceder a la ciudad.
-- Victoria: Capturar la ciudad de Mazmorra y liberar a Rion.
-
-MISIÓN 2: ÁNGELES GUARDIANES (10 Rondas):
-- Selección de Héroe: Catherine o Rion. Límite de nivel: Nivel 5.
-- Enemigos de la IA: Primer Señor de Mazmorra y Segundo Señor de Mazmorra (esperando en zonas cercanas).
-- Asentamiento Fair Feather: Al combatir contra neutrales en esta zona, añade una manada de medusas. Al capturarlo, construyes el edificio 'Gloria de Erathia' gratis.
-- Victoria: Derrotar a ambos héroes enemigos de la IA antes de la ronda 10.
-
-MISIÓN 3: LA LIBERACIÓN DE STEADWICK (13 Rondas):
-- Preparación: Héroe empieza a Nivel 2. Producción extra +2 Materiales.
-- Eventos Contrarreloj (Invasores en Marcha): Héroes atacantes de Mazmorra aparecen en las rondas 5 y 8 y avanzan hacia tu ciudad.
-- Rescate del General Kendal (Asentamiento): Vencer combate te otorga un Héroe Secundario gratis (o 10 Oro) + Ficha de Moral (o buscar 2 artefactos).
-- Enfrentamiento Final: Atacar el castillo ocupado de Steadwick en la loseta central de Utopía del Dragón contra una guarnición masiva (Medusas, Minotauros, Mantícoras, Dragones Negros).
-- Victoria: Liberar la Utopía del Dragón de Steadwick antes del final de la ronda 13.`
-  },
-  {
-    id: "misiones-05-tablas-dificultad-y-comercio",
-    title: "Misiones 5. Tablas Oficiales de Referencia: Comercio de Recursos y Dificultad de Zonas (Niveles I-VII)",
-    category: "general",
-    content: `TABLAS DE REFERENCIA OFICIALES DEL LIBRO DE MISIONES:
-
-TABLA DE COMERCIO (Ratios en Mercadillos):
-• Vender Oro (6 Oro): Compras 1 Objeto de Valor.
-• Vender Oro (2 Oro): Compras 1 Material.
-• Vender Objeto de Valor (1 Obj): Compras 3 Oro.
-• Vender Objeto de Valor (1 Obj): Compras 2 Materiales.
-• Vender Materiales (1 Mat): Compras 1 Oro.
-• Vender Materiales (3 Mat): Compras 1 Objeto de Valor.
-
-TABLA DEL NIVEL DE DIFICULTAD DE LAS ZONAS (NIVELES I A VII):
-Determina el número y tipo de cartas de unidad neutral que se roban al iniciar combate en una zona según la dificultad elegida:
-
-1. Nivel I:
-   - Fácil / Normal: 1 Bronce
-   - Difícil: 2 Bronce
-   - Imposible: 3 Bronce
-
-2. Nivel II:
-   - Fácil / Normal: 2 Bronce
-   - Difícil: 3 Bronce
-   - Imposible: 2 Bronce, 1 Plata
-
-3. Nivel III:
-   - Fácil: 1 Bronce, 1 Plata
-   - Normal: 2 Bronce, 1 Plata
-   - Difícil: 1 Bronce, 2 Plata
-   - Imposible: 3 Plata
-
-4. Nivel IV:
-   - Fácil: 2 Bronce, 1 Plata
-   - Normal: 1 Bronce, 2 Plata
-   - Difícil: 3 Plata
-   - Imposible: 2 Plata, 1 Oro
-
-5. Nivel V:
-   - Fácil: 2 Bronce, 1 Plata, 1 Oro
-   - Normal: 1 Bronce, 2 Plata, 1 Oro
-   - Difícil: 2 Plata, 2 Oro
-   - Imposible: 1 Plata, 3 Oro
-
-6. Nivel VI:
-   - Fácil: 2 Bronce, 2 Plata, 1 Oro
-   - Normal: 1 Bronce, 2 Plata, 2 Oro
-   - Difícil: 2 Plata, 3 Oro
-   - Imposible: 1 Plata, 4 Oro
-
-7. Nivel VII (Utopía / Zonas Supremas):
-   - Fácil: 1 Azur
-   - Normal: 2 Azur
-   - Difícil: 2 Azur, 1 Oro
-   - Imposible: 2 Azur, 2 Oro
-
-BONIFICADORES INICIALES SEGÚN DIFICULTAD DE ESCENARIO:
-• Fácil: 2 tiradas de dado de recurso O 2 tiradas de dado de tesoro.
-• Normal: 2 tiradas de dado de recurso (elige 1) O Buscar (2) en mazo de tesoros.
-• Difícil: 1 tirada de dado de recurso O roba 1 artefacto Menor.
-• Imposible: Sin bonificadores iniciales (n/a).`
+MISIÓN 3 — "La Liberación de Steadwick" (13 rondas): mismo héroe elegido. Recursos iniciales 15 de Oro/3 Materiales/1 Objeto de Valor, +2 de producción de Materiales. Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela. Bonificador a elegir: añadir hechizo Bendición, +10 de Oro, o buscar(3) en artefactos. Héroes de IA (Mazmorra): héroes atacantes (2, con el mismo mazo de IA) y el ejército de Steadwick (defensor de la utopía del dragón). Reglas: tu héroe empieza a nivel 2; los obeliscos dan 2 Objetos de Valor; los héroes enemigos se mueven antes que tú (según las reglas básicas, a diferencia de misiones previas); derrotar el ejército de un héroe atacante da 2 Objetos de Valor; en la utopía del dragón luchas contra el ejército de Steadwick. Victoria: derrotar al ejército de la utopía del dragón (los héroes atacantes son opcionales). Derrota: perder el control de tu ciudad, o no ganar antes del final de la ronda 13.`
   },
 
   // =========================================================================
   // SUPLEMENTO DEL REGLAMENTO - ESCENARIO INTRODUCTORIO TUTORIAL
   // =========================================================================
   {
-    id: "suplemento-01-descripcion-y-preparacion",
-    title: "Suplemento 1. Escenario Introductorio Tutorial: Configuración y Mazos Iniciales (Necrópolis vs Mazmorra)",
-    category: "preparación",
-    content: `GUÍA Y CONFIGURACIÓN DEL ESCENARIO INTRODUCTORIO TUTORIAL:
+    id: "cap_suplemento_escenario_tutorial",
+    title: "Suplemento de Reglas: Escenario Introductorio (Tutorial)",
+    category: "setup",
+    content: `El Suplemento de Reglas es un librito tutorial pensado para empezar a jugar sin necesidad de leer antes el libro de reglas completo, guiando a los jugadores a través de una primera ronda pre-planificada. Su contenido de reglas ya está cubierto en los demás capítulos de este documento; aquí se recoge únicamente el escenario de Enfrentamiento que propone, jugable de forma independiente.
 
-DESCRIPCIÓN GENERAL DEL ESCENARIO INTRODUCTORIO:
-- Enfrentamiento 1v1 guiado diseñado para aprender las mecánicas esenciales sin leer los reglamentos completos previamente.
-- Facciones del Tutorial: Necrópolis (Gris - Tamika) vs Mazmorra (Púrpura - Mutare).
-- Objetivo de Victoria: Explorar el mapa, desarrollar héroes y ejércitos, y derrotar al Héroe Principal enemigo en combate directo.
+ESCENARIO "TUTORIAL" (2 jugadores, dura 8 rondas): enfrenta a la facción Mazmorra (héroe Mutare) contra la Necrópolis (héroe Tamika), ambas predeterminadas. Preparación del mapa: loseta inicial de Necrópolis (S1) y de Mazmorra (S2); losetas lejanas (II-III) F4, F5, F7, F8 barajadas bocabajo; losetas cercanas (IV-V) N1, N2 barajadas bocabajo. Cada jugador conserva solo la loseta de edificio con vivienda de bronce en su tablero de ciudad, con el resto aparte. Ingresos iniciales «10» de Oro/«2» Materiales/«1» Objeto de Valor. Recursos iniciales 15 de Oro/4 Materiales/1 Objeto de Valor. Cada jugador recibe sus 3 unidades de bronce (cara "unas pocas") como ejército inicial del escenario.
 
-DISPOSICIÓN DEL MAPA E INVENTARIO INICIAL:
-• Losetas de Mapa: Losetas iniciales de Necrópolis (S1) y Mazmorra (S2), losetas lejanas II-III (F4, F5, F7, F8) y cercanas IV-V (N1, N2).
-• Tablero de Combate Táctico (4×5): Situado junto al mapa principal.
-• Cubos de Facción: 20 cubos grises para Necrópolis, 20 cubos púrpuras para Mazmorra.
-• Recursos e Ingresos Iniciales:
-  - Recursos Iniciales: 15 Oro, 4 Materiales, 1 Objeto de Valor.
-  - Ingresos Iniciales en Marcador: «10» Oro, «2» Materiales, «1» Objeto de Valor.
-• Tropas Iniciales: Se asignan las 3 cartas de unidad de Bronce (lado 'Unas pocas' bocarriba) a cada jugador.
+Mazo inicial de Mutare (Mazmorra): 2 Ataque, 2 Defensa, 1 Poder, 1 Conocimiento, 1 carta de habilidad Táctica, 1 carta de especialidad "Dragones" (numeral I), 1 Flecha Mágica.
+Mazo inicial de Tamika (Necrópolis): 1 Ataque, 2 Defensa, 2 Poder, 1 Conocimiento, 1 carta de habilidad Ofensiva, 1 carta de especialidad "Caballero del Terror" (numeral I), 1 Flecha Mágica.
 
-CONFIGURACIÓN DE MAZOS DE FUERZA Y MAGIA PRECONFIGURADOS (9 CARTAS INICIALES):
-1. Tamika (Necrópolis):
-   - 1× Carta de Ataque
-   - 2× Cartas de Defensa
-   - 2× Cartas de Poder
-   - 1× Carta de Conocimiento
-   - 1× Carta de Habilidad 'Ofensiva'
-   - 1× Carta de Especialidad 'Caballero del Terror I'
-   - 1× Carta de Hechizo 'Flecha Mágica'
+Ambos jugadores lanzan 2 dados de recursos; quien saque más elige facción (en este tutorial, la Necrópolis es siempre el jugador inicial). Reglas propias del escenario: no se puede reclutar héroe secundario; no se puede construir el Ayuntamiento (por ser una partida corta, sus ingresos no compensan su coste); si el combate final entre ambos héroes no ocurre antes de que acabe el turno de la Mazmorra en la ronda 8, se libra automáticamente al final de esa ronda, con la Mazmorra como atacante. Victoria: entrar en el campo del héroe rival y derrotarlo en combate (el jugador con unidades supervivientes gana).
 
-2. Mutare (Mazmorra):
-   - 2× Cartas de Ataque
-   - 2× Cartas de Defensa
-   - 1× Carta de Poder
-   - 1× Carta de Conocimiento
-   - 1× Carta de Habilidad 'Táctica'
-   - 1× Carta de Especialidad 'Dragones I'
-   - 1× Carta de Hechizo 'Flecha Mágica'`
-  },
-  {
-    id: "suplemento-02-ejemplo-de-ronda",
-    title: "Suplemento 2. Ejemplo Guiado de la Primera Ronda Paso a Paso (Tamika y Mutare)",
-    category: "general",
-    content: `EJEMPLO GUIADO Y FLUJO DETALLADO DE LA PRIMERA RONDA DEL TUTORIAL:
-
-TURNO DEL JUGADOR INICIAL (NECRÓPOLIS - TAMIKA):
-1. Robo de Mano: Roba sus 9 cartas preconfiguradas y toma 3 fichas de Puntos de Movimiento (PM) verdes.
-2. 1er PM (Movimiento a Tesoro Nivel I):
-   - Mueve al campo de cofre del tesoro custodiado por Arpías (Nivel I).
-   - Combate Táctico: Tamika coloca sus 3 unidades en la retaguardia. Se revela la unidad neutral Arpías (Iniciativa 8, Voladora).
-   - Activación de Arpías: Vuelan y atacan a los Espectros. Tamika responde jugando 2 cartas instantáneas de Defensa +1 (defensa total sube a 2). Arpías infligen solo 1 daño gracias a la defensa.
-   - Habilidad de Arpías: Ignoran represalia y regresan volando a su casilla de origen.
-   - Activación de Espectros (Iniciativa 6): Habilidad de activación cura 1 daño recibido. Mueven hacia las Arpías. Tamika juega carta de Ataque + Especialidad 'Caballero del Terror' (+1 Ataque, total 5). Tira dado de ataque y destruye a las Arpías.
-   - Recompensas: Ganancia de +1 EXP por combate + +1 EXP por cofre del tesoro. Tamika alcanza Nivel II (Nivel Plata).
-   - Búsqueda de Habilidad (Nivel Plata): Realiza Búsqueda (2) en el mazo de habilidades y añade la nueva carta DIRECTAMENTE a su MANO.
-3. 2º PM (Movimiento a Mina Nivel I):
-   - Entra en la mina de Materiales. Combate Rápido Automático: Como el nivel del héroe (Nivel II) supera el nivel del campo (Nivel I), las tropas neutrales huyen sin combatir.
-   - Captura de Mina: Coloca un cubo gris de Necrópolis, sube el marcador de ingresos de Materiales y cobra la producción inmediata (+2 Materiales).
-4. 3er PM (Exploración de Loseta):
-   - Gasta 1 PM para voltear y rotar una loseta lejana adyacente (II-III), asegurando que los caminos queden conectados.
-
-TURNO DEL SEGUNDO JUGADOR (MAZMORRA - MUTARE):
-1. Robo de Mano: Roba sus 9 cartas y toma 3 PM.
-2. 1er PM (Recolección de Recurso): Se mueve a un campo con dado de recursos, tira dado de recurso gris, cobra el botín y coloca un cubo negro.
-3. 2º PM (Combate Nivel I con Alabarderos):
-   - Arpías de Mutare se activan y atacan a los Alabarderos. Sobreviven y realizan ataque de represalia (gastando su represalia de la ronda).
-   - Ojos Maléficos (A Distancia) se activan. Mutare lanza 'Flecha Mágica' (1 hechizo por ronda) potenciado con carta de Poder (+1 daño). Alabarderos destruidos.
-   - Recompensa: Mutare gana +1 EXP, abre el tesoro del campo y recibe botín del dado de tesoro.
-4. 3er PM: Regresa con su héroe a la ciudad.`
-  },
-  {
-    id: "suplemento-03-acciones-ciudad-y-moral",
-    title: "Suplemento 3. Desarrollo de Ciudad, Acciones de Moral y Gestión de Mano/Experiencia",
-    category: "general",
-    content: `SISTEMA DE DESARROLLO, ACCIONES DE CIUDAD, MORAL Y SUBIDAS DE NIVEL:
-
-INICIO DE NUEVA RONDA Y ALTERNANCIA DE TIPOS:
-• Rondas Astrológicas (Casillas inferiores con sextante): Revelan y resuelven la primera carta del mazo de Anuncios Astrológicos (efecto global para todos los jugadores).
-• Rondas de Recursos (Casillas superiores con cristales): Todos los jugadores cobran sus ingresos según el marcador de producción de su tablero de ciudad.
-
-ACCIONES DE CIUDAD (FICHAS ACTIVAS EN TABLERO URBANOS):
-Se realizan en cualquier momento fuera de combate (incluso en el turno del oponente como reacción):
-1. Ficha de Construcción: Permite erigir un edificio pagando su coste en recursos. Las viviendas deben construirse en orden de nivel: Bronce () → Plata () → Oro ().
-2. Ficha de Población:
-   - Reclutar: Compra unidades de la facción (lado 'Unas pocas') según viviendas construidas.
-   - Reforzar: Voltea la carta de unidad de 'Unas pocas' a 'Manada' (requiere edificio Ciudadela). Si la unidad sufre daño igual a sus PS, se degrada a 'Unas pocas' y el daño sobrante se transfiere.
-   - Contratar Héroe Secundario: Permite reclutar el segundo héroe de la facción.
-3. Ficha de Libro de Hechizos: Requiere tener la Cofradía de Magos (no se puede usar en la misma ronda en que se construyó la Cofradía) para buscar y comprar hechizos.
-
-ACCIONES DE MORAL (FICHAS Y REGLAS EXCLUSIVAS):
-• Moral Positiva (Gastable en cualquier momento):
-  a) Robar 1 carta del mazo de fuerza y magia.
-  b) Descartar N cartas de la mano y robar la misma cantidad.
-  c) Volver a tirar un dado recién lanzado.
-• Moral Negativa: Acumular una 2ª ficha de moral negativa obliga a descartar TODA la mano al final del turno.
-• IMPORTANTE: La facción Necrópolis es completamente inmune a la moral (no puede ganar ni perder moral).
-
-SUBIDAS DE NIVEL, TAMAÑO DE MANO Y EXPERTO:
-• Niveles Plata (II, III, V, VII): Búsqueda (2) en mazo de Habilidades.
-• Niveles Oro (IV, VI): Añade la carta de Especialidad del Héroe del nivel correspondiente a la mano.
-• Límite de Tamaño de Mano: Empieza en 4 cartas. Aumenta en +1 en los Niveles III, V y VII.
-• Usos de Experto (Corona): Indica cuántas veces por ronda se pueden activar los efectos inferiores mejorados (nivel Experto) de las cartas.`
-  },
-  {
-    id: "suplemento-04-combate-avanzado-y-asedio",
-    title: "Suplemento 4. Reglas Tácticas de Combate, Unidades (Terrestres/Voladoras/Distancia) y Asedio Urbano",
-    category: "combate",
-    content: `REGLAS TÁCTICAS AVANZADAS DE COMBATE Y MECÁNICAS DE ASEDIO:
-
-GESTIÓN DE COMBATE Y LÍMITES DE TIEMPO:
-• Límite de Combate contra Neutrales (Bronce, Plata, Oro): Dura máximo 1 ronda de combate. Prolongar otra ronda cuesta 1 PM adicional; de lo contrario, el héroe debe retirarse a la casilla de origen.
-• Sin Límite de Tiempo: Combates contra unidades neutrales Azur () o contra héroes enemigos.
-
-TIPOS DE UNIDADES Y RESTRICCIONES DE MOVIMIENTO/ATAQUE:
-1. Unidades Terrestres (Ground): Mueven hasta 3 casillas ortogonales y atacan objetivos adyacentes. No pueden atravesar otras unidades.
-2. Unidades Voladoras (Flying): Mueven hasta 3 casillas y atacan adyacente. Pueden volar por encima de otras cartas en el tablero.
-3. Unidades A Distancia (Ranged):
-   - Disparan a cualquier enemigo sin límite de distancia y luego se mueven 1 casilla (no pueden mover antes de atacar).
-   - Penalización de Combate (Tirar 2 dados de ataque y elegir el peor resultado): Aplica si atacan a una unidad adyacente O si atacan desde la retaguardia a una unidad enemiga en la retaguardia opuesta.
-   - Si inician turno adyacentes a un enemigo, están obligadas a atacar a la unidad adyacente.
-
-ACCIONES DE UNIDAD E ICONOGRAFÍA TÁCTICA:
-• Acción de Defensa de Unidad: Pone ficha de defensa. Si la unidad es atacada, tira dado de ataque: con +1 recibe +1 de defensa adicional. No se puede defender 2 turnos seguidos. Las tropas neutrales NUNCA defienden.
-• Parálisis / Aturdido: Anula la activación de la unidad. Sufrir cualquier daño retira la ficha de parálisis y permite actuar o contraatacar.
-
-MECÁNICAS DE ASEDIO A CIUDADES:
-• Defender sin Héroe: El jugador defensor puede pagar 8 Oro para trasladar sus tropas a defender la ciudad sin su héroe (no podrá jugar cartas de mano).
-• Componentes de Asedio (Con Ciudadela): El defensor coloca Murallas y Puerta en la fila central. La Torre de Arqueros actúa como unidad a distancia fuera del tablero.
-• Destrucción de Fortificaciones: Ataques cuerpo a cuerpo adyacentes de unidades terrestres o voladoras destruyen automáticamente murallas o puertas (sin tirada de dado ni uso de cartas).
-• Cobertura Defensiva: Tropas defensoras tras muralla o puerta reducen en -1 el daño recibido de ataques a distancia.`
-  },
-  {
-    id: "suplemento-05-catalogo-de-ubicaciones",
-    title: "Suplemento 5. Catálogo Completo de Ubicaciones del Mapa (Visitables, Revisitables y Señalizables)",
-    category: "mapa",
-    content: `CATÁLOGO OFICIAL DE CAMPOS Y UBICACIONES DEL MAPA:
-
-CLASIFICACIÓN DE CAMPOS:
-• Visitables: Se resuelven 1 vez y se marcan con un cubo negro.
-• Revisitables: Se pueden usar múltiples veces regresando al campo o gastando 1 PM si el héroe ya se encuentra en él.
-• Señalizables: Se capturan con cubos de facción para alterar marcadores de producción de recursos.
-
-LISTA Y EFECTOS DE UBICACIONES DEL MAPA:
-1. Piedra de Aprendizaje (Visitable): Otorga +1 EXP al héroe principal.
-2. Manantial Mágico (Visitable): Mira las 3 primeras cartas de tu descarte y añade 1 a tu mano. Devuelve el resto arriba.
-3. Mina (Señalizable): Coloca cubo de facción y aumenta el marcador de ingresos correspondiente en +1. Si se captura por 1ª vez, otorga producción inmediata.
-4. Jardín Místico (Visitable): Elige entre ganar +2 Oro o +1 Objeto de Valor.
-5. Observatorio de Caoba (Visitable): Voltea y descubre una loseta de mapa adyacente boca abajo.
-6. Símbolo de Recursos (Visitable): Tira 1 o 2 dados de recurso (según icono) y resuelve 1 resultado.
-7. Santuario del Encantamiento (Visitable): Realiza Búsqueda (2) en el mazo de hechizos.
-8. Templo (Visitable): Otorga 1 Ficha de Moral Positiva.
-9. Ciudad (Señalizable): Bastión urbano. Perder tu ciudad le otorga al oponente 3 rondas para ganar la partida a menos que sea reconquistada.
-10. Mercadillo (Revisitable): Permite intercambiar recursos según la Tabla de Comercio O eliminar 1 carta de la mano por +1 Oro (no se pueden eliminar especialidades, estadísticas, habilidad inicial ni Flecha Mágica).
-11. Símbolo de Tesoro (Visitable): Tira 1 o 2 dados de tesoro (según icono) y resuelve 1 resultado.
-12. Árbol del Conocimiento (Visitable): Paga 3 Objetos de Valor o 10 Oro para ganar +2 EXP.
-13. Tumba del Guerrero (Visitable): Realiza Búsqueda (2) en el mazo de artefactos dos veces. Otorga 2 fichas de moral negativa.
-14. Molino de Agua (Visitable): Otorga +3 Oro.
-15. Molino (Visitable): Otorga +1 Objeto de Valor.
-16. Santuario (Revisitable): Zona de paz. Los héroes no pueden ser atacados mientras permanezcan en este campo.
-17. Establos (Revisitable): Otorga +1 PM adicional válido únicamente durante el turno actual.`
+Lista de lugares específicos de este escenario tutorial: Piedra de Aprendizaje, Manantial Mágico, Mina, Jardín Místico, Observatorio de Caoba, Símbolo de Recursos, Santuario del Encantamiento, Templo, Ciudad, Mercadillo, Símbolo de Tesoro, Árbol del Conocimiento, Tumba del Guerrero, Molino de Agua, Molino, Santuario y Establos — todos ellos ya recogidos con su efecto completo en el capítulo 8 (Elementos del Mapa) de este documento.`
   },
 
   // =========================================================================
@@ -1822,701 +1200,197 @@ CASILLAS SEÑALIZABLES (Captura con Cubo de Facción):
 
   // =========================================================================
   // EXPANSIÓN BASTIÓN Y LIBRO DE MISIONES (STRONGHOLD)
-  // =========================================================================
+  // ========================================================================= 
   {
-    id: "bastion-01-mecanicas-y-elementos",
-    title: "Bastión 1. Nuevos Elementos y Mecánicas: Mapa Subterráneo, Pergaminos de Hechizos, Arenas Movedizas y Fichas Especiales",
-    category: "componentes",
-    content: `NUEVO CONTENIDO Y MECÁNICAS DE LA EXPANSIÓN BASTIÓN (STRONGHOLD):
+    id: "cap_exp_bastion_componentes",
+    title: "Expansión Bastión: Componentes",
+    category: "components",
+    content: `Esta expansión añade la facción Bastión (bárbaros de Krewlod), introduce las Losetas de Mapa Subterráneo y la Puerta Subterránea (ver capítulo 8), las Cartas de Pergamino de Hechizos (ver capítulo 5), y las Fichas de Tiempo/Ataque/Corrosión y el hechizo Arenas Movedizas (ver capítulo 10).
 
-LOSETAS DE MAPA SUBTERRÁNEO Y PUERTA SUBTERRÁNEA:
-• Transición de Nivel: Para moverte entre la superficie y el nivel subterráneo debes utilizar el hechizo 'Puerta Subterránea' o el hechizo 'Portal de Ciudad'. Ningún otro efecto de carta permite el desplazamiento entre ambos planos.
-• Ficha de Puerta Subterránea: Consta de dos mitades unidas: la 'Entrada' (en la loseta de origen) y la 'Salida' (en la loseta subterránea adyacente). Reemplaza la ubicación original de la casilla.
-• Moverse a través de la Puerta: Mover la figura del héroe de la entrada a la salida no consume Puntos de Movimiento (PM) adicionales (ambas casillas cubiertas por la ficha se tratan como un único espacio). Una vez revelados ambos extremos, el tránsito funciona libremente en ambos sentidos.
-
-FICHAS DE TIEMPO:
-• Utilizadas para contabilizar la duración de efectos Continuos (Ongoing).
-• Se colocan sobre la carta o ficha correspondiente. Al final de cada ronda, reduce su valor en 1. Cuando la ficha llega a 0, el efecto concluye y se descarta la carta.
-
-CARTAS DE PERGAMINO DE HECHIZOS (20 CARTAS NUEVAS):
-• Preparación: 10 cartas se barajan en el mazo de artefactos y el resto forma un mazo de reserva de pergaminos.
-• Activación: Al obtener un pergamino, colócalo junto a tu carta de héroe y roba las 2 cartas superiores del mazo de hechizos, situándolas boca abajo sobre él.
-• Reglas Especiales de Uso:
-  1. Un hechizo lanzado desde un pergamino NO cuenta para el límite de 1 hechizo por ronda (puedes lanzar 1 de la mano y 1 del pergamino en la misma ronda de combate).
-  2. Solo puede usarse en su nivel de poder más débil (no se puede potenciar con SpellPower).
-  3. No se puede descartar para potenciar otro hechizo.
-  4. Puede venderse en un Mercadillo por 2 Oro por cada carta de hechizo contenida en el pergamino.
-• Límite: Máximo 2 pergaminos de hechizos activos simultáneamente por héroe.
-
-HECHIZO ARENAS MOVEDIZAS Y FICHAS TÁCTICAS:
-• Arenas Movedizas: Según el SpellPower invertido (2, 4 o 6 fichas), se colocan fichas boca abajo en casillas vacías del tablero de combate (la mitad vacías y la otra mitad con el icono de trampa). Cuando una unidad entra en una casilla con trampa, se revela la ficha; si muestra el icono, el movimiento y la activación de la unidad terminan inmediatamente.
-• Fichas de Ataque: Otorgan +1 Ataque o +2 Ataque a la unidad. Límite de 1 ficha de ataque por unidad a la vez.
-• Fichas de Corrosión: Reducen la Defensa de la unidad afectada en 1 (hasta un mínimo de 0). Permanecen sobre la unidad hasta el final del combate.`
+COMPONENTES: 5 losetas de mapa de superficie (1 inicial, 3 lejanas, 1 cercana) + 7 losetas de mapa subterráneo (6 cercanas, 1 central), 1 tablero de ciudad, 1 libro de misiones, 1 ayuda de juego, 1 folleto de unidades, 2 miniaturas de héroe, 1 miniatura de ciudad, 7 miniaturas de unidad, 2 cartas de héroe a doble cara, 7 cartas de unidad, 7 losetas de edificio de ciudad, 8 cartas de unidad neutral, 3 cartas de anuncio astrológico, 4 cartas de artefacto, 6 cartas de hechizo, 3 cartas de habilidad, 12 cartas de especialidad, 7 cartas de característica (4 ataque, 1 defensa, 1 poder, 1 conocimiento), 20 cartas de pergamino de hechizos, fichas de oro/materiales/objetos de valor/daño/construcción/población/libro de hechizos/moral/movimiento, 12 fichas de arenas movedizas, 6 de corrosión, 8 de ataque, 11 de tiempo, 6 de puerta subterránea, y 30 cubos acrílicos (20 marrón claro, 10 negros).`
   },
   {
-    id: "bastion-02-modo-alianza-y-escenarios",
-    title: "Bastión 2. Modo Alianza (2v2) y Escenarios: 'Guerra de los Poderosos', 'Guardián de la Mazmorra' y 'Túneles de los Enanos'",
-    category: "escenario",
-    content: `MODO ALIANZA (2 CONTRA 2) Y ESCENARIOS DESTACADOS:
+    id: "cap_exp_bastion_escenarios",
+    title: "Expansión Bastión: Escenarios Independientes (Alianza, Enfrentamiento y Cooperativo)",
+    category: "modes",
+    content: `Esta expansión aporta las reglas completas del Modo Alianza (idénticas a las de Murallas/Fortaleza/Inferno) y comparte las reglas generales de Modo Cooperativo del Libro de Misiones básico (unidades neutrales controladas con las reglas de IA; el mercadillo también puede dar recursos a cualquier jugador; victoria compartida al cumplirse la condición).
 
-REGLAS GENERALES DEL MODO ALIANZA (2v2):
-• Formación de Equipos: 2 alianzas de 2 jugadores prefijadas al inicio de la partida.
-• Intercambio de Artefactos: Permitido entre aliados si sus héroes ocupan casillas adyacentes.
-• Intercambio de Recursos: Se pueden transferir recursos libremente entre aliados en cualquier momento durante el turno de cualquier miembro del equipo, sin necesidad de estar en casillas adyacentes.
-• Restricción Territorial: Prohibido señalizar o capturar lugares que ya estén señalizados por tu propio compañero de alianza.
-• Fin del Escenario: Los aliados comparten íntegramente las condiciones de victoria y derrota.
+ESCENARIO DE ALIANZA — "Guerra de los Poderosos" (4 jugadores, dura 13 rondas): recursos iniciales 14 de Oro/4 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 1 manada de bronce del menor coste. Hay 4 lugares iniciales en 2 áreas (una por equipo); la facción Mazmorra no está disponible para jugar, ya que su loseta inicial hace de loseta subterránea necesaria para la victoria, defendida por un ejército de nivel VI (ojos maléficos, medusas, minotauros, mantícoras y dragones negros). Los jugadores pueden usar su mazo de fuerza y magia al pagar Oro para defender su ciudad. Victoria: una alianza captura la ciudad de la loseta subterránea (Mazmorra) y la mantiene 1 ronda más, o captura una ciudad enemiga y la mantiene 2 rondas más. Si nadie lo logra antes del final de la ronda 13, la partida se alarga si alguien señaliza justo en la 12ª o 13ª ronda (hasta la 14ª o 15ª respectivamente); si ambos equipos cumplen la condición, empate; si ninguno, pierden todos.
 
-ESCENARIO 1: GUERRA DE LOS PODEROSOS (Modo Alianza 2v2, 13 Rondas):
-• La facción Mazmorra está bloqueada (su ciudad inicial actúa como objetivo neutral subterráneo con guarnición de nivel VI).
-• Victoria: Capturar la ciudad subterránea y mantenerla 1 ronda O capturar una ciudad enemiga y mantenerla durante las 2 rondas siguientes.
+ESCENARIO DE ENFRENTAMIENTO — "Guardián de la Mazmorra" (2 jugadores, dura 12 rondas): recursos iniciales 10 de Oro/3 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce, cofradía de magos, y 1 manada de bronce del mayor coste. Uno de los jugadores debe elegir la facción Mazmorra. Al visitar un obelisco, busca(2) en habilidades, artefactos o hechizos (a elegir). Ningún jugador puede tener héroe secundario; se puede usar el mazo de fuerza y magia al pagar Oro para defender la ciudad. Contrarreloj: en las rondas 3, 6 y 9, el héroe principal del segundo jugador gana +1 PM. Victoria: capturar la ciudad del oponente o derrotar a su héroe antes del final de la ronda 12 (si no, empate).
 
-ESCENARIO 2: GUARDIÁN DE LA MAZMORRA (Modo Enfrentamiento 1v1, 12 Rondas):
-• Obligatorio que un jugador utilice la facción Mazmorra.
-• Prohibido reclutar Héroes Secundarios.
-• Obeliscos: Visitar un obelisco permite realizar Búsqueda (2) en Habilidades, Artefactos o Hechizos.
-• Evento Contrarreloj (Rondas 3, 6, 9): El héroe del segundo jugador gana +1 PM adicional.
-• Victoria: Capturar la ciudad enemiga o derrotar al héroe del oponente.
-
-ESCENARIO 3: TÚNELES DE LOS ENANOS (Modo Cooperativo 2-3 Jugadores, 10-12 Rondas):
-• Transferencia Directa: Los jugadores pueden regalarse Materiales y Objetos de Valor libremente sin pasar por un Mercadillo (el Oro no se puede transferir).
-• Descubrimiento Central: Para revelar la loseta central, los jugadores deben abonar colectivamente 2 Oro, 2 Materiales y 2 Objetos de Valor por cada jugador en la partida.
-• Combate Nivel VII en Loseta Central: Cada jugador debe ganar su propio combate de nivel VII; tras vencer, el héroe victorioso es retirado del mapa. Se gana la partida cuando todos los aliados derrotan sus respectivos combates.`
+ESCENARIO COOPERATIVO — "Túneles de los Enanos" (2-3 jugadores; duración según dificultad: Normal 10, Difícil 11, Imposible 12 rondas): recursos iniciales 14 de Oro/4 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 3 unidades "unas pocas" de bronce. Incluye 1 loseta central subterránea. Ningún jugador puede tener héroe secundario; durante tu turno puedes dar Oro y Materiales a otro jugador sin visitar un mercadillo (los Objetos de Valor no se pueden transferir así). No hay límite de intentos contra las unidades neutrales azur de la loseta central, pero cada jugador solo puede ganar ese combate una vez (el héroe vencedor se retira del mapa de inmediato). Para descubrir la loseta central, los jugadores deben pagar entre todos 2 de Oro/2 Materiales/2 Objetos de Valor por jugador en la partida (repartibles como se quiera, incluso pagados por uno solo). Victoria: cada jugador debe ganar un combate contra unidades neutrales de nivel azur en la loseta central antes del límite de rondas según la dificultad (si no, todos pierden).`
   },
   {
-    id: "bastion-03-reglas-campana-ia-avanzada",
-    title: "Bastión 3. Reglas Avanzadas de Campaña e Inteligencia Artificial (Transición de Mazo, IA Bajo Asedio y Hechizos Complejos)",
-    category: "modos",
-    content: `MECÁNICAS AVANZADAS DE CAMPAÑA E IA EN COMBATE:
+    id: "cap_exp_bastion_campana",
+    title: "Expansión Bastión: Campaña en Solitario — Hermandad Bárbara",
+    category: "modes",
+    content: `Campaña de 3 misiones para la facción Bastión (héroes Yog, luego Crag Hack, luego cualquier héroe de Bastión), contra héroes de IA de Necrópolis y Castillo (referencia de preparación y condiciones; el contenido narrativo está en el Libro de Misiones físico).
 
-GESTIÓN DEL MAZO DE FUERZA Y MAGIA ENTRE ESCENARIOS:
-1. Retirar del mazo las cartas de característica y la especialidad Nivel 1.
-2. Eliminar el resto de cartas de especialidad del héroe.
-3. Elegir 5 cartas adicionales del mazo actual (hechizos, habilidades, artefactos) para añadirlas al mazo inicial del nuevo escenario.
-4. El héroe vuelve a Nivel 1 de experiencia. Los pergaminos de hechizos NO se conservan entre misiones.
-5. Cambio de Héroe: Si cambias de campeón en la misma facción, reemplazas las características y la especialidad Nivel 1 por las del nuevo héroe y ajustas el mazo para no superar 4 copias de Flecha Mágica ni duplicar la habilidad inicial.
+MISIÓN 1 — "Cosecha" (10 rondas): héroe Yog. Recursos iniciales 12 de Oro/0 Materiales/1 Objeto de Valor. Edificios iniciales: vivienda de bronce, ciudadela. Bonificador a elegir: añadir una manada de orcos, buscar(4) en artefactos, o +6 de Oro. Héroes de IA (Necrópolis): Isra y Aislinn (Aislinn no se mueve; Isra permanece quieta hasta descubrir la loseta adyacente a la inicial de Mazmorra, tras lo cual avanza directa hacia el jugador). Reglas: derrotar un ejército enemigo da 1 de experiencia; se retiran de los mazos neutrales todas las cartas salvo un listado reducido específico del escenario (se conservan para las siguientes misiones). Victoria: derrotar ambos ejércitos enemigos. Derrota: que tu héroe pierda cualquier combate (puedes retirarte de combates contra neutrales no azur); al final de la ronda 10 sin victoria, pierdes.
 
-IA EN COMBATE DE ASEDIO (TORRE DE ARQUEROS, MUROS Y PUERTA):
-• Torre de Arqueros de la IA: Actúa como unidad A Distancia de Nivel Plata (). Prioriza atacar a unidades A Distancia del jugador por orden de nivel (mismo nivel, luego inferior, luego superior). Si no hay arqueros, ataca unidades Terrestres/Voladoras más cercanas a la eliminación.
-• Despliegue de Fortificaciones: La IA sitúa la Puerta frente a la unidad Terrestre con mayor Iniciativa. Por defecto, las tropas de la IA no atacan los muros salvo que no puedan volar por encima o cruzar por la puerta, en cuyo caso defienden.
+MISIÓN 2 — "Recuperar a Legión" (10 rondas): héroe Crag Hack. Recursos iniciales 8 de Oro. Edificios iniciales: vivienda de bronce, alcaldía. Bonificador a elegir: unidad de campesinos, +6 de Oro, o buscar(4) en hechizos. Héroes de IA: Lord Chasim, Lord Velmor (Castillo) y Tyranell (sin miniatura, no aparece en el mapa hasta el combate). Reglas: no puedes reclutar desde tus propias viviendas; tras cada combate neutral se barajan sus cartas de vuelta al mazo; los héroes enemigos no se mueven hasta activarse por evento contrarreloj; existe un mazo especial "de Legión" (cartas de artefacto Brazos/Cabeza/Piernas/Escarcela/Torso de Legión) del que se busca(2) cada vez que derrotas un ejército de IA (ganando también 1 de experiencia y 5 de Oro), y también 1 vez por Ronda de Recursos o al visitar un obelisco por primera vez puedes robar 2 cartas del mazo de una de tus viviendas y reclutar 1 pagando su coste. Victoria: reunir 3 cartas de Legión en tu mazo. Derrota: perder cualquier combate, o no ganar antes del final de la ronda 10.
 
-TÁCTICAS DE HECHIZOS COMPLEJOS PARA LA IA:
-• Ataque en Área (Bola de Fuego, Rayo en Cadena): Apunta a agrupaciones del jugador con mayor presencia de unidades de alto nivel o más dañadas.
-• Defensa Instantánea (Piel de Piedra): Aplica la ficha de defensa a la unidad de la IA con el valor de Defensa más alto.
-• Curación (Curación): Elimina el daño acumulado de la unidad de la IA de mayor nivel que esté herida.
-• Debilitamiento (Debilidad): Lanza el hechizo sobre la unidad del jugador que vaya a realizar un contraataque contra la unidad activa de la IA.`
-  },
-  {
-    id: "bastion-04-campana-bastion-hermandad-barbara",
-    title: "Bastión 4. Campaña de Bastión 'Hermandad Bárbara' (Crag Hack y Yog vs Nigromantes de Deyja)",
-    category: "campaña",
-    content: `CAMPAÑA BASTIÓN: 'HERMANDAD BÁRBARA' (Yog y Crag Hack):
-
-MISIÓN 1: COSECHA (10 Rondas):
-- Héroe Principal: Yog (Bastión). Enfrenta a las hechiceras nigromantes Isra y Aislinn (Necrópolis).
-- Evento Cabaña del Vidente: Encuentro con la lich cautiva Xsi. Permite elegir entre sacrificar tropas para construir gratis la vivienda de nivel Oro O ganar 20 Oro + artefacto defensivo.
-- Evento 'Las Tierras Putrefactas' (Ronda 4): Obliga a descartar la mano, otorga moral negativa y limpia los cubos negros del mapa para permitir revistar ubicaciones.
-- Combate Final con Aislinn: La IA se atrincherar con una Torre de Arqueros rodeada por 3 muros en una esquina del tablero táctico.
-- Victoria: Derrotar a los ejércitos de Isra y Aislinn.
-
-MISIÓN 2: RECUPERAR A LEGIÓN (10 Rondas):
-- Héroe Principal: Crag Hack (Bastión).
-- Restricción de Reclutamiento: Prohibido reclutar tropas de las viviendas de la ciudad de Bastión.
-- Reclutamiento Neutral Especial: En rondas de recursos o al visitar obeliscos, roba 2 cartas del mazo de tropas neutrales de la vivienda correspondiente para reclutar 1 pagando su coste.
-- Mazo de Legión: Formado por 5 artefactos (Brazos, Cabeza, Piernas, Escarcela y Torso de Legión). Vencer ejércitos de la IA te otorga Búsqueda (2) en el mazo de Legión + 1 EXP + 5 Oro.
-- Victoria: Reunir 3 cartas de 'Legión' en tu mazo.
-
-MISIÓN 3: SECRETOS REVELADOS (13 Rondas):
-- Enemigos de la IA: Jefes Orcos, Atacantes Nigromantes, Nimbus y Moandor.
-- Bloqueo Subterráneo: Entrada a la puerta subterránea prohibida hasta señalizar la zona central del mapa.
-- Oleadas Contrarreloj (Rondas 1, 4 y 8): Invasiones de atacantes nigromantes en la loseta inicial de Mazmorra.
-- Combate Final con Moandor: Activa la habilidad 'Tiro con arco' para potenciar a sus arqueros no-muertos.
-- Victoria: Vencer en todos los combates contra ejércitos enemigos.`
-  },
-  {
-    id: "bastion-05-nuevas-ubicaciones-bastion",
-    title: "Bastión 5. Nuevas Ubicaciones del Mapa de la Expansión Bastión (Reservas del Cíclope, Puerta Subterránea, Pergamino de Hechizos)",
-    category: "mapa",
-    content: `CATÁLOGO DE NUEVAS UBICACIONES DEL MAPA (EXPANSIÓN BASTIÓN):
-
-1. Reservas del Cíclope (Visitable):
-   - Al preparar el encuentro neutral, en lugar de robar 1 unidad Azur (), busca 2 cartas de Cíclopes (Plata ) en la pila de descartes o mazo neutral de nivel Plata y agrégalas al ejército enemigo.
-   - Recompensa por Victoria: Tira y resuelve 4 dados de recursos (ReDie).
-
-2. Puerta Subterránea (Revisitable):
-   - Conecta la superficie con el nivel subterráneo. Moverse entre la entrada y la salida se realiza en un solo paso de movimiento dentro del mismo turno.
-
-3. Pergamino de Hechizos (Visitable):
-   - Al visitar la casilla, roba 1 carta de Pergamino de Hechizos, colócala junto a tu carta de héroe y roba las 2 cartas superiores del mazo de hechizos para situarlas boca abajo sobre ella.`
+MISIÓN 3 — "Secretos Revelados" (13 rondas): héroe a elegir entre cualquiera de Bastión. Recursos iniciales 10 de Oro/3 Materiales/1 Objeto de Valor. Edificios iniciales: vivienda de bronce, ciudadela, alcaldía. Bonificador a elegir: +10 de Oro, +3 Objetos de Valor, o buscar entre artefactos de bonificación de hechizo. Héroes de IA (Necrópolis): jefes orcos, atacantes nigromantes (aparecen por evento contrarreloj), Nimbus y Moandor (estos 2 últimos sin miniatura). Reglas: tras cada combate neutral se barajan sus cartas de vuelta al mazo; derrotar un ejército de IA da 1 de experiencia; no se puede cruzar la puerta subterránea antes de señalizar la zona central. Victoria: ganar todos los combates contra los ejércitos enemigos. Derrota: perder cualquier combate, o no ganar antes del final de la ronda 13.`
   },
 
   // =========================================================================
   // EXPANSIÓN CONFLUJO Y LIBRO DE MISIONES (CONFLUX)
   // =========================================================================
   {
-    id: "conflujo-01-mecanicas-y-elementos",
-    title: "Conflujo 1. Nuevas Mecánicas y Elementos: Losetas Elementales, Monolitos, Invocación, Daño Elemental y Cartas Permanentes",
-    category: "componentes",
-    content: `NUEVO CONTENIDO Y MECÁNICAS DE LA EXPANSIÓN CONFLUJO (CONFLUX):
+    id: "cap_exp_confluencia_componentes",
+    title: "Expansión Confluencia: Componentes",
+    category: "components",
+    content: `Esta expansión añade la facción Confluencia (elementales de los 4 planos), introduce las Losetas de Mapa Elementales y las Fichas de Monolito (ver capítulo 8), la mecánica de Invocación con sus cartas y hechizos propios, el Daño Elemental y las Fichas de Muro de Fuego (ver capítulo 10), y comparte las Cartas Permanentes con Murallas y las Escuelas de Magia con Metas Ampliadas.
 
-LOSETAS DE MAPA ELEMENTALES:
-• Cada loseta elemental está vinculada a una Escuela de Magia (Fuego, Agua, Aire o Tierra).
-• Bonificador de Escuela: Todos los hechizos pertenecientes a esa Escuela de Magia que lance un héroe en dicha loseta ven aumentado su SpellPower (Poder de Hechizo) en +1.
-
-FICHAS DE MONOLITO (TELETRANSPORTE MAPADO):
-• Monolito Unidireccional: Permite viajar únicamente desde el monolito de 'Entrada' hacia el monolito de 'Salida' correspondiente. Prohibido usar la salida para regresar.
-• Monolito Bidireccional: Permite el tránsito libre en ambos sentidos entre las dos fichas emparejadas.
-• Regla de Reemplazo: La ficha de monolito sustituye la ubicación original de la casilla (no se puede colocar sobre casillas bloqueadas u objetivos del escenario).
-
-MECÁNICA DE INVOCACIÓN (INVOCAR / HECHIZOS DE INVOCACIÓN):
-• Mazo de Unidades Invocadas: Mazo especial de 8 cartas de Elementales (Fuego, Agua, Aire, Tierra).
-• Proceso de Invocación: El hechizo o habilidad permite colocar una unidad invocada en una casilla vacía elegida del tablero táctico.
-• Potenciación por SpellPower: Según el SpellPower invertido, invocas una unidad por su lado no reforzado ('Unas pocas') o reforzado ('Manada').
-• Activación en Combate: La unidad invocada se activa en la misma ronda si su Iniciativa es menor o igual que la de la unidad activa en ese momento. De lo contrario, se considera ya activada esa ronda.
-• Descarte al Finalizar: La unidad invocada y su Ficha de Invocación se descartan al terminar el combate (no se añade al mazo permanente salvo regla explícita).
-
-DAÑO ELEMENTAL Y REGLAS DE MAGIA:
-• Daño Elemental: Se resuelve mediante un ataque normal de la unidad, pero el daño resultante funciona como daño por hechizo e IGNOA la Defensa (Defense) del objetivo.
-• Inmunidades Elementales: Ciertas unidades ignoran el daño o los efectos de hechizos o escuelas de magia específicas.
-• Cartas Permanentes (Perm): Otorgan bonificadores o condiciones continuas. Se colocan frente al jugador hasta descartarse o ser reemplazadas. Un héroe solo puede tener 1 carta Permanente activa a la vez.`
+COMPONENTES: 12 losetas de mapa (1 inicial, 3 lejanas, 8 elementales cercanas), 1 tablero de ciudad, 1 libro de misiones, 1 ayuda de juego, 1 folleto de unidades, 2 miniaturas de héroe, 1 miniatura de ciudad, 7 miniaturas de unidad, 2 cartas de héroe a doble cara, 7 cartas de unidad, 7 losetas de edificio de ciudad, 8 cartas de unidad neutral, 8 cartas de unidades invocadas, 3 cartas de anuncio astrológico, 8 cartas de artefacto, 10 cartas de hechizo, 15 cartas de habilidad, 12 cartas de especialidad, 9 cartas de característica (3 ataque, 1 defensa, 2 poder, 3 conocimiento), fichas de oro/materiales/objetos de valor/daño/construcción/población/libro de hechizos/moral/movimiento, 12 fichas de monolito, 6 de tiempo, 8 de invocación, 2 de muro de fuego, y 30 cubos acrílicos (20 rosa, 10 negros).`
   },
   {
-    id: "conflujo-02-escenarios-alianza-enfrentamiento-cooperativo",
-    title: "Conflujo 2. Escenarios Oficiales: 'Un Mal Día' (Alianza 2v2), 'Diluvio' (Enfrentamiento 3j) y 'Demasiados Monstruos' (Cooperativo)",
-    category: "escenario",
-    content: `ESCENARIOS OFICIALES DE LA EXPANSIÓN CONFLUJO:
+    id: "cap_exp_confluencia_escenarios",
+    title: "Expansión Confluencia: Escenarios Independientes (Alianza, Enfrentamiento y Cooperativo)",
+    category: "modes",
+    content: `Esta expansión aporta las reglas completas del Modo Alianza (idénticas a las de Murallas/Fortaleza/Inferno/Bastión) y comparte las reglas generales de Modo Cooperativo del Libro de Misiones básico.
 
-1. UN MAL DÍA (Modo Alianza 2v2, Duración: 16 Rondas):
-   - Preparación: 4 iniciales, 6 cercanas, 8 lejanas. Monolitos unidireccionales conectan las áreas.
-   - Recursos e Ingresos: Inicio con 11 Oro, 3 Materiales, 1 Objeto de Valor. Ingresos: «10» Oro, «0» Mat, «0» Obj.
-   - Reglas Especiales: Sin bonificador inicial. Los equipos eligen áreas de inicio de 2 jugadores.
-   - Victoria: Derrotar al héroe principal de cada oponente al menos una vez O bloquear simultáneamente ambos monolitos de salida enemigos al final de una ronda.
+ESCENARIO DE ALIANZA — "Un Mal Día" (4 jugadores, dura 16 rondas): recursos iniciales 11 de Oro/3 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 3 unidades "unas pocas" de bronce. Hay 4 lugares iniciales en 2 áreas (una por equipo), conectados por monolitos unidireccionales. Ningún jugador recibe bonificador inicial. Victoria: una alianza derrota al héroe principal de cada oponente una vez, u ocupa ambos monolitos de salida enemigos al mismo tiempo al final de una ronda. Si no se cumple antes del final de la ronda 16, todos pierden.
 
-2. DILUVIO (Modo Enfrentamiento 3 Jugadores, Duración: 10 Rondas):
-   - Ciudad Neutral Central: Ocupada por una facción no utilizada (3 manadas Bronce, 2 manadas Plata, 2 unas pocas Oro - Dificultad VI).
-   - Obelisco: Visitar un obelisco permite eliminar 1 carta de habilidad de tu mano o descarte.
-   - Eventos Contrarreloj (Rondas 3, 5, 7, 9): Permitido comerciar recursos como en Mercadillo durante la ronda.
-   - Victoria: Capturar la ciudad central y mantener su control hasta el final de la siguiente ronda.
+ESCENARIO DE ENFRENTAMIENTO — "Diluvio" (3 jugadores, dura 10 rondas): recursos iniciales 10 de Oro/3 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce, cofradía de magos, y 3 unidades "unas pocas" de bronce. De las facciones no usadas, se elige una al azar para defender la ciudad central (3 manadas de oro, 2 de plata, 2 "unas pocas" de bronce; nivel de dificultad VI a efectos de experiencia). Ningún jugador puede tener héroe secundario. Visitar un obelisco permite retirar 1 carta de habilidad de tu mano o descarte. En las rondas 3, 5, 7 y 9, los jugadores pueden intercambiar recursos como en un mercadillo (sin otros efectos). Victoria: capturar la ciudad central y mantenerla hasta el final de la ronda siguiente. Si nadie lo logra antes del final de la ronda 10, empate.
 
-3. DEMASIADOS MONSTRUOS (Modo Cooperativo 2-3 Jugadores, Duración: 11-16 Rondas según Dificultad):
-   - Estructura por Sectores: Mapa dividido en 3 sectores principales. Para usar un monolito y saltar del Sector 1 al Sector 2, los jugadores deben haber descubierto todas las losetas y ganado todos los combates de su zona del Sector 1. De igual modo para pasar del Sector 2 al 3.
-   - Obelisco: Otorga 1 tirada de dado de recurso +1 PM adicional. Prohibido transferir Oro entre aliados.
-   - Victoria: Completar y limpiar la totalidad de combates del mapa entero antes de consumir el límite de rondas.`
+ESCENARIO COOPERATIVO — "Demasiados Monstruos" (2-3 jugadores; duración según dificultad: Fácil 11, Normal 12, Difícil 14, Imposible 16 rondas): recursos iniciales 10 de Oro/3 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 3 unidades "unas pocas" de bronce. El mapa se divide en 3 sectores conectados por monolitos unidireccionales, cada jugador empezando en un sector distinto (se puede ampliar a más jugadores añadiendo 1 loseta inicial, 2 cercanas, 1 central, 2 lejanas y 3 fichas de monolito por jugador extra). Ningún jugador puede tener héroe secundario; los Objetos de Valor no se pueden transferir entre jugadores; ningún jugador recibe bonificador inicial; se puede capturar minas de otros jugadores; visitar un obelisco da 1 dado de recursos y +1 PM; ningún cubo negro se puede retirar de una zona marcada con número romano; se ignoran los efectos que reducen los PM disponibles. Un héroe solo puede cruzar de un sector al siguiente cuando se hayan resuelto todos los combates y descubierto todas las losetas de su sector actual (si se cumple para el sector 2, el monolito del sector 1 lleva directamente al sector 3). Victoria: resolver todos los combates del mapa antes del límite de rondas según la dificultad elegida.`
   },
   {
-    id: "conflujo-03-reglas-campana-e-ia",
-    title: "Conflujo 3. Reglas Especiales de Campaña e Inteligencia Artificial (Invocaciones e IA con Hechizos Complejos)",
-    category: "modos",
-    content: `REGLAS AVANZADAS DE CAMPAÑA E IA EN LA EXPANSIÓN CONFLUJO:
+    id: "cap_exp_confluencia_campana",
+    title: "Expansión Confluencia: Campaña en Solitario — Maestros de los Elementos",
+    category: "modes",
+    content: `Campaña de 4 misiones protagonizada por Tarnum, el héroe inmortal de Confluencia (aunque en las 2 primeras misiones no controla su propia ciudad, sino la de una facción "anfitriona" a elegir entre Castillo, Mazmorra, Torre, Fortaleza, Murallas o Bastión). Enfrenta a los Señores Elementales de los 4 planos (referencia de preparación y condiciones; el contenido narrativo está en el Libro de Misiones físico).
 
-INVOCACIONES POR LA IA EN COMBATE:
-• Posicionamiento: Cuando la IA invoca una unidad, la coloca en el primer espacio libre de la línea de frente contando desde la izquierda.
-• Mecánica de Acumulación (Cubos de Invocación): Cada vez que se activa la habilidad de invocación de la IA, coloca un cubo de facción sobre la carta. Al alcanzar 2 cubos, la IA lanza la invocación con SpellPower 4.
+MISIÓN 1 — "Caminata Difícil sobre las Nubes" (13 rondas, plano del Aire): héroe Tarnum, sin ejército de facción ni edificios propios al empezar. Recursos iniciales 20 de Oro. Bonificador a elegir: buscar(3) en artefactos, buscar(3) en habilidades, o +6 Objetos de Valor. Héroes de IA: Fiur (ejército neutral de nivel III + elementales de tormenta/energía) y los Guardianes del Señor del Aire (hadas, elementales de tormenta y de energía). Reglas: tu héroe no gana experiencia más allá del nivel 4; no se usan cartas de anuncio astrológico; no se pueden usar las cartas de Invocar Elemental ni Magia (básica) de ninguna escuela (se descartan y se roba otra si salen); visitar un obelisco por primera vez activa un evento de historia y lo convierte después en zona vacía; no puedes construir edificios de ciudad salvo que controles una, pero sí reclutar y reforzar unidades de bronce sin los edificios necesarios; hasta la ronda 5 no pierdes por no controlar una ciudad. Victoria: derrotar a ambos ejércitos enemigos. Derrota: que tu héroe sea derrotado en combate (puedes retirarte de combates contra neutrales no azur), o no ganar antes del final de la ronda 13 (en la ronda 1 debes elegir facción anfitriona y tomar su ciudad).
 
-TÁCTICAS AMPLIADAS DE LA IA PARA HECHIZOS ELEMENTALES:
-• Hechizos de Área (Bola de Fuego, Rayo en Cadena): Priorizan atacar agrupaciones del jugador con mayor número de tropas de alto nivel o más dañadas.
-• Escudo de Fuego (Mejora de Ronda): Si más de la mitad de tropas de la IA ya han actuado, reserva el hechizo para la primera activación de la siguiente ronda.
-• Debilidad (Reducción de Ataque): La IA lanza el hechizo sobre la unidad del jugador que vaya a ejecutar un contraataque directo contra la tropa activa de la IA.`
-  },
-  {
-    id: "conflujo-04-campana-maestros-de-los-elementos",
-    title: "Conflujo 4. Campaña de Conflujo 'Maestros de los Elementos' (Tarnum en los 4 Planos Elementales)",
-    category: "campaña",
-    content: `CAMPAÑA CONFLUJO: 'MAESTROS DE LOS ELEMENTOS' (Tarnum):
+MISIÓN 2 — "Bailando en el Agua y el Fuego" (16 rondas, planos de Agua y Fuego): mismo héroe/facción anfitriona. Recursos iniciales 10 de Oro/3 Materiales/2 Objetos de Valor. Edificios iniciales: vivienda de bronce, alcaldía. Bonificador a elegir: buscar(3) dos veces en artefactos, cofradía de magos gratis, o +10 de Oro. Héroes de IA: Guardianes del Señor del Agua y Guardianes del Señor del Fuego (comparten mazo de IA). Reglas: tu héroe no gana experiencia más allá del nivel 5; no se usan anuncios astrológicos ni las cartas de Invocar Elemental/Magia de ninguna escuela; el monolito transporta a tu héroe a tu ciudad; visitar un obelisco permite retirar hasta 2 cartas o buscar(3) en artefactos/hechizos/habilidades. Victoria: que todas las zonas de las losetas elementales de agua y fuego queden señalizadas o vacías. Derrota: perder un combate, o no ganar antes del final de la ronda 16.
 
-MISIÓN 1: CAMINATA DIFÍCIL SOBRE LAS NUBES (13 Rondas):
-- Viaje al Plano del Aire. Bloqueo Mágico: Prohibido usar o conservar cartas de Invocar Elementales y Magia de las 4 escuelas (al robarse, se descartan y roba otra). Límite de nivel: Nivel 4.
-- Elección de Facción Secundaria (Ronda 1): Permite tomar el tablero y tropas de otra facción para reclutar.
-- Victoria: Derrotar a Fiur y a los Guardianes del Señor del Aire.
+MISIÓN 3 — "Lugar Difícil" (10 rondas, plano de Tierra): héroe Tarnum o cualquier héroe de Confluencia, ya con su propia facción. Recursos iniciales 15 de Oro. Edificios iniciales: vivienda de bronce, ciudadela, cofradía de magos, Universidad de Magia. Bonificador a elegir: 3 combinaciones de hechizo/habilidad de invocación elemental (fuego/agua/aire). Héroes de IA (Mazmorra): Primer y Segundo Señor Supremo. Reglas: no se usan anuncios astrológicos; derrotar un enemigo de IA da 14 de Oro y 2 Materiales; no se resuelve el efecto normal de empezar con cofradía ya construida; visitar un obelisco permite retirar hasta 2 cartas o buscar(3); no se puede construir la vivienda de oro (Pira Mágica) hasta un evento de historia; se retiran de los mazos neutrales todas las cartas salvo un listado reducido específico del escenario. Victoria: derrotar a ambos ejércitos enemigos. Derrota: perder un combate, o no ganar antes del final de la ronda 10 (hay penalizaciones de recursos y movimiento en varias rondas del evento contrarreloj).
 
-MISIÓN 2: BAILANDO EN EL AGUA Y EL FUEGO (16 Rondas):
-- Planos de Agua y Fuego. Límite de nivel: Nivel 5.
-- Transición entre Planos: Derrotar a los Guardianes del Señor del Agua abre las losetas del Plano de Fuego e incrementa la dificultad de todo el mapa en +1.
-- Victoria: Señalizar o limpiar todas las ubicaciones en las losetas elementales de agua y fuego.
-
-MISIÓN 3: LUGAR DIFÍCIL (10 Rondas):
-- Plano de Tierra. Terreno Pesado: El héroe sufre -1 PM en las rondas 1 y 3.
-- Exigencia de Tributo (Rondas 7 y 9): En la ronda 7 se exige reunir 8 Materiales y 4 Objetos de Valor; en la ronda 9 se pagan obligatoriamente (de lo contrario, derrota).
-- Victoria: Derrotar al Primer Señor Supremo y al Segundo Señor Supremo de Mazmorra.
-
-MISIÓN 4: MAESTRO DE LOS ELEMENTOS (14 Rondas):
-- Enfrentamiento Final: Tarnum contra los 4 Señores Elementales (Aire, Tierra, Fuego y Agua).
-- Batallas Supremas: Al acceder a la última casilla no vacía de cada loseta elemental, se combate inmediatamente al Señor Elemental correspondiente y el héroe gana +2 PM.
-- Victoria: Vencer en combate a los 4 Señores Elementales.`
-  },
-  {
-    id: "conflujo-05-nuevas-ubicaciones-conflujo",
-    title: "Conflujo 5. Catálogo de Nuevas Ubicaciones del Mapa (Conflujo Elemental, Anillo del Hada y Monolitos)",
-    category: "mapa",
-    content: `CATÁLOGO DE NUEVAS UBICACIONES DEL MAPA (EXPANSIÓN CONFLUJO):
-
-1. Conflujo Elemental (Visitable):
-   - Al entrar en este lugar, por cada vivienda construida en tu ciudad, roba del mazo neutral correspondiente hasta revelar una carta de 'Elementales'. Puedes reclutar 1 de estas unidades pagando su coste de reclutamiento.
-
-2. Anillo del Hada (Visitable):
-   - Al entrar, elimina 1 carta de tu mano y realiza Búsqueda (2) en el mazo perteneciente a esa carta (no aplicable a características, habilidad inicial ni especialidades).
-
-3. Monolito Unidireccional (Revisitable):
-   - Permite teletransportar al héroe desde la entrada a la salida. No se puede utilizar el portal de salida para volver a la entrada.
-
-4. Monolito Bidireccional (Revisitable):
-   - Permite teletransportar al héroe entre ambos monolitos emparejados en cualquier dirección.`
+MISIÓN 4 — "Maestro de los Elementos" (14 rondas): mismo héroe/facción de Confluencia. Recursos iniciales 30 de Oro. Edificios iniciales: alcaldía, ciudadela, vivienda de bronce, vivienda de plata, cofradía de magos, Universidad de Magia. Bonificador a elegir: 2 cartas de Invocar Elemental + 2 de Magia (básica) a elegir, o buscar(4) en hechizos 3 veces. Héroes de IA: los 4 Señores Elementales (Aire, Tierra, Fuego, Agua), cada uno con su propio ejército de criaturas elementales y dragones. Reglas: no se usan anuncios astrológicos; no se resuelve el efecto normal de empezar con cofradía ya construida; los monolitos transportan a tu héroe a tu ciudad; derrotar un ejército de IA da 2 de experiencia. Victoria: ganar los 4 combates contra los Señores Elementales. Derrota: perder un combate, o no ganar antes del final de la ronda 14.`
   },
 
   // =========================================================================
   // EXPANSIÓN CALA Y LIBRO DE MISIONES (COVE)
   // =========================================================================
   {
-    id: "cala-01-mecanicas-y-elementos",
-    title: "Cala 1. Nuevas Mecánicas y Elementos: Mapa Marino, Torbellino, Debilidad, Clonación y Máquinas de Guerra",
-    category: "componentes",
-    content: `NUEVO CONTENIDO Y MECÁNICAS DE LA EXPANSIÓN CALA (COVE / REGNA):
+    id: "cap_exp_cala_componentes",
+    title: "Expansión Cala: Componentes",
+    category: "components",
+    content: `Esta expansión añade la facción Cala (piratas de Regna), introduce las Losetas de Mapa Marino, la Ficha de Torbellino y numerosos lugares marítimos (ver capítulo 8), la Ficha de Debilidad y la Ficha de Clonación (ver capítulo 10), y comparte las Cartas Permanentes con Murallas/Confluencia y las Máquinas de Guerra con Murallas.
 
-LOSETAS DE MAPA MARINO Y NAVEGACIÓN:
-• Moverse entre Zonas Marinas y Terrestres:
-  - Movimiento TIERRA → TIERRA o MAR → MAR: Estándar (1 PM).
-  - Movimiento MAR → TIERRA: Estándar (1 PM).
-  - Movimiento TIERRA → MAR (Embarque): Al entrar en una casilla de agua desde una casilla de tierra, el movimiento del héroe FINALIZA INMEDIATAMENTE para el resto del turno. No pierde los Puntos de Movimiento (PM) restantes no gastados (puede usarlos para prolongar el combate si la casilla tiene enemigos), pero no puede desplazarse a más casillas ese turno ni siquiera con efectos de cartas.
-
-FICHA DE TORBELLINO (REMOLINOS MARINOS):
-• Conexión Marítima: Enlaza casillas de mar con fichas de remolino. Reemplaza la ubicación original de la casilla.
-• Mecánica de Teletransporte Aleatorio: Al entrar en una ficha de remolino, tira 1 dado de ataque (-1, 0, +1) para determinar a qué remolino del mapa es transportado el héroe (si sale el mismo remolino de origen, repite la tirada).
-• Coste de Navegación Peligrosa: Viajar a través de un torbellino elimina 1 unidad del ejército del héroe (podrá ser reclutada nuevamente más tarde).
-
-FICHA DE DEBILIDAD Y HECHIZO DE CLONACIÓN:
-• Ficha de Debilidad: Reduce en -1 o -2 el valor de Ataque de la unidad afectada. Límite de 1 ficha de debilidad por unidad a la vez.
-• Ficha de Clonación (Hechizo 'Clonación'):
-  - Coloca una ficha de clonación en una unidad aliada y otra en una casilla vacía adyacente para representar el Clon.
-  - Estadísticas del Clon: Mantiene el Ataque, la Iniciativa y la Habilidad Especial de la unidad original.
-  - Vulnerabilidad del Clon: Tiene solo 1 PS (Puntos de Salud) y 0 Defensa (no aumentable por cartas). Recibir 1 punto de daño por ataque o hechizo lo destruye inmediatamente. No hereda bonificadores jugados en la unidad original.
-  - Si la unidad original es eliminada, el clon se destruye automáticamente.
-
-MÁQUINAS DE GUERRA:
-• Adquisición: Se compran en la Fábrica de Máquinas de Guerra o en el Mercadillo (+3 o +4 Oro más caro y consume la visita completa al Mercadillo).
-• Son cartas de tipo Permanente (Perm) que se colocan frente al jugador.`
+COMPONENTES: 5 losetas de mapa de superficie (1 inicial, 3 lejanas, 1 cercana) + 7 losetas de mapa marino (6 cercanas, 1 central), 1 tablero de ciudad, 1 libro de misiones, 1 ayuda de juego, 1 folleto de unidades, 2 miniaturas de héroe, 1 miniatura de ciudad, 7 miniaturas de unidad, 2 cartas de héroe a doble cara, 7 cartas de unidad, 7 losetas de edificio de ciudad, 7 cartas de unidad neutral, 3 cartas de anuncio astrológico, 6 cartas de artefacto, 6 cartas de hechizo, 6 cartas de habilidad, 12 cartas de especialidad, 7 cartas de característica (3 ataque, 2 poder, 2 conocimiento), 4 cartas de máquina de guerra, fichas de oro/materiales/objetos de valor/daño/construcción/población/libro de hechizos/moral/movimiento, 3 fichas de torbellino, 6 de debilidad, 4 de clonación, 14 de tiempo, y 30 cubos acrílicos (10 negros, 20 aguamarina).`
   },
   {
-    id: "cala-02-escenarios-alianza-enfrentamiento",
-    title: "Cala 2. Escenarios Oficiales: 'Estrecho de las Tormentas' (Alianza 2v2), 'Con Espada y Fuego' y 'Archipiélago Ardiente' (Enfrentamiento)",
-    category: "escenario",
-    content: `ESCENARIOS OFICIALES DE LA EXPANSIÓN CALA:
+    id: "cap_exp_cala_escenarios",
+    title: "Expansión Cala: Escenarios Independientes (Alianza y Enfrentamiento)",
+    category: "modes",
+    content: `Esta expansión aporta las reglas completas del Modo Alianza (idénticas a las de las demás expansiones: equipo de 2 jugadores formado al inicio de la partida, intercambio de artefactos entre héroes en zonas adyacentes, intercambio libre de recursos entre aliados, y prohibición de señalizar un lugar ya señalizado por tu compañero de equipo).
 
-1. ESTRECHO DE LAS TORMENTAS (Modo Alianza 2v2, Duración: 14 Rondas):
-   - Preparación: Mapa dominado por losetas marinas y fichas de remolino.
-   - Bonus de Inicio Especial: Permite reclutar un Héroe Secundario por 5 Oro (salvo en Dificultad Imposible).
-   - Reglas Especiales: Prohibido rendirse con el Héroe Principal en combate (solo los Héroes Secundarios pueden rendirse). Los recursos entre aliados solo pueden enviarse durante el turno propio.
-   - Victoria: Capturar una ciudad enemiga durante 2 rondas consecutivas O derrotar a ambos héroes principales enemigos.
+ESCENARIO DE ALIANZA — "Estrecho de las Tormentas" (4 jugadores, dura 14 rondas): una de las 4 losetas iniciales debe contener una ciudad de Mazmorra. Recursos iniciales 14 de Oro/4 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce, cofradía de magos, y 2 manadas de bronce del menor coste. En vez del bonificador inicial habitual, se puede reclutar un héroe secundario por 5 de Oro (no en dificultad Imposible); cada jugador solo puede hacerlo una vez; un jugador solo puede enviar recursos a un aliado durante su propio turno; ningún héroe principal puede rendirse contra otro héroe (solo los secundarios). Victoria: una alianza captura una ciudad enemiga y la mantiene 2 rondas más, o derrota a ambos héroes principales de la alianza rival. Si nadie lo logra antes del final de la ronda 14, la partida se alarga si alguien señaliza justo en la 13ª o 14ª ronda (hasta la 15ª o 16ª); empate si ambos equipos lo logran; si ninguno, pierden todos.
 
-2. CON ESPADA Y FUEGO (Modo Enfrentamiento 1v1, Duración: 11 Rondas):
-   - Restricciones: Prohibido reclutar Héroes Secundarios.
-   - Eventos Contrarreloj (Rondas 3, 6, 9): Permiten a los jugadores intercambiar recursos como si visitaran un Mercadillo.
-   - Victoria: Capturar la ciudad del oponente o derrotar a su héroe principal.
+ESCENARIO DE ENFRENTAMIENTO — "Con Espada y Fuego" (2 jugadores, dura 11 rondas): recursos iniciales 13 de Oro/3 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce, cofradía de magos, y 1 manada de bronce del mayor coste. Ningún jugador puede tener héroe secundario; se puede usar el mazo de fuerza y magia al pagar Oro para defender la ciudad. Contrarreloj: en las rondas 3, 6 y 9 los jugadores pueden intercambiar recursos como en un mercadillo. Victoria: capturar la ciudad del oponente o derrotar a su héroe antes del final de la ronda 11 (si no, empate).
 
-3. ARCHIPIÉLAGO ARDIENTE (Modo Enfrentamiento 3 Jugadores, Duración: 13 Rondas):
-   - Desafío de Nivel VII Central: Defender por tropas neutrales de una facción no utilizada (3 manadas Bronce, 2 manadas Plata, 2 unas pocas Oro - Dificultad VI/VII).
-   - Regla de Múltiples Ganadores: Tras ser derrotado el ejército neutral Nivel VII por primera vez, no se coloca cubo negro. Todos los demás jugadores que derroten dicho combate en su siguiente turno también comparten la victoria.
-   - Evento Contrarreloj (Rondas 3, 6, 9): Otorga la opción de relanzar un dado o tirar 1 dado de recursos.`
+ESCENARIO DE ENFRENTAMIENTO — "Archipiélago Ardiente" (3 jugadores, dura 13 rondas): incluye 1 loseta central marina con un ejército neutral de nivel VII. Recursos iniciales 14 de Oro/4 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 3 unidades "unas pocas" de bronce. Ningún jugador puede tener héroe secundario; se puede usar el mazo de fuerza y magia al pagar Oro para defender la ciudad; tras derrotar al ejército neutral de nivel VII no se coloca cubo en su zona (se puede volver a combatir cada vez que se entra); una vez que el primer jugador lo derrota, los demás jugadores disponen solo de su siguiente turno para lograrlo también (salvo que ya sea la ronda 13); al ganar ese combate, el héroe se retira del mapa. Contrarreloj: en las rondas 3, 6 y 9, cada jugador puede repetir 1 dado, o lanzar y resolver 1 dado de recursos. Victoria: derrotar al ejército neutral de nivel VII (todos los que lo logren ganan; el resto pierde) antes del final de la ronda 13.`
   },
   {
-    id: "cala-03-campana-terror-de-los-mares",
-    title: "Cala 3. Campaña de Cala 'Terror de los Mares' (Jeremy, Bidley y Casmetra vs Dargem)",
-    category: "campaña",
-    content: `CAMPAÑA CALA: 'TERROR DE LOS MARES' (Jeremy, Bidley y Casmetra):
+    id: "cap_exp_cala_campana",
+    title: "Expansión Cala: Campaña en Solitario — Terror de los Mares",
+    category: "modes",
+    content: `Campaña de 3 misiones para la facción Cala (héroe Jeremy, o cualquier héroe de Cala), enfrentándose a piratas rivales, nigromantes y facciones de IA variadas (referencia de preparación y condiciones; el contenido narrativo está en el Libro de Misiones físico).
 
-MISIÓN 1: EVENMORN (13 Rondas):
-- Héroe Principal: Jeremy (Cala). Enfrenta a los ejércitos enemigos de Drakon y Nimbus.
-- Recompensa Urbana: Capturar cualquier ciudad otorga 10 Oro y limpia los cubos negros de todas las ubicaciones del mapa para poder visitarlas de nuevo.
-- Eventos de la Cabaña del Vidente: Caza del dragón (+15 Oro, +2 Objetos de Valor y Búsqueda 2 de artefactos) o Sacerdotisa del mar (sacrifica oceánidos por Búsqueda 3 de hechizos).
-- Victoria: Controlar las ciudades de Necrópolis y Castillo simultáneamente.
+MISIÓN 1 — "Evenmorn" (13 rondas): héroe Jeremy o cualquier héroe de Cala. Recursos iniciales 10 de Oro/2 Materiales. Edificio inicial: vivienda de bronce. Bonificador a elegir: buscar(4) en artefactos, buscar(4) en hechizos, o reforzar los lobos de mar. Héroes de IA: Drakon, Nimbus y sus respectivas Vanguardias (ejércitos neutrales escalables según la ronda actual). Reglas: al capturar cualquiera de las 2 ciudades objetivo ganas 10 de Oro y se retiran todos los cubos negros del mapa (se puede volver a visitar todo); derrotar un héroe de IA da 8 de Oro; visitar un obelisco activa un evento de historia. Victoria: controlar las ciudades de Necrópolis y de Castillo a la vez. Derrota: perder un combate o perder el control de tu propia ciudad, o no ganar antes del final de la ronda 13.
 
-MISIÓN 2: EN BUSCA DEL CUERNO (13 Rondas):
-- Dos Héroes en Acción: Jeremy y Bidley (Héroe Secundario gratuito tras capturar la mina inicial).
-- Mecánica de Manos de Cartas Dividida: El segundo héroe comparte el mazo de fuerza y magia. Cuando agotas tus PM, robas hasta tu límite o la mitad según cuál sea menor.
-- Laberinto de la Serpiente Subterráneo: Bidley explora túneles con notas de diario secretas y enfrenta la guarnición de la Prisión y a los Guardianes del Cuerno.
-- Victoria: Derrotar al ejército de Gerwulf y a los Guardianes del Cuerno.
+MISIÓN 2 — "En Busca del Cuerno" (13 rondas): mismo héroe. Recursos iniciales 16 de Oro/3 Materiales/2 Objetos de Valor. Edificios iniciales: vivienda de bronce, ciudadela. Bonificador a elegir: buscar(4) en artefactos, buscar(4) en hechizos, o +4 Objetos de Valor. Héroes de IA: Gerwulf, Guardias de la Prisión, Guardianes del Cuerno (ejército neutral de nivel VII). Reglas: no se puede reclutar héroe secundario directamente (se obtiene gratis al capturar la mina inicial de Cala); ambos héroes (principal y secundario) comparten el límite de usos de Experto por ronda; visitar un obelisco activa un evento de historia. Victoria: derrotar tanto al ejército de Gerwulf como a los Guardianes del Cuerno. Derrota: perder un combate, o no ganar antes del final de la ronda 13.
 
-MISIÓN 3: TRAICIÓN (12 Rondas):
-- Enfrentamiento Final contra el Traidor Dargem en la Fortaleza Regnana.
-- Restricción Territorial: No se pueden capturar minas ni asentamientos para aumentar producción; en su lugar, se recibe el doble o triple del bonificador inmediato al señalizarlas y se coloca un cubo negro.
-- Batalla en la Fortaleza de Regna: Asedio masivo con Muros, Puerta, Torre de Arqueros y Encantadores protegidos.
-- Victoria: Señalizar la Utopía del Dragón en la fortaleza central.`
+MISIÓN 3 — "Traición" (12 rondas): mismo héroe. Sin recursos iniciales (0/0/0). Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela. Bonificador a elegir: buscar(4) en artefactos, buscar(4) en hechizos, o +6 Objetos de Valor. Héroes de IA: Defensores del Puesto Avanzado del Castillo y Defensores de la Fortaleza Regnana. Reglas: desde tu loseta inicial solo puedes moverte a losetas de mar; capturar una ciudad da 15 de Oro/2 Materiales/3 Objetos de Valor; en vez de señalizar minas/asentamientos normalmente, resuelves su bonificador 2 o 3 veces (según el tipo de loseta) y luego se marcan como visitadas sin producir ingresos; visitar un obelisco activa un evento de historia. Victoria: señalizar la utopía del dragón. Derrota: perder un combate, o no ganar antes del final de la ronda 12.`
   },
   {
-    id: "cala-04-nuevas-ubicaciones-marinas",
-    title: "Cala 4. Catálogo Completo de Nuevas Ubicaciones Marinas del Mapa (Naufragios, Pecio, Sirena, Cofre Marino, Templo del Mar, etc.)",
-    category: "mapa",
-    content: `CATÁLOGO DE NUEVAS UBICACIONES MARINAS DEL MAPA (EXPANSIÓN CALA):
+    id: "cap_exp_contenido_adicional_preparacion_avanzada",
+    title: "Expansión Contenido Adicional: Preparaciones Avanzadas Opcionales",
+    category: "setup",
+    content: `Reglas opcionales aplicables a cualquier escenario existente, del juego base o de cualquier expansión, para variar el equilibrio habitual de la partida.
 
-1. Barco Abandonado (Visitable):
-   - Permite realizar Búsqueda (2) en el mazo de artefactos. Si lo haces, ganas además +2 Oro.
+CARTAS DEL CAOS: cada vez que vayas a descartar una carta, retírala de la partida en su lugar y roba la carta superior del mazo correspondiente para tu pila de descarte (las cartas de característica y especialidad se siguen descartando con normalidad). Si usas una carta de conocimiento para recuperar un hechizo a tu mano, ese hechizo se retira igualmente y recibes uno nuevo de la parte superior del mazo de hechizos.
 
-2. Naufragio (Visitable):
-   - Tira y resuelve 2 dados de recursos (ReDie).
+RESERVA DE ORO: regla alternativa de gestión del ejército pensada para partidas de Enfrentamiento con varios jugadores (especialmente con número impar), que evita que el primer jugador en sufrir bajas quede en clara desventaja frente a ejércitos recién comprados. Tu reserva de recursos pasa a llamarse "fondo no gastado". Al reclutar o reforzar con la ficha de población, en vez de devolver el coste a la caja, colócalo en una pila aparte junto a tu mazo de unidades: tu "fondo reservado" (esos recursos no se pueden gastar). La siguiente vez que uses la ficha de población, puedes tanto comprar unidades nuevas como vender las que ya tienes; al vender o perder una unidad, su coste vuelve del fondo reservado al fondo no gastado. Si una unidad pasa de "manada" a "unas pocas", recuperas el coste de refuerzo. Si usaste una carta que reducía el coste de reclutar/reforzar, guárdala junto a la carta de unidad para saber cuánto recuperar cuando se venda/pierda/reduzca, devolviéndola a tu mano en ese momento.
 
-3. Pecio (Visitable):
-   - Otorga +2 Materiales de Construcción.
+DRAFT INICIAL: recomendado para partidas de 3 o más jugadores; sustituye la construcción normal del mazo inicial. Aparta la habilidad inicial y la especialidad de nivel 1 de cada héroe. Baraja por separado los mazos de artefactos, habilidades y hechizos; cada jugador roba 2 cartas de cada mazo, se queda con 1 de las 6 y pasa las 5 restantes al jugador de su izquierda; repite hasta que no queden cartas por elegir. Después, repite el proceso completo una segunda vez pasando las cartas a la derecha, hasta que cada jugador tenga 12 cartas seleccionadas así. Añade las cartas de característica que indique la carta de héroe (el mazo de un héroe de fuerza queda en 18 cartas; el de uno de magia, en 17). Cada jugador elige 7 de esas cartas (descarta el resto) y las añade a las 2 que apartó al principio: ese es tu mazo inicial de 9 cartas.
 
-4. Barril Marino (Visitable):
-   - Tira y resuelve 1 dado de recursos (ReDie).
-
-5. Superviviente de Naufragio (Visitable):
-   - Realiza Búsqueda (2) en el mazo de artefactos.
-
-6. Sirena (Visitable):
-   - Otorga +1 PM adicional para el turno actual y 1 Ficha de Moral Positiva.
-
-7. Cofre Marino (Visitable):
-   - Tira 1 dado de ataque: (+1) Busca (1) Artefacto; (0) Gana 5 Oro; (-1) Sin recompensa.
-
-8. Restos de Naufragio (Visitable):
-   - Tira 1 dado de ataque: (+1) Tira y resuelve 2 dados de recursos; (0) Tira y resuelve 1 dado de recursos; (-1) Sin recompensa.
-
-9. Templo del Mar (Visitable):
-   - Elige entre ganar +10 Oro O buscar (2) Artefactos.
-
-10. Boya (Visitable):
-    - Otorga 1 Ficha de Moral Positiva.
-
-11. Tumba (Visitable):
-    - Otorga 1 Ficha de Moral Negativa, +3 Oro y Búsqueda (1) en el mazo de artefactos.
-
-12. Santuario del Gesto Mágico (Visitable):
-    - Realiza Búsqueda (2) en el mazo de hechizos.
-
-13. Santuario del Encantamiento Mágico (Visitable):
-    - Paga 3 Oro para realizar Búsqueda (2) en el mazo de hechizos.`
+EJÉRCITO NEUTRAL: recomendada cuando ningún héroe en la partida tenga habilidades especiales orientadas a unidades. Al usar la ficha de población para reclutar, en vez de reclutar directamente, por cada vivienda que tengas roba 2 cartas de unidad neutral del tipo correspondiente y recluta 1 de ellas pagando su coste; descarta las no reclutadas.`
   },
 
   // =========================================================================
   // CONTENIDO ADICIONAL / METAS AMPLIADAS 2 (STRETCH GOALS 2)
   // =========================================================================
   {
-    id: "sg2-01-elementos-y-preparacion-avanzada",
-    title: "Stretch Goals 2: Nuevos Elementos, Cartas de Ciudad, Caja de Pandora, Mina de Hechizo, Campo de Fuerza y Preparación Avanzada",
-    category: "componentes",
-    content: `CONTENIDO ADICIONAL Y PREPARACIÓN AVANZADA (STRETCH GOALS 2):
+    id: "cap_exp_contenido_adicional_escenarios",
+    title: "Expansión Contenido Adicional: Escenarios de Enfrentamiento",
+    category: "modes",
+    content: `5 escenarios independientes de Modo Enfrentamiento.
 
-CARTAS DE CIUDAD Y SELECCIÓN ALEATORIA DE FACCIONES:
-• Mazo de 10 Cartas de Ciudad: Cada carta representa una de las facciones. Permiten aleatorizar o realizar draft de facciones al inicio de la partida.
-• Método Draft de Facciones: Reparte 2 cartas de ciudad al primer jugador; elige 1 y pasa la otra al siguiente jugador, quien roba 1 más del mazo y repite el proceso.
+"ASCENSIÓN" (4 jugadores, dura 10 rondas): recursos iniciales 10 de Oro/4 Materiales, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce, ciudadela y 3 unidades "unas pocas" de bronce. Los jugadores se dividen en 2 equipos de 2, cada equipo empezando en una mitad del mapa (colocación colectiva de sus losetas iniciales); nadie puede tener héroe secundario; los aliados pueden transferirse recursos vía mercadillo. Contrarreloj: en las rondas 3, 6 y 9 los aliados pueden transferirse recursos sin visitar un mercadillo. Victoria: al final de la ronda 10, ambos equipos libran una serie de hasta 3 duelos 1 contra 1 (emparejamientos decididos por el equipo que gane un desempate de dado de ataque); gana el equipo que se lleve al menos 2 de los 3 duelos.
 
-CIUDAD ALEATORIA Y FICHA DE CAMPO DE FUERZA:
-• Ciudad Aleatoria (Señalizable): Se determina robando una carta del mazo de ciudad (de facciones no jugadas). Defendida por 1 manada Bronce (), 2 manadas Plata () y 2 unas pocas Oro ().
-  - Sin Torre de Arqueros durante este asedio.
-  - Recompensa por Captura: +10 Oro inmediato y +10 Oro de ingresos pasivos por ronda de recursos.
-• Ficha de Campo de Fuerza: Representa un obstáculo para el hechizo 'Campo de Fuerza'. Solo las unidades Voladoras (<Flying>) pueden desplazarse a través de casillas que contengan esta ficha.
+"ISLAS ESMERALDA" (4 jugadores, dura 16 rondas, con losetas marinas): recursos iniciales 13 de Oro/4 Materiales, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce, cofradía de magos y 3 unidades "unas pocas" de bronce. Si tu héroe empieza su turno en una loseta marina, tira 1 dado de ataque antes de moverte: ganas PM adicionales igual al resultado. Si un jugador pierde su ciudad, sus héroes se retiran y pierde la partida. Victoria: ser el único jugador restante antes del final de la ronda 16 (si no, empate entre los que queden).
 
-CARTAS DE CAJA DE PANDORA Y HECHIZO DE MINA:
-• Mazo de Caja de Pandora (20 Cartas): Mazo opcional que sustituye los efectos de dados de la casilla de Caja de Pandora. Al visitar el lugar, puedes robar 1 carta y resolverla en lugar del efecto habitual.
-• Hechizo de Mina (Trap Tokens): Según el SpellPower (2, 4 o 6 fichas), se colocan fichas boca abajo en el tablero de combate (la mitad vacías y la otra mitad con 2 de daño). Cuando una unidad entra en una casilla con trampa, se revela la ficha; si muestra el símbolo de daño, sufre 2 de daño inmediato.
+"REINO DEL CAOS" (2 o 4 jugadores, dura 14 rondas, con utopía del dragón defendida por una facción no usada en la partida): recursos iniciales 10 de Oro/4 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce, alcaldía y 3 unidades "unas pocas" de bronce. Usa cartas de ciudad para elegir al azar la facción que defenderá la utopía del dragón con un ejército de IA (1 manada de oro del mayor coste, 2 manadas de plata, 2 "unas pocas" de bronce) y un mazo de IA propio (3 fuerza, 2 magia) más un mazo de hechizos fijo (2 Flecha Mágica, 1 Relámpago, 1 Celeridad, 1 Rayo Disruptor). Se puede visitar la utopía varias veces (cada vez por una facción distinta, marcando con su cubo); al comienzo de tu turno, tras ingresos y anuncio astrológico, lanza 1 dado de ataque: con -1, roba y resuelve 1 carta del mazo de hechizos de IA (barajándola de nuevo después). Cuando el jugador inicial derrota al ejército de la utopía, se completa la ronda para igualar turnos jugados y la partida termina. Victoria: derrotar al ejército que defiende la utopía del dragón antes del final de la ronda 14 (si no, todos pierden).
 
-MODOS DE PREPARACIÓN AVANZADA Y REGLAS VARIANTES:
-1. Cartas del Caos: Al descartar una carta, elimínala y roba la carta superior de ese mazo a tu pila de descartes (las características y especialidades se descartan normalmente). Si devuelves un hechizo con Conocimiento, el hechizo se elimina y recibes uno nuevo del mazo.
-2. Reserva de Oro (Gestión de Ejército y Recompra):
-   - Los recursos de reclutamiento van a un 'Fondo Reservado' bloqueado.
-   - Venta y Reemplazo: Al usar la ficha de población, puedes vender unidades reclutadas o recuperarlas al morir/reducirse a 'Unas Pocas', devolviendo todo su coste gastado en Oro u Objetos de Valor desde el Fondo Reservado al Fondo No Gastado.
-3. Draft Inicial de Cartas (3+ Jugadores):
-   - Cada héroe recibe su habilidad inicial y especialidad Nivel 1.
-   - Roba 2 cartas de Artefactos, Habilidades y Hechizos (6 cartas total), retén 1 de cada y pasa las 5 restantes al jugador de la izquierda. Repite hasta agotar y luego invierte el sentido (hacia la derecha) hasta formar un mazo de 12 cartas seleccionadas (más tarde refinado a mazo inicial de 9 cartas).
-4. Reclutamiento por Ejército Neutral: En lugar de reclutar unidades de facción, por cada vivienda roba 2 cartas del mazo neutral del nivel correspondiente y recluta 1 de ellas.`
+"PÉRDIDA DE LA INOCENCIA" (3 jugadores, dura 11 rondas, escenario de grial): recursos iniciales 10 de Oro/2 Materiales/1 Objeto de Valor, ingresos «15»/«2»/«1». Cada jugador empieza con vivienda de bronce, cofradía de magos y 1 manada de bronce del mayor coste. Los jugadores pueden usar su mazo de fuerza y magia al pagar Oro para defender su ciudad; el héroe con la ficha de grial tiene 1 PM menos; si tu héroe principal es derrotado en combate contra otro héroe, quedas eliminado; derrotar a un héroe principal da 15 de Oro; si te derrotan o te rindes con la ficha de grial, pasa a quien te venció o se queda en la zona de rendición; si te derrota un ejército neutral, se queda en esa zona. Victoria: ser el único jugador restante, o llevar el grial a tu ciudad, antes del final de la ronda 11 (si no, todos pierden).
+
+"EL TRÉBOL CARMESÍ" (2-4 jugadores, dura 14 rondas, con monolitos bidireccionales interconectados entre todos los jugadores): recursos iniciales 17 de Oro/3 Materiales/3 Objetos de Valor, ingresos «10»/«2»/«0». Cada jugador empieza con vivienda de bronce y 3 unidades "unas pocas" de bronce. Nadie puede retirarse de un combate; derrotar a un héroe principal da 20 de Oro; un jugador que pierda su ciudad o cuyo héroe sea derrotado en cualquier combate pierde la partida. Victoria: derrotar al mayor número de jugadores antes del final de la ronda 14 (si nadie destaca, todos pierden).`
   },
   {
-    id: "sg2-02-escenarios-enfrentamiento-sg2",
-    title: "Stretch Goals 2: Escenarios de Enfrentamiento ('Ascensión', 'Islas Esmeralda', 'Reino del Caos', 'Pérdida de la Inocencia' y 'El Trébol Carmesí')",
-    category: "escenario",
-    content: `ESCENARIOS DE ENFRENTAMIENTO ADICIONALES (STRETCH GOALS 2):
+    id: "cap_campana_inferno_creadores_pesares",
+    title: "Campaña de Inferno: Creadores de Pesares",
+    category: "modes",
+    content: `Campaña de 3 misiones para la facción Inferno (héroe: cualquiera de Inferno), jugable con las expansiones Murallas e Inferno (la 3ª misión también admite Confluencia). Enfrenta a Erathia, AvLee y los Señores Elementales de Confluencia (referencia de preparación y condiciones; el contenido narrativo está en el Libro de Misiones físico).
 
-1. ASCENSIÓN (Modo 4 Jugadores, Equipos 2v2, 10 Rondas):
-   - Estructura: Sin héroes secundarios. Aliados en la misma mitad del mapa.
-   - Duelos Finales (Ronda 10): La partida concluye con una serie de 3 batallas individuales entre ambos equipos. El equipo con tirada de dado de ataque más alta elige el primer cruce de duelistas. Gana el equipo con al menos 2 duelos victoriosos.
+MISIÓN 1 — "Un Plan Diabólico" (12 rondas): recursos iniciales 10 de Oro/2 Materiales/1 Objeto de Valor. Edificios iniciales: vivienda de bronce, ciudadela. Bonificador a elegir: buscar(4) en artefactos, robar hasta encontrar 2 hechizos de la escuela de fuego (quedarte 1), o +7 Objetos de Valor. Héroes de IA: la Reina de los Dragones Dorados (con dragones dorados/negros/hada y unicornios) y los Exploradores de las Murallas (ejército neutral escalable, de nivel = ronda actual ÷ 2 redondeado hacia arriba; si el ejército resultante tiene menos de 5 unidades, se añade una manada de elfos). Reglas: se ignoran los bordes de las losetas iniciales; los Exploradores de las Murallas solo tienen 2 PM y van directos hacia la Reina de los Dragones Dorados por el camino más corto (ignorando la prioridad estándar de movimiento de la IA); el ejército de la Reina no se mueve; derrotar un héroe de IA da 8 de Oro; visitar un obelisco activa un evento de historia. Victoria: derrotar al ejército de la Reina de los Dragones Dorados. Derrota: que cualquier Explorador de las Murallas alcance la zona de la Reina antes que tú, que tu héroe sea derrotado en combate, o que pierdas tu ciudad (puedes retirarte de combates contra neutrales no azur), o no ganar antes del final de la ronda 12.
 
-2. ISLAS ESMERALDA (Modo 4 Jugadores, 16 Rondas):
-   - Navegación Marítima: Si el héroe inicia su turno en una loseta marina, tira 1 dado de ataque (-1, 0, +1) y gana Puntos de Movimiento (PM) adicionales iguales al resultado.
-   - Eliminación Directa: Perder la ciudad elimina inmediatamente a todos los héroes del jugador.
+MISIÓN 2 — "Golpea el Hierro Mientras Esté Frío" (13 rondas): recursos iniciales 25 de Oro/2 Materiales/2 Objetos de Valor. Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela, Puerta del Castillo. Bonificador a elegir: ganar un héroe secundario más unos pocos demonios, +20 de Oro, o añadir unos pocos ojos maléficos/medusas/minotauros. Héroes de IA: General Kendal (ejército de Castillo con muralla/puerta/torre) y 2 oleadas sucesivas de la Vanguardia de Ironfist (ejércitos neutrales escalables). Reglas: no se puede reclutar héroe secundario adicional; se ignoran cartas de anuncio astrológico que cambien PM o retiren cubos negros; los héroes enemigos van directos hacia tu héroe/ciudad más cercana por el camino más corto; derrotar un héroe de IA da 10 de Oro; si una de tus ciudades cae, se marca con un cubo negro y pasa a tratarse como zona vacía para la IA; puedes reclutar para un mazo especial de "Tropas Retardantes" (independiente de tu ejército de héroe) que defienden tus ciudades en tu ausencia, usando también tu mazo de fuerza y magia y tus usos de Experto. Victoria: señalizar todos los obeliscos del mapa y después capturar la ciudad de Castillo. Derrota: que tu héroe sea derrotado en combate (puedes retirarte de combates contra neutrales no azur), o perder el control de cualquiera de tus ciudades, o no ganar antes del final de la ronda 13.
 
-3. REINO DEL CAOS (Modo 2 o 4 Jugadores, 14 Rondas):
-   - Utopía del Dragón Central: Defendida por un ejército de la IA de una facción aleatoria.
-   - Tirada del Caos (Inicio de Turno): Cada jugador tira 1 dado de ataque; con un «-1», la IA lanza un hechizo destructivo contra tus unidades (Flecha Mágica descarte de unidad, Rayo descarte de Plata/Bronce, Celeridad +1 PM al héroe, Rayo Disruptivo anula habilidades de neutrales I-V).
-
-4. PÉRDIDA DE LA INOCENCIA (Modo 3 Jugadores, 11 Rondas):
-   - Disputa del Grial: Transportar el Grial reduce los PM del héroe en -1.
-   - Caída del Grial: Si el héroe con el Grial se rinde o es derrotado por tropas neutrales o enemigas, la ficha del Grial cae en la casilla donde ocurrió el combate. Derrotar al héroe portador permite arrebatarle el Grial.
-   - Victoria: Quedar como único jugador vivo O llevar la ficha del Grial a tu ciudad.
-
-5. EL TRÉBOL CARMESÍ (Modo 2 a 4 Jugadores, 14 Rondas):
-   - Monolitos Interconectados: Todos los monolitos bidireccionales del mapa están conectados en red.
-   - Reglas de Eliminación Muerte Súbita: Prohibida la retirada. Perder la ciudad o ver derrotado al héroe principal elimina al jugador de la partida.
-   - Victoria: Jugador que haya eliminado al mayor número de rivales al final de la ronda 14.`
-  },
-  {
-    id: "sg2-03-campana-inferno-creadores-de-pesares",
-    title: "Stretch Goals 2: Campaña de Inferno 'Creadores de Pesares' (Xex, Xyron, Fiona y Xeron vs AvLee, Bracada y Conflujo)",
-    category: "campaña",
-    content: `CAMPAÑA INFERNO: 'CREADORES DE PESARES' (Xex, Xyron, Fiona, Xeron):
-
-MISIÓN 1: UN PLAN DIABÓLICO (12 Rondas):
-- Facción: Inferno (Xex). Enfrenta a los exploradores de Murallas y a la Reina de los Dragones Dorados.
-- Regla de Persecución: Los exploradores de las Murallas avanzan 2 PM por el camino más corto hacia la Utopía del Dragón.
-- Derrota: Si cualquier explorador de Murallas alcanza la casilla de la Reina de los Dragones Dorados antes que tú.
-- Victoria: Derrotar al ejército de la Reina de los Dragones Dorados.
-
-MISIÓN 2: GOLPEA EL HIERRO MIENTRAS ESTÉ FRÍO (13 Rondas):
-- Invasión contra Steadwick. Enemigo: General Kendal y oleadas de la Vanguardia de Ironfist.
-- Tropas Retardantes (Defensa Urbana de Emergencia): Permite reclutar una reserva de guarnición del mazo de tropas neutrales para defender tus ciudades en ausencia del héroe.
-- Obeliscos de la Misión: Visitar un obelisco exige pagar 5 Oro y 1 Objeto de Valor a cambio de +1 PM y colocar un cubo de facción.
-- Victoria: Señalizar todos los obeliscos del mapa y capturar la ciudad de Castillo (Steadwick).
-
-MISIÓN 3: CUSTODIOS DE LOS PESARES (13 Rondas):
-- Emboscada Planar a los Héroes de Conflujo (Océano Eterno, Guardias de Cristal, Custodios del Fuego).
-- Modificadores de Dificultad Dinámicos: En la ronda 1 la dificultad del mapa baja 1 nivel (IV->III, V->IV). En la ronda 9 la dificultad de loseta elemental sube 1 nivel (IV->V, V->VI).
-- Combates Obligatorios: Se debe haber derrotado al menos a 1 héroe enemigo antes de terminar la ronda 9, y a 2 héroes antes de la ronda 11.
-- Victoria: Derrotar a los tres héroes de la IA.`
-  },
-  {
-    id: "sg2-04-nuevas-ubicaciones-sg2",
-    title: "Stretch Goals 2: Catálogo de Nuevas Ubicaciones del Mapa (Mina: Aserradero, Reserva de Cíclopes y Ciudad Aleatoria)",
-    category: "mapa",
-    content: `CATÁLOGO DE NUEVAS UBICACIONES DEL MAPA (STRETCH GOALS 2):
-
-1. Mina: Aserradero (Señalizable):
-   - Funciona como una mina terrestre. Al capturarla de forma neutral otorga su beneficio directo de inmediato y genera +2 Materiales de Construcción de ingresos pasivos al inicio de cada ronda de recursos.
-
-2. Reserva de Cíclopes (Visitable):
-   - Desafío táctico: Al preparar el combate neutral, en lugar de robar 1 unidad Azur (), busca 2 cartas de Cíclopes (Plata ) en la pila de descartes o mazo neutral y añádelas al ejército enemigo.
-   - Recompensa por Victoria: Tira y resuelve 4 dados de recursos (ReDie).
-
-3. Ciudad Aleatoria (Señalizable):
-   - Al descubrirse, se asigna a una facción no jugada. Genera +10 Oro al capturarse y +10 Oro pasivo por ronda. Se asedia sin utilizar la carta de Torre de Arqueros.`
+MISIÓN 3 — "Custodios de los Pesares" (13 rondas, admite también Confluencia): recursos iniciales 8 de Oro/1 Material. Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela, Puerta del Castillo, Nubes de Azufre. Bonificador a elegir: buscar(5) en artefactos, robar hasta encontrar 3 hechizos de fuego (quedarte 1), o reforzar los cerberos iniciales. Héroes de IA: 3 guardianes elementales (Océano Eterno, Guardias de Cristal, Custodios del Fuego), cada uno con habilidad de invocar su elemental correspondiente. Reglas: derrotar un héroe de IA da 5 de Oro; tu héroe secundario no puede entrar en zonas con obelisco; visitar un obelisco activa un evento de historia y, tras la ronda 1, reduce en 1 la dificultad de las losetas cercanas normales (hasta la ronda 9, que la vuelve a subir en 1 solo para las losetas elementales). Victoria: derrotar a los 3 héroes guardianes. Derrota: que tu héroe sea derrotado en combate (puedes retirarte de combates contra neutrales no azur), o no derrotar al menos 1 guardián antes de la ronda 9 y 2 antes de la ronda 11, o no ganar antes del final de la ronda 13.`
   },
 
   // =========================================================================
   // EXPANSIÓN BATALLAS NAVALES Y LIBRO DE MISIONES (NAVAL BATTLES)
   // =========================================================================
   {
-    id: "batallas-navales-01-combate-naval-y-habilidades-potenciadas",
-    title: "Batallas Navales 1. Combate Naval en Neopreno y Sistema de Cartas/Fichas de Habilidad Potenciada",
-    category: "componentes",
-    content: `NUEVO CONTENIDO Y MECÁNICAS DE LA EXPANSIÓN BATALLAS NAVALES (NAVAL BATTLES):
+    id: "cap_exp_batallas_navales_componentes",
+    title: "Expansión Batallas Navales: Componentes",
+    category: "components",
+    content: `Esta expansión añade 2 tableros de combate de neopreno (con el tablero de combate normal en una cara y el naval en la otra, ver capítulo 10), las Cartas y Fichas de Habilidad Potenciada (ver capítulo 5) y los Bancos de Criaturas con sus Fichas de Pila (ver capítulo 10).
 
-TABLEROS DE COMBATE DE NEOPRENO Y COMBATE NAVAL:
-• Tablero Doble Cara: Incluye un tablero de combate estándar por una cara y el tablero especial de Combate Naval por la otra.
-• Reglas Especiales del Tablero Naval:
-  - Espacios Centrales Eliminados: Las dos casillas centrales del tablero no existen.
-  - Unidades Terrestres (<Ground>): Tienen prohibido atravesar las casillas centrales eliminadas; deben bordear el tablero obligatoriamente por el flanco izquierdo o derecho.
-  - Unidades Voladoras (<Flying>): Pueden volar sobre las casillas eliminadas como si existieran, pero NO pueden finalizar su movimiento sobre ellas ni abandonar los límites del tablero.
-
-SISTEMA DE HABILIDADES POTENCIADAS (CARTAS Y FICHAS):
-• Ficha de Habilidad Potenciada: Se puede obtener como recompensa en ciertos lugares o eventos. Se coloca en la carta de héroe hasta usarse.
-• Uso de la Ficha: En el momento en que obtienes una nueva carta de habilidad (al subir de nivel o por Búsqueda), puedes descartar una ficha de habilidad potenciada para tomar la carta equivalente del Mazo de Habilidades Potenciadas en lugar de la carta estándar.
-• Características de las Cartas Potenciadas:
-  - Poseen un único efecto mejorado directo que NO requiere gastar el símbolo de Experto (<Expert>).
-  - Exclusividad: Solo existe 1 copia de cada habilidad potenciada en el mazo. Si un jugador la toma, impide que los rivales obtengan esa misma versión.
-  - Cartas Específicas de Facción: Si robas una habilidad con símbolo de facción (ej. Necrópolis) que tu facción no puede usar, puedes revelarla, descartarla y robar otra en su lugar.`
+COMPONENTES: 1 libro de misiones, 2 tableros de combate de neopreno, 50 cartas de unidad del banco de criaturas, 32 cartas de habilidad potenciada, 24 fichas del banco de criaturas, 10 fichas de habilidad potenciada, 9 fichas de unidad apilada, 4 dados de ataque.`
   },
   {
-    id: "batallas-navales-02-bancos-de-criaturas-mecanica-y-catalogo",
-    title: "Batallas Navales 2. Bancos de Criaturas: Reglas de Despliegue, Fichas de Pila y Catálogo Completo (Barco Abandonado, Pirámide, Utopía del Dragón, etc.)",
-    category: "unidades",
-    content: `MECÁNICA Y CATÁLOGO COMPLETO DE BANCOS DE CRIATURAS:
+    id: "cap_exp_batallas_navales_escenarios",
+    title: "Expansión Batallas Navales: Escenarios (Cooperativo, Enfrentamiento y Solitario)",
+    category: "modes",
+    content: `Esta expansión comparte las reglas generales de Modo Cooperativo del Libro de Misiones básico (unidades neutrales controladas con las reglas de IA; el mercadillo también puede dar recursos a cualquier jugador; victoria compartida al cumplirse la condición).
 
-MECÁNICA DE BANCOS DE CRIATURAS Y FICHAS DE PILA:
-• Reemplazo de Casillas Bloqueadas: Al descubrir una loseta cercana (IV-V) o lejana (II-III), puedes sustituir una de sus casillas bloqueadas con una Ficha de Banco de Criaturas del montón correspondiente.
-• Preparación del Combate: Despliega hasta 5 unidades aliadas en la zona verde vs 4 unidades neutrales prefijadas del banco en la zona roja.
-• Dificultad y Fichas de Pila (Stack Tokens): Según la dificultad de la partida, asigna fichas de pila al azar a las tropas neutrales (Fácil: 1, Normal: 2, Difícil: 3, Imposible: 4).
-  - Modificadores de Ficha de Pila: Otorgan +1 Ataque, +1 Defensa, +1 PS o +2 Iniciativa a la unidad afectada.
-  - Mecánica de Daño Apilado: Funciona similar a reforzar tropas. Al recibir daño igual a sus PS máximos, pierde 1 ficha de pila y limpia todo el daño acumulado antes de aplicar el daño sobrante.
-  - Sin Límite de Rondas: No hay combate rápido, no cuesta PM alargar el combate ni se gana Experiencia (EXP), pero otorga botines masivos de recursos y bonus extra por cada unidad apilada derrotada.
+ESCENARIO COOPERATIVO — "Invasión Bárbara" (2-4 jugadores, dura 11 rondas): preparación de mapa escalable según jugadores (2: 3 iniciales + 3 cercanas con obelisco + 4 lejanas; 3: 4+4+6; 4: 5+5+8). Recursos iniciales 10 de Oro/4 Materiales, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce, alcaldía y 3 unidades "unas pocas" de bronce. La loseta inicial central pertenece a una "Ciudad Enemiga" (se recomienda la facción Bastión, o cualquier otra no usada en la partida si no tienes esa expansión). Los jugadores pueden intercambiar artefactos si sus héroes están en zonas adyacentes; nadie puede señalizar un lugar ya señalizado por otro jugador; no se puede entrar en la Ciudad Enemiga hasta descubrir todas las losetas cercanas y visitar todos los obeliscos al menos una vez; visitar un obelisco da una ficha de habilidad potenciada. Al entrar en la Ciudad Enemiga se combate contra 3 manadas de oro y 2 "unas pocas" de bronce; si ganas, coloca tu cubo de facción en la zona (varios jugadores pueden señalizarla cada uno con el suyo). Victoria: que haya un cubo de cada facción jugada en la Ciudad Enemiga antes del final de la ronda 11 (si no, todos pierden).
 
-CATÁLOGO COMPLETO DE LOS 12 BANCOS DE CRIATURAS:
-1. Barco Abandonado: 4 Elementales de Agua. Recompensa: Moral Negativa + 7 Oro. Extra: +2 Oro por unidad apilada y Busca X en hechizos.
-2. Pirámide: 2 Gólems de Oro, 2 Gólems de Diamante. Recompensa: Busca (5) en hechizos. Extra: Por cada manada, retira 1 carta de mano/descarte y busca (5) en esa baraja.
-3. Naufragio: 4 Espectros. Recompensa: Moral Negativa + 5 Oro. Extra: +2 Oro por unidad apilada y Busca X en artefactos.
-4. Colmena de Libélulas: 4 Libélulas. Recompensa: 1 unidad Libélula (si había >=2 apiladas, ganas Libélulas apiladas).
-5. Depósitos de Medusas: 4 Medusas. Recompensa: 6 Oro + 1 Objeto de Valor. Extra: +3 Oro o +1 Objeto de Valor por unidad apilada.
-6. Tesorería Enana: 4 Enanos. Recompensa: 7 Oro. Extra: +3 Oro por unidad apilada.
-7. Conservatorio de Grifos: 4 Grifos. Recompensa: 1 unidad Grifos (si >=2 apiladas, Grifos apilados).
-8. Banco de Nagas: 4 Nagas. Recompensa: 6 Oro + 2 Objetos de Valor. Extra: +6 Oro + 1 Objeto de Valor por unidad apilada.
-9. Cripta: 1 Esqueleto, 1 Zombi, 1 Espectro, 1 Vampiro. Recompensa: 6 Oro. Extra: +2 Oro por unidad apilada.
-10. Tesoro de los Diablillos: 4 Familiares. Recompensa: 3 Oro. Extra: +1 Oro por unidad apilada.
-11. Reservas del Cíclope: 4 Cíclopes. Recompensa: 8 Materiales + 2 Objetos de Valor. Extra: +2 Materiales + 1 Objeto de Valor por unidad apilada.
-12. Utopía del Dragón: 1 Dragón Negro, 1 Dragón Dorado, 1 Dragón de Cristal, 1 Dragón Hada. Recompensa: 40 Oro + Busca (3) en artefactos. Extra: Busca (5) en artefactos o hechizos por cada unidad apilada.`
-  },
-  {
-    id: "batallas-navales-03-escenarios-oficiales-y-modo-solitario",
-    title: "Batallas Navales 3. Escenarios Oficiales: 'Invasión Bárbara' (Cooperativo), 'El Pantano de Tentáculos de Gorlam' (Enfrentamiento) e 'Isla de Fuego' (Solitario)",
-    category: "escenario",
-    content: `ESCENARIOS OFICIALES DE LA EXPANSIÓN BATALLAS NAVALES:
+ESCENARIO DE ENFRENTAMIENTO — "El Pantano de Tentáculos de Gorlam" (2 jugadores, dura 14 rondas): recursos iniciales 16 de Oro/4 Materiales/1 Objeto de Valor, ingresos «15»/«0»/«0». Cada jugador empieza con vivienda de bronce y 3 unidades "unas pocas" de bronce. Ganar un combate en un banco de criaturas da también una ficha de habilidad potenciada. Contrarreloj: en las rondas 4, 5, 6, 10, 11 y 12, las minas de zonas de borde del mapa no producen ingresos, y cualquier combate en una zona de borde durante esas rondas se libra en el tablero de combate naval. Victoria: al final de una ronda, si algún jugador controla 6+ minas, se juega una ronda final y gana quien tenga más minas (si nadie llega a 6 antes del final de la ronda 14, empate).
 
-1. INVASIÓN BÁRBARA (Modo Cooperativo 2-4 Jugadores, Duración: 11 Rondas):
-   - Ciudad Enemiga Central: Ocupada por Bastión (3 manadas Bronce + 2 pocas Oro). Bloqueada hasta descubrir todas las cercanas y visitar todos los obeliscos.
-   - Obelisco: Otorga 1 Ficha de Habilidad Potenciada al visitarlo.
-   - Victoria: Que un héroe de CADA facción jugadora entre en la Ciudad Enemiga, gane el combate y coloque su cubo de facción.
-
-2. EL PANTANO DE TENTÁCULOS DE GORLAM (Modo Enfrentamiento 2j, Duración: 14 Rondas):
-   - Bancos de Criaturas: Vencer un combate en cualquier banco de criaturas otorga 1 Ficha de Habilidad Potenciada adicional.
-   - Inundación de Borde (Rondas 4, 5, 6, 10, 11, 12): Las minas en bordes del mapa no generan ingresos y cualquier combate iniciado en bordes se resuelve obligatoriamente con el tablero de Combate Naval.
-   - Victoria: Al final de una ronda, controlar 6 o más minas simultáneamente.
-
-3. ISLA DE FUEGO (Modo Solitario 1 Jugador vs Diablo Memphos, Duración: 16 Rondas):
-   - Generación Forzada de Bancos: Al descubrir losetas se asignan bancos específicos (Lejana -> Tesoro Diablillos; Cercana 1 -> Conservatorio Grifos; Cercana 2 -> Banco Nagas; Cercana 3 -> Pirámide; Cercana 4 -> Utopía del Dragón).
-   - Ganar en banco de criaturas concede 1 Ficha de Habilidad Potenciada.
-   - Integración Narrativa: Los lugares activan párrafos del Libro de Misiones (§1 - §29).
-   - Victoria: Ganar un combate en TODOS los bancos de criaturas del mapa.`
-  },
-  {
-    id: "batallas-navales-04-lugares-historia-y-parrafos-narrativos",
-    title: "Batallas Navales 4. Sistema de Párrafos Narrativos e Interacciones (§1 al §29) para el Modo Solitario",
-    category: "modos",
-    content: `SISTEMA DE PÁRRAFOS NARRATIVOS DEL MODO SOLITARIO (§1 - §29):
-
-INSTRUCCIONES DE ACCESO POR LUGAR DEL MAPA:
-• Molino de Agua: Primera visita lee §1.
-• Cabaña de la Bruja: Primera visita lee §2; segunda visita lee §13; visita con ficha de defensa lee §23.
-• Mercadillo: Primera visita lee §3; visita con palabra clave 'Trabajo' lee §8.
-• Jardín Místico (Loseta F5): Primera visita lee §4.
-
-RESUMEN DE RRAMAS NARRATIVAS Y PALABRAS CLAVE:
-- Molino (§1, §14, §27): Ayudar a reparar la rueda cuesta 2 Materiales y otorga Búsqueda (3) en artefactos; rechazar genera Moral Negativa.
-- Misión de las Brujas (§2, §5, §7, §9, §11, §13, §16, §18, §19, §21, §23, §26, §29):
-  * Aceptar ayudar a la Vieja Bruja registra 'Pacto' (§7).
-  * Matar a la Joven Bruja genera 'Crimen' (§5). Entregar la cabeza a la Vieja Bruja concede 2 Morales Negativas y Búsqueda (3) en hechizos 3 veces (§9).
-  * Escuchar a la Joven Bruja (§21) permite aliarse con ella contra la Vieja Bruja registrando 'Verruga' (§29) para un ataque conjunto con Moral Positiva y Búsqueda (5) de hechizos (§19).
-- Apuesta y Trabajo del Mercadillo (§3, §6, §8, §12, §15, §17, §22, §25):
-  * Aceptar el 'Trabajo' (§17) concede un artefacto y te exige llevarlo a otro mercadillo (§8) para cobrar 10 Oro.
-  * Juego de Dados (§12): Apuestas de Oro con tiradas de dado de ataque (-1, 0, +1) con premios de Objetos de Valor o pérdidas de Oro.
-- Encuentro con el Duende (§4, §10, §20, §24, §28): Pedir la olla de oro conduce a intentos de robo (-5 Oro o toda la bolsa en §28) o intimidación exitosa (+10 Oro en §10).`
+ESCENARIO SOLITARIO — "Isla de Fuego" (1 jugador, dura 16 rondas): recursos iniciales 10 de Oro/4 Materiales, ingresos «10»/«0»/«0». Empiezas con vivienda de bronce y 3 unidades "unas pocas" de bronce. Cada loseta que descubras recibe un banco de criaturas distinto y en este orden: las lejanas siempre reciben un Tesoro de los Diablillos; la 1ª cercana un Conservatorio de Grifos; la 2ª cercana un Banco de Nagas; la 3ª cercana una Pirámide; la 4ª cercana una Utopía del Dragón (de banco de criaturas). Ganar un combate en un banco de criaturas da también una ficha de habilidad potenciada; los mercadillos son visitables. Victoria: ganar un combate en todos los bancos de criaturas del mapa antes del final de la ronda 16.`
   },
 
   // =========================================================================
   // MANUAL DE REGLAS REESCRITO V2.0 DEV (RULES REWRITE COMPENDIUM 2.0)
   // =========================================================================
   {
-    id: "reescritura2-01-modo-torneo-y-puntos-de-victoria",
-    title: "Reescritura 2.0 Dev: Modo Torneo 1v1 y Sistema de Puntuación de Puntos de Victoria (PV)",
-    category: "modos",
-    content: `REGLAS OFICIALES DEL MODO TORNEO 1V1 (COMPENDIO REESCRITO V2.0 DEV):
+    id: "cap_juego_con_miniaturas_y_recursos_comunitarios",
+    title: "Jugar con Miniaturas y Recursos de la Comunidad",
+    category: "faq",
+    content: `JUGAR CON MINIATURAS (regla general, aplicable a cualquier partida): si prefieres usar miniaturas de unidad en vez de solo cartas durante el combate, colócalas y muévelas sobre el tablero de combate; puedes ponerlas encima de las cartas o dejar las cartas a un lado a modo de "barra de iniciativa" para visualizar mejor el orden de activación. Si juegas así, aplica estas reglas: al robar una carta de unidad neutral, si sale una unidad neutral repetida, una que ya tengas en tu ejército, o una de tu propia facción, descártala y roba otra en su lugar; al reclutar unidades neutrales con Diplomacia, tampoco puedes reclutar una unidad de una facción controlada por otro jugador ni una ya presente en el ejército de cualquier jugador (descarta esa carta y roba otra).
 
-PREPARACIÓN Y AJUSTES DE TORNEO:
-• Cartas Removidas: Se eliminan del juego la carta de habilidad 'Diplomacia' y la carta de artefacto 'Reloj de la Hora Aciaga' antes de formar sus respectivos mazos.
-• Orden Inicial: Ambos jugadores tiran 2 dados de ataque. El resultado más alto decide quién comienza.
-• Compensación al Segundo Jugador: El segundo jugador recibe 1 Ficha de Moral Positiva al inicio de la partida.
-
-CONSTRUCCIÓN DRAFT DEL MAPA DE TORNEO (LOS ETAS BOCA ARRIBA):
-1. Losetas Centrales: El jugador inicial coloca las losetas centrales según el mapa del escenario, descubriéndolas y orientándolas libremente.
-2. Colocación de Losetas Cercanas (IV-V):
-   - Comenzando por el segundo jugador, alternan la colocación de losetas cercanas boca arriba (deben conectarse a una loseta central si es posible).
-   - Todo escenario de torneo debe incluir al menos 2 losetas cercanas con la ubicación Obelisco.
-3. Posición de Losetas Iniciales (I):
-   - El primer jugador coloca su loseta inicial adyacente a al menos 1 loseta cercana.
-   - El segundo jugador sitúa su loseta inicial en el extremo opuesto del mapa (a la máxima distancia en losetas del rival).
-4. Colocación de Losetas Lejanas (II-III):
-   - Cada jugador debe colocar su primera loseta lejana adyacente a su loseta inicial.
-   - Las losetas lejanas restantes se colocan alternadamente boca arriba siguiendo las reglas normales.
-
-REGLAS ADICIONALES DURANTE LA PARTIDA DE TORNEO:
-• Mulligan en Ronda 1: Al inicio de la primera ronda, cada jugador puede barajar su mano de cartas de vuelta al mazo de Fuerza y Magia y robar una nueva mano inicial por única vez.
-• Fichas de Moral para Repetición de Búsqueda: Los jugadores pueden gastar una Ficha de Moral Positiva para descartar todas las cartas reveladas durante cualquier acción de Búsqueda (Search) y repetir la Búsqueda de nuevo.
-• Preservación de Artefactos Eliminados: Si eliminas cartas de artefacto durante la partida, consérvalas al lado de tu mazo, ya que contarán para la puntuación final de Puntos de Victoria.
-• Observatorio de Sequoias (Efecto Alternativo): En Torneo, permite girar una loseta adyacente no ocupada por un héroe siguiendo las reglas estándar de colocación.
-
-TABLA COMPLETA DE PUNTUACIÓN DE PUNTOS DE VICTORIA (PV):
-- 1 PV por cada Mina o Asentamiento bajo tu control.
-- 1 PV por cada Edificio construido en tu Ciudad.
-- 1 PV por cada 2 Cartas de Artefacto en tu mazo (incluidas las cartas eliminadas conservadas).
-- 1 PV por cada Nivel alcanzado por tu Héroe Principal.
-- 2 PV por cada Héroe Secundario enemigo derrotado.
-- 4 PV por derrotar al Héroe Principal enemigo (una sola vez por partida).
-- X PV por cualquier objetivo adicional especificado en la descripción del escenario.`
-  },
-  {
-    id: "reescritura2-02-expansion-campo-de-batalla",
-    title: "Reescritura 2.0 Dev: Expansión Campo de Batalla (Modo Aventura, Modo Escaramuza y Combate Táctico Hexagonal)",
-    category: "modos",
-    content: `EXPANSIÓN CAMPO DE BATALLA (BATTLEFIELD EXPANSION - COMPENDIO V2.0 DEV):
-
-SISTEMA DE JUEGO SIN MAPA DE EXPLORACIÓN:
-
-1. MODO AVENTURA (ADVENTURE MODE):
-   - Estructura: Se divide en la Fase de Aventura (duración elegida: Corta 9 rondas, Media 13 rondas, Larga 16 rondas) y el Combate Final.
-   - Cartas de Aventura (Evento y Combate):
-     * Evento: Resuelve el texto impreso.
-     * Combate: Eliges un Nivel de Poder de Combate declarado (3 niveles disponibles). Seleccionas 2 de tus unidades y tiras 1 dado de ataque por cada una, sumando sus valores de Ataque base. Si alcanzas o superas el valor declarado, ganas la Recompensa Básica + Recompensa de Batalla. Si no lo alcanzas, ganas solo la Recompensa Básica y la unidad queda Aturdida (Stunned) para el próximo combate.
-   - Gestión de Mazo en Aventura: Las cartas útiles solo en combate (hechizos, especialidades) van directamente al mazo para el combate final. Cartas de recursos o descuentos (Fincas, Sabiduría) se apartan, se usan una vez y se eliminan del juego.
-
-2. MODO ESCARAMUZA (SKIRMISH MODE):
-   - Sin fase de aventura. Selección directa de nivel de héroe, especialidades, habilidades, artefactos, hechizos y tropas según la duración:
-     * Partida Corta: Héroe Nivel III, Especialidad Nivel I, 2 Habilidades, 1 Artefacto, 1-2 Hechizos, Tropas Bronce/Plata 'Unas pocas'.
-     * Partida Media: Héroe Nivel V, Especialidades Nivel I y IV, 3 Habilidades, 2 Artefactos, 2-4 Hechizos, Tropas Bronce/Plata 'Manada'.
-     * Partida Larga: Héroe Nivel VII, Todas las Especialidades, 4 Habilidades, 3 Artefactos, 3-5 Hechizos, Todas las Tropas (Bronce, Plata, Oro) 'Manada'.
-
-3. COMBATE TÁCTICO EN EL TABLERO HEXAGONAL DE CAMPO DE BATALLA:
-   - Despliegue de Obstáculos: Fichas de Efecto, Obstáculo y Muro/Puerta. Ningún obstáculo puede colocarse adyacente a otro obstáculo ni a la zona de despliegue del rival. Las miniaturas de unidades también cuentan como obstáculos.
-   - Reglas Tácticas Hexagonales:
-     * Movimiento de Unidades: El alcance de movimiento es igual a su valor de Iniciativa (ej. Iniciativa 8 mueve hasta 8 hexágonos).
-     * Tropas a Distancia: Pueden mover O atacar, pero no ambas acciones en la misma activación.
-     * Penalización a Distancia: Se aplica si atacan a un enemigo adyacente O a una distancia de 8 o más hexágonos.
-     * Empates de Iniciativa: Se activa una unidad del jugador con la Ficha de Iniciativa y luego se alternan. La ficha rota al rival tras resolver ese rango de iniciativa.
-     * Recuperación de Fin de Ronda (Aventura/Escaramuza): Recuperas 1 uso de Experto gastado (hasta tu límite de héroe) y robas 2 cartas de tu mazo.
-
-4. TABLERO DE CAMPO DE BATALLA EN PARTIDAS REGULARES (PvP / ASEDIO):
-   - Permite desplegar hasta 7 unidades por jugador en combates PvP.
-   - Reglas de Asedio: Las unidades defensoras solo pueden cruzar la Puerta a través de sus dos casillas centrales. Las unidades atacantes pueden golpear la puerta desde cualquiera de sus 4 casillas.`
-  },
-  {
-    id: "reescritura2-03-variantes-de-reglas-y-mazos-separados",
-    title: "Reescritura 2.0 Dev: Variantes de Reglas Oficiales (Cartas del Caos, Reserva de Oro, Draft Inicial, Mazos Separados y Ajustes de Dificultad)",
-    category: "general",
-    content: `VARIANTES DE REGLAS Y RECOMENDACIONES DE DISEÑADORES (REESCRITURA V2.0 DEV):
-
-1. VARIANTEDECARTAS DEL CAOS:
-   - En lugar de descartar una carta jugada, elimínala del juego y roba la carta superior de su mazo correspondiente a tu pila de descartes (las cartas de Estadística y Especialidad se descartan normalmente).
-
-2. VARIANTE DE RESERVA DE ORO (GOLD POOL):
-   - Fondo Reservado: Los recursos invertidos en reclutar o reforzar tropas no se devuelven a la caja, sino a una pila llamada 'Fondo Reservado'.
-   - Reembolso y Venta: Al usar la ficha de población, puedes vender unidades o recuperar sus costes (en Oro u Objetos de Valor) desde el Fondo Reservado al 'Fondo No Gastado' si la tropa muere o se reduce de Manada a Unas Pocas.
-
-3. VARIANTE DE DRAFT INICIAL (3+ JUGADORES):
-   - Selección de Mazo por Draft: Cada jugador roba 2 cartas de los mazos de Artefactos, Habilidades y Hechizos (6 cartas total), se queda con 1 de cada tipo y pasa las 5 restantes al jugador de la izquierda/derecha alternativamente hasta reunir 12 cartas en draft, que luego se refinan junto a las características en un mazo inicial preparado de 9 cartas.
-
-4. VARIANTE DE MAZOS SEPARADOS DE ARTEFACTOS Y HECHIZOS:
-   - Separación por Niveles:
-     * Artefactos divididos en 3 mazos: Menor, Mayor y Reliquia.
-     * Hechizos divididos en 2 mazos: Básico y Experto.
-   - Disponibilidad según la Loseta del Héroe:
-     * Losetas I y II-III: Mazo Menor / Mazo Básico.
-     * Losetas IV-V: Mazos Menor y Mayor / Mazos Básico y Experto.
-     * Losetas VI-VII: Mazos Menor, Mayor y Reliquia / Mazos Básico y Experto.
-
-5. TABLA DE AJUSTES OPCIONALES DE DIFICULTAD:
-   - Para Aumentar Dificultad: Ciudades no producen recursos al ser señalizadas (solo dan uso de edificios); prohibido relanzar dados; dados de tesoro/recursos solo otorgan 1 recurso; sin bonificador inicial.
-   - Para Reducir Dificultad: Iniciar con Héroe Secundario gratuito; todas las tropas infligen al menos 1 de daño garantizado al atacar; minas/asentamientos producen el doble de ingresos; alargar combate no cuesta PM.`
-  },
-  {
-    id: "reescritura2-04-compendio-de-palabras-clave-y-fichas",
-    title: "Reescritura 2.0 Dev: Compendio Consolidado de Palabras Clave y Fichas de Componente (Invocaciones, Fichas en Tropas, Obstáculos Tácticos y Permanentes)",
-    category: "componentes",
-    content: `GLOSARIO CONSOLIDADO DE PALABRAS CLAVE Y FICHAS DE COMPONENTE (REESCRITURA V2.0 DEV):
-
-1. MECÁNICAS DE INVOCACIÓN (SUMMONING):
-   - Invocación de Elementales (Conflujo): Invocados mediante hechizos a casillas libres con lado 'Unas pocas' o 'Manada' según SpellPower. No se añaden al mazo de unidades permanente.
-   - Invocación de Demonios (Inferno - Amo del Abismo / Pit Lords): Invoca o refuerza unidades de Demonios en combate. Tras la batalla, los Demonios invocados SE AÑADEN a tu mazo de unidades permanente.
-
-2. FICHAS DE MODIFICACIÓN DE ESTADÍSTICAS EN UNIDADES (TOKENS ON UNITS):
-   - Ficha de Debilidad (Weakness Token): Aplica -1 o -2 al valor de Ataque de la unidad (max 1 ficha por unidad).
-   - Ficha de Ataque (Attack Token): Otorga +1 o +2 al valor de Ataque de la unidad (max 1 ficha por unidad).
-   - Ficha de Corrosión (Corrosion Token): Reduce la Defensa de la unidad en -1 (mínimo 0) hasta el final del combate.
-   - Fichas de Pila / Unidades Apiladas (Stack Tokens / Creature Banks): Modifican estadísticas (+1 Ataque, +1 Defensa, +1 PS o +2 Iniciativa). Al recibir daño letal, se descarta 1 ficha de pila y la unidad se cura por completo antes de aplicar el daño excedente.
-
-3. OBSTÁCULOS TÁCTICOS Y HECHIZOS ESPECIALES:
-   - Muro de Fuego (Fire Wall Token - Luna / Conflujo): Ficha de obstáculo que inflige daño al ser atravesada.
-   - Campo de Fuerza (Force Field Token): Obstáculo físico que bloquea el paso de tropas terrestres; solo las unidades Voladoras (<Flying>) pueden atravesarlo.
-   - Arenas Movedizas (Quicksand Token): Fichas ocultas (-1 o vacías) que detienen inmediatamente el movimiento y la activación de la unidad al ser pisadas.
-   - Minas Terrestres (Land Mine Token): Fichas ocultas (2 de daño o vacías) que infligen 2 de daño a la tropa al entrar en la casilla.
-   - Fichas de Clonación (Clone Token): Crea una copia de una unidad con 1 PS y 0 Defensa. Cualquier daño recibido destruye el clon.
-
-4. CARTAS PERMANENTES (PERMANENT CARDS):
-   - Efectos continuos en mesa (Máquinas de Guerra, Escuelas de Magia, etc.). Límite de 1 carta permanente activa simultáneamente por héroe.`
+RECURSOS DE LA COMUNIDAD: además del reglamento oficial, la comunidad de jugadores mantiene un Wiki no oficial en inglés (homm3bg.wiki) con notas detalladas que aclaran la redacción ambigua de numerosas cartas del juego, recopilando además erratas y aclaraciones de los propios diseñadores. Es un buen punto de consulta adicional ante dudas sobre el texto exacto de una carta concreta, aunque no sustituye al reglamento oficial de Archon Studio.`
   }
 ];
+
 
 
 
