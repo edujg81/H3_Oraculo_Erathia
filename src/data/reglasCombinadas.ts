@@ -923,52 +923,202 @@ MISIÓN 3 — "Duque Alarice" (11 rondas):
 - Derrota: perder tu ciudad, o no ganar antes del final de la ronda 11.`
   },
   {
-    id: "cap_exp_metas_ampliadas_campana_torre",
-    title: "Expansión Metas Ampliadas: Campaña de la Torre — El Matadragones",
+    id: "cap_05_exp_metas_ampliadas_campana_torre",
+    title: "Expansión Metas Ampliadas: 5. Campaña de la Torre — El Matadragones",
     category: "campaña",
     content: `Campaña de 4 misiones para la facción Torre, protagonizada por Dracon o Solmyr (referencia de preparación y condiciones; el contenido narrativo está en el Libro de Misiones físico). Las misiones 2 y 3 requieren, respectivamente, las expansiones Fortaleza y Murallas (si no se tienen, se pueden saltar).
 
-MISIÓN 1 — "Dragones de Cristal" (9 rondas): héroe a elegir. Recursos iniciales 15 de Oro/3 Materiales/1 Objeto de Valor, +5 de producción de Oro. Edificios iniciales: vivienda de bronce, vivienda de plata. Bonificador a elegir: +2 Objetos de Valor, añadir unos pocos gólems de hierro, o reforzar gremlins/gárgolas. Enemigo: ejército de dragones de cristal. Reglas: visitar un obelisco activa un evento especial; no se puede descubrir ninguna loseta cercana antes de descubrir todas las lejanas. Victoria: visitar un obelisco y ganar el combate que aparece ahí. Derrota: perder una batalla, o no ganar antes del final de la ronda 9.
+Dracon realiza las pruebas preparadas por su madre para convertirse en el matadragones definitivo, enfrentándose a las wyrms más letales.
 
-MISIÓN 2 — "Dragones Herrumbrosos" (11 rondas, requiere Fortaleza): héroe a elegir. Recursos iniciales 18 de Oro/1 Material/3 Objetos de Valor. Edificios iniciales: vivienda de bronce, ciudadela. Bonificador a elegir: +5 Objetos de Valor, o reforzar magos. Enemigos: 3 ejércitos sucesivos de dragones herrumbrosos (crecientes en tamaño). Reglas: no se puede entrar en el estanque de gemas hasta capturar 3 minas; derrotar un ejército enemigo da 1 Objeto de Valor y experiencia. Victoria: capturar todas las minas y el estanque de gemas, derrotando a sus defensores. Derrota: perder una batalla, o no ganar antes del final de la ronda 11.
+MISIÓN 1 — "Dragones de Cristal" (9 rondas):
+- Héroe Principal: a elegir (Dracon o Solmyr).
+- Recursos iniciales: 15 de Oro/3 Materiales/1 Objeto de Valor, +5 de producción de Oro.
+- Edificios iniciales: vivienda de bronce, vivienda de plata.
+- Bonificador a elegir: +2 Objetos de Valor, añadir unos pocos gólems de hierro, o reforzar gremlins/gárgolas.
+- Enemigo: ejército de dragones de cristal.
+- Reglas:
+	a) visitar un obelisco activa un evento especial
+	b) no se puede descubrir ninguna loseta cercana antes de descubrir todas las lejanas.
+- Victoria: revelar las losetas lejanas, visitar un obelisco y derrotar al ejército de Dragones de Cristal.
+- Derrota: perder una batalla, o no ganar antes del final de la ronda 9.
 
-MISIÓN 3 — "Dragones Hada" (13 rondas, requiere Murallas): héroe a elegir. Recursos iniciales 15 de Oro/5 Materiales/1 Objeto de Valor, +5 de producción de Oro. Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela. Bonificador a elegir: +4 Materiales, o reforzar magos. Enemigos: 3 ejércitos sucesivos de dragones hada (con trolls en el 2º y 3º). Reglas: tras capturar el primer asentamiento, cada nuevo asentamiento capturado activa un evento de historia. Victoria: capturar todos los asentamientos del mapa y ganar el combate final en la Caja de Pandora. Derrota: perder una batalla, o no ganar antes del final de la ronda 13.
+MISIÓN 2 — "Dragones Herrumbrosos" (11 rondas, requiere Fortaleza):
+- Héroe Principal: a elegir (Dragon o Solmyr).
+- Recursos iniciales: 18 de Oro/1 Material/3 Objetos de Valor.
+- Edificios iniciales: vivienda de bronce, ciudadela.
+- Bonificador a elegir: +5 Objetos de Valor, o reforzar magos.
+- Enemigos: 3 ejércitos sucesivos de dragones herrumbrosos (crecientes en tamaño).
+- Reglas:
+	a) no se puede entrar en el estanque de gemas hasta capturar 3 minas
+	b) derrotar un ejército enemigo da 1 Objeto de Valor y experiencia.
+- Victoria: Capturar 3 minas infestadas de ácido (sufriendo parálisis y reducción de tropas) y derrotar al ejército final en el Estanque de Gemas.
+- Derrota: perder una batalla, o no ganar antes del final de la ronda 11.
 
-MISIÓN 4 — "Dragones Azures" (11 rondas): héroe a elegir. Recursos iniciales 30 de Oro/4 Materiales/2 Objetos de Valor, +5 de producción de Oro. Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela. Bonificador a elegir: buscar(3) en habilidades, en hechizos, o en artefactos. Enemigos: ejércitos de dragones de cristal, dragones negros y dragones azures, uno en cada uno de los 3 obeliscos del mapa (cada uno se combate solo una vez), más el ejército final en la utopía del dragón. Reglas: tomar un obelisco da a elegir 2 Objetos de Valor o 7 de Oro; tras tomar el primer obelisco, la dificultad de todos los combates del mapa sube +1; no se puede entrar en la utopía del dragón hasta controlar los 3 obeliscos. Victoria: visitar los 3 obeliscos y derrotar después el ejército final en la utopía del dragón. Derrota: perder una batalla, o no ganar antes del final de la ronda 11.`
+MISIÓN 3 — "Dragones Hada" (13 rondas, requiere Murallas):
+- Héroe Principal: a elegir (Dracon o Solmyr).
+- Recursos iniciales: 15 de Oro/5 Materiales/1 Objeto de Valor, +5 de producción de Oro.
+- Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela.
+- Bonificador a elegir: +4 Materiales, o reforzar magos.
+- Enemigos: 3 ejércitos sucesivos de dragones hada (con trolls en el 2º y 3º).
+- Reglas: tras capturar el primer asentamiento, cada nuevo asentamiento capturado activa un evento de historia.
+- Victoria: Superar las ilusiones del duendecillo Erik, capturar los 4 asentamientos oprimidos y ganar el combate final en la Caja de Pandora.
+- Derrota: perder una batalla, o no ganar antes del final de la ronda 13.
+
+MISIÓN 4 — "Dragones Azures" (11 rondas):
+- Héroe Principal: a elegir (Dracon o Solmyr).
+- Recursos iniciales: 30 de Oro/4 Materiales/2 Objetos de Valor, +5 de producción de Oro.
+- Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela.
+- Bonificador a elegir: buscar(3) en habilidades, en hechizos, o en artefactos.
+- Enemigos: ejércitos de dragones de cristal, dragones negros y dragones azures, uno en cada uno de los 3 obeliscos del mapa (cada uno se combate solo una vez), más el ejército final en la utopía del dragón.
+- Reglas: 
+	a) tomar un obelisco da a elegir 2 Objetos de Valor o 7 de Oro
+	b) tras tomar el primer obelisco, la dificultad de todos los combates del mapa sube +1
+	c) no se puede entrar en la utopía del dragón hasta controlar los 3 obeliscos.
+- Victoria: visitar los 3 obeliscos y derrotar después el ejército final en la utopía del dragón.
+- Derrota: perder una batalla, o no ganar antes del final de la ronda 11.`
   },
 
   // =========================================================================
   // EXPANSIÓN FORTALEZA (FORTRESS) Y LIBRO DE MISIONES "JUGANDO CON FUEGO"
   // =========================================================================
   {
-    id: "cap_exp_fortaleza_componentes",
-    title: "Expansión Fortaleza: Componentes y Cartas de Evento",
+    id: "cap_01_exp_fortaleza_componentes",
+    title: "Expansión Fortaleza: 1. Componentes",
     category: "componentes",
     content: `Esta expansión añade la facción Fortaleza (gnolls, hombres lagarto y criaturas de las ciénagas de Tatalia), introduce las Cartas de Evento (ver capítulo 3, Preparación de la Partida — Orden de las Rondas) y nuevos lugares del mapa (ver capítulo 8, Elementos del Mapa), además de compartir las Escuelas de Magia con la expansión Metas Ampliadas y las reglas de Modo Alianza con la expansión Murallas.
 
-COMPONENTES DE LA EXPANSIÓN: 7 losetas de mapa (1 inicial, 3 lejanas, 2 cercanas, 1 central), 1 tablero de ciudad, 1 libro de misiones, 1 ayuda de juego, 2 miniaturas de héroe, 7 miniaturas de unidad, 1 carta de héroe a doble cara, 7 cartas de unidad, 7 losetas de edificio de ciudad, 2 cartas de unidad neutral, 3 cartas de anuncio astrológico, 8 cartas de artefacto, 20 cartas de hechizo, 4 cartas de habilidad, 6 cartas de especialidad, 20 cartas de evento, 8 cartas de característica (4 defensa, 2 poder, 2 conocimiento), fichas de oro/materiales/objetos de valor/construcción/población/libro de hechizos/moral, y 30 cubos acrílicos (10 negros, 20 verde oscuro).`
+COMPONENTES DE LA EXPANSIÓN:
+LOSETAS Y TABLEROS:
+- 7 Losetas de mapa (1 inicial [S5], 3 lejanas [F13, F14, F15], 2 cercanas [N9, N10], 1 central [C1])
+- 1 Tablero de ciudad de la facción Fortaleza (Fortress)
+- 1 Libro de misiones de Fortaleza (28 páginas)
+- 1 Ayuda de juego
+
+MINIATURAS Y CARTAS:
+- 2 Miniaturas de héroe
+- 7 Miniaturas de unidad (Gnolls, Hombres Lagarto, Libélulas, Basiliscos, Gorgonas, Wyverns, Hidras)
+- 1 Carta de héroe a doble cara (Adrienne / Wystan)
+- 7 Cartas de unidad de Fortaleza (a doble cara: "unas pocas" / "manada")
+- 7 Losetas de edificio de ciudad de Fortaleza
+- 2 Cartas de unidad neutral
+- 3 Cartas de anuncio astrológico
+- 8 Cartas de artefacto
+- 20 Cartas de hechizo
+- 4 Cartas de habilidad
+- 6 Cartas de especialidad de héroe
+- 20 Cartas de Evento (Mazo de eventos del mapa)
+- 8 Cartas de característica (4 Defensa, 2 Poder, 2 Conocimiento)
+
+FICHAS Y RECURSOS:
+- 9 Fichas de oro (3 de "1", 3 de "3", 3 de "10")
+- 6 Fichas de materiales de construcción (3 de "1", 3 de "3")
+- 4 Fichas de objetos de valor (3 de "1", 1 de "3")
+- 1 Ficha de construcción, 1 de población, 1 de libro de hechizos, 1 de moral
+- 30 Cubos acrílicos (10 negros, 20 verde oscuro)`
   },
   {
-    id: "cap_exp_fortaleza_escenarios",
-    title: "Expansión Fortaleza: Escenarios Independientes (Arrogancia y En Busca del Grial)",
+    id: "cap_02_exp_fortaleza_mecanicas",
+    title: "Expansión Fortaleza: 1. Cartas de Evento y Nuevas Localizaciones (Erudito)",
+    category: "general",
+    content: `NUEVAS MECÁNICAS E INTRODUCCIONES DE LA EXPANSIÓN FORTALEZA:
+
+1. CARTAS DE EVENTO (Nuevo tipo de mazo):
+   - Al comienzo de cada ronda de recursos (excepto la primera), tras cobrar ingresos, se roba y resuelve 1 carta de evento.
+   - La primera la roba el jugador inicial y la rotación continúa en sentido horario en rondas posteriores.
+   - Se utilizan únicamente en escenarios multijugador.
+   - Las acciones descritas se ejecutan en sentido horario. Si son acciones independientes, pueden resolverse simultáneamente.
+   - Tras resolver el evento, las cartas no usadas se barajan de nuevo en el mazo de eventos.
+
+2. NUEVOS LUGARES DEL MAPA:
+   - Erudito (Visitable, Pág. 26): Lanza 1 dado de ataque y resuelve el resultado:
+     • Resultado +1: Roba la carta de característica elegida o retira una de las cartas de característica de tu mano.
+     • Resultado 0: Roba 2 cartas de habilidad, quédate con una y descarta la otra.
+     • Resultado -1: Roba 2 cartas de hechizo, quédate con una y descarta la otra.`
+  },
+  {
+    id: "cap_03_exp_fortaleza_escenarios",
+    title: "Expansión Fortaleza: 3. Escenarios Independientes (Arrogancia y En Busca del Grial)",
     category: "escenario",
     content: `Esta expansión aporta las reglas completas del Modo Alianza (idénticas a las de la expansión Murallas: equipo de 2 jugadores formado al inicio de la partida, intercambio de artefactos entre héroes en zonas adyacentes, intercambio libre de recursos entre aliados, y prohibición de señalizar un lugar ya señalizado por tu compañero de equipo).
 
-ESCENARIO DE ALIANZA — "Arrogancia" (4 jugadores, dura 12 rondas): recursos iniciales 13 de Oro/4 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 2 unidades "unas pocas" de bronce del mayor coste. Solo un héroe principal puede hacerse con la ficha de grial (aunque haya 2 losetas con grial, solo existe 1 ficha); una alianza no puede visitar su zona hasta visitar al menos 4 obeliscos diferentes o hasta que algún héroe ya la haya cogido; conseguirla cuesta 2 PM en su zona; aumenta en 5 los ingresos de Oro. Al comienzo de las rondas 3, 6 y 9, todos los héroes ganan ficha de moral positiva. Victoria: que una alianza entregue la ficha de grial en una de sus ciudades antes del final de la ronda 12 (si no, todos pierden).
+ESCENARIO DE ALIANZA — "Arrogancia" (4 jugadores, dura 12 rondas): Cuatro culturas vivían en paz hasta que las ambiciones de conquista desataron la guerra mundial.
+- Preparación del Mapa: 4 losetas iniciales (I), 8 lejanas (II-III), 8 cercanas (IV-V con 4 obeliscos), 2 centrales (VI-VII con 1 grial).
+- Recursos iniciales: 13 de Oro/4 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0».
+- Edificios iniciales: Cada jugador empieza con vivienda de bronce.
+- Tropas iniciales: 2 unidades "unas pocas" de bronce del mayor coste.
+- Reglas:
+	a) solo un héroe principal puede hacerse con la ficha de grial (aunque haya 2 losetas con grial, solo existe 1 ficha)
+	b) una alianza no puede entrar en la zona del Grial hasta visitar al menos 4 obeliscos diferentes o hasta que algún héroe ya tenga la ficha de grial
+	c) conseguir la ficha (excavar) cuesta 2 PM en su zona
+	d) entregar el grial en la ciudad aumenta en 5 los ingresos de Oro.
+- Evento contrarreloj: Al comienzo de las rondas 3, 6 y 9, todos los héroes ganan ficha de moral positiva.
+- Victoria: que una alianza entregue la ficha de grial en una de sus ciudades antes del final de la ronda 12 (si no, todos pierden).
 
-ESCENARIO DE ENFRENTAMIENTO — "En Busca del Grial" (2-3 jugadores, dura 10-13 rondas): recursos iniciales 16 de Oro/4 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 2 manadas de bronce del menor coste. Mismas reglas de "solo 1 grial existente" y umbral de obeliscos (aquí, 2 obeliscos en vez de 4). Al comienzo de las rondas 3 y 9, todos los héroes ganan +1 PM. Victoria: el héroe principal de un jugador consigue la ficha de grial y la devuelve a la ciudad de su facción antes del final de la ronda 10 (si tiene la ficha pero no ha llegado, dispone hasta la ronda 13 para conseguirlo; si no, pierde).`
+ESCENARIO DE ENFRENTAMIENTO — "En Busca del Grial" (2-3 jugadores, dura 10-13 rondas): Búsqueda competitiva del grial perdido en las ciénagas antes de que caiga en manos enemigas.
+- Recursos iniciales: 16 de Oro/4 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0».
+- Edificios iniciales: Cada jugador empieza con vivienda de bronce.
+- Tropas iniciales: 2 manadas de bronce del menor coste.
+- Reglas:
+	a) Requiere haber visitado al menos 2 obeliscos para poder acceder a la zona del Grial.
+	b) Extraer el Grial consume 2 PM. Llevarlo a la ciudad otorga +5 de ingresos de Oro.
+- Evento contrarreloj: Al comienzo de las rondas 3 y 9, todos los héroes ganan +1 PM.
+- Victoria: el héroe principal de un jugador consigue la ficha de grial y la entrega a la ciudad de su facción antes del final de la ronda 10 (si tiene la ficha pero no ha llegado, dispone hasta la ronda 13 para conseguirlo; si no, pierde).`
   },
   {
-    id: "cap_exp_fortaleza_campana",
-    title: "Expansión Fortaleza: Campaña en Solitario — Jugando con Fuego",
+    id: "cap_04_exp_fortaleza_campana",
+    title: "Expansión Fortaleza: 4. Campaña en Solitario — Jugando con Fuego",
     category: "campaña",
     content: `Campaña de 3 misiones para la facción Fortaleza, protagonizada por Adrienne o Wystan, contra héroes de IA de Necrópolis (referencia de preparación y condiciones; el contenido narrativo de cada misión está en el Libro de Misiones físico).
 
-MISIÓN 1 — "Cosecha de Ciudades" (13 rondas): héroe a elegir. Recursos iniciales 12 de Oro, sin edificios iniciales. Bonificador a elegir: buscar(3) en artefactos, buscar(3) en hechizos, o +4 Objetos de Valor. Héroe de IA: "Merodeadores Nocturnos" (ejército de vampiros/liches/zombis/momias). Reglas: nivel de experiencia máximo 5 (deja de ganar experiencia al superarlo); sin ingresos ni reclutamiento hasta conquistar la ciudad (dentro de las 4 primeras rondas, o se pierde); se prepara la habilidad Diplomacia como recurso especial de la misión, utilizable sin tener la vivienda correspondiente; visitar un obelisco antes de la ronda 6 no hace nada, después activa un evento de historia. Victoria/Derrota: condiciones ligadas a la historia (cumplir "Algunas cosas nunca cambian"); límite ronda 13.
+MISIÓN 1 — "Cosecha de Ciudades" (13 rondas): La bruja de fuego Adrienne regresa a Tatalia y descubre que la secta ilegal de Lord Haart está masacrando y resucitando a los aldeanos.
+- Héroe Principal: a elegir (Adrienne o Wystan).
+- Recursos iniciales: 12 de Oro
+- Sin edificios iniciales.
+- Bonificador a elegir: buscar(3) en artefactos, buscar(3) en hechizos, o +4 Objetos de Valor.
+- Héroe de IA: "Merodeadores Nocturnos" (ejército de vampiros/liches/zombis/momias).
+- Reglas:
+	a) nivel de experiencia máximo 5 (deja de ganar experiencia al superarlo)
+	b) sin ingresos ni reclutamiento hasta conquistar la ciudad (dentro de las 4 primeras rondas, o se pierde)
+	c) se prepara la habilidad Diplomacia como recurso especial de la misión, utilizable sin tener la vivienda correspondiente
+	d) visitar un obelisco antes de la ronda 6 no hace nada, después activa un evento de historia.
+	e) al combatir contra neutrales, la primera unidad de Bronce robada se sustituye por Zombis.
+- Victoria: condiciones ligadas a la historia.
+	1. captura la Ciudad de Basdar antes de finalizar la ronda 4 (Defendida por un ejército neutral Nivel III. Permite refundar la base de operaciones tataliana)
+	2. cumplir "Algunas cosas nunca cambian": 
+		a) Pagar tributo a los corruptos señores erathianos (40 Oro, 20 Materiales de construcción y 10 Objetos de valor)
+		b) Entrar en la zona con obelisco para combatir y derrotar al ejército de los Merodeadores Nocturnos (vampiros con +2 Iniciativa) y rescata al caballero Sir Michael.
+- Derrota: pierdes si no capturas la ciudad en 4 rondas o si no cumples las condiciones de "Algunas cosas nunca cambian" (límite ronda 13).
 
-MISIÓN 2 — "La Marcha de los No Muertos" (12 rondas): mismo héroe. Recursos iniciales 10 de Oro/3 Materiales/1 Objeto de Valor, +5 de producción de Oro. Edificios iniciales: vivienda de bronce, vivienda de plata. Bonificador a elegir entre 2 combinaciones de unidades iniciales adicionales. Héroe de IA: Nagash (ejército de caballeros del terror/vampiros/espectros/liches). Reglas: la dificultad de todos los combates del mapa sube +1 desde la ronda 3; no se puede entrar en la zona de obelisco hasta señalizar todas las minas y asentamientos (salvo los de las losetas cercanas de Mazmorra); el obelisco de Fortaleza teletransporta al de Mazmorra. Victoria: señalizar todos los asentamientos y minas del mapa antes del final de la ronda 12.
+MISIÓN 2 — "La Marcha de los No Muertos" (12 rondas): Lord Haart instala guardias de no muertos en las viviendas de Tatalia para convertir cada nuevo recluta en soldados esqueleto. Adrienne debe desmantelar su red de levantamientos.
+- Héroe Principal: mismo héroe anterior (Adrienne o Wystan).
+- Recursos iniciales: 10 de Oro/3 Materiales/1 Objeto de Valor, +5 de producción de Oro.
+- Edificios iniciales: vivienda de bronce, vivienda de plata.
+- Bonificador a elegir: entre 2 combinaciones de unidades iniciales adicionales.
+- Héroe de IA: Nagash (ejército de caballeros del terror/vampiros/espectros/liches).
+- Reglas:
+	a) la dificultad de todos los combates del mapa sube +1 desde la ronda 3
+	b) no se puede entrar en la zona de obelisco hasta señalizar todas las minas y asentamientos (salvo los de las losetas cercanas de Mazmorra)
+	c) el obelisco de Fortaleza teletransporta al de Mazmorra.
+	d) las unidades neutrales de Bronce son sustituidas progresivamente por Esqueletos, Zombis y Espectros conforme avanzan las rondas.
+- Evento: el combate contra Nagash se desencadena al intentar señalizar la segunda localización mística (Nagash cuenta con muralla y puerta en batalla).
+- Victoria: señalizar todos los asentamientos y minas del mapa antes del final de la ronda 12 y vencer al ejército de Nagash.
 
-MISIÓN 3 — "El Incendio de Tatalia" (14 rondas): mismo héroe. Recursos iniciales 15 de Oro/6 Materiales/1 Objeto de Valor, +5 de producción de Oro y +1 de Materiales. Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela. Bonificador a elegir entre 2 combinaciones de unidades iniciales adicionales. Héroes de IA (Necrópolis): 2 seguidores de lord Haart y lord Haart (con dragones negros/fantasma). Reglas: la dificultad de todos los combates del mapa sube +1; los héroes enemigos se mueven antes que el jugador; derrotar el ejército de un héroe enemigo da +2 Objetos de Valor; visitar un obelisco activa un evento especial. Victoria: visitar ambos obeliscos y derrotar a los 3 ejércitos enemigos antes del final de la ronda 14.`
+MISIÓN 3 — "El Incendio de Tatalia" (14 rondas): Confrontación definitiva contra Lord Haart y sus dos seguidores no muertos para purificar Tatalia con fuego primordial.
+- Héroe Principal: mismo héroe (Adrienne o Wystan).
+- Recursos iniciales 15 de Oro/6 Materiales/1 Objeto de Valor, +5 de producción de Oro y +1 de Materiales.
+- Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela.
+- Bonificador a elegir: entre 2 combinaciones de unidades iniciales adicionales.
+- Héroes de IA (Necrópolis): 2 seguidores de lord Haart y lord Haart (con dragones negros/fantasma).
+- Reglas:
+	a) la dificultad de todos los combates del mapa sube +1
+	b) los héroes enemigos se mueven antes que el jugador
+	c) derrotar el ejército de un héroe enemigo da +2 Objetos de Valor
+	d) visitar un obelisco activa un evento especial.
+- Misiones de los Tomos Elementales:
+  • Tomo de Tierra: Visitar el obelisco y sacrificar un artefacto de Defensa o una unidad de Plata para conseguir el tomo y la capacidad de transmutar artefactos en hechizos.
+  • Tomo de Fuego: Visitar el segundo obelisco y sacrificar un artefacto Reliquia o 4 Objetos de Valor.
+- Enfrentamiento Final contra Lord Haart (Utopía del Dragón): En la primera ronda del combate, Adrienne puede lanzar 1 hechizo de la Escuela de Tierra y 1 de la Escuela de Fuego con el máximo Poder Mágico (sin consumir el límite de hechizos y conservándolos en la mano).
+- Victoria: visitar ambos obeliscos obteniendo los dos tomos y derrotar a los 3 ejércitos enemigos antes del final de la ronda 14.`
   },
 
   // =========================================================================
@@ -1152,6 +1302,116 @@ MAZOS DE MORAL EN PARTIDAS NORMALES (opcional): se pueden usar en vez de las fic
   // =========================================================================
   // RESPUESTA ASTROLÓGICA (FAQ Y COMENTARIOS DE LOS DISEÑADORES)
   // =========================================================================
+  {
+    id: "faq-01-mecanicas-y-heroes",
+    title: "FAQ Diseñadores 1. Mecánicas de Juego Generales y Lógica de Héroes",
+    category: "faq",
+    content: `RESPUESTAS Y ACLARACIONES OFICIALES DE LOS DISEÑADORES (MECÁNICAS Y HÉROES):
+
+ORDEN DE PRIORIDAD DE LAS REGLAS:
+1. Cartas en juego (Efectos activos e instantáneos)
+2. Cartas de unidad (Habilidades especiales de tropas)
+3. Tableros de ciudad
+4. Libros de misión / escenario
+5. Libro de reglas básico
+
+Aclaración: Si un efecto activo interfiere con una regla general, la carta o habilidad específica siempre tiene prioridad sobre el reglamento.
+
+MECÁNICAS DE JUEGO GENERALES:
+• Producción en Ronda 1: En la primera ronda NO se recogen recursos por la producción de la ciudad; solo se reciben los recursos iniciales indicados en la preparación del escenario.
+• Orden de Turnos en Modo Alianza: Los equipos se activan alternadamente. Dentro del turno del equipo, los miembros pueden acordar libremente cuál de ellos actúa primero en cada ronda.
+• Despliegue de Miniaturas por Defecto: Si el escenario no especifica la casilla exacta, las miniaturas se colocan en la ciudad o en la loseta inicial.
+• Obligación de Resolver Zonas: Al entrar en cualquier zona del mapa, es obligatorio resolver la localización, comenzando por el combate si hay tropas neutrales o enemigas.
+• Reutilización de Zonas Refrescadas o Mercadillos: Aunque tu héroe ya se encuentre físicamente en la zona (por un evento o mercadillo), debes gastar 1 Punto de Movimiento (PM) para volver a activar sus efectos.
+• Cofradía de Magos y Búsqueda de Hechizos: Al buscar (X), puedes elegir una carta del descarte de hechizos o robar X cartas al azar de la parte superior del mazo. Los hechizos no deseados se pueden usar para potenciar el Poder de Hechizo de otras cartas.
+• Cartas Adquiridas: Las cartas ganadas o compradas se añaden directamente a tu MANO, no al mazo de descarte.
+• Re-señalizar Asentamientos: Si señalizas un asentamiento ya controlado, puedes cambiar/elegir un bonificador de la lista, pero NO vuelves a recibir la bonificación por señalizarlo por primera vez. Un asentamiento de tu propio bando o de un aliado no se puede volver a señalizar.
+• Líneas del Mapa (Delgadas vs Gruesas): Las líneas delgadas separan zonas transitables. Las líneas gruesas bloquean por completo el camino y el movimiento a menos que una habilidad o regla de escenario permita cruzarlas.
+• Zonas de Grial Renovables: Solo existe 1 ficha física de Grial por escenario. Si hay 2 zonas con símbolo de Grial en el mapa, al recoger la ficha en una de ellas, la otra pasa a ser una zona vacía (aunque requiera resolver combate si hay guardianes).
+• Gestión de Moral Negativa: La forma más directa de eliminar la ficha de moral negativa es ganar moral positiva. En lugar de coger la ficha positiva, descarta la ficha negativa. La facción Necrópolis es completamente inmune a los efectos de moral.
+• Héroes de Fuerza vs Magia: Los héroes de magia empiezan con más hechizos pero tienen menos cartas de uso ilimitado (ataque/defensa). Además, los hechizos consumen cartas adicionales de la mano para aumentar su Poder de Hechizo (Spell Power).
+• Cartas de Moral (+1 Ataque, Defensa o Poder de Combate): Debe jugarse ANTES de que empiece el combate y se aplica únicamente al primer ataque o defensa que resuelvas (o al poder de combate en Modo Aventura).
+
+DESARROLLO Y MANEJO DE HÉROES:
+• Atributos de la Carta de Héroe: Los atributos impresos en la carta de héroe solo sirven para configurar el mazo inicial. No se aplican de forma pasiva durante la partida. La carta de Especialidad Nivel I se añade al mazo inicial, mientras que las cartas de Nivel IV y VI se añaden cuando el héroe alcanza dichos niveles.
+• Dos Héroes en la Misma Loseta: Se permite tener dos héroes propios o aliados en la misma loseta, siempre que estén en zonas distintas. Puedes atravesar una zona con otro héroe aliado, pero no puedes finalizar el movimiento en la misma zona. Si entras en una zona con un héroe enemigo, se inicia el combate.
+• Héroe Secundario y Tesoros/Experiencia: Los héroes secundarios NO pueden ganar experiencia (si obtienen tirada de experiencia, la ignoran). Cualquier carta o recurso que consigan se añade a las reservas del héroe principal.
+• Avance de Experiencia: Por cada 2 puntos de Experiencia (EXP) que gane el héroe principal, sube 1 Nivel en el marcador.
+• Especialidades Generales (Mutare, Josephine, etc.): Las cartas de especialidad que mencionan categorías amplias (ej. 'dragones') benefician a cualquier unidad que contenga esa palabra en su nombre.
+• División de Puntos de Movimiento (PM): Puedes intercalar y dividir las acciones entre el héroe principal (3 PM) y el secundario (2 PM) como prefieras, rastreando sus PM por separado.
+• Límite de Fichas de Experto: Se pueden acumular más de 3 fichas de Experto mediante efectos de artefactos u otras cartas.`
+  },
+  {
+    id: "faq-02-ciudad-y-combate",
+    title: "FAQ Diseñadores 2. Construcción de Ciudad y Reglas Tácticas de Combate",
+    category: "faq",
+    content: `RESPUESTAS Y ACLARACIONES OFICIALES DE LOS DISEÑADORES (CIUDAD Y COMBATE):
+
+GESTIÓN DE LA CIUDAD:
+• Cofradía de Magos durante Ataque Enemigo: Si te van a atacar en el turno enemigo, puedes construir la Cofradía de Magos y obtener de inmediato los hechizos que ofrece al construirse. No obstante, no puedes usar la ficha de Libro de Hechizos en ese mismo turno porque ambas cuentan como la acción de Cofradía (máximo 1/ronda).
+• Edificios de Ciudad Enemiga Capturada: Si capturas la ciudad de otro jugador, no puedes usar sus edificios para reclutar o construir a menos que el escenario indique explícitamente lo contrario.
+• Límite de Reclutamiento y Refuerzo: La ficha de población se usa 1 vez por ronda para reclutar un héroe secundario O bien reclutar/reforzar tropas. Si decides reclutar/reforzar, puedes realizar múltiples compras y refuerzos de unidades en cualquier momento del turno pagando sus costes individuales.
+• Movimiento Adicional de la Alcaldía: El +1 PM otorgado por la Alcaldía se puede asignar libremente al héroe principal o al secundario.
+
+REGLAS TÁCTICAS DE COMBATE:
+• Elección de Múltiples Objetivos: Cuando una carta o habilidad afecta a varios objetivos, el jugador que juega la carta elige a cuáles afecta para maximizar su ventaja.
+• Significado de la palabra 'Hasta': Otorga flexibilidad y permiso (no obligación) para seleccionar menos o más objetivos de los indicados.
+• Fuego Amigo en Hechizos y Habilidades: Hechizos de área (Bola de fuego, Anillo gélido, Inferno) y habilidades de aliento (Dragones, Liches) dañan a unidades aliadas si están adyacentes al objetivo. Debe usarse tácticamente.
+• Cartas Instantáneas entre Ataque y Contraataque: Se pueden jugar cartas con el símbolo de efecto instantáneo inmediatamente después del ataque y antes del contraataque.
+• Reclutamiento Pre-Combate: Puedes reclutar/reforzar unidades justo antes de entablar combate contra otro jugador si aún no has gastado tu ficha de población de la ronda.
+• Ubicación de Puertas y Murallas en Asedio: Se colocan en la fila sombreada central del tablero de combate. El jugador defensor escoge cuál de las 4 casillas de la fila sostiene la carta de Puerta.
+• Combates Rápidos de Héroes Secundarios: Se determinan usando el nivel del héroe principal (ya que el secundario no tiene nivel propio).
+• Hechizo Resurrección y Contraataque: Si una unidad pasa de la cara 'Manada' a 'Unas pocas', Resurrección se activa en el instante en que los PG llegan a 0, anulando el golpe definitivo y evitando que la unidad defensora contraataque.
+• Hechizos y Tirada de Ataque/Defensa: Los hechizos ignoran la defensa de la unidad e infligen el número exacto de fichas de daño indicado. No se tira dado de ataque para potenciar hechizos.
+• Ignorar Contraataques: La habilidad de ignorar contraataques (ej. Duendes) se aplica a TODOS los ataques que realice la unidad en esa ronda.
+• Tienda de Primeros Auxilios: Se usa 1 vez por ronda de combate y debe activarse ANTES de que la unidad reciba el ataque/contraataque para salvarla antes de que sufra el daño.
+• Daño por Hechizo y Parálisis: Sufrir al menos 1 punto de daño por cualquier fuente (incluidos hechizos) retira la ficha de Parálisis de la unidad.
+• Habilidad Especial de los Liches: Su efecto en área funciona en todos sus ataques.
+• Cartas Instantáneas en Turno Enemigo: Se pueden jugar en cualquier momento antes de la tirada de ataque enemiga.
+• Control de Unidades Neutrales: Las unidades neutrales están obligadas a atacar si hay un objetivo al alcance. No pueden defenderse ni alejarse si pueden golpear.
+• Hechizo Retirar Obstáculo: Puede eliminar puertas, murallas y muros de fuego, pero NUNCA unidades militares.
+• Muro de Fuego y Tránsito: A diferencia de otros obstáculos, el Muro de Fuego no impide que una unidad entre en la casilla (sufriendo el daño correspondiente).
+• Hechizo Terremoto: Afecta únicamente a obstáculos de muralla y puerta.
+• Concepto de 'Adyacente': En el tablero de combate estándar es ortogonal exclusivamente. En el tablero de Campo de Batalla (hexagonal) son todas las casillas que comparten un borde.
+• Hechizo Furia Asesina: Quien recibe la Furia Asesina en su unidad elige a quién atacar, pero está obligado a atacar a la unidad más cercana (incluso si es aliada).
+• Derrota contra Neutrales: Si pierdes todas tus unidades contra neutrales, el héroe se retira a una ciudad o asentamiento controlado con las tropas iniciales del escenario.
+• Empate contra Neutrales: Si se activan todas las tropas sin un vencedor y no gastas PM para prolongar, el héroe se retira a la última zona visitada.`
+  },
+  {
+    id: "faq-03-unidades-y-cartas",
+    title: "FAQ Diseñadores 3. Habilidades Únicas de Unidades y Lógica de Cartas",
+    category: "faq",
+    content: `RESPUESTAS Y ACLARACIONES OFICIALES DE LOS DISEÑADORES (UNIDADES Y CARTAS):
+
+HABILIDADES ESPECIALES DE UNIDADES:
+• Ataques Múltiples (ej. Cruzados, Hidras): Cada ataque se resuelve y tira por separado. Las cartas instantáneas solo potencian el primer ataque de la activación.
+• Tarjeta Volteada a 'Unas Pocas': Cualquier carta o modificador aplicado a la unidad permanece en su tarjeta aunque pase de 'Manada' a 'Unas pocas'.
+• Volver a Tirar Dados (Cruzados): La habilidad dice 'puedes', lo que permite aceptar un resultado de 0 o volver a tirar todos los dados de ataque que hayan sacado 0.
+• Habilidades Pasivas en el Mapa: Las habilidades pasivas impresas en las cartas de unidad solo funcionan durante la fase de combate, no en el mapa.
+• Ataque en Línea de Dragones: Atacan a 2 unidades alineadas. El dragón sufre únicamente el contraataque de la unidad directamente adyacente.
+• Hechizo Bendición vs Zombis: Bendición ignora la tirada de dado. Al no resolverse el dado, los Zombis no ganan su defensa especial.
+• Penalización de Libélulas: La penalización de ataque infligida por las libélulas afecta únicamente al contraataque inminente de la unidad alcanzada.
+• Habilidad de las Momias: Al atacar, tiran dado pero ignoran el resultado. Al defender, giran el dado del atacante para mostrar -1.
+• Ignorar Efectos Continuos (Titanes, Gárgolas): Ignoran todas las cartas que contengan el símbolo de efecto continuo (Ongoing).
+• Inmunidad de los Efrits: Son inmunes a HECHIZOS, no a cartas de especialidad de héroe.
+• Escudo de Fuego / Especialidad de Rashka: El atacante sufre el daño reflejado inmediatamente en el mismo paso del ataque (incluso si destruye al defensor).
+• Marcadores de Veneno de Wyverns: Cada ataque coloca un cubo. Al activarse la unidad afectada, retira 1 cubo y sufre 1 de daño. Curación retira todos los cubos.
+• Desplazamiento por Dragones Fantasma: El jugador que controla la unidad objetivo la desplaza 1 casilla libre no adyacente a los dragones.
+
+LÓGICA Y USO DE CARTAS:
+• Cartas de Especialidad vs Hechizos: Las cartas de especialidad imitan hechizos pero NO son hechizos. No consumen el límite de hechizos de la ronda ni se benefician de escuelas de magia.
+• Cartas de Especialidad Novedosas (Sandro / Vidomina IV): Pueden jugarse en el mapa o en combate. Sandro puede asignar 2 de estas cartas a sus esqueletos.
+• Cartas de Especialidad Nombres Específicos (ej. Caballeros del Terror): Se pueden jugar sobre cualquier unidad propia, aunque suelen rendir mejor en la unidad que lleva su nombre.
+• Nigromancia en Tropas Neutrales: La facción Necrópolis solo puede reforzar ('Manada') a sus propias unidades no muertas.
+• Descuento de Nigromancia: Aplica exclusivamente al coste en ORO (reducido a la mitad, redondeando hacia abajo).
+• Momento de Lanzar 'Pesar': Es un efecto instantáneo que debe jugarse ANTES de que la unidad enemiga comience su activación.
+• Rayo Disruptor vs Dragones Negros: No afecta a una 'Manada' de Dragones Negros (inmunes a hechizos), pero SÍ afecta a 'Unas Pocas' de Dragones Negros (que solo reducen daño).
+• Flecha Mágica (Escuelas y Rareza): Pertenece a las 4 escuelas de magia (obtiene beneficio de 1 a la vez) y cuenta como hechizo BÁSICO.
+• Cartas Permanentes Activas: Solo puedes mantener 1 carta permanente activa a la vez por héroe.
+• Coste de Descarte al Jugar Carta: Debes resolver primero el efecto de la carta antes de depositarla en el mazo de descarte.
+• Cartas de Efecto Instantáneo en el Mapa: Se pueden jugar en el mapa, pero efectos orientados a combate directo se desperdician. Son ideales para ganar recursos o movimiento.
+• Recuperar Cartas con Conocimiento: Cartas de Conocimiento solo pueden recuperar cartas de HECHIZO del descarte (nunca especialidades de héroe).`
+  },
   {
     id: "cap_faq_diferencias_videojuego",
     title: "Preguntas Frecuentes: Diferencias entre el Videojuego Original y el Juego de Mesa",
@@ -1584,6 +1844,6 @@ ESCENARIO SOLITARIO — "Isla de Fuego" (1 jugador, dura 16 rondas): recursos in
     category: "faq",
     content: `JUGAR CON MINIATURAS (regla general, aplicable a cualquier partida): si prefieres usar miniaturas de unidad en vez de solo cartas durante el combate, colócalas y muévelas sobre el tablero de combate; puedes ponerlas encima de las cartas o dejar las cartas a un lado a modo de "barra de iniciativa" para visualizar mejor el orden de activación. Si juegas así, aplica estas reglas: al robar una carta de unidad neutral, si sale una unidad neutral repetida, una que ya tengas en tu ejército, o una de tu propia facción, descártala y roba otra en su lugar; al reclutar unidades neutrales con Diplomacia, tampoco puedes reclutar una unidad de una facción controlada por otro jugador ni una ya presente en el ejército de cualquier jugador (descarta esa carta y roba otra).
 
-RECURSOS DE LA COMUNIDAD: además del reglamento oficial, la comunidad de jugadores mantiene un Wiki no oficial en inglés (homm3bg.wiki) con notas detalladas que aclaran la redacción ambigua de numerosas cartas del juego, recopilando además erratas y aclaraciones de los propios diseñadores. Es un buen punto de consulta adicional ante dudas sobre el texto exacto de una carta concreta, aunque no sustituye al reglamento oficial de Archon Studio.`
+RECURSOS DE LA COMUNIDAD: además del reglamento oficial, la comunidad de jugadores mantiene una Wiki no oficial en inglés, traducida parcialmente por mí mismo (homm3bg.wiki) con notas detalladas que aclaran la redacción ambigua de numerosas cartas del juego, recopilando además erratas y aclaraciones de los propios diseñadores. Es un buen punto de consulta adicional ante dudas sobre el texto exacto de una carta concreta, aunque no sustituye al reglamento oficial de Archon Studio. No he continuado con la traducción al castellano por falta de tiempo y porque ya he incluido los textos de cada carta aquí, lo que ha sido una tarea larga y tediosa.`
   }
 ];
