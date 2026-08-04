@@ -648,18 +648,68 @@ SÍMBOLOS EN EL MAPA:
   // EXPANSIÓN MURALLAS (RAMPART) Y LIBRO DE MISIONES
   // =========================================================================
   {
-    id: "cap_exp_murallas_componentes_mecanicas",
-    title: "Expansión Murallas (Rampart): Componentes y Mecánicas Nuevas",
+    id: "cap_01_exp_murallas_componentes",
+    title: "Expansión Murallas: 1. Componentes",
     category: "componentes",
     content: `La expansión Murallas añade la facción Murallas (elfos y enanos de AvLee) e introduce las cartas de Máquina de Guerra, las Cartas de Efecto Permanente (ver capítulo 5, Construcción del Mazo) y nuevos lugares del mapa (ver capítulo 8, Elementos del Mapa).
 
-COMPONENTES DE LA EXPANSIÓN: 7 losetas de mapa (1 inicial, 3 lejanas, 2 cercanas, 1 central), 1 tablero de ciudad, 1 libro de misiones, 1 ayuda de juego, 2 miniaturas de héroe, 7 miniaturas de unidad, 1 carta de héroe a doble cara, 7 cartas de unidad, 7 losetas de edificio de ciudad, 2 cartas de unidad neutral, 3 cartas de anuncio astrológico, 8 cartas de artefacto, 20 cartas de hechizo, 4 cartas de habilidad, 6 cartas de especialidad, 12 máquinas de guerra, 7 cartas de característica (1 ataque, 3 defensa, 1 poder, 2 conocimiento), 9 fichas de oro, 6 fichas de materiales de construcción, 4 fichas de objetos de valor, 1 ficha de construcción, 1 de población, 1 de libro de hechizos, 1 de moral, y 30 cubos acrílicos (10 negros, 20 verdes).
-
-MÁQUINA DE GUERRA (nuevo tipo de carta): se consigue en la Fábrica de Máquinas de Guerra o en un Mercadillo (más caro, 3 de Oro extra, y consume toda la visita al mercadillo). El mazo de máquinas de guerra queda al alcance de todos los jugadores. Cada carta indica su nombre, efecto, coste en la fábrica y coste en el mercadillo.`
+COMPONENTES DE LA EXPANSIÓN:
+	LOSETAS Y TABLEROS:
+	- 7 Losetas de mapa (1 inicial [I], 3 lejanas [II-III], 2 cercanas [IV-V], 1 central [VI-VII])
+	- 1 Tablero de ciudad de la facción Murallas (Rampart)
+	- 1 Libro de misiones de Murallas (28 páginas)
+	- 1 Ayuda de juego
+	
+	MINIATURAS Y CARTAS:
+	- 2 Miniaturas de héroe (Gem y Gelu)
+	- 7 Miniaturas de unidad (Centauros, Enanos, Elfos, Pegasos, Dendroides, Unicornios, Dragones Dorados)
+	- 1 Carta de héroe a doble cara (Gem / Gelu)
+	- 7 Cartas de unidad de Murallas (a doble cara)
+	- 7 Losetas de edificio de ciudad de Murallas
+	- 2 Cartas de unidad neutral
+	- 3 Cartas de anuncio astrológico
+	- 8 Cartas de artefacto
+	- 20 Cartas de hechizo
+	- 4 Cartas de habilidad
+	- 6 Cartas de especialidad de héroe
+	- 12 Cartas de Máquina de Guerra (Balista, Catapulta, Carro de Municiones, Tienda de Primeros Auxilios, etc.)
+	- 7 Cartas de característica (1 Ataque, 3 Defensa, 1 Poder, 2 Conocimiento)
+	
+	FICHAS Y RECURSOS:
+	- 9 Fichas de oro (3 de "1", 3 de "3", 3 de "10")
+	- 6 Fichas de materiales de construcción (3 de "1", 3 de "3")
+	- 4 Fichas de objetos de valor (3 de "1", 1 de "3")
+	- 1 Ficha de construcción
+	- 1 Ficha de población
+	- 1 Ficha de libro de hechizos
+	- 1 Ficha de moral
+	- 30 cubos acrílicos (10 negros, 20 verdes).`
   },
   {
-    id: "cap_exp_murallas_alianza_escenarios",
-    title: "Expansión Murallas (Rampart): Modo Alianza y Escenarios Independientes",
+    id: "cap_02_exp_murallas_mecanicas",
+    title: "Expansión Murallas: 2. Efectos Permanentes, Máquinas de Guerra y Mapa",
+    category: "general",
+    content: `NUEVAS MECÁNICAS E INTRODUCCIONES DE LA EXPANSIÓN:
+
+1. CARTAS DE EFECTO PERMANENTE (Icono Infinito ∞):
+   - Otorgan un bonificador pasivo o condición continua.
+   - Al jugarse, la carta se coloca frente al jugador y permanece activa hasta descartarse o sustituirse.
+   - Cada héroe solo puede tener 1 carta de efecto permanente activa a la vez.
+   - Permiten usar efectos básicos o avanzados (según el nivel del héroe), pero no se apilan entre sí.
+
+2. MÁQUINAS DE GUERRA (Balista, Catapulta, Carro de Municiones, Tienda de Primeros Auxilios):
+   - Se compran en la Fábrica de Máquinas de Guerra o en el Mercadillo (más caro, 3-4 de Oro extra, y consume toda la visita al mercadillo).
+   - Comprar una máquina de guerra en un Mercadillo impide realizar otras acciones en esa visita y cuesta 3 de oro adicionales sobre su precio de fábrica.
+   - El mazo de máquinas de guerra queda al alcance de todos los jugadores.
+   - Cada carta indica su nombre, efecto, coste en la fábrica y coste en el mercadillo.
+   
+3. NUEVAS LOCALIZACIONES DEL MAPA:
+   - Fábrica de Máquinas de Guerra (Re-visitable): Permite comprar máquinas de guerra.
+   - Aserradero (Mina - Señalizable): Produce pasivamente 2 Materiales de Construcción por ronda de recursos.`
+  },
+  {
+    id: "cap_03_exp_murallas_alianza",
+    title: "Expansión Murallas: 3. Modo Alianza",
     category: "modos",
     content: `MODO ALIANZA — REGLAS ADICIONALES (requiere esta expansión y 4 jugadores, formando una alianza de 2 contra 2):
 • Una alianza es un equipo de 2 jugadores formado al inicio de la partida, que dura el resto del escenario.
@@ -667,68 +717,215 @@ MÁQUINA DE GUERRA (nuevo tipo de carta): se consigue en la Fábrica de Máquina
 • Los jugadores aliados pueden intercambiarse artefactos si sus héroes están en zonas adyacentes.
 • Los recursos se intercambian libremente entre aliados durante el turno de cualquiera de ellos, sin necesitar adyacencia.
 • Un jugador de una alianza no puede señalizar un lugar que ya haya señalizado su compañero de equipo.
-ACABAR UN ESCENARIO: los héroes aliados comparten condiciones de victoria y derrota; no existe un paso adicional para comparar quién contribuyó más a la victoria.
 
-ESCENARIO DE ALIANZA — "El Desafío" (4 jugadores, dura 11-14 rondas): el rey ha lanzado un desafío para construir el grial en la capital Osha en 6 meses. Recursos iniciales 16 de Oro/4 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 2 manadas de bronce del menor coste. Al visitar un obelisco, lanza 2 dados de tesoro y resuelve 1. Una alianza no puede visitar la zona del grial hasta visitar al menos 4 obeliscos diferentes o hasta que algún héroe ya haya cogido la ficha; conseguirla cuesta 2 PM en su zona; la ficha aumenta en 5 los ingresos de Oro. Victoria: llevar la ficha de grial a la ciudad de tu facción. Si nadie la consigue al final de la ronda 11, todos pierden; si se consigue, hay hasta la ronda 14 para llevarla a la ciudad.
-
-ESCENARIO DE ENFRENTAMIENTO — "Oro Enano" (2-3 jugadores, dura 10 rondas): tras el hallazgo de una veta de 75.000 monedas, los señores locales organizan expediciones. Recursos iniciales 15 de Oro/3 Materiales/1 Objeto de Valor, ingresos «10»/«2»/«0». Cada jugador empieza con 1 manada de bronce del mayor coste. Prohibido usar cartas que den recursos (si se roban, se muestran, descartan y se roba otra). Solo los héroes principales pueden coger la ficha de grial, que da 15 de Oro inmediatos y +5 de ingresos de Oro al llegar a la ciudad. Victoria: tener 75 de Oro al final de una ronda (empate = gana quien tenga más). Si nadie lo logra antes del final de la ronda 10, todos pierden.`
+ACABAR UN ESCENARIO: los héroes aliados comparten condiciones de victoria y derrota; no existe un paso adicional para comparar quién contribuyó más a la victoria.`
   },
   {
-    id: "cap_exp_murallas_campana",
-    title: "Expansión Murallas (Rampart): Campaña en Solitario — La Venganza se Sirve Fría",
+    id: "cap_04_exp_murallas_escenarios",
+    title: "Expansión Murallas: 4. Escenarios",
+    category: "escenario",
+    content: `ESCENARIOS:
+ESCENARIO DE ALIANZA — "El Desafío" (4 jugadores, dura 11-14 rondas): el rey ha lanzado un desafío para construir el grial en la capital Osha en 6 meses. 
+- Recursos iniciales 16 de Oro/4 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0».
+- Cada jugador empieza con vivienda de bronce y 2 manadas de bronce del menor coste.
+- Al visitar un obelisco, lanza 2 dados de tesoro y resuelve 1.
+- Una alianza no puede visitar la zona del grial hasta visitar al menos 4 obeliscos diferentes o hasta que algún héroe ya haya cogido la ficha; conseguirla cuesta 2 PM en su zona; la ficha aumenta en 5 los ingresos de Oro.
+- Victoria: llevar la ficha de grial a la ciudad de tu facción. Si nadie la consigue al final de la ronda 11, todos pierden; si se consigue, hay hasta la ronda 14 para llevarla a la ciudad.
+
+ESCENARIO DE ENFRENTAMIENTO — "Oro Enano" (2-3 jugadores, dura 10 rondas): tras el hallazgo de una veta de 75.000 monedas, los señores locales organizan expediciones.
+- Recursos iniciales 15 de Oro/3 Materiales/1 Objeto de Valor, ingresos «10»/«2»/«0».
+- Cada jugador empieza con 1 manada de bronce del mayor coste.
+- Prohibido usar cartas que den recursos (si se roban, se muestran, descartan y se roba otra).
+- Solo los héroes principales pueden coger la ficha de grial, que da 15 de Oro inmediatos y +5 de ingresos de Oro al llegar a la ciudad.
+- Victoria: tener 75 de Oro al final de una ronda (empate = gana quien tenga más). Si nadie lo logra antes del final de la ronda 10, todos pierden.`
+  },
+  {
+    id: "cap_05_exp_murallas_campana",
+    title: "Expansión Murallas: 5. Campaña en Solitario — La Venganza se Sirve Fría",
     category: "campaña",
     content: `Campaña de 3 misiones para la facción Murallas contra héroes de IA de Necrópolis (referencia de preparación y condiciones; el contenido narrativo de cada misión está en el Libro de Misiones físico).
 
-MISIÓN 1 — "En Busca de un Asesino" (11 rondas): héroe Gelu. Recursos iniciales 14 de Oro/4 Materiales, +5 de producción de Oro. Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela. Bonificador a elegir: +2 Objetos de Valor, +4 Materiales, o carta de Máquina de Guerra "Carro de Municiones". Héroes de IA (Necrópolis): Galthran y Aislinn, más el ejército de la ciudad. Victoria: derrotar a todos los ejércitos enemigos. Derrota: perder tu ciudad, perder un combate, o no ganar antes del final de la ronda 11.
+MISIÓN 1 — "En Busca de un Asesino" (11 rondas): Asesinato de lord Falorel (descubierto como un señor vampiro infiltrado de Deyja) y la invasión de Soledare.
+- Héroe Principal: Gelu.
+- Recursos iniciales: 14 de Oro/4 Materiales, +5 de producción de Oro.
+- Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela.
+- Bonificador a elegir: +2 Objetos de Valor, +4 Materiales, o carta de Máquina de Guerra "Carro de Municiones".
+- Héroes de IA (Necrópolis): Galthran y Aislinn, más el ejército de la ciudad.
+- Evento Ronda 7: La dificultad de todos los combates del mapa aumenta en +1.
+- Victoria: derrotar a todos los ejércitos enemigos. 
+- Derrota: perder tu ciudad, perder un combate, o no ganar antes del final de la ronda 11.
 
-MISIÓN 2 — "Paz Definitiva" (13 rondas): héroe Gem. Recursos iniciales 12 de Oro/4 Materiales/2 Objetos de Valor, +5 de producción de Oro. Mismos edificios iniciales. Bonificador a elegir: +8 de Oro, +4 Materiales, o buscar(2) dos veces en hechizos. Héroes de IA: guardias de lord Fayette y lord Fayette. Victoria/Derrota: igual patrón, límite ronda 13.
+MISIÓN 2 — "Paz Definitiva" (13 rondas): La druida Gem investiga el asesinato de lord Fayette, resucitado por los nigromantes como un Caballero del Terror.
+- Héroe Principal: Gem.
+- Recursos iniciales: 12 de Oro/4 Materiales/2 Objetos de Valor, +5 de producción de Oro.
+- Mismos edificios iniciales.
+- Bonificador a elegir: +8 de Oro, +4 Materiales, o buscar(2) dos veces en hechizos.
+- Héroes de IA: guardias de lord Fayette y lord Fayette.
+- En la zona de ciudad de la loseta de Necrópolis, lucha contra la guarnición con 3 murallas y 1 puerta.
+- Teletransporte Místico: Los obeliscos de las losetas cercanas de Necrópolis y Mazmorra están interconectados y teletransportan al héroe de una a otra.
+- Victoria: Derrotar a lord Fayette para liberar su alma.
+- Derrota: perder tu ciudad, perder un combate, o no ganar antes del final de la ronda 13.
 
-MISIÓN 3 — "Agentes de la Venganza" (12 rondas): héroes Gem y Gelu. Recursos iniciales 14 de Oro/8 Materiales/3 Objetos de Valor, +5 de producción de Oro. Bonificador a elegir: +2 Objetos de Valor, buscar(4) en artefactos, o reforzar 2 unidades. Héroes de IA: Charna, Galthran y Vidomina (esta última no se mueve por el mapa). Victoria: derrotar al ejército enemigo en la utopía del dragón antes del final de la ronda 12.
+MISIÓN 3 — "Agentes de la Venganza" (12 rondas): Gem y Gelu unen sus fuerzas para invadir Deyja y detener el complot del nigromante Sandro antes de que complete un artefacto destructivo.
+- Héroes: Gem y Gelu.
+- Recursos iniciales: 14 de Oro/8 Materiales/3 Objetos de Valor, +5 de producción de Oro.
+- Bonificador a elegir: +2 Objetos de Valor, buscar(4) en artefactos, o reforzar 2 unidades.
+- Héroes de IA: Charna, Galthran y Vidomina (esta última no se mueve por el mapa).
+- Dificultad Aumentada: Todos los combates en losetas de Necrópolis tienen +1 a la dificultad de zona.
+- Combate Final en el Castillo Crypthome (Utopía del Dragón): Enfrentamiento masivo contra Vidomina. La manada de esqueletos enemiga equipa las cartas de especialidad de Sandro y realiza un ataque gratuito.
+- Gelu o Gem otorgan bonificaciones directas de daño al inicio de la batalla final.
+- Victoria: derrotar al ejército enemigo en la utopía del dragón antes del final de la ronda 12.
 
-Regla común a las 3 misiones: los héroes enemigos se mueven después del jugador; se puede entrar en una zona bloqueada si hay un enemigo en ella; derrotar el ejército de un héroe enemigo da +2 Objetos de Valor; la primera vez que el héroe entra en una zona con obelisco se activa un evento de historia (a partir de ahí, cada primera visita a un obelisco lanza 2 dados de tesoro y resuelve 1, a elección del jugador).`
+Regla común a las 3 misiones:
+- Los héroes enemigos se mueven después del jugador.
+- Se puede entrar en una zona bloqueada si hay un enemigo en ella.
+- Derrotar el ejército de un héroe enemigo da +2 Objetos de Valor.
+- La primera vez que el héroe entra en una zona con obelisco se activa un evento de historia (a partir de ahí, cada primera visita a un obelisco lanza 2 dados de tesoro y resuelve 1, a elección del jugador).`
   },
 
   // =========================================================================
   // METAS AMPLIADAS (STRETCH GOALS) Y LIBRO DE MISIONES
   // =========================================================================
   {
-    id: "cap_exp_metas_ampliadas_componentes",
-    title: "Expansión Metas Ampliadas (Stretch Goals): Componentes y Regla de Miniaturas",
+    id: "cap_01_exp_metas_ampliadas_componentes",
+    title: "Expansión Metas Ampliadas: 1. Componentes",
     category: "componentes",
     content: `Esta expansión añade 3 campañas en solitario nuevas: "La Sangre del Dragón" (Mazmorra), "El Ascenso del Nigromante" (Necrópolis) y "El Matadragones" (Torre), además de las Escuelas de Magia (ver capítulo 5, Construcción del Mazo) y nuevos lugares del mapa (ver capítulo 8, Elementos del Mapa).
 
-COMPONENTES DE LA EXPANSIÓN: 15 losetas de mapa (1 inicial, 10 lejanas, 3 cercanas, 1 central), 1 tablero de ciudad, 1 libro de misiones, 1 ayuda de juego, 2 miniaturas de héroe, 7 miniaturas de unidad, 7 cartas de héroe a doble cara, 7 cartas de unidad, 7 losetas de edificio de ciudad, 28 cartas de unidad neutral, 4 cartas de anuncio astrológico, 11 cartas de artefacto, 7 cartas de hechizo, 11 cartas de habilidad, 42 cartas de especialidad, 7 cartas de característica (1 ataque, 1 defensa, 2 poder, 3 conocimiento), fichas de oro/materiales/objetos de valor/daño/construcción/población/libro de hechizos/parálisis-defensa/movimiento/moral, y 30 cubos acrílicos (10 negros, 20 azul claro).
-
-MINIATURAS EN JUEGO (regla opcional): al comienzo de la partida, prepara las miniaturas de las unidades que vayas a utilizar; durante el combate se pueden colocar sobre sus cartas de unidad correspondientes para indicar con claridad su posición en el tablero de combate (las miniaturas de una facción comparten el color del borde de sus cartas). Si se juega con miniaturas, aplica estas reglas adicionales: al robar una carta de unidad neutral, si sale la misma unidad neutral repetida, una que ya tengas en tu ejército, o una unidad de tu propia facción, descártala y roba otra en su lugar; al reclutar unidades neutrales, tampoco se puede reclutar una unidad de una facción controlada por otro jugador ni una ya presente en el ejército de otro jugador (descarta y roba otra).`
+COMPONENTES DE LA EXPANSIÓN:
+- 15 Losetas de mapa (1 inicial, 10 lejanas, 3 cercanas, 1 central).
+- 1 Tablero de ciudad, 7 losetas de edificio de ciudad, 1 libro de misiones, 1 ayuda de juego.
+- 2 Miniaturas de héroe, 7 miniaturas de unidad, 7 cartas de héroe a doble cara, 7 cartas de unidad.
+- 28 Cartas de unidad neutral, 11 de artefacto, 7 de hechizo, 11 de habilidad, 42 de especialidad.
+- 7 Cartas de característica (1 ataque, 1 defensa, 2 poder, 3 conocimiento), 4 cartas de anuncio astrológico.
+- 12 fichas de oro, 9 materiales de construcción, 8 objetos de valor, 10 fichas de daño.
+- Fichas de construcción, población, libro de hechizos, parálisis/defensa, movimiento y moral.
+- 30 Cubos acrílicos (10 negros, 20 azul claro).`
   },
   {
-    id: "cap_exp_metas_ampliadas_campana_mazmorra",
-    title: "Expansión Metas Ampliadas: Campaña de la Mazmorra — La Sangre del Dragón",
+    id: "cap_02_exp_metas_ampliadas_mecanicas",
+    title: "Expansión Metas Ampliadas: 2. Regla de Miniaturas y Nuevos Lugares",
+    category: "general",
+    content: `NUEVAS MECÁNICAS DE JUEGO (METAS AMPLIADAS):
+
+MINIATURAS EN JUEGO (regla opcional): al comienzo de la partida, prepara las miniaturas de las unidades que vayas a utilizar; durante el combate se pueden colocar sobre sus cartas de unidad correspondientes para indicar con claridad su posición en el tablero de combate (las miniaturas de una facción comparten el color del borde de sus cartas). 
+Si se juega con miniaturas, aplica estas reglas adicionales:
+- al robar una carta de unidad neutral, si sale la misma unidad neutral repetida, una que ya tengas en tu ejército, o una unidad de tu propia facción, descártala y roba otra en su lugar.
+- al reclutar unidades neutrales, tampoco se puede reclutar una unidad de una facción controlada por otro jugador ni una ya presente en el ejército de otro jugador (descarta y roba otra).
+
+NUEVOS LUGARES DEL MAPA (Páginas 41-42):
+- Universidad (Visitable): Paga 6 de Oro para buscar (4) en el descarte de habilidades.
+- Mercado Negro (Re-visitable): Examina las 4 cartas superiores del descarte de artefactos y compra: Menor por 5 Oro, Mayor por 7 Oro, Reliquia por 10 Oro.
+- Mercado del Tiempo (Visitable): Retira 1 carta de tu mano y busca (2) en el mazo de habilidades, hechizos o artefactos.
+- Prisión (Visitable): Otorga 1 héroe secundario gratis (o 3 de Oro si ya tienes uno).
+- Biblioteca de la Iluminación (Re-visitable): Paga 3 de Oro para sustituir 1 carta de característica de mano/descarte por otra.
+- Fuerte de la Colina (Visitable): Permite reforzar 1 unidad de Bronce o Plata reduciendo el coste en 3 de Oro (mínimo 0).
+- Taberna (Re-visitable): Paga 7 de Oro para ganar un héroe secundario y hacer que un oponente descarte 1 carta al azar de su mano.
+- Aserradero (Mina - Señalizable): Otorga pasivamente 2 Materiales de Construcción por ronda.`
+  },
+  {
+    id: "cap_03_exp_metas_ampliadas_campana_mazmorra",
+    title: "Expansión Metas Ampliadas: 3. Campaña de la Mazmorra — La Sangre del Dragón",
     category: "campaña",
     content: `Campaña de 3 misiones para la facción Mazmorra, protagonizada por Mutare (y desde la 2ª misión, opcionalmente Alamar) (referencia de preparación y condiciones; el contenido narrativo está en el Libro de Misiones físico).
 
-MISIÓN 1 — "Limpieza de Aspirantes" (11 rondas): héroe Mutare. Sin recursos ni edificios iniciales. Bonificador a elegir: añadir unas pocas medusas, reforzar trogloditas y arpías, o buscar(4) en artefactos. Héroes de IA (Mazmorra): Caomham (no se mueve) y Preuet (se mueve tras el turno del jugador). Reglas: nivel de experiencia máximo 4; no se pueden construir viviendas de oro; no se puede reclutar un 2º héroe; no hay ingresos salvo tras conquistar la ciudad inicial (que da vivienda de bronce, alcaldía y varios recursos); no se gana nada visitando obeliscos. Victoria: derrotar a Caomham y Preuet. Derrota: perder cualquier combate, o no ganar antes del final de la ronda 11.
+La señora Mutare busca el legendario Vial de Sangre de Dragón para transformarse en dragón y dominar Nighon.
 
-MISIÓN 2 — "Sangre del Padre Dragón" (11 rondas): héroe a elegir entre Mutare o Alamar. Recursos iniciales 14 de Oro/3 Materiales/1 Objeto de Valor, +5 de producción de Oro. Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela. Bonificador a elegir: buscar(3) en artefactos, +4 Materiales, o reforzar ojos maléficos/trogloditas/arpías. Héroe de IA (Castillo, a elegir cuál) más el ejército de dragones guardianes en la utopía del dragón central. Reglas: la dificultad de todos los combates del mapa sube +1 desde la ronda 1; el héroe enemigo va directo a la utopía del dragón por la ruta más corta e ignora al jugador salvo que coincidan en zona; visitar un obelisco impide que se mueva 1 turno. Victoria: derrotar al ejército en la utopía del dragón (el héroe enemigo es opcional). Derrota: que el enemigo llegue antes a la utopía del dragón, o no ganar antes del final de la ronda 11.
+MISIÓN 1 — "Limpieza de Aspirantes" (11 rondas):
+- Héroe Principal: Mutare.
+- Sin recursos ni edificios iniciales.
+- Bonificador a elegir: añadir unas pocas medusas, reforzar trogloditas y arpías, o buscar(4) en artefactos.
+- Héroes de IA (Mazmorra): Caomham (no se mueve) y Preuet (se mueve tras el turno del jugador).
+- Reglas:
+	a) nivel de experiencia máximo 4
+	b) no se pueden construir viviendas de oro
+	c) no se puede reclutar un 2º héroe
+	d) no hay ingresos salvo tras conquistar la ciudad inicial (que da vivienda de bronce, alcaldía y varios recursos)
+	e) no se gana nada visitando obeliscos.
+- Victoria: Capturar la ciudad inicial (guarnición Nivel III) y derrotar a Caomham y Preuet.
+- Derrota: perder cualquier combate, o no ganar antes del final de la ronda 11.
 
-MISIÓN 3 — "Sed de Sangre" (10 rondas): héroe a elegir entre Mutare o Alamar. Recursos iniciales 20 de Oro/5 Materiales/2 Objetos de Valor, +1 de producción de Materiales y +5 de Oro. Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela. Bonificador a elegir: añadir unos pocos fanáticos, añadir 1 dragón al azar, o reforzar arpías/minotauros/medusas. Héroes de IA (Castillo y Necrópolis): 3 señores y Ordwald, que atacan uno tras otro en ese orden fijo. Reglas: se pueden reclutar dragones en la utopía del dragón (máximo 2, requiere vivienda de oro); no se pueden usar mantícoras; visitar un obelisco inmoviliza a todos los enemigos 1 turno (una vez por obelisco); derrotar a un héroe enemigo da medio nivel de experiencia. Victoria: sobrevivir a los ataques de los 4 héroes enemigos. Derrota: perder cualquier combate.`
+MISIÓN 2 — "Sangre del Padre Dragón" (11 rondas):
+- Héroe Principal: a elegir entre Mutare o Alamar.
+- Recursos iniciales: 14 de Oro/3 Materiales/1 Objeto de Valor, +5 de producción de Oro.
+- Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela.
+- Bonificador a elegir: buscar(3) en artefactos, +4 Materiales, o reforzar ojos maléficos/trogloditas/arpías.
+- Héroe de IA (Castillo, a elegir cuál): Vanguardia de Ordwald (se desplaza veloz hacia la Utopía del Dragón) más el ejército de dragones guardianes en la utopía del dragón central.
+- Reglas:
+	a) la dificultad de todos los combates del mapa sube +1 desde la ronda 1
+	b) el héroe enemigo va directo a la utopía del dragón por la ruta más corta e ignora al jugador salvo que coincidan en zona
+	c) visitar un obelisco detiene el avance de la vanguardia enemiga por 1 turno.
+- Victoria: Llegar a la Utopía del Dragón y derrotar a los Dragones Guardianes antes de que el héroe enemigo alcance el lugar (el héroe enemigo es opcional).
+- Derrota: que el enemigo llegue antes a la utopía del dragón, o no ganar antes del final de la ronda 11.
+
+MISIÓN 3 — "Sed de Sangre" (10 rondas):
+- Héroe Principal: a elegir entre Mutare o Alamar.
+- Recursos iniciales: 20 de Oro/5 Materiales/2 Objetos de Valor, +1 de producción de Materiales y +5 de Oro.
+- Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela.
+- Bonificador a elegir: añadir unos pocos fanáticos, añadir 1 dragón al azar, o reforzar arpías/minotauros/medusas.
+- Héroes de IA (Castillo y Necrópolis): 3 señores y Ordwald, que atacan uno tras otro en ese orden fijo.
+- Reglas:
+	a) se pueden reclutar dragones en la utopía del dragón (máximo 2, requiere vivienda de oro)
+	b) no se pueden usar mantícoras
+	c) visitar un obelisco inmoviliza a todos los enemigos 1 turno (una vez por obelisco)
+	d) derrotar a un héroe enemigo da medio nivel de experiencia.
+- Victoria: sobrevivir a los ataques de los 4 héroes enemigos.
+- Derrota: perder cualquier combate.`
   },
   {
-    id: "cap_exp_metas_ampliadas_campana_necropolis",
-    title: "Expansión Metas Ampliadas: Campaña de la Necrópolis — El Ascenso del Nigromante",
-    category: "modes",
+    id: "cap_04_exp_metas_ampliadas_campana_necropolis",
+    title: "Expansión Metas Ampliadas: 4. Campaña de la Necrópolis — El Ascenso del Nigromante",
+    category: "campaña",
     content: `Campaña de 3 misiones para la facción Necrópolis, protagonizada por Sandro o Tamika (referencia de preparación y condiciones; el contenido narrativo está en el Libro de Misiones físico).
 
-MISIÓN 1 — "Objetivo" (8 rondas): héroe a elegir entre Sandro o Tamika. Recursos iniciales 25 de Oro/3 Materiales/1 Objeto de Valor. Edificio inicial: vivienda de bronce. Bonificador a elegir: reforzar zombis, buscar(3) en artefactos, o robar del mazo de hechizos hasta encontrar uno de daño. Héroes de IA: Shiva y Jeddite. Reglas: nivel de experiencia máximo 4; los héroes enemigos se mueven después del jugador; los obeliscos permiten elegir qué miniatura representa a cada enemigo. Victoria: derrotar ambos ejércitos enemigos. Derrota: perder cualquier combate, o no ganar antes del final de la ronda 8.
+Sandro el Nigromante avanza hacia Deyja reuniendo artefactos legendarios (Capa del Rey No Muerto y Armadura de los Malditos) contra su antiguo maestro Ethric.
 
-MISIÓN 2 — "Maestro" (10 rondas): mismo héroe elegido. Recursos iniciales 3 de Oro/2 Materiales. Edificios iniciales: vivienda de bronce, vivienda de plata. Bonificador a elegir: +5 Materiales, +9 de Oro, o construir gratis el edificio "Manto de la Oscuridad". Héroes de IA (Mazmorra y Castillo, a elegir cuáles): Ivor y Ethric. Reglas: los héroes enemigos se mueven después del jugador. Victoria: derrotar ambos ejércitos. Derrota: perder tu ciudad, o no ganar antes del final de la ronda 10.
+MISIÓN 1 — "Objetivo" (8 rondas):
+- Héroe Principal: a elegir entre Sandro o Tamika.
+- Recursos iniciales: 25 de Oro/3 Materiales/1 Objeto de Valor.
+- Edificio inicial: vivienda de bronce.
+- Bonificador a elegir: reforzar zombis, buscar(3) en artefactos, o robar del mazo de hechizos hasta encontrar uno de daño.
+- Héroes de IA: Shiva y Jeddite (utiliza la carta de especialidad Resurrección VI).
+- Reglas:
+	a) nivel de experiencia máximo 4
+	b) los héroes enemigos se mueven después del jugador
+	c) los obeliscos permiten elegir qué miniatura representa a cada enemigo.
+- Victoria: derrotar ambos ejércitos enemigos.
+- Derrota: perder cualquier combate, o no ganar antes del final de la ronda 8.
 
-MISIÓN 3 — "Duque Alarice" (11 rondas): mismo héroe elegido. Recursos iniciales 20 de Oro/2 Materiales/4 Objetos de Valor, +2 de producción de Materiales y +5 de Oro. Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela. Bonificador a elegir: añadir unos pocos vampiros, +4 Materiales, o +2 Objetos de Valor. Héroes de IA (Castillo): Thorgrim, Melodia (mismo ejército/mazo que Thorgrim) y el duque Alarice (aparece solo en la historia, no en el mapa). Reglas: los héroes enemigos van directos hacia la miniatura del jugador por la ruta más corta y se mueven después del turno del jugador; derrotar un héroe enemigo da a elegir 6 de Oro o 2 Materiales; los obeliscos dan 10 de Oro y permiten entrar en la utopía del dragón. Victoria: derrotar a todos los héroes enemigos y ganar el combate final en la utopía del dragón. Derrota: perder tu ciudad, o no ganar antes del final de la ronda 11.`
+MISIÓN 2 — "Maestro" (10 rondas):
+- Héroe Principal: mismo héroe elegido en Misión 1 (Sandro o Tamika).
+- Recursos iniciales: 3 de Oro/2 Materiales.
+- Edificios iniciales: vivienda de bronce, vivienda de plata.
+- Bonificador a elegir: +5 Materiales, +9 de Oro, o construir gratis el edificio "Manto de la Oscuridad".
+- Héroes de IA (Mazmorra y Castillo, a elegir cuáles): Ivor y Ethric (su antiguo maestro).
+- Reglas: 
+	a) los héroes enemigos se mueven después del jugador.
+	b) nivel de experiencia máximo 5.
+	c) si Ethric es atacado en su ciudad, cuenta con 3 murallas, puerta y torre de arqueros.
+	d) se pueden pagar 10 de Oro para ralentizar su movimiento a 2 zonas/ronda.
+- Victoria: derrotar ambos ejércitos.
+- Derrota: perder tu ciudad, o no ganar antes del final de la ronda 10.
+
+MISIÓN 3 — "Duque Alarice" (11 rondas):
+- Héroe Principal: mismo héroe elegido (Sandro o Tamika).
+- Recursos iniciales: 20 de Oro/2 Materiales/4 Objetos de Valor, +2 de producción de Materiales y +5 de Oro.
+- Edificios iniciales: vivienda de bronce, vivienda de plata, ciudadela.
+- Bonificador a elegir: añadir unos pocos vampiros, +4 Materiales, o +2 Objetos de Valor.
+- Héroes de IA (Castillo): Thorgrim, Melodia (mismo ejército/mazo que Thorgrim) y el duque Alarice (aparece solo en la historia, no en el mapa).
+- Reglas:
+	a) los héroes enemigos van directos hacia la miniatura del jugador por la ruta más corta y se mueven después del turno del jugador
+	b) derrotar un héroe enemigo da a elegir 6 de Oro o 2 Materiales
+	c) los obeliscos dan 10 de Oro y permiten entrar en la utopía del dragón.
+	d) el asentamiento enano aumenta la producción de Oro en +10.
+	e) en el combate final contra el Duque Alarice, una unidad de Momias enemiga ataca en primer lugar antes de cualquier activación
+- Victoria: derrotar a todos los héroes enemigos y ganar el combate final en la utopía del dragón.
+- Derrota: perder tu ciudad, o no ganar antes del final de la ronda 11.`
   },
   {
     id: "cap_exp_metas_ampliadas_campana_torre",
     title: "Expansión Metas Ampliadas: Campaña de la Torre — El Matadragones",
-    category: "modes",
+    category: "campaña",
     content: `Campaña de 4 misiones para la facción Torre, protagonizada por Dracon o Solmyr (referencia de preparación y condiciones; el contenido narrativo está en el Libro de Misiones físico). Las misiones 2 y 3 requieren, respectivamente, las expansiones Fortaleza y Murallas (si no se tienen, se pueden saltar).
 
 MISIÓN 1 — "Dragones de Cristal" (9 rondas): héroe a elegir. Recursos iniciales 15 de Oro/3 Materiales/1 Objeto de Valor, +5 de producción de Oro. Edificios iniciales: vivienda de bronce, vivienda de plata. Bonificador a elegir: +2 Objetos de Valor, añadir unos pocos gólems de hierro, o reforzar gremlins/gárgolas. Enemigo: ejército de dragones de cristal. Reglas: visitar un obelisco activa un evento especial; no se puede descubrir ninguna loseta cercana antes de descubrir todas las lejanas. Victoria: visitar un obelisco y ganar el combate que aparece ahí. Derrota: perder una batalla, o no ganar antes del final de la ronda 9.
@@ -754,7 +951,7 @@ COMPONENTES DE LA EXPANSIÓN: 7 losetas de mapa (1 inicial, 3 lejanas, 2 cercana
   {
     id: "cap_exp_fortaleza_escenarios",
     title: "Expansión Fortaleza: Escenarios Independientes (Arrogancia y En Busca del Grial)",
-    category: "modes",
+    category: "escenario",
     content: `Esta expansión aporta las reglas completas del Modo Alianza (idénticas a las de la expansión Murallas: equipo de 2 jugadores formado al inicio de la partida, intercambio de artefactos entre héroes en zonas adyacentes, intercambio libre de recursos entre aliados, y prohibición de señalizar un lugar ya señalizado por tu compañero de equipo).
 
 ESCENARIO DE ALIANZA — "Arrogancia" (4 jugadores, dura 12 rondas): recursos iniciales 13 de Oro/4 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 2 unidades "unas pocas" de bronce del mayor coste. Solo un héroe principal puede hacerse con la ficha de grial (aunque haya 2 losetas con grial, solo existe 1 ficha); una alianza no puede visitar su zona hasta visitar al menos 4 obeliscos diferentes o hasta que algún héroe ya la haya cogido; conseguirla cuesta 2 PM en su zona; aumenta en 5 los ingresos de Oro. Al comienzo de las rondas 3, 6 y 9, todos los héroes ganan ficha de moral positiva. Victoria: que una alianza entregue la ficha de grial en una de sus ciudades antes del final de la ronda 12 (si no, todos pierden).
@@ -863,7 +1060,7 @@ ESCENARIO 3 — "Herencia Inesperada": preparación con 2 losetas iniciales, 2 c
   {
     id: "cap_torneo_creador_escenarios",
     title: "Creador de Escenarios (Guía Oficial para Diseñar Escenarios Propios)",
-    category: "modes",
+    category: "escenario",
     content: `Pasos oficiales para diseñar un escenario propio de Heroes of Might and Magic III: The Board Game:
 1. Dale un nombre y una breve descripción a tu escenario.
 2. Elige la cantidad de jugadores (máximo 3 en el juego base; las expansiones permiten más).
@@ -1013,7 +1210,7 @@ MISIÓN 3 — "La Liberación de Steadwick" (13 rondas): mismo héroe elegido. R
   {
     id: "cap_suplemento_escenario_tutorial",
     title: "Suplemento de Reglas: Escenario Introductorio (Tutorial)",
-    category: "setup",
+    category: "preparación",
     content: `El Suplemento de Reglas es un librito tutorial pensado para empezar a jugar sin necesidad de leer antes el libro de reglas completo, guiando a los jugadores a través de una primera ronda pre-planificada. Su contenido de reglas ya está cubierto en los demás capítulos de este documento; aquí se recoge únicamente el escenario de Enfrentamiento que propone, jugable de forma independiente.
 
 ESCENARIO "TUTORIAL" (2 jugadores, dura 8 rondas): enfrenta a la facción Mazmorra (héroe Mutare) contra la Necrópolis (héroe Tamika), ambas predeterminadas. Preparación del mapa: loseta inicial de Necrópolis (S1) y de Mazmorra (S2); losetas lejanas (II-III) F4, F5, F7, F8 barajadas bocabajo; losetas cercanas (IV-V) N1, N2 barajadas bocabajo. Cada jugador conserva solo la loseta de edificio con vivienda de bronce en su tablero de ciudad, con el resto aparte. Ingresos iniciales «10» de Oro/«2» Materiales/«1» Objeto de Valor. Recursos iniciales 15 de Oro/4 Materiales/1 Objeto de Valor. Cada jugador recibe sus 3 unidades de bronce (cara "unas pocas") como ejército inicial del escenario.
@@ -1204,7 +1401,7 @@ CASILLAS SEÑALIZABLES (Captura con Cubo de Facción):
   {
     id: "cap_exp_bastion_componentes",
     title: "Expansión Bastión: Componentes",
-    category: "components",
+    category: "componentes",
     content: `Esta expansión añade la facción Bastión (bárbaros de Krewlod), introduce las Losetas de Mapa Subterráneo y la Puerta Subterránea (ver capítulo 8), las Cartas de Pergamino de Hechizos (ver capítulo 5), y las Fichas de Tiempo/Ataque/Corrosión y el hechizo Arenas Movedizas (ver capítulo 10).
 
 COMPONENTES: 5 losetas de mapa de superficie (1 inicial, 3 lejanas, 1 cercana) + 7 losetas de mapa subterráneo (6 cercanas, 1 central), 1 tablero de ciudad, 1 libro de misiones, 1 ayuda de juego, 1 folleto de unidades, 2 miniaturas de héroe, 1 miniatura de ciudad, 7 miniaturas de unidad, 2 cartas de héroe a doble cara, 7 cartas de unidad, 7 losetas de edificio de ciudad, 8 cartas de unidad neutral, 3 cartas de anuncio astrológico, 4 cartas de artefacto, 6 cartas de hechizo, 3 cartas de habilidad, 12 cartas de especialidad, 7 cartas de característica (4 ataque, 1 defensa, 1 poder, 1 conocimiento), 20 cartas de pergamino de hechizos, fichas de oro/materiales/objetos de valor/daño/construcción/población/libro de hechizos/moral/movimiento, 12 fichas de arenas movedizas, 6 de corrosión, 8 de ataque, 11 de tiempo, 6 de puerta subterránea, y 30 cubos acrílicos (20 marrón claro, 10 negros).`
@@ -1212,7 +1409,7 @@ COMPONENTES: 5 losetas de mapa de superficie (1 inicial, 3 lejanas, 1 cercana) +
   {
     id: "cap_exp_bastion_escenarios",
     title: "Expansión Bastión: Escenarios Independientes (Alianza, Enfrentamiento y Cooperativo)",
-    category: "modes",
+    category: "escenario",
     content: `Esta expansión aporta las reglas completas del Modo Alianza (idénticas a las de Murallas/Fortaleza/Inferno) y comparte las reglas generales de Modo Cooperativo del Libro de Misiones básico (unidades neutrales controladas con las reglas de IA; el mercadillo también puede dar recursos a cualquier jugador; victoria compartida al cumplirse la condición).
 
 ESCENARIO DE ALIANZA — "Guerra de los Poderosos" (4 jugadores, dura 13 rondas): recursos iniciales 14 de Oro/4 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 1 manada de bronce del menor coste. Hay 4 lugares iniciales en 2 áreas (una por equipo); la facción Mazmorra no está disponible para jugar, ya que su loseta inicial hace de loseta subterránea necesaria para la victoria, defendida por un ejército de nivel VI (ojos maléficos, medusas, minotauros, mantícoras y dragones negros). Los jugadores pueden usar su mazo de fuerza y magia al pagar Oro para defender su ciudad. Victoria: una alianza captura la ciudad de la loseta subterránea (Mazmorra) y la mantiene 1 ronda más, o captura una ciudad enemiga y la mantiene 2 rondas más. Si nadie lo logra antes del final de la ronda 13, la partida se alarga si alguien señaliza justo en la 12ª o 13ª ronda (hasta la 14ª o 15ª respectivamente); si ambos equipos cumplen la condición, empate; si ninguno, pierden todos.
@@ -1224,7 +1421,7 @@ ESCENARIO COOPERATIVO — "Túneles de los Enanos" (2-3 jugadores; duración seg
   {
     id: "cap_exp_bastion_campana",
     title: "Expansión Bastión: Campaña en Solitario — Hermandad Bárbara",
-    category: "modes",
+    category: "campaña",
     content: `Campaña de 3 misiones para la facción Bastión (héroes Yog, luego Crag Hack, luego cualquier héroe de Bastión), contra héroes de IA de Necrópolis y Castillo (referencia de preparación y condiciones; el contenido narrativo está en el Libro de Misiones físico).
 
 MISIÓN 1 — "Cosecha" (10 rondas): héroe Yog. Recursos iniciales 12 de Oro/0 Materiales/1 Objeto de Valor. Edificios iniciales: vivienda de bronce, ciudadela. Bonificador a elegir: añadir una manada de orcos, buscar(4) en artefactos, o +6 de Oro. Héroes de IA (Necrópolis): Isra y Aislinn (Aislinn no se mueve; Isra permanece quieta hasta descubrir la loseta adyacente a la inicial de Mazmorra, tras lo cual avanza directa hacia el jugador). Reglas: derrotar un ejército enemigo da 1 de experiencia; se retiran de los mazos neutrales todas las cartas salvo un listado reducido específico del escenario (se conservan para las siguientes misiones). Victoria: derrotar ambos ejércitos enemigos. Derrota: que tu héroe pierda cualquier combate (puedes retirarte de combates contra neutrales no azur); al final de la ronda 10 sin victoria, pierdes.
@@ -1240,7 +1437,7 @@ MISIÓN 3 — "Secretos Revelados" (13 rondas): héroe a elegir entre cualquiera
   {
     id: "cap_exp_confluencia_componentes",
     title: "Expansión Confluencia: Componentes",
-    category: "components",
+    category: "componentes",
     content: `Esta expansión añade la facción Confluencia (elementales de los 4 planos), introduce las Losetas de Mapa Elementales y las Fichas de Monolito (ver capítulo 8), la mecánica de Invocación con sus cartas y hechizos propios, el Daño Elemental y las Fichas de Muro de Fuego (ver capítulo 10), y comparte las Cartas Permanentes con Murallas y las Escuelas de Magia con Metas Ampliadas.
 
 COMPONENTES: 12 losetas de mapa (1 inicial, 3 lejanas, 8 elementales cercanas), 1 tablero de ciudad, 1 libro de misiones, 1 ayuda de juego, 1 folleto de unidades, 2 miniaturas de héroe, 1 miniatura de ciudad, 7 miniaturas de unidad, 2 cartas de héroe a doble cara, 7 cartas de unidad, 7 losetas de edificio de ciudad, 8 cartas de unidad neutral, 8 cartas de unidades invocadas, 3 cartas de anuncio astrológico, 8 cartas de artefacto, 10 cartas de hechizo, 15 cartas de habilidad, 12 cartas de especialidad, 9 cartas de característica (3 ataque, 1 defensa, 2 poder, 3 conocimiento), fichas de oro/materiales/objetos de valor/daño/construcción/población/libro de hechizos/moral/movimiento, 12 fichas de monolito, 6 de tiempo, 8 de invocación, 2 de muro de fuego, y 30 cubos acrílicos (20 rosa, 10 negros).`
@@ -1248,7 +1445,7 @@ COMPONENTES: 12 losetas de mapa (1 inicial, 3 lejanas, 8 elementales cercanas), 
   {
     id: "cap_exp_confluencia_escenarios",
     title: "Expansión Confluencia: Escenarios Independientes (Alianza, Enfrentamiento y Cooperativo)",
-    category: "modes",
+    category: "escenario",
     content: `Esta expansión aporta las reglas completas del Modo Alianza (idénticas a las de Murallas/Fortaleza/Inferno/Bastión) y comparte las reglas generales de Modo Cooperativo del Libro de Misiones básico.
 
 ESCENARIO DE ALIANZA — "Un Mal Día" (4 jugadores, dura 16 rondas): recursos iniciales 11 de Oro/3 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 3 unidades "unas pocas" de bronce. Hay 4 lugares iniciales en 2 áreas (una por equipo), conectados por monolitos unidireccionales. Ningún jugador recibe bonificador inicial. Victoria: una alianza derrota al héroe principal de cada oponente una vez, u ocupa ambos monolitos de salida enemigos al mismo tiempo al final de una ronda. Si no se cumple antes del final de la ronda 16, todos pierden.
@@ -1260,7 +1457,7 @@ ESCENARIO COOPERATIVO — "Demasiados Monstruos" (2-3 jugadores; duración segú
   {
     id: "cap_exp_confluencia_campana",
     title: "Expansión Confluencia: Campaña en Solitario — Maestros de los Elementos",
-    category: "modes",
+    category: "campaña",
     content: `Campaña de 4 misiones protagonizada por Tarnum, el héroe inmortal de Confluencia (aunque en las 2 primeras misiones no controla su propia ciudad, sino la de una facción "anfitriona" a elegir entre Castillo, Mazmorra, Torre, Fortaleza, Murallas o Bastión). Enfrenta a los Señores Elementales de los 4 planos (referencia de preparación y condiciones; el contenido narrativo está en el Libro de Misiones físico).
 
 MISIÓN 1 — "Caminata Difícil sobre las Nubes" (13 rondas, plano del Aire): héroe Tarnum, sin ejército de facción ni edificios propios al empezar. Recursos iniciales 20 de Oro. Bonificador a elegir: buscar(3) en artefactos, buscar(3) en habilidades, o +6 Objetos de Valor. Héroes de IA: Fiur (ejército neutral de nivel III + elementales de tormenta/energía) y los Guardianes del Señor del Aire (hadas, elementales de tormenta y de energía). Reglas: tu héroe no gana experiencia más allá del nivel 4; no se usan cartas de anuncio astrológico; no se pueden usar las cartas de Invocar Elemental ni Magia (básica) de ninguna escuela (se descartan y se roba otra si salen); visitar un obelisco por primera vez activa un evento de historia y lo convierte después en zona vacía; no puedes construir edificios de ciudad salvo que controles una, pero sí reclutar y reforzar unidades de bronce sin los edificios necesarios; hasta la ronda 5 no pierdes por no controlar una ciudad. Victoria: derrotar a ambos ejércitos enemigos. Derrota: que tu héroe sea derrotado en combate (puedes retirarte de combates contra neutrales no azur), o no ganar antes del final de la ronda 13 (en la ronda 1 debes elegir facción anfitriona y tomar su ciudad).
@@ -1278,7 +1475,7 @@ MISIÓN 4 — "Maestro de los Elementos" (14 rondas): mismo héroe/facción de C
   {
     id: "cap_exp_cala_componentes",
     title: "Expansión Cala: Componentes",
-    category: "components",
+    category: "componentes",
     content: `Esta expansión añade la facción Cala (piratas de Regna), introduce las Losetas de Mapa Marino, la Ficha de Torbellino y numerosos lugares marítimos (ver capítulo 8), la Ficha de Debilidad y la Ficha de Clonación (ver capítulo 10), y comparte las Cartas Permanentes con Murallas/Confluencia y las Máquinas de Guerra con Murallas.
 
 COMPONENTES: 5 losetas de mapa de superficie (1 inicial, 3 lejanas, 1 cercana) + 7 losetas de mapa marino (6 cercanas, 1 central), 1 tablero de ciudad, 1 libro de misiones, 1 ayuda de juego, 1 folleto de unidades, 2 miniaturas de héroe, 1 miniatura de ciudad, 7 miniaturas de unidad, 2 cartas de héroe a doble cara, 7 cartas de unidad, 7 losetas de edificio de ciudad, 7 cartas de unidad neutral, 3 cartas de anuncio astrológico, 6 cartas de artefacto, 6 cartas de hechizo, 6 cartas de habilidad, 12 cartas de especialidad, 7 cartas de característica (3 ataque, 2 poder, 2 conocimiento), 4 cartas de máquina de guerra, fichas de oro/materiales/objetos de valor/daño/construcción/población/libro de hechizos/moral/movimiento, 3 fichas de torbellino, 6 de debilidad, 4 de clonación, 14 de tiempo, y 30 cubos acrílicos (10 negros, 20 aguamarina).`
@@ -1286,7 +1483,7 @@ COMPONENTES: 5 losetas de mapa de superficie (1 inicial, 3 lejanas, 1 cercana) +
   {
     id: "cap_exp_cala_escenarios",
     title: "Expansión Cala: Escenarios Independientes (Alianza y Enfrentamiento)",
-    category: "modes",
+    category: "escenario",
     content: `Esta expansión aporta las reglas completas del Modo Alianza (idénticas a las de las demás expansiones: equipo de 2 jugadores formado al inicio de la partida, intercambio de artefactos entre héroes en zonas adyacentes, intercambio libre de recursos entre aliados, y prohibición de señalizar un lugar ya señalizado por tu compañero de equipo).
 
 ESCENARIO DE ALIANZA — "Estrecho de las Tormentas" (4 jugadores, dura 14 rondas): una de las 4 losetas iniciales debe contener una ciudad de Mazmorra. Recursos iniciales 14 de Oro/4 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce, cofradía de magos, y 2 manadas de bronce del menor coste. En vez del bonificador inicial habitual, se puede reclutar un héroe secundario por 5 de Oro (no en dificultad Imposible); cada jugador solo puede hacerlo una vez; un jugador solo puede enviar recursos a un aliado durante su propio turno; ningún héroe principal puede rendirse contra otro héroe (solo los secundarios). Victoria: una alianza captura una ciudad enemiga y la mantiene 2 rondas más, o derrota a ambos héroes principales de la alianza rival. Si nadie lo logra antes del final de la ronda 14, la partida se alarga si alguien señaliza justo en la 13ª o 14ª ronda (hasta la 15ª o 16ª); empate si ambos equipos lo logran; si ninguno, pierden todos.
@@ -1298,7 +1495,7 @@ ESCENARIO DE ENFRENTAMIENTO — "Archipiélago Ardiente" (3 jugadores, dura 13 r
   {
     id: "cap_exp_cala_campana",
     title: "Expansión Cala: Campaña en Solitario — Terror de los Mares",
-    category: "modes",
+    category: "campaña",
     content: `Campaña de 3 misiones para la facción Cala (héroe Jeremy, o cualquier héroe de Cala), enfrentándose a piratas rivales, nigromantes y facciones de IA variadas (referencia de preparación y condiciones; el contenido narrativo está en el Libro de Misiones físico).
 
 MISIÓN 1 — "Evenmorn" (13 rondas): héroe Jeremy o cualquier héroe de Cala. Recursos iniciales 10 de Oro/2 Materiales. Edificio inicial: vivienda de bronce. Bonificador a elegir: buscar(4) en artefactos, buscar(4) en hechizos, o reforzar los lobos de mar. Héroes de IA: Drakon, Nimbus y sus respectivas Vanguardias (ejércitos neutrales escalables según la ronda actual). Reglas: al capturar cualquiera de las 2 ciudades objetivo ganas 10 de Oro y se retiran todos los cubos negros del mapa (se puede volver a visitar todo); derrotar un héroe de IA da 8 de Oro; visitar un obelisco activa un evento de historia. Victoria: controlar las ciudades de Necrópolis y de Castillo a la vez. Derrota: perder un combate o perder el control de tu propia ciudad, o no ganar antes del final de la ronda 13.
@@ -1310,7 +1507,7 @@ MISIÓN 3 — "Traición" (12 rondas): mismo héroe. Sin recursos iniciales (0/0
   {
     id: "cap_exp_contenido_adicional_preparacion_avanzada",
     title: "Expansión Contenido Adicional: Preparaciones Avanzadas Opcionales",
-    category: "setup",
+    category: "preparación",
     content: `Reglas opcionales aplicables a cualquier escenario existente, del juego base o de cualquier expansión, para variar el equilibrio habitual de la partida.
 
 CARTAS DEL CAOS: cada vez que vayas a descartar una carta, retírala de la partida en su lugar y roba la carta superior del mazo correspondiente para tu pila de descarte (las cartas de característica y especialidad se siguen descartando con normalidad). Si usas una carta de conocimiento para recuperar un hechizo a tu mano, ese hechizo se retira igualmente y recibes uno nuevo de la parte superior del mazo de hechizos.
@@ -1328,7 +1525,7 @@ EJÉRCITO NEUTRAL: recomendada cuando ningún héroe en la partida tenga habilid
   {
     id: "cap_exp_contenido_adicional_escenarios",
     title: "Expansión Contenido Adicional: Escenarios de Enfrentamiento",
-    category: "modes",
+    category: "escenario",
     content: `5 escenarios independientes de Modo Enfrentamiento.
 
 "ASCENSIÓN" (4 jugadores, dura 10 rondas): recursos iniciales 10 de Oro/4 Materiales, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce, ciudadela y 3 unidades "unas pocas" de bronce. Los jugadores se dividen en 2 equipos de 2, cada equipo empezando en una mitad del mapa (colocación colectiva de sus losetas iniciales); nadie puede tener héroe secundario; los aliados pueden transferirse recursos vía mercadillo. Contrarreloj: en las rondas 3, 6 y 9 los aliados pueden transferirse recursos sin visitar un mercadillo. Victoria: al final de la ronda 10, ambos equipos libran una serie de hasta 3 duelos 1 contra 1 (emparejamientos decididos por el equipo que gane un desempate de dado de ataque); gana el equipo que se lleve al menos 2 de los 3 duelos.
@@ -1344,7 +1541,7 @@ EJÉRCITO NEUTRAL: recomendada cuando ningún héroe en la partida tenga habilid
   {
     id: "cap_campana_inferno_creadores_pesares",
     title: "Campaña de Inferno: Creadores de Pesares",
-    category: "modes",
+    category: "campaña",
     content: `Campaña de 3 misiones para la facción Inferno (héroe: cualquiera de Inferno), jugable con las expansiones Murallas e Inferno (la 3ª misión también admite Confluencia). Enfrenta a Erathia, AvLee y los Señores Elementales de Confluencia (referencia de preparación y condiciones; el contenido narrativo está en el Libro de Misiones físico).
 
 MISIÓN 1 — "Un Plan Diabólico" (12 rondas): recursos iniciales 10 de Oro/2 Materiales/1 Objeto de Valor. Edificios iniciales: vivienda de bronce, ciudadela. Bonificador a elegir: buscar(4) en artefactos, robar hasta encontrar 2 hechizos de la escuela de fuego (quedarte 1), o +7 Objetos de Valor. Héroes de IA: la Reina de los Dragones Dorados (con dragones dorados/negros/hada y unicornios) y los Exploradores de las Murallas (ejército neutral escalable, de nivel = ronda actual ÷ 2 redondeado hacia arriba; si el ejército resultante tiene menos de 5 unidades, se añade una manada de elfos). Reglas: se ignoran los bordes de las losetas iniciales; los Exploradores de las Murallas solo tienen 2 PM y van directos hacia la Reina de los Dragones Dorados por el camino más corto (ignorando la prioridad estándar de movimiento de la IA); el ejército de la Reina no se mueve; derrotar un héroe de IA da 8 de Oro; visitar un obelisco activa un evento de historia. Victoria: derrotar al ejército de la Reina de los Dragones Dorados. Derrota: que cualquier Explorador de las Murallas alcance la zona de la Reina antes que tú, que tu héroe sea derrotado en combate, o que pierdas tu ciudad (puedes retirarte de combates contra neutrales no azur), o no ganar antes del final de la ronda 12.
@@ -1360,7 +1557,7 @@ MISIÓN 3 — "Custodios de los Pesares" (13 rondas, admite también Confluencia
   {
     id: "cap_exp_batallas_navales_componentes",
     title: "Expansión Batallas Navales: Componentes",
-    category: "components",
+    category: "componentes",
     content: `Esta expansión añade 2 tableros de combate de neopreno (con el tablero de combate normal en una cara y el naval en la otra, ver capítulo 10), las Cartas y Fichas de Habilidad Potenciada (ver capítulo 5) y los Bancos de Criaturas con sus Fichas de Pila (ver capítulo 10).
 
 COMPONENTES: 1 libro de misiones, 2 tableros de combate de neopreno, 50 cartas de unidad del banco de criaturas, 32 cartas de habilidad potenciada, 24 fichas del banco de criaturas, 10 fichas de habilidad potenciada, 9 fichas de unidad apilada, 4 dados de ataque.`
@@ -1368,7 +1565,7 @@ COMPONENTES: 1 libro de misiones, 2 tableros de combate de neopreno, 50 cartas d
   {
     id: "cap_exp_batallas_navales_escenarios",
     title: "Expansión Batallas Navales: Escenarios (Cooperativo, Enfrentamiento y Solitario)",
-    category: "modes",
+    category: "escenario",
     content: `Esta expansión comparte las reglas generales de Modo Cooperativo del Libro de Misiones básico (unidades neutrales controladas con las reglas de IA; el mercadillo también puede dar recursos a cualquier jugador; victoria compartida al cumplirse la condición).
 
 ESCENARIO COOPERATIVO — "Invasión Bárbara" (2-4 jugadores, dura 11 rondas): preparación de mapa escalable según jugadores (2: 3 iniciales + 3 cercanas con obelisco + 4 lejanas; 3: 4+4+6; 4: 5+5+8). Recursos iniciales 10 de Oro/4 Materiales, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce, alcaldía y 3 unidades "unas pocas" de bronce. La loseta inicial central pertenece a una "Ciudad Enemiga" (se recomienda la facción Bastión, o cualquier otra no usada en la partida si no tienes esa expansión). Los jugadores pueden intercambiar artefactos si sus héroes están en zonas adyacentes; nadie puede señalizar un lugar ya señalizado por otro jugador; no se puede entrar en la Ciudad Enemiga hasta descubrir todas las losetas cercanas y visitar todos los obeliscos al menos una vez; visitar un obelisco da una ficha de habilidad potenciada. Al entrar en la Ciudad Enemiga se combate contra 3 manadas de oro y 2 "unas pocas" de bronce; si ganas, coloca tu cubo de facción en la zona (varios jugadores pueden señalizarla cada uno con el suyo). Victoria: que haya un cubo de cada facción jugada en la Ciudad Enemiga antes del final de la ronda 11 (si no, todos pierden).
@@ -1390,12 +1587,3 @@ ESCENARIO SOLITARIO — "Isla de Fuego" (1 jugador, dura 16 rondas): recursos in
 RECURSOS DE LA COMUNIDAD: además del reglamento oficial, la comunidad de jugadores mantiene un Wiki no oficial en inglés (homm3bg.wiki) con notas detalladas que aclaran la redacción ambigua de numerosas cartas del juego, recopilando además erratas y aclaraciones de los propios diseñadores. Es un buen punto de consulta adicional ante dudas sobre el texto exacto de una carta concreta, aunque no sustituye al reglamento oficial de Archon Studio.`
   }
 ];
-
-
-
-
-
-
-
-
-
