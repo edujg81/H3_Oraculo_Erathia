@@ -1125,28 +1125,108 @@ MISIÓN 3 — "El Incendio de Tatalia" (14 rondas): Confrontación definitiva co
   // EXPANSIÓN INFERNO Y LIBRO DE MISIONES
   // =========================================================================
   {
-    id: "cap_exp_inferno_componentes_mecanicas",
-    title: "Expansión Inferno: Componentes y Mecánicas Nuevas (Invocar, Ciudad Aleatoria, Inmunidad de los Efrits)",
-    category: "combate",
-    content: `Esta expansión añade la facción Inferno (demonios y criaturas del abismo), introduce la Carta de Característica Potenciada (ver capítulo 5, Construcción del Mazo), la Ciudad Aleatoria y el Eje Estelar (ver capítulo 8, Elementos del Mapa), y comparte las Escuelas de Magia con Metas Ampliadas y las reglas de Modo Alianza con Murallas.
+    id: "cap_01_exp_inferno_componentes",
+    title: "Expansión Inferno: 1. Componentes",
+    category: "componentes",
+    content: `COMPONENTES INCLUIDOS EN LA EXPANSIÓN INFERNO:
 
-COMPONENTES DE LA EXPANSIÓN: 7 losetas de mapa (1 inicial, 3 lejanas, 2 cercanas, 1 central), 1 tablero de ciudad, 1 libro de misiones, 1 ayuda de juego, 2 miniaturas de héroe, 1 miniatura de ciudad, 7 miniaturas de unidad, 2 cartas de héroe a doble cara, 7 cartas de unidad, 7 losetas de edificio de ciudad, 7 cartas de unidad neutral, 3 cartas de anuncio astrológico, 4 cartas de artefacto, 6 cartas de hechizo, 5 cartas de habilidad, 12 cartas de especialidad, 7 cartas de característica (2 ataque, 2 defensa, 2 poder, 1 conocimiento), 20 cartas de característica potenciada, fichas de oro/materiales/objetos de valor/daño/construcción/población/libro de hechizos/moral, y 30 cubos acrílicos (10 negros, 20 rojos).
+LOSETAS Y TABLEROS:
+- 7 Losetas de mapa (1 inicial, 3 lejanas, 2 cercanas, 1 central)
+- 1 Tablero de ciudad de la facción Inferno
+- 1 Libro de misiones de Inferno (16 páginas)
+- 1 Ayuda de juego
 
-INVOCAR (nuevo tipo de acción de unidad, variante de "Otra Acción"): añade una unidad al tablero de combate durante el combate. La unidad invocada se coloca en cualquier espacio vacío que elijas (no tiene por qué ser adyacente a la unidad que invoca). Si su iniciativa es menor o igual a la de la unidad que la invocó, se activa esa misma ronda; si es mayor, se trata como si ya se hubiera activado esta ronda. Tras el combate, salvo que se indique lo contrario, las unidades invocadas se añaden a tu mazo de unidades. (La habilidad de Invocar de los Señores del Abismo, expansión Inferno, solo se puede usar una vez por combate y no puede invocar demonios del mazo de unidades neutrales; si refuerzas tu unidad de demonios con este efecto, no pagues su coste de refuerzo.)
+MINIATURAS Y CARTAS:
+- 2 Miniaturas de héroe
+- 1 miniatura de ciudad de Inferno
+- 7 Miniaturas de unidad (Familiares, Magogs, Cerberos, Demonios, Señores del Abismo, Efrits, Archidiablos)
+- 2 Cartas de héroe a doble cara
+- 7 Cartas de unidad de Inferno (a doble cara: "unas pocas" / "manada")
+- 7 Losetas de edificio de ciudad de Inferno
+- 7 Cartas de unidad neutral
+- 3 Cartas de anuncio astrológico
+- 4 Cartas de artefacto
+- 6 Cartas de hechizo
+- 5 Cartas de habilidad
+- 12 Cartas de especialidad de héroe
+- 20 Cartas de Característica Potenciada (Ataque, Defensa, Poder, Conocimiento)
+- 7 Cartas de característica (2 Ataque, 2 Defensa, 2 Poder, 1 Conocimiento)
 
-INMUNIDAD DE LOS EFRITS: tanto la unidad de facción Efrits como la unidad neutral homónima ignoran el daño (no el resto de efectos) de los hechizos de la escuela de fuego, identificable por el borde de la carta.`
+FICHAS Y RECURSOS:
+- 9 Fichas de oro (3 de "1", 3 de "3", 3 de "10")
+- 7 Fichas de materiales de construcción (3 de "1", 4 de "3")
+- 5 Fichas de objetos de valor (3 de "1", 2 de "3")
+- 4 Fichas de daño (2 de "1/2", 2 de "3/5")
+- 1 Ficha de construcción, 1 de población, 1 de libro de hechizos, 1 de moral
+- 30 Cubos acrílicos (10 negros, 20 rojos)`
   },
   {
-    id: "cap_exp_inferno_escenarios",
-    title: "Expansión Inferno: Escenarios Independientes (Alianza y Enfrentamiento)",
-    category: "modos",
+    id: "cap_02_exp_inferno_mecanicas",
+    title: "Expansión Inferno: 2. Mecánicas Nuevas (Invocar, Ciudad Aleatoria, Inmunidad de los Efrits)",
+    category: "general",
+    content: `Esta expansión añade la facción Inferno (demonios y criaturas del abismo), introduce la Carta de Característica Potenciada (ver capítulo 5, Construcción del Mazo), la Ciudad Aleatoria y el Eje Estelar (ver capítulo 8, Elementos del Mapa), y comparte las Escuelas de Magia con Metas Ampliadas y las reglas de Modo Alianza con Murallas.
+
+1. CARTAS DE CARACTERÍSTICA POTENCIADA (20 Cartas):
+   - Funcionan de forma similar a las cartas de característica básicas, pero otorgan un único efecto potenciado sin requerir el uso de la categoría Experto.
+   - Se obtienen al visitar la localización 'Eje Estelar', intercambiando una carta de característica de tu mano por la correspondiente carta potenciada del mismo tipo.
+   - También se pueden adquirir mediante cartas de artefacto, habilidades específicas o anuncios astrológicos.
+
+2. MECÁNICA DE INVOCAR (nuevo tipo de acción de unidad, variante de "Otra Acción"):
+   - Permite añadir una nueva unidad al tablero de combate durante una batalla.
+   - La unidad invocada se despliega en cualquier espacio vacío que elijas (no tiene por qué ser adyacente a la unidad que invoca).
+   - Si la Iniciativa de la unidad invocada es menor o igual a la de la unidad que la invocó, se activará en esa misma ronda. Si es mayor, se considera activada para esa ronda.
+   - Tras el combate, salvo que se indique lo contrario, la unidad invocada se añade a tu mazo de unidades.
+   - La habilidad de Invocar de los Señores del Abismo (expansión Inferno), solo se puede usar una vez por combate y no puede invocar demonios del mazo de unidades neutrales. Al reforzar con este efecto la unidad de demonios invocada, no se paga su coste de Oro.
+
+3. INMUNIDAD DE LOS EFRITS A LA MAGIA DE FUEGO:
+   - Las unidades de Efrits (tanto en versión 'Manada' como la unidad neutral) ignoran todo el daño provocado por cartas de hechizo pertenecientes a la Escuela de Magia de Fuego, identificable por el borde de la carta.
+   - Otros efectos secundarios de hechizos de Fuego no relacionados con el daño directo sí afectan a los Efrits.
+
+4. EJE ESTELAR (Señalizable):
+   - Al visitar un Eje Estelar, puedes retirar una carta de característica de tu mano y sustituirla por una Carta de Característica Potenciada del mismo tipo.
+   - Múltiples héroes de distintas facciones pueden visitar el mismo Eje Estelar y colocar sus respectivos cubos en la zona. Cuenta como zona vacía para las facciones que ya lo hayan visitado.
+
+5. CIUDAD ALEATORIA (Señalizable / Asedio):
+   - Descubrimiento: Al revelar la loseta con Ciudad Aleatoria, cada jugador tira 2 dados de recurso. El jugador con mayor cantidad de recursos resultantes elige una facción no presente en la partida para defender la plaza.
+   - Guarnición de Asedio: Está defendida por 1 manada de Bronce, 2 manadas de Plata y 2 "unas pocas" de Oro de la facción seleccionada (sin carta de Torre de Arqueros).
+   - Recompensas: El jugador que la señalice por primera vez recibe 10 de Oro inmediatamente. Además, la Ciudad Aleatoria genera +10 de ingresos pasivos de Oro al inicio de cada ronda de recursos.`
+  },
+  {
+    id: "cap_03_exp_inferno_escenarios",
+    title: "Expansión Inferno: 3. Escenarios Independientes (Alianza y Enfrentamiento)",
+    category: "escenario",
     content: `Esta expansión aporta las reglas completas del Modo Alianza (idénticas a las de Murallas y Fortaleza: equipo de 2 jugadores formado al inicio de la partida, intercambio de artefactos entre héroes en zonas adyacentes, intercambio libre de recursos entre aliados, y prohibición de señalizar un lugar ya señalizado por tu compañero de equipo).
 
-ESCENARIO DE ALIANZA — "El Cuento de las Dos Tierras" (4 jugadores, dura 11-13 rondas): recursos iniciales 14 de Oro/4 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 2 manadas de bronce del menor coste. Hay 2 áreas de inicio (una por equipo). Visitar un obelisco da ficha de moral positiva; los jugadores pueden usar su mazo de fuerza y magia al pagar Oro para defender la ciudad de su facción. Al comienzo de las rondas 4 y 9, todos lanzan y resuelven 1 dado de recursos. Victoria: la alianza controla 12 losetas al final de una ronda, o captura y mantiene una ciudad enemiga 2 rondas. Si se cumple en la ronda 10 u 11, la partida se alarga hasta la 12 o 13 respectivamente; si ambos equipos la cumplen, empate; si ninguno, pierden todos.
+ESCENARIO DE ALIANZA — "El Cuento de las Dos Tierras" (4 jugadores, dura 11-13 rondas): Conflicto total entre los continentes Este y Oeste de Varesburg.
+- Preparación del Mapa: 4 losetas iniciales (I), 8 cercanas (IV-V con 4 obeliscos), 8 lejanas (II-III). Hay 2 áreas de inicio (una por equipo).
+- Recursos iniciales: 14 de Oro / 4 Materiales de construcción / 1 Objeto de Valor, ingresos «10»/«0»/«0».
+- Edificios iniciales: Cada jugador empieza con vivienda de bronce
+- Unidades iniciales: 2 manadas de bronce del menor coste.
+- Reglas del escenario:
+	a) Al visitar un obelisco, se gana 1 Ficha de Moral Positiva.
+	b) Los jugadores pueden usar su mazo de fuerza y magia pagando Oro para defender la ciudad de su facción.
+- Evento contrarreloj: Al comienzo de las rondas 4 y 9, todos lanzan y resuelven 1 dado de recursos.
+- Victoria: la alianza debe controlar 12 losetas al final de una ronda o capturar y mantener bajo control una ciudad enemiga durante 2 rondas consecutivas. Si se cumple en la ronda 10 u 11, la partida se alarga hasta la 12 o 13 respectivamente. Si ambos equipos la cumplen, empate.
+- Derrota: la alianza no consigue la condición de victoria. Si no la consigue ninguna, pierden todos.
 
-ESCENARIO DE ENFRENTAMIENTO — "Destino Manifiesto" (3 jugadores, dura 12-14 rondas): recursos iniciales 12 de Oro/4 Materiales, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce, cofradía de magos y 1 manada de bronce del mayor coste. Mismas reglas de obelisco/moral y defensa de ciudad pagando Oro. Al comienzo de las rondas 4 y 9, cada héroe gana +1 PM. Victoria: controlar 7 losetas al final de una ronda, o capturar y mantener una ciudad enemiga 2 rondas (ganan todos los que lo cumplan, pierden los que no). Igual regla de alargar la partida si se cumple en la penúltima/última ronda.
+ESCENARIO DE ENFRENTAMIENTO — "Destino Manifiesto" (3 jugadores, dura 12-14 rondas): Dominar las tierras superpobladas para consolidar la hegemonía de tu reino.
+- Recursos iniciales: 12 de Oro / 4 Materiales de construcción, ingresos «10»/«0»/«0».
+- Edificios iniciales: Cada jugador empieza con vivienda de bronce y cofradía de magos.
+- Unidades iniciales: 1 manada de bronce del mayor coste.
+- Reglas del escenario:
+	a) Visitar obeliscos otorga 1 Ficha de Moral.
+	b) Se puede defender la ciudad con el mazo de fuerza y magia.
+- Evento contrarreloj: Al comienzo de las rondas 4 y 9, cada héroe gana +1 PM.
+- Victoria: controlar 7 losetas al final de una ronda, o mantener capturada una ciudad enemiga durante 2 rondas (ganan todos los que lo cumplan, pierden los que no). Igual regla de alargar la partida si se cumple en la penúltima/última ronda.
 
-ESCENARIO DE ENFRENTAMIENTO — "Carpe Diem" (2 jugadores, dura 14 rondas): recursos iniciales 10 de Oro/3 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce, cofradía de magos y 1 manada de bronce del mayor coste. Incluye 1 loseta central con Ciudad Aleatoria. Un héroe en la loseta central no puede entrar en la loseta inicial enemiga. Al comienzo de las rondas 3, 6 y 9, el héroe principal del segundo jugador gana +1 PM. Victoria: conquistar la Ciudad Aleatoria de la loseta central antes del final de la ronda 14 (si nadie lo logra, empate).
+ESCENARIO DE ENFRENTAMIENTO — "Carpe Diem" (2 jugadores, dura 14 rondas): Lucha directa por reclamar el trono vacante conquistando la Ciudad Aleatoria central.
+- Preparación: Incluye 1 loseta central con Ciudad Aleatoria.
+- Recursos iniciales: 10 de Oro / 3 Materiales de construcción / 1 Objeto de Valor, ingresos «10»/«0»/«0».
+- Edificios iniciales: Cada jugador empieza con vivienda de bronce y cofradía de magos.
+- Unidades iniciales: 1 manada de bronce del mayor coste.
+- Reglas del escenario: Un héroe en la loseta central no puede entrar directamente en la loseta inicial enemiga.
+- Eventos contrarreloj: Al comienzo de las rondas 3, 6 y 9, el héroe principal del segundo jugador gana +1 PM.
+- Victoria: conquistar la Ciudad Aleatoria de la loseta central antes del final de la ronda 14 (si nadie lo logra, empate).
 
 Regla opcional común a los 3 escenarios: para mantener el equilibrio, se recomienda retirar o ignorar las cartas que permiten atravesar bordes amarillos del mapa (p. ej. Alas de Ángel).`
   },
@@ -1155,8 +1235,8 @@ Regla opcional común a los 3 escenarios: para mantener el equilibrio, se recomi
   // LIBRO DE TORNEO (TOURNAMENT BOOK)
   // =========================================================================
   {
-    id: "cap_torneo_mapa_puntuacion",
-    title: "Modo Torneo: Construcción del Mapa de Escenario y Puntuación",
+    id: "cap_01_torneo_mapa_puntuacion",
+    title: "Modo Torneo: 1. Construcción del Mapa de Escenario y Puntuación",
     category: "modos",
     content: `El Modo Torneo está pensado para partidas 1 contra 1 con una preparación de mapa específica y un sistema de puntos de victoria (PV) al final del escenario.
 
@@ -1179,8 +1259,8 @@ PUNTUACIÓN: cuando el escenario llega al límite de rondas o alguien cumple la 
 Gana el jugador con más puntos de victoria.`
   },
   {
-    id: "cap_torneo_reglas_adicionales_opcionales",
-    title: "Modo Torneo: Reglas Adicionales y Opcionales",
+    id: "cap_02_torneo_reglas_adicionales_opcionales",
+    title: "Modo Torneo: 2. Reglas Adicionales y Opcionales",
     category: "modos",
     content: `REGLAS ADICIONALES (se aplican a todos los escenarios de torneo):
 1. Se retira de la partida la carta de habilidad Diplomacia.
@@ -1196,9 +1276,9 @@ REGLAS OPCIONALES (utilizables en cualquier escenario, incluidos los básicos):
 • Divide el mazo de hechizos en 2 (básicos y avanzados; Flecha Mágica es un hechizo básico): en losetas iniciales y lejanas solo se consiguen hechizos básicos; en las cercanas y centrales, básicos y avanzados.`
   },
   {
-    id: "cap_torneo_escenarios",
-    title: "Escenarios del Libro de Torneo",
-    category: "modos",
+    id: "cap_03_torneo_escenarios",
+    title: "Modo Torneo: 3. Escenarios del Libro de Torneo",
+    category: "escenario",
     content: `3 escenarios oficiales para el Modo Torneo (1 contra 1), con condiciones de victoria alternativas al derrocamiento total del rival.
 
 ESCENARIO 1 — "Última Oportunidad": preparación con 2 losetas iniciales, 4 cercanas (2 con obelisco) y 4 lejanas. Recursos iniciales 10 de Oro/3 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 3 unidades "unas pocas" de bronce. Al visitar un obelisco, se recibe 1 ficha de moral. Victoria: el héroe de un jugador derrota al héroe principal de su oponente (la partida acaba de inmediato y ambos cuentan sus PV). Si nadie lo consigue antes del final de la ronda 8, la partida acaba igualmente y se cuentan los PV.
@@ -1208,7 +1288,7 @@ ESCENARIO 2 — "La Gran Carrera": preparación con 2 losetas iniciales, 4 cerca
 ESCENARIO 3 — "Herencia Inesperada": preparación con 2 losetas iniciales, 2 cercanas con obelisco (repartida 1 por jugador), 2 cercanas sin obelisco, 2 centrales (con grial y utopía del dragón) y 6 lejanas. Mismos recursos/ingresos/edificios/unidades iniciales. Al visitar un obelisco, se elige entre 2 acciones: lanzar 1 dado de recursos y 1 de tesoro (eligiendo un resultado e ignorando el otro), o buscar(2) en artefactos. No se puede visitar la zona del grial hasta haber visitado 2 obeliscos diferentes, o hasta que otro héroe ya haya cogido la ficha; conseguirla cuesta 2 PM en su zona; si otro héroe te derrota o te rindes teniéndola, la ficha pasa a quien te ha vencido o se queda en la zona de rendición; si un ejército neutral te derrota, la ficha se queda en esa zona. Un jugador gana 3 PV extra al final del escenario si controla la utopía del dragón y si uno de sus héroes tiene la ficha de grial. Victoria: al final de cualquier ronda en que alguien controle la utopía del dragón y tenga la ficha de grial, se juega 1 ronda más y la partida acaba, contando los PV. Si no se cumple antes del final de la ronda 14, la partida acaba igualmente.`
   },
   {
-    id: "cap_torneo_creador_escenarios",
+    id: "cap_04_torneo_creador_escenarios",
     title: "Creador de Escenarios (Guía Oficial para Diseñar Escenarios Propios)",
     category: "escenario",
     content: `Pasos oficiales para diseñar un escenario propio de Heroes of Might and Magic III: The Board Game:

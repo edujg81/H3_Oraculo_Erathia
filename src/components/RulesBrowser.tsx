@@ -5,7 +5,7 @@ import { RuleSection } from '../types';
 import { 
   Search, BookOpen, Layers, Swords, MessageSquareCode, Package, Compass, 
   Map, Home, Sparkles, HelpCircle, Coins, Trees, Hammer, Gem, Flame, Shield, Star,
-  Zap, Plus, Droplet, Heart, Award, ExternalLink
+  Zap, Plus, Droplet, Heart, Award, ExternalLink, Wand2, Building2
 } from 'lucide-react';
 
 function highlightKeywords(text: string): React.ReactNode {
@@ -448,16 +448,18 @@ export default function RulesBrowser({
     { id: 'all', label: 'Todas', icon: Compass },
     { id: 'general', label: 'Mecánicas', icon: BookOpen },
     { id: 'componentes', label: 'Componentes', icon: Package },   
-    { id: 'cartas', label: 'Cartas', icon: Package },
+    //{ id: 'cartas', label: 'Cartas', icon: Package },
     { id: 'modos', label: 'Modos de Juego', icon: Compass },
     { id: 'preparación', label: 'Preparación', icon: Layers },
     { id: 'ciudad', label: 'Ciudad y Recursos', icon: Home },
     { id: 'héroes', label: 'Héroes', icon: Star },
     { id: 'unidades', label: 'Unidades', icon: Swords },
     { id: 'mapa', label: 'Exploración y Mapa', icon: Map },
-    { id: 'habilidades', label: 'Habilidades', icon: Award },
-    { id: 'magia', label: 'Hechizos y Magia', icon: Sparkles },
-    { id: 'artefactos', label: 'Artefactos', icon: Gem },
+    //{ id: 'habilidades', label: 'Habilidades', icon: Award },
+    //{ id: 'magia', label: 'Hechizos y Magia', icon: Sparkles },
+    //{ id: 'hechizos', label: 'Hechizos', icon: Wand2 },
+    //{ id: 'lugares', label: 'Lugares del Mapa', icon: Building2 },
+    //{ id: 'artefactos', label: 'Artefactos', icon: Gem },
     { id: 'combate', label: 'Combate', icon: Swords },
     { id: 'campaña', label: 'Campaña', icon: BookOpen },
     { id: 'escenario', label: 'Escenarios', icon: Map },
@@ -465,7 +467,6 @@ export default function RulesBrowser({
   ];
 
   const filteredSections = useMemo(() => {
-    //return rulesKB.filter(section => {
     return reglasCombinadas.filter(section => {
       // 1. Matches Category
       const matchesCategory = selectedCategory === 'all' || section.category === selectedCategory;
