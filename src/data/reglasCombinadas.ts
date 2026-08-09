@@ -1240,21 +1240,23 @@ Regla opcional común a los 3 escenarios: para mantener el equilibrio, se recomi
     category: "modos",
     content: `El Modo Torneo está pensado para partidas 1 contra 1 con una preparación de mapa específica y un sistema de puntos de victoria (PV) al final del escenario.
 
-CONSTRUIR EL MAPA DE ESCENARIO: cada escenario de torneo indica una disposición inicial de losetas; el resto se coloca siguiendo las reglas básicas de colocación (ver capítulo 8, Elementos del Mapa), en este orden:
-1. Ambos jugadores lanzan 2 dados de recursos; quien consiga más recursos elige quién empieza y quién es segundo (el segundo jugador recibe 1 ficha de moral positiva al inicio).
-2. Se colocan las losetas centrales que indique el escenario, en el centro de la zona de juego.
-3. El jugador inicial las descubre y las rota como prefiera.
-4. Empezando por el segundo jugador, ambos añaden por turnos, una a una, sus losetas cercanas (si tienen), preferiblemente junto a una loseta central; en cada escenario, al menos 2 losetas cercanas deben incluir un obelisco.
-5. El jugador inicial coloca su loseta inicial adyacente a al menos 1 loseta cercana; el otro jugador coloca la suya en el lado opuesto del mapa (la posición más alejada por número de losetas).
-6. Empezando por el jugador inicial, ambos añaden por turnos sus losetas lejanas: la primera debe quedar adyacente a la loseta inicial propia; el resto sigue las reglas básicas de colocación. Todas las losetas se rotan libremente y se colocan boca arriba.
+PASOS PARA CONSTRUIR EL MAPA DE ESCENARIO DE TORNEO: cada escenario de torneo indica una disposición inicial de losetas; el resto se coloca siguiendo las reglas básicas de colocación (ver capítulo 8, Elementos del Mapa), en este orden:
+1. Determinación de Orden Inicial: Ambos jugadores lanzan 2 dados de recursos; quien consiga más recursos elige quién empieza y quién es segundo (el segundo jugador recibe 1 ficha de moral positiva al inicio).
+2. Losetas Centrales: Se colocan las losetas centrales que indique el escenario, en el centro de la zona de juego. El jugador inicial las descubre y las rota como prefiera.
+3. Colocación de Losetas Cercanas: Empezando por el segundo jugador, ambos añaden por turnos sus losetas cercanas una a una.
+   a) Siempre que sea posible, las losetas cercanas deben situarse adyacentes a las centrales.
+   b) En cada escenario, al menos 2 losetas cercanas deben incluir un obelisco.
+4. Losetas Iniciales: El jugador inicial coloca su loseta inicial adyacente a al menos 1 loseta cercana. El otro jugador coloca la suya en el lado opuesto del mapa (la posición más alejada por número de losetas).
+5. Colocación de Losetas Lejanas: Empezando por el jugador inicial, ambos añaden por turnos sus losetas lejanas: la primera debe quedar adyacente a la loseta inicial propia.
+6. Rotación Libre: Todas las losetas se colocan descubiertas y pueden rotarse libremente según las reglas generales de colocación.
 
-PUNTUACIÓN: cuando el escenario llega al límite de rondas o alguien cumple la condición de victoria, la partida acaba y ambos jugadores cuentan sus puntos de victoria (PV):
-• 4 PV por derrotar al héroe principal enemigo (una vez por escenario).
-• 2 PV por derrotar al héroe secundario enemigo.
+SISTEMA OFICIAL DE PUNTUACIÓN: cuando el escenario llega al límite de rondas o alguien cumple la condición de victoria, la partida acaba y ambos jugadores cuentan sus puntos de victoria (PV):
+• 4 PV por derrotar al Héroe Principal enemigo (una vez por escenario).
+• 2 PV por derrotar al Héroe Secundario enemigo.
 • 1 PV por cada mina o asentamiento controlado.
-• 1 PV por cada edificio en tu ciudad.
+• 1 PV por cada edificio construido en tu ciudad.
 • 1 PV por cada 2 cartas de artefacto en tu mazo de fuerza y magia.
-• 1 PV por cada nivel de experiencia de tu héroe principal.
+• 1 PV por cada nivel de experiencia de tu Héroe Principal.
 • X PV por objetivos adicionales que especifique el escenario.
 Gana el jugador con más puntos de victoria.`
   },
@@ -1263,17 +1265,23 @@ Gana el jugador con más puntos de victoria.`
     title: "Modo Torneo: 2. Reglas Adicionales y Opcionales",
     category: "modos",
     content: `REGLAS ADICIONALES (se aplican a todos los escenarios de torneo):
-1. Se retira de la partida la carta de habilidad Diplomacia.
-2. Se retira de la partida la carta de artefacto Reloj de la Hora Aciaga.
-3. Al comienzo de la primera ronda, cada jugador puede devolver su mano de cartas al mazo de fuerza y magia, barajarlo y robar una mano nueva.
-4. El segundo jugador empieza con 1 ficha de moral.
-5. Acción adicional con la ficha de moral: durante una acción de buscar (en habilidades, artefactos o hechizos), puedes descartar todas las cartas robadas y volver a buscar la misma cantidad.
-6. Cualquier carta de artefacto retirada de la partida se coloca junto al mazo de fuerza y magia hasta el final de la partida; ese montón cuenta para tus puntos de victoria finales.
-7. Lugar del mapa — Observatorio de Caoba, variante de torneo (Visitable): elige 1 loseta adyacente a esta que no contenga ningún héroe; puedes rotarla como quieras, siguiendo las reglas básicas de colocación de losetas.
+1. Cartas Prohibidas / Retiradas de la partida:
+   - Carta de habilidad: Diplomacia (se retira del mazo).
+   - Carta de artefacto: Reloj de la Hora Aciaga (se retira del mazo).
+2. Regla de Mulligan: Al comienzo de la primera ronda, cada jugador puede devolver su mano inicial de cartas al mazo de fuerza y magia, barajarlo y robar una mano nueva.
+3. Bonificador del Segundo Jugador: El segundo jugador empieza con 1 Ficha de Moral positiva.
+4. Acción adicional con la Ficha de Moral: Durante una acción de buscar (en habilidades, artefactos o hechizos), puedes gastar 1 Ficha de Moral positiva para descartar todas las cartas robadas y volver a buscar la misma cantidad.
+5. Puntuación de Artefactos Retirados: Cualquier carta de artefacto retirada de la partida se coloca junto al mazo de fuerza y magia hasta el final de la partida; ese montón cuenta para tus puntos de victoria finales.
+6. Lugar del Mapa — Observatorio de Caoba, variante de torneo (Visitable): elige 1 loseta adyacente a esta que no contenga ningún héroe; puedes rotarla como quieras, siguiendo las reglas básicas de colocación de losetas.
 
 REGLAS OPCIONALES (utilizables en cualquier escenario, incluidos los básicos):
-• Divide el mazo de artefactos en 3 (menores, mayores, reliquias; orden de rareza menor→mayor→reliquia): en losetas iniciales y lejanas solo se consiguen artefactos menores; en las cercanas, mayores y reliquias; en el centro, los 3 tipos.
-• Divide el mazo de hechizos en 2 (básicos y avanzados; Flecha Mágica es un hechizo básico): en losetas iniciales y lejanas solo se consiguen hechizos básicos; en las cercanas y centrales, básicos y avanzados.`
+1. División del Mazo de Artefactos en 3 (Menores → Mayores → Reliquias):
+   • en losetas iniciales y lejanas solo se consiguen artefactos menores
+   • en las cercanas, mayores y reliquias
+   • en el centro, los 3 tipos.
+2. División del mazo de hechizos en 2 (básicos y avanzados; Flecha Mágica es un hechizo básico):
+   • en losetas iniciales y lejanas solo se consiguen hechizos básicos
+   • en las cercanas y centrales, básicos y avanzados.`
   },
   {
     id: "cap_03_torneo_escenarios",
@@ -1281,30 +1289,64 @@ REGLAS OPCIONALES (utilizables en cualquier escenario, incluidos los básicos):
     category: "escenario",
     content: `3 escenarios oficiales para el Modo Torneo (1 contra 1), con condiciones de victoria alternativas al derrocamiento total del rival.
 
-ESCENARIO 1 — "Última Oportunidad": preparación con 2 losetas iniciales, 4 cercanas (2 con obelisco) y 4 lejanas. Recursos iniciales 10 de Oro/3 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 3 unidades "unas pocas" de bronce. Al visitar un obelisco, se recibe 1 ficha de moral. Victoria: el héroe de un jugador derrota al héroe principal de su oponente (la partida acaba de inmediato y ambos cuentan sus PV). Si nadie lo consigue antes del final de la ronda 8, la partida acaba igualmente y se cuentan los PV.
+ESCENARIO 1 — "Última Oportunidad" (1v1, Duración: 8 Rondas): Conflicto directo decretado por el rey para establecer un señor definitivo.
+- Preparación: con 2 losetas iniciales (I), 4 cercanas (IV-V, 2 con obelisco) y 4 lejanas (II-III).
+- Recursos iniciales: 10 de Oro / 3 Materiales de construcción / 1 Objeto de Valor, ingresos «10»/«0»/«0».
+- Edificios iniciales: Cada jugador empieza con vivienda de bronce.
+- Unidades iniciales: 3 unidades "unas pocas" de bronce.
+- Reglas del escenario: Al visitar un obelisco, se recibe 1 ficha de moral.
+- Victoria: Derrotar al Héroe Principal enemigo (la partida acaba de inmediato y ambos cuentan sus PV). Si la ronda 8 concluye, la partida acaba igualmente y se cuentan los PV.
 
-ESCENARIO 2 — "La Gran Carrera": preparación con 2 losetas iniciales, 4 cercanas (2 con obelisco), 1 central con utopía del dragón y 4 lejanas. Mismos recursos/ingresos/edificios/unidades iniciales que el escenario 1. Al visitar un obelisco, se elige entre 1 de 3 acciones: ganar ficha de moral, lanzar 1 dado de recursos, o lanzar 1 dado de tesoro. Quien controle la utopía del dragón al final de la partida gana 3 PV extra. Victoria: tras capturar la utopía del dragón por primera vez, se juega 1 ronda más y la partida acaba, contando los PV. Si nadie la captura antes del final de la ronda 11, la partida acaba igualmente.
+ESCENARIO 2 — "La Gran Carrera" (1v1, Duración: 11 Rondas): Competición por alcanzar la torre donde la princesa está recluida y controlar la Utopía del Dragón.
+- Preparación: con 2 losetas iniciales (I), 4 cercanas (IV-V, 2 con obelisco), 1 central (VII-VIII, con Utopía del Dragón) y 4 lejanas (II-III).
+- Recursos iniciales: 10 de Oro / 3 Materiales de construcción / 1 Objeto de Valor, ingresos «10»/«0»/«0».
+- Edificios iniciales: Cada jugador empieza con vivienda de bronce.
+- Unidades iniciales: 3 unidades "unas pocas" de bronce.
+- Reglas del escenario: Al visitar un obelisco, se elige entre 1 de 3 acciones:
+   a) ganar 1 ficha de moral.
+   b) lanzar 1 dado de recursos.
+   c) lanzar 1 dado de tesoro.
+- Puntuación adicional: Quien controle la utopía del dragón al final de la partida gana 3 PV extra.
+- Victoria: tras capturar la utopía del dragón por primera vez, se juega 1 ronda más y la partida acaba, contando los PV. Si nadie la captura antes del final de la ronda 11, la partida acaba igualmente.
 
-ESCENARIO 3 — "Herencia Inesperada": preparación con 2 losetas iniciales, 2 cercanas con obelisco (repartida 1 por jugador), 2 cercanas sin obelisco, 2 centrales (con grial y utopía del dragón) y 6 lejanas. Mismos recursos/ingresos/edificios/unidades iniciales. Al visitar un obelisco, se elige entre 2 acciones: lanzar 1 dado de recursos y 1 de tesoro (eligiendo un resultado e ignorando el otro), o buscar(2) en artefactos. No se puede visitar la zona del grial hasta haber visitado 2 obeliscos diferentes, o hasta que otro héroe ya haya cogido la ficha; conseguirla cuesta 2 PM en su zona; si otro héroe te derrota o te rindes teniéndola, la ficha pasa a quien te ha vencido o se queda en la zona de rendición; si un ejército neutral te derrota, la ficha se queda en esa zona. Un jugador gana 3 PV extra al final del escenario si controla la utopía del dragón y si uno de sus héroes tiene la ficha de grial. Victoria: al final de cualquier ronda en que alguien controle la utopía del dragón y tenga la ficha de grial, se juega 1 ronda más y la partida acaba, contando los PV. Si no se cumple antes del final de la ronda 14, la partida acaba igualmente.`
+ESCENARIO 3 — "Herencia Inesperada" (1v1, Duración: 14 Rondas): Conflicto territorial tras heredar un castillo vecino disputado.
+- Preparación: con 2 losetas iniciales (I), 2 cercanas (IV-V) con obelisco (repartida 1 por jugador), 2 cercanas (IV-V) sin obelisco, 2 centrales (VII-VIII, con grial y utopía del dragón) y 6 lejanas (II-III).
+- Recursos iniciales: 10 de Oro / 3 Materiales de construcción / 1 Objeto de Valor, ingresos «10»/«0»/«0».
+- Edificios iniciales: Cada jugador empieza con vivienda de bronce.
+- Unidades iniciales: 3 unidades "unas pocas" de bronce.
+- Reglas del escenario:
+   • Al visitar un obelisco, se elige entre 2 acciones:
+      a) lanzar 1 dado de recursos y 1 de tesoro (eligiendo un resultado e ignorando el otro).
+      b) buscar(2) en artefactos.
+   • No se puede visitar la zona del grial hasta haber visitado 2 obeliscos diferentes, o hasta que otro héroe ya haya cogido la ficha.
+      a) conseguirla cuesta 2 PM en su zona
+      b) si otro héroe te derrota o te rindes teniéndola, la ficha pasa a quien te ha vencido o se queda en la zona de rendición
+      c) si un ejército neutral te derrota, la ficha se queda en esa zona.
+- Puntuación adicional: Un jugador gana 3 PV extra al final del escenario si controla la utopía del dragón y si uno de sus héroes tiene la ficha de grial.
+- Victoria: al final de cualquier ronda en que alguien controle la utopía del dragón y tenga la ficha de grial, se juega 1 ronda más y la partida acaba, contando los PV. Si no se cumple antes del final de la ronda 14, la partida acaba igualmente.`
   },
   {
     id: "cap_04_torneo_creador_escenarios",
-    title: "Creador de Escenarios (Guía Oficial para Diseñar Escenarios Propios)",
+    title: "Modo Torneo: 4. Creador de Escenarios (Guía Oficial para Diseñar Escenarios Propios)",
     category: "escenario",
     content: `Pasos oficiales para diseñar un escenario propio de Heroes of Might and Magic III: The Board Game:
-1. Dale un nombre y una breve descripción a tu escenario.
-2. Elige la cantidad de jugadores (máximo 3 en el juego base; las expansiones permiten más).
+
+PASOS DE CREACIÓN DE UN ESCENARIO:
+1. Título y Descripción: Dale un nombre y una breve descripción a tu escenario.
+2. Cantidad de Jugadores: Elige la cantidad de jugadores (máximo 3 en el juego base; las expansiones permiten más).
 3. Establece la duración: el marcador de rondas permite hasta 16, aunque no se recomienda superar esa cifra (para partidas más largas, es mejor dividir en varios escenarios como una campaña).
-4. Diseña el mapa: se recomienda, por cada jugador, al menos 1 loseta inicial, 2 cercanas y 2 lejanas; asegúrate de que todos tengan acceso equivalente a los distintos tipos de losetas para que la posición inicial no determine la partida.
-5. Elige los recursos iniciales de los jugadores (por defecto 15 de Oro/3 Materiales/1 Objeto de Valor); puedes variarlos para acelerar/ralentizar el ritmo, o hacerlos asimétricos.
-6. Establece los ingresos iniciales en el marcador (por defecto «10»/«0»/«0»); reducir las losetas lejanas y aumentar los ingresos acelera la partida.
-7. Elige los edificios iniciales disponibles para los jugadores.
-8. Elige las unidades iniciales (por defecto 3 "unas pocas" de bronce, personalizable).
-9. Define bonificadores iniciales adicionales si lo deseas (normalmente reservado a campañas).
+4. Diseña el mapa: se recomienda, por cada jugador, al menos 1 loseta inicial (I), 2 cercanas (IV-V) y 2 lejanas (II-III); asegúrate de que todos tengan acceso equivalente a los distintos tipos de losetas para que la posición inicial no determine la partida.
+5. Recursos Iniciales: Elige los recursos iniciales de los jugadores (por defecto 15 de Oro/3 Materiales/1 Objeto de Valor); puedes variarlos para acelerar/ralentizar el ritmo, o hacerlos asimétricos.
+6. Ingresos Iniciales: Establece los ingresos iniciales en el marcador (por defecto «10»/«0»/«0»); reducir las losetas lejanas y aumentar los ingresos acelera la partida.
+7. Edificios Iniciales: Elige los edificios iniciales disponibles para los jugadores.
+8. Unidades Iniciales: Elige las unidades iniciales (por defecto 3 "unas pocas" de bronce, personalizable).
+9. Bonificadores Iniciales: Define bonificadores iniciales adicionales si lo deseas (normalmente reservado a campañas o escenarios asimétricos).
 10. Establece las reglas del escenario: qué ocurre en lugares especiales (sobre todo obeliscos y utopía del dragón) y cualquier otro efecto que quieras modificar (consulta Opciones de Juego y las campañas oficiales para inspirarte).
 11. Establece la condición de victoria: puede ser cualquier objetivo (recolectar recursos, capturar un lugar, derrotar a un jugador); pueden existir varias condiciones distintas, incluso una por jugador.
-12. Establece qué ocurre si se alcanza el límite de rondas del marcador.
-13. Establece un evento contrarreloj: qué deben hacer los jugadores al comienzo de ciertas rondas o qué condiciones lo activan.`
+12. Marcador de Rondas: Establece qué ocurre si se alcanza el límite de rondas del marcador.
+13. Establece un evento contrarreloj: qué deben hacer los jugadores al comienzo de ciertas rondas o qué condiciones lo activan.
+
+Nota: Esta guía se incluye en la expansión del Modo Torneo, pero sirve para crear escenarios de cualquier tipo, no solo para el modo Torneo.`
   },
 
   // =========================================================================
