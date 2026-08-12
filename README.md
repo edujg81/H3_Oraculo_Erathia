@@ -133,6 +133,7 @@ Encontrarás documentación operativa y de proyecto en los siguientes archivos:
 - [DATA_README.md](DATA_README.md): estructura y buenas prácticas para los datos en `src/data/`.
 - [SECURITY.md](SECURITY.md): recomendaciones para manejo de secrets, rotación y prácticas de seguridad.
 - [CONTRIBUTING.md](CONTRIBUTING.md): guía para contribuir, naming conventions y flujo de PR.
+- [QNAP_DEPLOYMENT.md](QNAP_DEPLOYMENT.md): guía de despliegue y webhook para QNAP TS-251A.
 - [CHANGELOG.md](CHANGELOG.md): registro de cambios recientes.
 
 Estos documentos están en la raíz del repositorio y te sirven como punto único de referencia para despliegue, desarrollo y contribución.
