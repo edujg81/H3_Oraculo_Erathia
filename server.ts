@@ -3,7 +3,12 @@ import path from "path";
 import dotenv from "dotenv";
 import type { GoogleGenAI as GoogleGenAIType } from "@google/genai";
 
-dotenv.config();
+const dotenvResult = dotenv.config({ path: path.resolve(process.cwd(), ".env") });
+if (dotenvResult.error) {
+  console.warn("Warning: dotenv failed to load .env file:", dotenvResult.error);
+} else if (!process.env.GEMINI_API_KEY) {
+  console.warn("Warning: .env loaded, but GEMINI_API_KEY is not defined.");
+}
 
 // Polyfill `File` global for Node.js versions that don't provide it (Node < 20)
 // `undici` expects a global `File` constructor for web-compat APIs.

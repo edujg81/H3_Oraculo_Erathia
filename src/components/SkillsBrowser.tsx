@@ -193,6 +193,19 @@ export default function SkillsBrowser() {
         </div>
       </div>
 
+      {/* Empowered skill cards info */}
+      <div className="bg-slate-900/30 border border-slate-850 rounded-2xl p-4 md:p-5 space-y-3 shadow-lg shadow-black/20" id="skills-empowered-info">
+        <div className="flex items-start gap-3">
+          <div className="w-2.5 h-2.5 rounded-full bg-amber-400 mt-2" />
+          <div>
+            <p className="text-xs uppercase tracking-[0.24em] font-bold text-amber-300">Cartas de Habilidad Potenciada</p>
+            <p className="text-xs text-slate-400 leading-relaxed">
+              Las cartas de Habilidad Potenciada son versiones mejoradas de las cartas de habilidad estándar (expansión Batallas Navales). Cuando obtienes una carta de habilidad nueva, puedes descartar una Ficha de Habilidad Potenciada para sustituirla por su versión Potenciada. Estas cartas aplican directamente el efecto Experto sin consumir un uso de Experto adicional y solo existe una copia de cada carta Potenciada en la partida.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Search and Filters Bento Controls */}
       <div className="bg-slate-900/30 border border-slate-850 rounded-2xl p-4 md:p-5 space-y-4 shadow-lg shadow-black/20" id="skills-controls">
         <div className="flex flex-col md:flex-row gap-4 items-stretch">
