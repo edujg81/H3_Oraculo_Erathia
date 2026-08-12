@@ -1,12 +1,33 @@
 import express from "express";
 import path from "path";
 import dotenv from "dotenv";
-import { GoogleGenAI } from "@google/genai";
-import { Agent, setGlobalDispatcher } from "undici";
+import type { GoogleGenAI as GoogleGenAIType } from "@google/genai";
+
+const dotenvResult = dotenv.config({ path: path.resolve(process.cwd(), ".env") });
+if (dotenvResult.error) {
+  console.warn("Warning: dotenv failed to load .env file:", dotenvResult.error);
+} else if (!process.env.GEMINI_API_KEY) {
+  console.warn("Warning: .env loaded, but GEMINI_API_KEY is not defined.");
+}
+
+// Polyfill `File` global for Node.js versions that don't provide it (Node < 20)
+// `undici` expects a global `File` constructor for web-compat APIs.
+try {
+  if (typeof (globalThis as any).File === "undefined") {
+    const fetchFileModule = await import("fetch-blob/file.js");
+    const FetchFile = fetchFileModule.File || fetchFileModule.default || fetchFileModule;
+    if (FetchFile) {
+      (globalThis as any).File = FetchFile;
+    }
+  }
+} catch (e) {
+  console.warn("Warning: failed to polyfill global File:", e);
+}
+
+const { GoogleGenAI: GoogleGenAIClient } = await import("@google/genai");
+const { Agent, setGlobalDispatcher } = await import("undici");
 import { rulesKB } from "./src/data/rulesKB.js"; // Note: esbuild handles ts resolution
 import { entityCatalogSummary, getRelevantEntitySections } from "./src/data/knowledgeIndex.js";
-
-dotenv.config();
 
 // Configura un dispatcher global de undici con límites de tiempo más amplios (5 minutos)
 // para evitar que consultas largas o de gran tamaño de prompt lancen HeadersTimeoutError en Node.js
@@ -67,11 +88,11 @@ const MAX_MESSAGES = 40; // longitud máxima del historial de chat aceptado
 const MAX_MESSAGE_LENGTH = 4000; // caracteres por mensaje
 
 // Initialize GenAI safely
-let ai: GoogleGenAI | null = null;
+let ai: GoogleGenAIType | null = null;
 const apiKey = process.env.GEMINI_API_KEY;
 
 if (apiKey) {
-  ai = new GoogleGenAI({
+  ai = new GoogleGenAIClient({
     apiKey: apiKey,
     httpOptions: {
       headers: {
