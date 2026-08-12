@@ -138,6 +138,16 @@ Encontrarás documentación operativa y de proyecto en los siguientes archivos:
 
 Estos documentos están en la raíz del repositorio y te sirven como punto único de referencia para despliegue, desarrollo y contribución.
 
+## ✅ Calidad y pruebas
+
+Este proyecto ya incluye una base de calidad automatizada:
+
+- `npm run lint` — valida TypeScript sin generar artefactos.
+- `npm test` — ejecuta tests con Vitest.
+- `npm run build` — compila el frontend y genera el bundle de servidor en `dist/server.cjs`.
+- GitHub Actions en `.github/workflows/ci.yml` ejecuta `npm ci`, `npm run lint`, `npm test` y `npm run build` en cada `push` a `main` y en cada `pull_request`.
+- El servidor exporta `app` para pruebas, expone `/health` y valida el payload de `/api/chat` antes de llamar a Gemini.
+
 ### Paso 1: Configurar Variables de Entorno
 
 Crea un archivo `.env` en el directorio raíz o copia el archivo de ejemplo:
