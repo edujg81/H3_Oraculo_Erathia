@@ -3,7 +3,10 @@ import path from "path";
 import dotenv from "dotenv";
 import type { GoogleGenAI as GoogleGenAIType } from "@google/genai";
 
-if (process.env.NODE_ENV !== "production") {
+const isTest = process.env.NODE_ENV === "test";
+const isProduction = process.env.NODE_ENV === "production";
+
+if (!isProduction && !isTest) {
   const dotenvResult = dotenv.config({
     path: path.resolve(process.cwd(), ".env"),
   });
@@ -16,7 +19,7 @@ if (process.env.NODE_ENV !== "production") {
   }
 }
 
-if (!process.env.GEMINI_API_KEY) {
+if (isProduction && !process.env.GEMINI_API_KEY) {
   console.error("ERROR: GEMINI_API_KEY is not defined.");
   process.exit(1);
 }
