@@ -104,12 +104,17 @@ if (apiKey) {
   console.warn("WARNING: GEMINI_API_KEY is not defined in environment secrets. AI chat assistance will be offline.");
 }
 
-// 1. API: Retrieve the Rules Knowledge Base directly (used for client-side search/filtering)
+// 1. Health check endpoint
+app.get("/health", (req, res) => {
+  res.json({ status: "ok" });
+});
+
+// 2. API: Retrieve the Rules Knowledge Base directly (used for client-side search/filtering)
 app.get("/api/rules", (req, res) => {
   res.json({ rules: rulesKB });
 });
 
-// 2. API: Rule Chat Companion
+// 3. API: Rule Chat Companion
 app.post("/api/chat", async (req, res) => {
   try {
     const clientIp = req.ip || req.socket.remoteAddress || "unknown";
@@ -238,6 +243,8 @@ ${entityDetailString ? `\n=== FICHAS DETALLADAS RELEVANTES A LA CONSULTA ACTUAL 
 // Configure client assets serving based on mode
 const isProd = process.env.NODE_ENV === "production";
 
+export { app };
+
 async function start() {
   if (isProd) {
     // In production serve compiled dist static files
@@ -263,6 +270,8 @@ async function start() {
   });
 }
 
-start().catch(err => {
-  console.error("Failed to start server:", err);
-});
+if (process.env.NODE_ENV !== "test") {
+  start().catch(err => {
+    console.error("Failed to start server:", err);
+  });
+}

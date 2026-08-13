@@ -544,7 +544,7 @@ export default function RulesBrowser({
                     <span className="px-2 py-0.5 rounded text-[10px] font-mono uppercase bg-slate-800 text-amber-400 border border-amber-900/30">
                       {section.category}
                     </span>
-                    {onNavigateTab && (section.category === 'habilidades' || section.category === 'skills' || section.id === 'deck_building_and_secondary_skills') && (
+                    {onNavigateTab && (section.category === 'habilidades' || section.id === 'deck_building_and_secondary_skills') && (
                       <button
                         onClick={() => onNavigateTab('skills')}
                         className="px-2.5 py-1 bg-amber-600 hover:bg-amber-500 text-white rounded text-xs transition duration-200 cursor-pointer font-bold flex items-center gap-1 shadow-sm"
@@ -554,7 +554,7 @@ export default function RulesBrowser({
                         <span>Ver 32 Habilidades ➔</span>
                       </button>
                     )}
-                    {onNavigateTab && (section.category === 'magia' || section.category === 'hechizos' || section.category === 'magic' || section.id === 'magic_system_and_spells_catalog' || section.category === 'spells') && (
+                    {onNavigateTab && (section.category === 'magia' || section.category === 'hechizos' || section.id === 'magic_system_and_spells_catalog') && (
                       <button
                         onClick={() => onNavigateTab('spells')}
                         className="px-2.5 py-1 bg-amber-600 hover:bg-amber-500 text-white rounded text-xs transition duration-200 cursor-pointer font-bold flex items-center gap-1 shadow-sm"
@@ -564,7 +564,7 @@ export default function RulesBrowser({
                         <span>Ver Hechizos ➔</span>
                       </button>
                     )}
-                    {onNavigateTab && (section.category === 'mapa' || section.category === 'lugares' || section.category === 'map' || section.id === 'adventure_map_tiles_and_locations' || section.category === 'locations') && (
+                    {onNavigateTab && (section.category === 'mapa' || section.category === 'lugares' || section.id === 'adventure_map_tiles_and_locations') && (
                       <button
                         onClick={() => onNavigateTab('locations')}
                         className="px-2.5 py-1 bg-amber-600 hover:bg-amber-500 text-white rounded text-xs transition duration-200 cursor-pointer font-bold flex items-center gap-1 shadow-sm"
@@ -574,7 +574,7 @@ export default function RulesBrowser({
                         <span>Ver Lugares del Mapa ➔</span>
                       </button>
                     )}
-                    {onNavigateTab && (section.category === 'unidades' || section.category === 'units' || section.id === 'units_war_machines_and_creature_banks') && (
+                    {onNavigateTab && (section.category === 'unidades' || section.id === 'units_war_machines_and_creature_banks') && (
                       <button
                         onClick={() => onNavigateTab('units')}
                         className="px-2.5 py-1 bg-amber-600 hover:bg-amber-500 text-white rounded text-xs transition duration-200 cursor-pointer font-bold flex items-center gap-1 shadow-sm"

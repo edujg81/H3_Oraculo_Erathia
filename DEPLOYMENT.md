@@ -3,7 +3,7 @@
 Guía rápida para construir y desplegar la aplicación (opciones: Docker / Cloud Run).
 
 Requisitos previos
-- Node.js (desarrollo recomendado: 18.20.8). Para despliegue puede elegirse Node 18 o 20 según la política del equipo.
+- **Node.js 20.x o superior** (recomendado para desarrollo y despliegue). Las dependencias actuales requieren Node >=20.
 - Docker (para crear imágenes) o Google Cloud SDK para Cloud Run.
 
 1) Preparar build local
@@ -19,29 +19,28 @@ npm run build
 
 2) Docker (imagen mínima)
 
-Ejemplo de `Dockerfile` (base: Node 18 slim):
+Ejemplo de `Dockerfile` (base: Node 20 slim):
 
 ```dockerfile
-FROM node:18-slim AS build
+FROM node:20-slim AS build
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci --production=false
 COPY . .
 RUN npm run build
 
-FROM node:18-slim AS runtime
+FROM node:20-slim AS runtime
 WORKDIR /app
 ENV NODE_ENV=production
 COPY --from=build /app/dist ./dist
 COPY package*.json ./
 RUN npm ci --production
 EXPOSE 3000
-CMD ["node", "dist/server.js"]
+CMD ["node", "dist/server.cjs"]
 ```
 
 Notas:
-- Si prefieres Node 20 para producción (algunos paquetes recientes requieren Node >=20), cambia la imagen base a `node:20-slim`.
-- Ajusta `CMD` según el resultado de tu proceso de build (por ejemplo `node dist/server.js`).
+- Node 20 es obligatorio debido a los requisitos de las dependencias actuales.
 
 3) Construir la imagen y probar localmente
 

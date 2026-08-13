@@ -114,14 +114,10 @@ Para proteger la cuota de la clave de Gemini en despliegues públicos, `server.t
 
 ### Requisitos Previos
 
-- Node.js 18.x (recomendado: 18.20.8). Algunas dependencias del proyecto requieren Node >=18; versiones más nuevas del ecosistema (packages recientes) pueden mostrar advertencias si usas Node 18. Si prefieres ejecutar con Node 20+, adapta tu runtime según proceda.
+- **Node.js 20.x o superior** (recomendado: 20.20+). Las dependencias actuales (`@google/genai@2.4.0`, `@vitejs/plugin-react@5.0.4`) requieren Node >=20.
 - Una clave API de Gemini válida (definida como variable de entorno).
 
-Nota sobre `undici` y compatibilidad de Node:
-
-- Este repositorio está configurado para funcionar con Node 18 en entorno de desarrollo. `undici` fue fijado a la versión `6.17.0` en `package.json` para garantizar compatibilidad con Node 18. Algunas versiones más recientes de `undici` (y de `@google/genai`) requieren Node 20+, por lo que si actualizas Node a 20+ puedes actualizar `undici` a 7.x/8.x si lo necesitas.
-
-Si quieres ejecutar el proyecto en el equipo de desarrollo se recomienda usar `nvm` o `volta` para gestionar la versión de Node (ver `DEV_ENVIRONMENT.md` para instrucciones).  
+Para desarrollo local se recomienda usar `nvm` o `volta` para gestionar la versión de Node (ver `DEV_ENVIRONMENT.md` para instrucciones).  
 
 ## 📚 Documentación
 
@@ -133,9 +129,20 @@ Encontrarás documentación operativa y de proyecto en los siguientes archivos:
 - [DATA_README.md](DATA_README.md): estructura y buenas prácticas para los datos en `src/data/`.
 - [SECURITY.md](SECURITY.md): recomendaciones para manejo de secrets, rotación y prácticas de seguridad.
 - [CONTRIBUTING.md](CONTRIBUTING.md): guía para contribuir, naming conventions y flujo de PR.
+- [QNAP_DEPLOYMENT.md](QNAP_DEPLOYMENT.md): guía de despliegue y webhook para QNAP TS-251A.
 - [CHANGELOG.md](CHANGELOG.md): registro de cambios recientes.
 
 Estos documentos están en la raíz del repositorio y te sirven como punto único de referencia para despliegue, desarrollo y contribución.
+
+## ✅ Calidad y pruebas
+
+Este proyecto ya incluye una base de calidad automatizada:
+
+- `npm run lint` — valida TypeScript sin generar artefactos.
+- `npm test` — ejecuta tests con Vitest.
+- `npm run build` — compila el frontend y genera el bundle de servidor en `dist/server.cjs`.
+- GitHub Actions en `.github/workflows/ci.yml` ejecuta `npm ci`, `npm run lint`, `npm test` y `npm run build` en cada `push` a `main` y en cada `pull_request`.
+- El servidor exporta `app` para pruebas, expone `/health` y valida el payload de `/api/chat` antes de llamar a Gemini.
 
 ### Paso 1: Configurar Variables de Entorno
 

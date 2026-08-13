@@ -1,0 +1,39 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: h3oraculo_app:latest
+    container_name: h3oraculo_app
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/usr/src/app:cached
+    depends_on:
+      - webhook
+
+  webhook:
+    build:
+      context: .
+      dockerfile: Dockerfile.webhook
+    image: h3oraculo_webhook:latest
+    container_name: h3oraculo_webhook
+    env_file:
+      - .env
+    environment:
+      - GITHUB_WEBHOOK_SECRET
+      - REPO_PATH=/usr/src/app
+      - GIT_BRANCH=main
+      - APP_CONTAINER_NAME=h3oraculo_app
+      - PORT=8080
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./:/usr/src/app:cached
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped

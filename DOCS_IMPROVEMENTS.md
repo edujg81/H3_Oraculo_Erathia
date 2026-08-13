@@ -3,8 +3,8 @@
 Resumen de mejoras que añadirían claridad y facilitarían contribuciones futuras.
 
 1. Documentar la compatibilidad de Node y dependencias
-   - Añadir `DEV_ENVIRONMENT.md` (ya creado) con instrucciones para `nvm`/Volta y notas sobre `undici`.
-   - Añadir un badge o nota en `README.md` con la versión recomendada de Node (18.20.8).
+   - Añadir `DEV_ENVIRONMENT.md` (ya creado) con instrucciones para `nvm`/Volta y notas sobre Node 20.20+.
+   - Añadir un badge o nota en `README.md` con la versión recomendada de Node (20.20+).
 
 2. Añadir guía de despliegue/producción
    - Un `DEPLOYMENT.md` con pasos para Cloud Run, variables de entorno, límites de cuota, y el proceso de build (`npm run build`, subir `dist/`).
