@@ -2,9 +2,8 @@ name: CI
 
 on:
   push:
-    branches: [main, desarrollo_code]
-  pull_request:
-    branches: [main]
+    branches:
+      - "**"
 
 jobs:
   test:
@@ -32,9 +31,85 @@ jobs:
       - name: Build application
         run: npm run build
 
+  create-pr:
+    needs: test
+    if: github.ref != 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Check for existing PR
+        id: check-pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HEAD_BRANCH: ${{ github.ref_name }}
+        run: |
+          PR_COUNT=$(gh pr list \
+            --repo "${{ github.repository }}" \
+            --head "$HEAD_BRANCH" \
+            --base main \
+            --state open \
+            --json number \
+            --jq 'length')
+
+          echo "Rama: $HEAD_BRANCH"
+          echo "PRs abiertos encontrados: $PR_COUNT"
+
+          if [ "$PR_COUNT" -eq 0 ]; then
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create Pull Request
+        if: steps.check-pr.outputs.exists == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HEAD_BRANCH: ${{ github.ref_name }}
+        run: |
+          gh pr create \
+            --repo "${{ github.repository }}" \
+            --base main \
+            --head "$HEAD_BRANCH" \
+            --title "Merge $HEAD_BRANCH → main" \
+            --body "$(cat <<'EOF'
+          ## Pull Request automático
+
+          Este Pull Request ha sido creado automáticamente después de superar correctamente el CI de la rama \`$HEAD_BRANCH\`.
+
+          ### Validaciones
+
+          - ✅ Lint
+          - ✅ Tests
+          - ✅ Build
+
+          La imagen Docker se generará únicamente al hacer merge en `main`.
+
+          ### Despliegue
+
+          Una vez realizado el merge:
+
+          1. Se ejecutará el CI sobre `main`.
+          2. Se construirá la imagen Docker.
+          3. Se publicarán `latest` y `sha-*` en GHCR.
+          4. Watchtower detectará la nueva imagen.
+          5. El QNAP actualizará automáticamente `h3-oraculo`.
+          EOF
+          )"
+
+      - name: PR already exists
+        if: steps.check-pr.outputs.exists == 'true'
+        env:
+          HEAD_BRANCH: ${{ github.ref_name }}
+        run: |
+          echo "Ya existe un Pull Request abierto de $HEAD_BRANCH hacia main."
+
   docker:
     needs: test
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
 
     permissions:
