@@ -1,5 +1,5 @@
 # Dockerfile para la aplicación Node + React en producción
-FROM node:18-alpine AS builder
+FROM node:20-alpine AS builder
 WORKDIR /usr/src/app
 
 # Copia dependencias primero para cachear npm install
@@ -11,7 +11,7 @@ COPY . .
 RUN npm run build
 
 # Runtime mínimo
-FROM node:18-alpine AS runtime
+FROM node:20-alpine AS runtime
 WORKDIR /usr/src/app
 
 COPY --from=builder /usr/src/app/dist ./dist
@@ -22,4 +22,4 @@ RUN npm ci --production
 
 ENV NODE_ENV=production
 EXPOSE 3000
-CMD ["node", "dist/server.cjs"]
+CMD ["node", "dist/server.js"]
