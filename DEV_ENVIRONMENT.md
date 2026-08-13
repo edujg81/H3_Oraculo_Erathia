@@ -5,7 +5,7 @@ Este archivo recoge pasos y consejos para poner en marcha el proyecto localmente
 ## Requisitos
 
 - nvm para Windows (nvm-windows) o Volta (opcional pero recomendado)
-- Node.js 18.20.8 (recomendado para desarrollo local)
+- **Node.js 20.x o superior** (recomendado: 20.20+ para desarrollo local). Las dependencias actuales requieren Node >=20.
 - npm (v>=9) o usa el `npm.cmd` incluido con la instalación de Node de nvm
 
 ## Usando nvm (Windows)
@@ -14,12 +14,12 @@ Este archivo recoge pasos y consejos para poner en marcha el proyecto localmente
 2. Instala y usa la versión recomendada de Node:
 
 ```powershell
-nvm install 18.20.8
-nvm use 18.20.8
+nvm install 20.20.2
+nvm use 20.20.2
 node -v
 ```
 
-3. Asegúrate de usar el `npm` correspondiente a esa versión de Node. En nvm para Windows, el binario queda en `C:\Users\<usuario>\AppData\Roaming\nvm\v18.20.8\npm.cmd`.
+3. Asegúrate de usar el `npm` correspondiente a esa versión de Node. En nvm para Windows, el binario queda en `C:\Users\<usuario>\AppData\Roaming\nvm\v20.20.2\npm.cmd`.
 
 ## Instalación de dependencias
 
@@ -30,11 +30,6 @@ npm install
 ```
 
 > Si tu `npm` del sistema es muy antiguo, puedes ejecutar el `npm.cmd` de nvm (ver ruta anterior) o actualizar npm globalmente.
-
-## Notas sobre `undici` y `@google/genai`
-
-- El proyecto está pinneado a `undici@6.17.0` para garantizar compatibilidad con Node 18. Si subes a Node 20 o superior, considera actualizar `undici` y `@google/genai` a versiones más recientes.
-- Puedes ver advertencias `EBADENGINE` durante `npm install` si algunos paquetes exigen Node >=20; son advertencias, no bloqueos.
 
 ## Variables de entorno
 
@@ -62,4 +57,4 @@ Esto lanza `tsx server.ts` (backend) y Vite en `middlewareMode` para servir la U
 
 ## Contenedores y CI
 
-Si tu CI usa un runner con Node 20+, puedes ajustar las versiones de `undici` y `@google/genai` en `package.json` y regenerar `package-lock.json` en el pipeline para evitar advertencias locales.
+La CI (GitHub Actions en `.github/workflows/ci.yml`) usa **Node 20** por defecto para garantizar compatibilidad con todas las dependencias del proyecto.

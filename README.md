@@ -114,14 +114,10 @@ Para proteger la cuota de la clave de Gemini en despliegues públicos, `server.t
 
 ### Requisitos Previos
 
-- Node.js 18.x (recomendado: 18.20.8). Algunas dependencias del proyecto requieren Node >=18; versiones más nuevas del ecosistema (packages recientes) pueden mostrar advertencias si usas Node 18. Si prefieres ejecutar con Node 20+, adapta tu runtime según proceda.
+- **Node.js 20.x o superior** (recomendado: 20.20+). Las dependencias actuales (`@google/genai@2.4.0`, `@vitejs/plugin-react@5.0.4`) requieren Node >=20.
 - Una clave API de Gemini válida (definida como variable de entorno).
 
-Nota sobre `undici` y compatibilidad de Node:
-
-- Este repositorio está configurado para funcionar con Node 18 en entorno de desarrollo. `undici` fue fijado a la versión `6.17.0` en `package.json` para garantizar compatibilidad con Node 18. Algunas versiones más recientes de `undici` (y de `@google/genai`) requieren Node 20+, por lo que si actualizas Node a 20+ puedes actualizar `undici` a 7.x/8.x si lo necesitas.
-
-Si quieres ejecutar el proyecto en el equipo de desarrollo se recomienda usar `nvm` o `volta` para gestionar la versión de Node (ver `DEV_ENVIRONMENT.md` para instrucciones).  
+Para desarrollo local se recomienda usar `nvm` o `volta` para gestionar la versión de Node (ver `DEV_ENVIRONMENT.md` para instrucciones).  
 
 ## 📚 Documentación
 
