@@ -24,4 +24,16 @@ describe("Server health and API", () => {
     expect(res.status).toBe(400);
     expect(res.body).toHaveProperty("error");
   });
+
+  it("validates customApiKey in /api/chat payload", async () => {
+    const res = await request(app)
+      .post("/api/chat")
+      .send({
+        messages: [{ role: "user", content: "hola" }],
+        customApiKey: 12345
+      });
+
+    expect(res.status).toBe(400);
+    expect(res.body).toHaveProperty("error");
+  });
 });

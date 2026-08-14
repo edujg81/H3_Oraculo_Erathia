@@ -138,10 +138,14 @@ app.post("/api/chat", async (req, res) => {
       });
     }
 
-    const { messages, selectedSectionId } = req.body;
+    const { messages, selectedSectionId, customApiKey } = req.body;
 
     if (!messages || !Array.isArray(messages)) {
       return res.status(400).json({ error: "Invalid request parameters. 'messages' array is required." });
+    }
+
+    if (customApiKey !== undefined && (typeof customApiKey !== "string" || customApiKey.length > 200)) {
+      return res.status(400).json({ error: "'customApiKey' debe ser una cadena de texto (máx. 200 caracteres)." });
     }
 
     if (messages.length === 0 || messages.length > MAX_MESSAGES) {
@@ -170,9 +174,25 @@ app.post("/api/chat", async (req, res) => {
       return res.status(400).json({ error: "'selectedSectionId' debe ser una cadena de texto." });
     }
 
-    if (!ai) {
+    const effectiveUserApiKey = typeof customApiKey === "string" && customApiKey.trim() ? customApiKey.trim() : null;
+
+    let chatAi: GoogleGenAIType | null = null;
+    if (effectiveUserApiKey) {
+      chatAi = new GoogleGenAIClient({
+        apiKey: effectiveUserApiKey,
+        httpOptions: {
+          headers: {
+            'User-Agent': 'aistudio-build',
+          }
+        }
+      });
+    } else {
+      chatAi = ai;
+    }
+
+    if (!chatAi) {
       return res.status(503).json({ 
-        error: "Servicio de IA no disponible. Por favor, asegúrate de configurar tu GEMINI_API_KEY en Panel de Control > Secrets." 
+        error: "Servicio de IA no disponible. Por favor, asegúrate de configurar tu GEMINI_API_KEY en Panel de Control > Secrets o introduce tu clave en los ajustes del chat." 
       });
     }
 
@@ -236,7 +256,7 @@ ${entityDetailString ? `\n=== FICHAS DETALLADAS RELEVANTES A LA CONSULTA ACTUAL 
     }));
 
     // Call google genai
-    const response = await ai.models.generateContent({
+    const response = await chatAi.models.generateContent({
       model: "gemini-3.6-flash",
       contents: formattedContents,
       config: {

@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Message, RuleSection } from '../types';
-import { Send, History, Trash2, ArrowRight, Sparkles, BookCheck, AlertCircle, Mic, MicOff, Volume2, VolumeX } from 'lucide-react';
+import { Send, History, Trash2, ArrowRight, Sparkles, BookCheck, AlertCircle, Mic, MicOff, Volume2, VolumeX, Key, Eye, EyeOff, Check, RotateCcw, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function ChatAdvisor({
@@ -33,6 +33,16 @@ export default function ChatAdvisor({
   const [isLoading, setIsLoading] = useState(false);
   const [chatError, setChatError] = useState<string | null>(null);
   const [showConfirmClear, setShowConfirmClear] = useState(false);
+  const [customApiKey, setCustomApiKey] = useState<string>(() => {
+    try {
+      return localStorage.getItem('h3_custom_gemini_api_key') || '';
+    } catch {
+      return '';
+    }
+  });
+  const [showKeyModal, setShowKeyModal] = useState(false);
+  const [tempApiKey, setTempApiKey] = useState('');
+  const [showKeyVisible, setShowKeyVisible] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // --- Speech Recognition & Text-to-Speech ---
@@ -336,7 +346,8 @@ export default function ChatAdvisor({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           messages: sanitizedHistory,
-          selectedSectionId: selectedSection?.id || undefined
+          selectedSectionId: selectedSection?.id || undefined,
+          customApiKey: customApiKey.trim() || undefined
         })
       });
 
@@ -424,6 +435,25 @@ export default function ChatAdvisor({
         </div>
 
         <div className="flex items-center gap-2">
+          {/* Configuración API Key de Gemini */}
+          <button
+            onClick={() => {
+              setTempApiKey(customApiKey);
+              setShowKeyModal(true);
+            }}
+            title="Configurar API Key de Gemini"
+            className={`p-2 rounded-lg transition-all duration-200 cursor-pointer flex items-center gap-1.5 text-xs font-semibold ${
+              customApiKey 
+                ? 'text-amber-300 bg-amber-950/60 border border-amber-500/50 hover:bg-amber-900/50' 
+                : 'text-slate-400 hover:text-amber-400 hover:bg-slate-800/60'
+            }`}
+          >
+            <Key className={`w-4 h-4 ${customApiKey ? 'text-amber-400' : ''}`} />
+            <span className="hidden sm:inline">
+              {customApiKey ? "Key: Personal 🔑" : "Key: Servidor ⚙️"}
+            </span>
+          </button>
+
           {/* Lectura por Voz Toggle */}
           <button
             onClick={handleToggleAutoSpeak}
@@ -627,6 +657,130 @@ export default function ChatAdvisor({
           </div>
         </form>
       </div>
+
+      {/* Modal de API Key */}
+      <AnimatePresence>
+        {showKeyModal && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          >
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              className="bg-slate-900 border border-amber-900/50 rounded-2xl p-5 max-w-md w-full shadow-2xl space-y-4"
+            >
+              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+                <div className="flex items-center gap-2 text-amber-200 font-serif font-semibold">
+                  <Key className="w-5 h-5 text-amber-400" />
+                  <span>Configuración API Key de Gemini</span>
+                </div>
+                <button
+                  onClick={() => setShowKeyModal(false)}
+                  className="text-slate-400 hover:text-slate-200 p-1 rounded-lg"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Por defecto, Sandro utiliza la API Key configurada en el servidor. Si deseas usar tu propia clave de <strong>Google Gemini AI Studio</strong>, introdúcela abajo:
+              </p>
+
+              <div className="space-y-1.5">
+                <label className="text-[11px] font-mono uppercase tracking-wider text-amber-400 block">
+                  Tu API Key de Gemini:
+                </label>
+                <div className="relative">
+                  <input
+                    type={showKeyVisible ? "text" : "password"}
+                    value={tempApiKey}
+                    onChange={(e) => setTempApiKey(e.target.value)}
+                    placeholder="AIzaSy..."
+                    className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2.5 pr-10 text-xs text-slate-100 placeholder-slate-600 focus:outline-none focus:border-amber-500 font-mono"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowKeyVisible(!showKeyVisible)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-200"
+                  >
+                    {showKeyVisible ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                  </button>
+                </div>
+              </div>
+
+              <div className="p-3 bg-slate-950/60 rounded-xl border border-slate-800 text-[11px] space-y-1">
+                <div className="flex items-center gap-1.5 text-slate-300 font-medium">
+                  <span>{customApiKey ? "🔑" : "⚙️"}</span>
+                  <span>
+                    Estado actual:{" "}
+                    <span className={customApiKey ? "text-amber-400 font-bold" : "text-emerald-400 font-bold"}>
+                      {customApiKey ? "Usando API Key Personal" : "Usando API Key del Servidor"}
+                    </span>
+                  </span>
+                </div>
+                <p className="text-slate-400 text-[10px]">
+                  La clave se almacena únicamente en el almacenamiento local de tu navegador.
+                </p>
+              </div>
+
+              <div className="flex items-center justify-between gap-2 pt-2 border-t border-slate-800">
+                {customApiKey ? (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setCustomApiKey('');
+                      setTempApiKey('');
+                      try {
+                        localStorage.removeItem('h3_custom_gemini_api_key');
+                      } catch {}
+                      setShowKeyModal(false);
+                    }}
+                    className="px-3 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl text-xs flex items-center gap-1.5 transition cursor-pointer"
+                  >
+                    <RotateCcw className="w-3.5 h-3.5" />
+                    Restablecer
+                  </button>
+                ) : (
+                  <div></div>
+                )}
+
+                <div className="flex gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setShowKeyModal(false)}
+                    className="px-3 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl text-xs transition cursor-pointer"
+                  >
+                    Cancelar
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const trimmed = tempApiKey.trim();
+                      setCustomApiKey(trimmed);
+                      try {
+                        if (trimmed) {
+                          localStorage.setItem('h3_custom_gemini_api_key', trimmed);
+                        } else {
+                          localStorage.removeItem('h3_custom_gemini_api_key');
+                        }
+                      } catch {}
+                      setShowKeyModal(false);
+                    }}
+                    className="px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-xl text-xs flex items-center gap-1.5 transition shadow-md cursor-pointer"
+                  >
+                    <Check className="w-4 h-4" />
+                    Guardar
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
