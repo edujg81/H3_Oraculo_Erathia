@@ -2,6 +2,8 @@ import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { useGameTimer } from './hooks/useGameTimer';
 import { useDiceRoller } from './hooks/useDiceRoller';
 import { GamePrepMode } from './components/GamePrepMode';
+import { ALL_BOARD_GAME_SKILLS } from './data/skillsData';
+import { version } from '../package.json';
 
 // Vistas cargadas de forma perezosa (code-splitting): solo se descarga el
 // bundle de la pestaña activa en lugar de las 12 vistas de golpe.
@@ -602,7 +604,7 @@ export default function App() {
 
                                 {isRollingCombatDie ? (
                                   <div className="text-2xl animate-spin text-amber-500">🎲</div>
-                                ) : combatDieResult !== null ? (
+                                ) : typeof combatDieResult === 'number' ? (
                                   <div className="flex flex-col items-center">
                                     <span className="text-3xl font-mono font-extrabold tracking-tighter leading-none">
                                       {combatDieResult >= 0 ? `+${combatDieResult}` : combatDieResult}
@@ -758,7 +760,7 @@ export default function App() {
                                   <div className="text-2xl animate-spin text-amber-500">🎲</div>
                                 ) : treasureDieResult ? (
                                   <div className="flex flex-col items-center text-center">
-                                    <span className="text-xl font-mono font-extrabold leading-none mb-0.5">
+                                    <span className="text-2xl font-mono font-extrabold leading-none mb-0.5">
                                       {treasureDieResult.split(' ')[0]}
                                     </span>
                                     <span className="text-[9.5px] uppercase tracking-wider font-mono opacity-80 leading-none px-1">
@@ -1065,13 +1067,11 @@ export default function App() {
                           <div className="absolute inset-0.5 border border-dashed border-slate-800/30 rounded-lg pointer-events-none" />
 
                           {isRollingCombatDie ? (
-                            <div className="text-xl font-bold animate-spin text-amber-500">
-                              🎲
-                            </div>
-                          ) : combatDieResult !== null ? (
+                            <div className="text-xl font-bold animate-spin text-amber-500">🎲</div>
+                          ) : combatDieResult != null ? (
                             <div className="flex flex-col items-center">
                               <span className="text-2xl font-mono font-extrabold tracking-tighter leading-none">
-                                {combatDieResult >= 0 ? `+${combatDieResult}` : combatDieResult}
+                                {combatDieResult! >= 0 ? `+${combatDieResult}` : combatDieResult}
                               </span>
                               <span className="text-[10px] uppercase tracking-widest font-mono opacity-80 mt-0.5 scale-90">
                                 {combatDieResult === 1 ? 'Crítico' : combatDieResult === -1 ? 'Fallo' : 'Normal'}
@@ -1154,10 +1154,10 @@ export default function App() {
                           ) : resourceDieResult ? (
                             <div className="flex flex-col items-center text-center">
                               <span className="text-2xl font-mono font-extrabold leading-none mb-0.5">
-                                {resourceDieResult.split(' ')[0]}
+                                {resourceDieResult?.split(' ')[0]}
                               </span>
                               <span className="text-[10px] uppercase tracking-wider font-mono opacity-80 leading-none">
-                                {resourceDieResult.split(' ').slice(1).join(' ')}
+                                {resourceDieResult?.split(' ').slice(1).join(' ')}
                               </span>
                             </div>
                           ) : (
@@ -1229,10 +1229,10 @@ export default function App() {
                           ) : treasureDieResult ? (
                             <div className="flex flex-col items-center text-center">
                               <span className="text-2xl font-mono font-extrabold leading-none mb-0.5">
-                                {treasureDieResult.split(' ')[0]}
+                                {treasureDieResult?.split(' ')[0]}
                               </span>
-                              <span className="text-[10px] uppercase tracking-wider font-mono opacity-80 leading-none px-1">
-                                {treasureDieResult.split(' ').slice(1, 4).join(' ')}
+                              <span className="text-[9.5px] uppercase tracking-wider font-mono opacity-80 leading-none px-1">
+                                {treasureDieResult?.split(' ').slice(1, 4).join(' ')}
                               </span>
                             </div>
                           ) : (
@@ -1283,11 +1283,11 @@ export default function App() {
             <div className="flex flex-wrap justify-center md:justify-start items-center gap-x-6 gap-y-2">
               <div className="flex items-center">
                 <span className="w-2 h-2 bg-amber-500 rounded-full mr-2"></span> 
-                <span className="font-mono text-slate-300 font-semibold">10 FACCIONES RECREADAS</span>
+                <span className="font-mono text-slate-300 font-semibold">{Object.keys(FACTIONS).length} FACCIONES RECREADAS</span>
               </div>
               <div className="flex items-center">
                 <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> 
-                <span className="font-mono text-slate-300 font-semibold">32 HABILIDADES INDEXADAS (v2.1)</span>
+                <span className="font-mono text-slate-300 font-semibold">{ALL_BOARD_GAME_SKILLS.length} HABILIDADES INDEXADAS</span>
               </div>
               <div className="flex items-center">
                 <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span> 
@@ -1299,7 +1299,7 @@ export default function App() {
               </div>
             </div>
             <div className="text-slate-500 font-mono text-[10px] bg-slate-900/80 px-2.5 py-1 rounded-md border border-slate-850">
-              ORÁCULO DE SANDRO // ERATHIA OS v2.5
+              ORÁCULO DE SANDRO // ERATHIA OS v{version}
             </div>
           </div>
           

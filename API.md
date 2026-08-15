@@ -36,7 +36,8 @@ Request body (JSON):
     { "role": "user" | "assistant", "content": "...texto..." },
     ...
   ],
-  "selectedSectionId": "optional-section-id"
+  "selectedSectionId": "optional-section-id",
+  "customApiKey": "optional-gemini-key"
 }
 ```
 
@@ -45,6 +46,7 @@ Validaciones aplicadas por el servidor:
 - Longitud de `messages`: entre 1 y 40.
 - Cada mensaje debe ser un objeto con `role` ("user" o "assistant") y `content` (string, max 4000 chars).
 - `selectedSectionId` si está presente debe ser string.
+- `customApiKey` si está presente debe ser string (max 200 chars).
 - Límite de tamaño del body: 100kb.
 - Rate limiting por IP: máximo 20 peticiones cada 10 minutos (puede devolver 429).
 
@@ -61,9 +63,9 @@ Respuestas:
 ```json
 { "error": "Demasiadas consultas a Sandro en poco tiempo. Espera unos minutos antes de volver a intentarlo." }
 ```
-- 503: servicio de IA no disponible (GEMINI_API_KEY no configurada)
+- 503: servicio de IA no disponible
 ```json
-{ "error": "Servicio de IA no disponible. Por favor, asegúrate de configurar tu GEMINI_API_KEY en Panel de Control > Secrets." }
+{ "error": "Servicio de IA no disponible. Por favor, introduce tu API Key en los ajustes del chat o asegúrate de que el servidor la tiene configurada." }
 ```
 - 500: error interno del servidor
 ```json
