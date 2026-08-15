@@ -78,7 +78,7 @@ jobs:
             --body "$(cat <<'EOF'
           ## Pull Request automático
 
-          Este Pull Request ha sido creado automáticamente después de superar correctamente el CI de la rama \`$HEAD_BRANCH\`.
+          Este Pull Request ha sido creado automáticamente después de superar correctamente el CI de la rama.
 
           ### Validaciones
 
@@ -86,17 +86,21 @@ jobs:
           - ✅ Tests
           - ✅ Build
 
-          La imagen Docker se generará únicamente al hacer merge en `main`.
+          La imagen Docker se genera únicamente después de crear una nueva release en `main`.
 
-          ### Despliegue
+          ### Release
 
-          Una vez realizado el merge:
+          Al hacer merge en `main`:
 
-          1. Se ejecutará el CI sobre `main`.
-          2. Se construirá la imagen Docker.
-          3. Se publicarán `latest` y `sha-*` en GHCR.
-          4. Watchtower detectará la nueva imagen.
-          5. El QNAP actualizará automáticamente `h3-oraculo`.
+          1. Se ejecutará el CI.
+          2. Semantic Release determinará la nueva versión.
+          3. Se actualizarán `package.json`, `package-lock.json` y `CHANGELOG.md`.
+          4. Se creará el tag correspondiente.
+          5. Se creará la GitHub Release.
+          6. El tag disparará la construcción de Docker.
+          7. La imagen se publicará en GHCR.
+          8. Watchtower detectará la nueva imagen.
+          9. El QNAP actualizará automáticamente `h3-oraculo`.
           EOF
           )"
 
@@ -107,39 +111,32 @@ jobs:
         run: |
           echo "Ya existe un Pull Request abierto de $HEAD_BRANCH hacia main."
 
-  docker:
+  release:
     needs: test
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
 
     permissions:
-      contents: read
-      packages: write
+      contents: write
+      issues: write
+      pull-requests: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Log in to GitHub Container Registry
-        uses: docker/login-action@v3
         with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
-      - name: Extract Docker metadata
-        id: meta
-        uses: docker/metadata-action@v5
+      - name: Use Node.js 20
+        uses: actions/setup-node@v5
         with:
-          images: ghcr.io/${{ github.repository }}
-          tags: |
-            type=raw,value=latest
-            type=sha,format=short,prefix=sha-
+          node-version: 20
+          cache: "npm"
 
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run release
