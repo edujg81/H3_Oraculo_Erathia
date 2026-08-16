@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.0.0...v2.0.1) (2026-08-16)
+
+
+### Bug Fixes
+
+* corrección workflow para generar imagen docker ([023987e](https://github.com/edujg81/H3_Oraculo_Erathia/commit/023987efec5175bc2c333eaf00e4ce3f1ff9143b))
+
 # [2.0.0](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v1.0.0...v2.0.0) (2026-08-16)
 
 
