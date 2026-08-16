@@ -5,14 +5,22 @@ module.exports = {
     [
       '@semantic-release/commit-analyzer',
       {
-        preset: 'angular'
+        preset: 'angular',
+        parserOpts: {
+          breakingHeaderPattern: /^(\w*)(?:\(([\w$@.\-*/ ]*)\))?!: (.*)$/,
+          breakingHeaderCorrespondence: ['type', 'scope', 'subject']
+        }
       }
     ],
 
     [
       '@semantic-release/release-notes-generator',
       {
-        preset: 'angular'
+        preset: 'angular',
+        parserOpts: {
+          breakingHeaderPattern: /^(\w*)(?:\(([\w$@.\-*/ ]*)\))?!: (.*)$/,
+          breakingHeaderCorrespondence: ['type', 'scope', 'subject']
+        }
       }
     ],
 
