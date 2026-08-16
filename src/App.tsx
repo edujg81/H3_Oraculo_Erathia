@@ -19,13 +19,15 @@ const WarMachinesViewer = lazy(() => import('./components/WarMachinesViewer'));
 const MapLocationsViewer = lazy(() => import('./components/MapLocationsViewer'));
 const SpellCardsViewer = lazy(() => import('./components/SpellCardsViewer'));
 const TownsViewer = lazy(() => import('./components/TownsViewer'));
+const WelcomeView = lazy(() => import('./components/WelcomeView'));
 // @ts-ignore
-import oracleLogo from './assets/images/sandro_oracle_titled_logo_1783458347417.jpg';
+import oracleLogo from './assets/images/h3oraculo_logo.png';
 import { RuleSection, Player, getPlayerLimit } from './types';
 import { 
   Sparkles, Library, Timer, Printer, Award, BookOpen, 
   HelpCircle, Compass, Gamepad2, Hourglass, Swords, Users, Dices, Coins,
-  Hammer, Map, Wand2, Building2
+  Hammer, Map, Wand2, Building2,
+  House
 } from 'lucide-react';
 
 const FACTIONS = [
@@ -52,7 +54,7 @@ function TabLoadingFallback() {
 }
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'chat' | 'rules' | 'pdf' | 'timer_full' | 'calculator' | 'scenarios' | 'heroes' | 'units' | 'skills' | 'spells' | 'warmachines' | 'locations' | 'towns'>('chat');
+  const [activeTab, setActiveTab] = useState<'welcome' | 'chat' | 'rules' | 'pdf' | 'timer_full' | 'calculator' | 'scenarios' | 'heroes' | 'units' | 'skills' | 'spells' | 'warmachines' | 'locations' | 'towns'>('welcome');
   const [selectedSection, setSelectedSection] = useState<RuleSection | null>(null);
   const [linkedUnitName, setLinkedUnitName] = useState<string | null>(null);
 
@@ -267,6 +269,7 @@ export default function App() {
   };
 
   const tabs = [
+    { id: 'welcome', label: 'Bienvenida', icon: House, color: 'text-amber-400' },
     { id: 'chat', label: 'Consulta a Sandro', icon: Sparkles, color: 'text-amber-400' },
     { id: 'rules', label: 'Reglas y FAQs', icon: Library, color: 'text-sky-400' },
     { id: 'scenarios', label: 'Misiones', icon: Compass, color: 'text-rose-400' },
@@ -291,7 +294,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-4 text-center sm:text-left">
             <div className="relative group shrink-0">
-              <div className="w-40 h-40 sm:w-48 sm:h-48 flex items-center justify-center overflow-hidden">
+              <div className="w-50 h-50 sm:w-58 sm:h-58 flex items-center justify-center overflow-hidden">
                 <img 
                   src={oracleLogo} 
                   alt="Heroes III: Oráculo de Erathia Logo" 
@@ -353,6 +356,10 @@ export default function App() {
           {/* Main Console Viewport (Full width) */}
           <div className="lg:col-span-12 space-y-4">
           <Suspense fallback={<TabLoadingFallback />}>
+            {activeTab === 'welcome' && (
+              <WelcomeView />
+            )}
+            
             {activeTab === 'chat' && (
               <div className="space-y-4">
                 <div className="bg-amber-950/20 border border-amber-900/30 rounded-2xl p-4 flex gap-3 text-xs sm:text-sm text-amber-200 leading-relaxed">
@@ -369,7 +376,7 @@ export default function App() {
                 />
               </div>
             )}
-
+            
             {activeTab === 'rules' && (
               <div className="space-y-4">
                 <RulesBrowser 
@@ -1310,7 +1317,9 @@ export default function App() {
                 Optimizado para resoluciones de escritorio y tabletas.
               </p>
               <p className="text-[10px] text-slate-600 mt-1">
-                Proyecto creado por edujg81 para fans. Todos los derechos del juego original corresponden a Archon Studio y Ubisoft.
+                Proyecto creado por <a href="https://github.com/edujg81" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline">
+              edujg81
+            </a> para fans. Todos los derechos del juego original corresponden a Archon Studio y Ubisoft.
               </p>
             </div>
             <div className="text-[10px] text-slate-600 whitespace-nowrap text-center sm:text-right mt-2 sm:mt-0">

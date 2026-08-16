@@ -1,6 +1,6 @@
 import { Printer, ShoppingBag, ShieldAlert, BookOpen, Download } from 'lucide-react';
 // @ts-ignore
-import oracleLogo from '../assets/images/sandro_oracle_titled_logo_1783458347417.jpg';
+import oracleLogo from '../assets/images/h3oraculo_logo.png';
 
 interface CompendiumUnit {
   name: string;
@@ -484,7 +484,7 @@ export default function RulebookPDF() {
         {/* Printable cover/header */}
         <div className="text-center space-y-5 pb-8 border-b border-amber-900/10 flex flex-col items-center justify-center pt-4">
           <div className="relative group shrink-0 my-2">
-            <div className="w-80 h-80 flex items-center justify-center overflow-hidden">
+            <div className="w-80 h-80 sm:w-150 sm:h-150 flex items-center justify-center overflow-hidden">
               <img 
                 src={oracleLogo} 
                 alt="Heroes III: Oráculo de Erathia Cover Art" 
