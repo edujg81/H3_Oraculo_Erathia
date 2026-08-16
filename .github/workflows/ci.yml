@@ -97,7 +97,7 @@ jobs:
           3. Se actualizarán `package.json`, `package-lock.json` y `CHANGELOG.md`.
           4. Se creará el tag correspondiente.
           5. Se creará la GitHub Release.
-          6. El tag disparará la construcción de Docker.
+          6. Se construirá la imagen Docker.
           7. La imagen se publicará en GHCR.
           8. Watchtower detectará la nueva imagen.
           9. El QNAP actualizará automáticamente `h3-oraculo`.
@@ -121,6 +121,10 @@ jobs:
       issues: write
       pull-requests: write
 
+    outputs:
+      released: ${{ steps.release.outputs.released }}
+      version: ${{ steps.release.outputs.version }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -137,6 +141,69 @@ jobs:
         run: npm ci
 
       - name: Run semantic-release
+        id: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm run release
+        shell: bash
+        run: |
+          BEFORE=$(git tag --sort=-v:refname | head -n 1)
+
+          echo "Último tag antes de Semantic Release: $BEFORE"
+
+          npm run release
+
+          git fetch --tags
+
+          AFTER=$(git tag --sort=-v:refname | head -n 1)
+
+          echo "Último tag después de Semantic Release: $AFTER"
+
+          if [ "$BEFORE" != "$AFTER" ]; then
+            echo "released=true" >> "$GITHUB_OUTPUT"
+            echo "version=$AFTER" >> "$GITHUB_OUTPUT"
+            echo "Nueva release detectada: $AFTER"
+          else
+            echo "released=false" >> "$GITHUB_OUTPUT"
+            echo "version=" >> "$GITHUB_OUTPUT"
+            echo "No se ha creado ninguna release."
+          fi
+
+  docker:
+    needs: release
+    if: needs.release.outputs.released == 'true'
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout release
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.release.outputs.version }}
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract Docker metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/${{ github.repository }}
+          tags: |
+            type=raw,value=${{ needs.release.outputs.version }}
+            type=raw,value=latest
+            type=sha,format=short,prefix=sha-
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
