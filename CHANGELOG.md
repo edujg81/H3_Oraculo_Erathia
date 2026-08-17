@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.2](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.0.1...v2.0.2) (2026-08-17)
+
+
+### Bug Fixes
+
+* ajuste logo Bienvenida y modificación de footer ([9b7e397](https://github.com/edujg81/H3_Oraculo_Erathia/commit/9b7e397f1d9eaeea14d830538dee4d3b6c1e1a29))
+* regenerate lockfile for cross-platform CI ([b99a811](https://github.com/edujg81/H3_Oraculo_Erathia/commit/b99a8111b709916189246f6e1ce5216e81a022aa))
+
 ## [2.0.1](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.0.0...v2.0.1) (2026-08-16)
 
 
