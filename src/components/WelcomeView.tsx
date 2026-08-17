@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { BookOpen, Sparkles, Users, Swords, Wand2, Building2, Compass, Hammer, Dices, HelpCircle } from 'lucide-react';
 import { version } from '../../package.json';
+import { ALL_BOARD_GAME_SKILLS } from '../data/skillsData';
+import { townsData } from '../data/townsData';
 import oracleLogo from '../assets/images/h3oraculo_logo.png';
 
 interface WelcomeViewProps {}
@@ -76,21 +78,21 @@ const WelcomeView: React.FC<WelcomeViewProps> = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-500/5 via-transparent to-transparent opacity-50" />
         
         <motion.div
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="mb-6 relative z-10 shrink-0"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-6 relative z-10 shrink-0 flex flex-col items-center justify-center"
         >
-        <div className="w-100 h-100 sm:w-200 sm:h-200">
-        <img
-        src={oracleLogo}
-        alt="Heroes III: Oráculo de Erathia Logo"
-        className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-300"
-        />
-        </div>
-        <p className="text-amber-500/70 text-sm sm:text-lg font-mono uppercase tracking-widest">
+          <div className="w-60 sm:w-80 md:w-150 max-w-full h-auto mx-auto flex items-center justify-center">
+            <img
+              src={oracleLogo}
+              alt="Heroes III: Oráculo de Erathia Logo"
+              className="w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <p className="text-amber-500/70 text-xs sm:text-lg font-mono uppercase tracking-widest mt-2">
             Asesor Inteligente para Heroes III: The Board Game
-        </p>
+          </p>
         </motion.div>
 
         <motion.p 
@@ -199,19 +201,19 @@ const WelcomeView: React.FC<WelcomeViewProps> = () => {
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs text-slate-400">
           <div className="flex items-center gap-1.5">
             <span className="w-2 h-2 bg-amber-500 rounded-full"></span>
-            <span className="font-mono font-semibold">10 Facciones Recreadas</span>
+            <span className="font-mono font-semibold">{Object.keys(townsData).length} Facciones Recreadas</span>
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-            <span className="font-mono font-semibold">32 Habilidades Indexadas</span>
+            <span className="font-mono font-semibold">{ALL_BOARD_GAME_SKILLS.length} Habilidades Indexadas</span>
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-2 h-2 bg-emerald-500 rounded-full"></span>
-            <span className="font-mono font-semibold">15 Manuales Oficiales</span>
+            <span className="font-mono font-semibold">15 Manuales Oficiales Indexados</span>
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-            <span className="font-mono font-semibold">Sistema con Alerta Acústica</span>
+            <span className="font-mono font-semibold">Cronómetro con Alerta Acústica</span>
           </div>
         </div>
       </motion.div>

@@ -2,7 +2,6 @@ import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { useGameTimer } from './hooks/useGameTimer';
 import { useDiceRoller } from './hooks/useDiceRoller';
 import { GamePrepMode } from './components/GamePrepMode';
-import { ALL_BOARD_GAME_SKILLS } from './data/skillsData';
 import { version } from '../package.json';
 
 // Vistas cargadas de forma perezosa (code-splitting): solo se descarga el
@@ -1285,31 +1284,7 @@ export default function App() {
 
       {/* 4. Atmospheric Footer */}
       <footer className="mt-12 shrink-0 bg-slate-950/60 border-t border-slate-900 text-[11px] text-slate-400 py-6 px-6">
-        <div className="max-w-7xl mx-auto w-full space-y-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 border-b border-slate-900 pb-4">
-            <div className="flex flex-wrap justify-center md:justify-start items-center gap-x-6 gap-y-2">
-              <div className="flex items-center">
-                <span className="w-2 h-2 bg-amber-500 rounded-full mr-2"></span> 
-                <span className="font-mono text-slate-300 font-semibold">{Object.keys(FACTIONS).length} FACCIONES RECREADAS</span>
-              </div>
-              <div className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> 
-                <span className="font-mono text-slate-300 font-semibold">{ALL_BOARD_GAME_SKILLS.length} HABILIDADES INDEXADAS</span>
-              </div>
-              <div className="flex items-center">
-                <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span> 
-                <span className="font-mono text-slate-300 font-semibold">15 MANUALES OFICIALES INDEXADOS</span>
-              </div>
-              <div className="flex items-center">
-                <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span> 
-                <span className="font-mono text-slate-300 font-semibold">SISTEMA CON ALERTA ACÚSTICA</span>
-              </div>
-            </div>
-            <div className="text-slate-500 font-mono text-[10px] bg-slate-900/80 px-2.5 py-1 rounded-md border border-slate-850">
-              ORÁCULO DE SANDRO // ERATHIA OS v{version}
-            </div>
-          </div>
-          
+        <div className="max-w-7xl mx-auto w-full space-y-4">       
           <div className="flex flex-col sm:flex-row items-center justify-between gap-2.5 text-slate-500 font-mono">
             <div className="text-center sm:text-left leading-relaxed max-w-2xl">
               <p>
@@ -1317,13 +1292,15 @@ export default function App() {
                 Optimizado para resoluciones de escritorio y tabletas.
               </p>
               <p className="text-[10px] text-slate-600 mt-1">
-                Proyecto creado por <a href="https://github.com/edujg81" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline">
+                Proyecto creado y desarrollado por <a href="https://github.com/edujg81" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline">
               edujg81
-            </a> para fans. Todos los derechos del juego original corresponden a Archon Studio y Ubisoft.
+            </a> para fans en 2026. Todos los derechos del juego original corresponden a Archon Studio y Ubisoft, todos los derechos de la aplicación pertenecen a su creador.
               </p>
             </div>
-            <div className="text-[10px] text-slate-600 whitespace-nowrap text-center sm:text-right mt-2 sm:mt-0">
-              Hecho con templanza en Erathia &bull; {new Date().getFullYear()}
+            <div className="text-center sm:text-left leading-relaxed max-w-2xl">
+              <div className="text-slate-500 font-mono text-[10px] bg-slate-900/80 px-2.5 py-1 rounded-md border border-slate-850">
+                ORÁCULO DE ERATHIA // SANDRO OS v{version}
+              </div>
             </div>
           </div>
         </div>
