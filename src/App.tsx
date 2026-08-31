@@ -3,6 +3,7 @@ import { useGameTimer } from './hooks/useGameTimer';
 import { useDiceRoller } from './hooks/useDiceRoller';
 import { GamePrepMode } from './components/GamePrepMode';
 import { version } from '../package.json';
+import type { TabId } from './types.ts';
 
 // Vistas cargadas de forma perezosa (code-splitting): solo se descarga el
 // bundle de la pestaña activa en lugar de las 12 vistas de golpe.
@@ -19,14 +20,15 @@ const MapLocationsViewer = lazy(() => import('./components/MapLocationsViewer'))
 const SpellCardsViewer = lazy(() => import('./components/SpellCardsViewer'));
 const TownsViewer = lazy(() => import('./components/TownsViewer'));
 const WelcomeView = lazy(() => import('./components/WelcomeView'));
-// @ts-ignore
+
 import oracleLogo from './assets/images/h3oraculo_logo.png';
 import { RuleSection, Player, getPlayerLimit } from './types';
 import { 
   Sparkles, Library, Timer, Printer, Award, BookOpen, 
   HelpCircle, Compass, Gamepad2, Hourglass, Swords, Users, Dices, Coins,
   Hammer, Map, Wand2, Building2,
-  House
+  House,
+  MapPin
 } from 'lucide-react';
 
 const FACTIONS = [
@@ -53,7 +55,7 @@ function TabLoadingFallback() {
 }
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'welcome' | 'chat' | 'rules' | 'pdf' | 'timer_full' | 'calculator' | 'scenarios' | 'heroes' | 'units' | 'skills' | 'spells' | 'warmachines' | 'locations' | 'towns'>('welcome');
+  const [activeTab, setActiveTab] = useState<TabId>('welcome');
   const [selectedSection, setSelectedSection] = useState<RuleSection | null>(null);
   const [linkedUnitName, setLinkedUnitName] = useState<string | null>(null);
 
@@ -268,19 +270,19 @@ export default function App() {
   };
 
   const tabs = [
-    { id: 'welcome', label: 'Bienvenida', icon: House, color: 'text-amber-400' },
-    { id: 'chat', label: 'Consulta a Sandro', icon: Sparkles, color: 'text-amber-400' },
-    { id: 'rules', label: 'Reglas y FAQs', icon: Library, color: 'text-sky-400' },
-    { id: 'scenarios', label: 'Misiones', icon: Compass, color: 'text-rose-400' },
-    { id: 'units', label: 'Unidades', icon: Swords, color: 'text-red-400' },
-    { id: 'heroes', label: 'Héroes', icon: Users, color: 'text-yellow-400' },
-    { id: 'towns', label: 'Ciudades y Edificios', icon: Building2, color: 'text-amber-500 font-semibold' },
-    { id: 'skills', label: 'Habilidades', icon: Award, color: 'text-amber-500' },
+    { id: 'welcome', label: 'Bienvenida', icon: House, color: 'text-gray-400' },
+    { id: 'chat', label: 'Consulta a Sandro', icon: Sparkles, color: 'text-green-400' },
+    { id: 'rules', label: 'Reglas y FAQs', icon: BookOpen, color: 'text-amber-300' },
+    { id: 'towns', label: 'Ciudades', icon: Building2, color: 'text-sky-700' },
+    { id: 'heroes', label: 'Héroes', icon: Users, color: 'text-blue-300' },
+    { id: 'units', label: 'Unidades', icon: Swords, color: 'text-red-500' },
+    { id: 'skills', label: 'Habilidades', icon: Sparkles, color: 'text-indigo-400' },
     { id: 'spells', label: 'Hechizos', icon: Wand2, color: 'text-violet-400' },
-    { id: 'warmachines', label: 'Máquinas de Guerra', icon: Hammer, color: 'text-amber-600' },
-    { id: 'locations', label: 'Lugares del Mapa', icon: Map, color: 'text-emerald-500' },
-    { id: 'timer_full', label: 'Gestión de Partida', icon: Hourglass, color: 'text-emerald-400' },
-    { id: 'pdf', label: 'Manual Completo / PDF', icon: Printer, color: 'text-purple-400' }
+    { id: 'warmachines', label: 'Máquinas de Guerra', icon: Hammer, color: 'text-stone-500' },
+    { id: 'scenarios', label: 'Escenarios', icon: Map, color: 'text-rose-300' },
+    { id: 'locations', label: 'Lugares del Mapa', icon: MapPin, color: 'text-cyan-400' },
+    { id: 'gameplay', label: 'Gestión de Partida', icon: Dices, color: 'text-emerald-400' },
+    { id: 'pdf', label: 'Manual Completo', icon: Printer, color: 'text-orange-500' },
   ];
 
   const isLowTime = turnSeconds < 15 && turnLimit > 0;
@@ -356,7 +358,7 @@ export default function App() {
           <div className="lg:col-span-12 space-y-4">
           <Suspense fallback={<TabLoadingFallback />}>
             {activeTab === 'welcome' && (
-              <WelcomeView />
+              <WelcomeView onNavigateTab={setActiveTab}/>
             )}
             
             {activeTab === 'chat' && (
@@ -430,7 +432,7 @@ export default function App() {
               </div>
             )}
 
-            {activeTab === 'timer_full' && (
+            {activeTab === 'gameplay' && (
               <div className="space-y-6">
                 
                 {/* 1. Core Game Management Dashboard (Timer, Players, Treasury, Generation) */}
