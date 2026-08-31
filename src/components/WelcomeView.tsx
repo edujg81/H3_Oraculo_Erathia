@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { BookOpen, Sparkles, Users, Swords, Wand2, Building2, Compass, Hammer, Dices, HelpCircle } from 'lucide-react';
+import { BookOpen, Sparkles, Users, Swords, Wand2, Building2, Compass, Hammer, Dices, HelpCircle, MapPin, FileText } from 'lucide-react';
 import { version } from '../../package.json';
 import { ALL_BOARD_GAME_SKILLS } from '../data/skillsData';
 import { townsData } from '../data/townsData';
@@ -11,58 +11,76 @@ interface WelcomeViewProps {}
 const WelcomeView: React.FC<WelcomeViewProps> = () => {
   const contentSections = [
     {
+      icon: HelpCircle,
+      color: 'text-amber-400',
+      title: 'Asistente IA: Sandro el Sabio',
+      description: 'Chat inteligente especializado en reglas del juego. Responde dudas sobre mecánicas, combate, asedio, colocación de losetas, traducciones y estrategias. Con memoria de conversación, síntesis de voz y opción de API Key personalizada.'
+    },
+    {
       icon: BookOpen,
       color: 'text-sky-400',
       title: 'Reglas y FAQs Completas',
       description: 'Acceso completo a las 15 guías oficiales del juego de mesa, incluyendo reglas básicas, expansiones, erratas oficiales y preguntas frecuentes. Navega por secciones, busca términos específicos y consulta referencias cruzadas entre mecánicas.'
     },
     {
+      icon: Building2,
+      color: 'text-amber-500',
+      title: 'Ciudades y Edificios',
+      description: 'Árboles de construcción de cada facción. Costes, efectos, criaturas desbloqueadas y acciones de ciudad. Planifica tu desarrollo económico y militar para maximizar tus recursos y unidades disponibles durante la partida.'
+    },
+    {
       icon: Users,
       color: 'text-yellow-400',
       title: 'Base de Datos de Héroes',
-      description: 'Todos los héroes del juego con sus especialidades, habilidades iniciales, biografías y sinergias por facción. Filtra por ciudad, tipo de magia o estilo de juego para encontrar el héroe perfecto para tu estrategia.'
+      description: 'Todos los héroes del juego con sus especialidades, habilidades iniciales y biografías. Filtra por facción y tipo (Fuerza o Magia) para encontrar el héroe perfecto para tu estrategia.'
     },
     {
       icon: Swords,
       color: 'text-red-400',
       title: 'Enciclopedia de Unidades',
-      description: 'Todas las criaturas reclutables, neutrales e invocadas con estadísticas completas: ataque, defensa, daño, salud, velocidad, iniciativa, coste, crecimiento y habilidades especiales. Incluye comparativas y calculadora de reclutamiento.'
+      description: 'Todas las criaturas reclutables, neutrales e invocadas con estadísticas completas: ataque, defensa, daño, salud, velocidad, iniciativa, coste, crecimiento y habilidades especiales. Filtra por facción, tipo y nivel para planificar tu ejército ideal.'
+    },
+    {
+      icon: Sparkles,
+      color: 'text-indigo-400',
+      title: 'Habilidades de Héroe',
+      description: 'Catálogo de todas las habilidades del juego de mesa con sus efectos Básico y Experto. Consulta sus efectos y optimiza la progresión de tus personajes.'
     },
     {
       icon: Wand2,
       color: 'text-violet-400',
       title: 'Grimorio de Hechizos',
-      description: 'Catálogo completo de hechizos por escuela de magia (Aire, Tierra, Fuego, Agua). Niveles, coste en maná, efectos, duración, alcance y sinergias con héroes y artefactos. Filtros por escuela, nivel y tipo de efecto.'
-    },
-    {
-      icon: Building2,
-      color: 'text-amber-500',
-      title: 'Ciudades y Edificios',
-      description: 'Árboles de construcción de las 10 facciones (incluyendo Conflujo y Cala). Requisitos, costes, beneficios, criaturas desbloqueadas y cadenas de dependencias. Planifica tu desarrollo urbano óptimo.'
-    },
-    {
-      icon: Compass,
-      color: 'text-rose-400',
-      title: 'Misiones y Escenarios',
-      description: 'Base de datos de escenarios oficiales y personalizados: condiciones de victoria, configuración del mapa, fuerzas iniciales, eventos especiales y objetivos secundarios. Ideal para campañas y partidas narrativas.'
+      description: 'Catálogo completo de hechizos por escuela de magia (Aire, Tierra, Fuego, Agua) y clase. Niveles de potenciación, uso y efectos. Filtros por escuela y clase de magia (Básica o Avanzada).'
     },
     {
       icon: Hammer,
       color: 'text-amber-600',
       title: 'Máquinas de Guerra',
-      description: 'Simulador interactivo de máquinas de asedio y apoyo: Balista, Catapulta, Carro de Municiones, Tienda de Auxilio y Cañón de Cala. Resuelve tiradas de dado y efectos automáticos según las reglas oficiales.'
+      description: 'Todas las cartas de máquinas disponibles. Incluye un simulador interactivo de máquinas de asedio y apoyo: Balista, Catapulta, Carro de Municiones, Tienda de Auxilio y Cañón de Cala. Resuelve tiradas de dado y efectos automáticos según las reglas oficiales.'
+    },
+    {
+      icon: Compass,
+      color: 'text-rose-400',
+      title: 'Misiones y Escenarios',
+      description: 'Base de datos de escenarios oficiales y personalizados: condiciones de victoria, losetas de mapa, fuerzas iniciales, eventos especiales y objetivos secundarios. Filtra por modo de juego y dificultad para buscar el mejor escenario para tu partida.'
+    },
+    {
+      icon: MapPin,
+      color: 'text-cyan-400',
+      title: 'Lugares del Mapa',
+      description: 'Todos los lugares del mapa con sus efectos, recompensas y señalización. Incluye minas, tesoros, portales, ruinas, aldeas y otros puntos de interés. Consulta sus efectos y planifica tu exploración del mapa.'
     },
     {
       icon: Dices,
       color: 'text-emerald-400',
-      title: 'Simulador de Dados',
-      description: 'Tres dados oficiales del juego: Dado de Combate Táctico ([-1, 0, +1]), Dado de Recursos (6 caras) y Dado de Tesoro (6 caras). Animaciones, historial y descripciones de resultados según el reglamento.'
+      title: 'Gestión de Partidas',
+      description: 'Cronómetro, control de turnos, acciones y recursos. Incluye simulador de dados oficiales del juego: Dado de Combate Táctico ([-1, 0, +1]), Dado de Recursos (6 caras) y Dado de Tesoro (6 caras). Animaciones, historial y descripciones de resultados según el reglamento.'
     },
     {
-      icon: HelpCircle,
-      color: 'text-amber-400',
-      title: 'Asistente IA: Sandro el Sabio',
-      description: 'Chat inteligente especializado en reglas del juego. Responde dudas sobre mecánicas, combate, asedio, colocación de losetas, traducciones y estrategias. Con memoria de conversación, síntesis de voz y opción de API Key personalizada.'
+      icon: FileText,
+      color: 'text-green-400',
+      title: 'Manual completo',
+      description: 'Acceso al manual completo del juego de mesa, reescrito con la recopilación de los reglamentos oficiales: reglas básicas, expansiones y erratas oficiales. Descargable en PDF.'
     }
   ];
 
@@ -147,7 +165,7 @@ const WelcomeView: React.FC<WelcomeViewProps> = () => {
           </p>
           <p className="text-base">
             Además, el <strong className="text-amber-400">chat con Sandro el Sabio</strong> (pestaña "Consulta a Sandro") 
-            actúa como asistente inteligente: responde dudas de reglas en lenguaje natural, explica mecánicas complejas, 
+            actúa como asistente inteligente: responde dudas de reglas, explica mecánicas complejas, 
             sugiere estrategias y recuerda el contexto de tu conversación.
           </p>
         </div>
