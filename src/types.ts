@@ -70,4 +70,20 @@ export function getPlayerLimit(mode: 'enfrentamiento' | 'cooperativo' | 'campañ
   }
 }
 
+export const TABS = [
+  "welcome",
+  "chat",
+  "rules",
+  "pdf",
+  "towns",
+  "heroes",
+  "units",
+  "skills",
+  "spells",
+  "warmachines",
+  "scenarios",
+  "locations",
+  "gameplay"
+] as const;
 
+export type TabId = (typeof TABS)[number];
