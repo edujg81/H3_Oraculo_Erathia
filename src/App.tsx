@@ -28,7 +28,8 @@ import {
   HelpCircle, Compass, Gamepad2, Hourglass, Swords, Users, Dices, Coins,
   Hammer, Map, Wand2, Building2,
   House,
-  MapPin
+  MapPin,
+  FileText
 } from 'lucide-react';
 
 const FACTIONS = [
@@ -271,7 +272,7 @@ export default function App() {
 
   const tabs = [
     { id: 'welcome', label: 'Bienvenida', icon: House, color: 'text-gray-400' },
-    { id: 'chat', label: 'Consulta a Sandro', icon: Sparkles, color: 'text-green-400' },
+    { id: 'chat', label: 'Consulta a Sandro', icon: HelpCircle, color: 'text-green-400' },
     { id: 'rules', label: 'Reglas y FAQs', icon: BookOpen, color: 'text-amber-300' },
     { id: 'towns', label: 'Ciudades', icon: Building2, color: 'text-sky-700' },
     { id: 'heroes', label: 'Héroes', icon: Users, color: 'text-blue-300' },
@@ -282,7 +283,7 @@ export default function App() {
     { id: 'scenarios', label: 'Escenarios', icon: Map, color: 'text-rose-300' },
     { id: 'locations', label: 'Lugares del Mapa', icon: MapPin, color: 'text-cyan-400' },
     { id: 'gameplay', label: 'Gestión de Partida', icon: Dices, color: 'text-emerald-400' },
-    { id: 'pdf', label: 'Manual Completo', icon: Printer, color: 'text-orange-500' },
+    { id: 'pdf', label: 'Manual Completo', icon: FileText, color: 'text-orange-400' },
   ];
 
   const isLowTime = turnSeconds < 15 && turnLimit > 0;

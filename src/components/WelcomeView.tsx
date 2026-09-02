@@ -12,7 +12,13 @@ interface WelcomeViewProps {
 }
 
 const WelcomeView: React.FC<WelcomeViewProps> = ({ onNavigateTab }) => {
-  const contentSections = [
+  const contentSections: Array<{
+    icon: typeof HelpCircle;
+    color: string;
+    title: string;
+    description: string;
+    tabId: TabId;
+  }> = [
     {
       icon: HelpCircle,
       color: 'text-green-400',
@@ -204,10 +210,23 @@ const WelcomeView: React.FC<WelcomeViewProps> = ({ onNavigateTab }) => {
             return (
               <motion.div
                 key={section.title}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.05 * index }}
-                className="bg-slate-900/50 border border-slate-800/80 rounded-2xl p-5 hover:border-amber-600/40 hover:bg-slate-800/40 transition-all"
+                initial={{ opacity: 0, y: 26, scale: 0.96 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.45, delay: 0.03 * index, ease: 'easeOut' }}
+                whileHover={{
+                  boxShadow: '0 18px 35px rgba(15, 23, 42, 0.5), 0 0 0 1px rgba(251, 191, 36, 0.18)',
+                  borderColor: 'rgba(251, 191, 36, 0.5)',
+                }}
+                onClick={() => onNavigateTab(section.tabId)}
+                onKeyDown={(event) => {
+                  if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    onNavigateTab(section.tabId);
+                  }
+                }}
+                role="button"
+                tabIndex={0}
+                className="bg-slate-900/50 border border-slate-800/80 rounded-2xl p-5 hover:border-amber-600/40 hover:bg-slate-800/40 transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-500/60"
               >
                 <div className="flex items-start gap-3">
                   <div className={`p-2.5 bg-slate-950/60 rounded-lg border border-slate-800 shrink-0`}>
