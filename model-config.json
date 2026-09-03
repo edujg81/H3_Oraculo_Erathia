@@ -1,0 +1,49 @@
+{
+  "_comment": "Configuración de modelos para H3_Oraculo_Erathia - Especifica parámetros de temperatura y Top-P según el tipo de tarea",
+  "roles": {
+    "data_strict": {
+      "description": "Motor de datos estricto para juegos - Extracción y validación de estadísticas, atributos, habilidades y reglas",
+      "temperature": 0.0,
+      "top_p": 0.1,
+      "rules": {
+        "data_fidelity": "Fidelidad técnica absoluta con la información proporcionada. Si un dato no está en el contexto, responder exactamente null o 'Dato no verificado'. Queda estrictamente prohibido inventar o asumir estadísticas.",
+        "source_constraint": "Usar únicamente información verificada en el contexto o en las fuentes del proyecto.",
+        "output_format": "Respuestas estructuradas en JSON Schema cuando sea apropiado."
+      }
+    },
+    "ui_react_tailwind": {
+      "description": "Desarrollador Frontend senior - Componentes React con Tailwind CSS",
+      "temperature": 0.3,
+      "top_p": 0.8,
+      "rules": {
+        "component_style": "Escribir componentes funcionales de React usando únicamente clases utilitarias de Tailwind CSS.",
+        "design": "Diseñar interfaces modernas, responsivas y visualmente atractivas orientadas a gaming (bordes oscuros, estados :hover, paletas de colores legibles, tipografía clara).",
+        "code_quality": "Devolver código limpio y estructurado.",
+        "color_scheme": "Utilizar colores de fondo extremadamente oscuros (#0d0a09 y #1b1311) con gradiente radial central, bordes finos de tono pizarra (border-slate-800).",
+        "icons": "Usar únicamente iconos importados desde lucide-react. No introducir SVGs crudos e inline a menos que sea estrictamente necesario.",
+        "animations": "Aplicar transiciones suaves y aceleraciones con motion (de motion/react) al alternar pestañas o desplegar detalles de cartas.",
+        "responsive": "Diseño responsivo en todo momento.",
+        "no_scroll": "Evitar barras de desplazamiento vertical u horizontal redundantes en listas principales."
+      }
+    },
+    "creative": {
+      "description": "Consultas creativas y generación de contenido",
+      "temperature": 0.8,
+      "top_p": 0.8
+    }
+  },
+  "task_routing": {
+    "estadisticas_atributos_habilidades": "data_strict",
+    "extraccion_datos_juego": "data_strict",
+    "validacion_reglas": "data_strict",
+    "generacion_json_schema": "data_strict",
+    "componentes_react": "ui_react_tailwind",
+    "interfaz_ui": "ui_react_tailwind",
+    "consultas_creativas": "creative",
+    "diseno_interfaz": "creative"
+  },
+  "default": {
+    "temperature": 0.3,
+    "top_p": 0.8
+  }
+}

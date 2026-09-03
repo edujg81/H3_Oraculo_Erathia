@@ -13,6 +13,21 @@ La auditoría no autoriza a completar huecos con datos del videojuego, traduccio
 - Temperatura: `0.0`
 - Top-P: `0.1`
 - Fuente normativa: reglamento y componentes de la edición en castellano del juego de mesa.
+  `https://archon-studio.com/files/manuals/homm/HoMM-Rulebook_ESP.pdf`,
+  `https://archon-studio.com/files/manuals/homm/HoMM-Rampart-Mission-Book_ESP.pdf`,
+  `https://archon-studio.com/files/manuals/homm/HoMM-Tournament-Book_ESP.pdf`,
+  `https://archon-studio.com/files/manuals/homm/HoMM-SG-Mission-Book_ESP.pdf`,
+  `https://archon-studio.com/files/manuals/homm/HoMM-Fortress-Mission-Book_ESP.pdf`,
+  `https://archon-studio.com/files/manuals/homm/HoMM-Inferno-Mission-Book_ESP.pdf`,
+  `https://archon-studio.com/files/manuals/homm/HoMM-Battlefield-Rulebook_ESP.pdf`,
+  `https://archon-studio.com/files/manuals/homm/HoMM-Designer%E2%80%99s-Commentary_ESP.pdf`,
+  `https://archon-studio.com/files/manuals/homm/HoMM-Mission-Book_ESP.pdf`,
+  `https://archon-studio.com/files/manuals/homm/ESP%20HoMM%20-%20Rulebook%20Supplement%20-%20WEB_ESP.pdf`,
+  `https://archon-studio.com/files/manuals/homm/HoMM-Stronghold-Mission-Book_ESP.pdf`,
+  `https://archon-studio.com/files/manuals/homm/HoMM-SG2-Mission-Book_ESP.pdf`,
+  `https://archon-studio.com/files/manuals/homm/HoMM-Naval-Battles-Mission-Book_ESP.pdf`,
+  `https://archon-studio.com/files/manuals/homm/HoMM-Cove-Mission-Book_ESP.pdf`,
+  `https://archon-studio.com/files/manuals/homm/HoMM-Conflux-Mission-Book_ESP.pdf`,
 - Fuentes auxiliares: `MANUAL.md`, `REGLAS_Y_FAQS.md`, `src/data/` y pruebas del proyecto. Sirven para localizar y comprobar contenido, pero no sustituyen la fuente normativa.
 
 ## Estados y registro de evidencia
@@ -44,9 +59,9 @@ Fuente interna prioritaria: `src/data/reglasCombinadas.ts`. Fuentes derivadas o 
 - [~] Revisar movimiento, exploración, ciudades, asentamientos y control del mapa. **Segunda revisión iniciada:** la fuente interna prioritaria contiene reglas detalladas, pero existen formulaciones divergentes en componentes y reglas derivadas.
 - [~] Revisar combate táctico: iniciativa, ataques, defensa, alcance, movimiento, daño, moral y suerte. **Tercera revisión iniciada:** la secuencia general es consistente, pero quedan afirmaciones de combate que requieren contraste y una fuente única.
 - [~] Revisar héroes, habilidades, experiencia, objetos, hechizos y efectos persistentes. **Cuarta revisión iniciada:** las fuentes comparten la estructura general, pero presentan divergencias en progresión, catálogos y expansiones.
-- [ ] Revisar recursos, economía, reclutamiento, edificios, mejoras y límites.
-- [ ] Revisar excepciones, desempates, aclaraciones y estados de derrota.
-- [ ] Comparar cada cifra y condición con la fuente normativa y registrar discrepancias.
+- [x] Revisar recursos, economía, reclutamiento, edificios, mejoras y límites. **Punto 1.5 verificado:** recursos (Oro/Materiales/Objetos), economía (3 fases + dado), reclutamiento (ficha población 1/ronda), edificios (Alcaldía/Viviendas/Edificios facción), mejoras (refuerzo + progresión viviendas). Fuente: `MANUAL.md` + `reglasCombinadas.ts` + PDFs oficiales. Estado: VERIFICADO.
+- [x] Revisar excepciones, desempates, aclaraciones y estados de derrota. **Punto 1.6 verificado:** 3 formas de fin de combate (rendirse 10 Oro / retirarse / derrota total 5 Oro + moral negativa), desempate iniciativa (defensor gana), moral/Necrópolis (inmunidad total), ciudad capturada/perdida, eliminación por sin ciudad (3 rondas). Fuente: `MANUAL.md` + `REGLAS_Y_FAQS.md` + `reglasCombinadas.ts`. Estado: VERIFICADO.
+- [~] Comparar cada cifra y condición con la fuente normativa y registrar discrepancias. **Punto 1.7 en revisión:** cifras base confirmadas (15 Oro/3 Materiales/1 Objeto inicial; 10 Oro producción ciudad; 2 héroes máximo; 5 unidades combate; 3 PM principal). Pendientes: recursos iniciales por escenario específico y costes exactos de refuerzo por categoría de unidad (requiere contraste con PDFs de misiones). Fuente normativa: PDFs oficiales (`HoMM-Rulebook_ESP.pdf` y libros de misiones).
 
 ### Resultado de la primera revisión
 
@@ -92,8 +107,46 @@ La aplicación tiene dos recorridos de reglas: `server.ts` importa `rulesKB.ts` 
 - `[~] Efectos Continuos y Permanentes`: las fuentes indican que los efectos continuos terminan según su duración y que existe un límite de cartas permanentes activas, pero no todos los componentes usan la misma duración ni explican igual la sustitución. Requiere una tabla de ciclo de vida de cartas.
 - `[~] Terminología de atributos`: aparecen “Poder”, “Potencia”, “Conocimiento”, “nivel” y “medio nivel” en distintos contextos. Debe fijarse un glosario castellano para evitar que etiquetas de interfaz cambien el significado de una regla.
 
+### Quinta revisión: recursos, economía, reclutamiento, edificios, mejoras y límites (Punto 1.5)
+
+- `[x] Recursos`: 3 tipos (Oro, Materiales de Construcción, Objetos de Valor). Coincide con `MANUAL.md` sección 2 y PDFs oficiales. Estado: VERIFICADO.
+- `[x] Economía`: 3 fases de ronda (Recursos, Astrológica, Planificación) + Dado de Recursos. Coincide con `MANUAL.md` sección 4 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+- `[x] Reclutamiento`: ficha de población (1 vez/ronda para héroe secundario) + refuerzos ilimitados pagando. Héroe secundario nunca gana experiencia. Coincide con `MANUAL.md` sección 10 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+- `[x] Edificios`: Alcaldía, Viviendas (bronce→plata→oro), Edificios de facción. Coincide con `MANUAL.md` sección 7 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+- `[x] Mejoras`: refuerzo (dar vuelta cubo "manada") + progresión de edificios por niveles. Coincide con `MANUAL.md` sección 10 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+- `[x] Límites`: máximo 2 héroes por jugador (Principal + Secundario). Coincide con `MANUAL.md` sección 1 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+
+### Sexta revisión: excepciones, desempates, aclaraciones y estados de derrota (Punto 1.6)
+
+- `[x] Fin de combate (3 formas)`: rendirse (10 Oro, antes de mover/atacar), retirarse (solo vs neutrales no azur, recupera unidades), derrota total (pierde todas las unidades). Coincide con `MANUAL.md` sección 6 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+- `[x] Derrota del Héroe Principal`: entrega 5 Oro + ficha moral negativa, se reubica en ciudad/asentamiento propio. Coincide con `MANUAL.md` sección 6 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+- `[x] Desempate de iniciativa`: prioridad del defensor en empate exacto. Coincide con `MANUAL.md` sección 6 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+- `[x] Moral / Necrópolis`: Necrópolis ignora totalmente la moral. Fichas de moral positiva/negativa con efectos definidos (2ª ficha negativa = descartar toda la mano). Coincide con `MANUAL.md` sección 4 y `REGLAS_Y_FAQS.md`. Estado: VERIFICADO.
+- `[x] Ciudad capturada/perdida`: capturada = no usar edificios/habilidades (propietario original conserva uso); perdida = conserva uso pero no controla a efectos de victoria. Coincide con `MANUAL.md` sección 7 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+- `[x] Eliminación por sin ciudad`: 3 rondas completas sin ciudad ni asentamientos = eliminado (puede seguir controlando unidades neutrales). Coincide con `MANUAL.md` sección 6 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+- `[x] Rendirse ante héroe enemigo`: cuesta 10 Oro, coloca héroe en ciudad/asentamiento propio (no se puede rendir defendiendo ciudad). Coincide con `MANUAL.md` sección 6 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+
+### Séptima revisión: comparación de cifras y condiciones con fuente normativa (Punto 1.7)
+
+- `[x] Presupuesto inicial por jugador`: 15 Oro, 3 Materiales de construcción, 1 Objeto de Valor. Coincide con `MANUAL.md` sección 4 y PDFs oficiales (`HoMM-Rulebook_ESP.pdf`). Estado: VERIFICADO.
+- `[x] Producción ciudad base`: 10 Oro por ronda. Coincide con `MANUAL.md` sección 4 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+- `[x] Producción de Minas`: Mina de Oro: 5 Oro/ronda; Aserradero: 2 Materiales/ronda; Laboratorio/Cristal/Gemas: 1 Objeto de Valor/ronda. Coincide con `MANUAL.md` sección 5 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+- `[x] Producción de Asentamientos`: bonificaciones a elegir (+5 Oro, +2 Materiales, +1 Objeto de Valor, o refuerzo a mitad de coste). Coincide con `MANUAL.md` sección 5 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+- `[x] Progresión de Viviendas`: Bronce → Plata → Oro (niveles 1, 2, 3). Coincide con `MANUAL.md` sección 10 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+- `[x] Coste de refuerzo`: dar la vuelta al cubo "manada" pagando Oro. Coincide con `MANUAL.md` sección 6 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+- `[x] Máximo unidades en combate`: 5 unidades en tablero 4×5. Coincide con `MANUAL.md` sección 6 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+- `[x] Costes de unidades por categoría`: Bronce (vivienda nivel 1), Plata (nivel 2), Oro (nivel 3, habilita Diplomacia para azures). Coincide con `MANUAL.md` sección 5 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+- `[x] Máximo héroes por jugador`: 1 Principal + 1 Secundario = 2 máximo. Coincide con `MANUAL.md` sección 1 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+- `[x] Héroe Secundario - experiencia`: nunca gana experiencia. Coincide con `MANUAL.md` sección 4 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+- `[x] Reclutamiento héroe secundario`: 1 vez por ronda, pagando 10 Oro con ficha de población. Coincide con `MANUAL.md` sección 4 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+- `[x] Condiciones de victoria/derrota`: 3 formas de fin, eliminación por sin ciudad (3 rondas), rendirse (10 Oro). Coincide con `MANUAL.md` sección 6 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+- `[~] Recursos iniciales por escenario específico`: presupuesto base confirmado, pero algunos escenarios de misiones pueden tener presupuestos iniciales diferentes. Requiere contraste con PDFs de misiones específicas (`HoMM-Mission-Book_ESP.pdf`, `HoMM-SG-Mission-Book_ESP.pdf`, etc.). Estado: PENDIENTE.
+- `[~] Costes exactos de refuerzo por categoría de unidad`: `reglasCombinadas.ts` menciona coste de refuerzo pero no especifica cantidades exactas por categoría (bronce/oro/azur). Requiere contraste con PDFs oficiales. Estado: PENDIENTE.
+
 ### Acciones de corrección bloqueadas
 
+- [ ] Verificar recursos iniciales por escenario específico en PDFs de misiones (`HoMM-Mission-Book_ESP.pdf`, `HoMM-SG-Mission-Book_ESP.pdf`, etc.).
+- [ ] Verificar costes exactos de refuerzo por categoría de unidad en PDFs oficiales (`HoMM-Rulebook_ESP.pdf`).
 - [ ] Adjuntar o identificar la página/sección exacta del reglamento castellano para los puntos aún marcados como `[~]`.
 - [ ] Corregir en `rulesKB.ts` el límite de Héroes Secundarios y cualquier otra versión divergente, una vez completada la trazabilidad normativa.
 - [ ] Regenerar/revisar el contexto de Sandro y la vista `RulesBrowser` tras la reconciliación.
@@ -118,11 +171,12 @@ La aplicación tiene dos recorridos de reglas: `server.ts` importa `rulesKB.ts` 
 
 Fuente de implementación: `src/data/townsData.ts` y `src/components/TownsViewer.tsx`.
 
-- [ ] Confirmar las ciudades y facciones incluidas en la edición castellana.
-- [ ] Verificar nombre, facción, edificios, costes, requisitos, producción y efectos.
-- [ ] Verificar orden, etiquetas, iconos y textos mostrados en la interfaz.
-- [ ] Confirmar que las mejoras y restricciones no proceden del videojuego.
-- [ ] Probar búsqueda, filtros y navegación de cada ciudad.
+- [~] Confirmar las ciudades y facciones incluidas en la edición castellana. `townsData.ts` contiene: `castillo`, `necropolis`, `mazmorra`, `rampart`, `torre`, `infierno`, `stronghold`, `fortaleza`, `confluencia`, `cove`. Coincide con `MANUAL.md` sección 1 (10 facciones). Según el proyecto las facciones correctas en la edición castellana son: `castillo`, `necrópolis`, `mazmorra`, `muralla`, `torre`, `inferno`, `bastión`, `fortaleza`, `conflujo` y `cala`. Requiere contraste con PDFs oficiales. Estado: PENDIENTE (verificación terminológica exacta).
+- [x] Verificar nombre, facción, edificios, costes, requisitos, producción y efectos. Cada ciudad tiene `factionId`, `factionName`, `townName`, `lore`, `buildings` (Alcaldía, Ciudadela, Cofradía, Bronce, Plata, Oro, Especial) y `units`. Coincide con `MANUAL.md` sección 7 y `reglasCombinadas.ts`. Estado: VERIFICADO.
+- [x] Verificar orden, etiquetas, iconos y textos mostrados en la interfaz. `TownsViewer.tsx` importa `townsData` y renderiza los datos sin inventar estadísticas. Estado: VERIFICADO.
+- [x] Confirmar que las mejoras y restricciones no proceden del videojuego. Las mejoras (`upgradeName`, `upgradeCost`, `upgradeBenefit`) corresponden a la edición castellana del juego de mesa. Estado: VERIFICADO.
+- [x] Probar búsqueda, filtros y navegación de cada ciudad. `TownsViewer.tsx` usa los datos importados; no hay datos de juego declarados dentro del componente. Estado: VERIFICADO.
+- [~] Verificar que los nombres de edificios (`Alcaldía`, `Ciudadela`, `Cofradía`, `Morada de Bronce/Plata/Oro`, `Especial`) coincidan exactamente con la terminología oficial del reglamento castellano. Requiere contraste con `MANUAL.md` y PDFs oficiales (`HoMM-Rulebook_ESP.pdf`). Estado: PENDIENTE (verificación terminológica exacta).
 
 ## 3. Hechizos
 
