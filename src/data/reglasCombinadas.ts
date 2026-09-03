@@ -274,12 +274,12 @@ REGLAS DE CONSTRUCCIÓN:
 
 CAPTURA Y ASEDIO: mientras exploras, puedes capturar asentamientos neutrales y asediar ciudades enemigas moviendo tu héroe sobre ellos. 
 - Si asedias la ciudad/asentamiento de otro jugador, el defensor puede pagar 8 de Oro para defenderse con su ejército si no está presente en la zona (transporta solo el ejército, no el héroe principal, por lo que no puede usar cartas de mano en ese combate; tras el combate, el ejército vuelve al lugar del héroe). 
-- Si capturas una ciudad enemiga, coloca tu cubo de facción sobre ella y recupera un cubo de facción del propietario anterior (relevante para condiciones de victoria). En una ciudad capturada no se pueden usar sus edificios ni habilidades (incluida reclutar). 
-- Si un enemigo captura tu ciudad, tú sigues pudiendo usar sus edificios y habilidades.
+- Si capturas una ciudad enemiga, coloca tu cubo de facción sobre ella y recupera un cubo de facción del propietario anterior (relevante para condiciones de victoria). Como captor, no puedes usar los edificios ni las habilidades de esa ciudad, incluida la acción de reclutar.
+- Si un enemigo captura tu ciudad, conservas tu ficha de ciudad y sigues pudiendo usar sus edificios y habilidades. Sin embargo, ya no controlas la ciudad a efectos de las condiciones de victoria.
 
 PREGUNTAS FRECUENTES:
 - Puedes construir una cofradía de magos incluso durante el turno de otro jugador (por ejemplo, antes de que te ataquen), pero no puedes usar la ficha de libro de hechizos para comprar hechizos justo después de construirla esa misma ronda, ya que ambas acciones cuentan como la misma acción de cofradía (limitada a 1 vez por ronda); sí conservas los hechizos que la cofradía entrega al construirse.
-- Si capturas la ciudad de otra facción, no puedes usar sus edificios salvo que el escenario indique lo contrario.
+- Si capturas la ciudad de otra facción, no puedes usar sus edificios ni habilidades; el propietario original conserva ese uso aunque haya perdido el control territorial, salvo que una regla específica del escenario disponga otra cosa.
 - La ficha de población permite, 1 vez por ronda, reclutar un héroe secundario, o reclutar y reforzar tus unidades tantas veces como puedas pagar (estas dos últimas acciones se pueden repetir libremente esa ronda).
 - Si la Alcaldía te da PM adicional, decides tú a qué héroe se lo asignas.`
   },
