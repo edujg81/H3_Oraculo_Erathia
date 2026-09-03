@@ -42,8 +42,8 @@ Fuente interna prioritaria: `src/data/reglasCombinadas.ts`. Fuentes derivadas o 
 
 - [~] Revisar preparación, objetivo, secuencia de ronda y condiciones de victoria. **Primera revisión iniciada:** se han resuelto tres criterios de interpretación del proyecto, pero las imprecisiones de la fuente interna prioritaria aún requieren contraste con la fuente normativa.
 - [~] Revisar movimiento, exploración, ciudades, asentamientos y control del mapa. **Segunda revisión iniciada:** la fuente interna prioritaria contiene reglas detalladas, pero existen formulaciones divergentes en componentes y reglas derivadas.
-- [ ] Revisar combate táctico: iniciativa, ataques, defensa, alcance, movimiento, daño, moral y suerte.
-- [ ] Revisar héroes, habilidades, experiencia, objetos, hechizos y efectos persistentes.
+- [~] Revisar combate táctico: iniciativa, ataques, defensa, alcance, movimiento, daño, moral y suerte. **Tercera revisión iniciada:** la secuencia general es consistente, pero quedan afirmaciones de combate que requieren contraste y una fuente única.
+- [~] Revisar héroes, habilidades, experiencia, objetos, hechizos y efectos persistentes. **Cuarta revisión iniciada:** las fuentes comparten la estructura general, pero presentan divergencias en progresión, catálogos y expansiones.
 - [ ] Revisar recursos, economía, reclutamiento, edificios, mejoras y límites.
 - [ ] Revisar excepciones, desempates, aclaraciones y estados de derrota.
 - [ ] Comparar cada cifra y condición con la fuente normativa y registrar discrepancias.
@@ -68,6 +68,30 @@ La aplicación tiene dos recorridos de reglas: `server.ts` importa `rulesKB.ts` 
 - `[x] Control de ciudades capturadas`: el jugador que captura una ciudad ajena no puede usar sus edificios ni sus habilidades. El jugador que ha perdido su ciudad conserva su ficha de ciudad y puede seguir usando sus edificios y habilidades, aunque ya no controla la ciudad a efectos de las condiciones de victoria.
 - `[~] Re-señalización y control aliado`: las FAQ internas establecen reglas específicas para sustituir cubos de asentamientos y para tratar zonas controladas por aliados; falta comprobar que se aplican igual a cada tipo de lugar y modo de juego.
 
+### Tercera revisión: combate táctico
+
+- `[x] Secuencia base`: la fuente prioritaria describe despliegue de hasta 5 unidades por bando, activación por iniciativa descendente, movimiento y/o ataque, resolución del dado, daño, represalia y fin de ronda. Debe conservarse como esquema de referencia al revisar las pantallas.
+- `[x] Empates de iniciativa`: `reglasCombinadas.ts`, `rulesKB.ts` y `RulebookPDF.tsx` indican prioridad del atacante en los empates. La regla debe comprobarse también en el caso de varios empates y en la variante Campo de Batalla.
+- `[x] Represalia`: la fuente prioritaria limita el contraataque a 1 por unidad y ronda, exige supervivencia y adyacencia, y evita cadenas de contraataques. La excepción de habilidades que ignoran o permiten contraataques debe comprobarse individualmente en los datos de unidades.
+- `[~] Defensa y daño`: las fuentes indican que la Defensa reduce ataques físicos, pero también contienen efectos de ficha de defensa, daño elemental, hechizos, muros y minas con reglas distintas. Falta una tabla normativa que separe daño físico, daño de hechizo, daño elemental y daño directo.
+- `[~] Unidades a distancia`: la penalización por enemigo adyacente y por ciertos disparos desde retaguardia aparece en las bases, pero las superficies usan formulaciones resumidas como “sin límite de distancia” o “penalizador de melé”. Debe verificarse que no se omitan restricciones de objetivo, movimiento o línea de ataque.
+- `[~] Movimiento táctico`: las unidades terrestres y voladoras aparecen con movimiento de hasta 3 espacios en el tablero 4×5, mientras Campo de Batalla sustituye esa regla por movimiento basado en Iniciativa. La interfaz debe identificar siempre qué tablero y expansión están activos.
+- `[~] Asedio`: las fuentes describen muros, puerta, torre de arqueros, protección y destrucción automática de estructuras, pero los textos de componentes añaden reglas de catapulta y daños que no están expresados de modo uniforme. Requiere una matriz por tipo de estructura y momento de resolución.
+- `[~] Moral y suerte`: la moral se documenta principalmente en el bloque de rondas y las repeticiones de dados se mezclan con cartas, fichas y habilidades. Falta comprobar el momento exacto de aplicación y si cada efecto permite repetir cualquier dado o solo dados de ataque.
+
+### Cuarta revisión: héroes, habilidades, experiencia, objetos y hechizos
+
+- `[x] Héroe Principal y Secundario`: las fuentes revisadas mantienen la distinción entre héroe con carta, experiencia y mazo propio, y héroe secundario sin experiencia ni mazo propio. El límite de dos héroes por jugador queda respaldado por el criterio confirmado del proyecto.
+- `[x] Mazo inicial y adquisición`: las fuentes describen un mazo inicial de 9 cartas, cartas de habilidad con efectos Básico/Experto, y cartas obtenidas que normalmente llegan a la mano. Deben comprobarse las excepciones carta por carta antes de marcar el flujo como cerrado.
+- `[x] Progresión y búsqueda de habilidades`: al alcanzar los niveles plata II, V y VII, el Héroe realiza una búsqueda en el mazo de habilidades. En los niveles I (inicio del juego), IV y VI obtiene la carta de especialidad correspondiente. Se han actualizado `reglasCombinadas.ts`, `rulesKB.ts`, `MANUAL.md` y `RulebookPDF.tsx`.
+- `[~] Catálogo de habilidades`: `reglasCombinadas.ts` declara 30 cartas de habilidad en la lista de componentes, mientras otras fuentes del proyecto declaran 32 habilidades. Debe cuadrarse el inventario físico, los datos de `skillsData.ts` y el índice de Sandro.
+- `[x] Experiencia del Héroe Principal`: las fuentes coinciden en que el Héroe Secundario no gana experiencia y que la progresión se aplica al Héroe Principal. Las cantidades obtenidas por combate, lugares y dados siguen sujetas a comprobación específica.
+- `[~] Artefactos`: las fuentes coinciden en que los artefactos se añaden directamente a la mano y se descartan tras jugarse salvo los permanentes, pero difieren en clasificación, rarezas y efectos concretos. Requiere inventario carta por carta contra el mazo castellano.
+- `[~] Hechizos y límite de lanzamiento`: se repite el límite de 1 hechizo primario por ronda de combate, pero componentes y textos auxiliares mezclan libro de hechizos, Poder, escuelas y efectos de pergamino. Deben separarse requisitos de lanzamiento, potenciación y número de hechizos.
+- `[~] Pergaminos de Hechizo`: `reglasCombinadas.ts` los asocia a la expansión Bastión, mientras `REGLAS_Y_FAQS.md` los asocia a Conflujo. La expansión correcta y sus restricciones deben verificarse en el reglamento indexado antes de corregir textos.
+- `[~] Efectos Continuos y Permanentes`: las fuentes indican que los efectos continuos terminan según su duración y que existe un límite de cartas permanentes activas, pero no todos los componentes usan la misma duración ni explican igual la sustitución. Requiere una tabla de ciclo de vida de cartas.
+- `[~] Terminología de atributos`: aparecen “Poder”, “Potencia”, “Conocimiento”, “nivel” y “medio nivel” en distintos contextos. Debe fijarse un glosario castellano para evitar que etiquetas de interfaz cambien el significado de una regla.
+
 ### Acciones de corrección bloqueadas
 
 - [ ] Adjuntar o identificar la página/sección exacta del reglamento castellano para los puntos aún marcados como `[~]`.
@@ -78,6 +102,16 @@ La aplicación tiene dos recorridos de reglas: `server.ts` importa `rulesKB.ts` 
 - [ ] Crear una tabla normativa de transiciones de movimiento: tierra, mar, subterráneo, puertas, monolitos y torbellinos.
 - [~] Propagar la regla confirmada de ciudades capturadas a `reglasCombinadas.ts`, `rulesKB.ts`, componentes y pruebas, manteniendo separadas la propiedad funcional de los edificios y el control territorial para la victoria. **Bases actualizadas:** `reglasCombinadas.ts` y `rulesKB.ts`. Pendientes: componentes y prueba específica.
 - [ ] Comparar los lugares señalizables, visitables y revisitables con sus componentes físicos y con `MapLocationsViewer.tsx`.
+- [ ] Crear una tabla de tipos de daño y modificadores: ataque físico, hechizo, elemental, directo, muro, mina y defensa.
+- [ ] Separar en la interfaz las reglas del tablero 4×5 y las de Campo de Batalla por modo activo.
+- [ ] Verificar excepciones de represalia y alcance contra las fichas individuales de unidades.
+- [ ] Unificar las reglas de asedio, catapulta y estructuras defensivas antes de modificar el simulador.
+- [x] Resolver la secuencia exacta de niveles que permite buscar habilidades y actualizar héroes, reglas, FAQ e interfaz: habilidades en II, V y VII; especialidades en I, IV y VI. La interfaz de `HeroesViewer.tsx` ya usa II, V y VII.
+- [ ] Cuadrar el inventario de habilidades entre `reglasCombinadas.ts`, `skillsData.ts` y el reglamento indexado.
+- [ ] Verificar la expansión y las restricciones de los Pergaminos de Hechizo antes de corregir su atribución.
+- [ ] Crear un inventario de artefactos y hechizos con requisito, efecto, duración, descarte y fuente normativa.
+- [ ] Crear una tabla de ciclo de vida para efectos Instantáneos, de Activación, Continuos y Permanentes.
+- [ ] Fijar un glosario de atributos y términos de cartas en castellano.
 - [ ] Añadir pruebas que impidan reintroducir límites, fases o condiciones de victoria contradictorias.
 
 ## 2. Ciudades

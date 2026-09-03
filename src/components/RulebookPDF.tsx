@@ -629,11 +629,11 @@ export default function RulebookPDF() {
               </div>
               <div className="border border-slate-900 p-2 rounded bg-slate-950/40">
                 <span className="text-amber-300 block font-bold font-mono">3. Cartas de Especialidad (Specialty)</span>
-                Naipes asimétricos exclusivos del héroe elegido. Se incorporan de forma directa y gratuita a tu mano de juego al alcanzar los niveles legendarios dorados (Nivel IV y VI del track).
+                Naipes asimétricos exclusivos del héroe elegido. La carta de nivel I se incorpora al mazo inicial; las cartas restantes se añaden de forma directa y gratuita a tu mano al alcanzar los niveles IV y VI del track.
               </div>
               <div className="border border-slate-900 p-2 rounded bg-slate-950/40">
                 <span className="text-amber-300 block font-bold font-mono">4. Cartas de Habilidad (Ability)</span>
-                Aptitudes de progresión ordinarias que se eligen mediante draft (robar 2 cartas, retener 1 y descartar la otra) cada vez que el héroe sube a un nivel plateado (Niveles II, III, V, VII).
+                Aptitudes de progresión ordinarias que se eligen mediante draft (robar 2 cartas, retener 1 y descartar la otra) al alcanzar los niveles plata II, V o VII.
               </div>
               <div className="border border-slate-900 p-2 rounded bg-slate-950/40">
                 <span className="text-amber-300 block font-bold font-mono">5. Cartas de Característica (Stat)</span>
@@ -2136,7 +2136,7 @@ export default function RulebookPDF() {
             <span className="text-xs font-mono text-slate-500">Talentos de Erathia</span>
           </h2>
           <p className="text-[10px] uppercase font-mono text-slate-400 mt-1">
-            Las Habilidades representan la progresión del Héroe. Al subir de nivel a un rango de Plata (II, III, V y VII), el Héroe draftea de un mazo común. Poseen un efecto <strong>Básico</strong> y un efecto <strong>Experto</strong>.
+            Las Habilidades representan la progresión del Héroe. Al subir de nivel plata (II, V o VII), el Héroe draftea de un mazo común. Poseen un efecto <strong>Básico</strong> y un efecto <strong>Experto</strong>.
           </p>
           <div className="overflow-x-auto">
             <table className="min-w-full text-[12px] text-slate-300 bg-slate-950 border border-slate-800 rounded-lg">

@@ -74,7 +74,7 @@ No existen dados de asedio específicos; todas las resoluciones se efectúan con
 El mazo de tu héroe se conoce como **Mazo de Poder y Magia (Might & Magic Deck)**. Está compuesto por diversas categorías de cartas con reglas estrictas:
 
 * **Cartas de Estadística (Stat Cards):** Representan los atributos fundamentales del Héroe: *Ataque* (daño físico), *Defensa* (mitigación), *Poder* (potencia de conjuros) y *Conocimiento* (límite de hechizos y robo).
-* **Cartas de Habilidad (Ability Cards):** Representan maestrías que se adquieren al subir de nivel a un rango plateado (Nivel II, III, V, VII) mediante un *Draft* de dos cartas del mazo común. Poseen un efecto Básico gratuito y un efecto Experto activable gastando un marcador de Experto.
+* **Cartas de Habilidad (Ability Cards):** Representan maestrías que se adquieren al subir de nivel a un rango plateado (Nivel II, V, VII) mediante un *Draft* de dos cartas del mazo común. Poseen un efecto Básico gratuito y un efecto Experto activable gastando un marcador de Experto.
 * **Cartas de Especialidad (Specialty Cards):** Únicas y asimétricas de cada Héroe. Se añaden directamente a la mano de forma gratuita al ascender a un nivel dorado (Nivel IV y VI).
 * **Cartas de Hechizo (Spell Cards):** Adquiridas en gremios de magos o santuarios. Tienen un coste de Maná y se dividen en hechizos de Combate e hechizos de Mapa (ej. *Volar, Caminar sobre el Agua*).
 * **Cartas de Artefacto (Artifact Cards):** Obtenidas de cofres, ruinas o como botín de combates de oro.
@@ -222,7 +222,7 @@ Conforme a los registros de `key_spells_data.txt`, se definen las siguientes reg
 ## 9. Progresión del Héroe y Habilidades Secundarias
 
 La progresión de tu Héroe se registra en la pista de experiencia. Al subir de nivel:
-* **Nivel Plateado (II, III, V, VII):** Realizas un *Draft* del mazo común de habilidades. Revelas las 2 primeras cartas de habilidad, eliges una para incorporarla a tu mazo de Poder y Magia y colocas la restante en su pila de descarte.
+* **Nivel Plateado (II, V, VII):** Realizas un *Draft* del mazo común de habilidades. Revelas las 2 primeras cartas de habilidad, eliges una para incorporarla a tu mazo de Poder y Magia y colocas la restante en su pila de descarte.
 * **Nivel Dorado (IV, VI):** Incorporas de forma gratuita tus cartas asimétricas de Especialidad de héroe a tu mano activa.
 
 ### Las 32 Habilidades Secundarias del Compendio

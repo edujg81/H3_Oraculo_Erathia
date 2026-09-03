@@ -176,12 +176,12 @@ INFORMACIÓN DE LA CARTA DE HÉROE: Nombre, Clase, Tipo, Color de facción, Ataq
 EFECTOS DE NIVEL (marcador de nivel, límite de mano y usos de Experto por ronda):
 • Nivel 1: límite de mano 4. Añade la 1ª carta de especialidad.
 • Nivel 2: busca (2) en el mazo de habilidades; puedes jugar 1 efecto avanzado (Experto) por ronda.
-• Nivel 3: límite de mano 5. Busca (2) en habilidades.
+• Nivel 3: límite de mano 5.
 • Nivel 4: añade la 2ª carta de especialidad; permite jugar 2 efectos avanzados por ronda.
 • Nivel 5: límite de mano 6. Busca (2) en habilidades.
 • Nivel 6: añade la 3ª carta de especialidad; permite jugar 3 efectos avanzados por ronda.
 • Nivel 7: límite de mano 7. Busca (2) en habilidades.
-Los niveles dorados (I, IV, VI) dan carta de especialidad; los plateados (II, III, V, VII) permiten buscar(2) en habilidades. Usa cubos negros en la carta de héroe para marcar cuántos efectos avanzados puedes usar esa ronda.
+Los niveles dorados (I, IV, VI) dan carta de especialidad; los niveles plata II, V y VII permiten buscar(2) en habilidades. Usa cubos negros en la carta de héroe para marcar cuántos efectos avanzados puedes usar esa ronda.
 
 PREGUNTAS FRECUENTES:
 - Las características y la habilidad inicial de la carta de héroe solo sirven para construir tu mazo inicial, no se usan para nada más después.
@@ -1660,7 +1660,7 @@ HÉROE PRINCIPAL VS HÉROE SECUNDARIO:
 EFECTOS DETALLADOS POR SUBIDA DE NIVEL:
 • Nivel 1: Límite de Mano = 4. Añade la 1ª Carta de Especialidad al Mazo.
 • Nivel 2: Búsqueda (2) en Mazo de Habilidades. Permite usar 1 Efecto Experto (Corona) por ronda.
-• Nivel 3: Límite de Mano = 5. Búsqueda (2) en Mazo de Habilidades.
+• Nivel 3: Límite de Mano = 5.
 • Nivel 4: Gana la 2ª Carta de Especialidad. Permite usar 2 Efectos Expertos por ronda.
 • Nivel 5: Límite de Mano = 6. Búsqueda (2) en Mazo de Habilidades.
 • Nivel 6: Gana la 3ª Carta de Especialidad. Permite usar 3 Efectos Expertos por ronda.
