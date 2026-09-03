@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.3](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.0.2...v2.0.3) (2026-09-02)
+
+
+### Bug Fixes
+
+* actualización colores iconos bienvenida y menú ([61a5159](https://github.com/edujg81/H3_Oraculo_Erathia/commit/61a51594315561f69046c5acabf5a9ae58fb83c5))
+* cambios visuales en paneles de bienvenida ([86acaeb](https://github.com/edujg81/H3_Oraculo_Erathia/commit/86acaebb7211f849d44005b6098f9de11f08f54d))
+
 ## [2.0.2](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.0.1...v2.0.2) (2026-08-17)
 
 
