@@ -531,6 +531,10 @@ RECLUTAMIENTO Y REFUERZO DE TROPAS:
 • Reclutar: Compra una unidad en su cara de "Unas pocas". Requiere la Morada del nivel correspondiente.
 • Reforzar: Paga el coste de refuerzo para voltear la unidad de "Unas pocas" a "Manada". Requiere la Ciudadela.
 
+CIUDADES CAPTURADAS:
+• El jugador que captura una ciudad ajena coloca su cubo de facción sobre ella, pero no puede usar sus edificios ni sus habilidades, incluida la acción de reclutar.
+• El jugador que ha perdido su ciudad conserva su ficha de ciudad y puede seguir usando sus edificios y habilidades, aunque ya no controla la ciudad a efectos de las condiciones de victoria.
+
 TABLA OFICIAL DE COMERCIO (PUESTO DE COMERCIO / TRADING POST):
 Al visitar un Puesto de Comercio se puede realizar una de las siguientes operaciones:
 • Vender 6 Oro -> Comprar 1 Objeto de Valor | Vender 2 Oro -> Comprar 1 Material.

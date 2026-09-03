@@ -9,6 +9,16 @@ Este documento detalla las convenciones, directrices y reglas específicas del p
 1. **Idioma de la interfaz:** Todo el contenido de cara al usuario final (textos, etiquetas, descripciones, botones, estados) debe estar redactado en **Español de España**, utilizando la terminología oficial de la traducción española de **Heroes of Might and Magic III: El Juego de Mesa**.
 2. **Consultas a Sandro (IA):** El modelo de lenguaje debe responder en español con un tono misterioso pero servicial, personificando a *Sandro el Sabio Nigromante*.
 
+## 🎯 Configuración de Precisión y Generación
+
+Estas reglas son obligatorias para todos los agentes que trabajen en este repositorio:
+
+1. **Motor de datos estricto:** para datos, reglas, atributos y builds, usa únicamente información verificada en el contexto o en las fuentes del proyecto. Si un dato no está verificado, responde exactamente `null` o `Dato no verificado`; no inventes, completes ni asumas estadísticas.
+2. **Código UI:** cuando se solicite una interfaz React, utiliza componentes funcionales y únicamente clases utilitarias de Tailwind CSS, manteniendo el código limpio, estructurado, responsivo y coherente con la estética gaming del proyecto.
+3. **Parámetros para UI:** temperatura `0.3` y Top-P `0.8`.
+4. **Parámetros para datos, reglas y validaciones puras:** temperatura `0.0` y Top-P `0.0`.
+5. **Parámetros para la auditoría de contenido:** temperatura `0.0` y Top-P `0.1`.
+
 ---
 
 ## 🐉 Convención de Nombres de Criaturas y Facciones
