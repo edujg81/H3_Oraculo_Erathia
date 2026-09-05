@@ -697,11 +697,12 @@ COMPONENTES DE LA EXPANSIÓN:
    - Cada héroe solo puede tener 1 carta de efecto permanente activa a la vez.
    - Permiten usar efectos básicos o avanzados (según el nivel del héroe), pero no se apilan entre sí.
 
-2. MÁQUINAS DE GUERRA (Balista, Catapulta, Carro de Municiones, Tienda de Primeros Auxilios):
+2. MÁQUINAS DE GUERRA (Balista, Catapulta, Carro de Municiones, Tienda de Primeros Auxilios, Cañón):
    - Se compran en la Fábrica de Máquinas de Guerra o en el Mercadillo (más caro, 3-4 de Oro extra, y consume toda la visita al mercadillo).
    - Comprar una máquina de guerra en un Mercadillo impide realizar otras acciones en esa visita y cuesta 3 de oro adicionales sobre su precio de fábrica.
    - El mazo de máquinas de guerra queda al alcance de todos los jugadores.
    - Cada carta indica su nombre, efecto, coste en la fábrica y coste en el mercadillo.
+   - El Cañón solo puede usarse por la facción Cala.
    
 3. NUEVAS LOCALIZACIONES DEL MAPA:
    - Fábrica de Máquinas de Guerra (Re-visitable): Permite comprar máquinas de guerra.
