@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.6](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.0.5...v2.0.6) (2026-09-05)
+
+
+### Bug Fixes
+
+* corrección en REGLAS y FAQS ([d083a34](https://github.com/edujg81/H3_Oraculo_Erathia/commit/d083a34c893f3fc7daa0984ae2d6359747e67692))
+
 ## [2.0.5](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.0.4...v2.0.5) (2026-09-05)
 
 
