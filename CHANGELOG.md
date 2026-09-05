@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.5](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.0.4...v2.0.5) (2026-09-05)
+
+
+### Bug Fixes
+
+* habilidades en subidas de nivel plata ([68f4f6f](https://github.com/edujg81/H3_Oraculo_Erathia/commit/68f4f6fe07bc037336f6a2f8de264601d4961975))
+
 ## [2.0.4](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.0.3...v2.0.4) (2026-09-03)
 
 
