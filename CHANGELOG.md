@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.4](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.0.3...v2.0.4) (2026-09-03)
+
+
+### Bug Fixes
+
+* auditoria y control de ciudades ([3625bd8](https://github.com/edujg81/H3_Oraculo_Erathia/commit/3625bd829de69c5810c47b975a30615dd868be4e))
+
 ## [2.0.3](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.0.2...v2.0.3) (2026-09-02)
 
 
