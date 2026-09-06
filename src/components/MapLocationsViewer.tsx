@@ -39,36 +39,7 @@ export default function MapLocationsViewer() {
 
     // Simulate 600ms roll effect
     setTimeout(() => {
-      if (locId === 'shipwreck_survivor') {
-        // Treasure Die simulation
-        const outcomes = [
-          '¡Resultado Éxito! 💎 Encuentras un Artefacto Menor de los restos y lo añades a tu inventario.',
-          '¡Resultado Éxito! 💎 Encuentras un Artefacto Menor de los restos y lo añades a tu inventario.',
-          '¡Resultado Fallo! 🪙 No quedan artefactos intactos, pero el marinero agradecido te recompensa con +5 de Oro.',
-          '¡Resultado Fallo! 🪙 No quedan artefactos intactos, pero el marinero agradecido te recompensa con +5 de Oro.'
-        ];
-        const roll = Math.floor(Math.random() * outcomes.length);
-        setTestRollResult(outcomes[roll]);
-      } else if (locId === 'whirlpool') {
-        // Combat Die simulation
-        const rollValue = Math.floor(Math.random() * 3) - 1; // -1, 0, or +1
-        if (rollValue === -1) {
-          setTestRollResult('¡Resultado -1! 💀 El remolino succiona la criatura aliada de nivel más bajo de tu ejército. ¡Naufragio devastador!');
-        } else {
-          setTestRollResult(`¡Resultado ${rollValue >= 0 ? '+' : ''}${rollValue}! ⛵ Navegación exitosa. El remolino te teletransporta de forma segura a otro vórtice.`);
-        }
-      } else if (locId === 'witch_hut') {
-        const skills = [
-          'Habilidad: Logística (Logistics) - Movilidad extra',
-          'Habilidad: Liderazgo (Leadership) - Moral positiva',
-          'Habilidad: Sabiduría (Wisdom) - Permite aprender hechizos de nivel superior',
-          'Habilidad: Tiro con Arco (Archery) - Potencia ataques a distancia',
-          'Habilidad: Hechicería (Sorcery) - Potencia el daño de hechizos',
-          'Habilidad: Ofensiva (Offense) - Daño cuerpo a cuerpo incrementado'
-        ];
-        const randomSkill = skills[Math.floor(Math.random() * skills.length)];
-        setTestRollResult(`🔮 La Bruja te enseña: "${randomSkill}" tras abonar 5 de Oro.`);
-      } else if (locId === 'mystical_garden') {
+      if (locId === 'mystical_garden') {
         const reward = Math.random() > 0.5 ? '🪙 Eliges recibir 2 de Oro de inmediato.' : '🔮 Eliges recibir 1 Objeto de valor (Gema preciosa).';
         setTestRollResult(reward);
       } else {
@@ -299,7 +270,7 @@ export default function MapLocationsViewer() {
 
             {/* Simulated Action Drawer for Visitable Locations */}
             <div className="mt-4 pt-4 border-t border-slate-800/60">
-              {['shipwreck_survivor', 'whirlpool', 'witch_hut', 'mystical_garden'].includes(loc.id) ? (
+              {loc.id === 'mystical_garden' ? (
                 <div className="space-y-2">
                   <button 
                     onClick={() => handleTestRoll(loc.id)}
@@ -307,10 +278,7 @@ export default function MapLocationsViewer() {
                   >
                     <Dices className={`w-3.5 h-3.5 ${activeTestLocation === loc.id && !testRollResult ? 'animate-spin' : ''}`} />
                     <span>
-                      {loc.id === 'shipwreck_survivor' ? 'Simular Dado de Tesoro 🎲'
-                       : loc.id === 'whirlpool' ? 'Simular Daño de Remolino 🌪️'
-                       : loc.id === 'witch_hut' ? 'Aprender Habilidad Aleatoria 🧙‍♀️'
-                       : 'Girar Recursos del Jardín 🌿'}
+                      Girar Recursos del Jardín
                     </span>
                   </button>
 

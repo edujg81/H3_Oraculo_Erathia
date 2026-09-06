@@ -7,6 +7,7 @@ import { SPELLS_DATA } from './spellsData';
 import { LOCATIONS_DATA } from './locationsData';
 import { WAR_MACHINES } from './warMachinesData';
 import { VICTORY_CONDITIONS } from './victoryConditionsData';
+import { DAMAGE_MODIFIERS, DAMAGE_RESOLUTION_RULES, DAMAGE_TYPES } from './damageTypes';
 import { reglasCombinadas } from './reglasCombinadas';
 
 /**
@@ -347,6 +348,29 @@ function buildWarMachinesCatalogIndex(): string {
 }
 
 // ---------------------------------------------------------------------------
+// TIPOS DE DAÑO
+// ---------------------------------------------------------------------------
+
+function buildDamageRulesKB(): RuleSection[] {
+  const damageTypes = DAMAGE_TYPES.map((damageType) =>
+    `- ${damageType.name}: ${damageType.description} Defensa ignorada: ${damageType.ignoresDefense ? 'sí' : 'no'}. Dado de ataque: ${damageType.affectedByAttackModifiers ? 'aplica' : 'no aplica'}.${damageType.notes ? ` Notas: ${damageType.notes}` : ''}`
+  ).join('\n');
+  const modifiers = DAMAGE_MODIFIERS.map((modifier) =>
+    `- ${modifier.name}: ${modifier.description} Se aplica a: ${modifier.appliesTo.join(', ')}. Tipo de valor: ${modifier.valueType}.${modifier.notes ? ` Notas: ${modifier.notes}` : ''}`
+  ).join('\n');
+
+  const id = 'damage-rules';
+  registerAliases(id, ['tipos de daño', 'daño físico', 'daño de hechizo', 'daño elemental', 'daño directo', 'defensa']);
+
+  return [{
+    id,
+    title: 'Tipos de daño y modificadores',
+    content: `Tipos de daño:\n${damageTypes}\n\nModificadores:\n${modifiers}\n\nResolución normativa:\nFórmula base: ${DAMAGE_RESOLUTION_RULES.basicFormula}\nDaño mínimo: ${DAMAGE_RESOLUTION_RULES.minimumDamage}\nTipos que ignoran Defensa: ${DAMAGE_RESOLUTION_RULES.ignoresDefense.join(', ')}\nTipos que no usan el dado de ataque: ${DAMAGE_RESOLUTION_RULES.noAttackDie.join(', ')}\nPasos:\n${DAMAGE_RESOLUTION_RULES.steps.join('\n')}`,
+    category: 'combate',
+  }];
+}
+
+// ---------------------------------------------------------------------------
 // REGLAS COMBINADAS Y EXPANSIONES
 // ---------------------------------------------------------------------------
 
@@ -401,6 +425,7 @@ export const townsKB = buildTownsKB();
 export const spellsKB = buildSpellsKB();
 export const locationsKB = buildLocationsKB();
 export const warMachinesKB = buildWarMachinesKB();
+export const damageRulesKB = buildDamageRulesKB();
 export const victoryConditionsKB = buildVictoryConditionsKB();
 export const reglasCombinadasKB = buildReglasCombinadasKB();
 
@@ -413,6 +438,7 @@ export const extraEntitySections: RuleSection[] = [
   ...spellsKB,
   ...locationsKB,
   ...warMachinesKB,
+  ...damageRulesKB,
   ...victoryConditionsKB,
   ...reglasCombinadasKB,
 ];
@@ -442,6 +468,9 @@ ${buildLocationsCatalogIndex()}
 
 === ÍNDICE DE MÁQUINAS DE GUERRA ===
 ${buildWarMachinesCatalogIndex()}
+
+=== ÍNDICE DE TIPOS DE DAÑO ===
+${DAMAGE_TYPES.map(damageType => `- ${damageType.name}`).join(', ')}
 
 === ÍNDICE DE CONDICIONES DE VICTORIA POR MODO ===
 ${VICTORY_CONDITIONS.map(vc => `- ${vc.mode}: ${vc.condition}`).join('\n')}

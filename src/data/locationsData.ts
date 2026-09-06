@@ -66,7 +66,7 @@ export const LOCATIONS_DATA: MapLocation[] = [
   },
   {
     id: 'tree_of_knowledge',
-    name: 'Árbol de la  Sabiduría',
+    name: 'Árbol de la Sabiduría',
     type: 'Visitable',
     zones: ['Superficie', 'Subterráneo'],
     effect: 'Puedes pagar 3 Objetos de valor o 10 Oros para ganar 2 niveles de Experiencia.',
@@ -150,7 +150,7 @@ export const LOCATIONS_DATA: MapLocation[] = [
     name: 'La Caja de Pandora',
     type: 'Visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Tira un número específico de dados de Recursos o Tesoro y selecciona uno para resolver su efecto.\nSe puede sustituir su efecto por una carta de Caja de Pandora.',
+    effect: 'Tira 2 dados de Tesoro o 2 dados de Recursos y elige un resultado para resolverlo.\nTambién puedes sustituir el efecto por una carta del mazo de la Caja de Pandora.',
     rulesNotes: 'Si el Héroe es derrotado o decide retirarse, la caja permanece cerrada en la casilla para futuros intentos.',
     iconType: 'shrine'
   },
@@ -159,7 +159,7 @@ export const LOCATIONS_DATA: MapLocation[] = [
     name: 'Manantial Mágico',
     type: 'Visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Puedes mirar las 3 cartas superiores de tu pila de descarte y añadir una de ellas a tu mano. Devuelve el resto de cartas a la parte superior de la pila de descarte en cualquier orden.',
+    effect: 'Puedes mirar las 3 cartas superiores de tu pila de descarte y devolver una de ellas a tu mano. Devuelve el resto de cartas a la parte superior de la pila de descarte en cualquier orden.',
     rulesNotes: 'Se puede activar una vez por semana de escenario (ronda de juego). Coloca un marcador temporal.',
     iconType: 'shrine'
   },
@@ -242,7 +242,7 @@ export const LOCATIONS_DATA: MapLocation[] = [
     name: 'Mercadillo',
     type: 'Re-visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Permite al héroe que lo visite intercambiar recursos, retirar una carta o comprar una máquina de guerra.',
+    effect: 'Elige una opción: intercambiar recursos, retirar una carta y ganar 1 Oro o comprar una máquina de guerra o vender un pergamino de hechizos.',
     rulesNotes: 'Ideal para limpiar el mazo de combate eliminando cartas de fuerza/magia inútiles o equilibrar el stock de metales y gemas.',
     iconType: 'market'
   },
@@ -305,7 +305,7 @@ export const LOCATIONS_DATA: MapLocation[] = [
     name: 'Mercado Negro',
     type: 'Re-visitable',
     zones: ['Subterráneo'],
-    effect: 'Mira las 4 primeras cartas de la pila de descarte de artefactos.\nPuedes comprar una por:\n  - 5 Oros si es un artefacto menor.\n  - 7 Oros si es un artefacto mayor.\n  - 10 oros si es un artefacto reliquiea.',
+    effect: 'Mira las 4 primeras cartas de la pila de descarte de artefactos.\nPuedes comprar una por:\n  - 5 Oros si es un artefacto menor.\n  - 7 Oros si es un artefacto mayor.\n  - 10 Oros si es un artefacto reliquia.',
     rulesNotes: 'Ubicado casi siempre en zonas subterráneas lejanas o peligrosas de Erathia.',
     iconType: 'market'
   },
@@ -435,8 +435,8 @@ export const LOCATIONS_DATA: MapLocation[] = [
     name: 'Remolino (Whirlpool)',
     type: 'Obstáculo / Paso',
     zones: ['Agua'],
-    effect: 'Provoca el fin de movimiento inmediato del Héroe. Obliga a lanzar un Dado de Combate: si el resultado es "-1", pierdes tu criatura aliada de nivel más bajo en el naufragio.',
-    rulesNotes: 'Actúan como túneles de teletransporte instantáneo conectados entre sí a lo largo del mapa marítimo.',
+    effect: 'Al entrar, lanza el dado de ataque para determinar a cuál de los otros torbellinos conectados te transporta. Si el resultado apunta al mismo torbellino, repite la tirada. Cada viaje por torbellino hace perder 1 unidad de tu ejército.',
+    rulesNotes: 'Conecta zonas de mar de losetas distintas. La ficha se coloca según el escenario y no sustituye una zona bloqueada, otra ficha ni un lugar necesario para una condición de victoria.',
     iconType: 'whirlpool'
   },
   {
@@ -489,7 +489,7 @@ export const LOCATIONS_DATA: MapLocation[] = [
     name: 'Pecio',
     type: 'Visitable',
     zones: ['Agua'],
-    effect: 'Gana 2 Materiales de consntrucción.',
+    effect: 'Gana 2 Materiales de construcción.',
     rulesNotes: 'Se retira del mapa de aventura permanentemente tras su recogida. No genera penalizaciones ni requiere batallas.',
     iconType: 'resource'
   },
@@ -512,24 +512,6 @@ export const LOCATIONS_DATA: MapLocation[] = [
     effect: 'Al entrar en este lugar, por cada vivienda que tengas, roba del mazo de unidades neutrales correspondiente hasta que encuentres una carta de <<Elementales>>. Puedes reclutar una de estas unidades si pagas su coste de reclutamiento. Vuelve a barajar el resto de las cartas en sus mazos.',
     rulesNotes: 'Expansión Conflux. Ofrece versatilidad para reponer bajas tácticas directamente en la vanguardia de exploración.',
     iconType: 'portal'
-  },
-  {
-    id: 'elemental_rifts',
-    name: 'Rifts Elementales (Rifts de Aire, Agua, Fuego, Tierra)',
-    type: 'Visitable',
-    zones: ['Superficie', 'Subterráneo'],
-    effect: 'Santuarios dimensionales. El Héroe gasta 1 Acción para superar una prueba de Hechicería de dificultad III. El éxito concede inmunidades elementales permanentes o un Pergamino de Hechizo.',
-    rulesNotes: 'Cruzar el Rift de Fuego concede además +2 PM inmediatos de bonificación si eres de facción Conflux o Inferno, además de duplicar el daño de hechizos de fuego lanzados desde allí.',
-    iconType: 'rift'
-  },
-  {
-    id: 'conflux_altar',
-    name: 'Altar del Conflujo (Conflux Altar)',
-    type: 'Re-visitable',
-    zones: ['Superficie', 'Subterráneo'],
-    effect: 'Permite sacrificar cartas de Hechizo o Artefactos menores obsoletos de tu mano para transformarlos inmediatamente en Puntos de Experiencia (Exp) o recursos de Objetos de Valor.',
-    rulesNotes: 'Esencial para reciclar el equipo mágico obsoleto y acelerar el desarrollo del Héroe.',
-    iconType: 'altar'
   },
   {
     id: 'grail',
