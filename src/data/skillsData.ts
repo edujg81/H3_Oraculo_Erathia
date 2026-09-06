@@ -42,14 +42,14 @@ export const ALL_BOARD_GAME_SKILLS: BoardGameSkill[] = [
   },
   {
     name: 'Magia básica del aire',
-    normal: 'Permanente: En lugar de buscar en el mazo de hechizos, encuentra el primer Hechizo de magia de aire que haya en él y llévate el Hechizo a la mano.\nA continuación, vuelve a bajarar el mazo.',
+    normal: 'Permanente: En lugar de buscar en el mazo de hechizos, encuentra el primer Hechizo de magia de aire que haya en él y llévate el Hechizo a la mano.\nA continuación, vuelve a barajar el mazo.',
     expert: 'Instantáneo: +3 Poder para un Hechizo de magia de aire.',
     category: 'Magia' as const,
     description: 'Conocimientos rudimentarios que facilitan la obtención y potenciación de hechizos de aire.'
   },
   {
     name: 'Magia básica de la tierra',
-    normal: 'Permanente: En lugar de buscar en el mazo de hechizos, encuentra el primer Hechizo de magia de tierra que haya en él y llévate el Hechizo a la mano.\nA continuación, vuelve a bajarar el mazo.',
+    normal: 'Permanente: En lugar de buscar en el mazo de hechizos, encuentra el primer Hechizo de magia de tierra que haya en él y llévate el Hechizo a la mano.\nA continuación, vuelve a barajar el mazo.',
     expert: 'Instantáneo: +3 Potencia para un Hechizo de magia de tierra.',
     category: 'Magia' as const,
     description: 'Conocimientos rudimentarios que facilitan la obtención y potenciación de hechizos de tierra.'
@@ -63,7 +63,7 @@ export const ALL_BOARD_GAME_SKILLS: BoardGameSkill[] = [
   },
   {
     name: 'Magia básica del agua',
-    normal: 'Permanente: En lugar de buscar en el mazo de hechizos, encuentra el primer Hechizo de magia de agua que haya en él y llévate el Hechizo a la mano.\nA continuación, vuelve a bajarar el mazo.',
+    normal: 'Permanente: En lugar de buscar en el mazo de hechizos, encuentra el primer Hechizo de magia de agua que haya en él y llévate el Hechizo a la mano.\nA continuación, vuelve a barajar el mazo.',
     expert: 'Instantáneo: +3 Potencia para un Hechizo de magia de agua.',
     category: 'Magia' as const,
     description: 'Conocimientos rudimentarios que facilitan la obtención y potenciación de hechizos de agua.'
@@ -162,7 +162,7 @@ export const ALL_BOARD_GAME_SKILLS: BoardGameSkill[] = [
   {
     name: 'Suerte',
     normal: 'En Curso: Puedes volver a lanzar un dado de tesoro y de recurso una vez durante este turno.',
-    expert: 'En Curso: Puedes volver a lanzar tantos dados como quieras una vez durante este turno.',
+    expert: 'En Curso: Puedes volver a lanzar cualquier dado una vez durante este turno.',
     category: 'Combate' as const,
     description: 'Invoca la buena fortuna para mitigar la aleatoriedad de los dados en momentos clave.'
   },
@@ -232,7 +232,7 @@ export const ALL_BOARD_GAME_SKILLS: BoardGameSkill[] = [
   {
     name: 'Sabiduría',
     normal: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(3) en vez de buscar(2).',
-    expert: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. When compres hechizos de tu cofradía de magos, busca(4) en vez de buscar(2).',
+    expert: 'Instantáneo: Comprar hechizos en esta ciudad cuesta 2 Oros menos. Cuando compres hechizos de tu cofradía de magos, busca(4) en vez de buscar(2).',
     category: 'Desarrollo' as const,
     description: 'Abarata los gremios de magos y expande drásticamente las cartas de conjuros disponibles para tu héroe.'
   }
