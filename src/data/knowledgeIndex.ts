@@ -6,6 +6,7 @@ import { townsData, TownData } from './townsData';
 import { SPELLS_DATA } from './spellsData';
 import { LOCATIONS_DATA } from './locationsData';
 import { WAR_MACHINES } from './warMachinesData';
+import { VICTORY_CONDITIONS } from './victoryConditionsData';
 import { reglasCombinadas } from './reglasCombinadas';
 
 /**
@@ -349,6 +350,19 @@ function buildWarMachinesCatalogIndex(): string {
 // REGLAS COMBINADAS Y EXPANSIONES
 // ---------------------------------------------------------------------------
 
+function buildVictoryConditionsKB(): RuleSection[] {
+  return VICTORY_CONDITIONS.map((vc) => {
+    const id = `victory-${vc.mode.toLowerCase()}-${slugify(vc.condition)}`;
+    registerAliases(id, [vc.condition, vc.mode, 'condición de victoria', 'victoria']);
+    return {
+      id,
+      title: `Condición de Victoria: ${vc.condition} (${vc.mode})`,
+      content: `Modo: ${vc.mode}\nCondición: ${vc.condition}\nDetalles: ${vc.details}\nEvidencia normativa: ${vc.evidence}`,
+      category: 'modos' as const,
+    };
+  });
+}
+
 function buildReglasCombinadasKB(): RuleSection[] {
   reglasCombinadas.forEach((section) => {
     const titleClean = section.title.replace(/^[\d.]+\s*/, '').trim();
@@ -387,6 +401,7 @@ export const townsKB = buildTownsKB();
 export const spellsKB = buildSpellsKB();
 export const locationsKB = buildLocationsKB();
 export const warMachinesKB = buildWarMachinesKB();
+export const victoryConditionsKB = buildVictoryConditionsKB();
 export const reglasCombinadasKB = buildReglasCombinadasKB();
 
 /** Todas las secciones "extra" (no-reglas) disponibles, para búsqueda por palabra clave. */
@@ -398,6 +413,7 @@ export const extraEntitySections: RuleSection[] = [
   ...spellsKB,
   ...locationsKB,
   ...warMachinesKB,
+  ...victoryConditionsKB,
   ...reglasCombinadasKB,
 ];
 
@@ -426,6 +442,9 @@ ${buildLocationsCatalogIndex()}
 
 === ÍNDICE DE MÁQUINAS DE GUERRA ===
 ${buildWarMachinesCatalogIndex()}
+
+=== ÍNDICE DE CONDICIONES DE VICTORIA POR MODO ===
+${VICTORY_CONDITIONS.map(vc => `- ${vc.mode}: ${vc.condition}`).join('\n')}
 
 === COMPENDIO DE REGLAS COMBINADAS Y EXPANSIONES ===
 ${buildReglasCombinadasCatalogIndex()}`;

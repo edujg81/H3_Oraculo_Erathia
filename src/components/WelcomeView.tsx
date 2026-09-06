@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { BookOpen, Sparkles, Users, Swords, Wand2, Building2, Hammer, Dices, HelpCircle, Map as MapIcon, MapPin, FileText } from 'lucide-react';
+import { BookOpen, Sparkles, Users, Swords, Wand2, Building2, Hammer, Dices, HelpCircle, Map as MapIcon, MapPin, FileText, Gem } from 'lucide-react';
 import { version } from '../../package.json';
 import { ALL_BOARD_GAME_SKILLS } from '../data/skillsData';
 import { townsData } from '../data/townsData';
+import { ARTIFACTS_DATA } from '../data/artifactsData';
 import oracleLogo from '../assets/images/h3oraculo_logo.png';
 import type { TabId } from '../types.ts';
 
@@ -67,6 +68,13 @@ const WelcomeView: React.FC<WelcomeViewProps> = ({ onNavigateTab }) => {
       title: 'Grimorio de Hechizos',
       description: 'Catálogo completo de hechizos por escuela de magia (Aire, Tierra, Fuego, Agua) y clase. Niveles de potenciación, uso y efectos. Filtros por escuela y clase de magia (Básica o Avanzada).',
       tabId: 'spells'
+    },
+    {
+      icon: Gem,
+      color: 'text-violet-300',
+      title: 'Grimorio de Artefactos',
+      description: `Catálogo completo de los ${ARTIFACTS_DATA.length} artefactos documentados: Menores, Mayores y Reliquias. Consulta sus efectos, duración, descarte y expansión de origen con búsqueda y filtros por rareza.`,
+      tabId: 'artifacts'
     },
     {
       icon: Hammer,

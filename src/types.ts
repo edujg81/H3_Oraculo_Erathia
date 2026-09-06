@@ -80,6 +80,7 @@ export const TABS = [
   "units",
   "skills",
   "spells",
+  "artifacts",
   "warmachines",
   "scenarios",
   "locations",
