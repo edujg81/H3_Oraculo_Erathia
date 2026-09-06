@@ -1,5 +1,12 @@
 # Changelog
 
+# [2.1.0](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.0.7...v2.1.0) (2026-09-06)
+
+
+### Features
+
+* Se añade sección de artefactos. Se corrigen discrepancias en reglas. ([1107c2b](https://github.com/edujg81/H3_Oraculo_Erathia/commit/1107c2bce284d3310b9776744770239c4bb09db9))
+
 ## [2.0.7](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.0.6...v2.0.7) (2026-09-06)
 
 
