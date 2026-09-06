@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.7](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.0.6...v2.0.7) (2026-09-06)
+
+
+### Bug Fixes
+
+* generación de artifactsData.ts y subida de documentación de referencia ([01c99ff](https://github.com/edujg81/H3_Oraculo_Erathia/commit/01c99ffe893d6ac4a500d104bf3299192377d255))
+
 ## [2.0.6](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.0.5...v2.0.6) (2026-09-05)
 
 
