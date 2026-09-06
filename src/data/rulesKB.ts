@@ -67,7 +67,7 @@ FICHAS Y MARCADORES ESPECIALES:
 • Fichas de Habilidad Potenciada: Permiten transformar una carta de habilidad normal recien obtenida en su versión Potenciada.
 • Fichas de Modificación en Combate: Fichas de Ataque (+1/+2 Ataque), Defensa (+1 Defensa opcional), Parálisis (salta activación), Corrosión (-1 Defensa hasta min 0), Debilidad (-1/-2 Ataque).
 • Obstáculos Tácticos: Arenas Movedizas (detiene movimiento/activación), Campo de Fuerza (bloquea unidades terrestres; voladoras lo cruzan), Minas Terrestres (2 de daño al entrar), Muro de Fuego (daño por paso), Fichas de Clonación (crea copia con 1 PS y 0 Defensa).
-• Fichas de Mapa: Monolitos, Remolinos, Puertas Subterráneas, Fichas del Banco de Criaturas.
+• Fichas de Mapa: Monolitos (expansión Conflujo), Remolinos (expansión Cala), Puertas Subterráneas, Fichas del Banco de Criaturas.
 
 TIPOS DE CARTAS DEL JUEGO:
 1. Cartas de Característica: Ataque, Defensa, Poder (potencia de hechizo) y Conocimiento.
@@ -198,7 +198,7 @@ HÉROE PRINCIPAL VS HÉROE SECUNDARIO:
   - Dispone de 2 Puntos de Movimiento (PM) independientes por turno.
   - NO posee tablero propio, NO gana experiencia ni nivel, NO puede jugar cartas del mazo en combate, pero combate con las mismas unidades de tu reserva.
   - Si es atacado por un héroe enemigo, puede optar por ser derrotado instantáneamente sin entablar combate para conservar las tropas.
-  - Máximo 1 Héroe Secundario simultáneo por jugador. Si muere, puede recontratarse.
+  - Máximo 1 Héroe Principal y 1 Héroe Secundario simultáneos por jugador. Si muere, puede recontratarse.
 
 ANATOMÍA DEL TABLERO DE HÉROE:
 1. Nombre y Clase: Identificación e iconografía.
@@ -576,7 +576,7 @@ MECÁNICAS DE NAVEGACIÓN Y BARCOS:
 • Astillero: Permite construir barcos.
 • Embarcar / Desembarcar: Entrar al agua desde tierra o desembarcar consume 1 PM completo.
 • Miniatura de Barco: Al navegar, sustituye la miniatura de héroe por un barco con un cubo de facción en su interior.
-• Boyas (+1 PM marítimo) y Remolinos (teletransporte marino; tirada de -1 destruye 1 unidad).
+• Boyas (+1 PM marítimo) y Remolinos (expansión Cala: teletransporte marino entre torbellinos; al viajar, se pierde 1 unidad).
 
 CATÁLOGO UNIFICADO DE UBICACIONES DEL MAPA:
 • Minas: Producen +1 Oro, Material o Valioso por ronda. La primera vez que se señaliza otorga su valor de producción inmediato.
