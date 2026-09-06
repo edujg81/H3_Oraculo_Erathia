@@ -204,7 +204,7 @@ export const LOCATIONS_DATA: MapLocation[] = [
     name: 'Santuario del Encantamiento Mágico',
     type: 'Visitable',
     zones: ['Superficie', 'Subterráneo'],
-    effect: 'Puedes pagar 3 Oros para busca (2) en el mazo de hechizos.',
+    effect: 'Puedes pagar 3 Oros para buscar (2) en el mazo de hechizos.',
     rulesNotes: 'A diferencia de la Choza de la Bruja, el hechizo es visible para todos desde el principio del escenario.',
     iconType: 'shrine'
   },

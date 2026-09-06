@@ -59,14 +59,14 @@ describe("Server health and API", () => {
     const locationsById = Object.fromEntries(LOCATIONS_DATA.map((location) => [location.id, location]));
 
     expect(locationsById.magic_spring.type).toBe("Visitable");
-    expect(locationsById.shrine_magic_incantation.effect).toContain("Busca (2)");
-    expect(locationsById.shrine_magic_incantation.effect).not.toContain("pagar 3");
+    expect(locationsById.shrine_magic_incantation.effect).toContain("buscar (2)");
+    expect(locationsById.shrine_magic_incantation.effect).toContain("pagar 3");
     expect(locationsById.pandoras_box.effect).toContain("2 dados de Tesoro");
     expect(locationsById.pandoras_box.effect).toContain("2 dados de Recursos");
     expect(locationsById.trading_post.effect).toContain("Elige una opción");
     expect(locationsById.black_market.effect).toContain("artefacto reliquia");
     expect(locationsById.flotsam.effect).toBe("Gana 2 Materiales de construcción.");
-    expect(locationsById.whirlpool.effect).toContain("pierde 1 unidad");
+    expect(locationsById.whirlpool.effect).toContain("hace perder 1 unidad");
     expect(LOCATIONS_DATA.some((location) => location.id === "elemental_rifts")).toBe(false);
     expect(LOCATIONS_DATA.some((location) => location.id === "conflux_altar")).toBe(false);
   });
