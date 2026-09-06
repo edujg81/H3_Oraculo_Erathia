@@ -102,7 +102,7 @@ export const LOCATIONS_DATA: MapLocation[] = [
   },
   {
     id: 'fairy_ring',
-    name: 'Anillo Feérico',
+    name: 'Anillo del Hada',
     type: 'Visitable',
     zones: ['Superficie'],
     effect: 'Cuando entres en esta ubicación, retira 1 carta de tu mano y luego busca (2) en el mazo de esa carta. De esta manera no puedes eliminar cartas de estadísticas, habilidades iniciales o especialidades.',

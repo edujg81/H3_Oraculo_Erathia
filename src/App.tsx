@@ -15,6 +15,7 @@ const UnitsBrowser = lazy(() => import('./components/UnitsBrowser'));
 const ScenariosDatabase = lazy(() => import('./components/ScenariosDatabase'));
 const HeroesViewer = lazy(() => import('./components/HeroesViewer'));
 const SkillsBrowser = lazy(() => import('./components/SkillsBrowser'));
+const ArtifactsViewer = lazy(() => import('./components/ArtifactsViewer'));
 const WarMachinesViewer = lazy(() => import('./components/WarMachinesViewer'));
 const MapLocationsViewer = lazy(() => import('./components/MapLocationsViewer'));
 const SpellCardsViewer = lazy(() => import('./components/SpellCardsViewer'));
@@ -26,7 +27,7 @@ import { RuleSection, Player, getPlayerLimit } from './types';
 import { 
   Sparkles, Library, Timer, Printer, Award, BookOpen, 
   HelpCircle, Compass, Gamepad2, Hourglass, Swords, Users, Dices, Coins,
-  Hammer, Map, Wand2, Building2,
+  Hammer, Map, Wand2, Building2, Gem,
   House,
   MapPin,
   FileText
@@ -279,6 +280,7 @@ export default function App() {
     { id: 'units', label: 'Unidades', icon: Swords, color: 'text-red-500' },
     { id: 'skills', label: 'Habilidades', icon: Sparkles, color: 'text-indigo-400' },
     { id: 'spells', label: 'Hechizos', icon: Wand2, color: 'text-violet-400' },
+    { id: 'artifacts', label: 'Artefactos', icon: Gem, color: 'text-violet-300' },
     { id: 'warmachines', label: 'Máquinas de Guerra', icon: Hammer, color: 'text-stone-500' },
     { id: 'scenarios', label: 'Escenarios', icon: Map, color: 'text-rose-300' },
     { id: 'locations', label: 'Lugares del Mapa', icon: MapPin, color: 'text-cyan-400' },
@@ -384,6 +386,7 @@ export default function App() {
                 <RulesBrowser 
                   onSelectSection={handleSelectSectionFromRules} 
                   onNavigateTab={(tab) => setActiveTab(tab as any)}
+                  prepMode={prepMode}
                 />
               </div>
             )}
@@ -424,6 +427,12 @@ export default function App() {
             {activeTab === 'spells' && (
               <div className="space-y-4">
                 <SpellCardsViewer />
+              </div>
+            )}
+
+            {activeTab === 'artifacts' && (
+              <div className="space-y-4">
+                <ArtifactsViewer />
               </div>
             )}
 

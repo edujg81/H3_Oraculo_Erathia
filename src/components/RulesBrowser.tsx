@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
-//import { rulesKB } from '../data/rulesKB';
-import { reglasCombinadas } from '../data/reglasCombinadas';
+import { rulesKB } from '../data/rulesKB';
+//import { reglasCombinadas } from '../data/reglasCombinadas';
 import { RuleSection } from '../types';
 import { 
   Search, BookOpen, Layers, Swords, MessageSquareCode, Package, Compass, 
@@ -436,13 +436,20 @@ function parseFormattedText(text: string, onNavigateTab?: (tab: string) => void)
 
 export default function RulesBrowser({ 
   onSelectSection,
-  onNavigateTab
+  onNavigateTab,
+  prepMode
 }: { 
   onSelectSection?: (section: RuleSection) => void;
   onNavigateTab?: (tab: string) => void;
+  prepMode?: 'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo' | 'campodebatalla';
 }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+
+  // Etiqueta del modo de combate activo
+  const boardModeLabel = prepMode === 'campodebatalla'
+    ? 'Campo de Batalla (hexagonal, con obstáculos)'
+    : 'Tablero 4×5 estándar (cuadrícula 20 casillas)';
 
   const categories = [
     { id: 'all', label: 'Todas', icon: Compass },
@@ -467,7 +474,7 @@ export default function RulesBrowser({
   ];
 
   const filteredSections = useMemo(() => {
-    return reglasCombinadas.filter(section => {
+    return rulesKB.filter(section => {
       // 1. Matches Category
       const matchesCategory = selectedCategory === 'all' || section.category === selectedCategory;
       
@@ -476,9 +483,23 @@ export default function RulesBrowser({
         section.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         section.content.toLowerCase().includes(searchQuery.toLowerCase());
 
-      return matchesCategory && matchesSearch;
+      // 3. Board mode filter: separa reglas 4×5 vs Campo de Batalla
+      // EVIDENCIA: HoMM-Battlefield-Rulebook_ESP.md (líneas 14-15: "Modo Aventura" y "Modo Escaramuzas" con tablero hexagonal)
+      // EVIDENCIA: reglasCombinadas.ts (líneas 398-401: 4×5 estándar vs Campo de Batalla con 2 fichas de obstáculo)
+      // El modo campodebatalla muestra todas las secciones; otros modos ocultan las de Campo de Batalla
+      const isBattlefieldSection = 
+        section.id.includes('battlefield') || 
+        section.id.includes('campo_batalla') ||
+        section.title.toLowerCase().includes('campo de batalla') ||
+        section.title.toLowerCase().includes('escaramuza') ||
+        section.title.toLowerCase().includes('modo aventura');
+      
+      // Si es modo Campo de Batalla (o no hay filtro), mostrar todo; si no, ocultar secciones de Battlefield
+      const matchesBoardMode = !prepMode || prepMode === 'campodebatalla' || !isBattlefieldSection;
+
+      return matchesCategory && matchesSearch && matchesBoardMode;
     });
-  }, [selectedCategory, searchQuery]);
+  }, [selectedCategory, searchQuery, prepMode]);
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 p-1">
@@ -514,6 +535,19 @@ export default function RulesBrowser({
 
       {/* Rules Content area */}
       <div className="lg:col-span-3 space-y-4">
+        {/* Board mode indicator (separates 4×5 vs Campo de Batalla) */}
+        {prepMode && (
+          <div className={`px-4 py-2.5 rounded-xl border text-xs sm:text-sm font-mono flex items-center gap-2 ${
+            prepMode === 'campodebatalla'
+              ? 'bg-indigo-950/40 border-indigo-700/50 text-indigo-200'
+              : 'bg-amber-950/30 border-amber-800/40 text-amber-200'
+          }`}>
+            <Swords className="w-4 h-4 shrink-0" />
+            <span className="font-semibold tracking-wide">Modo de combate activo:</span>
+            <span className="font-bold">{boardModeLabel}</span>
+          </div>
+        )}
+
         {/* Search Header */}
         <div className="space-y-3">
           <div className="relative">
