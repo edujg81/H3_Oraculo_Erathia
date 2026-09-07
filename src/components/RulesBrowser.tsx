@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { rulesKB } from '../data/rulesKB';
+import { GLOSARIO_ATRIBUTOS } from '../data/glosarioAtributos';
 //import { reglasCombinadas } from '../data/reglasCombinadas';
 import { RuleSection } from '../types';
 import { 
