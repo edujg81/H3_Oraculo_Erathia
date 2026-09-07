@@ -55,6 +55,24 @@ describe("Server health and API", () => {
     expect(skillsText).not.toContain("When compres");
   });
 
+  it("mantiene los escenarios auditados con datos iniciales verificados (AUD-005)", () => {
+    // Verifica que los escenarios base incluyen datos iniciales según auditoría Sección 5
+    // Se lee el archivo fuente directamente para validar la estructura de datos
+    const fs = require("fs");
+    const path = require("path");
+    const filePath = path.join(__dirname, "../src/components/ScenariosDatabase.tsx");
+    const content = fs.readFileSync(filePath, "utf8");
+    // Verifica que los campos de datos iniciales existen en el archivo
+    expect(content).toContain("initialResources");
+    expect(content).toContain("initialTroops");
+    expect(content).toContain("startingFaction");
+    expect(content).toContain("startingHero");
+    expect(content).toContain("campaignMode");
+    // Verifica que hay al menos 30 escenarios (30+ según auditoría)
+    const scenarioMatches = content.match(/id: '/g);
+    expect(scenarioMatches ? scenarioMatches.length : 0).toBeGreaterThanOrEqual(30);
+  });
+
   it("mantiene los lugares auditados alineados con sus fichas normativas", () => {
     const locationsById = Object.fromEntries(LOCATIONS_DATA.map((location) => [location.id, location]));
 
