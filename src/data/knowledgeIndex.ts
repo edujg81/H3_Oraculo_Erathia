@@ -8,6 +8,7 @@ import { LOCATIONS_DATA } from './locationsData';
 import { WAR_MACHINES } from './warMachinesData';
 import { VICTORY_CONDITIONS } from './victoryConditionsData';
 import { DAMAGE_MODIFIERS, DAMAGE_RESOLUTION_RULES, DAMAGE_TYPES } from './damageTypes';
+import { GLOSARIO_ATRIBUTOS } from './glosarioAtributos';
 import { reglasCombinadas } from './reglasCombinadas';
 
 /**
