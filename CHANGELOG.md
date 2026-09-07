@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.2](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.1...v2.1.2) (2026-09-07)
+
+
+### Bug Fixes
+
+* Se corrige progresión de nivel de héroe. ([87a3f0e](https://github.com/edujg81/H3_Oraculo_Erathia/commit/87a3f0e5b8006af4aaf16bc148149d7c1f6026f6))
+
 ## [2.1.1](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.0...v2.1.1) (2026-09-06)
 
 
