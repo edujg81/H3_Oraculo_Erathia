@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.1](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.0...v2.1.1) (2026-09-06)
+
+
+### Bug Fixes
+
+* se contrastan las habilidades y lugares del mapa ([a4797f6](https://github.com/edujg81/H3_Oraculo_Erathia/commit/a4797f6c7801b206c277feb78df67ce631e44fa6))
+* se soluciona error en descripción de localizaciones ([4d0dc9f](https://github.com/edujg81/H3_Oraculo_Erathia/commit/4d0dc9f0ccdd32ef917aaedb0a4b3aedfa4b9d67))
+
 # [2.1.0](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.0.7...v2.1.0) (2026-09-06)
 
 
