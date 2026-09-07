@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.3](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.2...v2.1.3) (2026-09-07)
+
+
+### Bug Fixes
+
+* creación de glosario de términos. ([b2a346f](https://github.com/edujg81/H3_Oraculo_Erathia/commit/b2a346f2fb698bab41570af5bbd9910d65abb41f))
+
 ## [2.1.2](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.1...v2.1.2) (2026-09-07)
 
 
