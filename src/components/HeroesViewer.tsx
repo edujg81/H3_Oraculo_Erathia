@@ -857,7 +857,7 @@ export default function HeroesViewer() {
                           </span>
                         </div>
                         <div className="space-y-2.5">
-                          {[2, 5, 7].map((lvl) => {
+                          {[2, 3, 5, 7].map((lvl) => {
                             if (heroLevel < lvl) return null;
                             return (
                               <div key={lvl} className="flex items-start gap-3 bg-slate-950/40 p-2.5 rounded-xl border border-slate-900/60 animate-fadeIn">
