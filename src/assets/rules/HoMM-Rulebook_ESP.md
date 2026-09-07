@@ -268,7 +268,7 @@ Reclutables en ciudad o asentamiento controlado usando la ficha de población y 
 | **Nivel 6** | 6 | 3 | Añade la 3.ª carta de especialidad. |
 | **Nivel 7** | 7 | 3 | Busca (2) en el mazo de habilidades. |
 
-*Nota:* Los niveles se marcan con cubos negros en la carta de héroe. Niveles dorados (IV, VI) otorgan especialidad; niveles plateados (II, III, V, VII) otorgan Búsqueda (2) de habilidad.
+*Nota:* Los niveles se marcan con cubos negros en la carta de héroe. Niveles dorados (I, IV, VI) otorgan especialidad; niveles plateados (II, III, V, VII) otorgan Búsqueda (2) de habilidad. En los niveles II, IV y VI se obtiene una ficha de "Corona" para activar el uso experto de una carta de habilidad o estadística: a nivel 2 un uso experto por ronda de juego, a nivel 4 dos usos expertos (dos coronas) y a nivel 6 tres usos expertos (tres coronas) por ronda de juego.
 
 ---
 

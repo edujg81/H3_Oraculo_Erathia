@@ -210,10 +210,11 @@ ANATOMÍA DEL TABLERO DE HÉROE:
 7. Marcador de Nivel (Level Tracker): Pista de avance de Nivel I a VII. Cada nivel requiere 2 Puntos de Experiencia (Exp).
 
 TABLA DE EFECTOS POR SUBIDA DE NIVEL:
-• Niveles Plata (II, V y VII):
+• Niveles Plata (II, III, V y VII):
   - Realiza una acción de Busca (2) en el Mazo de Habilidades Secundarias y añade la carta elegida a tu mano.
 • Niveles Oro (I, IV y VI):
   - Añade la carta de Especialidad correspondiente a tu mano.
+• Coronas (Usos Expertos): En los niveles II, IV y VI se obtiene una ficha de "Corona" para activar el uso experto de una carta de habilidad o estadística: a nivel 2 un uso experto por ronda de juego, a nivel 4 dos usos expertos (dos coronas) y a nivel 6 tres usos expertos (tres coronas) por ronda de juego.
 • Incremento de Límite de Mano (Hand Limit):
   - Nivel I - II: Límite de 4 cartas.
    - Nivel III - IV: Límite de 5 cartas.

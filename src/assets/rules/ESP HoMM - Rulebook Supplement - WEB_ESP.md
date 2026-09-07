@@ -492,6 +492,9 @@ Se pueden realizar en cualquier momento de tu turno o del turno del rival (excep
 * **Efectos de Experto:** Indicados por el símbolo de casco; gastas un uso del cubo negro de experto de tu carta de héroe para activar el efecto mejorado de una carta.
 
 
+* **Coronas (Usos Expertos):** En los niveles II, IV y VI se obtiene una ficha de "Corona" para activar el uso experto de una carta de habilidad o estadística. A nivel 2 tendrías un uso experto por ronda de juego, a nivel 4 dos usos expertos (dos coronas) y a nivel 6 tres usos expertos (tres coronas) por ronda de juego.
+
+
 
 ### F) Efectos de las cartas
 

@@ -199,6 +199,7 @@ El Tablero de Héroe incluye: Nombre, Clase, Tipo (Might/Magic), Color de Facci�
 * **Niveles IV y VI:** Gana la carta de Especialidad correspondiente a tu mano.
 * **Límite de Mano:** Aumenta progresivamente ($4 \rightarrow 5 \rightarrow 6 \rightarrow 7$).
 * **Efectos Experto (*Expert Effects*):** Permiten jugar cartas adicionales por su efecto experto por ronda (máximo 3 en el nivel VI).
+* **Coronas (Usos Expertos):** En los niveles II, IV y VI se obtiene una ficha de "Corona" para activar el uso experto de una carta de habilidad o estadística. A nivel 2 tendrías un uso experto por ronda de juego, a nivel 4 dos usos expertos (dos coronas) y a nivel 6 tres usos expertos (tres coronas) por ronda de juego.
 
 
 
