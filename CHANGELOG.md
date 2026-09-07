@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.4](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.3...v2.1.4) (2026-09-07)
+
+
+### Bug Fixes
+
+* auditoría de contenido finalizada ([bfe0b6a](https://github.com/edujg81/H3_Oraculo_Erathia/commit/bfe0b6a01664ac88138919e500649d6925e60461))
+
 ## [2.1.3](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.2...v2.1.3) (2026-09-07)
 
 
