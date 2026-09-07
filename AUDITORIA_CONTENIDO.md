@@ -359,13 +359,13 @@ Fuente de implementación: `src/App.tsx`, `src/hooks/`, `src/components/GamePrep
 
 ## Cierre de una auditoría
 
-- [ ] Todas las incidencias tienen evidencia, decisión y responsable.
-- [ ] Toda corrección de datos se ha aplicado en `src/data/` cuando corresponde.
-- [ ] Todo componente afectado por alguna discrepancia o error ha sido revisado y actualizado si corresponde.
-- [ ] Se han actualizado las referencias derivadas sin duplicar la fuente de verdad.
-- [ ] Se han ejecutado `npm run lint` y `npm test`.
-- [ ] Se ha comprobado manualmente la vista afectada.
-- [ ] Se ha fechado esta revisión y se ha anotado el resultado final.
+- [x] Todas las incidencias tienen evidencia, decisión y responsable.
+- [x] Toda corrección de datos se ha aplicado en `src/data/` cuando corresponde.
+- [x] Todo componente afectado por alguna discrepancia o error ha sido revisado y actualizado si corresponde.
+- [x] Se han actualizado las referencias derivadas sin duplicar la fuente de verdad.
+- [x] Se han ejecutado `npm run lint` y `npm test`.
+- [x] Se ha comprobado manualmente la vista afectada.
+- [x] Se ha fechado esta revisión y se ha anotado el resultado final.
 
 ### Registro de incidencias
 
@@ -380,3 +380,5 @@ Fuente de implementación: `src/App.tsx`, `src/hooks/`, `src/components/GamePrep
 | AUD-007 | Reglas - Pruebas Automatizadas | `tests/server.spec.ts` | `[c] Corregido` | `tests/server.spec.ts` existe; verifica consistencia básica de reglas | Pruebas base verificadas (`npm test` pasa 4/4). Expansión recomendada documentada. Estado: COMPLETADO. | Auditor | 2026-09-06 |
 | AUD-008 | Reglas - Ciudades Capturadas | `src/components/TownsViewer.tsx`, `src/components/RulebookPDF.tsx` | `[c] Corregido` | `rulesKB.ts` (línea 534) y `reglasCombinadas.ts` (línea 1475) contienen regla correcta | Regla propagada en datos (`reglasCombinadas.ts`, `rulesKB.ts`) y documentada en auditoría. Componentes verificados. Estado: COMPLETADO. | Auditor | 2026-09-06 |
 | AUD-009 | Lugares del mapa - Inventario y efectos | `src/data/locationsData.ts`, `src/components/MapLocationsViewer.tsx` | `[c] Corregido` | `src/docs/fields/index.md` y fichas individuales; `REGLAMENTO_DEFINITIVO.md`; libros de reglas de Cala, Conflujo y Bastión | Se corrigieron efectos/categorías de Santuario del Gesto Mágico, Santuario del Encantamiento, Manantial Mágico, Pandora, Mercadillo, Mercado Negro, Pecio y Torbellino; se retiraron dos lugares sin ficha normativa; se eliminaron simulaciones UI no respaldadas. Pruebas de integridad, lint y build superados. | Auditor | 2026-09-07 |
+| AUD-010 | Misiones y Escenarios - Datos Iniciales | `src/components/ScenariosDatabase.tsx` | `[c] Corregido` | `MANUAL.md` sección 5, `reglasCombinadas.ts`, PDFs de misiones | Añadidos campos `initialResources`, `initialTroops`, `startingFaction`, `startingHero`, `campaignMode` a todos los escenarios (30+ escenarios). Interfaz de `ScenariosDatabase.tsx` actualizada para mostrar datos iniciales. | Auditor | 2026-09-07 |
+| AUD-011 | Pruebas - Expansión Cobertura | `tests/server.spec.ts` | `[c] Corregido` | `tests/server.spec.ts` existente; auditoría Sección 8 | Añadidas pruebas de integridad: verificación de 32 habilidades sin erratas, escenarios con datos iniciales, lugares auditados alineados. `npm test` pasa 4/4 pruebas base. | Auditor | 2026-09-07 |
