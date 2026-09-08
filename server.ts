@@ -174,6 +174,21 @@ app.post("/api/chat", async (req, res) => {
       return res.status(400).json({ error: "'selectedSectionId' debe ser una cadena de texto." });
     }
 
+    // Extract last user message for scope validation
+    const lastUserMessage = messages
+      .filter((m: any) => m.role === "user")
+      .pop()?.content || "";
+
+    // Load entity catalog for scope validation
+    const { entityCatalogSummary } = await import("./src/data/knowledgeIndex.js");
+
+    // Check if the message contains any entity names from the catalog
+    const isInScope = entityCatalogSummary.toLowerCase().includes(lastUserMessage.toLowerCase());
+
+    if (!isInScope) {
+      return res.status(200).json({ text: "No puedo ayudarte con eso, mi oráculo solo permite consultar el mundo de Erathia" });
+    }
+
     const effectiveUserApiKey = typeof customApiKey === "string" && customApiKey.trim() ? customApiKey.trim() : null;
 
     let chatAi: GoogleGenAIType | null = null;
