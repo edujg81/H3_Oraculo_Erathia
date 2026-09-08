@@ -5,7 +5,7 @@ Este archivo recoge pasos y consejos para poner en marcha el proyecto localmente
 ## Requisitos
 
 - nvm para Windows (nvm-windows) o Volta (opcional pero recomendado)
-- **Node.js 20.x o superior** (recomendado: 20.20+ para desarrollo local). Las dependencias actuales requieren Node >=20.
+- **Node.js 22.x o superior** (recomendado: 22.20+ para desarrollo local). Las dependencias actuales requieren Node >=22.
 - npm (v>=9) o usa el `npm.cmd` incluido con la instalación de Node de nvm
 
 ## Usando nvm (Windows)
@@ -14,12 +14,12 @@ Este archivo recoge pasos y consejos para poner en marcha el proyecto localmente
 2. Instala y usa la versión recomendada de Node:
 
 ```powershell
-nvm install 20.20.2
-nvm use 20.20.2
+nvm install 22.20.1
+nvm use 22.20.1
 node -v
 ```
 
-3. Asegúrate de usar el `npm` correspondiente a esa versión de Node. En nvm para Windows, el binario queda en `C:\Users\<usuario>\AppData\Roaming\nvm\v20.20.2\npm.cmd`.
+3. Asegúrate de usar el `npm` correspondiente a esa versión de Node. En nvm para Windows, el binario queda en `C:\Users\<usuario>\AppData\Roaming\nvm\v22.20.1\npm.cmd`.
 
 ## Instalación de dependencias
 
@@ -55,6 +55,14 @@ npm run dev
 
 Esto lanza `tsx server.ts` (backend) y Vite en `middlewareMode` para servir la UI.
 
+## Build y pruebas
+
+```bash
+npm run build   # Compila frontend y genera dist/server.js (ESM)
+npm run lint    # Valida TypeScript sin generar artefactos (tsc --noEmit)
+npm test        # Ejecuta tests con Vitest (7 tests pasando actualmente)
+```
+
 ## Contenedores y CI
 
-La CI (GitHub Actions en `.github/workflows/ci.yml`) usa **Node 20** por defecto para garantizar compatibilidad con todas las dependencias del proyecto.
+La CI (GitHub Actions en `.github/workflows/ci.yml`) usa **Node 22** por defecto para garantizar compatibilidad con todas las dependencias del proyecto. El flujo de CI ejecuta `npm ci`, `npm run lint`, `npm test` y `npm run build` en cada `push` a `main` y en cada `pull_request`.

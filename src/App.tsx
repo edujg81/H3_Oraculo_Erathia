@@ -12,7 +12,7 @@ const ChatAdvisor = lazy(() => import('./components/ChatAdvisor'));
 const RulebookPDF = lazy(() => import('./components/RulebookPDF'));
 const GameTimer = lazy(() => import('./components/GameTimer'));
 const UnitsBrowser = lazy(() => import('./components/UnitsBrowser'));
-const ScenariosDatabase = lazy(() => import('./components/ScenariosDatabase'));
+const ScenariosViewer = lazy(() => import('./components/ScenariosViewer'));
 const HeroesViewer = lazy(() => import('./components/HeroesViewer'));
 const SkillsBrowser = lazy(() => import('./components/SkillsBrowser'));
 const ArtifactsViewer = lazy(() => import('./components/ArtifactsViewer'));
@@ -393,7 +393,7 @@ export default function App() {
 
             {activeTab === 'scenarios' && (
               <div className="space-y-4">
-                <ScenariosDatabase />
+                <ScenariosViewer />
               </div>
             )}
 
