@@ -283,6 +283,7 @@ export const SCENARIOS: Scenario[] = [
     expansion: 'Expansión Fortaleza (Fortress)',
     initialResources: { gold: 13, materials: 4, valuables: 1 },
     initialIncome: { gold: 10, materials: 0, valuables: 0 },
+    initialTroops: 'Ejército preconfigurado según guía',
     startingFaction: 'Fortaleza',
     startingHero: 'Adrienne',
     campaignMode: true
@@ -300,6 +301,7 @@ export const SCENARIOS: Scenario[] = [
     expansion: 'Expansión Fortaleza (Fortress)',
     initialResources: { gold: 15, materials: 3, valuables: 1 },
     initialIncome: { gold: 10, materials: 2, valuables: 0 },
+    initialTroops: 'Ejército preconfigurado según guía',
     startingFaction: 'Fortaleza',
     startingHero: 'Héroe según facción',
     campaignMode: false

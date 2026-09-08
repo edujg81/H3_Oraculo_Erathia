@@ -60,7 +60,7 @@ describe("Server health and API", () => {
     // Se lee el archivo fuente directamente para validar la estructura de datos
     const fs = require("fs");
     const path = require("path");
-    const filePath = path.join(__dirname, "../src/components/ScenariosViewer.tsx");
+    const filePath = path.join(__dirname, "../src/data/scenariosData.ts");
     const content = fs.readFileSync(filePath, "utf8");
     // Verifica que los campos de datos iniciales existen en el archivo
     expect(content).toContain("initialResources");
