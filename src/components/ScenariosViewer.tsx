@@ -74,7 +74,11 @@ export default function ScenariosViewer() {
           </div>
         </div>
       </motion.section>
-      <div className="lg:col-span-3 space-y-6">
+      
+      <div className="grid grid-cols-2 gap-5 xl:grid-cols-2">
+        {activeSubTab === 'scenarios' ? (
+          <>
+          <div className="lg:col-span-3 space-y-6">
         {/* Filters Bar */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 bg-slate-950/40 p-3 rounded-2xl border border-slate-850/60">
           {/* Search */}
@@ -126,9 +130,6 @@ export default function ScenariosViewer() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-5 xl:grid-cols-2">
-        {activeSubTab === 'scenarios' ? (
-          <>
             <section className="min-w-0 space-y-4">
             
             {/* Left: Compact Scenario List */}
@@ -227,114 +228,117 @@ export default function ScenariosViewer() {
           </>
         ) : (
           /* Treasure Die & Chest Rules Guide */
-          <div className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
-              
-              {/* Left Rules Column (col-span-7) */}
-              <div className="md:col-span-7 space-y-4">
-                <h3 className="text-sm font-serif font-bold text-amber-300 border-b border-slate-800 pb-2">
-                  📘 Funcionamiento Oficial del Dado de Tesoro (Treasure Die)
-                </h3>
+          <>
+            <section className="min-w-0 space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
                 
-                <div className="space-y-3 text-xs text-slate-300 leading-relaxed">
-                  <p>
-                    El <strong>Dado de Tesoro (d6)</strong> es un elemento clave de aleatoriedad táctica y progresión en *Heroes III*. Se lanza principalmente al interactuar con <strong>Cofres de Tesoro (Treasure Chests)</strong> abandonados, al saquear asentamientos neutrales de alto rango, o al derrotar criaturas de nivel de dificultad Oro/Azul en el mapa.
-                  </p>
-
-                  <div className="bg-slate-950/60 p-4 rounded-xl border border-slate-850 space-y-2">
-                    <h4 className="text-sm font-mono font-bold text-slate-200 uppercase tracking-wide flex items-center gap-1.5">
-                      <Star className="w-3.5 h-3.5 text-amber-500" />
-                      Elección Fundamental de un Cofre:
-                    </h4>
-                    <p className="text-[12px]">
-                      Cuando un Héroe detiene su movimiento sobre una loseta que contiene el símbolo de un cofre, el jugador activo debe realizar una elección inmediata e irreversible:
+                {/* Left Rules Column (col-span-7) */}
+                <div className="md:col-span-12 space-y-4">
+                  <h3 className="text-sm font-serif font-bold text-amber-300 border-b border-slate-800 pb-2">
+                    📘 Funcionamiento Oficial del Dado de Tesoro (Treasure Die)
+                  </h3>
+                  
+                  <div className="space-y-3 text-xs text-slate-300 leading-relaxed">
+                    <p>
+                      El <strong>Dado de Tesoro (d6)</strong> es un elemento clave de aleatoriedad táctica y progresión en *Heroes III*. Se lanza principalmente al interactuar con <strong>Cofres de Tesoro (Treasure Chests)</strong> abandonados, al saquear asentamientos neutrales de alto rango, o al derrotar criaturas de nivel de dificultad Oro/Azul en el mapa.
                     </p>
-                    <ul className="list-disc pl-5 text-[12px] space-y-1 text-slate-400 mt-1">
-                      <li>
-                        <strong className="text-emerald-400">Garantizar Experiencia:</strong> Gana automáticamente <strong>1 punto de Experiencia (XP)</strong> y descarta el cofre.
-                      </li>
-                      <li>
-                        <strong className="text-amber-400">Arriesgar con el Dado:</strong> Lanza el <strong>Dado de Tesoro</strong> para determinar una recompensa (como ganar medio nivel de EXP, buscar cartas de Artefacto o lanzar dados de recursos).
-                      </li>
-                    </ul>
-                  </div>
 
-                  <div className="bg-amber-950/10 border border-amber-900/30 p-3 rounded-xl flex gap-3 text-amber-200">
-                    <AlertCircle className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
-                    <p className="text-[12px]">
-                      <strong>Consejo Táctico de Sandro:</strong> ¡La experiencia extra y la búsqueda selectiva de Artefactos te otorgarán una ventaja colosal! No subestimes una tirada que te permita elegir de entre dos dados de recursos para levantar tus estructuras clave.
-                    </p>
+                    <div className="bg-slate-950/60 p-4 rounded-xl border border-slate-850 space-y-2">
+                      <h4 className="text-sm font-mono font-bold text-slate-200 uppercase tracking-wide flex items-center gap-1.5">
+                        <Star className="w-3.5 h-3.5 text-amber-500" />
+                        Elección Fundamental de un Cofre:
+                      </h4>
+                      <p className="text-[12px]">
+                        Cuando un Héroe detiene su movimiento sobre una loseta que contiene el símbolo de un cofre, el jugador activo debe realizar una elección inmediata e irreversible:
+                      </p>
+                      <ul className="list-disc pl-5 text-[12px] space-y-1 text-slate-400 mt-1">
+                        <li>
+                          <strong className="text-emerald-400">Garantizar Experiencia:</strong> Gana automáticamente <strong>1 punto de Experiencia (XP)</strong> y descarta el cofre.
+                        </li>
+                        <li>
+                          <strong className="text-amber-400">Arriesgar con el Dado:</strong> Lanza el <strong>Dado de Tesoro</strong> para determinar una recompensa (como ganar medio nivel de EXP, buscar cartas de Artefacto o lanzar dados de recursos).
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-amber-950/10 border border-amber-900/30 p-3 rounded-xl flex gap-3 text-amber-200">
+                      <AlertCircle className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
+                      <p className="text-[12px]">
+                        <strong>Consejo Táctico de Sandro:</strong> ¡La experiencia extra y la búsqueda selectiva de Artefactos te otorgarán una ventaja colosal! No subestimes una tirada que te permita elegir de entre dos dados de recursos para levantar tus estructuras clave.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-
+            </section>  
               {/* Right Rewards Table Column (col-span-5) */}
-              <div className="md:col-span-5 bg-slate-950/60 p-4 rounded-xl border border-slate-850 space-y-4">
-                <h3 className="text-sm font-mono font-bold text-slate-400 uppercase tracking-widest border-b border-slate-900 pb-2">
-                  🎲 Recompensas de las 6 Caras
-                </h3>
+              <aside className="lg:col-span-1 h-fit rounded-2xl border border-slate-800 bg-slate-900/60 p-5 lg:sticky lg:top-4 shadow-xl">
+                <div className="md:col-span-5 bg-slate-950/60 p-4 rounded-xl border border-slate-850 space-y-4">
+                  <h3 className="text-sm font-mono font-bold text-slate-400 uppercase tracking-widest border-b border-slate-900 pb-2">
+                    🎲 Recompensas de las 6 Caras
+                  </h3>
 
-                <div className="space-y-2 font-mono">
-                  {/* Face 1 */}
-                  <div className="p-2 bg-slate-900/60 rounded-lg border border-amber-900/10 flex items-center justify-between text-xs">
-                    <span className="font-bold text-amber-500 flex items-center gap-2">
-                      <span className="w-5 h-5 rounded bg-slate-950 border border-slate-850 flex items-center justify-center text-[10px]">1</span>
-                      ✨ +0.5 Nivel EXP
-                    </span>
-                    <span className="text-slate-300 text-[10px] text-right">Héroe principal gana medio nivel</span>
-                  </div>
+                  <div className="space-y-2 font-mono">
+                    {/* Face 1 */}
+                    <div className="p-2 bg-slate-900/60 rounded-lg border border-amber-900/10 flex items-center justify-between text-xs">
+                      <span className="font-bold text-amber-500 flex items-center gap-2">
+                        <span className="w-5 h-5 rounded bg-slate-950 border border-slate-850 flex items-center justify-center text-[10px]">1</span>
+                        ✨ +0.5 Nivel EXP
+                      </span>
+                      <span className="text-slate-300 text-[10px] text-right">Héroe principal gana medio nivel</span>
+                    </div>
 
-                  {/* Face 2 */}
-                  <div className="p-2 bg-slate-900/60 rounded-lg border border-amber-900/10 flex items-center justify-between text-xs">
-                    <span className="font-bold text-amber-500 flex items-center gap-2">
-                      <span className="w-5 h-5 rounded bg-slate-950 border border-slate-850 flex items-center justify-center text-[10px]">2</span>
-                      ✨ +0.5 Nivel EXP
-                    </span>
-                    <span className="text-slate-300 text-[10px] text-right">Héroe principal gana medio nivel</span>
-                  </div>
+                    {/* Face 2 */}
+                    <div className="p-2 bg-slate-900/60 rounded-lg border border-amber-900/10 flex items-center justify-between text-xs">
+                      <span className="font-bold text-amber-500 flex items-center gap-2">
+                        <span className="w-5 h-5 rounded bg-slate-950 border border-slate-850 flex items-center justify-center text-[10px]">2</span>
+                        ✨ +0.5 Nivel EXP
+                      </span>
+                      <span className="text-slate-300 text-[10px] text-right">Héroe principal gana medio nivel</span>
+                    </div>
 
-                  {/* Face 3 */}
-                  <div className="p-2 bg-slate-900/60 rounded-lg border border-purple-900/20 flex items-center justify-between text-xs">
-                    <span className="font-bold text-purple-400 flex items-center gap-2">
-                      <span className="w-5 h-5 rounded bg-slate-950 border border-slate-850 flex items-center justify-center text-[10px]">3</span>
-                      🔍 Buscar(2) Art.
-                    </span>
-                    <span className="text-slate-300 text-[10px] text-right">Buscar en mazo de Artefactos</span>
-                  </div>
+                    {/* Face 3 */}
+                    <div className="p-2 bg-slate-900/60 rounded-lg border border-purple-900/20 flex items-center justify-between text-xs">
+                      <span className="font-bold text-purple-400 flex items-center gap-2">
+                        <span className="w-5 h-5 rounded bg-slate-950 border border-slate-850 flex items-center justify-center text-[10px]">3</span>
+                        🔍 Buscar(2) Art.
+                      </span>
+                      <span className="text-slate-300 text-[10px] text-right">Buscar en mazo de Artefactos</span>
+                    </div>
 
-                  {/* Face 4 */}
-                  <div className="p-2 bg-slate-900/60 rounded-lg border border-purple-900/20 flex items-center justify-between text-xs">
-                    <span className="font-bold text-purple-400 flex items-center gap-2">
-                      <span className="w-5 h-5 rounded bg-slate-950 border border-slate-850 flex items-center justify-center text-[10px]">4</span>
-                      🔍 Buscar(2) Art.
-                    </span>
-                    <span className="text-slate-300 text-[10px] text-right">Buscar en mazo de Artefactos</span>
-                  </div>
+                    {/* Face 4 */}
+                    <div className="p-2 bg-slate-900/60 rounded-lg border border-purple-900/20 flex items-center justify-between text-xs">
+                      <span className="font-bold text-purple-400 flex items-center gap-2">
+                        <span className="w-5 h-5 rounded bg-slate-950 border border-slate-850 flex items-center justify-center text-[10px]">4</span>
+                        🔍 Buscar(2) Art.
+                      </span>
+                      <span className="text-slate-300 text-[10px] text-right">Buscar en mazo de Artefactos</span>
+                    </div>
 
-                  {/* Face 5 */}
-                  <div className="p-2 bg-slate-900/60 rounded-lg border border-blue-900/20 flex items-center justify-between text-xs">
-                    <span className="font-bold text-blue-400 flex items-center gap-2">
-                      <span className="w-5 h-5 rounded bg-slate-950 border border-slate-850 flex items-center justify-center text-[10px]">5</span>
-                      🎲 1 Dado Recursos
-                    </span>
-                    <span className="text-slate-300 text-[10px] text-right">Lanzar 1 dado de recursos</span>
-                  </div>
+                    {/* Face 5 */}
+                    <div className="p-2 bg-slate-900/60 rounded-lg border border-blue-900/20 flex items-center justify-between text-xs">
+                      <span className="font-bold text-blue-400 flex items-center gap-2">
+                        <span className="w-5 h-5 rounded bg-slate-950 border border-slate-850 flex items-center justify-center text-[10px]">5</span>
+                        🎲 1 Dado Recursos
+                      </span>
+                      <span className="text-slate-300 text-[10px] text-right">Lanzar 1 dado de recursos</span>
+                    </div>
 
-                  {/* Face 6 */}
-                  <div className="p-2 bg-slate-900/60 rounded-lg border border-emerald-900/20 flex items-center justify-between text-xs">
-                    <span className="font-bold text-emerald-400 flex items-center gap-2">
-                      <span className="w-5 h-5 rounded bg-slate-950 border border-slate-850 flex items-center justify-center text-[10px]">6</span>
-                      🎲 2 Dados Rec.
-                    </span>
-                    <span className="text-slate-300 text-[10px] text-right">Lanzar 2 y elegir uno</span>
+                    {/* Face 6 */}
+                    <div className="p-2 bg-slate-900/60 rounded-lg border border-emerald-900/20 flex items-center justify-between text-xs">
+                      <span className="font-bold text-emerald-400 flex items-center gap-2">
+                        <span className="w-5 h-5 rounded bg-slate-950 border border-slate-850 flex items-center justify-center text-[10px]">6</span>
+                        🎲 2 Dados Rec.
+                      </span>
+                      <span className="text-slate-300 text-[10px] text-right">Lanzar 2 y elegir uno</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-            </div>
+              </aside>
+          
 
             {/* Quick rules summary */}
-            <div className="bg-slate-950/60 rounded-2xl p-4 border border-slate-850 flex gap-4 text-xs text-slate-300 leading-relaxed">
+            <div className="md:col-span-2 bg-slate-950/60 rounded-2xl p-4 border border-slate-850 flex gap-4 text-xs text-slate-300 leading-relaxed">
               <ShieldCheck className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
               <div className="space-y-1">
                 <strong className="text-slate-200">Resolución en Combates de Campaña:</strong>
@@ -343,7 +347,7 @@ export default function ScenariosViewer() {
                 </p>
               </div>
             </div>
-          </div>
+          </>
         )}
 
       </div>
