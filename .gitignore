@@ -2,6 +2,9 @@ node_modules/
 build/
 dist/
 coverage/
+src/docs/
+src/assets/rules/Heroes3_Espanol_Rules_Rewrite_1_3.*
+src/assets/rules/Heroes3_Rules_Rewrite_2_0.*
 .DS_Store
 *.log
 .env*

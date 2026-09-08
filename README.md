@@ -114,7 +114,7 @@ Para proteger la cuota de la clave de Gemini en despliegues públicos, `server.t
 
 ### Requisitos Previos
 
-- **Node.js 20.x o superior** (recomendado: 20.20+). Las dependencias actuales (`@google/genai@2.4.0`, `@vitejs/plugin-react@5.0.4`) requieren Node >=20.
+- **Node.js 22.x o superior** (recomendado: 22.20+). Las dependencias actuales (`@google/genai@2.4.0`, `@vitejs/plugin-react@5.0.4`) requieren Node >=22.
 - Una clave API de Gemini válida (definida como variable de entorno).
 
 Para desarrollo local se recomienda usar `nvm` o `volta` para gestionar la versión de Node (ver `DEV_ENVIRONMENT.md` para instrucciones).  
@@ -136,11 +136,20 @@ Estos documentos están en la raíz del repositorio y te sirven como punto únic
 
 ## ✅ Calidad y pruebas
 
-Este proyecto ya incluye una base de calidad automatizada:
+Este proyecto incluye una base de calidad automatizada con 7 pruebas unitarias (Vitest + supertest) que cubren:
 
-- `npm run lint` — valida TypeScript sin generar artefactos.
+- Salud del endpoint `/health`
+- Datos de reglas en `/api/rules`
+- Validación de payload en `/api/chat`
+- Inventario de habilidades (32 habilidades sin erratas)
+- Escenarios auditados con datos iniciales verificados
+- Lugares del mapa alineados con sus fichas normativas
+
+Comandos:
+
+- `npm run lint` — valida TypeScript sin generar artefactos (`tsc --noEmit`).
 - `npm test` — ejecuta tests con Vitest.
-- `npm run build` — compila el frontend y genera el bundle de servidor en `dist/server.cjs`.
+- `npm run build` — compila el frontend y genera el bundle de servidor en `dist/server.js` (ESM).
 - GitHub Actions en `.github/workflows/ci.yml` ejecuta `npm ci`, `npm run lint`, `npm test` y `npm run build` en cada `push` a `main` y en cada `pull_request`.
 - El servidor exporta `app` para pruebas, expone `/health` y valida el payload de `/api/chat` antes de llamar a Gemini.
 
