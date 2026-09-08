@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.5](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.4...v2.1.5) (2026-09-08)
+
+
+### Bug Fixes
+
+* Actualización de ficheros MD, optimización de package.json y actualización de sección Escenarios. ([c27629f](https://github.com/edujg81/H3_Oraculo_Erathia/commit/c27629f9d312c781027ef62eabdc721633e23059))
+* corrección descuadre de paneles en vista "Reglas del Dado de Tesoro" ([d369daf](https://github.com/edujg81/H3_Oraculo_Erathia/commit/d369dafbd39337a2166addb8a9ab2d9b5a17b112))
+
 ## [2.1.4](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.3...v2.1.4) (2026-09-07)
 
 
