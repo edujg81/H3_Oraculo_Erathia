@@ -1,0 +1,15 @@
+/* Responsive base: fluid typography and spacing for 7" mobile to 27" 1440p */
+html { scroll-behavior: smooth; }
+
+@media (min-width: 640px) { /* sm */
+  .responsive-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) { /* lg */
+  .responsive-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 1280px) { /* xl */
+  .responsive-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (min-width: 1536px) { /* 2xl / 27" 1440p */
+  .responsive-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}

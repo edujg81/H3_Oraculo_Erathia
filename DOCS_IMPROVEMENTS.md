@@ -11,9 +11,9 @@ Resumen de mejoras que añadirían claridad y facilitarían contribuciones futur
 6. Notas de seguridad — `SECURITY.md` con recomendaciones para rotación de claves, manejo de secrets y límites de petición.
 
 📋 **Pendientes / Mejoras opcionales:**
-- Añadir un badge o nota en `README.md` con la versión recomendada de Node (22.20+).
-- Instrucciones para configurar pre-commit hooks (husky) y reglas de formateo.
-- PR template para estandarizar descripciones de pull requests.
-- Documentar el endpoint `/api/chat` en `README.md` (ya cubierto en `API.md`).
+- ✅ Badge de Node 22.20+ añadido en `README.md`.
+- ✅ Instrucciones para pre-commit hooks (`PRECOMMIT_HOOK.md`) creado.
+- ✅ PR template creado (`.github/PULL_REQUEST_TEMPLATE.md`).
+- ✅ Endpoint `/api/chat` documentado en `README.md` (sección "API Endpoints").
 
 Puedes indicarme cuál de estas propuestas quieres que implemente primero y la añadiré como archivo MD con contenido detallado.

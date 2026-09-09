@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.1.6](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.5...v2.1.6) (2026-09-09)
+
+
+### Documentation
+
+* Añadido badge de Node.js 22.20+ en `README.md`.
+* Creado `PRECOMMIT_HOOK.md` con configuración de husky + lint-staged.
+* Añadido `PULL_REQUEST_TEMPLATE.md` para estandarizar PRs.
+* Documentado endpoint `/api/chat` en `README.md` (sección "API Endpoints").
+* Creado `DOCUMENTATION_INDEX.md` con índice de todos los documentos.
+* Actualizado `.gitignore` con `bun.lock`, `package-lock.json`.
+* Actualizado `CHANGELOG.md` con entrada para la versión 2.1.6.
+
 ## [2.1.5](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.4...v2.1.5) (2026-09-08)
 
 

@@ -9,6 +9,7 @@ Archivos clave
 - `src/data/skillsData.ts` — 32 habilidades secundarias
 - `src/data/townsData.ts` — ciudades y facciones
 - `src/data/rulesKB.ts` — base combinada de reglas (enviada siempre a Sandro)
+- `src/data/scenariosData.ts` — escenarios de juego (46 escenarios con datos iniciales)
 - `src/data/knowledgeIndex.ts` — índice/catálogo que genera resúmenes y alias
 
 Buenas prácticas
@@ -38,4 +39,5 @@ export const units = [
 
 Testing manual
 - Abrir la vista `UnitsBrowser` y buscar el nombre exacto para validar la ficha.
+- Abrir la vista `ScenariosViewer` y filtrar por dificultad/modo para validar los escenarios.
 

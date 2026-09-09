@@ -2,6 +2,9 @@
 
 > **Asesor de partidas inteligente y base de conocimientos interactiva para "Heroes of Might and Magic III: El Juego de Mesa".**
 
+[![Node.js](https://img.shields.io/badge/node-22.20%2B-blue)](https://nodejs.org/)
+[![Vite](https://img.shields.io/badge/vite-6.x-000000)](https://vitejs.dev/)
+
 Este sistema es un asistente digital integral diseñado para enriquecer las partidas de tablero de **Heroes of Might and Magic III: Board Game**. Con una interfaz oscura optimizada ("Slate Dark") que evoca la estética clásica del juego, combina una base de reglas interactiva, utilidades de control en tiempo real (turnos, dados, rondas) y un oráculo impulsado por Inteligencia Artificial (**Sandro el Sabio**) para resolver cualquier disputa de reglas al instante.
 
 ---
@@ -18,7 +21,7 @@ La aplicación está organizada en un sistema modular interactivo y reactivo:
    * Base de datos categorizada con menús interactivos que contienen reglas oficiales de movimiento, exploración, combate táctico, asedio, magias y acciones de ciudad.
    * Permite enviar cualquier sección de reglas directamente a Sandro con un clic para recibir una explicación detallada o resolver un caso de uso particular.
 
-3. **Misiones (Scenarios Database)**
+3. **Misiones (ScenariosViewer)**
    * Selector interactivo de escenarios y campañas oficiales del juego de mesa con resúmenes de preparación, objetivos de victoria y losetas necesarias para el mapa.
 
 4. **Unidades (Calculadora de Reclutamiento y Fichas)**
@@ -87,6 +90,8 @@ Sandro (el chat de IA) no responde solo con lo que "sabe" el modelo: cada consul
 | `skillsData.ts` | Catálogo oficial de las 32 Habilidades Secundarias | `SkillsBrowser`, base de conocimiento |
 | `townsData.ts` | Edificios, costes y unidades reclutables por ciudad | `TownsViewer`, base de conocimiento |
 | `spellsData.ts` | Catálogo de hechizos | `SpellCardsViewer` |
+| `scenariosData.ts` | Escenarios y campañas oficiales (46 escenarios con datos iniciales) | `ScenariosViewer` |
+| `artifactsData.ts` | Catálogo de artefactos y su efectos | `ArtifactsViewer` |
 | `rulesKB.ts` | Reglamento completo estructurado en secciones | `RulesBrowser`, `/api/chat` |
 | `knowledgeIndex.ts` | Genera el catálogo + fichas indexadas para Sandro a partir de los anteriores | `server.ts` |
 
@@ -203,9 +208,50 @@ npm run start
 
 ---
 
+## � API Endpoints
+
+El servidor expone los siguientes endpoints:
+
+### `POST /api/chat`
+Punto de entrada para la asistencia de chat con Sandro.
+
+**Payload:**
+```json
+{
+  "messages": [
+    { "role": "user", "content": "¿Cómo funciona el asedio?" }
+  ],
+  "selectedSectionId": "optional-section-id",
+  "customApiKey": "optional-gemini-key"
+}
+```
+
+**Validaciones:**
+- `messages`: array de 1 a 40 elementos
+- Cada mensaje: `role` ("user"|"assistant") y `content` (máx. 4000 chars)
+- Límite de body: 100 KB
+- Rate limiting: 20 peticiones cada 10 minutos por IP
+
+**Respuestas:**
+- `200` — `{ "text": "Respuesta generada por Sandro..." }`
+- `400` — Payload inválido
+- `429` — Demasiadas solicitudes
+- `503` — Servicio de IA no disponible
+
+Ejemplo:
+```bash
+curl -X POST http://localhost:3000/api/chat \
+  -H "Content-Type: application/json" \
+  -d '{"messages":[{"role":"user","content":"¿Cómo funciona el asedio?"}]}'
+```
+
+> Para detalles completos, consulta [API.md](API.md).
+
+---
+
 ## 📜 Licencia y Atribución
 
-Este proyecto es una herramienta de apoyo creada por fans y para fans. No tiene fines comerciales y no está afiliada, autorizada ni asociada de ninguna manera con **Archon Studio** ni con **Ubisoft**, los creadores oficiales de *Heroes of Might and Magic III* y de su versión de juego de mesa. Todos los nombres de facciones, criaturas, héroes y mecánicas son propiedad intelectual de sus respectivos dueños.
+Este proyecto es una herramienta de apoyo creada por <a href="https://github.com/edujg81" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline">edujg81</a> para fans. No tiene fines comerciales y no está afiliada, autorizada ni asociada de ninguna manera con **Archon Studio** ni con **Ubisoft**, los creadores oficiales de *Heroes of Might and Magic III* y de su versión de juego de mesa. Todos los nombres de facciones, criaturas, héroes y mecánicas son propiedad intelectual de sus respectivos dueños.
 
 ---
 
