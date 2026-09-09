@@ -1,10 +1,10 @@
-# Despliegue en QNAP TS-251A
+# Despliegue en Nas QNAP (probado en modelo TS-251A)
 
 Esta guía explica cómo desplegar la aplicación en tu QNAP usando Docker y un servicio webhook que actualiza el código desde GitHub.
 
 ## Requisitos
 
-- QNAP TS-251A con Container Station instalado.
+- Nas QNAP con Container Station instalado.
 - Docker disponible y funcionando.
 - Acceso a la red a través de la IP del NAS.
 - Clave de GitHub webhooks configurada en el repositorio.
