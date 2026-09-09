@@ -3,6 +3,13 @@
 ## [2.1.6](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.5...v2.1.6) (2026-09-09)
 
 
+### Bug Fixes
+
+* bloqueo de consultas a Sandro ajenas al juego ([5dfa761](https://github.com/edujg81/H3_Oraculo_Erathia/commit/5dfa761a40f9f96618c40cd58f20a97e0a0288c2))
+
+## [2.1.6](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.5...v2.1.6) (2026-09-09)
+
+
 ### Documentation
 
 * Añadido badge de Node.js 22.20+ en `README.md`.
