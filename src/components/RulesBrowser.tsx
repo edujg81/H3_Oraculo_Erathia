@@ -454,24 +454,22 @@ export default function RulesBrowser({
 
   const categories = [
     { id: 'all', label: 'Todas', icon: Compass },
-    { id: 'general', label: 'Mecánicas', icon: BookOpen },
-    { id: 'componentes', label: 'Componentes', icon: Package },   
-    //{ id: 'cartas', label: 'Cartas', icon: Package },
-    { id: 'modos', label: 'Modos de Juego', icon: Compass },
-    { id: 'preparación', label: 'Preparación', icon: Layers },
-    { id: 'ciudad', label: 'Ciudad y Recursos', icon: Home },
-    { id: 'héroes', label: 'Héroes', icon: Star },
+    { id: 'general', label: 'General', icon: BookOpen },
+    { id: 'preparacion', label: 'Preparación', icon: Layers },
+    { id: 'modos', label: 'Modos', icon: Compass },
+    { id: 'ciudades', label: 'Ciudades', icon: Home },
+    { id: 'heroes', label: 'Héroes', icon: Star },
     { id: 'unidades', label: 'Unidades', icon: Swords },
-    { id: 'mapa', label: 'Exploración y Mapa', icon: Map },
-    //{ id: 'habilidades', label: 'Habilidades', icon: Award },
-    //{ id: 'magia', label: 'Hechizos y Magia', icon: Sparkles },
-    //{ id: 'hechizos', label: 'Hechizos', icon: Wand2 },
-    //{ id: 'lugares', label: 'Lugares del Mapa', icon: Building2 },
-    //{ id: 'artefactos', label: 'Artefactos', icon: Gem },
+    { id: 'recursos', label: 'Recursos', icon: Coins },
+    { id: 'mapa', label: 'Mapa', icon: Map },
+    { id: 'cartas', label: 'Cartas', icon: Package },
     { id: 'combate', label: 'Combate', icon: Swords },
-    { id: 'campaña', label: 'Campaña', icon: BookOpen },
-    { id: 'escenario', label: 'Escenarios', icon: Map },
-    { id: 'faq', label: 'FAQs / Dudas', icon: MessageSquareCode },
+    { id: 'escenarios', label: 'Escenarios', icon: Map },
+    { id: 'ia', label: 'IA', icon: Zap },
+    { id: 'comercio', label: 'Comercio', icon: Coins },
+    { id: 'variantes', label: 'Variantes', icon: Plus },
+    { id: 'glosario', label: 'Glosario', icon: HelpCircle },
+    { id: 'faq', label: 'FAQ / Glosario', icon: MessageSquareCode },
   ];
 
   const filteredSections = useMemo(() => {
@@ -589,7 +587,7 @@ export default function RulesBrowser({
                         <span>Ver 32 Habilidades ➔</span>
                       </button>
                     )}
-                    {onNavigateTab && (section.category === 'magia' || section.category === 'hechizos' || section.id === 'magic_system_and_spells_catalog') && (
+                    {onNavigateTab && (section.category === 'hechizos' || section.id === 'magic_system_and_spells_catalog') && (
                       <button
                         onClick={() => onNavigateTab('spells')}
                         className="px-2.5 py-1 bg-amber-600 hover:bg-amber-500 text-white rounded text-xs transition duration-200 cursor-pointer font-bold flex items-center gap-1 shadow-sm"

@@ -79,7 +79,7 @@ Trasfondo: ${hero.lore}${hero.quote ? `\nCita: "${hero.quote}"` : ''}`;
         id: `hero-${factionId}-${slugify(hero.name)}`,
         title: `Héroe: ${hero.name} (${factionName})`,
         content,
-        category: 'héroes',
+        category: 'heroes',
       });
       registerAliases(`hero-${factionId}-${slugify(hero.name)}`, [hero.name]);
     });
@@ -223,7 +223,7 @@ Unidades reclutables:
       id,
       title: `Ciudad: ${town.townName} (${town.factionName})`,
       content,
-      category: 'ciudad' as const,
+      category: 'ciudades' as const,
     };
   });
 }
@@ -260,7 +260,7 @@ Trasfondo: ${spell.flavorText}${spell.notes ? `\nNotas oficiales de reglas: ${sp
       id,
       title: `Hechizo: ${spell.name} (Escuela: ${spell.school}, Tipo: ${spell.type})`,
       content,
-      category: 'magia' as const,
+      category: 'hechizos' as const,
     };
   });
 }
@@ -298,7 +298,7 @@ Reglas y notas: ${loc.rulesNotes}`;
       id,
       title: `Lugar del mapa: ${loc.name} (${loc.type})`,
       content,
-      category: 'mapa' as const,
+      category: 'lugares' as const,
     };
   });
 }

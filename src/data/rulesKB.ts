@@ -25,68 +25,12 @@ El juego cuenta con un total de 10 facciones oficiales que abarcan el juego base
   },
 
   // =========================================================================
-  // 2. COMPONENTES, DADOS, FICHAS Y TIPOS DE CARTAS
-  // =========================================================================
-  {
-    id: "components_dice_tokens_cards",
-    title: "2. Componentes del Juego: Tableros, Losetas, Dados, Fichas y Tipos de Cartas",
-    category: "componentes",
-    content: `COMPONENTES FÍSICOS Y ELEMENTOS DE JUEGO:
-
-TABLEROS Y LOSETAS:
-• Losetas de Mapa Hexagonales: Clasificadas en Losetas de Superficie (Iniciales I, Lejanas II-III, Cercanas IV-V, Centrales VI-VII), Losetas Subterráneas, Losetas de Mar y Losetas Elementales.
-• Tablero de Ciudad (Town Board): Controla los edificios construidos, la producción de recursos y los contadores de acción urbana (Construcción, Población, Libro de Hechizos).
-• Tablero de Héroe (Hero Board): Muestra estadísticas base (Ataque, Defensa, Poder, Conocimiento), tipo (Fuerza/Magia), habilidad inicial, especialidades y el marcador de nivel (I a VII).
-• Tableros de Combate:
-  - Tablero Estándar (reja 4x5): 20 casillas distribuidas en 2 líneas traseras, 2 líneas delanteras y 1 fila central.
-  - Tablero de Combate Naval (Neopreno): Elimina las dos casillas centrales.
-  - Tablero de Campo de Batalla Hexagonal (Battlefield Board): Gran tablero de hexágonos para combate táctico avanzado y modos Aventura/Escaramuza.
-
-LOS TRES DADOS OFICIALES (D6):
-1. DADO DE RECURSOS (Resource Die):
-   • Cara 1: +1 Moneda de Oro
-   • Cara 2: +2 Monedas de Oro
-   • Cara 3: +1 Material de Construcción
-   • Cara 4: +2 Materiales de Construcción
-   • Cara 5: +1 Objeto de Valor
-   • Cara 6: Vacío / Fallo (Sin ganancia)
-2. DADO DE ATAQUE (Attack Die):
-   Se lanza en cada ataque o represalia en combate táctico:
-   • Caras con -1: Disminuye el daño final en 1 herida (mínimo 0).
-   • Caras con 0: Sin variación (aplica daño base).
-   • Caras con +1: Incrementa el daño final en +1 herida.
-3. DADO DE TESORO (Treasure Die):
-   • Caras 1 y 2: Medio Nivel de Experiencia (Gana 1 Exp).
-   • Caras 3 y 4: Búsqueda de Artefacto (Busca 2 en el mazo de Artefactos).
-   • Cara 5: Lanzar y resolver 1 Dado de Recursos.
-   • Cara 6: Lanzar 2 Dados de Recursos y elegir 1 resultado.
-
-FICHAS Y MARCADORES ESPECIALES:
-• Fichas de Tiempo (Time Tokens): Miden la duración de efectos continuos y rondas.
-• Fichas de Pila / Unidades Apiladas (Stack Tokens): Aumentan las estadísticas de tropas neutrales (+1 Ataque, +1 Defensa, +1 PS o +2 Iniciativa) y actúan como escudo contra el daño letal.
-• Fichas de Habilidad Potenciada: Permiten transformar una carta de habilidad normal recien obtenida en su versión Potenciada.
-• Fichas de Modificación en Combate: Fichas de Ataque (+1/+2 Ataque), Defensa (+1 Defensa opcional), Parálisis (salta activación), Corrosión (-1 Defensa hasta min 0), Debilidad (-1/-2 Ataque).
-• Obstáculos Tácticos: Arenas Movedizas (detiene movimiento/activación), Campo de Fuerza (bloquea unidades terrestres; voladoras lo cruzan), Minas Terrestres (2 de daño al entrar), Muro de Fuego (daño por paso), Fichas de Clonación (crea copia con 1 PS y 0 Defensa).
-• Fichas de Mapa: Monolitos (expansión Conflujo), Remolinos (expansión Cala), Puertas Subterráneas, Fichas del Banco de Criaturas.
-
-TIPOS DE CARTAS DEL JUEGO:
-1. Cartas de Característica: Ataque, Defensa, Poder (potencia de hechizo) y Conocimiento.
-2. Cartas de Habilidad Secundaria: Efecto Básico (gratuito) y Efecto Experto (gasta uso de Experto).
-3. Cartas de Especialidad de Héroe: Exclusivas de cada héroe (desbloqueadas en niveles I, IV y VI).
-4. Cartas de Hechizo y Pergaminos de Hechizo: Pertenecen a las 4 Escuelas (Aire, Fuego, Tierra, Agua) con efectos básico/potenciado.
-5. Cartas de Artefacto: Divididas en Menor (Azul), Mayor (Dorado), Reliquia (Púrpura) y Grial (Verde Esmeralda). Van directamente a la mano.
-6. Cartas Permanentes: Otorgan ventajas continuas en mesa (límite de 1 activa simultáneamente).
-7. Cartas de Máquina de Guerra: Ballesta, Catapulta, Cañón, Carro de Suministros, Tienda de Primeros Auxilios.
-8. Cartas de Caja de Pandora, Anuncio de Astrólogos, Eventos y Cartas de Ciudad.`
-  },
-
-  // =========================================================================
-  // 3. PREPARACIÓN DE LA PARTIDA Y DIFICULTAD
+  // 2. PREPARACIÓN DE LA PARTIDA Y DIFICULTAD
   // =========================================================================
   {
     id: "game_setup_and_difficulty",
     title: "3. Preparación de la Partida y Selección de Dificultad",
-    category: "preparación",
+    category: "preparacion",
     content: `PASOS OFICIALES DE PREPARACIÓN DE LA PARTIDA (SETUP):
 
 1. Seleccionar Escenario del Libro de Misiones.
@@ -140,6 +84,8 @@ NIVELES DE DIFICULTAD Y BONOS INICIALES:
     category: "general",
     content: `ESTRUCTURA DE LA RONDA Y FASES DE JUEGO:
 
+• Empate de Iniciativa: En caso de empate exacto de iniciativa entre una unidad del atacante y una del defensor, el **atacante activa primero** de forma alterna con el defensor. Esto aplica en el juego base (HoMM-Rulebook_ESP.md, §10.d) y en la expansión Campo de Batalla (HoMM-Battlefield-Rulebook_ESP.md, §4.a: el jugador con la ficha de iniciativa —el atacante inicial— actúa primero en empate; la ficha pasa al otro jugador tras resolver todas las unidades con esa iniciativa).
+
 El juego se desarrolla a lo largo de Rondas consecutivas. Cada ronda sigue un ciclo rígido:
 
 I. INICIO DE RONDA (A partir de la ronda 2):
@@ -176,7 +122,7 @@ IV. LAS TRES ACCIONES DEL JUGADOR DURANTE EL TURNO:
    • Ficha de Libro de Hechizos: Comprar hechizos en la Cofradía de Magos.
 3. ACCIONES DE MORAL:
    • Moral Positiva: Puedes gastar 1 Ficha de Moral Positiva en cualquier momento para: (a) Robar 1 carta, (b) Descartar N cartas y robar N cartas, o (c) Repetir la tirada de cualquier dado.
-   • Moral Negativa: Si pierdes moral teniendo Moral Positiva, pierdes la ficha. Si ganas Moral Negativa sin tener positiva, recibes la Ficha de Moral Negativa. Si acumulas una 2ª Ficha de Moral Negativa, debes descartar TODA tu mano de cartas al finalizar tu siguiente turno.
+   • Moral Negativa: Si pierdes moral teniendo Moral Positiva, pierdes la ficha. Si ganas Moral Negativa sin tener positiva, recibes la Ficha de Moral Negativa. Si acumulas una 2ª Ficha de Moral Negativa, debes descartar TODA tu mano de cartas al finalizar el turno.
    • Excepción de Necrópolis: La facción de Necrópolis ignora totalmente la moral (nunca gana ni pierde moral).`
   },
 
@@ -186,7 +132,7 @@ IV. LAS TRES ACCIONES DEL JUGADOR DURANTE EL TURNO:
   {
     id: "heroes_system_and_progression",
     title: "5. Sistema de Héroes: Héroe Principal vs Secundario, Anatomía y Progresión de Nivel",
-    category: "héroes",
+    category: "heroes",
     content: `SISTEMA DE HÉROES Y PROGRESIÓN DE NIVEL:
 
 HÉROE PRINCIPAL VS HÉROE SECUNDARIO:
@@ -198,7 +144,7 @@ HÉROE PRINCIPAL VS HÉROE SECUNDARIO:
   - Dispone de 2 Puntos de Movimiento (PM) independientes por turno.
   - NO posee tablero propio, NO gana experiencia ni nivel, NO puede jugar cartas del mazo en combate, pero combate con las mismas unidades de tu reserva.
   - Si es atacado por un héroe enemigo, puede optar por ser derrotado instantáneamente sin entablar combate para conservar las tropas.
-  - Máximo 1 Héroe Principal y 1 Héroe Secundario simultáneos por jugador. Si muere, puede recontratarse.
+  - Máximo 1 Héroe Principal y 1 Héroe Secundario simultáneos por jugador (2 héroes en total). Si muere el secundario, puede recontratarse.
 
 ANATOMÍA DEL TABLERO DE HÉROE:
 1. Nombre y Clase: Identificación e iconografía.
@@ -236,7 +182,7 @@ SISTEMA DE HABILIDADES POTENCIADAS Y FICHAS POTENCIADAS:
   {
     id: "deck_building_and_secondary_skills",
     title: "6. Construcción del Mazo de Fuerza y Magia y Catálogo de Habilidades Secundarias",
-    category: "habilidades",
+    category: "cartas",
     content: `CONSTRUCCIÓN DEL MAZO Y HABILIDADES SECUNDARIAS:
 
 REGLAS GENERALES DEL MAZO DE FUERZA Y MAGIA:
@@ -305,7 +251,7 @@ Cada carta de habilidad posee un Efecto Básico (gratuito) y un Efecto Experto (
 
 13. Diplomacia [Apoyo]:
    • Básico: Mapa: Por cada vivienda que tengas, roba 1 carta de la unidad neutral correspondiente. Podrás reclutar una de estas unidades si pagas su coste de reclutamiento.
-   • Experto: Instantáneo: Ignora el combate con unidades neutrales en una zona cuya dificultad de la zona sea igual al nivel de tu héroe. Visita la zona. Tu héroe no gana experiencia.
+   • Experto: Instantáneo: Ignora el combate con unidades neutrales en una zona cuya dificultad sea menor o igual al nivel de tu héroe. Visita la zona. Tu héroe no gana experiencia.
 
 14. Vista de águila / Ojo de lince [Desarrollo]:
    • Básico: Instantáneo: Roba cartas del mazo de hechizos hasta que encuentres una carta de hechizo básico. Llévatela a la mano o descártala. Devuelve el resto al mazo y barájalo.
@@ -392,7 +338,7 @@ Cada carta de habilidad posee un Efecto Básico (gratuito) y un Efecto Experto (
   {
     id: "magic_system_and_spells_catalog",
     title: "7. Sistema de Magia, Las 4 Escuelas y Catálogo de Hechizos",
-    category: "magia",
+    category: "cartas",
     content: `SISTEMA DE MAGIA Y REGLAS DE CONJURO:
 
 LAS 4 ESCUELAS DE MAGIA:
@@ -408,6 +354,8 @@ MECÁNICA DE POTENCIACIÓN (EMPOWER):
 
 LÍMITES Y PERGAMINOS DE HECHIZO:
 • Límite en Combate: Cada jugador puede lanzar únicamente 1 Hechizo Primario por ronda de combate.
+• Excepción de Especialidad (Inteligencia/Espionaje Experto): Al comienzo de la ronda de combate, juega una carta de hechizo. Este hechizo no cuenta para el límite de hechizos por ronda de combate.
+• Excepción de Especialidades Asimétricas: Las cartas de especialidad que imitan hechizos NO son hechizos y no cuentan para el límite de 1 hechizo por ronda ni se ven afectadas por bonificadores exclusivos de hechizos (como las escuelas de magia).
 • Pergaminos de Hechizo (Spell Scrolls):
   - Se obtienen en eventos, ruinas o cofres. Se colocan en el tablero de héroe (máximo 2 pergaminos simultáneos).
   - Cada pergamino contiene 2 hechizos bocabajo. El héroe puede consultar sus hechizos en cualquier momento.
@@ -495,7 +443,7 @@ CATÁLOGO COMPLETO DE HECHIZOS OFICIALES POR ESCUELA DE MAGIA:
   {
     id: "resources_economy_and_town_building",
     title: "8. Economía de Recursos, Desarrollo Urbano y Comercio",
-    category: "ciudad",
+    category: "ciudades",
     content: `ECONOMÍA DE RECURSOS, CONSTRUCCIÓN Y COMERCIO:
 
 LOS TRES RECURSOS DEL IMPERIO:
@@ -568,6 +516,14 @@ ANATOMÍA Y COLOCACIÓN DE LOSETAS DE MAPA:
   - Losetas Elementales: Bonifican +1 al Poder de los hechizos de su escuela correspondiente.
 • Regla de Colocación (1 PM): Debe colocarse adyacente al héroe y conectada al menos a 2 losetas existentes. Se puede rotar libremente.
 
+TRANSICIONES ENTRE TIPOS DE LOSETAS Y FICHAS DE MAPA:
+- Superficie ↔ Subterráneo: un héroe no puede pasar directamente de una loseta de superficie a una subterránea, ni viceversa. El cruce solo puede realizarse mediante una Puerta Subterránea o un hechizo de portal de ciudad; ningún otro efecto de movimiento de carta permite este cruce.
+- Puerta Subterránea: al entrar en la zona de entrada, se descubre la loseta subterránea correspondiente y el héroe se traslada de inmediato a su zona de salida, sin gastar PM adicional. La puerta es transitable en ambos sentidos y ambas zonas se tratan como un único lugar.
+- Superficie ↔ Mar: moverse entre dos zonas de tierra es normal. Al entrar en una zona de mar desde tierra, el movimiento termina para el resto del turno; el héroe no puede volver a moverse ese turno, aunque conserve PM. Al entrar en una zona de tierra desde el mar, el movimiento continúa con normalidad.
+- Mar ↔ Mar: el movimiento entre zonas de mar de la misma loseta o de losetas marinas conectadas se realiza con normalidad.
+- Monolitos: al entrar en la zona de un monolito, el héroe se traslada de inmediato al monolito emparejado en otra loseta, sin gastar PM adicional. Los monolitos pueden ser unidireccionales o bidireccionales; en el primer caso no se puede regresar por el monolito de salida y, en el segundo, sí se puede ir y volver.
+- Torbellinos: solo funcionan en losetas de mar y conectan torbellinos situados en losetas distintas. Al entrar en uno, se lanza el dado de ataque para elegir el torbellino de destino; si el resultado señala el mismo torbellino, se repite la tirada. Cada viaje por torbellino hace perder 1 unidad del ejército.
+
 CATEGORÍAS DE CASILLAS Y UBICACIONES:
 1. Visitables (Visitable): Al interactuar, se coloca un Cubo Negro. Quedan agotadas para el resto de la partida.
 2. Señalizables (Flaggable): Al capturarse, se coloca un Cubo de Facción. Proporcionan beneficios pasivos de ingresos o control (Minas, Asentamientos, Ciudades, Obeliscos).
@@ -594,7 +550,7 @@ CATÁLOGO UNIFICADO DE UBICACIONES DEL MAPA:
 • Obelisco: Revela pistas para desenterrar el Grial (cavar cuesta 2 PM).
 • Observatorio de Sequoias: Revela losetas adyacentes gratis.
 • Manantial Mágico: Mira las 3 cartas superiores del descarte y recupera 1 a la mano.
-• Sabio: Lanza 1 Dado de Ataque (+1: carta de característica; 0: Busca 2 Habilidades; -1: Busca 2 Hechizos).
+• Erudito: Lanza 1 Dado de Ataque (+1: carta de característica; 0: Busca 2 Habilidades; -1: Busca 2 Hechizos).
 • Conflujo Elemental: Permite reclutar elementales.
 • Prisión: Otorga un Héroe Secundario gratuito (o +3 Oro si ya posees uno).
 • Depósito de Cíclopes: Lanza 4 Dados de Recursos tras vencer a los cíclopes.
@@ -654,11 +610,11 @@ CATÁLOGO OFICIAL DE LOS 12 BANCOS DE CRIATURAS:
 5. Depósitos de Medusas: 4 Medusas. Recompensa: 6 Oro + 1 Objeto de Valor.
 6. Tesorería Enana: 4 Enanos. Recompensa: 7 Monedas de Oro.
 7. Conservatorio de Grifos: 4 Grifos. Recompensa: 1 unidad de Grifos (apilados si había >=2 fichas).
-8. Banco de Nagas: 4 Nagas. Recompensa: 6 Oro + 2 Objetos de Valor.
-9. Cripta: 1 Esqueleto, 1 Zombi, 1 Espectro, 1 Vampiro. Recompensa: 6 Monedas de Oro.
-10. Tesoro de los Diablillos: 4 Familiares. Recompensa: 3 Monedas de Oro.
-11. Reservas del Cíclope: 4 Cíclopes. Recompensa: 8 Materiales + 2 Objetos de Valor.
-12. Utopía del Dragón: 1 Dragón Negro, 1 Dragón Dorado, 1 Dragón de Cristal, 1 Dragón Hada. Recompensa: 40 Oro + Busca (3) en Artefactos.
+8. Banco de Nagas: 4 Nagas. Recompensa: 6 Oro + 2 Objetos de Valor (extra: 6 Oro + 1 Objeto de Valor por cada unidad apilada).
+9. Cripta: 1 Esqueleto, 1 Zombi, 1 Espectro, 1 Vampiro. Recompensa: 6 Monedas de Oro (extra: 2 Oros por cada unidad apilada).
+10. Tesoro de los Diablillos: 4 Familiares. Recompensa: 3 Monedas de Oro (extra: 1 Oro por cada unidad apilada).
+11. Reservas del Cíclope: 4 Cíclopes. Recompensa: 8 Materiales + 2 Objetos de Valor (extra: 2 Materiales de Construcción + 1 Objetos de Valor por cada unidad apilada).
+12. Utopía del Dragón: 1 Dragón Negro, 1 Dragón Dorado, 1 Dragón de Cristal, 1 Dragón Hada. Recompensa: 40 Oro + Busca (3) en Artefactos (extra: Busca (5) por cada unidad apilada).
 
 👉 **[Abrir el Visor Completo de Unidades de Combate y Reclutamiento ➔](tab:units)**`
   },
@@ -678,7 +634,7 @@ INICIO DE COMBATE Y COMBATE RÁPIDO (QUICK COMBAT):
 
 DESPLIEGUE EN EL TABLERO DE COMBATE (REJA 4X5):
 • El atacante elige un bando; el defensor el opuesto. Cada jugador despliega hasta 5 unidades en sus líneas trasera y delantera.
-• Orden de Activación: Las unidades actúan en orden decreciente de Iniciativa. En caso de empate, se alterna empezando por el atacante.
+• Orden de Activación: Las unidades actúan en orden decreciente de Iniciativa. En caso de empate exacto, el **atacante activa primero** de forma alterna con el defensor. Esto aplica en el juego base y en la expansión Campo de Batalla (HoMM-Battlefield-Rulebook_ESP.md, §4.a: ficha de iniciativa al jugador inicial; pasa al oponente tras resolver todas las unidades con esa iniciativa).
 
 SECUENCIA DE ACTIVACIÓN Y ATAQUE:
 1. Declarar Movimiento y/o Ataque según el tipo de unidad (Terrestre, Voladora, A Distancia).
@@ -794,6 +750,8 @@ Introduce el gran Tablero Hexagonal de Campo de Batalla sin mapa de aventura:
    - Movimiento = Valor de Iniciativa de la unidad (ej. Iniciativa 8 mueve 8 hexágonos).
    - Tropas a Distancia: Pueden mover O atacar (no ambas acciones en el mismo turno).
    - Penalización a Distancia: Se aplica al atacar adyacente O a 8 o más hexágonos de distancia.
+   - Regla de Iniciativa-Movimiento: El valor numérico de Iniciativa (⚡) dicta la cantidad de hexágonos de movimiento táctico de melé que pueden recorrer en su fase de activación. Hechizos como Celeridad o Ralentizar aumentan o reducen directamente el alcance físico de avance de tus tropas.
+   - [N/V] Datos de expansión Campo de Batalla (Terreno de Lava, Cobertura de Bosque, Obstáculos Activos): NO VERIFICADOS en fuente normativa ('HoMM-Battlefield-Rulebook_ESP.md' no los confirma). Bloqueados hasta contraste con 'MANUAL.md' o 'reglasCombinadas.ts'. No usar para respuestas de Sandro.
 
 SISTEMA DE PÁRRAFOS NARRATIVOS (§1 - §29):
 Utilizado en misiones en solitario para resolver encuentros narrativos en el Molino, Cabaña de la Bruja, Mercadillo o Jardín Místico, registrando palabras clave ('Pacto', 'Crimen', 'Trabajo', 'Verruga') que alteran la trama y recompensas.`

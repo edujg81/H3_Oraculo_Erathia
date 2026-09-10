@@ -50,7 +50,29 @@ export interface RuleSection {
   id: string;
   title: string;
   content: string;
-  category: 'general' | 'preparación' | 'combate' | 'faq' | 'componentes' | 'modos' | 'mapa' | 'ciudad' | 'magia' | 'héroes' | 'unidades' | 'habilidades' | 'hechizos' | 'cartas' | 'lugares' | 'campaña' | 'escenario' | 'artefactos';
+  category:
+    | 'general'
+    | 'preparacion'
+    | 'combate'
+    | 'faq'
+    | 'componentes'
+    | 'modos'
+    | 'mapa'
+    | 'ciudades'
+    | 'heroes'
+    | 'unidades'
+    | 'habilidades'
+    | 'hechizos'
+    | 'cartas'
+    | 'lugares'
+    | 'campaña'
+    | 'escenarios'
+    | 'artefactos'
+    | 'recursos'
+    | 'ia'
+    | 'comercio'
+    | 'variantes'
+    | 'glosario';
 }
 
 export function getPlayerLimit(mode: 'enfrentamiento' | 'cooperativo' | 'campaña' | 'alianza' | 'torneo' | 'campodebatalla'): number {

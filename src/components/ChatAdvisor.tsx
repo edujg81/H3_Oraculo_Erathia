@@ -23,7 +23,7 @@ export default function ChatAdvisor({
       {
         id: 'welcome',
         role: 'assistant',
-        content: '¡Saludos, héroe! Soy Sandro el Sabio, consultor del oráculo para solventar cualquier duda o disputa sobre las reglas del juego de mesa Heroes III. ¿Qué conflicto perturba tu sesión de hoy?',
+        content: '¡Saludos, héroe! Soy Sandro el Grande, consultor del oráculo para solventar cualquier duda o disputa sobre las reglas del juego de mesa Heroes III. ¿Qué conflicto perturba tu sesión de hoy?',
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
       }
     ];
@@ -425,7 +425,7 @@ export default function ChatAdvisor({
           </div>
           <div>
             <h3 className="font-serif text-amber-200 font-semibold tracking-wide text-sm sm:text-base">
-              Sandro el Sabio
+              Sandro el Grande
             </h3>
             <p className="text-[10px] font-mono text-emerald-500 uppercase tracking-widest flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>

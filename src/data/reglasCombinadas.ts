@@ -104,7 +104,7 @@ Además de estos 4 modos, el Libro de Torneo aporta un quinto modo, el Modo Torn
   {
     id: "cap_03_preparacion_y_turnos",
     title: "3. Preparación de la Partida, Rondas y Turnos",
-    category: "preparación",
+    category: "preparacion",
     content: `PREPARACIÓN DE LA PARTIDA Y ESTRUCTURA DE RONDAS:
 
 PASOS DE PREPARACIÓN DE LA PARTIDA:
@@ -164,7 +164,7 @@ PREGUNTAS FRECUENTES:
   {
     id: "cap_04_heroes",
     title: "4. Héroes",
-    category: "héroes",
+    category: "heroes",
     content: `Existen héroes de fuerza y héroes de magia; cada facción tiene al menos uno de cada tipo. "Héroe del jugador" se refiere tanto al principal como al secundario.
 
 HÉROE PRINCIPAL: representado por su miniatura y carta de héroe. Tiene 3 PM, es el único que puede usar el mazo de fuerza y magia del jugador y ganar experiencia para subir de nivel (empieza en nivel 1, máximo nivel 7). Se gana experiencia derrotando unidades neutrales y héroes enemigos con dificultad/nivel igual o mayor al tuyo; algunos lugares del mapa y el dado de tesoro (cara "experiencia") también otorgan experiencia.
@@ -195,7 +195,7 @@ PREGUNTAS FRECUENTES:
   {
     id: "cap_05_construccion_mazo",
     title: "5. Construcción del Mazo",
-    category: "general",
+    category: "cartas",
     content: `CONSTRUCCIÓN DEL MAZO DE FUERZA Y MAGIA Y TIPOS DE CARTAS:
     
 El mazo inicial tiene 9 cartas: características, habilidad, hechizo y la especialidad del héroe elegido. Salvo que se indique lo contrario, cualquier carta que recibas (explorando o comprando) va directa a tu mano.
@@ -244,7 +244,7 @@ PREGUNTAS FRECUENTES:
   {
     id: "cap_06_recursos",
     title: "6. Tipos de Recursos y Dado de Recursos",
-    category: "general",
+    category: "recursos",
     content: `Existen 3 tipos de recursos: Oro, Materiales de Construcción y Objetos de Valor, necesarios para ampliar la ciudad, reclutar unidades y comprar hechizos. Se consiguen en asentamientos y minas controladas, con artefactos, o lanzando dados de recursos.
 
 RESULTADOS DEL DADO DE RECURSOS:
@@ -260,7 +260,7 @@ En mercadillos o por ciertos eventos, se pueden intercambiar recursos o retirar 
   {
     id: "cap_07_ciudad",
     title: "7. Ciudad: Edificios y Asedios",
-    category: "ciudad",
+    category: "ciudades",
     content: `Cada facción tiene su ciudad, con edificios propios:
 • Alcaldía: durante la ronda de recursos, ingresos adicionales o habilidad específica de facción.
 • Ciudadela: permite reforzar cartas de unidad (de "unas pocas" a "manada"); añade murallas, puerta y torre de arqueros en un asedio.
@@ -568,7 +568,7 @@ PREGUNTAS FRECUENTES:
   {
     id: "cap_12_opciones_juego",
     title: "12. Opciones de Juego, Dificultad, Condiciones de Victoria y Comercio",
-    category: "general",
+    category: "variantes",
     content: `TABLA DE REGLAS OPCIONALES (modifican la dificultad):
 Aumenta la dificultad: las ciudades señalizadas no producen recursos (aunque se pueden usar sus edificios); no se puede volver a tirar dados; dados de tesoro/recursos solo dan 1 recurso; sin bonificadores iniciales.
 Disminuye la dificultad: empiezas con un héroe secundario; cada unidad hace al menos 1 punto de daño en un ataque; todas las minas/asentamientos dan el doble de ingresos; puedes intercambiar recursos en cualquier momento y el mercadillo se vuelve visitable dando 1 carta de artefacto.
@@ -608,7 +608,7 @@ Los jugadores aliados pueden comerciar cartas de artefacto/hechizo entre sí, en
   {
     id: "cap_13_ayuda_de_juego",
     title: "13. Ayuda de Juego: Leyenda de Símbolos",
-    category: "faq",
+    category: "glosario",
     content: `AYUDA DE JUEGO Y SIMBOLOGÍA COMPLETA DEL MANUAL:
 
 ACCIÓN DE CARTA:
@@ -724,7 +724,7 @@ ACABAR UN ESCENARIO: los héroes aliados comparten condiciones de victoria y der
   {
     id: "cap_04_exp_murallas_escenarios",
     title: "Expansión Murallas: 4. Escenarios",
-    category: "escenario",
+    category: "escenarios",
     content: `ESCENARIOS:
 ESCENARIO DE ALIANZA — "El Desafío" (4 jugadores, dura 11-14 rondas): el rey ha lanzado un desafío para construir el grial en la capital Osha en 6 meses. 
 - Recursos iniciales 16 de Oro/4 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0».
@@ -1020,7 +1020,7 @@ FICHAS Y RECURSOS:
   {
     id: "cap_02_exp_fortaleza_mecanicas",
     title: "Expansión Fortaleza: 1. Cartas de Evento y Nuevas Localizaciones (Erudito)",
-    category: "general",
+    category: "componentes",
     content: `NUEVAS MECÁNICAS E INTRODUCCIONES DE LA EXPANSIÓN FORTALEZA:
 
 1. CARTAS DE EVENTO (Nuevo tipo de mazo):
@@ -1039,7 +1039,7 @@ FICHAS Y RECURSOS:
   {
     id: "cap_03_exp_fortaleza_escenarios",
     title: "Expansión Fortaleza: 3. Escenarios Independientes (Arrogancia y En Busca del Grial)",
-    category: "escenario",
+    category: "escenarios",
     content: `Esta expansión aporta las reglas completas del Modo Alianza (idénticas a las de la expansión Murallas: equipo de 2 jugadores formado al inicio de la partida, intercambio de artefactos entre héroes en zonas adyacentes, intercambio libre de recursos entre aliados, y prohibición de señalizar un lugar ya señalizado por tu compañero de equipo).
 
 ESCENARIO DE ALIANZA — "Arrogancia" (4 jugadores, dura 12 rondas): Cuatro culturas vivían en paz hasta que las ambiciones de conquista desataron la guerra mundial.
@@ -1164,7 +1164,7 @@ FICHAS Y RECURSOS:
   {
     id: "cap_02_exp_inferno_mecanicas",
     title: "Expansión Inferno: 2. Mecánicas Nuevas (Invocar, Ciudad Aleatoria, Inmunidad de los Efrits)",
-    category: "general",
+    category: "variantes",
     content: `Esta expansión añade la facción Inferno (demonios y criaturas del abismo), introduce la Carta de Característica Potenciada (ver capítulo 5, Construcción del Mazo), la Ciudad Aleatoria y el Eje Estelar (ver capítulo 8, Elementos del Mapa), y comparte las Escuelas de Magia con Metas Ampliadas y las reglas de Modo Alianza con Murallas.
 
 1. CARTAS DE CARACTERÍSTICA POTENCIADA (20 Cartas):
@@ -1195,7 +1195,7 @@ FICHAS Y RECURSOS:
   {
     id: "cap_03_exp_inferno_escenarios",
     title: "Expansión Inferno: 3. Escenarios Independientes (Alianza y Enfrentamiento)",
-    category: "escenario",
+    category: "escenarios",
     content: `Esta expansión aporta las reglas completas del Modo Alianza (idénticas a las de Murallas y Fortaleza: equipo de 2 jugadores formado al inicio de la partida, intercambio de artefactos entre héroes en zonas adyacentes, intercambio libre de recursos entre aliados, y prohibición de señalizar un lugar ya señalizado por tu compañero de equipo).
 
 ESCENARIO DE ALIANZA — "El Cuento de las Dos Tierras" (4 jugadores, dura 11-13 rondas): Conflicto total entre los continentes Este y Oeste de Varesburg.
@@ -1264,7 +1264,7 @@ Gana el jugador con más puntos de victoria.`
   {
     id: "cap_02_torneo_reglas_adicionales_opcionales",
     title: "Modo Torneo: 2. Reglas Adicionales y Opcionales",
-    category: "modos",
+    category: "variantes",
     content: `REGLAS ADICIONALES (se aplican a todos los escenarios de torneo):
 1. Cartas Prohibidas / Retiradas de la partida:
    - Carta de habilidad: Diplomacia (se retira del mazo).
@@ -1287,7 +1287,7 @@ REGLAS OPCIONALES (utilizables en cualquier escenario, incluidos los básicos):
   {
     id: "cap_03_torneo_escenarios",
     title: "Modo Torneo: 3. Escenarios del Libro de Torneo",
-    category: "escenario",
+    category: "escenarios",
     content: `3 escenarios oficiales para el Modo Torneo (1 contra 1), con condiciones de victoria alternativas al derrocamiento total del rival.
 
 ESCENARIO 1 — "Última Oportunidad" (1v1, Duración: 8 Rondas): Conflicto directo decretado por el rey para establecer un señor definitivo.
@@ -1329,7 +1329,7 @@ ESCENARIO 3 — "Herencia Inesperada" (1v1, Duración: 14 Rondas): Conflicto ter
   {
     id: "cap_04_torneo_creador_escenarios",
     title: "Modo Torneo: 4. Creador de Escenarios (Guía Oficial para Diseñar Escenarios Propios)",
-    category: "escenario",
+    category: "escenarios",
     content: `Pasos oficiales para diseñar un escenario propio de Heroes of Might and Magic III: The Board Game:
 
 PASOS DE CREACIÓN DE UN ESCENARIO:
@@ -1555,7 +1555,7 @@ LÓGICA Y USO DE CARTAS:
   {
     id: "cap_lm_base_enfrentamiento",
     title: "Libro de Misiones Básico: Escenarios de Enfrentamiento",
-    category: "modos",
+    category: "escenarios",
     content: `3 escenarios competitivos que usan las condiciones de victoria universales del capítulo 12 salvo que se indique lo contrario.
 
 ESCENARIO — "El Retiro de los Monjes" (2 jugadores, dura 7 rondas): recursos iniciales 15 de Oro/4 Materiales/2 Objetos de Valor, ingresos «15»/«2»/«1». Cada jugador empieza con vivienda de bronce, ciudadela, cofradía de magos, y 2 unidades "unas pocas" de bronce del mayor coste. Al preparar la cofradía inicial, se busca(3) una vez en vez de buscar(2) dos veces. No se puede reclutar héroe secundario. Al inicio de las rondas de recursos, se puede elegir entre +2 Materiales o +1 Objeto de Valor adicional. Al visitar un obelisco por primera vez, se lanzan 2 dados de recursos y se añaden a la reserva los del dado elegido. Al asediar la ciudad de otro jugador, el defensor no paga Oro para transportar su ejército y puede usar su mazo de fuerza y magia en ese combate. Victoria: vencer al héroe enemigo en combate. Si nadie gana antes del final de la ronda 7, ambos completan su mano y libran un combate final (atacante = mayor experiencia; en empate, quien saque más en 2 dados de recursos).
@@ -1567,7 +1567,7 @@ ESCENARIO — "Todos para Uno" (3 jugadores, dura 11 rondas): recursos iniciales
   {
     id: "cap_lm_base_cooperativo",
     title: "Libro de Misiones Básico: Modo Cooperativo (Reglas Generales y Escenarios)",
-    category: "modos",
+    category: "escenarios",
     content: `En las partidas cooperativas todos los jugadores están aliados contra el propio escenario. Al controlar unidades neutrales, se usan las reglas de Combate de la IA (capítulo 11). Al visitar un mercadillo, además de su efecto normal, se puede usar para dar recursos a cualquier jugador. Las condiciones de victoria suelen ser derrotar cierta cantidad de unidades neutrales o controlar ciertos lugares; salvo que se indique lo contrario, al cumplirse la condición la partida acaba de inmediato y todos comparten la victoria.
 
 ESCENARIO — "Los Campeones de Gelea" (2-3 jugadores, dura 11 rondas): recursos iniciales 15 de Oro/3 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 3 unidades "unas pocas" de bronce. Incluye 1 loseta central (VII-VIII) con la utopía del dragón. Al visitar un obelisco, lanza 2 dados de tesoro y resuelve 1. No se puede entrar en la utopía del dragón hasta que tu facción haya visitado al menos 2 obeliscos (partida a 2) o 3 (partida a 3); al visitarla por primera vez, coloca ahí tu cubo de facción. Ningún jugador puede atacar a otros héroes ni capturar una mina/asentamiento ya controlado por otro. Victoria: la utopía del dragón tiene un cubo de cada facción. Si al final de la ronda 11 falta algún cubo, todos pierden.
@@ -1593,7 +1593,7 @@ MISIÓN 3 — "La Liberación de Steadwick" (13 rondas): mismo héroe elegido. R
   {
     id: "cap_suplemento_escenario_tutorial",
     title: "Suplemento de Reglas: Escenario Introductorio (Tutorial)",
-    category: "preparación",
+    category: "preparacion",
     content: `El Suplemento de Reglas es un librito tutorial pensado para empezar a jugar sin necesidad de leer antes el libro de reglas completo, guiando a los jugadores a través de una primera ronda pre-planificada. Su contenido de reglas ya está cubierto en los demás capítulos de este documento; aquí se recoge únicamente el escenario de Enfrentamiento que propone, jugable de forma independiente.
 
 ESCENARIO "TUTORIAL" (2 jugadores, dura 8 rondas): enfrenta a la facción Mazmorra (héroe Mutare) contra la Necrópolis (héroe Tamika), ambas predeterminadas. Preparación del mapa: loseta inicial de Necrópolis (S1) y de Mazmorra (S2); losetas lejanas (II-III) F4, F5, F7, F8 barajadas bocabajo; losetas cercanas (IV-V) N1, N2 barajadas bocabajo. Cada jugador conserva solo la loseta de edificio con vivienda de bronce en su tablero de ciudad, con el resto aparte. Ingresos iniciales «10» de Oro/«2» Materiales/«1» Objeto de Valor. Recursos iniciales 15 de Oro/4 Materiales/1 Objeto de Valor. Cada jugador recibe sus 3 unidades de bronce (cara "unas pocas") como ejército inicial del escenario.
@@ -1643,7 +1643,7 @@ PREPARACIÓN UNIFICADA DE PARTIDA (22 PASOS):
   {
     id: "reescritura-02-heroes-mazo-experiencia",
     title: "Reescritura 2. Lógica Integrada de Héroes (Principal y Secundario), Subida de Nivel y Gestión de Mazo",
-    category: "héroes",
+    category: "heroes",
     content: `REGLAS UNIFICADAS DE HÉROES, EXPERIENCIA Y CONSTRUCCIÓN DE MAZO:
 
 HÉROE PRINCIPAL VS HÉROE SECUNDARIO:
@@ -1703,7 +1703,7 @@ REGLAS DE ASEDIO CON CIUDADELA:
   {
     id: "reescritura-04-reglas-opcionales-y-comercio",
     title: "Reescritura 4. Tabla de Reglas Opcionales y Variantes, Mercado, Comercio y Fin de Escenario",
-    category: "modos",
+    category: "variantes",
     content: `TABLA DE REGLAS OPCIONALES, MERCADO Y CONDICIONES DE ELIMINACIÓN:
 
 TABLA DE REGLAS OPCIONALES (MODIFICADORES DE DIFICULTAD):
@@ -1792,7 +1792,7 @@ COMPONENTES: 5 losetas de mapa de superficie (1 inicial, 3 lejanas, 1 cercana) +
   {
     id: "cap_exp_bastion_escenarios",
     title: "Expansión Bastión: Escenarios Independientes (Alianza, Enfrentamiento y Cooperativo)",
-    category: "escenario",
+    category: "escenarios",
     content: `Esta expansión aporta las reglas completas del Modo Alianza (idénticas a las de Murallas/Fortaleza/Inferno) y comparte las reglas generales de Modo Cooperativo del Libro de Misiones básico (unidades neutrales controladas con las reglas de IA; el mercadillo también puede dar recursos a cualquier jugador; victoria compartida al cumplirse la condición).
 
 ESCENARIO DE ALIANZA — "Guerra de los Poderosos" (4 jugadores, dura 13 rondas): recursos iniciales 14 de Oro/4 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 1 manada de bronce del menor coste. Hay 4 lugares iniciales en 2 áreas (una por equipo); la facción Mazmorra no está disponible para jugar, ya que su loseta inicial hace de loseta subterránea necesaria para la victoria, defendida por un ejército de nivel VI (ojos maléficos, medusas, minotauros, mantícoras y dragones negros). Los jugadores pueden usar su mazo de fuerza y magia al pagar Oro para defender su ciudad. Victoria: una alianza captura la ciudad de la loseta subterránea (Mazmorra) y la mantiene 1 ronda más, o captura una ciudad enemiga y la mantiene 2 rondas más. Si nadie lo logra antes del final de la ronda 13, la partida se alarga si alguien señaliza justo en la 12ª o 13ª ronda (hasta la 14ª o 15ª respectivamente); si ambos equipos cumplen la condición, empate; si ninguno, pierden todos.
@@ -1828,7 +1828,7 @@ COMPONENTES: 12 losetas de mapa (1 inicial, 3 lejanas, 8 elementales cercanas), 
   {
     id: "cap_exp_confluencia_escenarios",
     title: "Expansión Confluencia: Escenarios Independientes (Alianza, Enfrentamiento y Cooperativo)",
-    category: "escenario",
+    category: "escenarios",
     content: `Esta expansión aporta las reglas completas del Modo Alianza (idénticas a las de Murallas/Fortaleza/Inferno/Bastión) y comparte las reglas generales de Modo Cooperativo del Libro de Misiones básico.
 
 ESCENARIO DE ALIANZA — "Un Mal Día" (4 jugadores, dura 16 rondas): recursos iniciales 11 de Oro/3 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce y 3 unidades "unas pocas" de bronce. Hay 4 lugares iniciales en 2 áreas (una por equipo), conectados por monolitos unidireccionales. Ningún jugador recibe bonificador inicial. Victoria: una alianza derrota al héroe principal de cada oponente una vez, u ocupa ambos monolitos de salida enemigos al mismo tiempo al final de una ronda. Si no se cumple antes del final de la ronda 16, todos pierden.
@@ -1866,7 +1866,7 @@ COMPONENTES: 5 losetas de mapa de superficie (1 inicial, 3 lejanas, 1 cercana) +
   {
     id: "cap_exp_cala_escenarios",
     title: "Expansión Cala: Escenarios Independientes (Alianza y Enfrentamiento)",
-    category: "escenario",
+    category: "escenarios",
     content: `Esta expansión aporta las reglas completas del Modo Alianza (idénticas a las de las demás expansiones: equipo de 2 jugadores formado al inicio de la partida, intercambio de artefactos entre héroes en zonas adyacentes, intercambio libre de recursos entre aliados, y prohibición de señalizar un lugar ya señalizado por tu compañero de equipo).
 
 ESCENARIO DE ALIANZA — "Estrecho de las Tormentas" (4 jugadores, dura 14 rondas): una de las 4 losetas iniciales debe contener una ciudad de Mazmorra. Recursos iniciales 14 de Oro/4 Materiales/1 Objeto de Valor, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce, cofradía de magos, y 2 manadas de bronce del menor coste. En vez del bonificador inicial habitual, se puede reclutar un héroe secundario por 5 de Oro (no en dificultad Imposible); cada jugador solo puede hacerlo una vez; un jugador solo puede enviar recursos a un aliado durante su propio turno; ningún héroe principal puede rendirse contra otro héroe (solo los secundarios). Victoria: una alianza captura una ciudad enemiga y la mantiene 2 rondas más, o derrota a ambos héroes principales de la alianza rival. Si nadie lo logra antes del final de la ronda 14, la partida se alarga si alguien señaliza justo en la 13ª o 14ª ronda (hasta la 15ª o 16ª); empate si ambos equipos lo logran; si ninguno, pierden todos.
@@ -1890,7 +1890,7 @@ MISIÓN 3 — "Traición" (12 rondas): mismo héroe. Sin recursos iniciales (0/0
   {
     id: "cap_exp_contenido_adicional_preparacion_avanzada",
     title: "Expansión Contenido Adicional: Preparaciones Avanzadas Opcionales",
-    category: "preparación",
+    category: "variantes",
     content: `Reglas opcionales aplicables a cualquier escenario existente, del juego base o de cualquier expansión, para variar el equilibrio habitual de la partida.
 
 CARTAS DEL CAOS: cada vez que vayas a descartar una carta, retírala de la partida en su lugar y roba la carta superior del mazo correspondiente para tu pila de descarte (las cartas de característica y especialidad se siguen descartando con normalidad). Si usas una carta de conocimiento para recuperar un hechizo a tu mano, ese hechizo se retira igualmente y recibes uno nuevo de la parte superior del mazo de hechizos.
@@ -1908,7 +1908,7 @@ EJÉRCITO NEUTRAL: recomendada cuando ningún héroe en la partida tenga habilid
   {
     id: "cap_exp_contenido_adicional_escenarios",
     title: "Expansión Contenido Adicional: Escenarios de Enfrentamiento",
-    category: "escenario",
+    category: "escenarios",
     content: `5 escenarios independientes de Modo Enfrentamiento.
 
 "ASCENSIÓN" (4 jugadores, dura 10 rondas): recursos iniciales 10 de Oro/4 Materiales, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce, ciudadela y 3 unidades "unas pocas" de bronce. Los jugadores se dividen en 2 equipos de 2, cada equipo empezando en una mitad del mapa (colocación colectiva de sus losetas iniciales); nadie puede tener héroe secundario; los aliados pueden transferirse recursos vía mercadillo. Contrarreloj: en las rondas 3, 6 y 9 los aliados pueden transferirse recursos sin visitar un mercadillo. Victoria: al final de la ronda 10, ambos equipos libran una serie de hasta 3 duelos 1 contra 1 (emparejamientos decididos por el equipo que gane un desempate de dado de ataque); gana el equipo que se lleve al menos 2 de los 3 duelos.
@@ -1948,7 +1948,7 @@ COMPONENTES: 1 libro de misiones, 2 tableros de combate de neopreno, 50 cartas d
   {
     id: "cap_exp_batallas_navales_escenarios",
     title: "Expansión Batallas Navales: Escenarios (Cooperativo, Enfrentamiento y Solitario)",
-    category: "escenario",
+    category: "escenarios",
     content: `Esta expansión comparte las reglas generales de Modo Cooperativo del Libro de Misiones básico (unidades neutrales controladas con las reglas de IA; el mercadillo también puede dar recursos a cualquier jugador; victoria compartida al cumplirse la condición).
 
 ESCENARIO COOPERATIVO — "Invasión Bárbara" (2-4 jugadores, dura 11 rondas): preparación de mapa escalable según jugadores (2: 3 iniciales + 3 cercanas con obelisco + 4 lejanas; 3: 4+4+6; 4: 5+5+8). Recursos iniciales 10 de Oro/4 Materiales, ingresos «10»/«0»/«0». Cada jugador empieza con vivienda de bronce, alcaldía y 3 unidades "unas pocas" de bronce. La loseta inicial central pertenece a una "Ciudad Enemiga" (se recomienda la facción Bastión, o cualquier otra no usada en la partida si no tienes esa expansión). Los jugadores pueden intercambiar artefactos si sus héroes están en zonas adyacentes; nadie puede señalizar un lugar ya señalizado por otro jugador; no se puede entrar en la Ciudad Enemiga hasta descubrir todas las losetas cercanas y visitar todos los obeliscos al menos una vez; visitar un obelisco da una ficha de habilidad potenciada. Al entrar en la Ciudad Enemiga se combate contra 3 manadas de oro y 2 "unas pocas" de bronce; si ganas, coloca tu cubo de facción en la zona (varios jugadores pueden señalizarla cada uno con el suyo). Victoria: que haya un cubo de cada facción jugada en la Ciudad Enemiga antes del final de la ronda 11 (si no, todos pierden).
@@ -1964,7 +1964,7 @@ ESCENARIO SOLITARIO — "Isla de Fuego" (1 jugador, dura 16 rondas): recursos in
   {
     id: "cap_juego_con_miniaturas_y_recursos_comunitarios",
     title: "Jugar con Miniaturas y Recursos de la Comunidad",
-    category: "faq",
+    category: "variantes",
     content: `JUGAR CON MINIATURAS (regla general, aplicable a cualquier partida): si prefieres usar miniaturas de unidad en vez de solo cartas durante el combate, colócalas y muévelas sobre el tablero de combate; puedes ponerlas encima de las cartas o dejar las cartas a un lado a modo de "barra de iniciativa" para visualizar mejor el orden de activación. Si juegas así, aplica estas reglas: al robar una carta de unidad neutral, si sale una unidad neutral repetida, una que ya tengas en tu ejército, o una de tu propia facción, descártala y roba otra en su lugar; al reclutar unidades neutrales con Diplomacia, tampoco puedes reclutar una unidad de una facción controlada por otro jugador ni una ya presente en el ejército de cualquier jugador (descarta esa carta y roba otra).
 
 RECURSOS DE LA COMUNIDAD: además del reglamento oficial, la comunidad de jugadores mantiene una Wiki no oficial en inglés, traducida parcialmente por mí mismo (homm3bg.wiki) con notas detalladas que aclaran la redacción ambigua de numerosas cartas del juego, recopilando además erratas y aclaraciones de los propios diseñadores. Es un buen punto de consulta adicional ante dudas sobre el texto exacto de una carta concreta, aunque no sustituye al reglamento oficial de Archon Studio. No he continuado con la traducción al castellano por falta de tiempo y porque ya he incluido los textos de cada carta aquí, lo que ha sido una tarea larga y tediosa.`

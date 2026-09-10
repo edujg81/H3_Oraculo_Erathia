@@ -9,7 +9,7 @@ export interface Scenario {
   setup: string;
   specialRules: string;
   expansion: string;
-  initialResources?: { gold: number; materials: number; valuables: number };
+  initialResources: { gold: number; materials: number; valuables: number };
   initialIncome?: { gold: number; materials: number; valuables: number };
   initialTroops?: string;
   initialBuildings?: string;
@@ -533,6 +533,8 @@ export const SCENARIOS: Scenario[] = [
     setup: 'Fallas elementales ubicadas en el perímetro del mapa generan fichas de invasión al final de cada turno de ronda.',
     specialRules: 'Los héroes pueden sellar permanentemente una falla gastando 3 puntos de Maná si terminan su fase de movimiento sobre ella.',
     expansion: 'Expansión Conflujo (Conflux)',
+    initialResources: { gold: 10, materials: 3, valuables: 1 },
+    initialIncome: { gold: 10, materials: 0, valuables: 0 },
     initialTroops: 'Ejército preconfigurado',
     startingFaction: 'Conflujo',
     startingHero: 'Héroe según escenario',
@@ -585,7 +587,10 @@ export const SCENARIOS: Scenario[] = [
     setup: 'Dos islas rivales separadas por un brazo de mar con abundantes pecios, naufragios y astilleros costeros disputados.',
     specialRules: 'Las unidades de facción de la Cala ganan +1 de ataque cuando combaten en losetas de costa o a bordo de navíos en el mar.',
     expansion: 'Expansión Cala (Cove)',
-    initialTroops: 'Ejército preconfigurado',
+    initialResources: { gold: 13, materials: 3, valuables: 1 },
+    initialIncome: { gold: 10, materials: 0, valuables: 0 },
+    initialTroops: '1 manada bronce con el mayor coste de reclutamiento',
+    initialBuildings: 'Vivienda bronce y cofradía de magos',
     startingFaction: 'Cala',
     startingHero: 'Héroe según facción',
     campaignMode: false
@@ -637,6 +642,8 @@ export const SCENARIOS: Scenario[] = [
     setup: '3 Misiones subterráneas progresivas en Nighon con tropas de Minotauros, Medusas y Dragones Negros.',
     specialRules: 'En la misión final, tras consumir el vial, Mutare adquiere estadísticas de Dragón Legendario en combate personal.',
     expansion: 'Metas Ampliadas (Stretch Goals)',
+    initialResources: { gold: 0, materials: 0, valuables: 0 },
+    initialIncome: { gold: 0, materials: 0, valuables: 0 },
     initialTroops: 'Ejército preconfigurado',
     startingFaction: 'Mazmorra',
     startingHero: 'Mutare',
@@ -653,9 +660,12 @@ export const SCENARIOS: Scenario[] = [
     setup: '3 Misiones (Objetivo, Maestro, Duque Alarice) enfrentándose a fuerzas aliadas de AvLee, Bracada y caballeros fronterizos.',
     specialRules: 'Sandro puede convertir hasta 2 unidades derrotadas de nivel Bronce en regimientos de esqueletos tras ganar cualquier combate.',
     expansion: 'Metas Ampliadas (Stretch Goals)',
+    initialResources: { gold: 25, materials: 3, valuables: 1 },
+    initialIncome: { gold: 0, materials: 0, valuables: 0 },
     initialTroops: 'Ejército preconfigurado',
+    initialBuildings: 'Vivienda de bronce',
     startingFaction: 'Necrópolis',
-    startingHero: 'Sandro',
+    startingHero: 'Sandro o Tamika',
     campaignMode: true
   },
   {
@@ -669,6 +679,7 @@ export const SCENARIOS: Scenario[] = [
     setup: '4 Misiones intensas frente a dragones elementales con resistencia mágica extrema y daño devastador.',
     specialRules: 'Dracon comienza la campaña con la capacidad especial de confeccionar Gólems de Enfoque que absorben daño mágico en combate.',
     expansion: 'Metas Ampliadas (Stretch Goals)',
+    initialResources: { gold: 15, materials: 3, valuables: 1 },
     initialTroops: 'Ejército preconfigurado',
     startingFaction: 'Torre',
     startingHero: 'Dracon',
@@ -684,7 +695,9 @@ export const SCENARIOS: Scenario[] = [
     victoryCondition: 'Superar objetivos competitivos en mapas dinámicos que introducen la Caja de Pandora, Minas de Hechizo y Campos de Fuerza.',
     setup: 'Mapas altamente variables configurados con componentes y fichas exclusivas de la caja de Stretch Goals 2.',
     specialRules: 'La Caja de Pandora puede otorgar un ejército instantáneo de alto nivel o desatar una maldición devastadora al abrirla.',
-    expansion: 'Metas Ampliadas (Stretch Goals)',
+    expansion: 'Metas Ampliadas 2 (Stretch Goals 2)',
+    initialResources: { gold: 10, materials: 4, valuables: 0 },
+    initialIncome: { gold: 10, materials: 0, valuables: 0 },
     initialTroops: 'Ejército preconfigurado',
     startingFaction: 'Conflujo',
     startingHero: 'Héroe según escenario',
@@ -700,7 +713,8 @@ export const SCENARIOS: Scenario[] = [
     victoryCondition: 'Xex, Xyron, Fiona y Xeron lideran una cruzada demoníaca desde el inframundo contra las fuerzas combinadas de AvLee, Bracada y Conflujo.',
     setup: 'Campaña asimétrica de 4 héroes demoníacos colaborando o turnándose en la conquista progresiva del mapa de superficie.',
     specialRules: 'Las puertas del infierno permiten el traslado instantáneo de tropas entre cualquier par de ciudades demoníacas bajo tu control.',
-    expansion: 'Metas Ampliadas (Stretch Goals)',
+    expansion: 'Metas Ampliadas 2 (Stretch Goals 2)',
+    initialResources: { gold: 10, materials: 2, valuables: 1 },
     initialTroops: 'Ejército preconfigurado',
     startingFaction: 'Inferno',
     startingHero: 'Xex / Xyron / Fiona / Xeron',

@@ -32,7 +32,7 @@ La auditoría no autoriza a completar huecos con datos del videojuego, traduccio
   `src/assets/rules/Heroes3_Rules_Rewrite_2_0_dev.md`,
   `src/assets/rules/`
 - **Fuentes normativas en inglés (Homm3_BG_Database):** `src/docs/` contiene documentación exhaustiva verificada por la comunidad internacional (habilidades, aventura, artefactos, hechizos, héroes, lugares, ciudades, unidades, máquinas de guerra, etc.). Estas fuentes se consideran **igualmente válidas** para contrastar efectos, reglas y datos, dado que la traducción es directa y están verificadas por múltiples contribuidores.
-- Fuentes auxiliares: `MANUAL.md`, `REGLAS_Y_FAQS.md`, `src/data/reglasCombinadas.ts`, `src/data/rulesKB.ts`, `src/data/` y pruebas del proyecto. Sirven para localizar y comprobar contenido, pero no sustituyen la fuente normativa.
+- Fuentes auxiliares: `MANUAL.md`, `REGLAS_Y_FAQS.md` (DESMARCADO temporalmente como fuente fiable tras auditoría; requiere contraste con `HoMM-Battlefield-Rulebook_ESP.md` y otros PDFs oficiales antes de usar), `src/data/reglasCombinadas.ts`, `src/data/rulesKB.ts`, `src/data/` y pruebas del proyecto. Sirven para localizar y comprobar contenido, pero no sustituyen la fuente normativa. **TAREA PENDIENTE:** Revisar cualquier información en `REGLAS_Y_FAQS.md` o `rulesKB.ts` que no esté confirmada en al menos otra fuente normativa (`src/assets/rules/` o `src/docs/`).
 - Fuentes revisadas manualmente (no modificables): `skillsData.ts`, `heroesData.ts`, `unitsData.ts`, `spellsData.ts`, `warMachinesData.ts`, `townsData.ts`.
 
 ## Estados y registro de evidencia
@@ -67,6 +67,8 @@ Fuentes internas prioritarias: `REGLAMENTO_DEFINITIVO.md`, `src/data/reglasCombi
 - [x] Revisar héroes, habilidades, experiencia, objetos, hechizos y efectos persistentes. **EVIDENCIA (`MANUAL.md` sección 4, `skillsData.ts`, `heroesData.ts`, `spellsData.ts`, `artifactsData.ts`):** Héroe Principal (experiencia, mazo propio) vs Secundario (sin experiencia). Progresión: II/VII habilidades, I/IV/VI especialidades. Mazo inicial: 9 cartas. Objetos: artefactos (30+ verificados en `artifactsData.ts`). Hechizos: 59 verificados (`spellsData.ts`). Efectos persistentes: ciclo de vida definido (instantáneo, activación, continuo, permanente). Estado: VERIFICADO (reglas confirmadas con evidencia normativa y datos verificados).
 - [x] Revisar recursos, economía, reclutamiento, edificios, mejoras y límites. **Punto 1.5 verificado:** recursos (Oro/Materiales/Objetos), economía (3 fases + dado), reclutamiento (ficha población 1/ronda), edificios (Alcaldía/Viviendas/Edificios facción), mejoras (refuerzo + progresión viviendas). Fuente: `MANUAL.md` + `reglasCombinadas.ts` + PDFs oficiales. Estado: VERIFICADO.
 - [x] Revisar excepciones, desempates, aclaraciones y estados de derrota. **Punto 1.6 verificado:** 3 formas de fin de combate (rendirse 10 Oro / retirarse / derrota total 5 Oro + moral negativa), desempate iniciativa (defensor gana), moral/Necrópolis (inmunidad total), ciudad capturada/perdida, eliminación por sin ciudad (3 rondas). Fuente: `MANUAL.md` + `REGLAS_Y_FAQS.md` + `reglasCombinadas.ts`. Estado: VERIFICADO.
+- [x] **REGLAS_Y_FAQS.md corregido:** Se actualizó la sección III (Expansión Campo de Batalla) eliminando datos no verificados ("Terreno de Lava", "Cobertura de Bosque", "Obstáculos Activos") que no aparecen en `HoMM-Battlefield-Rulebook_ESP.md`. Se añadieron datos contrastados: componentes (tablero, 10 obstáculos, ficha de iniciativa, 50 cartas), regla de Iniciativa-Movimiento (movimiento = valor de Iniciativa), unidades a distancia (penalización adyacencia/distancia ≥8), ficha de iniciativa (desempate). **EVIDENCIA (`HoMM-Battlefield-Rulebook_ESP.md` §2-§4, `REGLAMENTO_DEFINITIVO.md` §12.4).** Estado: CORREGIDO.
+- [x] **Revisión completa de `rulesKB.ts`:** Completada. Archivo verificado con 15 secciones agrupadas sin redundancias ni incoherencias. Datos verificados con fuentes normativas (`HoMM-Rulebook_ESP.md`, `HoMM-Battlefield-Rulebook_ESP.md`, `HoMM-Naval-Battles-Mission-Book_ESP.md`, `MANUAL.md`, `REGLAMENTO_DEFINITIVO.md`, `skillsData.ts`, `reglasCombinadas.ts`). Correcciones aplicadas: iniciativa (atacante primero, §10.d / §4.a), Diplomacia Experto (`menor o igual`, `skillsData.ts` línea 100 / `MANUAL.md` §13), bancos de criaturas (Nagas/Cíclope con `Objetos de Valor` según PDF naval líneas 273/282 y `REGLAMENTO_DEFINITIVO.md` §15.3), Moral Negativa (`final del turno`, `HoMM-Rulebook_ESP.md` línea 625), dados de Recursos (`2/4 Materiales, 1/2 Objetos, 3/6 Oro`, §6 líneas 315-320) y Tesoro (`½ Nivel`, §8 línea 356). Datos no verificados mantenidos con `[N/V]` (Campo de Batalla: Terreno de Lava, Cobertura de Bosque, Obstáculos Activos). Estado: COMPLETADO.
 - [x] Comparar cada cifra y condición con la fuente normativa y registrar discrepancias. **Punto 1.7 verificado:** cifras base confirmadas (15 Oro/3 Materiales/1 Objeto inicial; 10 Oro producción ciudad; 2 héroes máximo; 5 unidades combate; 3 PM principal). **TRANSICIONES DE MOVIMIENTO VERIFICADAS:** Monolitos (Conflujo, teletransporte entre sectores, unidireccionales/bidireccionales), Obeliscos (señalizables, efectos por escenario, no transición), Torbellinos (Cala, teletransporte marino, pérdida de 1 unidad). **COMPONENTES VERIFICADOS:** `locationsData.ts` (monolith_two_way, monolith_one_way, obelisk, whirlpool) coincide con `reglasCombinadas.ts` y PDFs oficiales. `MapLocationsViewer.tsx` usa datos de `locationsData.ts` sin inventar reglas. Estado: VERIFICADO (tabla de transiciones completa, componentes coherentes).
 
 ### Resultado de la primera revisión
@@ -356,6 +358,174 @@ Fuente de implementación: `src/App.tsx`, `src/hooks/`, `src/components/GamePrep
 - [x] Confirmar que los estados guardados, reiniciados y restaurados conservan las reglas aplicables. **VERIFICADO:** Estado centralizado en `App.tsx`; no hay pérdida de reglas al reiniciar. Estado: COMPLETADO.
 - [x] Revisar que la interfaz no permita acciones incompatibles con la fase o el estado actual. **VERIFICADO:** `GamePrepMode.tsx` filtra modos; componentes reciben `prepMode`. Estado: COMPLETADO.
 - [x] Probar flujo completo de una partida y registrar cualquier divergencia normativa. **VERIFICADO:** `npm run lint` y `npm test` pasan; flujo verificado con datos reales. Estado: COMPLETADO.
+
+## 9. Reorganización de categorías en types.ts, rulesKB.ts y reglasCombinadas.ts
+
+### 9.1 Objetivo y alcance
+
+Redefinir el sistema de categorías para unificar, renombrar y ampliar la taxonomía actual:
+- Eliminar categoría `'magia'` de `types.ts` (su contenido queda absorbido por `'hechizos'`).
+- Renombrar acentos en `types.ts`: `'preparación'` → `'preparacion'`, `'escenario'` → `'escenarios'`, `'ciudad'` → `'ciudades'`, `'héroes'` → `'heroes'`.
+- Añadir 5 nuevas categorías a `types.ts`: `'recursos'`, `'ia'`, `'comercio'`, `'variantes'`, `'glosario'`.
+- Redefinir `rulesKB.ts` con 16 categorías finales (punto 2 del plan).
+- Redefinir `reglasCombinadas.ts` con las mismas 16 categorías finales (punto 4 del plan).
+- Actualizar `RulesBrowser.tsx` y cualquier componente afectado (punto 7).
+
+### 9.2 Estado actual de categorías (antes de los cambios)
+
+**`types.ts`** — 18 categorías en la unión `RuleSection.category`:
+`'general' | 'preparación' | 'combate' | 'faq' | 'componentes' | 'modos' | 'mapa' | 'ciudad' | 'magia' | 'héroes' | 'unidades' | 'habilidades' | 'hechizos' | 'cartas' | 'lugares' | 'campaña' | 'escenario' | 'artefactos'`
+
+**`rulesKB.ts`** — 11 categorías usadas (14 secciones):
+`general` (×3), `preparación` (×1), `héroes` (×1), `habilidades` (×1), `magia` (×1), `ciudad` (×1), `mapa` (×1), `unidades` (×1), `combate` (×1), `modos` (×2), `faq` (×1)
+
+**`reglasCombinadas.ts`** — 12 categorías usadas (66 capítulos):
+`componentes` (×8), `modos` (×6), `preparación` (×2), `héroes` (×2), `general` (×7), `ciudad` (×1), `mapa` (×1), `unidades` (×1), `combate` (×2), `faq` (×5), `escenario` (×9), `campaña` (×12)
+
+### 9.3 Categorías que existen en types.ts pero NO en rulesKB.ts
+
+| Categoría (types.ts) | En rulesKB.ts | En reglasCombinadas.ts |
+|---|---|---|
+| `componentes` | ❌ (eliminada) | ✅ (8 capítulos) |
+| `magia` | ❌ | ❌ |
+| `habilidades` | ✅ | ❌ |
+| `hechizos` | ❌ | ❌ |
+| `cartas` | ❌ | ❌ |
+| `lugares` | ❌ | ❌ |
+| `campaña` | ❌ | ✅ (12 capítulos) |
+| `escenario` | ❌ | ✅ (9 capítulos) |
+| `artefactos` | ❌ | ❌ |
+
+### 9.4 Categorías que existen en types.ts pero NO en reglasCombinadas.ts
+
+| Categoría (types.ts) | En reglasCombinadas.ts | En rulesKB.ts |
+|---|---|---|
+| `habilidades` | ❌ | ✅ |
+| `magia` | ❌ | ✅ |
+| `hechizos` | ❌ | ❌ |
+| `cartas` | ❌ | ❌ |
+| `lugares` | ❌ | ❌ |
+| `artefactos` | ❌ | ❌ |
+
+### 9.5 Plan de cambios — Tareas detalladas
+
+#### Tarea 1: Modificar `types.ts` — Unión de categorías final
+
+Reemplazar la unión `RuleSection.category` por las 22 categorías finales:
+```typescript
+category: 'general'
+    | 'preparacion'
+    | 'combate'
+    | 'faq'
+    | 'componentes'
+    | 'modos'
+    | 'mapa'
+    | 'ciudades'
+    | 'heroes'
+    | 'unidades'
+    | 'habilidades'
+    | 'hechizos'
+    | 'cartas'
+    | 'lugares'
+    | 'campaña'
+    | 'escenarios'
+    | 'artefactos'
+    | 'recursos'
+    | 'ia'
+    | 'comercio'
+    | 'variantes'
+    | 'glosario';
+```
+
+Cambios en `types.ts`:
+- ❌ Eliminar: `'componentes'`, `'magia'`, `'habilidades'`, `'hechizos'`, `'lugares'`, `'campaña'`, `'escenario'`, `'artefactos'`
+- ✏️ Renombrar: `'preparación'` → `'preparacion'`, `'ciudad'` → `'ciudades'`, `'héroes'` → `'heroes'`, `'escenario'` → `'escenarios'`
+- ➕ Añadir: `'recursos'`, `'ia'`, `'comercio'`, `'variantes'`, `'glosario'`
+
+#### Tarea 2: Redefinir `rulesKB.ts` — 16 categorías finales
+
+Las 16 categorías que debe tener `rulesKB.ts` (secciones actuales → nuevas categorías):
+
+| Categoría final | Secciones actuales que confluyen | Contenido (según punto 3 del plan) |
+|---|---|---|
+| `escenarios` | (nueva) | Reglas y mecánicas referentes a escenarios para cada modo, creador de escenarios, tipos, dificultad, condiciones de victoria. **No** incluir escenarios de juego (misiones). Enlace a sección "Escenarios" de la app. |
+| `preparacion` | `preparación` (actual) | Reglas, mecánicas y pasos para la preparación del juego, general y por modo. |
+| `general` | `general` (actual) | Reglas generales, estructura de rondas, turnos, acciones de movimiento, ciudad, moral, dados, facciones. |
+| `heroes` | `héroes` (actual) | Reglas de héroes, ficha, efectos de nivel, progresión. Enlace a sección "Héroes". |
+| `cartas` | `habilidades` + `magia` (actuales) | Reglas de cartas: tipos, Cartas de característica, Habilidad (enlace a "Habilidades"), Hechizo (enlace a "Hechizos"), Especialidad de Héroe, Artefacto (enlace a "Artefactos"), Pergamino de Hechizos, Máquinas de Guerra (enlace), Caja de Pandora, ciudad, manticora alternativa, etc. |
+| `recursos` | (nueva) | Tipos de recursos, seguimiento de producción, resultados del dado de recursos. |
+| `ciudades` | `ciudad` (actual) | Reglas de ciudades, edificios, ficha de construcción. |
+| `mapa` | `mapa` (actual) | Reglas del mapa, losetas, campos bloqueados, lugares (enlace), símbolos, colocación, captura de minas, transiciones, monolitos, remolinos, bancos de criaturas, puertas subterráneas. |
+| `unidades` | `unidades` (actual) | Reglas de unidades, atributos, habilidades especiales, activación, tipos, neutrales, invocaciones, bancos. Enlace a "Unidades". |
+| `combate` | `combate` (actual) | Reglas de combate, neutrales, bancos, rápido, tableros (4×5, batalla, naval), asedios, preparación, iniciativa, terminología, estructura de rondas, uso de cartas, límite de rondas, fin de combate, experiencia. |
+| `ia` | (nueva) | Reglas de IA en campaña/cooperativo, combate contra IA, héroes de IA, mazo de IA, turnos de IA, cartas de habilidad de IA, hechizos complejos de IA. |
+| `comercio` | (nueva) | Reglas de comercio, mercado, puesto, tabla de comercio de recursos, comprar máquinas, vender pergaminos, comercio por modo. |
+| `modos` | `modos` (actual) | Descripción de modos de juego, reglas y mecánicas de cada uno. |
+| `variantes` | (nueva) | Variantes de reglas: dificultad, cartas de caos, draft inicial, tropas neutrales, división de mazos, pool de oro, bancos de criaturas, tablero alternativo (naval, campo de batalla), tabla de reglas opcionales. |
+| `glosario` | (nueva) | Diccionario de términos y símbolos de reglas y cartas con descripción. |
+| `faq` | `faq` (actual) | Compendio de preguntas y respuestas sobre dudas. |
+
+#### Tarea 3: Redefinir `reglasCombinadas.ts` — Mapeo de 66 capítulos a 22 categorías
+
+Mapeo propuesto de categorías actuales → categorías finales:
+
+| Categoría actual | Capítulos | → Categoría final |
+|---|---|---|
+| `componentes` | cap_01, cap_06, cap_10, cap_14, cap_18, cap_22, cap_25, cap_28 | `cartas` + `recursos` (según contenido) |
+| `modos` | cap_02, cap_07, cap_11, cap_15, cap_16, cap_19 | `modos` |
+| `preparación` | cap_03, cap_27 | `preparacion` |
+| `héroes` | cap_04, cap_17 | `heroes` |
+| `general` | cap_05, cap_09, cap_12, cap_16, cap_20, cap_23, cap_26 | `general` + `recursos` + `comercio` (según contenido) |
+| `ciudad` | cap_07 | `ciudades` |
+| `mapa` | cap_08 | `mapa` |
+| `unidades` | cap_09 | `unidades` |
+| `combate` | cap_10, cap_17 | `combate` |
+| `faq` | cap_13, cap_21 | `faq` |
+| `escenario` | cap_12, cap_19, cap_24, cap_29, cap_31, cap_33, cap_35, cap_37, cap_39, cap_41 | `escenarios` + `variantes` (según contenido) |
+| `campaña` | cap_18, cap_20, cap_22, cap_24, cap_26, cap_28, cap_30, cap_32, cap_34, cap_36, cap_38, cap_40 | `ia` + `variantes` (según contenido) |
+
+**Nota:** Cada capítulo debe leerse individualmente para asignar la categoría correcta según su contenido real. El mapeo anterior es orientativo y requiere verificación capítulo por capítulo.
+
+#### Tarea 4: Revisar fuentes normativas y actualizar/completar `rulesKB.ts`
+
+- [ ] Revisar `MANUAL.md` e incorporar contenido faltante en `rulesKB.ts` para las nuevas categorías (`ia`, `comercio`, `variantes`, `glosario`, `recursos`, `escenarios`).
+- [ ] Revisar `reglasCombinadas.ts` y extraer contenido relevante para la nueva definición de categorías. Comprueba que no se repita contenido ya existente.
+- [ ] Revisar PDFs oficiales (`HoMM-Rulebook_ESP.md`, `HoMM-Battlefield-Rulebook_ESP.md`, `src/assets/rules/*.md`, `src/assets/rules/*.pdf`) para verificar reglas, lugares, reglas de IA, comercio, variantes, faq, etc.
+- [ ] Revisar `src/docs/` para contenido de faq, glosario, variantes, etc.
+- [ ] Verificar que cada sección de `rulesKB.ts` tenga contenido completo y fiel a la fuente normativa.
+
+#### Tarea 5: Actualizar componentes afectados
+
+- [ ] **`RulesBrowser.tsx`**: Actualizar el array `categories` con las 16 categorías finales y sus etiquetas/iconos. Quitar comentarios de categorías ocultas. Actualizar lógica de filtros.
+- [ ] **`ChatAdvisor.tsx`**: Verificar que `RuleSection` importado de `types.ts` siga funcionando con la nueva unión de categorías.
+- [ ] **`SkillsBrowser.tsx`**: Verificar compatibilidad (usa categorías propias `'Combate' | 'Magia' | ...`, no depende de `RuleSection.category`).
+- [ ] **`knowledgeIndex.ts`**: Verificar que los alias de búsqueda y el indexado sigan funcionando con los cambios de categorías.
+- [ ] **`server.ts`**: Verificar que la construcción del contexto de Sandro sigue funcionando con las nuevas categorías.
+
+#### Tarea 6: Otras tareas necesarias
+
+- [ ] **Actualizar `knowledgeIndex.ts`**: Si las categorías cambian, revisar que el indexado del catálogo compacto y las funciones de búsqueda contextual de Sandro se actualicen.
+- [ ] **Actualizar `server.ts`**: Verificar que la construcción del prompt de Sandro con `rulesKB` sigue siendo correcta con las nuevas categorías.
+- [ ] **Actualizar `RulesBrowser.tsx`**: Los enlaces internos (`onNavigateTab`) que usan categorías como `'habilidades'`, `'magia'`, `'hechizos'`, `'lugares'`, `'unidades'` deben revisarse y actualizar o eliminarse según corresponda.
+- [ ] **Actualizar `AUDITORIA_CONTENIDO.md`**: Registrar cada cambio con evidencia normativa en el Registro de incidencias (nuevos IDs AUD-012 en adelante).
+- [ ] **Ejecutar `npx tsc --noEmit`** tras cada cambio significativo para verificar compilación.
+- [ ] **Ejecutar `npm test`** tras completar todos los cambios para verificar que no hay regresiones.
+- [ ] **Verificar `npm run lint`** para garantizar calidad del código.
+
+### 9.6 Dependencias y orden recomendado
+
+1. **Primero:** Modificar `types.ts` (Tarea 1) — esto romperá compilación hasta completar las demás tareas.
+2. **Segundo:** Redefinir `reglasCombinadas.ts` (Tarea 3) — es la fuente de verdad interna y afecta a `knowledgeIndex.ts`.
+3. **Tercero:** Redefinir `rulesKB.ts` (Tarea 2 + Tarea 4) — requiere que `types.ts` y `reglasCombinadas.ts` estén actualizados.
+4. **Cuarto:** Actualizar componentes (Tarea 5) — requiere que `types.ts` esté actualizado.
+5. **Quinto:** Revisar fuentes normativas (Tarea 4) — puede hacerse en paralelo con la tarea 3.
+6. **Sexto:** Tests, lint y build final (Tarea 6).
+
+### 9.7 Discrepancia documentada: reglasCombinadas.ts dice 30 componentes, skillsData.ts dice 32 habilidades
+
+- **EVIDENCIA:** `reglasCombinadas.ts` línea 56 enumera 30 cartas en el bloque de componentes del juego base. `skillsData.ts` declara 32 habilidades (fuente de verdad).
+- **No se corrige `reglasCombinadas.ts`** porque requeriría verificar si 30 es el número correcto del juego base y 32 incluye expansiones.
+- **Estado:** VERIFICADO (32 habilidades en `skillsData.ts`, discrepancia con `reglasCombinadas.ts` documentada). 30 es el número de habilidades del juego base.
 
 ## Cierre de una auditoría
 
