@@ -567,6 +567,7 @@ Posee 3 PM. Orden de prioridad de acciones:
 
 * **Eliminación por Asedio:** Quedar sin ciudades o asentamientos durante 3 rondas completas implica eliminación.
 * Derrota del héroe principal defendiendo la última ciudad resulta en eliminación inmediata.
+* **Victoria** Derrotar a todas las facciones enemigas. Para hacerlo, captura todas las ciudades y asentamientos controlados por el enemigo.
 
 ### c) Tabla de Comercio
 

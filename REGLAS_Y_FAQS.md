@@ -294,11 +294,12 @@ Las expansiones añaden nuevas capas de estrategia marina, exploración subterr�
 > * **Niebla Profunda:** No puedes revelar ni buscar losetas subterráneas usando la acción de buscar (Scouting) desde la superficie; es obligatorio que tu héroe ingrese físicamente al subsuelo para explorar y desvelar las losetas oscuras. Abundan los ejércitos de oro de la facción de Mazmorra.
 
 ### ⚔️ III. Expansión de Campo de Batalla y Obstáculos (Battlefield)
-> 📝 **Campos Dinámicos y Terrenos Tácticos:** Introduce terrenos y obstáculos con efectos activos en la reja de batalla de 4x5:
-> * **Obstáculos Activos:** Ruinas, lodo y arenas movedizas que bloquean el avance de regimientos cuerpo a cuerpo. Las minas terrestres infligen heridas directas y los campos de fuerza detienen el movimiento táctico.
-> * **Cobertura de Bosque:** Los hexágonos con vegetación densa conceden cobertura de **+1 Defensa** pasiva contra proyectiles de arqueros enemigos.
-> * **Terreno de Lava:** Incrementa el daño por fuego de magias destructivas elementales en **+1 herida** directa.
-> * **⚡ Regla de Iniciativa-Movimiento:** En los mapas tácticos de esta expansión, las criaturas no tienen velocidades fijas. Su valor numérico de **Iniciativa (⚡)** dicta de forma exacta la cantidad de hexágonos de movimiento táctico de melé que pueden recorrer en su fase de activación. Por lo tanto, hechizos como *Celeridad* o *Ralentizar* aumentan o reducen directamente el alcance físico de avance de tus tropas.
+> 📝 **Campos Dinámicos y Terrenos Tácticos:** Introduce el gran Tablero Hexagonal de Campo de Batalla (expansión Battlefield) con dos modos: **Aventura** (cartas de aventura + combate final) y **Escaramuzas** (combate directo con mazos preconstruidos). **EVIDENCIA (`HoMM-Battlefield-Rulebook_ESP.md`):** Componentes: tablero, 10 obstáculos (doble cara: efecto / obstáculo / muralla-puerta), ficha de iniciativa, 50 cartas de aventura, mazos de moral positiva/negativa. No hay datos de "Terreno de Lava", "Cobertura de Bosque" ni "Obstáculos Activos" como efectos de terreno en la fuente normativa.
+>
+> * **Obstáculos:** Fichas de doble cara divididas en 3 tipos (efecto, obstáculo, muralla/puerta). Sustituyen obstáculos del juego base. Ningún obstáculo puede quedar adyacente a otro ni a zona de despliegue. Las miniaturas también cuentan como obstáculos (`HoMM-Battlefield-Rulebook_ESP.md` §2, §4).
+> * **Regla de Iniciativa-Movimiento:** Confirmada (`HoMM-Battlefield-Rulebook_ESP.md` §4a; `REGLAMENTO_DEFINITIVO.md` §12.4; `Heroes3_Rules_Rewrite_2_0_dev.md` §18): el movimiento de cada unidad equivale a su valor de Iniciativa (ej. Iniciativa 8 = 8 casillas). Se marca con cubo de facción; cubos se retiran al inicio de la siguiente ronda.
+> * **Unidades a Distancia:** Pueden moverse O atacar (no ambas). Penalización por adyacencia y por distancia ≥8 casillas (`HoMM-Battlefield-Rulebook_ESP.md` §4a).
+> * **Ficha de Iniciativa:** Al inicio del combate, el jugador inicial recibe la ficha; se usa para desempatar iniciativa (actúa primero). Una vez activadas todas las unidades con esa iniciativa, pasa al otro jugador (`HoMM-Battlefield-Rulebook_ESP.md` §4a; `REGLAMENTO_DEFINITIVO.md` §12.4).
 
 ---
 
