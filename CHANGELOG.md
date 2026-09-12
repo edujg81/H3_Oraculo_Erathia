@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.8](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.7...v2.1.8) (2026-09-12)
+
+
+### Bug Fixes
+
+* ajuste de categorías en reglas. Se afina el trasfondo de Sandro. ([e14876b](https://github.com/edujg81/H3_Oraculo_Erathia/commit/e14876bf01a6e78148dac6dca9f0aec266f0d6f9))
+
 ## [2.1.7](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.6...v2.1.7) (2026-09-11)
 
 
