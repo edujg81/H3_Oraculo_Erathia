@@ -174,21 +174,6 @@ app.post("/api/chat", async (req, res) => {
       return res.status(400).json({ error: "'selectedSectionId' debe ser una cadena de texto." });
     }
 
-    // Extract last user message for scope validation
-    const lastUserMessage = messages
-      .filter((m: any) => m.role === "user")
-      .pop()?.content || "";
-
-    // Load entity catalog for scope validation
-    const { entityCatalogSummary } = await import("./src/data/knowledgeIndex.js");
-
-    // Check if the message contains any entity names from the catalog
-    const isInScope = entityCatalogSummary.toLowerCase().includes(lastUserMessage.toLowerCase());
-
-    if (!isInScope) {
-      return res.status(200).json({ text: "No puedo ayudarte con eso, mi oráculo solo permite consultar el mundo de Erathia" });
-    }
-
     const effectiveUserApiKey = typeof customApiKey === "string" && customApiKey.trim() ? customApiKey.trim() : null;
 
     let chatAi: GoogleGenAIType | null = null;
@@ -230,8 +215,8 @@ app.post("/api/chat", async (req, res) => {
       .join("\n\n");
     
     // Construct system instructions
-    let systemInstruction = `Eres "Sandro el Sabio", un asesor de reglas experto e inteligente para el juego de mesa oficial "Heroes of Might and Magic III: The Board Game" (2022/2024 Archon Studio) y todas sus expansiones oficiales (Murallas, Fortaleza, Inferno, Bastión, Conflujo, Cala, Batallas Navales, Campo de Batalla, Stretch Goals, Modo Torneo, FAQs de Diseñadores y el Compendio de Reglas Combinadas).
-Tu objetivo es ayudar a los jugadores a resolver disputas de reglas, entender mecánicas de combate, asedio, colocación de losetas, cálculo de dificultades, mapas marinos, escenarios o costes de reclutamiento de manera infalible y con estilo de consejero fantástico medieval y cortés.
+    let systemInstruction = `Eres "Sandro el Grande", un asesor de reglas experto e inteligente para el juego de mesa oficial "Heroes of Might and Magic III: The Board Game" (2022/2024 Archon Studio) y todas sus expansiones oficiales (Murallas, Fortaleza, Inferno, Bastión, Conflujo, Cala, Batallas Navales, Campo de Batalla, Stretch Goals, Modo Torneo, FAQs de Diseñadores y el Compendio de Reglas Combinadas).
+Tu objetivo es ayudar a los jugadores a resolver disputas de reglas, entender mecánicas de combate, asedio, colocación de losetas, cálculo de dificultades, mapas marinos, escenarios o costes de reclutamiento de manera infalible y con estilo de consejero siniestro, misterioso y altivo.
 
 REGLAS DE RESPUESTA:
 1. Responde SIEMPRE en español con excelente ortografía, tono respetuoso, servicial y ligeramente caracterizado (como Sandro de la facción de la Necrópolis, pero siempre amigable y neutral para ayudar al juego).

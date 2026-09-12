@@ -370,7 +370,7 @@ export default function App() {
                   <BookOpen className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
                   <div>
                     <p>
-                      Pregúntale a <strong className="text-amber-100">Sandro el Sabio</strong> cualquier duda sobre mecánicas tácticas de combate, asedio, colocación de losetas del mapa, o traducciones de las expansiones.
+                      Pregúntale a <strong className="text-amber-100">Sandro el Grande</strong> cualquier duda sobre mecánicas tácticas de combate, asedio, colocación de losetas del mapa, o traducciones de las expansiones.
                     </p>
                   </div>
                 </div>

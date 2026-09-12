@@ -5,7 +5,7 @@
 [![Node.js](https://img.shields.io/badge/node-22.20%2B-blue)](https://nodejs.org/)
 [![Vite](https://img.shields.io/badge/vite-6.x-000000)](https://vitejs.dev/)
 
-Este sistema es un asistente digital integral diseñado para enriquecer las partidas de tablero de **Heroes of Might and Magic III: Board Game**. Con una interfaz oscura optimizada ("Slate Dark") que evoca la estética clásica del juego, combina una base de reglas interactiva, utilidades de control en tiempo real (turnos, dados, rondas) y un oráculo impulsado por Inteligencia Artificial (**Sandro el Sabio**) para resolver cualquier disputa de reglas al instante.
+Este sistema es un asistente digital integral diseñado para enriquecer las partidas de tablero de **Heroes of Might and Magic III: Board Game**. Con una interfaz oscura optimizada ("Slate Dark") que evoca la estética clásica del juego, combina una base de reglas interactiva, utilidades de control en tiempo real (turnos, dados, rondas) y un oráculo impulsado por Inteligencia Artificial (**Sandro el Grande**) para resolver cualquier disputa de reglas al instante.
 
 ---
 
@@ -14,7 +14,7 @@ Este sistema es un asistente digital integral diseñado para enriquecer las part
 La aplicación está organizada en un sistema modular interactivo y reactivo:
 
 1. **Consulta a Sandro (Chat inteligente)**
-   * Chatea con **Sandro el Sabio**, un oráculo de IA con conocimiento profundo sobre el reglamento, la colocación de losetas, combate táctico, asedios y cartas de hechizo.
+   * Chatea con **Sandro el Grande**, un oráculo de IA con conocimiento profundo sobre el reglamento, la colocación de losetas, combate táctico, asedios y cartas de hechizo.
    * Permite consultas personalizadas directas para resolver dudas rápidas sin interrumpir el flujo de juego.
 
 2. **Reglas y FAQs (Rules Browser)**
@@ -255,4 +255,4 @@ Este proyecto es una herramienta de apoyo creada por <a href="https://github.com
 
 ---
 
-*Desarrollado en honor a Sandro el Sabio, el nigromante supremo de Deyja.* 💀🔮
+*Desarrollado en honor a Sandro el Grande, el nigromante supremo de Deyja.* 💀🔮

@@ -352,7 +352,7 @@ export default function ChatAdvisor({
       });
 
       if (!response.ok) {
-        let errorMsg = 'Error al conectar con Sandro el Sabio.';
+        let errorMsg = 'Error al conectar con Sandro el Grande.';
         try {
           const data = await response.json();
           errorMsg = data.error || errorMsg;
