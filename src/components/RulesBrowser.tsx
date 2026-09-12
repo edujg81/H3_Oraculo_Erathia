@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { rulesKB } from '../data/rulesKB';
-import { GLOSARIO_ATRIBUTOS } from '../data/glosarioAtributos';
-//import { reglasCombinadas } from '../data/reglasCombinadas';
+//import { reglasCombinadas } from '../data/reglasCombinadas'; // Comentado temporalmente para auditoría Tarea 5
 import { RuleSection } from '../types';
 import { 
   Search, BookOpen, Layers, Swords, MessageSquareCode, Package, Compass, 
@@ -469,36 +468,19 @@ export default function RulesBrowser({
     { id: 'comercio', label: 'Comercio', icon: Coins },
     { id: 'variantes', label: 'Variantes', icon: Plus },
     { id: 'glosario', label: 'Glosario', icon: HelpCircle },
-    { id: 'faq', label: 'FAQ / Glosario', icon: MessageSquareCode },
+    { id: 'faq', label: 'FAQs', icon: MessageSquareCode },
   ];
 
   const filteredSections = useMemo(() => {
     return rulesKB.filter(section => {
-      // 1. Matches Category
       const matchesCategory = selectedCategory === 'all' || section.category === selectedCategory;
-      
-      // 2. Matches Search Query
       const matchesSearch = searchQuery === '' || 
         section.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         section.content.toLowerCase().includes(searchQuery.toLowerCase());
 
-      // 3. Board mode filter: separa reglas 4×5 vs Campo de Batalla
-      // EVIDENCIA: HoMM-Battlefield-Rulebook_ESP.md (líneas 14-15: "Modo Aventura" y "Modo Escaramuzas" con tablero hexagonal)
-      // EVIDENCIA: reglasCombinadas.ts (líneas 398-401: 4×5 estándar vs Campo de Batalla con 2 fichas de obstáculo)
-      // El modo campodebatalla muestra todas las secciones; otros modos ocultan las de Campo de Batalla
-      const isBattlefieldSection = 
-        section.id.includes('battlefield') || 
-        section.id.includes('campo_batalla') ||
-        section.title.toLowerCase().includes('campo de batalla') ||
-        section.title.toLowerCase().includes('escaramuza') ||
-        section.title.toLowerCase().includes('modo aventura');
-      
-      // Si es modo Campo de Batalla (o no hay filtro), mostrar todo; si no, ocultar secciones de Battlefield
-      const matchesBoardMode = !prepMode || prepMode === 'campodebatalla' || !isBattlefieldSection;
-
-      return matchesCategory && matchesSearch && matchesBoardMode;
+      return matchesCategory && matchesSearch;
     });
-  }, [selectedCategory, searchQuery, prepMode]);
+  }, [selectedCategory, searchQuery]);
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 p-1">
@@ -577,27 +559,31 @@ export default function RulesBrowser({
                     <span className="px-2 py-0.5 rounded text-[10px] font-mono uppercase bg-slate-800 text-amber-400 border border-amber-900/30">
                       {section.category}
                     </span>
-                    {onNavigateTab && (section.category === 'habilidades' || section.id === 'deck_building_and_secondary_skills') && (
-                      <button
-                        onClick={() => onNavigateTab('skills')}
-                        className="px-2.5 py-1 bg-amber-600 hover:bg-amber-500 text-white rounded text-xs transition duration-200 cursor-pointer font-bold flex items-center gap-1 shadow-sm"
-                        title="Ir al visor completo de habilidades"
-                      >
-                        <Award className="w-3.5 h-3.5 text-amber-200" />
-                        <span>Ver 32 Habilidades ➔</span>
-                      </button>
+                    {onNavigateTab && (section.category === 'cartas' || section.id === 'deck_building_and_secondary_skills' || section.id === 'magic_system_and_spells_catalog') && (
+                      <>
+                        {section.id === 'deck_building_and_secondary_skills' && (
+                          <button
+                            onClick={() => onNavigateTab('skills')}
+                            className="px-2.5 py-1 bg-amber-600 hover:bg-amber-500 text-white rounded text-xs transition duration-200 cursor-pointer font-bold flex items-center gap-1 shadow-sm"
+                            title="Ir al visor completo de habilidades"
+                          >
+                            <Award className="w-3.5 h-3.5 text-amber-200" />
+                            <span>Ver 32 Habilidades ➔</span>
+                          </button>
+                        )}
+                        {section.id === 'magic_system_and_spells_catalog' && (
+                          <button
+                            onClick={() => onNavigateTab('spells')}
+                            className="px-2.5 py-1 bg-amber-600 hover:bg-amber-500 text-white rounded text-xs transition duration-200 cursor-pointer font-bold flex items-center gap-1 shadow-sm"
+                            title="Ir al visor completo de hechizos"
+                          >
+                            <Sparkles className="w-3.5 h-3.5 text-amber-200" />
+                            <span>Ver Hechizos ➔</span>
+                          </button>
+                        )}
+                      </>
                     )}
-                    {onNavigateTab && (section.category === 'hechizos' || section.id === 'magic_system_and_spells_catalog') && (
-                      <button
-                        onClick={() => onNavigateTab('spells')}
-                        className="px-2.5 py-1 bg-amber-600 hover:bg-amber-500 text-white rounded text-xs transition duration-200 cursor-pointer font-bold flex items-center gap-1 shadow-sm"
-                        title="Ir al visor completo de hechizos"
-                      >
-                        <Sparkles className="w-3.5 h-3.5 text-amber-200" />
-                        <span>Ver Hechizos ➔</span>
-                      </button>
-                    )}
-                    {onNavigateTab && (section.category === 'mapa' || section.category === 'lugares' || section.id === 'adventure_map_tiles_and_locations') && (
+                    {onNavigateTab && (section.category === 'mapa' || section.id === 'adventure_map_tiles_and_locations') && (
                       <button
                         onClick={() => onNavigateTab('locations')}
                         className="px-2.5 py-1 bg-amber-600 hover:bg-amber-500 text-white rounded text-xs transition duration-200 cursor-pointer font-bold flex items-center gap-1 shadow-sm"

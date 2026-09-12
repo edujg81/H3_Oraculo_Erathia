@@ -2,7 +2,7 @@
 
 Este documento reúne todas las **Aclaraciones Oficiales de Reglas**, las **Preguntas Frecuentes (FAQs)** de la comunidad de jugadores y las resoluciones de casos de esquina validados por los diseñadores de *Heroes of Might and Magic III: The Board Game*.
 
-Compilado en **Español de España** utilizando la terminología oficial, este compendio sirve de apoyo directo a la base de conocimiento de **Sandro el Sabio**.
+Compilado en **Español de España** utilizando la terminología oficial, este compendio sirve de apoyo directo a la base de conocimiento de **Sandro el Grande**.
 
 ---
 
@@ -320,7 +320,7 @@ Para las partidas en formato Campaña Solitaria contra la Inteligencia Artificia
 
 ## 11. 🔮 El Oráculo de Sandro: Funcionamiento Técnico
 
-Para garantizar que **Sandro el Sabio** te ofrezca respuestas de la máxima precisión reglamentaria sin sufrir de alucinaciones ni inventar reglas, la aplicación utiliza un sistema avanzado de **Indexación de Conocimiento**:
+Para garantizar que **Sandro el Grande** te ofrezca respuestas de la máxima precisión reglamentaria sin sufrir de alucinaciones ni inventar reglas, la aplicación utiliza un sistema avanzado de **Indexación de Conocimiento**:
 
 1. 📚 **Contexto Completo y Estático:** El compendio del reglamento (`src/data/rulesKB.ts`) se inyecta siempre de forma íntegra en el prompt de sistema de la API de Gemini para cada consulta del chat.
 2. 🔎 **Contexto Dinámico bajo Demanda (`src/data/knowledgeIndex.ts`):** Para evitar saturar el límite de tokens y optimizar costos de procesamiento con los datos masivos de los **64 héroes**, **~156 unidades**, **32 habilidades secundarias** y **10 ciudades**:

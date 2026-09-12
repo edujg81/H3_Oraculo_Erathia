@@ -536,7 +536,7 @@ PREGUNTAS FRECUENTES:
   {
     id: "cap_11_jugador_vs_ia",
     title: "11. Jugador contra IA",
-    category: "modos",
+    category: "ia",
     content: `El modo Campaña usa héroes de IA con 2 mazos: mazo de IA (parecido a habilidad/artefacto, variable según dificultad) y mazo de hechizos.
 
 REGLAS DE COMBATE DE LA IA: 
@@ -568,7 +568,7 @@ PREGUNTAS FRECUENTES:
   {
     id: "cap_12_opciones_juego",
     title: "12. Opciones de Juego, Dificultad, Condiciones de Victoria y Comercio",
-    category: "variantes",
+    category: "general",
     content: `TABLA DE REGLAS OPCIONALES (modifican la dificultad):
 Aumenta la dificultad: las ciudades señalizadas no producen recursos (aunque se pueden usar sus edificios); no se puede volver a tirar dados; dados de tesoro/recursos solo dan 1 recurso; sin bonificadores iniciales.
 Disminuye la dificultad: empiezas con un héroe secundario; cada unidad hace al menos 1 punto de daño en un ataque; todas las minas/asentamientos dan el doble de ingresos; puedes intercambiar recursos en cualquier momento y el mercadillo se vuelve visitable dando 1 carta de artefacto.
@@ -806,7 +806,7 @@ COMPONENTES DE LA EXPANSIÓN:
   {
     id: "cap_02_exp_metas_ampliadas_mecanicas",
     title: "Expansión Metas Ampliadas: 2. Regla de Miniaturas y Nuevos Lugares",
-    category: "general",
+    category: "lugares",
     content: `NUEVAS MECÁNICAS DE JUEGO (METAS AMPLIADAS):
 
 MINIATURAS EN JUEGO (regla opcional): al comienzo de la partida, prepara las miniaturas de las unidades que vayas a utilizar; durante el combate se pueden colocar sobre sus cartas de unidad correspondientes para indicar con claridad su posición en el tablero de combate (las miniaturas de una facción comparten el color del borde de sus cartas). 
@@ -1020,7 +1020,7 @@ FICHAS Y RECURSOS:
   {
     id: "cap_02_exp_fortaleza_mecanicas",
     title: "Expansión Fortaleza: 1. Cartas de Evento y Nuevas Localizaciones (Erudito)",
-    category: "componentes",
+    category: "general",
     content: `NUEVAS MECÁNICAS E INTRODUCCIONES DE LA EXPANSIÓN FORTALEZA:
 
 1. CARTAS DE EVENTO (Nuevo tipo de mazo):
@@ -1164,7 +1164,7 @@ FICHAS Y RECURSOS:
   {
     id: "cap_02_exp_inferno_mecanicas",
     title: "Expansión Inferno: 2. Mecánicas Nuevas (Invocar, Ciudad Aleatoria, Inmunidad de los Efrits)",
-    category: "variantes",
+    category: "general",
     content: `Esta expansión añade la facción Inferno (demonios y criaturas del abismo), introduce la Carta de Característica Potenciada (ver capítulo 5, Construcción del Mazo), la Ciudad Aleatoria y el Eje Estelar (ver capítulo 8, Elementos del Mapa), y comparte las Escuelas de Magia con Metas Ampliadas y las reglas de Modo Alianza con Murallas.
 
 1. CARTAS DE CARACTERÍSTICA POTENCIADA (20 Cartas):
@@ -1593,7 +1593,7 @@ MISIÓN 3 — "La Liberación de Steadwick" (13 rondas): mismo héroe elegido. R
   {
     id: "cap_suplemento_escenario_tutorial",
     title: "Suplemento de Reglas: Escenario Introductorio (Tutorial)",
-    category: "preparacion",
+    category: "escenarios",
     content: `El Suplemento de Reglas es un librito tutorial pensado para empezar a jugar sin necesidad de leer antes el libro de reglas completo, guiando a los jugadores a través de una primera ronda pre-planificada. Su contenido de reglas ya está cubierto en los demás capítulos de este documento; aquí se recoge únicamente el escenario de Enfrentamiento que propone, jugable de forma independiente.
 
 ESCENARIO "TUTORIAL" (2 jugadores, dura 8 rondas): enfrenta a la facción Mazmorra (héroe Mutare) contra la Necrópolis (héroe Tamika), ambas predeterminadas. Preparación del mapa: loseta inicial de Necrópolis (S1) y de Mazmorra (S2); losetas lejanas (II-III) F4, F5, F7, F8 barajadas bocabajo; losetas cercanas (IV-V) N1, N2 barajadas bocabajo. Cada jugador conserva solo la loseta de edificio con vivienda de bronce en su tablero de ciudad, con el resto aparte. Ingresos iniciales «10» de Oro/«2» Materiales/«1» Objeto de Valor. Recursos iniciales 15 de Oro/4 Materiales/1 Objeto de Valor. Cada jugador recibe sus 3 unidades de bronce (cara "unas pocas") como ejército inicial del escenario.
@@ -1737,7 +1737,7 @@ CONDICIONES DE ELIMINACIÓN Y FIN DE ESCENARIO:
   {
     id: "reescritura-05-catalogo-localizaciones-completo",
     title: "Reescritura 5. Compendio Completo Integrado de Localizaciones del Mapa (Visitables, Revisitables y Señalizables)",
-    category: "mapa",
+    category: "lugares",
     content: `COMPENDIO COMPLETO DE CASILLAS Y ESTRUCTURAS DEL MAPA:
 
 CASILLAS VISITABLES (Un solo uso, se marcan con Cubo Negro):

@@ -1,6 +1,6 @@
 # 🔮 Manual de Reglas Oficiales y Expansiones - Heroes III: El Juego de Mesa (V3.0)
 
-Bienvenido, viajero de Erathia, al compendio absoluto de conocimientos y saberes arcanos. Este manual ha sido dictado por **Sandro el Sabio**, nigromante supremo de Deyja, para guiar tus pasos en el campo de batalla, la gestión de tu metrópolis y la exploración del mapa de aventura.
+Bienvenido, viajero de Erathia, al compendio absoluto de conocimientos y saberes arcanos. Este manual ha sido dictado por **Sandro el Grande**, nigromante supremo de Deyja, para guiar tus pasos en el campo de batalla, la gestión de tu metrópolis y la exploración del mapa de aventura.
 
 Este documento consolida las reglas oficiales de la versión 3.0, incluyendo la integración completa de todas las expansiones (*Rampart, Tower, Inferno, Battlefield, Conflux, Cove, Stronghold, Fortress* y mecánicas navales).
 
@@ -433,4 +433,4 @@ Todos los escenarios tienen sus Condiciones de Victoria descritas en el Libro de
 
 ---
 
-*Compilado bajo la supervisión de Sandro el Sabio para gloria y conquista de Erathia.* 💀🔮
+*Compilado bajo la supervisión de Sandro el Grande para gloria y conquista de Erathia.* 💀🔮

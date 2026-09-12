@@ -438,13 +438,13 @@ CATÁLOGO COMPLETO DE HECHIZOS OFICIALES POR ESCUELA DE MAGIA:
   },
 
   // =========================================================================
-  // 8. RECURSOS, ECONOMÍA Y CIUDAD
+  // 8. RECURSOS Y ECONOMÍA
   // =========================================================================
   {
-    id: "resources_economy_and_town_building",
-    title: "8. Economía de Recursos, Desarrollo Urbano y Comercio",
-    category: "ciudades",
-    content: `ECONOMÍA DE RECURSOS, CONSTRUCCIÓN Y COMERCIO:
+    id: "resources_economy",
+    title: "8. Economía de Recursos, Ingresos y Dados de Recursos",
+    category: "recursos",
+    content: `ECONOMÍA DE RECURSOS E INGRESOS:
 
 LOS TRES RECURSOS DEL IMPERIO:
 • Monedas de Oro: Divisa principal. Financia construcciones, reclutamiento de tropas, contratación de héroes y compra de hechizos.
@@ -452,7 +452,20 @@ LOS TRES RECURSOS DEL IMPERIO:
 • Objetos de Valor (Mercurio, Azufre, Gemas, Cristales): Divisas místicas para unidades de élite (Tier Oro y Azur) y cofradías superiores.
 • Sin límite de almacenamiento: Los recursos se acumulan en la reserva sin tope.
 
-DESARROLLO DEL TABLERO DE CIUDAD (TOWN BOARD):
+INGRESOS PASIVOS Y RONDAS DE RECURSOS:
+• Rondas Impares (3, 5, 7, 9, 11, 13, 15): Todos los jugadores cobran ingresos pasivos de Ciudad, Minas y Asentamientos señalizados.
+• Dados de Recursos: Según dificultad (Fácil: 2 dados, Normal: 2 dados elige 1, Difícil: 1 dado, Imposible: 0).`
+  },
+
+  // =========================================================================
+  // 8b. DESARROLLO URBANO Y CIUDADES
+  // =========================================================================
+  {
+    id: "town_building_and_cities",
+    title: "8b. Desarrollo Urbano, Edificios y Ciudades Capturadas",
+    category: "ciudades",
+    content: `DESARROLLO DEL TABLERO DE CIUDAD (TOWN BOARD):
+
 Cada ronda se puede construir 1 edificio usando la Ficha de Construcción y pagando su coste:
 
 1. EDIFICIOS COMUNES A TODAS LAS FACCIONES:
@@ -482,9 +495,18 @@ RECLUTAMIENTO Y REFUERZO DE TROPAS:
 
 CIUDADES CAPTURADAS:
 • El jugador que captura una ciudad ajena coloca su cubo de facción sobre ella, pero no puede usar sus edificios ni sus habilidades, incluida la acción de reclutar.
-• El jugador que ha perdido su ciudad conserva su ficha de ciudad y puede seguir usando sus edificios y habilidades, aunque ya no controla la ciudad a efectos de las condiciones de victoria.
+• El jugador que ha perdido su ciudad conserva su ficha de ciudad y puede seguir usando sus edificios y habilidades, aunque ya no controla la ciudad a efectos de las condiciones de victoria.`
+  },
 
-TABLA OFICIAL DE COMERCIO (PUESTO DE COMERCIO / TRADING POST):
+  // =========================================================================
+  // 8c. COMERCIO Y PUESTO DE COMERCIO
+  // =========================================================================
+  {
+    id: "trading_and_commerce",
+    title: "8c. Comercio, Puesto de Comercio y Tabla de Intercambio",
+    category: "comercio",
+    content: `TABLA OFICIAL DE COMERCIO (PUESTO DE COMERCIO / TRADING POST):
+
 Al visitar un Puesto de Comercio se puede realizar una de las siguientes operaciones:
 • Vender 6 Oro -> Comprar 1 Objeto de Valor | Vender 2 Oro -> Comprar 1 Material.
 • Vender 1 Objeto de Valor -> Comprar 3 Oro | Vender 1 Objeto de Valor -> Comprar 2 Materiales.
@@ -669,7 +691,7 @@ COMBATE NAVAL (TABLERO DE NEOPRENO NAVAL):
   {
     id: "ai_rules_and_solo_coop_mode",
     title: "12. Reglas de Inteligencia Artificial (IA), Modo Solitario y Cooperativo",
-    category: "modos",
+    category: "ia",
     content: `REGLAS DE INTELIGENCIA ARTIFICIAL (IA) Y MODO COOPERATIVO:
 
 ÁMBITO DE APLICACIÓN DE LA IA:
@@ -763,7 +785,7 @@ Utilizado en misiones en solitario para resolver encuentros narrativos en el Mol
   {
     id: "rule_variants_and_difficulty_table",
     title: "14. Variantes de Reglas Oficiales y Tabla de Ajustes de Dificultad",
-    category: "general",
+    category: "variantes",
     content: `VARIANTES DE REGLAS Y RECOMENDACIONES DE DISEÑADORES:
 
 1. VARIANTE DE CARTAS DEL CAOS:
@@ -799,6 +821,94 @@ TABLA OFICIAL DE AJUSTES OPCIONALES DE DIFICULTAD:
   - El Dado de Ataque no afecta al daño (solo interactúa con habilidades).
   - Se roba carta de Anuncio de Astrólogos también en Rondas de Recursos.
   - Se eliminan todos los Cubos Negros de casillas visitables en las rondas 4, 8 y 12.`
+  },
+
+  // =========================================================================
+  // 16. GLOSARIO DE TÉRMINOS OFICIALES
+  // =========================================================================
+  {
+    id: "glossary",
+    title: "16. Glosario de Términos Oficiales del Juego",
+    category: "glosario",
+    content: `GLOSARIO DE TÉRMINOS OFICIALES (fuente: MANUAL.md, HoMM-Rulebook_ESP.md, reglasCombinadas.ts):
+
+• Poder: Característica del héroe representada por cartas de característica Poder en el mazo inicial.
+• Potencia: Efecto de Poder; +1 por cada carta de Poder usada/descartada al lanzar un hechizo.
+• Conocimiento: Atributo del héroe que determina cartas de característica Conocimiento en el mazo inicial; su efecto experto es idéntico a la habilidad Misticismo.
+• Nivel: Progresión del héroe de I a VII. Cada nivel requiere 2 puntos de Experiencia (EXP).
+• Medio nivel: Bonificación de 0.5 EXP al subir de nivel (habilidad Aprendizaje).
+• Especialidad: Carta de nivel Oro (I, IV, VI) que se añade al mazo al subir de nivel.
+• Corona: Ficha obtenida en niveles II, IV y VI para activar uso experto de habilidad/estadística (1/2/3 usos por ronda en niveles 2/4/6).
+• Búsqueda (Search X): Mirar las X cartas superiores del mazo correspondiente, coger 1 a la mano y descartar el resto, o coger la carta superior del descarte.
+• Puntos de Movimiento (PM): Movimiento del héroe en el mapa (Principal: 3 PM; Secundario: 2 PM).
+• Límite de Mano (Hand Limit): 4 cartas (Nivel I-II), 5 (III-IV), 6 (V-VI), 7 (Nivel VII).
+• Tier: Rango de unidades: Bronce (Nivel 1-3), Plata (Nivel 4-5), Oro (Nivel 6-7), Azur (Legendarias).
+• Represalia (Contraataque): 1 ataque limitado por unidad/ronda; requiere supervivencia y adyacencia.
+• Iniciativa: Orden de activación en combate; en empate exacto, el atacante activa primero de forma alterna con el defensor.
+• Moral: Ficha positiva/negativa; 2ª ficha negativa = descartar toda la mano al finalizar el turno.
+• Combate Rápido (Quick Combat): Victoria automática si el Nivel del Héroe es estrictamente SUPERIOR al nivel de dificultad de la casilla neutral.
+• Puesto de Comercio (Trading Post): Tabla de intercambio de recursos y objetos de valor.
+• Ciudadela (Citadel): Requisito para reforzar tropas (Unas pocas -> Manada) y defensas amuralladas en asedio.
+• Morada (Dwelling): Requisito previo correlativo obligatorio para reclutar tropas (Bronce -> Plata -> Oro).
+• Mazo de Fuerza y Magia: Mazo inicial de 9 cartas (características, Flecha Mágica, Habilidad Inicial, Especialidad Nivel I).
+• Pergamino de Hechizo (Spell Scroll): Carta de expansión Bastión; 2 hechizos bocabajo; no consume acción de hechizo ni cuenta para el límite de 1 hechizo/ronda; no se puede potenciar.
+• Habilidad Potenciada: Versión mejorada de una carta de habilidad estándar que otorga su efecto avanzado SIN gastar uso experto. Solo 1 copia en el juego.
+• Especialidades Asimétricas: Cartas que imitan hechizos NO son hechizos; no cuentan para el límite de 1 hechizo/ronda ni se ven afectadas por bonificadores de escuela.
+• Moral de Necrópolis: La facción de Necrópolis ignora totalmente la moral (nunca gana ni pierde moral).
+• Fondo Reservado (Gold Pool): Variante de reglas; recursos invertidos en reclutamiento se acumulan en un fondo no gastado.
+• Dado de Recursos: Se lanza en Rondas de Recursos (impares); según dificultad del escenario (Fácil: 2 dados, Normal: 2 elige 1, Difícil: 1, Imposible: 0).
+• Dado de Ataque: Se lanza en combate; -1/0/+1 modifica el Ataque de la unidad.
+• Dado de Tesoro: Se lanza al ganar combate contra unidades neutrales; resultado según tabla de tesoros.
+• Casilla Visitables/Señalizables/Revisitables: Visitables = Cubo Negro, agotada; Señalizables = Cubo de Facción, beneficio pasivo; Revisitables = uso múltiple sin cubo.
+• Loseta Subterránea: Plano inferior conectado por Puertas Subterráneas; no se puede pasar directamente superficie <-> subterráneo sin puerta.
+• Monolito: Teletransporte entre losetas emparejadas; unidireccional o bidireccional.
+• Torbellino: Solo en losetas de mar; conecta torbellinos de distintas losetas; pierde 1 unidad al viajar.
+• Combate Naval: Tablero alternativo en losetas de mar; unidades terrestres deben rodear por flancos; unidades voladoras pueden volar sobre casillas eliminadas pero no finalizar en ellas.
+• Campaña Solitario: Serie de escenarios interconectados contra héroes IA con transferencia de héroe y mazo.
+• Enfrentamiento (Clash): Modo competitivo; el rival controla tropas neutrales en tus combates.
+• Alianza (Alliance): 2 vs 2 con comercio libre de recursos y cartas entre aliados adyacentes.
+• Cooperativo (Co-op): Todos los jugadores colaboran compartiendo victorias.
+• Torneo (Tournament): 1 vs 1 competitivo estandarizado con reducción de azar (elimina Diplomacia y Reloj de la Hora Aciaga; draft de losetas; mulligan ronda 1).
+• Campo de Batalla (Battlefield): Gran tablero hexagonal sin mapa de aventura; Modo Aventura (fase de aventura con cartas de aventura) y Modo Escaramuza (combate directo preconstruido).
+• Variante de Cartas del Caos: En lugar de descartar, elimina la carta del juego y roba la superior del descarte.
+• Variante de Reserva de Oro (Gold Pool): Los recursos invertidos en reclutamiento se acumulan en Fondo Reservado; se recuperan al vender unidades o reducir Manada a Unas Pocas.
+• Variante de Draft Inicial (3+ jugadores): Draft de 6 cartas (2 de cada mazo), quédate 1 de cada tipo, pasa al resto; repite hasta 12 cartas; refinado a mazo inicial de 9.
+• Variante de Mazos Separados: Artefactos en 3 mazos (Menor/Major/Reliquia) y Hechizos en 2 mazos (Básico/Experto); disponibilidad según loseta (I-II: Menor/Básico; IV-V: Menor+Mayor/Básico+Experto; VI-VII: todos).
+• Variante de Dado de Ataque: El dado de ataque no afecta al daño, solo interactúa con habilidades.
+• Variante de Astrólogos en Rondas de Recursos: Se roba carta de Anuncio de Astrólogos también en Rondas de Recursos (impares).
+• Variante de Eliminación de Cubos Negros: Se eliminan todos los Cubos Negros de casillas visitables en rondas 4, 8 y 12.
+• Variante de Comercio Gratis: El Puesto de Comercio es visitable regalando 1 Artefacto.
+• Variante de Sin Relanzar Dados: Prohibido relanzar dados de cualquier tipo.
+• Variante de Ciudades Sin Ingresos: Las ciudades no producen recursos al ser señalizadas (solo dan uso de edificios).
+• Variante de Tropas Garantizadas: Todas las tropas infligen al menos 1 herida de daño garantizado al atacar.
+• Variante de Minas Doble: Todas las minas y asentamientos producen el doble de ingresos.
+• Variante de PM en Combate Neutral: Extender un combate neutral no consume Puntos de Movimiento.
+• Variante de Héroe Secundario Gratis: Iniciar la partida con un Héroe Secundario gratuito.
+• Variante de Sin Bonificador: Sin bonificador inicial de escenario.
+• Variante de Intercambio de Recursos: Intercambiar recursos en cualquier momento.
+• Puntos de Victoria (PV): 1 PV por Mina/Asentamiento controlado; 1 PV por Edificio construido; 1 PV por cada 2 cartas de Artefacto en mazo; 1 PV por cada Nivel del Héroe Principal; 2 PV por cada Héroe Secundario enemigo derrotado; 4 PV por derrotar Héroe Principal enemigo (una sola vez).
+• Sistema de Párrafos Narrativos (§1-§29): Utilizado en misiones en solitario para resolver encuentros narrativos registrando palabras clave ('Pacto', 'Crimen', 'Trabajo', 'Verruga') que alteran la trama y recompensas.`
+  },
+
+  // =========================================================================
+  // 12b. TIPOS DE ESCENARIOS, ALIANZA, COOPERATIVO Y FIN DE ESCENARIO
+  // =========================================================================
+  {
+    id: "scenarios_types_and_victory",
+    title: "12. Tipos de Escenarios, Modo Alianza, Modo Cooperativo y Fin de Escenario",
+    category: "escenarios",
+    content: `CLASIFICACIÓN DE ESCENARIOS (MANUAL.md §12; REGLAMENTO_DEFINITIVO.md §11):
+
+1. ENFRENTAMIENTO (CLASH): Modo competitivo 2-3 jugadores; cada facción lucha por supremacía del mapa. Eliminación: sin ciudad ni asentamiento durante 3 rondas completas; derrota del Héroe Principal defendiendo la última ciudad. Victoria: derrotar todas las facciones enemigas (capturar ciudades y asentamientos).
+2. CAMPAÑA (CAMPAIGN): Modo solitario contra IA. La IA se mueve después del jugador. No se permite rendirse ante la IA. Entre escenarios: junta mano y descarte, conserva características y especialidad I, retira especialidades superiores, elige 5 cartas restantes y reinicia experiencia a nivel I. Los pergaminos no se conservan.
+3. ALIANZA (ALLIANCE): 4 jugadores en equipos de 2. Los aliados comparten victoria y derrota. Artefactos solo se intercambian con héroes adyacentes; los recursos pueden intercambiarse sin adyacencia. No se señala una zona ya señalizada por el aliado.
+4. COOPERATIVO (CO-OP): Todos los jugadores son aliados. Los neutrales se controlan con IA. El Mercadillo permite transferir recursos. Si un jugador cumple la condición común, todos ganan.
+
+CONDICIONES DE VICTORIA Y ELIMINACIÓN:
+• Victoria más habitual: derrotar todas las facciones enemigas (capturar ciudades y asentamientos).
+• Eliminación: sin ciudad ni asentamiento durante 3 rondas completas; o derrota del Héroe Principal sin base.
+• Victoria por eliminación: si eliminas todas las facciones enemigas ganas; en 3+ jugadores, recoger un cubo de facción de cada oponente gana inmediatamente.
+• Fin de escenario: al cumplirse la condición de victoria, la partida acaba al final de esa ronda.`
   },
 
   // =========================================================================

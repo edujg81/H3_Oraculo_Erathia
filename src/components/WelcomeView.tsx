@@ -23,7 +23,7 @@ const WelcomeView: React.FC<WelcomeViewProps> = ({ onNavigateTab }) => {
     {
       icon: HelpCircle,
       color: 'text-green-400',
-      title: 'Asistente IA: Sandro el Sabio',
+      title: 'Asistente IA: Sandro el Grande',
       description: 'Chat inteligente especializado en reglas del juego. Responde dudas sobre mecánicas, combate, asedio, colocación de losetas, traducciones y estrategias. Con memoria de conversación, síntesis de voz y opción de API Key personalizada.',
       tabId: 'chat'
     },
@@ -148,7 +148,7 @@ const WelcomeView: React.FC<WelcomeViewProps> = ({ onNavigateTab }) => {
           transition={{ duration: 0.7, delay: 0.4 }}
           className="text-slate-300 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed relative z-10"
         >
-          Bienvenido, héroe. Soy <strong className="text-amber-400">Sandro el Sabio</strong>, nigromante y consejero de los secretos de Erathia. 
+          Bienvenido, héroe. Soy <strong className="text-amber-400">Sandro el Grande</strong>, nigromante y consejero de los secretos de Erathia. 
           Este oráculo reúne todo el conocimiento necesario para dominar el juego de mesa <em className="text-amber-300">Heroes of Might & Magic III</em>: 
           reglas, unidades, hechizos, ciudades, escenarios y herramientas de partida.
         </motion.p>
@@ -193,7 +193,7 @@ const WelcomeView: React.FC<WelcomeViewProps> = ({ onNavigateTab }) => {
             vistas detalladas adaptadas al tipo de información que consulta.
           </p>
           <p className="text-base">
-            Además, el <strong className="text-amber-400">chat con Sandro el Sabio</strong> (pestaña "Consulta a Sandro") 
+            Además, el <strong className="text-amber-400">chat con Sandro el Grande</strong> (pestaña "Consulta a Sandro") 
             actúa como asistente inteligente: responde dudas de reglas, explica mecánicas complejas, 
             sugiere estrategias y recuerda el contexto de tu conversación.
           </p>
