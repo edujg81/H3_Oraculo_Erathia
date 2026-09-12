@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.7](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.6...v2.1.7) (2026-09-11)
+
+
+### Bug Fixes
+
+* redefinición de categorías de reglas ([f49b0e5](https://github.com/edujg81/H3_Oraculo_Erathia/commit/f49b0e5531828022accbfbd90d51ce13d77255d1))
+
 ## [2.1.6](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.5...v2.1.6) (2026-09-09)
 
 
