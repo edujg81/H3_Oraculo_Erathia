@@ -128,6 +128,16 @@ app.get("/api/rules", (req, res) => {
   res.json({ rules: rulesKB });
 });
 
+// 2b. AI Engine Status (real-time)
+app.get("/api/ai-status", (req, res) => {
+  res.json({
+    active: !!ai,
+    model: ai ? "gemini-3.6-flash" : null,
+    language: "ESP",
+    keyConfigured: !!process.env.GEMINI_API_KEY
+  });
+});
+
 // 3. API: Rule Chat Companion
 app.post("/api/chat", async (req, res) => {
   try {

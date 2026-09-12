@@ -1,6 +1,9 @@
 /* Responsive base: fluid typography and spacing for 7" mobile to 27" 1440p */
 html { scroll-behavior: smooth; }
 
+/* Base: 1 column (mobile) */
+.responsive-grid { grid-template-columns: 1fr; }
+
 @media (min-width: 640px) { /* sm */
   .responsive-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -12,4 +15,68 @@ html { scroll-behavior: smooth; }
 }
 @media (min-width: 1536px) { /* 2xl / 27" 1440p */
   .responsive-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+
+/* ScenariosViewer: 1 col mobile → 2 cols xl+ */
+.scenarios-main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 1280px) { /* xl */
+  .scenarios-main-grid {
+    grid-template-columns: 3fr 1fr;
+  }
+}
+
+/* Scenarios filters: 1 col mobile → 2 col md → 3 col xl */
+.scenarios-filters {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+@media (min-width: 768px) { /* md */
+  .scenarios-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1280px) { /* xl */
+  .scenarios-filters {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Scenarios cards: 1 col mobile → 2 col sm → 3 col xl */
+.scenarios-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+@media (min-width: 640px) { /* sm */
+  .scenarios-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1280px) { /* xl */
+  .scenarios-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* App layout max-widths for 1440p */
+.app-container {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 1280px) { /* xl */
+  .app-container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) { /* 2xl / 1440p */
+  .app-container {
+    max-width: 1440px;
+  }
 }
