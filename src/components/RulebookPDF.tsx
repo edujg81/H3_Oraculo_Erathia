@@ -1,6 +1,7 @@
 import { Printer, ShoppingBag, ShieldAlert, BookOpen, Download } from 'lucide-react';
 // @ts-ignore
 import oracleLogo from '../assets/images/h3oraculo_logo.png';
+import { FACTION_UNITS, UNIT_DETAILS, type UnitStats } from '../data/unitsData';
 
 interface CompendiumUnit {
   name: string;
@@ -9,322 +10,105 @@ interface CompendiumUnit {
   tier: string;
   basicStats: string;
   eliteStats: string;
-  type: string;
+  type: 'Melé' | 'a Distancia' | 'Voladora';
   abilities: string;
 }
 
-const compendiumUnits: CompendiumUnit[] = [
-  // 1. CASTILLO
-  {
-    name: "Grifos",
-    faction: "Castillo",
-    colorClass: "text-blue-300",
-    tier: "Bronce / Lvl 3",
-    basicStats: "⚔️2 🛡️0 ⚡6 ❤️4",
-    eliteStats: "⚔️3 🛡️0 ⚡9 ❤️4",
-    type: "Voladora",
-    abilities: "Contraataque: Esta unidad puede llevar a cabo una cantidad ilimitada de contraataques."
-  },
-  {
-    name: "Fanáticos",
-    faction: "Castillo",
-    colorClass: "text-blue-300",
-    tier: "Plata / Lvl 5",
-    basicStats: "⚔️3 🛡️1 ⚡5 ❤️5",
-    eliteStats: "⚔️4 🛡️1 ⚡7 ❤️5",
-    type: "a Distancia",
-    abilities: "Básico: Ninguna. Élite: Pasiva: Ignora la penalización de combate contra unidades adyacentes."
-  },
-  {
-    name: "Arcángeles",
-    faction: "Castillo",
-    colorClass: "text-blue-300",
-    tier: "Oro / Lvl 7",
-    basicStats: "⚔️6 🛡️3 ⚡12 ❤️8",
-    eliteStats: "⚔️7 🛡️3 ⚡18 ❤️10",
-    type: "Voladora",
-    abilities: "Básico: Pasiva: Cuando se inicie un combate, roba 1 carta. Élite: Pasiva: Una vez por combate. Cancela un ataque que fuese a reducir a 0 los Puntos de Salud otra unidad a 0."
-  },
-  // 2. NECROPOLIS
-  {
-    name: "Espectros",
-    faction: "Necrópolis",
-    colorClass: "text-slate-400",
-    tier: "Bronce / Lvl 3",
-    basicStats: "⚔️3 🛡️0 ⚡5 ❤️3",
-    eliteStats: "⚔️3 🛡️0 ⚡7 ❤️5",
-    type: "Voladora",
-    abilities: "Básico: Activación: Retira hasta 1 Herida de esta unidad. Élite: Activación: Retira hasta 1 Herida de esta unidad y después descarta 1 carta al azar de la mano del enemigo."
-  },
-  {
-    name: "Liches",
-    faction: "Necrópolis",
-    colorClass: "text-slate-400",
-    tier: "Plata / Lvl 5",
-    basicStats: "⚔️3 🛡️1 ⚡6 ❤️5",
-    eliteStats: "⚔️4 🛡️1 ⚡7 ❤️5",
-    type: "a Distancia",
-    abilities: "Básico: Ninguna. Élite: Ataque: Elige una unidad adyacente al objetivo y atácala. Para este ataque tu Ataque es 2."
-  },
-  {
-    name: "Dragones fantasma",
-    faction: "Necrópolis",
-    colorClass: "text-slate-400",
-    tier: "Oro / Lvl 7",
-    basicStats: "⚔️6 🛡️3 ⚡9 ❤️8",
-    eliteStats: "⚔️7 🛡️3 ⚡14 ❤️9",
-    type: "Voladora",
-    abilities: "Básico: Activación: Descarta la ficha Moral Positiva del enemigo. Élite: Activación: Descarta la ficha Moral Positiva del enemigo. Ataque: Gana +1 Ataque."
-  },
-  // 3. MAZMORRA
-  {
-    name: "Ojos maléficos",
-    faction: "Mazmorra",
-    colorClass: "text-purple-300",
-    tier: "Bronce / Lvl 3",
-    basicStats: "⚔️3 🛡️0 ⚡5 ❤️3",
-    eliteStats: "⚔️3 🛡️1 ⚡7 ❤️3",
-    type: "a Distancia",
-    abilities: "Básico: Ninguna. Élite: Pasiva: Ignora la penalización de combate contra unidades adyacentes."
-  },
-  {
-    name: "Minotauros",
-    faction: "Mazmorra",
-    colorClass: "text-purple-300",
-    tier: "Plata / Lvl 5",
-    basicStats: "⚔️4 🛡️2 ⚡6 ❤️4",
-    eliteStats: "⚔️5 🛡️2 ⚡8 ❤️4",
-    type: "Melé",
-    abilities: "Ataque: Si resuelves un -1 en el dado de ataque, roba una carta."
-  },
-  {
-    name: "Dragones negros",
-    faction: "Mazmorra",
-    colorClass: "text-purple-300",
-    tier: "Oro / Lvl 7",
-    basicStats: "⚔️6 🛡️3 ⚡11 ❤️8",
-    eliteStats: "⚔️8 🛡️3 ⚡15 ❤️8",
-    type: "Voladora",
-    abilities: "Básico: Pasiva: Reduce el Daño de Hechizo recibido por esta unidad en 2 (hasta un mínimo de 0). Élite: Pasiva: Ignora cualquier efecto de Hechizo y Daño de especialidad."
-  },
-  // 4. MURALLAS
-  {
-    name: "Elfos",
-    faction: "Murallas",
-    colorClass: "text-emerald-300",
-    tier: "Bronce / Lvl 3",
-    basicStats: "⚔️2 🛡️1 ⚡6 ❤️3",
-    eliteStats: "⚔️3 🛡️1 ⚡7 ❤️3",
-    type: "a Distancia",
-    abilities: "Básico: Ninguna. Élite: Ataque: Si una unidad objetivo no está adyacente, vuélvela a atacar si sacas un -1 o un 0."
-  },
-  {
-    name: "Dendroides",
-    faction: "Murallas",
-    colorClass: "text-emerald-300",
-    tier: "Plata / Lvl 5",
-    basicStats: "⚔️4 🛡️2 ⚡3 ❤️5",
-    eliteStats: "⚔️4 🛡️2 ⚡4 ❤️6",
-    type: "Melé",
-    abilities: "Básico: Ninguna. Élite: Pasiva: Las unidades enemigas que empiecen su activación adyacentes a esta unidad no pueden moverse."
-  },
-  {
-    name: "Dragones dorados",
-    faction: "Murallas",
-    colorClass: "text-emerald-300",
-    tier: "Oro / Lvl 7",
-    basicStats: "⚔️5 🛡️3 ⚡10 ❤️9",
-    eliteStats: "⚔️6 🛡️3 ⚡16 ❤️10",
-    type: "Voladora",
-    abilities: "Básico: Ataque: Ataca a 2 espacios en fila. El primer ataque se resuelve de forma normal y el segundo con 2 Ataque. Élite: Ataque: Ataca a 2 espacios en fila. El primer ataque se resuelve normalmente y el segundo tiene 3 Ataque."
-  },
-  // 5. TORRE
-  {
-    name: "Gólems de hierro",
-    faction: "Torre",
-    colorClass: "text-yellow-300",
-    tier: "Bronce / Lvl 3",
-    basicStats: "⚔️3 🛡️1 ⚡4 ❤️3",
-    eliteStats: "⚔️3 🛡️2 ⚡5 ❤️3",
-    type: "Melé",
-    abilities: "Básico: Pasiva: Esta unidad reduce cualquier Daño que reciba de hechizos en 1, hasta un mínimo de 0. Élite: Pasiva: Esta unidad reduce cualquier Daño que reciba de hechizos en 2, hasta un mínimo de 0."
-  },
-  {
-    name: "Genios",
-    faction: "Torre",
-    colorClass: "text-yellow-300",
-    tier: "Plata / Lvl 5",
-    basicStats: "⚔️3 🛡️1 ⚡7 ❤️6",
-    eliteStats: "⚔️4 🛡️1 ⚡8 ❤️6",
-    type: "Voladora",
-    abilities: "Básico: Alternativa: Descarta 3 cartas de tu mazo y devuelve a tu mano un Hechizo descartado de esta forma. Élite: Ataque: Descarta hasta 3 cartas de tu mazo y devuelve a tu mano un Hechizo descartado de esta forma."
-  },
-  {
-    name: "Titanes",
-    faction: "Torre",
-    colorClass: "text-yellow-300",
-    tier: "Oro / Lvl 7",
-    basicStats: "⚔️6 🛡️3 ⚡7 ❤️8",
-    eliteStats: "⚔️6 🛡️3 ⚡11 ❤️8",
-    type: "Melé / a Distancia",
-    abilities: "Básico: Pasiva: Esta unidad ignora cualquier efecto Contínuo. Élite: Pasiva: Esta unidad ignora cualquier efecto Continuo y los penalizadores de combate aplicados a unidades adyacentes."
-  },
-  // 6. INFERNO
-  {
-    name: "Cerberos",
-    faction: "Inferno",
-    colorClass: "text-red-400",
-    tier: "Bronce / Lvl 3",
-    basicStats: "⚔️3 🛡️0 ⚡7 ❤️4",
-    eliteStats: "⚔️3 🛡️1 ⚡8 ❤️5",
-    type: "Melé",
-    abilities: "Básico: Ninguna. Élite: Ataque: Ignora contraataques. Además, hace 1 Herida a otra unidad enemiga adyacente a los cerberos."
-  },
-  {
-    name: "Señores del abismo",
-    faction: "Inferno",
-    colorClass: "text-red-400",
-    tier: "Plata / Lvl 5",
-    basicStats: "⚔️4 🛡️1 ⚡6 ❤️6",
-    eliteStats: "⚔️5 🛡️1 ⚡7 ❤️6",
-    type: "Melé",
-    abilities: "Básico: Ninguna. Élite: Alternativo: Una vez por cada combate en el que hayas perdido una unidad. Invoca o refuerza <<unos pocos>> demonios (en el tablero)."
-  },
-  {
-    name: "Archidiablos",
-    faction: "Inferno",
-    colorClass: "text-red-400",
-    tier: "Oro / Lvl 7",
-    basicStats: "⚔️6 🛡️3 ⚡11 ❤️8",
-    eliteStats: "⚔️7 🛡️3 ⚡15 ❤️9",
-    type: "Voladora",
-    abilities: "Básico: Ataque: Ignora contraataques. Élite: Ataque: Ignora contraataques. Pasiva: Al moverse, los archidiablos se pueden mover a cualquier espacio vacío."
-  },
-  // 7. BASTION
-  {
-    name: "Orcos",
-    faction: "Bastión",
-    colorClass: "text-orange-400",
-    tier: "Bronce / Lvl 3",
-    basicStats: "⚔️2 🛡️1 ⚡4 ❤️4",
-    eliteStats: "⚔️3 🛡️1 ⚡5 ❤️5",
-    type: "a Distancia",
-    abilities: "Ninguna."
-  },
-  {
-    name: "Aves de trueno",
-    faction: "Bastión",
-    colorClass: "text-orange-400",
-    tier: "Plata / Lvl 5",
-    basicStats: "⚔️4 🛡️1 ⚡9 ❤️5",
-    eliteStats: "⚔️4 🛡️1 ⚡11 ❤️6",
-    type: "Voladora",
-    abilities: "Básico: Ninguna. Élite: Pasiva: Justo después del ataque de esta unidad y antes de un contraataque, tira 1 dado de ataque; con un <<0> o <<+1>>, inflige 1 Herida al objetivo."
-  },
-  {
-    name: "Behemoths",
-    faction: "Bastión",
-    colorClass: "text-orange-400",
-    tier: "Oro / Lvl 7",
-    basicStats: "⚔️6 🛡️2 ⚡6 ❤️9",
-    eliteStats: "⚔️7 🛡️2 ⚡9 ❤️10",
-    type: "Melé",
-    abilities: "Básico: Ataque: Disminuye la Defensa del objetivo en 1 (hasta un mínimo de 0). Élite: Ataque: Disminuye la Defensa del objetivo en 2 (hasta un mínimo de 0). Después del ataque, pon 1 ficha de corrosión en el objetivo."
-  },
-  // 8. FORTALEZA
-  {
-    name: "Libélulas",
-    faction: "Fortaleza",
-    colorClass: "text-teal-400",
-    tier: "Bronce / Lvl 3",
-    basicStats: "⚔️3 🛡️0 ⚡8 ❤️3",
-    eliteStats: "⚔️3 🛡️1 ⚡12 ❤️3",
-    type: "Voladora",
-    abilities: "Básico: Ataque: Retira todos los efectos Continuos que el enemigo ha jugado sobre el objetivo. Élite: Ataque: Retira todos los efectos Continuos que el enemigo ha jugado sobre el objetivo. Si el objetivo contraataca, sufre -1 Ataque."
-  },
-  {
-    name: "Gorgonas",
-    faction: "Fortaleza",
-    colorClass: "text-teal-400",
-    tier: "Plata / Lvl 5",
-    basicStats: "⚔️4 🛡️2 ⚡5 ❤️5",
-    eliteStats: "⚔️5 🛡️2 ⚡6 ❤️5",
-    type: "Melé",
-    abilities: "Básico: Ninguna. Élite: Ataque: Después del ataque, lanza 2 dados de ataque; si sacas un doble 0, reduce los Puntos de Salud de la unidad objetivo a 0."
-  },
-  {
-    name: "Hidras",
-    faction: "Fortaleza",
-    colorClass: "text-teal-400",
-    tier: "Oro / Lvl 7",
-    basicStats: "⚔️6 🛡️3 ⚡5 ❤️8",
-    eliteStats: "⚔️7 🛡️3 ⚡7 ❤️10",
-    type: "Melé",
-    abilities: "Básico: Ataque: Ignora el contraataque. Élite: Ataque: Ignora el contraataque. Esta unidad ataca a hasta 2 unidades enemigas adyacentes."
-  },
-  // 9. CONFLUJO
-  {
-    name: "Elementales de hielo",
-    faction: "Conflujo",
-    colorClass: "text-cyan-300",
-    tier: "Bronce / Lvl 3",
-    basicStats: "⚔️2 🛡️1 ⚡5 ❤️4",
-    eliteStats: "⚔️3 🛡️1 ⚡6 ❤️5",
-    type: "a Distancia",
-    abilities: "Básico: Ninguna. Élite: Activación: Añade +1 Potencia al primer hechizo de magia de agua que lances durante esta activación"
-  },
-  {
-    name: "Elementales de magma",
-    faction: "Conflujo",
-    colorClass: "text-cyan-300",
-    tier: "Plata / Lvl 5",
-    basicStats: "⚔️4 🛡️2 ⚡4 ❤️5",
-    eliteStats: "⚔️5 🛡️2 ⚡6 ❤️5",
-    type: "Melé",
-    abilities: "Básico: Ninguna. Élite: Activación: Añade +1 Potencia al primer hechizo de magia tierra que lances durante esta activación."
-  },
-  {
-    name: "Fénix",
-    faction: "Conflujo",
-    colorClass: "text-cyan-300",
-    tier: "Oro / Lvl 7",
-    basicStats: "⚔️6 🛡️2 ⚡12 ❤️7",
-    eliteStats: "⚔️7 🛡️2 ⚡18 ❤️8",
-    type: "Voladora",
-    abilities: "Básico: Pasiva: Una vez por combate. Cuando los PS de esta unidad se reduzcan a 0, ponlos en 1. Pasiva: Inmunes a los Hechizos de magia de fuego. Élite: Ataque: Ataca 2 espacios en una línea. El primer ataque se resuelve normalmente y el segundo tiene 2 Ataque. Pasiva: Inmunes a los Hechizos de magia de fuego."
-  },
-  // 10. CALA
-  {
-    name: "Lobos de mar",
-    faction: "Cala",
-    colorClass: "text-sky-400",
-    tier: "Bronce / Lvl 3",
-    basicStats: "⚔️2 🛡️0 ⚡6 ❤️4",
-    eliteStats: "⚔️3 🛡️0 ⚡8 ❤️5",
-    type: "a Distancia",
-    abilities: "Básico: Pasiva: Ignora la penalización de combate contra unidades adyacentes. Élite: Ataque: Ignora los contraataques. Pasiva: Ignora la penalización de combate contra unidades adyacentes."
-  },
-  {
-    name: "Hechiceras",
-    faction: "Cala",
-    colorClass: "text-sky-400",
-    tier: "Plata / Lvl 5",
-    basicStats: "⚔️3 🛡️1 ⚡6 ❤️5",
-    eliteStats: "⚔️4 🛡️1 ⚡7 ❤️6",
-    type: "a Distancia",
-    abilities: "Básico: Alternativo: Coloca una ficha de debilidad <<-2>> sobre cualquier unidad durante 2 rondas de combate. Élite: Ataque: Después del ataque, coloca una ficha de Debilidad <<-1>> sobre el objetivo durante 2 rondas de combate."
-  },
-  {
-    name: "Háspidos",
-    faction: "Cala",
-    colorClass: "text-sky-400",
-    tier: "Oro / Lvl 7",
-    basicStats: "⚔️5 🛡️3 ⚡9 ❤️8",
-    eliteStats: "⚔️7 🛡️3 ⚡12 ❤️8",
-    type: "Melé",
-    abilities: "Básico: Ataque: +2 Ataque si, durante este combate, esta unidad se giró del lado de manada al lado de unos pocos. Élite: Ataque: Coloca 2 cubos de facción sobre el objetivo. Al comienzo de cada una de sus activaciones, retira 1 de ellos para infligir 1 Herida."
-  }
-];
+// Helper constants and functions for generating compendiumUnits from raw data
+const factionDisplayName: Record<string, string> = {
+  castillo: 'Castillo',
+  necropolis: 'Necrópolis',
+  mazmorra: 'Mazmorra',
+  murallas: 'Murallas',
+  torre: 'Torre',
+  inferno: 'Inferno',
+  bastion: 'Bastión',
+  fortaleza: 'Fortaleza',
+  conflujo: 'Conflujo',
+  cala: 'Cala'
+};
+
+const colorClassMap: Record<string, string> = {
+  castillo: 'text-blue-300',
+  necropolis: 'text-slate-400',
+  mazmorra: 'text-purple-300',
+  murallas: 'text-emerald-300',
+  torre: 'text-yellow-300',
+  inferno: 'text-red-400',
+  bastion: 'text-orange-400',
+  fortaleza: 'text-teal-400',
+  conflujo: 'text-cyan-300',
+  cala: 'text-sky-400'
+};
+
+const formatStats = (stats: UnitStats): string => 
+  `⚔️${stats.atk} 🛡️${stats.def} ⚡${stats.ini} ❤️${stats.hp}`;
+
+const formatAbilities = (abilities: string[]): string => {
+  if (abilities.length === 0) return 'Ninguna.';
+  return abilities.map(a => a.trim()).join(' ') + '';
+};
+
+const generateCompendiumUnits = (): CompendiumUnit[] => {
+  // Build a map from unit name to faction info
+  const unitToFactionInfo: Record<string, { faction: string; tier: string; level: number }> = {};
+  
+  Object.keys(FACTION_UNITS).forEach(factionId => {
+    FACTION_UNITS[factionId as keyof typeof FACTION_UNITS].forEach(unitInfo => {
+      unitToFactionInfo[unitInfo.nameBasic] = {
+        faction: factionId,
+        tier: unitInfo.tier,
+        level: unitInfo.level
+      };
+    });
+  });
+
+  return Object.keys(UNIT_DETAILS).map(nameBasic => {
+    const unit = UNIT_DETAILS[nameBasic];
+    const factionInfo = unitToFactionInfo[nameBasic];
+    
+    if (!factionInfo) {
+      console.warn(`Unit ${nameBasic} not found in FACTION_UNITS`);
+      return null;
+    }
+    
+    // Format stats
+    const basicStats = formatStats(unit.basic);
+    const eliteStats = unit.elite ? formatStats(unit.elite) : formatStats(unit.basic);
+    
+    // Format abilities
+    const basicAbilities = unit.basic.abilities.length > 0 
+      ? `[UNAS POCAS] ${formatAbilities(unit.basic.abilities)}` 
+      : '';
+        
+    const eliteAbilities = unit.elite?.abilities && unit.elite.abilities.length > 0
+      ? `[MANADA] ${formatAbilities(unit.elite.abilities)}`
+      : unit.elite?.abilities?.length === 0
+        ? '[MANADA] Ninguna.'
+        : '';
+    
+    // Combine abilities
+    const abilitiesText = unit.elite?.abilities && unit.elite.abilities.length > 0
+      ? `${basicAbilities} ${eliteAbilities}`
+      : basicAbilities;
+    
+    // Format tier
+    const tierText = `${factionInfo.tier.charAt(0).toUpperCase() + factionInfo.tier.slice(1)} / Lvl ${factionInfo.level}`;
+    
+    return {
+      name: nameBasic,
+      faction: factionDisplayName[factionInfo.faction] || factionInfo.faction,
+      colorClass: colorClassMap[factionInfo.faction] || 'text-gray-500',
+      tier: tierText,
+      basicStats,
+      eliteStats,
+      type: unit.basic.type,
+      abilities: abilitiesText
+    };
+  }).filter((u): u is CompendiumUnit => u !== null);
+};
+
+const compendiumUnits: CompendiumUnit[] = generateCompendiumUnits();
 
 export default function RulebookPDF() {
   const triggerPrint = () => {
@@ -512,78 +296,78 @@ export default function RulebookPDF() {
             <div className="space-y-2.5">
               <span className="text-amber-400 font-bold block border-b border-slate-900 pb-1 uppercase text-[10px]">Parte A: Reglas Básicas y de Campaña</span>
               <div>
-                <span className="text-amber-500 font-bold">I.</span> Glosario, las 10 Facciones, Cartas y Fichas Especiales
+                <a href="#sec-I" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">I.</a> Glosario, las 10 Facciones, Cartas y Fichas Especiales
               </div>
               <div>
-                <span className="text-amber-500 font-bold">II.</span> Tipos de Losetas (Atlas de Erathia)
+                <a href="#sec-II" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">II.</a> Tipos de Losetas (Atlas de Erathia)
               </div>
               <div>
-                <span className="text-amber-500 font-bold">III.</span> Compendio de Lugares del Mapa y sus Efectos
+                <a href="#sec-III" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">III.</a> Compendio de Lugares del Mapa y sus Efectos
               </div>
               <div>
-                <span className="text-amber-500 font-bold">IV.</span> Preparación De Las Partidas y Listado de Escenarios
+                <a href="#sec-IV" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">IV.</a> Preparación De Las Partidas y Listado de Escenarios
               </div>
               <div>
-                <span className="text-amber-500 font-bold">V.</span> Compendio de Campañas Oficiales y Libros de Misiones
+                <a href="#sec-V" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">V.</a> Compendio de Campañas Oficiales y Libros de Misiones
               </div>
               <div>
-                <span className="text-amber-500 font-bold">VI.</span> Flujo Detallado de Rondas y Fases de Turno
+                <a href="#sec-VI" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">VI.</a> Flujo Detallado de Rondas y Fases de Turno
               </div>
               <div>
-                <span className="text-amber-500 font-bold">VII.</span> Desarrollo Urbano, Reclutamiento y Economía
+                <a href="#sec-VII" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">VII.</a> Desarrollo Urbano, Reclutamiento y Economía
               </div>
               <div>
-                <span className="text-amber-500 font-bold">VIII.</span> Reglamento de Combate Táctico, Movimiento y Máquinas de Guerra
+                <a href="#sec-VIII" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">VIII.</a> Reglamento de Combate Táctico, Movimiento y Máquinas de Guerra
               </div>
               <div>
-                <span className="text-amber-500 font-bold">IX.</span> Hechizos, Arcanos y Libro de Magias
+                <a href="#sec-IX" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">IX.</a> Hechizos, Arcanos y Libro de Magias
               </div>
               <div>
-                <span className="text-amber-500 font-bold">X.</span> Guía de Expansiones y Elementos Avanzados de Juego
+                <a href="#sec-X" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">X.</a> Guía de Expansiones y Elementos Avanzados de Juego
               </div>
               <div>
-                <span className="text-amber-500 font-bold">XI.</span> Tablas del Reglamento Oficial (Zonas de Dificultad y Recursos)
+                <a href="#sec-XI" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">XI.</a> Tablas del Reglamento Oficial (Zonas de Dificultad y Recursos)
               </div>
             </div>
 
             <div className="space-y-2.5">
               <span className="text-amber-400 font-bold block border-b border-slate-900 pb-1 uppercase text-[10px]">Parte B: Mecánicas Avanzadas y Compendio</span>
               <div>
-                <span className="text-amber-500 font-bold">XII.</span> Losetas Elementales, Invocaciones y Daño Elemental (Conflujo)
+                <a href="#sec-XII" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">XII.</a> Losetas Elementales, Invocaciones y Daño Elemental (Conflujo)
               </div>
               <div>
-                <span className="text-amber-500 font-bold">XIII.</span> Opciones Avanzadas y Ajustes de Competición
+                <a href="#sec-XIII" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">XIII.</a> Opciones Avanzadas y Ajustes de Competición
               </div>
               <div>
-                <span className="text-amber-500 font-bold">XIV.</span> Dados del Juego (Dados de Recursos, Combate y Tesoro)
+                <a href="#sec-XIV" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">XIV.</a> Dados del Juego (Dados de Recursos, Combate y Tesoro)
               </div>
               <div>
-                <span className="text-amber-500 font-bold">XV.</span> Tipos de Artefactos y Reliquias de Erathia
+                <a href="#sec-XV" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">XV.</a> Tipos de Artefactos y Reliquias de Erathia
               </div>
               <div>
-                <span className="text-amber-500 font-bold">XVI.</span> Expansión de Campo de Batalla (Obstáculos Dinámicos)
+                <a href="#sec-XVI" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">XVI.</a> Expansión de Campo de Batalla (Obstáculos Dinámicos)
               </div>
               <div>
-                <span className="text-amber-500 font-bold">XVII.</span> Variantes de Reglas Oficiales y Ajustes de Torneo
+                <a href="#sec-XVII" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">XVII.</a> Variantes de Reglas Oficiales y Ajustes de Torneo
               </div>
               <div>
-                <span className="text-amber-500 font-bold">XVIII.</span> Bancos de Criaturas, Palabras Clave y Fichas de Unidad
+                <a href="#sec-XVIII" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">XVIII.</a> Bancos de Criaturas, Palabras Clave y Fichas de Unidad
               </div>
               <div>
-                <span className="text-amber-500 font-bold">XIX.</span> Reglamento y Algoritmos de la Inteligencia Artificial (IA)
+                <a href="#sec-XIX" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">XIX.</a> Reglamento y Algoritmos de la Inteligencia Artificial (IA)
               </div>
               <div>
-                <span className="text-amber-500 font-bold">XX.</span> Guía de Habilidades y Talentos del Héroe (Las 29 Maestrerías)
+                <a href="#sec-XX" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">XX.</a> Guía de Habilidades y Talentos del Héroe (Las 32 Habilidades Secundarias)
               </div>
               <div>
-                <span className="text-amber-500 font-bold">XXI.</span> Compendio de Criaturas y Unidades de Combate
+                <a href="#sec-XXI" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">XXI.</a> Compendio de Criaturas y Unidades de Combate
               </div>
             </div>
           </div>
         </div>
 
         {/* Section 1 */}
-        <section className="space-y-3">
+        <section id="sec-I" className="space-y-3">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             I. Glosario, las 10 Facciones, Cartas y Fichas Especiales
           </h3>
@@ -693,7 +477,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section 2: Explaining Tiles */}
-        <section className="space-y-3 page-break">
+        <section id="sec-II" className="space-y-3 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             II. Tipos de Losetas (Atlas de Erathia)
           </h3>
@@ -722,7 +506,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section 3 */}
-        <section className="space-y-3 page-break">
+        <section id="sec-III" className="space-y-3 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             III. Compendio de Lugares del Mapa y sus Efectos
           </h3>
@@ -739,10 +523,10 @@ export default function RulebookPDF() {
                 <li><strong>Piedra de Aprendizaje (Learning Stone):</strong> El héroe gana inmediatamente 1 punto de Exp.</li>
                 <li><strong>Templo (Temple):</strong> Otorga una ficha de moral positiva temporal al héroe.</li>
                 <li><strong>Santuario del Gesto Mágico (Magic Shrine):</strong> Permite buscar (2) cartas en el mazo de hechizos pagando su costo correspondiente.</li>
-                <li><strong>Jardín Místico (Mystical Garden):</strong> Elige de forma inmediata entre ganar 2 Oro o 1 Objeto de valor.</li>
+                <li><strong>Jardín Místico (Mystical Garden):</strong> Elige de forma inmediata entre ganar 2 Materiales de construcción o 1 Objeto de valor.</li>
                 <li><strong>Tumba del Guerrero (Warrior's Tomb):</strong> Permite buscar (2) en el mazo de artefactos dos veces, pero asigna al héroe moral negativa de forma inmediata por profanación.</li>
                 <li><strong>Árbol del Conocimiento (Tree of Knowledge):</strong> El héroe puede pagar 3 Objetos de valor o 10 de Oro para subir 2 rangos de Exp al instante.</li>
-                <li><strong>Molino (Windmill):</strong> Entrega 1 Objeto de valor de forma gratuita de un tipo determinado.</li>
+                <li><strong>Molino (Windmill):</strong> Entrega 2 Materiales de construcción de forma gratuita al héroe.</li>
                 <li><strong>Molino de Agua (Waterwheel):</strong> Entrega 3 de Oro de forma inmediata al héroe.</li>
               </ul>
             </div>
@@ -802,12 +586,12 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section 4 */}
-        <section className="space-y-3 page-break col-span-1">
+        <section id="sec-IV" className="space-y-3 page-break col-span-1">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             IV. Preparación De Las Partidas y Listado de Escenarios
           </h3>
           <p className="text-xs">
-            Antes de desplegar las losetas, determine el tipo de partida a jugar. Las condiciones por defecto aplican un presupuesto inicial de: <strong>15 de Oro, 3 Materiales de construcción, y 1 Objeto de valor</strong> por jugador, con una producción de Ciudad establecida de base en 10 de Oro.
+            Antes de desplegar las losetas, determine el tipo de partida a jugar. <strong>No existe un presupuesto universal por defecto.</strong> Los escenarios oficiales (`ESCENARIOS_Y_MISIONES.md`) presupuestan cantidades variables (ej. 15/4/2, 10/0/0). La producción de Ciudad varía según el escenario y la loseta conquistada.
           </p>
 
           <div className="space-y-3 text-xs">
@@ -906,7 +690,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section 5 */}
-        <section className="space-y-3 page-break">
+        <section id="sec-V" className="space-y-3 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             V. Compendio de Campañas Oficiales y Libros de Misiones (10 Facciones)
           </h3>
@@ -1169,7 +953,7 @@ export default function RulebookPDF() {
                 <ul className="space-y-1.5 text-slate-300">
                   <li>
                     <strong className="text-amber-400">Misión I: "Invasión de Azufre" (Sulfur Incursion)</strong>
-                    <p className="text-[10px] text-slate-400">Abre tres Portales del Abismo en territorio fronterizo para invocar hordas de diablillos antes de que expire la ronda 9.</p>
+                    <p className="text-[10px] text-slate-400">Abre tres Portales del Abismo en territorio fronterizo para invocar hordas de Familiares antes de que expire la ronda 9.</p>
                   </li>
                   <li>
                     <strong className="text-amber-400">Misión II: "Cosecha de Almas" (Soul Harvest)</strong>
@@ -1298,7 +1082,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section 6 */}
-        <section className="space-y-4 page-break">
+        <section id="sec-VI" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             VI. Flujo Detallado de Rondas y Fases de Turno (Astrología vs Eventos)
           </h3>
@@ -1345,9 +1129,9 @@ export default function RulebookPDF() {
                 <p className="mt-1 text-slate-300">
                   El héroe gasta sus 3 PM disponibles:
                   <br />
-                  - <strong>Moverse:</strong> Moverse a un hexágono transitable adyacente consume 1 PM. Cruzar bordes continuos de hielo o rocosos no navegables está estrictamente vedado.
+                  - <strong>Moverse:</strong> Moverse a un hexágono transitable adyacente consume 1 PM. Cruzar bordes continuos amarillos está estrictamente vedado, salvo para salir de la casilla inicial.
                   <br />
-                  - <strong>Explorar:</strong> Voltear e interactuar con una loseta de mapa adyacente consume 1 PM. Debe conectarse por el camino del mapa secundando el patrón de rotaciones válidas.
+                  - <strong>Explorar:</strong> Voltear e interactuar con una loseta de mapa adyacente consume 1 PM. Debe conectarse adyacente a otras dos losetas y al héroe que la descubre.
                   <br />
                   - <strong>Custodios:</strong> Entrar a lugares con enemigos neutrales custodiándolas bloquea tu paso y te obliga a iniciar un combate de forma inmediata. Un Héroe secundario tiene un límite de 2 PM fijos.
                 </p>
@@ -1370,7 +1154,7 @@ export default function RulebookPDF() {
         </section>
 
          {/* Section 7 */}
-        <section className="space-y-4 page-break">
+        <section id="sec-VII" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             VII. Desarrollo Urbano, Reclutamiento y Economía
           </h3>
@@ -1388,8 +1172,7 @@ export default function RulebookPDF() {
                 <li><strong>Vivienda Tier I (Bronce):</strong> Construida por defecto. Permite reclutar ejércitos de nivel básico (ej. Centauros, Esqueletos, Alabarderos).</li>
                 <li><strong>Vivienda Tier II (Plata):</strong> Cuesta 10 Oro + 3 Materiales. Habilita ejércitos intermedios de plata.</li>
                 <li><strong>Vivienda Tier III (Oro/Fuerte):</strong> Cuesta 15 Oro, 4 Materiales, y 2 de Valor. Despliega campeones legendarios.</li>
-                <li><strong>Cofradía de Magos Nivel 1:</strong> Cuesta 5 Oro. Entrega el <strong>Libro de Hechizos</strong> indispensable para lanzar cartas ordinarias de magia.</li>
-                <li><strong>Cofradía de Magos Avanzada (Lv. 2):</strong> Cuesta 10 Oro y 1 Objeto de valor. Habilita hechizos de categoría intermedia e inmunes al efecto de contra-hechizo básico de los oponentes.</li>
+                <li><strong>Cofradía de Magos:</strong> Cuesta 5 Oro. Entrega el <strong>Libro de Hechizos</strong> indispensable para lanzar cartas ordinarias de magia.</li>
               </ul>
             </div>
 
@@ -1407,7 +1190,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section 8 */}
-        <section className="space-y-4 page-break">
+        <section id="sec-VIII" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             VIII. Reglamento de Combate Táctico, Movimiento y Máquinas de Guerra
           </h3>
@@ -1476,11 +1259,11 @@ export default function RulebookPDF() {
               </div>
               <div className="border border-slate-900 p-2 rounded bg-slate-950/30">
                 <span className="text-amber-400 font-bold block">3. Carro de Munición (Ammo Cart)</span>
-                Carta permanente. Al inicio de cada ronda de combate, elige una unidad aliada de ataque a distancia. Esta ignora tanto el penalizador de distancia como el penalizador de cuerpo a cuerpo (melee penalty) durante toda la ronda.
+                Carta permanente. Tus unidades a distancia ignoran penalizadores de combate y ganan +2 Iniciativa.
               </div>
               <div className="border border-slate-900 p-2 rounded bg-slate-950/30">
                 <span className="text-amber-400 font-bold block">4. Tienda de Auxilio (First Aid Tent)</span>
-                Carta permanente. Al final de cada ronda de combate, remueve/sana de forma automática <strong>1 herida</strong> de la unidad aliada con menor iniciativa que esté dañada.
+                Carta permanente. Retira <strong>1 herida</strong> de la unidad aliada que elijas.
               </div>
               <div className="border border-slate-900 p-2 rounded bg-slate-950/30">
                 <span className="text-amber-400 font-bold block">5. Cañón (Cannon)</span>
@@ -1491,7 +1274,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section 9 */}
-        <section className="space-y-4 page-break">
+        <section id="sec-IX" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             IX. Hechizos, Arcanos y Libro de Magias
           </h3>
@@ -1503,7 +1286,7 @@ export default function RulebookPDF() {
             <div className="space-y-1">
               <h4 className="font-bold text-amber-400 font-mono">1. Requisito de Libro y Escuela Arcana</h4>
               <p className="text-slate-300">
-                Para coleccionar, memorizar, o lanzar hechizos de nivel I o superior de su mano de cartas, su Héroe debe poseer de forma obligatoria un <strong>Libro de Hechizos</strong>. Este objeto elemental se consigue tras edificar la Cofradía de Magos Tier 1 en su metrópolis (coste: 5 de Oro). El conjuro de ataque básico "Flecha Mágica" es el único exento de este riguroso mandato. Como regla suplementaria, edificar un gremio de nivel 2 habilita usar magia avanzada inmune al efecto de contra-hechizo básico de los oponentes.
+                Para coleccionar, memorizar, o lanzar hechizos de nivel I o superior de su mano de cartas, su Héroe debe poseer de forma obligatoria un <strong>Libro de Hechizos</strong>. Este objeto elemental se consigue tras edificar la Cofradía de Magos Tier 1 en su metrópolis (coste: 5 de Oro). El conjuro de ataque básico "Flecha Mágica" es el único exento de este riguroso mandato.
               </p>
             </div>
 
@@ -1548,7 +1331,7 @@ export default function RulebookPDF() {
                   <p className="text-slate-300 mt-1">
                     <strong>Enfoque:</strong> Control territorial estricto, curación quirúrgica y manipulación.
                     <br />
-                    • <em>Hechizos Clave:</em> <strong>Campo de Fuerza</strong> (muro invisible de 2 hexágonos de ancho que frena melés pero deja disparar a arqueros), <strong>Teleportar</strong> (desplazamientos instantáneos libres), <strong>Curación</strong> (limpieza de heridas y corrosión) y <strong>Clonar</strong> (réplicas de unidades aliadas).
+                    • <em>Hechizos Clave:</em> <strong>Curación</strong> (limpieza de heridas y corrosión), <strong>Clonar</strong> (réplicas de unidades aliadas), <strong>Disipar</strong> (anula efectos continuos) y <strong>Bendición</strong> (ignora tirada de ataque y gana Ataque).
                   </p>
                 </div>
                 <div className="border border-amber-950/60 bg-amber-950/20 p-2.5 rounded-lg">
@@ -1564,7 +1347,7 @@ export default function RulebookPDF() {
                   <p className="text-slate-300 mt-1">
                     <strong>Enfoque:</strong> Puntería y velocidad bélica extrema junto a descargas eléctricas directas.
                     <br />
-                    • <em>Hechizos Clave:</em> <strong>Relámpago</strong> (descarga de rayo enfocado que ignora obstáculos de cobertura), <strong>Volar / Puerta Dimensional</strong> (viajes aéreos sobre el atlas de campaña) y <strong>Escudo de Aire</strong> (reducción extrema contra arqueros y balistas lejanas).
+                    • <em>Hechizos Clave:</em> <strong>Relámpago</strong> (descarga de rayo enfocado que ignora obstáculos de cobertura), <strong>Vuelo</strong> (atravesar zonas bloqueadas) y <strong>Escudo de Aire</strong> (reducción extrema contra arqueros y balistas lejanas).
                   </p>
                 </div>
               </div>
@@ -1573,7 +1356,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section 10 */}
-        <section className="space-y-4 page-break">
+        <section id="sec-X" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             X. Guía de Expansiones y Elementos Avanzados de Juego
           </h3>
@@ -1671,7 +1454,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section 11 - DATATABLES COHERENTLY RENDERED */}
-        <section className="space-y-4 page-break">
+        <section id="sec-XI" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             XI. Tablas del Reglamento Oficial
           </h3>
@@ -1794,7 +1577,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section XII */}
-        <section className="space-y-4 page-break">
+        <section id="sec-XII" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             XII. Losetas Elementales, Invocaciones y Daño Elemental (Conflujo)
           </h3>
@@ -1807,11 +1590,11 @@ export default function RulebookPDF() {
               <p className="text-slate-350">
                 Losetas exclusivas de reverso cian que representan fragmentos colisionados de los Planos Elementales:
                 <br />
-                • <strong>Plano de Fuego (Fire Rift):</strong> Cruzar o finalizar el movimiento táctico en esta loseta otorga +2 PM de forma gratuita si tu facción activa es Conflujo o Inferno. Duplica además el daño infligido de cualquier hechizo elemental de fuego lanzado desde ella.
+                • <strong>Plano de Fuego (Fire Rift):</strong> Los hechizos de fuego lanzados desde esta loseta tienen su efecto aumentado en 1.
                 <br />
                 • <strong>Plano de Agua (Water Rift):</strong> Caminar por él no genera penalización de fango o nieve, y permite el embarque automático sin perder el resto del turno.
                 <br />
-                • <strong>Plano de Tierra y Aire (Earth & Air Rift):</strong> Otorga +1 a la Defensa Física o +1 a la Iniciativa de los regimientos de campaña asentados respectivamente.
+                • <strong>Plano de Tierra y Aire (Earth & Air Rift):</strong> Los hechizos de Tierra o Aire lanzados desde esta loseta tienen su efecto aumentado en 1.
               </p>
             </div>
             <div className="space-y-1.5 pt-2 border-t border-slate-950">
@@ -1819,7 +1602,7 @@ export default function RulebookPDF() {
               <p className="text-slate-300">
                 Mediante la magia correspondiente (Invocación Elemental), un héroe puede conjurar regimientos de Elementales de Tierra, Aire, Agua o Fuego en hexágonos desocupados de la grilla táctica:
                 <br />
-                • <strong>Invocaciones Temporales:</strong> Estas criaturas actúan con iniciativa propia y atacan con daño elemental puro. Al finalizar el asalto, estas unidades se desintegran por completo, por lo que no se agregan a la mano activa ni consumen límite de ranura de ejército del héroe.
+                • <strong>Invocaciones Temporales:</strong> Estas criaturas actúan con iniciativa propia y atacan con daño elemental puro. Al finalizar el combate, estas unidades se retiran (no se añaden al mazo de unidades del jugador).
                 <br />
                 • <strong>Regla de Disipación:</strong> Los hechizos de Desterrar o Disipar Magia destruyen inmediatamente toda unidad invocada sobre la reja táctica.
               </p>
@@ -1834,7 +1617,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section XIII */}
-        <section className="space-y-4 page-break">
+        <section id="sec-XIII" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             XIII. Opciones Avanzadas y Ajustes de Competición
           </h3>
@@ -1874,7 +1657,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section XIV */}
-        <section className="space-y-4 page-break">
+        <section id="sec-XIV" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             XIV. Dados del Juego (Dados de Recursos, Combate y Tesoro)
           </h3>
@@ -1885,13 +1668,13 @@ export default function RulebookPDF() {
             <div className="bg-slate-950 p-4 border border-slate-800/80 rounded-xl space-y-1.5">
               <strong className="text-amber-400 block font-mono">🎲 1. Dado de Recursos (Resource Die)</strong>
               <p className="text-slate-300">
-                Dado de 6 caras utilizado al visitar enclaves arcanos del mapa o durante la Fase de Recursos para conseguir producción adicional de fortuna. Las caras representan:
-                <br />• <strong>Cara 1:</strong> +1 de Oro (🟡)
-                <br />• <strong>Cara 2:</strong> +2 de Oro (🟡)
-                <br />• <strong>Cara 3:</strong> +1 de Madera o Mineral (🪵)
-                <br />• <strong>Cara 4:</strong> +2 de Madera o Mineral (🪵)
-                <br />• <strong>Cara 5:</strong> +1 Objeto de Valor (Gemas/Cristales/Azufre) (🔮)
-                <br />• <strong>Cara 6:</strong> Vacío / Fallo (Sin ganancia) (❌)
+                Dado de 6 caras utilizado al visitar enclaves arcanos del mapa o durante la Fase de Recursos para conseguir producción adicional de fortuna. Las caras representan (según el Reglamento Oficial):
+                <br />• <strong>Cara 1:</strong> +2 de Materiales de construcción (🪵)
+                <br />• <strong>Cara 2:</strong> +4 de Materiales de construcción (🪵)
+                <br />• <strong>Cara 3:</strong> +1 Objeto de Valor (Gemas/Cristales/Azufre) (🔮)
+                <br />• <strong>Cara 4:</strong> +2 Objetos de Valor (Gemas/Cristales/Azufre) (🔮)
+                <br />• <strong>Cara 5:</strong> +3 de Oro (🟡)
+                <br />• <strong>Cara 6:</strong> +6 de Oro (🟡)
               </p>
             </div>
             <div className="bg-slate-950 p-4 border border-slate-800/80 rounded-xl space-y-1.5">
@@ -1920,12 +1703,12 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section XV */}
-        <section className="space-y-4 page-break">
+        <section id="sec-XV" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             XV. Tipos de Artefactos y Reliquias de Erathia
           </h3>
           <p className="text-xs text-slate-400">
-            Los artefactos son cartas de Poder y Magia que otorgan potentes efectos tácticos o aumentos de estadísticas al jugarse desde la mano. Se clasifican en 4 niveles de poder:
+            Los artefactos son cartas de Poder y Magia que otorgan potentes efectos tácticos o aumentos de estadísticas al jugarse desde la mano. Se clasifican en **3 niveles de poder** (Menor, Mayor, Reliquia), más el artefacto supremo independiente (El Grial):
           </p>
           <div className="space-y-3 text-xs bg-slate-950 p-4 border border-slate-800/80 rounded-xl">
             <div className="space-y-1">
@@ -1947,9 +1730,9 @@ export default function RulebookPDF() {
               </p>
             </div>
             <div className="space-y-1.5 pt-2 border-t border-slate-900">
-              <strong className="text-emerald-400 block font-mono">4. El Grial (The Grail Artifact - Borde Verde Esmeralda)</strong>
+              <strong className="text-emerald-400 block font-mono">4. El Grial (Artefacto Supremo — Ficha Física, no Carta de Mazo)</strong>
               <p className="text-slate-300">
-                El artefacto supremo de Erathia. Está enterrado bajo el mapa de aventura. Para localizarlo, los héroes deben visitar los Obeliscos antiguos distribuidos por el mapa, lo que descarta piezas de un mapa de coordenadas exclusivo. Una vez excavado usando 1 PM en el hexágono exacto, debe ser devuelto intacto a la capital del jugador. Erigir la <strong>Estructura del Grial</strong> otorga un incremento permanente de +20 de Oro en cada Fase de Recursos (o de forma inmediata al construirlo) y una habilidad mítica única específica de tu facción.
+                El Grial no es una carta del mazo de Poder y Magia, sino una <strong>ficha física</strong> única por escenario. Se obtiene visitando los <strong>Obeliscos</strong> repartidos por el mapa (cada visita a un obelisco diferente revela una coordenada del plano místico). Una vez localizada la zona del Grial (loseta central VI-VII), el héroe debe gastar <strong>2 puntos de movimiento</strong> en esa zona para recoger la ficha. El portador sufre <strong>-1 PM</strong> mientras la transporte. Si es derrotado, la ficha pasa al vencedor; si se rinde, queda en la zona. Entregar la ficha en la ciudad de tu facción aumenta los ingresos de Oro en <strong>+5</strong> por ronda. En escenarios específicos, erigir la Estructura del Grial puede otorgar efectos adicionales según las reglas del escenario.
               </p>
             </div>
 
@@ -1989,7 +1772,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section XVI */}
-        <section className="space-y-4 page-break">
+        <section id="sec-XVI" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             XVI. Expansión de Campo de Batalla (Battlefield Expansion)
           </h3>
@@ -2016,7 +1799,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section XVII */}
-        <section className="space-y-4 page-break">
+        <section id="sec-XVII" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             XVII. Variantes de Reglas Oficiales y Ajustes de Competición
           </h3>
@@ -2049,7 +1832,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section XVIII */}
-        <section className="space-y-4 page-break">
+        <section id="sec-XVIII" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             XVIII. Bancos de Criaturas, Palabras Clave y Fichas de Unidad
           </h3>
@@ -2091,46 +1874,46 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section XIX */}
-        <section className="space-y-4 page-break">
+        <section id="sec-XIX" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             XIX. Reglamento y Algoritmos de la Inteligencia Artificial (IA)
           </h3>
           <p className="text-xs text-slate-400">
-            La IA enemiga en campañas cooperativas o solitarias ejecuta sus turnos bajo algoritmos predictivos rígidos:
+            La IA enemiga en campañas solitarias o cooperativas actúa según las reglas de movimiento, prioridad de objetivos y hechizos del reglamento (§10):
           </p>
           <div className="space-y-3 text-xs bg-slate-950 p-4 border border-slate-800/80 rounded-xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-1">
-                <strong className="text-amber-400 block font-mono">1. Combate Táctico de la IA</strong>
+                <strong className="text-amber-400 block font-mono">1. Combate Táctico de la IA (Prioridad de objetivos)</strong>
                 <p className="text-slate-300">
-                  • <strong>Movimiento:</strong> Las tropas terrestres e independientes de la IA cargan contra el defensor de su mismo nivel de Tier. Si no es posible, buscan el Tier inferior, y luego el superior.
-                  <br />• <strong>Prioridad de Bancos:</strong> Ataca siempre a tropas normales del jugador antes que a criaturas obtenidas en Bancos de Criaturas.
-                  <br />• <strong>Asedio IA:</strong> Coloca la puerta frente a su unidad de mayor iniciativa. Su Torreón de defensa dispara siempre a la tropa del jugador con menor vida actual.
+                  • <strong>Movimiento / objetivo:</strong> La IA ataca primero a la unidad del jugador de la misma categoría y nivel; si no es posible, busca el nivel inferior más alto, luego el superior. Después, voladora o a distancia válida. En empate, decide el jugador que controla las neutrales (§10.2). <br />
+                  • <strong>Asedio IA:</strong> Se aplican las reglas generales de asedio (§9.5): murallas, puerta y torre de arqueros. No hay reglas adicionales de colocación específica para la IA en la fuente normativa.
                 </p>
               </div>
               <div className="space-y-1">
                 <strong className="text-amber-400 block font-mono">2. Exploración del Mapa (PM de la IA)</strong>
                 <p className="text-slate-300">
-                  La IA opera con 3 PM y sigue prioridades fijas:
-                  <br />• <strong>Prioridad 1:</strong> Interceptar y atacar a cualquier Héroe del jugador en la misma loseta.
-                  <br />• <strong>Prioridad 2:</strong> Capturar o señalizar la mina/asentamiento más cercana.
-                  <br />• <strong>Prioridad 3:</strong> Marchar directo hacia la capital del jugador humano. Gana combates contra neutrales automáticamente.
+                  La IA opera con 3 PM y sigue las prioridades de movimiento (§10.1):
+                  <br />• <strong>Prioridad 1:</strong> Atacar al héroe del jugador en la misma loseta.
+                  <br />• <strong>Prioridad 2:</strong> Señalizar una mina o asentamiento disponible.
+                  <br />• <strong>Prioridad 3:</strong> Avanzar hacia la ciudad del jugador. Repite hasta agotar los 3 PM. <br />
+                  • <strong>Nota:</strong> No existe regla de victoria automática contra neutrales; los combates se resuelven con las reglas normales (§9.1).
                 </p>
               </div>
             </div>
             <div className="pt-2 border-t border-slate-900">
-              <strong className="text-amber-400 block font-mono mb-1">3. Algoritmo de Hechizos Complejos de la IA</strong>
+              <strong className="text-amber-400 block font-mono mb-1">3. Hechizos de la IA (§10.3)</strong>
               <p className="text-slate-300">
-                • <strong>Área (Fireball/Lightning):</strong> Apunta a grupos con mayor cantidad de unidades de Tier alto. Si no hay grupos, ataca objetivos individuales lejanos de sus tropas.
-                <br />• <strong>Sanación/Defensa:</strong> Sana a la criatura herida de Tier superior. Coloca escudos físicos sobre la de defensa más alta.
-                <br />• <strong>Debilitamientos:</strong> Lanza hechizos como "Weakness" solo sobre tropas del jugador a punto de contraatacar.
+                • <strong>Área (Bola de Fuego / Rayo en Cadena):</strong> Grupo con unidades adyacentes y mayor nivel (§10.3). <br />
+                • <strong>Sanación / Defensa:</strong> Curación → unidad con más daño, priorizando nivel alto; Piel de Piedra → unidad con mayor Defensa; Escudo de Fuego → unidad apta (§10.3). <br />
+                • <strong>Debilitamientos:</strong> Debilidad → objetivo que vaya a contraatacar (§10.3).
               </p>
             </div>
           </div>
         </section>
 
         {/* Section XX */}
-        <section className="space-y-4 page-break">
+        <section id="sec-XX" className="space-y-4 page-break">
           <h2 className="text-lg font-bold font-serif text-amber-500 tracking-wide uppercase flex items-center justify-between">
             <span>XX. Guía de Habilidades y Talentos del Héroe</span>
             <span className="text-xs font-mono text-slate-500">Talentos de Erathia</span>
@@ -2314,7 +2097,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section XXI */}
-        <section className="space-y-4 page-break">
+        <section id="sec-XXI" className="space-y-4 page-break">
           <div className="border-b-2 border-amber-500/30 pb-2">
             <h2 className="text-lg font-bold font-serif text-amber-500 tracking-wide uppercase flex items-center justify-between">
               <span>XXI. Compendio de Criaturas y Unidades de Combate</span>
@@ -2327,7 +2110,7 @@ export default function RulebookPDF() {
 
           <div className="space-y-3 text-xs leading-relaxed text-slate-300">
             <p>
-              En el juego de tablero de <strong>Heroes of Might and Magic III</strong>, el combate táctico se resuelve en una cuadrícula hexagonal. Las unidades son representadas por cartas de doble cara: la cara <strong>Básica</strong> ("Unas pocas") y la cara de <strong>Élite</strong> ("Manada" o mejorada). Reclutar y saber utilizar las habilidades de estas criaturas determina el éxito de las campañas.
+              En el juego de tablero de <strong>Heroes of Might and Magic III</strong>, el combate táctico se resuelve en un tablero de <strong>4×5</strong> (REGLAMENTO_DEFINITIVO.md §9). Las unidades son representadas por cartas de doble cara: la cara <strong>Básica</strong> ("Unas pocas") y la cara de <strong>Élite</strong> ("Manada" o mejorada). Reclutar y saber utilizar las habilidades de estas criaturas determina el éxito de las campañas.
             </p>
 
             <table className="w-full text-[9px] text-left border-collapse border border-slate-800">
