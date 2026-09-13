@@ -80,9 +80,9 @@ export default function ScenariosViewer() {
           <>
           <div className="lg:col-span-3 space-y-6">
         {/* Filters Bar */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 bg-slate-950/40 p-3 rounded-2xl border border-slate-850/60">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 bg-slate-950/40 p-3 rounded-2xl border border-slate-850/60">
           {/* Search */}
-          <div className="relative">
+          <div className="relative sm:col-span-2">
             <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-slate-500" />
             <input
               type="text"

@@ -158,9 +158,9 @@ export default function MapLocationsViewer() {
 
       {/* Control Panel: Search & Filters */}
       <div className="bg-slate-900/80 border border-slate-800/80 rounded-2xl p-4 sm:p-6 shadow-xl space-y-4">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {/* Search bar */}
-          <div className="md:col-span-12 lg:col-span-4 relative">
+          <div className="sm:col-span-2 relative">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 w-5 h-5" />
             <input
               type="text"
@@ -172,7 +172,7 @@ export default function MapLocationsViewer() {
           </div>
 
           {/* Zone filter */}
-          <div className="md:col-span-6 lg:col-span-4 space-y-1.5">
+          <div className="space-y-1.5">
             <label className="text-[10px] font-mono uppercase tracking-wider text-slate-400 block">Filtrar por Zona:</label>
             <div className="flex flex-wrap gap-1.5">
               {zonesList.map(zone => (
@@ -195,7 +195,7 @@ export default function MapLocationsViewer() {
           </div>
 
           {/* Type filter */}
-          <div className="md:col-span-6 lg:col-span-4 space-y-1.5">
+          <div className="sm:col-span-1 space-y-1.5">
             <label className="text-[10px] font-mono uppercase tracking-wider text-slate-400 block">Filtrar por Tipo de Interacción:</label>
             <div className="flex flex-wrap gap-1.5">
               {typesList.map(type => (

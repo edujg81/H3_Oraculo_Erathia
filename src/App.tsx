@@ -25,7 +25,7 @@ const WelcomeView = lazy(() => import('./components/WelcomeView'));
 import oracleLogo from './assets/images/h3oraculo_logo.png';
 import { RuleSection, Player, getPlayerLimit } from './types';
 import { 
-  Sparkles, Library, Timer, Printer, Award, BookOpen, 
+  Sparkles, Library, Timer, Award, BookOpen, 
   HelpCircle, Compass, Gamepad2, Hourglass, Swords, Users, Dices, Coins,
   Hammer, Map, Wand2, Building2, Gem,
   House,
@@ -294,7 +294,7 @@ export default function App() {
     <div className="min-h-screen text-slate-200 flex flex-col font-sans select-none antialiased" style={{ backgroundImage: 'radial-gradient(circle at center, #1b1311 0%, #0d0a09 100%)', backgroundColor: '#0d0a09' }}>
       
       {/* 1. Header Section */}
-      <header className="bg-slate-900/60 border-b border-slate-800/80 py-4 px-6 shrink-0">
+      <header className="bg-slate-900/60 border-b border-slate-800/80 py-2 px-6 shrink-0">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-4 text-center sm:text-left">
             <div className="relative group shrink-0">
@@ -319,12 +319,6 @@ export default function App() {
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
               <span className="text-[10px] font-mono text-slate-300">MOTOR IA ACTIVO (ESP)</span>
             </div>
-            <button 
-              onClick={() => setActiveTab('pdf')}
-              className="bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold py-1.5 px-4 rounded-md transition-all flex items-center space-x-2 shadow-md hover:shadow-amber-900/40 cursor-pointer"
-            >
-              <span>Exportar PDF</span>
-            </button>
           </div>
         </div>
       </header>
