@@ -46,7 +46,7 @@ const formatStats = (stats: UnitStats): string =>
 
 const formatAbilities = (abilities: string[]): string => {
   if (abilities.length === 0) return 'Ninguna.';
-  return abilities.map(a => a.trim()).join('. ') + '.';
+  return abilities.map(a => a.trim()).join(' ') + '';
 };
 
 const generateCompendiumUnits = (): CompendiumUnit[] => {
@@ -78,13 +78,13 @@ const generateCompendiumUnits = (): CompendiumUnit[] => {
     
     // Format abilities
     const basicAbilities = unit.basic.abilities.length > 0 
-      ? `Básico: ${formatAbilities(unit.basic.abilities)}` 
-      : 'Básico: Ninguna.';
+      ? `[UNAS POCAS] ${formatAbilities(unit.basic.abilities)}` 
+      : '';
         
     const eliteAbilities = unit.elite?.abilities && unit.elite.abilities.length > 0
-      ? `Élite: ${formatAbilities(unit.elite.abilities)}`
+      ? `[MANADA] ${formatAbilities(unit.elite.abilities)}`
       : unit.elite?.abilities?.length === 0
-        ? 'Élite: Ninguna.'
+        ? '[MANADA] Ninguna.'
         : '';
     
     // Combine abilities
@@ -296,78 +296,78 @@ export default function RulebookPDF() {
             <div className="space-y-2.5">
               <span className="text-amber-400 font-bold block border-b border-slate-900 pb-1 uppercase text-[10px]">Parte A: Reglas Básicas y de Campaña</span>
               <div>
-                <span className="text-amber-500 font-bold">I.</span> Glosario, las 10 Facciones, Cartas y Fichas Especiales
+                <a href="#sec-I" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">I.</a> Glosario, las 10 Facciones, Cartas y Fichas Especiales
               </div>
               <div>
-                <span className="text-amber-500 font-bold">II.</span> Tipos de Losetas (Atlas de Erathia)
+                <a href="#sec-II" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">II.</a> Tipos de Losetas (Atlas de Erathia)
               </div>
               <div>
-                <span className="text-amber-500 font-bold">III.</span> Compendio de Lugares del Mapa y sus Efectos
+                <a href="#sec-III" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">III.</a> Compendio de Lugares del Mapa y sus Efectos
               </div>
               <div>
-                <span className="text-amber-500 font-bold">IV.</span> Preparación De Las Partidas y Listado de Escenarios
+                <a href="#sec-IV" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">IV.</a> Preparación De Las Partidas y Listado de Escenarios
               </div>
               <div>
-                <span className="text-amber-500 font-bold">V.</span> Compendio de Campañas Oficiales y Libros de Misiones
+                <a href="#sec-V" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">V.</a> Compendio de Campañas Oficiales y Libros de Misiones
               </div>
               <div>
-                <span className="text-amber-500 font-bold">VI.</span> Flujo Detallado de Rondas y Fases de Turno
+                <a href="#sec-VI" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">VI.</a> Flujo Detallado de Rondas y Fases de Turno
               </div>
               <div>
-                <span className="text-amber-500 font-bold">VII.</span> Desarrollo Urbano, Reclutamiento y Economía
+                <a href="#sec-VII" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">VII.</a> Desarrollo Urbano, Reclutamiento y Economía
               </div>
               <div>
-                <span className="text-amber-500 font-bold">VIII.</span> Reglamento de Combate Táctico, Movimiento y Máquinas de Guerra
+                <a href="#sec-VIII" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">VIII.</a> Reglamento de Combate Táctico, Movimiento y Máquinas de Guerra
               </div>
               <div>
-                <span className="text-amber-500 font-bold">IX.</span> Hechizos, Arcanos y Libro de Magias
+                <a href="#sec-IX" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">IX.</a> Hechizos, Arcanos y Libro de Magias
               </div>
               <div>
-                <span className="text-amber-500 font-bold">X.</span> Guía de Expansiones y Elementos Avanzados de Juego
+                <a href="#sec-X" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">X.</a> Guía de Expansiones y Elementos Avanzados de Juego
               </div>
               <div>
-                <span className="text-amber-500 font-bold">XI.</span> Tablas del Reglamento Oficial (Zonas de Dificultad y Recursos)
+                <a href="#sec-XI" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">XI.</a> Tablas del Reglamento Oficial (Zonas de Dificultad y Recursos)
               </div>
             </div>
 
             <div className="space-y-2.5">
               <span className="text-amber-400 font-bold block border-b border-slate-900 pb-1 uppercase text-[10px]">Parte B: Mecánicas Avanzadas y Compendio</span>
               <div>
-                <span className="text-amber-500 font-bold">XII.</span> Losetas Elementales, Invocaciones y Daño Elemental (Conflujo)
+                <a href="#sec-XII" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">XII.</a> Losetas Elementales, Invocaciones y Daño Elemental (Conflujo)
               </div>
               <div>
-                <span className="text-amber-500 font-bold">XIII.</span> Opciones Avanzadas y Ajustes de Competición
+                <a href="#sec-XIII" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">XIII.</a> Opciones Avanzadas y Ajustes de Competición
               </div>
               <div>
-                <span className="text-amber-500 font-bold">XIV.</span> Dados del Juego (Dados de Recursos, Combate y Tesoro)
+                <a href="#sec-XIV" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">XIV.</a> Dados del Juego (Dados de Recursos, Combate y Tesoro)
               </div>
               <div>
-                <span className="text-amber-500 font-bold">XV.</span> Tipos de Artefactos y Reliquias de Erathia
+                <a href="#sec-XV" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">XV.</a> Tipos de Artefactos y Reliquias de Erathia
               </div>
               <div>
-                <span className="text-amber-500 font-bold">XVI.</span> Expansión de Campo de Batalla (Obstáculos Dinámicos)
+                <a href="#sec-XVI" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">XVI.</a> Expansión de Campo de Batalla (Obstáculos Dinámicos)
               </div>
               <div>
-                <span className="text-amber-500 font-bold">XVII.</span> Variantes de Reglas Oficiales y Ajustes de Torneo
+                <a href="#sec-XVII" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">XVII.</a> Variantes de Reglas Oficiales y Ajustes de Torneo
               </div>
               <div>
-                <span className="text-amber-500 font-bold">XVIII.</span> Bancos de Criaturas, Palabras Clave y Fichas de Unidad
+                <a href="#sec-XVIII" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">XVIII.</a> Bancos de Criaturas, Palabras Clave y Fichas de Unidad
               </div>
               <div>
-                <span className="text-amber-500 font-bold">XIX.</span> Reglamento y Algoritmos de la Inteligencia Artificial (IA)
+                <a href="#sec-XIX" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">XIX.</a> Reglamento y Algoritmos de la Inteligencia Artificial (IA)
               </div>
               <div>
-                <span className="text-amber-500 font-bold">XX.</span> Guía de Habilidades y Talentos del Héroe (Las 32 Habilidades Secundarias)
+                <a href="#sec-XX" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">XX.</a> Guía de Habilidades y Talentos del Héroe (Las 32 Habilidades Secundarias)
               </div>
               <div>
-                <span className="text-amber-500 font-bold">XXI.</span> Compendio de Criaturas y Unidades de Combate
+                <a href="#sec-XXI" className="text-amber-500 font-bold hover:text-amber-300 hover:underline">XXI.</a> Compendio de Criaturas y Unidades de Combate
               </div>
             </div>
           </div>
         </div>
 
         {/* Section 1 */}
-        <section className="space-y-3">
+        <section id="sec-I" className="space-y-3">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             I. Glosario, las 10 Facciones, Cartas y Fichas Especiales
           </h3>
@@ -477,7 +477,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section 2: Explaining Tiles */}
-        <section className="space-y-3 page-break">
+        <section id="sec-II" className="space-y-3 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             II. Tipos de Losetas (Atlas de Erathia)
           </h3>
@@ -506,7 +506,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section 3 */}
-        <section className="space-y-3 page-break">
+        <section id="sec-III" className="space-y-3 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             III. Compendio de Lugares del Mapa y sus Efectos
           </h3>
@@ -586,7 +586,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section 4 */}
-        <section className="space-y-3 page-break col-span-1">
+        <section id="sec-IV" className="space-y-3 page-break col-span-1">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             IV. Preparación De Las Partidas y Listado de Escenarios
           </h3>
@@ -690,7 +690,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section 5 */}
-        <section className="space-y-3 page-break">
+        <section id="sec-V" className="space-y-3 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             V. Compendio de Campañas Oficiales y Libros de Misiones (10 Facciones)
           </h3>
@@ -1082,7 +1082,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section 6 */}
-        <section className="space-y-4 page-break">
+        <section id="sec-VI" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             VI. Flujo Detallado de Rondas y Fases de Turno (Astrología vs Eventos)
           </h3>
@@ -1154,7 +1154,7 @@ export default function RulebookPDF() {
         </section>
 
          {/* Section 7 */}
-        <section className="space-y-4 page-break">
+        <section id="sec-VII" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             VII. Desarrollo Urbano, Reclutamiento y Economía
           </h3>
@@ -1190,7 +1190,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section 8 */}
-        <section className="space-y-4 page-break">
+        <section id="sec-VIII" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             VIII. Reglamento de Combate Táctico, Movimiento y Máquinas de Guerra
           </h3>
@@ -1274,7 +1274,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section 9 */}
-        <section className="space-y-4 page-break">
+        <section id="sec-IX" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             IX. Hechizos, Arcanos y Libro de Magias
           </h3>
@@ -1356,7 +1356,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section 10 */}
-        <section className="space-y-4 page-break">
+        <section id="sec-X" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             X. Guía de Expansiones y Elementos Avanzados de Juego
           </h3>
@@ -1454,7 +1454,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section 11 - DATATABLES COHERENTLY RENDERED */}
-        <section className="space-y-4 page-break">
+        <section id="sec-XI" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             XI. Tablas del Reglamento Oficial
           </h3>
@@ -1577,7 +1577,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section XII */}
-        <section className="space-y-4 page-break">
+        <section id="sec-XII" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             XII. Losetas Elementales, Invocaciones y Daño Elemental (Conflujo)
           </h3>
@@ -1617,7 +1617,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section XIII */}
-        <section className="space-y-4 page-break">
+        <section id="sec-XIII" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             XIII. Opciones Avanzadas y Ajustes de Competición
           </h3>
@@ -1657,7 +1657,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section XIV */}
-        <section className="space-y-4 page-break">
+        <section id="sec-XIV" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             XIV. Dados del Juego (Dados de Recursos, Combate y Tesoro)
           </h3>
@@ -1703,12 +1703,12 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section XV */}
-        <section className="space-y-4 page-break">
+        <section id="sec-XV" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             XV. Tipos de Artefactos y Reliquias de Erathia
           </h3>
           <p className="text-xs text-slate-400">
-            Los artefactos son cartas de Poder y Magia que otorgan potentes efectos tácticos o aumentos de estadísticas al jugarse desde la mano. Se clasifican en 3 niveles de poder (Menor, Mayor, Reliquia), más el artefacto supremo (El Grial):
+            Los artefactos son cartas de Poder y Magia que otorgan potentes efectos tácticos o aumentos de estadísticas al jugarse desde la mano. Se clasifican en **3 niveles de poder** (Menor, Mayor, Reliquia), más el artefacto supremo independiente (El Grial):
           </p>
           <div className="space-y-3 text-xs bg-slate-950 p-4 border border-slate-800/80 rounded-xl">
             <div className="space-y-1">
@@ -1730,9 +1730,9 @@ export default function RulebookPDF() {
               </p>
             </div>
             <div className="space-y-1.5 pt-2 border-t border-slate-900">
-              <strong className="text-emerald-400 block font-mono">4. El Grial (The Grail Artifact - Borde Verde Esmeralda)</strong>
+              <strong className="text-emerald-400 block font-mono">4. El Grial (Artefacto Supremo — Ficha Física, no Carta de Mazo)</strong>
               <p className="text-slate-300">
-                El artefacto supremo de Erathia. Está enterrado bajo el mapa de aventura. Para localizarlo, los héroes deben visitar los Obeliscos antiguos distribuidos por el mapa, lo que descarta piezas de un mapa de coordenadas exclusivo. Una vez excavado usando 1 PM en el hexágono exacto, debe ser devuelto intacto a la capital del jugador. Erigir la <strong>Estructura del Grial</strong> otorga un incremento permanente de +20 de Oro en cada Fase de Recursos (o de forma inmediata al construirlo) y una habilidad mítica única específica de tu facción.
+                El Grial no es una carta del mazo de Poder y Magia, sino una <strong>ficha física</strong> única por escenario. Se obtiene visitando los <strong>Obeliscos</strong> repartidos por el mapa (cada visita a un obelisco diferente revela una coordenada del plano místico). Una vez localizada la zona del Grial (loseta central VI-VII), el héroe debe gastar <strong>2 puntos de movimiento</strong> en esa zona para recoger la ficha. El portador sufre <strong>-1 PM</strong> mientras la transporte. Si es derrotado, la ficha pasa al vencedor; si se rinde, queda en la zona. Entregar la ficha en la ciudad de tu facción aumenta los ingresos de Oro en <strong>+5</strong> por ronda. En escenarios específicos, erigir la Estructura del Grial puede otorgar efectos adicionales según las reglas del escenario.
               </p>
             </div>
 
@@ -1772,7 +1772,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section XVI */}
-        <section className="space-y-4 page-break">
+        <section id="sec-XVI" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             XVI. Expansión de Campo de Batalla (Battlefield Expansion)
           </h3>
@@ -1799,7 +1799,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section XVII */}
-        <section className="space-y-4 page-break">
+        <section id="sec-XVII" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             XVII. Variantes de Reglas Oficiales y Ajustes de Competición
           </h3>
@@ -1832,7 +1832,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section XVIII */}
-        <section className="space-y-4 page-break">
+        <section id="sec-XVIII" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             XVIII. Bancos de Criaturas, Palabras Clave y Fichas de Unidad
           </h3>
@@ -1874,7 +1874,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section XIX */}
-        <section className="space-y-4 page-break">
+        <section id="sec-XIX" className="space-y-4 page-break">
           <h3 className="text-xl font-serif text-amber-300 border-b border-slate-800 pb-1">
             XIX. Reglamento y Algoritmos de la Inteligencia Artificial (IA)
           </h3>
@@ -1913,7 +1913,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section XX */}
-        <section className="space-y-4 page-break">
+        <section id="sec-XX" className="space-y-4 page-break">
           <h2 className="text-lg font-bold font-serif text-amber-500 tracking-wide uppercase flex items-center justify-between">
             <span>XX. Guía de Habilidades y Talentos del Héroe</span>
             <span className="text-xs font-mono text-slate-500">Talentos de Erathia</span>
@@ -2097,7 +2097,7 @@ export default function RulebookPDF() {
         </section>
 
         {/* Section XXI */}
-        <section className="space-y-4 page-break">
+        <section id="sec-XXI" className="space-y-4 page-break">
           <div className="border-b-2 border-amber-500/30 pb-2">
             <h2 className="text-lg font-bold font-serif text-amber-500 tracking-wide uppercase flex items-center justify-between">
               <span>XXI. Compendio de Criaturas y Unidades de Combate</span>
