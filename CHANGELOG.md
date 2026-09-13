@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.9](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.8...v2.1.9) (2026-09-13)
+
+
+### Bug Fixes
+
+* arreglos en visualizacion ([764cde9](https://github.com/edujg81/H3_Oraculo_Erathia/commit/764cde962b39846e8ea0de7cdfc9c1d569749b72))
+
 ## [2.1.8](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.7...v2.1.8) (2026-09-12)
 
 
