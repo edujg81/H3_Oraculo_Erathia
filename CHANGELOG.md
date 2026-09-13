@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.10](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.9...v2.1.10) (2026-09-13)
+
+
+### Bug Fixes
+
+* eliminar matriz hardcodeada de compendiumUnits y corregir tipos TypeScript en RulebookPDF.tsx ([b9667c6](https://github.com/edujg81/H3_Oraculo_Erathia/commit/b9667c6123dc92e9bcf35ee3933dba9dce426d94))
+* se incluyen enlaces al indice de Manual Completo ([16d4f16](https://github.com/edujg81/H3_Oraculo_Erathia/commit/16d4f169e266ad3074934869b1ce9f7bbfff88e3))
+
 ## [2.1.9](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.8...v2.1.9) (2026-09-13)
 
 
