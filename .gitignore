@@ -11,6 +11,7 @@ src/assets/rules/Heroes3_Rules_Rewrite_2_0.*
 !.env.example
 bun.lock
 package-lock.json
+AUDITORIA_*.md
 
 # Scratch/working files usados puntualmente para generar datos
 # (scraping, extracción de PDFs, etc.) — no forman parte del proyecto.
