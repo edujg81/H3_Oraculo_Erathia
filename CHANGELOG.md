@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.11](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.10...v2.1.11) (2026-09-19)
+
+
+### Bug Fixes
+
+* mejora imagenes de oceanide y marinero ([3116d9b](https://github.com/edujg81/H3_Oraculo_Erathia/commit/3116d9b0c3beefc830dafd0b6f69ef0b2f662159))
+
 ## [2.1.10](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.9...v2.1.10) (2026-09-13)
 
 
