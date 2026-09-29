@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.12](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.11...v2.1.12) (2026-09-29)
+
+
+### Bug Fixes
+
+* imágenes de Lobo de Mar y Ayssid mejoradas ([2119ca6](https://github.com/edujg81/H3_Oraculo_Erathia/commit/2119ca6632d120f369412b3efee4611fa34e60f7))
+* mejora imagen Ayssid ([d8d3c0f](https://github.com/edujg81/H3_Oraculo_Erathia/commit/d8d3c0f7a2e3b204c47b3aec8ed8e9e5e023dfff))
+
 ## [2.1.11](https://github.com/edujg81/H3_Oraculo_Erathia/compare/v2.1.10...v2.1.11) (2026-09-19)
 
 
